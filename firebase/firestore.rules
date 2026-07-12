@@ -2,6 +2,98 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function owns(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // 카탈로그에는 카드 본문이 없으며 published metadata만 인증 사용자에게 보인다.
+    // tier=pro 문서도 잠금 상태 표시를 위해 읽을 수 있어야 한다.
+    match /decks/{deckId} {
+      allow read: if signedIn() && resource.data.status == 'published';
+      allow write: if false;
+    }
+
+    // 카드 원본은 Cloud Storage 서버 SDK 전용이다. 과거/실수로 Firestore에
+    // deckContent가 생겨도 클라이언트가 읽을 수 없도록 명시적으로 차단한다.
+    match /deckContent/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /users/{uid} {
+      allow read: if owns(uid);
+      allow write: if false;
+
+      match /goals/{goalId} {
+        allow read: if false;
+        allow write: if false;
+      }
+
+      match /deckProgress/{deckId} {
+        allow read: if false;
+        allow write: if false;
+      }
+
+      match /entitlements/{entitlementId} {
+        allow read: if owns(uid);
+        allow write: if false;
+      }
+
+      match /{document=**} {
+        allow read, write: if false;
+      }
+    }
+
+    // 요청 생성은 검증/rate-limit/Pro 우선순위 판정을 하는 Functions만 수행한다.
+    match /deckRequests/{requestId} {
+      allow read: if signedIn() && resource.data.uid == request.auth.uid;
+      allow write: if false;
+    }
+
+    // 권위 창, quota, receipt binding은 Admin SDK만 접근한다.
+    match /deliveryLogs/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /deliveryCounters/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /deckRequestCounters/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /receiptClaims/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /subscriptionEvents/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /tossAuthCodeClaims/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /tossAuthExchangeCounters/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /tossAppCheckRefreshCounters/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /accountMerges/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /accountDeletions/{document=**} {
+      allow read, write: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

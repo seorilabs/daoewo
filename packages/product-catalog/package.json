@@ -1,0 +1,46 @@
+{
+  "name": "@daoewo/product-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./published-content": {
+      "types": "./dist/published-content.d.ts",
+      "import": "./dist/published-content.js",
+      "default": "./dist/published-content.js"
+    },
+    "./bundled-free-content": {
+      "types": "./dist/bundled-free-content.d.ts",
+      "import": "./dist/bundled-free-content.js",
+      "default": "./dist/bundled-free-content.js"
+    }
+  },
+  "files": [
+    "dist",
+    "schemas"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-catalog.mjs",
+    "check:generated": "node scripts/generate-catalog.mjs --check",
+    "build": "pnpm run check:generated && tsc -p tsconfig.json",
+    "typecheck": "pnpm run check:generated && tsc -p tsconfig.json --noEmit",
+    "test": "pnpm run build && node --test tests/*.test.mjs",
+    "check": "pnpm run typecheck && pnpm run test",
+    "prepack": "pnpm run build"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@daoewo/product-core": "workspace:*"
+  }
+}

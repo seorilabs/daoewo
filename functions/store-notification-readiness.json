@@ -1,0 +1,40 @@
+{
+  "shared": {
+    "claimMissingAuthorityBarrier": {
+      "implemented": false,
+      "liveVerified": false
+    }
+  },
+  "googlePlay": {
+    "voidedPurchasesReconciliation": {
+      "implemented": false,
+      "liveVerified": false
+    },
+    "missedRenewalRecovery": {
+      "implemented": false,
+      "liveVerified": false
+    },
+    "linkedPurchaseMigration": {
+      "implemented": false,
+      "liveVerified": false
+    },
+    "rtdnIamAndTestMessage": {
+      "liveVerified": false
+    },
+    "androidPublisherRuntimeIam": {
+      "liveVerified": false
+    }
+  },
+  "appStore": {
+    "notificationHistoryReconciliation": {
+      "implemented": false,
+      "liveVerified": false
+    },
+    "serverNotificationsV2": {
+      "liveVerified": false
+    },
+    "serverApiStatusAndNestedJws": {
+      "liveVerified": false
+    }
+  }
+}

@@ -38,6 +38,6 @@ jobs:
       memo: ${{ inputs.memo }}
       ait_dir: apps/ait
       package_manager: pnpm
-      install_command: "pnpm install --frozen-lockfile=false"
+      install_command: "pnpm install --frozen-lockfile"
       build_command: "pnpm --dir apps/ait build"
       artifact_path: "apps/ait/*.ait"

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-12T00:00:00.000Z",
+  "privacy": "집계 신호만 저장하며 requesterId, 검색 원문 사용자 식별자, IP를 포함하지 않는다.",
+  "scoring": {
+    "deck-request": 10,
+    "search-miss": 6,
+    "trend": 4,
+    "operator": 3,
+    "proSignalBonus": 5,
+    "strengthScale": 0.2
+  },
+  "signals": [
+    {
+      "id": "signal-request-sql-interview-20260712",
+      "source": "deck-request",
+      "topicKey": "sql-interview-core",
+      "topic": "SQL 면접 핵심",
+      "category": "career",
+      "locale": "ko-KR",
+      "signalCount": 12,
+      "proSignalCount": 4,
+      "strength": 70,
+      "recordedAt": "2026-07-12T00:00:00.000Z",
+      "evidence": "aggregate:deckRequests:2026-W28",
+      "status": "queued"
+    },
+    {
+      "id": "signal-search-sql-interview-20260712",
+      "source": "search-miss",
+      "topicKey": "sql-interview-core",
+      "topic": "SQL 면접 핵심",
+      "category": "career",
+      "locale": "ko-KR",
+      "signalCount": 19,
+      "proSignalCount": 0,
+      "strength": 82,
+      "recordedAt": "2026-07-12T00:00:00.000Z",
+      "evidence": "aggregate:catalogSearchMiss:2026-W28",
+      "status": "queued"
+    },
+    {
+      "id": "signal-trend-ai-literacy-20260712",
+      "source": "trend",
+      "topicKey": "ai-literacy-basics",
+      "topic": "AI 리터러시 기초",
+      "category": "career",
+      "locale": "ko-KR",
+      "signalCount": 1,
+      "proSignalCount": 0,
+      "strength": 88,
+      "recordedAt": "2026-07-12T00:00:00.000Z",
+      "evidence": "operator-reviewed-trend-note:2026-W28",
+      "status": "queued"
+    },
+    {
+      "id": "signal-operator-hanja-20260712",
+      "source": "operator",
+      "topicKey": "daily-hanja-core",
+      "topic": "생활 한자 핵심",
+      "category": "language",
+      "locale": "ko-KR",
+      "signalCount": 1,
+      "proSignalCount": 0,
+      "strength": 60,
+      "recordedAt": "2026-07-12T00:00:00.000Z",
+      "evidence": "operator-plan:content-weekly:2026-W28",
+      "status": "queued"
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [ "${1:-}" = "--" ]; then
+  shift
+fi
+
 app_name="${1:-}"
 
 if [ -z "${app_name}" ]; then

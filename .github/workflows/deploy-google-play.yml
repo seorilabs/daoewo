@@ -52,3 +52,4 @@ jobs:
       track: ${{ inputs.track }}
       release_status: ${{ inputs.release_status }}
       package_manager: pnpm
+      android_dir: apps/mobile/android

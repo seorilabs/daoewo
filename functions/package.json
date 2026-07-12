@@ -1,0 +1,38 @@
+{
+  "name": "@daoewo/functions",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "prebuild": "pnpm --dir .. --filter @daoewo/product-core build",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "prepare:deploy": "npm run build && node scripts/prepare-deploy.mjs",
+    "clean": "rm -rf lib coverage",
+    "test": "vitest run tests/unit tests/service",
+    "test:unit": "vitest run tests/unit",
+    "test:service": "vitest run tests/service",
+    "test:rules": "firebase emulators:exec --config ../firebase/firebase.json --project demo-daoewo-rules --only firestore,storage,auth 'vitest run tests/rules'",
+    "test:all": "npm run typecheck && npm run build && npm run test && npm run test:rules"
+  },
+  "dependencies": {
+    "@apple/app-store-server-library": "3.1.0",
+    "@daoewo/product-core": "workspace:*",
+    "firebase-admin": "13.10.0",
+    "firebase-functions": "7.2.5",
+    "googleapis": "173.0.0"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "5.0.1",
+    "@types/node": "22.20.1",
+    "firebase": "12.16.0",
+    "firebase-tools": "15.23.0",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  }
+}

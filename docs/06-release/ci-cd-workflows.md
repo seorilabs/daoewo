@@ -6,7 +6,7 @@
 
 | 파일 | 트리거 | 역할 | 러너 |
 |---|---|---|---|
-| `static-checks.yml` | push/PR→main, dispatch | 정적 게이트(`pnpm run test`) | ARC(private)/ubuntu |
+| `static-checks.yml` | push/PR→main, dispatch | 정적 게이트(`lint` + `typecheck` + test/assets), Firebase Rules 별도 | ARC(private) + ubuntu(Java 21) |
 | `release-tag.yml` | dispatch | 명시적 SemVer 태그 | ARC |
 | `deploy-apps-in-toss.yml` | dispatch, call | .ait build + AppsInToss | ARC |
 | `deploy-google-play.yml` | dispatch, call | 서명 AAB + Google Play | ubuntu |
@@ -26,8 +26,12 @@
    - `scripts/upload-google-play-internal.py` (Android Publisher API 업로드)
    - `scripts/restore-mobile-firebase-config.mjs --android|--ios --require`
    - Android: `apps/mobile/android/gradlew :app:bundleRelease -PversionNameOverride -PversionCodeOverride`
-3. **secrets/variables**: org 공통(`APPS_IN_TOSS_API_KEY`, `APPLE_*`, `APP_STORE_CONNECT_*`, `GOOGLE_PLAY_UPLOAD_*`, var `APPLE_TEAM_ID`/`GOOGLE_PLAY_UPLOAD_KEY_ALIAS`/`GOOGLE_WORKLOAD_IDENTITY_PROVIDER`)는 상속. **repo 레벨**: `APPLE_PROVISIONING_PROFILE_BASE64`, `FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64`, `FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64`, var `GOOGLE_PLAY_SERVICE_ACCOUNT_EMAIL`.
+3. **secrets/variables**: org 공통(`APPS_IN_TOSS_API_KEY`, `APPLE_*`, `APP_STORE_CONNECT_*`, `GOOGLE_PLAY_UPLOAD_*`, var `APPLE_TEAM_ID`/`GOOGLE_PLAY_UPLOAD_KEY_ALIAS`/`GOOGLE_WORKLOAD_IDENTITY_PROVIDER`)는 상속. **repo secrets**: `APPLE_PROVISIONING_PROFILE_BASE64`, `FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64`, `FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64`, `APP_STORE_IAP_PRIVATE_KEY_BASE64`, `APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON`. **repo variables**: `FIREBASE_PROJECT_ID`, `FUNCTIONS_REGION`, `GOOGLE_PLAY_PRODUCT_IDS`, `GOOGLE_PLAY_RTDN_TOPIC`, `APP_STORE_APP_APPLE_ID`, `APP_STORE_PRODUCT_IDS`, `APP_STORE_IAP_ISSUER_ID`, `APP_STORE_IAP_KEY_ID`, `TOSS_FIREBASE_APP_ID`, `GOOGLE_PLAY_SERVICE_ACCOUNT_EMAIL`.
 4. **GitHub Environments**: `apps-in-toss`, `google-play`, `app-store` 생성(보호 규칙 권장).
+
+`Release Inventory`는 위 repo secret/variable을 임시 파일·환경 변수로 복원한 뒤
+global release checker를 실행한다. 따라서 외부 설정을 완료하면 CI에서도 green이 될 수 있고,
+값이 비어 있으면 의도대로 fail-closed한다.
 
 ## @ref 핀
 

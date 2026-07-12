@@ -18,14 +18,17 @@ on:
         description: "Xcode scheme (필수)"
         type: string
         required: true
+        default: "Daoewo"
       ios_workspace:
         description: "Xcode workspace 경로(.xcworkspace) (필수)"
         type: string
         required: true
+        default: "apps/mobile/ios/Daoewo.xcworkspace"
       ios_bundle_id:
         description: "iOS bundle id (필수)"
         type: string
         required: true
+        default: "com.seorilabs.daoewo"
   workflow_call:
     inputs:
       release_tag:

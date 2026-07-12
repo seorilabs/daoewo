@@ -1,0 +1,110 @@
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
+# 다외워는 광고·교차 앱 추적을 하지 않는다. Firebase Analytics의 IDFA 연동
+# variant를 링크하지 않아 개인정보 원장과 실제 바이너리를 일치시킨다.
+$RNFirebaseAnalyticsWithoutAdIdSupport = true
+$RNFirebaseAsStaticFramework = true
+
+linkage = (ENV['USE_FRAMEWORKS'] || 'static').to_sym
+Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+use_frameworks! :linkage => linkage
+
+target 'Daoewo' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+      # :ccache_enabled => true
+    )
+
+    # CocoaPods 1.16.x + RNFirebase static frameworks 조합은 RNFBApp의 wildcard
+    # submodule을 생성해 React 헤더 소유권이 충돌한다. RNFirebase target에만
+    # non-modular include를 허용하고 RNFBApp의 중복 wildcard submodule만 제거한다.
+    rnfb_targets = installer.pods_project.targets.select do |pod_target|
+      pod_target.name.start_with?('RNFB')
+    end
+    if rnfb_targets.empty?
+      raise Pod::Informative, 'RNFB pod target을 찾지 못했습니다.'
+    end
+
+    rnfb_targets.each do |pod_target|
+      pod_target.build_configurations.each do |build_config|
+        build_config.build_settings[
+          'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'
+        ] = 'YES'
+      end
+    end
+
+    rnfb_app_modulemap = installer.sandbox.root.join(
+      'Target Support Files',
+      'RNFBApp',
+      'RNFBApp.modulemap'
+    )
+    unless rnfb_app_modulemap.file?
+      raise Pod::Informative, "RNFBApp modulemap이 없습니다: #{rnfb_app_modulemap}"
+    end
+
+    modulemap = rnfb_app_modulemap.read
+    expected_markers = [
+      'framework module RNFBApp {',
+      'umbrella header "RNFBApp-umbrella.h"'
+    ]
+    unless expected_markers.all? { |marker| modulemap.include?(marker) }
+      raise Pod::Informative, 'RNFBApp modulemap 형식이 예상과 다릅니다.'
+    end
+
+    patched_modulemap = modulemap.gsub(
+      /^[ \t]*module \* \{ export \* \}[ \t]*\r?\n/,
+      ''
+    )
+    rnfb_app_modulemap.write(patched_modulemap) if patched_modulemap != modulemap
+  end
+end
+
+# RNFBCrashlytics가 생성하는 upload-symbols phase는 Firebase 설정이 없는
+# offline Debug simulator 빌드에서도 GOOGLE_APP_ID를 강제한다. 실제 Release는
+# 그대로 실패시키되, 설정 없는 Debug에서만 해당 phase를 명시적으로 건너뛴다.
+post_integrate do |installer|
+  marker = '# daoewo-offline-debug-guard'
+  guard = <<~'SH'
+    # daoewo-offline-debug-guard
+    if [ "${CONFIGURATION}" = "Debug" ] && \
+       [ ! -f "${PROJECT_DIR}/Daoewo/GoogleService-Info.plist" ]; then
+      echo "warning: Firebase 설정이 없어 Crashlytics symbol 처리를 건너뜁니다."
+      exit 0
+    fi
+  SH
+
+  projects = installer.aggregate_targets
+    .map(&:user_project)
+    .compact
+    .uniq
+  projects.each do |project|
+    project.targets.each do |user_target|
+      phase = user_target.shell_script_build_phases.find do |candidate|
+        candidate.name == '[CP-User] [RNFB] Crashlytics Configuration'
+      end
+      next if phase.nil? || phase.shell_script.include?(marker)
+
+      phase.shell_script = "#{guard}\n#{phase.shell_script}"
+    end
+    project.save
+  end
+end

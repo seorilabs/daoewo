@@ -1,0 +1,12 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
+        <item name="android:windowBackground">@drawable/daoewo_launch_screen</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/daoewo_indigo</item>
+        <item name="android:navigationBarColor">@color/daoewo_indigo_dark</item>
+        <item name="android:windowSplashScreenBackground">@color/daoewo_indigo</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/daoewo_splash_mark</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/daoewo_indigo</item>
+    </style>
+</resources>

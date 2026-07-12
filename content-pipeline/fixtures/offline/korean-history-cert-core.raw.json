@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "deckId": "korean-history-cert-core",
+  "fixtureOnly": true,
+  "generator": "offline-fixture-v1",
+  "sourceRegistry": [
+    {
+      "id": "fixture-korean-history-review-note-v1",
+      "kind": "operator-authored-fixture",
+      "uri": "urn:daoewo:fixture:korean-history-review-note:v1",
+      "revision": "fixture-v1@2026-07-12"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "조선이 건국된 해와 건국자는?",
+      "back": "1392년, 이성계가 조선을 건국했다.",
+      "hint": "고려가 끝난 직후",
+      "tags": ["조선", "연표"],
+      "difficulty": 2,
+      "sourceRefs": ["fixture-korean-history-review-note-v1"]
+    },
+    {
+      "front": "훈민정음이 반포된 해는?",
+      "back": "1446년이다. 세종은 새 문자의 해설과 사용 원리를 담은 훈민정음을 반포했다.",
+      "hint": "세종 28년",
+      "tags": ["조선", "문화"],
+      "difficulty": 2,
+      "sourceRefs": ["fixture-korean-history-review-note-v1"]
+    },
+    {
+      "front": "임진왜란이 시작된 해는?",
+      "back": "1592년이다.",
+      "hint": "선조 재위기",
+      "tags": ["조선", "전쟁", "연표"],
+      "difficulty": 2,
+      "sourceRefs": ["fixture-korean-history-review-note-v1"]
+    },
+    {
+      "front": "3·1 운동이 일어난 해는?",
+      "back": "1919년이다. 전국적으로 독립 의사를 알린 비폭력 만세 운동이 전개됐다.",
+      "hint": "대한민국 임시정부 수립과 같은 해",
+      "tags": ["일제강점기", "독립운동"],
+      "difficulty": 2,
+      "sourceRefs": ["fixture-korean-history-review-note-v1"]
+    },
+    {
+      "front": "대한민국 정부가 수립된 날짜는?",
+      "back": "1948년 8월 15일이다.",
+      "hint": "광복 3주년",
+      "tags": ["현대", "연표"],
+      "difficulty": 2,
+      "sourceRefs": ["fixture-korean-history-review-note-v1"]
+    }
+  ]
+}
