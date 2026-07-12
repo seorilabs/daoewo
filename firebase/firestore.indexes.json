@@ -1,4 +1,88 @@
 {
-  "indexes": [],
-  "fieldOverrides": []
+  "indexes": [
+    {
+      "collectionGroup": "decks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "publishedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "decks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "category", "order": "ASCENDING" },
+        { "fieldPath": "publishedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "decks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "language", "order": "ASCENDING" },
+        { "fieldPath": "publishedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "decks",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "category", "order": "ASCENDING" },
+        { "fieldPath": "language", "order": "ASCENDING" },
+        { "fieldPath": "publishedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "deckRequests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "uid", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "deckRequests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "priority", "order": "DESCENDING" },
+        { "fieldPath": "createdAt", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "deliveryLogs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "uid", "order": "ASCENDING" },
+        { "fieldPath": "issuedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "goals",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "active", "order": "ASCENDING" },
+        { "fieldPath": "updatedAt", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    { "collectionGroup": "goals", "fieldPath": "assignments", "indexes": [] },
+    { "collectionGroup": "deckProgress", "fieldPath": "cards", "indexes": [] },
+    { "collectionGroup": "deckProgress", "fieldPath": "deliveredCardIds", "indexes": [] },
+    { "collectionGroup": "deckProgress", "fieldPath": "recentBatches", "indexes": [] },
+    { "collectionGroup": "deliveryLogs", "fieldPath": "cardIds", "indexes": [] },
+    { "collectionGroup": "deliveryLogs", "fieldPath": "cardIndexes", "indexes": [] },
+    { "collectionGroup": "deliveryCounters", "fieldPath": "uniqueCardKeys", "indexes": [] },
+    { "collectionGroup": "deliveryLogs", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "deliveryCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "deckRequestCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "tossAuthCodeClaims", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "tossAuthExchangeCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "tossAppCheckRefreshCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] }
+  ]
 }

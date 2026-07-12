@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://daoewo.seorilabs.com/schemas/card.schema.json",
+  "title": "Daoewo Generic Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "deckId",
+    "index",
+    "front",
+    "back",
+    "tags",
+    "difficulty",
+    "sourceRefs"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,127}$"
+    },
+    "deckId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{2,79}$"
+    },
+    "index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "front": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "back": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "hint": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "reading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "example": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "exampleMeaning": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "uri", "alt", "licenseRef"],
+      "properties": {
+        "kind": {
+          "enum": ["image", "audio"]
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "licenseRef": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 20,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 80
+      }
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    }
+  }
+}

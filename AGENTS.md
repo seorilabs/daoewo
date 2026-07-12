@@ -56,7 +56,7 @@ flowchart LR
 - Seorilabs GitHub Actions 또는 ARC runner 라우팅을 작성/수정/진단할 때는 `seorilabs-arc-runners` 스킬을 사용한다.
 - 먼저 `/Users/syous/Workspace/kubectl/github-actions-runners/global-versions.yaml`을 확인한다.
 - GitHub Actions action/module 버전은 GitHub 공식 repo/API 또는 공식 문서 기준 최신 stable major를 확인한다. `@latest`나 branch 참조보다 확인된 major tag를 선호한다.
-- 현재 확인 기준: `actions/checkout@v6`, `actions/setup-node@v6`, `actions/setup-java@v5`, `actions/upload-artifact@v7`.
+- 2026-07-12 공식 release 확인 기준: `actions/checkout@v7`, `actions/setup-node@v6`, `actions/setup-java@v5`, `actions/upload-artifact@v7`.
 - private repo의 JS/TS lint/test/typecheck, docs check, AppsInToss candidate는 `seorilabs-rpi-arm64`를 우선 검토한다.
 - ARM64/RPI Docker build는 `seorilabs-rpi-arm64-dind`를 사용한다.
 - public PR 경로에는 Seorilabs private ARC runner를 노출하지 않는다. 템플릿 workflow는 `github.event.repository.private` 조건으로 fallback을 둔다.

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "appName": "daoewo",
+  "displayName": { "ko": "다외워", "en": "Daoewo" },
+  "category": "교육",
+  "listing": {
+    "tagline": "스와이프로 외우고, 오답은 다시 만나요.",
+    "description": "단어부터 자격증과 개념까지 오늘 분량을 자동으로 나눠 학습하고, 틀린 카드는 간격 반복으로 다시 복습하는 암기 앱입니다. 검수된 덱을 탐색하거나 필요한 주제를 요청할 수 있습니다.",
+    "features": ["오늘 분량 자동 배분", "왼쪽 모름·오른쪽 앎 스와이프", "간격 반복 오답노트", "큐레이션 덱 탐색·요청", "Free/Pro 구독"]
+  },
+  "brand": {
+    "primaryColor": "#4C6FFF",
+    "iconUrl": "https://placehold.co/600x600/4C6FFF/FFFFFF.png?text=D"
+  },
+  "support": { "email": "cs@seorilabs.com" },
+  "routes": ["intoss://daoewo/"],
+  "assets": {
+    "logo600": "apps-in-toss/assets/logo-600.png",
+    "thumbnail1932x828": "apps-in-toss/assets/thumbnail-1932x828.png",
+    "screenshots636x1048": []
+  },
+  "policy": {
+    "ads": false,
+    "payment": "auto-renewing-subscription",
+    "userGeneratedContent": false,
+    "targetAge": "13-plus"
+  },
+  "release": {
+    "artifact": "apps/ait/daoewo.ait",
+    "subscriptionSupported": true,
+    "subscriptionSdkMinimum": "1.12.0",
+    "sandboxSubscriptionTestingAvailable": false,
+    "minimumTossApp": { "ios": "5.250.0", "android": "5.253.0" },
+    "uploadEnabled": false
+  },
+  "blockers": [
+    "AppsInToss appName availability not verified in Console",
+    "public icon URL, real vertical screenshots and console asset upload not finalized",
+    "subscription SKU, mTLS server exchange, webhook and pending-order recovery not configured",
+    "Sandbox App does not support subscription testing; supported Toss App verification remains",
+    "sandbox device QA not complete",
+    "deployment approval not granted"
+  ]
+}

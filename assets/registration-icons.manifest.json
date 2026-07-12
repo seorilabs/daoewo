@@ -1,0 +1,47 @@
+{
+  "out_dir": ".",
+  "background": "#4C6FFF",
+  "brand": "Daoewo calm learning brand with an indigo card and check mark.",
+  "items": [
+    {
+      "id": "apple-icon",
+      "kind": "icon",
+      "path": "app-store/assets/icon-1024.png",
+      "width": 1024,
+      "height": 1024,
+      "source": "assets/brand/daoewo-icon-master.png"
+    },
+    {
+      "id": "ait-logo",
+      "kind": "logo",
+      "path": "apps-in-toss/assets/logo-600.png",
+      "width": 600,
+      "height": 600,
+      "source": "assets/brand/daoewo-icon-master.png"
+    },
+    {
+      "id": "play-icon",
+      "kind": "icon",
+      "path": "play-store/assets/icon-512.png",
+      "width": 512,
+      "height": 512,
+      "source": "assets/brand/daoewo-icon-master.png"
+    },
+    {
+      "id": "play-feature",
+      "kind": "feature-graphic",
+      "path": "play-store/assets/feature-graphic-1024x500.png",
+      "width": 1024,
+      "height": 500,
+      "source": "assets/brand/daoewo-play-feature.png"
+    },
+    {
+      "id": "ait-thumbnail",
+      "kind": "thumbnail",
+      "path": "apps-in-toss/assets/thumbnail-1932x828.png",
+      "width": 1932,
+      "height": 828,
+      "source": "assets/brand/daoewo-ait-thumbnail.png"
+    }
+  ]
+}

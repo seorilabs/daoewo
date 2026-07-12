@@ -2,12 +2,9 @@
 
 platform adapter가 구현할 interface를 둔다.
 
-예:
+현재 계약:
 
-- ClockPort
-- IdGeneratorPort
-- StoragePort
-- AnalyticsPort
-- RemoteConfigPort
-- UserRepositoryPort
-- EntitlementRepositoryPort
+- `StoragePort`, `AuthPort`, `SyncPort`, `CatalogPort`
+- `SessionDeliveryPort`, `ProgressSyncPort`, `DeckRequestPort`
+- `EntitlementPort`, `AnalyticsPort`, `ClockPort`
+- `RemoteConfigPort`, `NotificationPort`

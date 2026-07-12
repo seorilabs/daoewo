@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://daoewo.seorilabs.com/schemas/catalog.schema.json",
+  "title": "Daoewo v1 Content Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "catalogId", "version", "chunkSize", "decks"],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "catalogId": {
+      "const": "daoewo-v1"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "chunkSize": {
+      "const": 200
+    },
+    "decks": {
+      "type": "array",
+      "minItems": 14,
+      "maxItems": 14,
+      "items": {
+        "$ref": "#/$defs/deck"
+      }
+    }
+  },
+  "$defs": {
+    "deck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "description",
+        "category",
+        "locale",
+        "contentLanguage",
+        "tier",
+        "priority",
+        "contentStrategy",
+        "source",
+        "license",
+        "provenance",
+        "reviewer",
+        "status",
+        "version",
+        "chunkSize",
+        "tags"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{2,79}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": ["language", "certification", "career", "general-knowledge", "k12-secondary"]
+        },
+        "locale": {
+          "type": "string",
+          "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+        },
+        "contentLanguage": {
+          "enum": ["ko", "en", "ja"]
+        },
+        "tier": {
+          "enum": ["free", "pro"]
+        },
+        "priority": {
+          "enum": ["P1", "P2", "P3"]
+        },
+        "contentStrategy": {
+          "enum": ["vocab-swipe-import", "ai-assisted-operator-batch"]
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "license": {
+          "$ref": "#/$defs/license"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "reviewer": {
+          "$ref": "#/$defs/reviewer"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "generated",
+            "normalized",
+            "deduplicated",
+            "safety-qa-passed",
+            "copyright-qa-passed",
+            "factual-qa-passed",
+            "awaiting-human-approval",
+            "approved",
+            "chunked",
+            "published",
+            "rejected",
+            "archived"
+          ]
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chunkSize": {
+          "const": 200
+        },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "name", "uri", "external", "commit", "revision"],
+      "properties": {
+        "kind": {
+          "enum": ["repository-snapshot", "operator-topic-brief"]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "external": {
+          "type": "boolean"
+        },
+        "commit": {
+          "type": ["string", "null"]
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy", "components", "distributionNotice"],
+      "properties": {
+        "policy": {
+          "enum": ["single", "mixed"]
+        },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "attribution", "evidenceUri", "commercialUse", "shareAlike"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "attribution": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidenceUri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "commercialUse": {
+                "type": "boolean"
+              },
+              "shareAlike": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "distributionNotice": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "recipe", "inputDigest", "generatedBy"],
+      "properties": {
+        "kind": {
+          "enum": ["planned", "imported", "ai-assisted"]
+        },
+        "recipe": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputDigest": {
+          "type": ["string", "null"]
+        },
+        "generatedBy": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "name", "reviewedAt", "evidence"],
+      "properties": {
+        "status": {
+          "enum": ["pending", "approved", "rejected"]
+        },
+        "name": {
+          "type": ["string", "null"]
+        },
+        "reviewedAt": {
+          "type": ["string", "null"]
+        },
+        "evidence": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}

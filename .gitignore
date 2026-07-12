@@ -1,6 +1,8 @@
 # Dependencies
 node_modules/
 .pnpm-store/
+__pycache__/
+*.py[cod]
 
 # React Native / Metro
 .metro-cache/
@@ -22,6 +24,7 @@ dist/
 build/
 coverage/
 *.log
+.work/
 
 # Firebase / secrets / local config
 .env
@@ -33,6 +36,7 @@ firestore-debug.log
 ui-debug.log
 google-services.json
 GoogleService-Info.plist
+**/key.properties
 *.p8
 *.p12
 *.mobileprovision

@@ -1,0 +1,59 @@
+{
+  "packageName": "com.seorilabs.daoewo",
+  "defaultLanguage": "ko-KR",
+  "appType": "app",
+  "freeOrPaid": "free",
+  "contactEmail": "cs@seorilabs.com",
+  "contactWebsite": "확정 필요",
+  "privacyPolicyUrl": "확정 필요",
+  "accountDeletionUrl": "확정 필요",
+  "storeListing": {
+    "appName": {
+      "ko-KR": "다외워",
+      "en-US": "Daoewo"
+    },
+    "shortDescription": {
+      "ko-KR": "스와이프로 외우고, 틀린 건 다시 보는 나만의 암기 루틴",
+      "en-US": "Swipe, review, and master any subject with a daily memory plan."
+    },
+    "fullDescription": {
+      "ko-KR": "단어부터 자격증과 개념까지, 다외워에서 같은 루틴으로 학습하세요. 목표일이나 하루 분량을 정하면 오늘 외울 카드를 자동으로 배분합니다. 카드를 왼쪽으로 넘기면 '모르겠다', 오른쪽으로 넘기면 '안다'로 기록되고, 틀린 카드는 간격 반복 오답노트에서 다시 만납니다. 검수된 큐레이션 덱을 계속 추가하며 찾는 주제가 없으면 덱 요청으로 남길 수 있습니다. 무료 덱으로 핵심 학습 기능을 모두 이용하고, Pro에서는 전체 프리미엄 덱과 고급 통계, 다기기 동기화를 사용할 수 있습니다.",
+      "en-US": "Build one reliable memory routine for languages, exams, work concepts, and more. Choose a deadline or daily card count and Daoewo automatically plans today's cards. Swipe left when you do not know a card and right when you know it. Missed cards return through spaced review, so your weak points do not disappear. Browse an expanding catalog of reviewed decks or request a topic you want us to prepare. Core study features are available with free decks; Pro unlocks the full premium catalog, advanced insights, and multi-device sync."
+    },
+    "video": {}
+  },
+  "assets": {
+    "playIcon": "play-store/assets/icon-512.png",
+    "featureGraphic": "play-store/assets/feature-graphic-1024x500.png",
+    "phoneScreenshots": [],
+    "sevenInchTabletScreenshots": [],
+    "tenInchTabletScreenshots": []
+  },
+  "contentDeclarations": {
+    "dataSafety": "확정 필요",
+    "contentRating": "확정 필요",
+    "targetAudience": "13-plus-not-children",
+    "ads": "no",
+    "koreaDistribution": "yes",
+    "koreaGameRating": "not-applicable-non-game-confirm-in-console"
+  },
+  "release": {
+    "track": "internal",
+    "aabPath": "apps/mobile/android/app/build/outputs/bundle/release/app-release.aab",
+    "releaseNotes": {
+      "ko-KR": "다외워의 첫 테스트 버전입니다.",
+      "en-US": "The first test build of Daoewo."
+    },
+    "uploadEnabled": false
+  },
+  "blockers": [
+    "Play Console app and subscription products not registered",
+    "support and privacy URLs not published",
+    "production signing and Play App Signing not connected",
+    "Google Play linked purchase token migration is not implemented",
+    "missed RTDN reconciliation policy is not implemented",
+    "Data safety and IARC/GRAC not completed in Console",
+    "real phone/tablet screenshots and device QA not complete",
+    "deployment approval not granted"
+  ]
+}

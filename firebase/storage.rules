@@ -2,6 +2,14 @@ rules_version = '2';
 
 service firebase.storage {
   match /b/{bucket}/o {
+    // 덱 원본은 불변 versioned object다:
+    // decks/{deckId}/v{version}/chunk-{i}.json
+    // 무료 덱은 앱 번들 또는 서버 창으로 배포하고, Storage 원본은 tier와 무관하게
+    // Admin SDK만 읽는다. 따라서 premium 본문을 Rules 우회로 직접 읽을 수 없다.
+    match /decks/{deckId}/{deckVersion}/{chunkFile} {
+      allow read, write: if false;
+    }
+
     match /{allPaths=**} {
       allow read, write: if false;
     }

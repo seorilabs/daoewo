@@ -1,0 +1,8 @@
+node_modules/
+
+# React Native/Granite native bundlers resolve workspace package exports before
+# a package build step exists on clean release runners. Keep the deterministic,
+# generated catalog output in Git so every market build starts from the same
+# human-approved snapshot.
+!dist/
+!dist/**

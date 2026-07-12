@@ -34,17 +34,17 @@ on:
         description: "App Store: Xcode scheme (deploy_app_store=true 시 필수)"
         type: string
         required: false
-        default: ""
+        default: "Daoewo"
       ios_workspace:
         description: "App Store: Xcode workspace 경로"
         type: string
         required: false
-        default: ""
+        default: "apps/mobile/ios/Daoewo.xcworkspace"
       ios_bundle_id:
         description: "App Store: iOS bundle id"
         type: string
         required: false
-        default: ""
+        default: "com.seorilabs.daoewo"
       memo:
         description: "AIT 배포 메모(선택)"
         type: string

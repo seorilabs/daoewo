@@ -2,11 +2,15 @@
 
 ## Workflows
 
-- `Repository Checks`: core, architecture, docs checks.
+- `Static Checks`: RPI org 재사용 job으로 lint/typecheck/test/core/architecture/docs/assets,
+  `ubuntu-latest` + Java 21 별도 job으로 Firebase Rules emulator 검사.
 - `Release Inventory`: manual release blocker inventory.
-- `Build AppsInToss Candidate`: manual `.ait` candidate build.
-- `Build Android Candidate`: manual Android AAB candidate build.
-- `Build iOS Candidate`: manual iOS archive handoff workflow.
+- `Deploy AppsInToss`: explicit dispatch/tag에서 `.ait` build·배포.
+- `Deploy Google Play`: explicit dispatch/tag에서 x64 Linux AAB build, 선택적 upload.
+- `Deploy App Store`: explicit dispatch/tag에서 macOS archive, 선택적 upload.
+- `Deploy All`: 한 release tag를 세 마켓 caller로 전달.
+- `Release Tag`: release tag·notes 생성, `Nightly`는 AIT canary만 수행.
+- `Cleanup Actions Storage`: 중앙 보존 정책에 따른 수동 정리.
 
 ## Runner Routing
 
@@ -14,7 +18,7 @@
 - private repo의 JS/TS/docs/AIT candidate는 `seorilabs-rpi-arm64`를 우선 사용한다.
 - public repo 또는 public PR path에서는 `ubuntu-latest` fallback을 사용한다.
 - Android release build는 RPI ARC로 보내지 않고 `ubuntu-latest` x64 Linux runner를 사용한다.
-- App Store/Xcode build는 RPI ARC로 보내지 않고 `macos-latest` runner를 사용한다.
+- App Store/Xcode build는 RPI ARC로 보내지 않고 `macos-26` runner를 사용한다.
 
 ## Central Source
 
@@ -24,7 +28,7 @@
 cat /Users/syous/Workspace/kubectl/github-actions-runners/global-versions.yaml
 ```
 
-2026-06-16 확인값:
+2026-07-12 중앙 파일 확인값(운영 중 변경 가능):
 
 - `seorilabs-rpi-arm64`: `minRunners: 2`, `maxRunners: 4`
 - `seorilabs-rpi-arm64-dind`: `minRunners: 0`, `maxRunners: 1`
@@ -34,13 +38,4 @@ cat /Users/syous/Workspace/kubectl/github-actions-runners/global-versions.yaml
 
 ## Runner Group Membership
 
-2026-06-16 확인:
-
-- Repo: `seorilabs/starter-template-app`
-- Visibility: private
-- GitHub template: enabled
-- Runner group: `RPI ARM64 Builders`
-- Runner group ID: `3`
-- Repo ID: `1270901663`
-
-신규 private repo는 `RPI ARM64 Builders`가 selected visibility라 repo membership 추가가 필요했다. membership 추가 전 push-triggered `Repository Checks`는 queued 상태로 남았고, 추가 후 workflow_dispatch run은 성공했다.
+신규 `seorilabs/daoewo`는 private repo로 만들고 `RPI ARM64 Builders` selected repository membership을 확인해야 한다. public 전환 시 self-hosted ARC를 PR 경로에 노출하지 않는다.

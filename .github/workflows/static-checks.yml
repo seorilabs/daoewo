@@ -19,10 +19,46 @@ concurrency:
 jobs:
   checks:
     uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@main
-    secrets: inherit
     with:
       runs_on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
       package_manager: pnpm
-      install_command: "pnpm install --ignore-scripts --frozen-lockfile=false"
+      install_command: |
+        if ! command -v rg >/dev/null 2>&1; then
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ripgrep
+        fi
+        pnpm install --ignore-scripts --frozen-lockfile
       check_command: |
+        pnpm run lint
+        pnpm run typecheck
         pnpm run test
+
+  firebase-rules:
+    name: Firebase Rules
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.16.0
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.3.0 --activate
+
+      - name: Install dependencies
+        run: pnpm install --ignore-scripts --frozen-lockfile
+
+      - name: Test Firebase Rules
+        run: pnpm run test:functions:rules

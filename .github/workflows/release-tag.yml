@@ -31,7 +31,6 @@ permissions:
 jobs:
   tag:
     uses: seorilabs/.github/.github/workflows/release-tag.yml@main
-    secrets: inherit
     with:
       target_ref: ${{ inputs.target_ref || github.ref_name }}
       tag: ${{ inputs.tag }}

@@ -1,18 +1,12 @@
-# Seorilabs Starter Template App
+# 다외워 · Daoewo
 
-Seorilabs 비게임 앱을 Google Play, Apple App Store, AppsInToss까지 확장하기 위한 React Native 멀티마켓 템플릿이다.
+무엇이든 같은 루틴으로 외우는 스와이프 암기 앱이다. 목표일까지 오늘 분량을 자동 배분하고, 왼쪽은 `모르겠다`, 오른쪽은 `안다`로 분류한 뒤 오답을 간격 반복으로 다시 보여 준다. 운영자가 검수한 큐레이션 덱을 Free/Pro 카탈로그로 공급한다.
 
-제품별 값을 임의로 채우지 않는다. 새 프로젝트를 만들면 `docs/01-planning/`, `docs/05-markets/`, `AGENTS.local.md`에서 `확정 필요` 항목을 먼저 정리한다.
-
-## Stack Decision
-
-- Google Play / App Store: Community CLI 기반 bare React Native target인 `apps/mobile`.
-- AppsInToss: Granite React Native target인 `apps/ait`.
-- Backend 기본값: Firebase. 단, 로컬 전용 MVP면 Firebase 코드를 미리 붙이지 않는다.
-- 공통 제품 로직: `packages/product-core`에서 platform SDK import 없이 관리한다.
-- 네이티브 런치/스플래시는 release asset이다. React Native 템플릿 화면을 숨기지 말고 제품 브랜딩 화면으로 교체한다.
-
-React Native 공식 문서는 새 앱 경험에는 Framework 사용을 권장하지만, 이 템플릿은 native Firebase, Play Billing, StoreKit, Crashlytics, App Check, FCM, signing, App Store/Xcode build 제어가 필요한 Seorilabs 멀티마켓 운영을 기본 전제로 한다. 그래서 `apps/mobile`은 bare RN을 선택하고, AppsInToss는 Granite RN으로 분리한다.
+- Android/iOS: bare React Native
+- AppsInToss: Granite React Native + TDS
+- Backend: Firebase Auth, Firestore, Storage, Functions, Remote Config, Analytics, Crashlytics, FCM, App Check
+- 공통 core: 플랫폼 SDK import가 없는 순수 TypeScript
+- 수익화: 월 ₩4,900 / 연 ₩39,000 / 7일 체험
 
 ## 구조
 
@@ -21,22 +15,30 @@ docs/                  # 기획, 의사결정, 작업, 마켓, 릴리스 원장
 apps/mobile/           # Android/iOS React Native target
 apps/ait/              # AppsInToss Granite React Native target
 packages/product-core/ # platform 독립 도메인/유스케이스/포트
-firebase/              # Firebase rules/indexes/functions 자리
+packages/product-ui/   # Android/iOS/AIT 공통 RN 제품 UI
+functions/             # 서버 권위 세션/진도/요청/영수증 Functions
+content-pipeline/      # 공급자 전용 덱 생성·검수·배포 파이프라인
+firebase/              # Firebase rules/indexes/emulator config
 play-store/            # Google Play registration/release metadata
 app-store/             # App Store registration/release metadata
 apps-in-toss/          # AppsInToss console/release metadata
 scripts/               # local/CI quality gates
 ```
 
-## 기본 명령
+## 개발 명령
 
 ```bash
-pnpm run test:core
-pnpm run check:architecture
-pnpm run check:docs
-pnpm run check:release
-pnpm run bootstrap:mobile -- <AppName>
-pnpm run bootstrap:ait -- <app-name>
+pnpm install
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm dev:mobile
+pnpm dev:ait
+pnpm check:mobile
+pnpm check:ait
+pnpm check:release       # 외부 콘솔/사람 QA blocker가 있으면 의도적으로 실패
 ```
 
-`check:release`는 템플릿 placeholder가 남아 있으면 실패한다. 릴리스 직전 blocker inventory 용도다.
+## 배포 게이트
+
+기획 승인은 2026-07-12 완료됐다. 개발·에이전트 QA·release-candidate 준비는 진행할 수 있지만 Google Play/App Store/AppsInToss 제출과 프로덕션 공개는 별도 deployment approval 전까지 금지한다. 상세 원장은 `docs/`다.
