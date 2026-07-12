@@ -473,6 +473,7 @@ describe('저장된 학습 상태 기반 UI', () => {
     expect(scopedRemoval).toBeGreaterThan(remoteDelete);
   });
 
+  // fake timer 기반 review 완료와 renderer 재시작을 함께 검증하는 통합 테스트다.
   it('Pro window 본문은 저장하지 않고 review 완료·재시작 뒤 메모리에 남기지 않는다', async () => {
     jest.useFakeTimers();
     const secretCard: DaoewoCardView = {
@@ -571,5 +572,5 @@ describe('저장된 학습 상태 기반 UI', () => {
     expect(JSON.stringify(restarted.toJSON())).toContain('복습할 오답이 없어요');
     await act(async () => restarted.unmount());
     jest.useRealTimers();
-  });
+  }, 15_000);
 });

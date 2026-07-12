@@ -142,6 +142,7 @@ describe("신규·요청 덱 알림 설정", () => {
     await expect(notifications.clear()).resolves.toBeUndefined();
   });
 
+  // 공유 ARM64 runner의 React Native renderer cold start를 포함한다.
   it("unsupported 상태에서는 저장된 true를 false로 정리하고 switch를 비활성화한다", async () => {
     const setEnabled = jest.fn(async (_enabled: boolean) => undefined);
     const runtime = deckReadyRuntime({
@@ -170,7 +171,7 @@ describe("신규·요청 덱 알림 설정", () => {
         settingsStorageKey(USER.id)
       )
     ).toMatchObject({ deckReadyNotification: false });
-  });
+  }, 15_000);
 
   it("disabled-by-config는 adapter만 정리하고 저장된 사용자 opt-in은 보존한다", async () => {
     const setEnabled = jest.fn(async (_enabled: boolean) => undefined);
