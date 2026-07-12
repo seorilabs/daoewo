@@ -1,0 +1,79 @@
+# Nightly (AIT 테스트 채널) — opt-in 데일리 빌드·배포.
+# 최신 main을 하루 1회 AIT 테스트 채널로 배포한다(프로덕션 마켓은 자동배포하지 않음 — 명시적 Release/Tag만).
+# 활성화: 아래 schedule 주석을 해제(기본은 수동 dispatch = opt-in). 변경 없으면 skip → 쿼터 안전.
+# Play internal / TestFlight nightly 는 versionCode/buildNumber 스킴 확정 후 추가.
+name: Nightly
+
+on:
+  workflow_dispatch:
+  # 활성화하려면 주석 해제 (03:00 KST · 하루 1회):
+  # schedule:
+  #   - cron: "0 18 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: true
+
+jobs:
+  preflight:
+    name: Skip if no new commits
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Compare HEAD to last nightly marker
+        id: check
+        shell: bash
+        run: |
+          set -euo pipefail
+          head="$(git rev-parse HEAD)"
+          last="$(git rev-list -n 1 nightly 2>/dev/null || echo '')"
+          if [ "$head" = "$last" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "마지막 nightly 이후 새 커밋 없음 → skip"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  ait:
+    name: Deploy AIT (nightly)
+    needs: preflight
+    if: needs.preflight.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy-apps-in-toss.yml
+    secrets: inherit
+    with:
+      memo: "nightly test build"
+
+  finalize:
+    name: Advance nightly marker
+    needs: [preflight, ait]
+    if: ${{ needs.preflight.outputs.changed == 'true' && needs.ait.result == 'success' }}
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Move nightly marker tag to HEAD
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -f nightly "$(git rev-parse HEAD)"
+          git push -f origin refs/tags/nightly

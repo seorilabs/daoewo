@@ -1,0 +1,20 @@
+{
+  "name": "@seorilabs/app-ait",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "granite dev",
+    "build": "ait build",
+    "deploy": "ait deploy",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "@apps-in-toss/framework": "2.8.0",
+    "@toss/tds-react-native": "2.0.3",
+    "react": "19.2.7",
+    "react-native": "0.86.0",
+    "react-native-safe-area-context": "5.8.0"
+  }
+}

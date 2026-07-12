@@ -1,0 +1,22 @@
+{
+  "name": "seorilabs-starter-template-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Seorilabs React Native multimarket app template for Google Play, App Store, and AppsInToss.",
+  "packageManager": "pnpm@11.3.0",
+  "engines": {
+    "node": ">=24 <27",
+    "pnpm": ">=11 <12"
+  },
+  "scripts": {
+    "test": "pnpm run test:core && pnpm run check:architecture && pnpm run check:docs",
+    "test:core": "bash scripts/test_core.sh",
+    "check:architecture": "bash scripts/check_architecture.sh",
+    "check:docs": "bash scripts/check_docs.sh",
+    "check:release": "bash scripts/check_release_readiness.sh",
+    "check:mobile": "bash scripts/check_mobile_target.sh",
+    "check:ait": "bash scripts/check_ait_target.sh",
+    "bootstrap:mobile": "bash scripts/bootstrap_mobile.sh",
+    "bootstrap:ait": "bash scripts/bootstrap_ait.sh"
+  }
+}

@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# React Native / Metro
+.metro-cache/
+.bundle/
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/build/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# AppsInToss / Granite
+.granite/
+.swc/
+*.ait
+dist/
+
+# Build outputs
+build/
+coverage/
+*.log
+
+# Firebase / secrets / local config
+.env
+.env.*
+!.env.example
+.firebaserc
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+google-services.json
+GoogleService-Info.plist
+*.p8
+*.p12
+*.mobileprovision
+
+# Local agent/project overrides
+AGENTS.local.md
+AGENT.local.md
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+!.vscode/extensions.json

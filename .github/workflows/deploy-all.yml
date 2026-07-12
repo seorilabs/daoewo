@@ -1,0 +1,118 @@
+# Deploy All — 릴리즈 태그 1개를 해석해 AIT/GPS/APS 를 한 번에 배포.
+# 보통 Backoffice/Telegram에서 트리거. 마켓별 toggle 가능.
+name: Deploy All
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "배포할 SemVer 태그. 비우면 최신 vX.Y.Z."
+        type: string
+        required: false
+        default: ""
+      deploy_ait:
+        type: boolean
+        default: true
+      deploy_google_play:
+        type: boolean
+        default: true
+      deploy_app_store:
+        description: "App Store 포함(ios_* 입력 필요)"
+        type: boolean
+        default: false
+      track:
+        description: "Google Play track"
+        type: choice
+        options: [internal, production]
+        default: internal
+      release_status:
+        description: "Google Play release status"
+        type: choice
+        options: [draft, completed]
+        default: completed
+      ios_scheme:
+        description: "App Store: Xcode scheme (deploy_app_store=true 시 필수)"
+        type: string
+        required: false
+        default: ""
+      ios_workspace:
+        description: "App Store: Xcode workspace 경로"
+        type: string
+        required: false
+        default: ""
+      ios_bundle_id:
+        description: "App Store: iOS bundle id"
+        type: string
+        required: false
+        default: ""
+      memo:
+        description: "AIT 배포 메모(선택)"
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: deploy-all-${{ inputs.release_tag || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    name: Resolve release tag
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    outputs:
+      tag: ${{ steps.t.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - id: t
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="${{ inputs.release_tag }}"
+          if [ -z "$tag" ]; then
+            tag="$(git tag --list 'v[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n 1)"
+            [ -n "$tag" ] || { echo "release_tag 비어있고 vX.Y.Z 태그 없음. 먼저 Release Tag 실행." >&2; exit 1; }
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+  ait:
+    name: Deploy AIT
+    needs: resolve
+    if: ${{ inputs.deploy_ait }}
+    uses: ./.github/workflows/deploy-apps-in-toss.yml
+    secrets: inherit
+    with:
+      release_tag: ${{ needs.resolve.outputs.tag }}
+      memo: ${{ inputs.memo }}
+
+  google-play:
+    name: Deploy Google Play
+    needs: resolve
+    if: ${{ inputs.deploy_google_play }}
+    uses: ./.github/workflows/deploy-google-play.yml
+    secrets: inherit
+    with:
+      release_tag: ${{ needs.resolve.outputs.tag }}
+      upload: true
+      track: ${{ inputs.track }}
+      release_status: ${{ inputs.release_status }}
+
+  app-store:
+    name: Deploy App Store
+    needs: resolve
+    if: ${{ inputs.deploy_app_store }}
+    uses: ./.github/workflows/deploy-app-store.yml
+    secrets: inherit
+    with:
+      release_tag: ${{ needs.resolve.outputs.tag }}
+      upload: true
+      ios_scheme: ${{ inputs.ios_scheme }}
+      ios_workspace: ${{ inputs.ios_workspace }}
+      ios_bundle_id: ${{ inputs.ios_bundle_id }}

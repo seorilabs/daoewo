@@ -1,0 +1,23 @@
+{
+  "name": "@seorilabs/app-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "build:android": "cd android && ./gradlew bundleRelease"
+  },
+  "dependencies": {
+    "@react-native-firebase/app": "24.1.1",
+    "react": "19.2.7",
+    "react-native": "0.86.0"
+  },
+  "devDependencies": {
+    "@react-native-community/cli": "20.1.3",
+    "typescript": "6.0.3"
+  }
+}

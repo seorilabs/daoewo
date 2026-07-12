@@ -1,0 +1,20 @@
+{
+  "packageName": "확정 필요",
+  "defaultLanguage": "ko-KR",
+  "appName": {
+    "ko": "확정 필요",
+    "en": "확정 필요"
+  },
+  "contact": {
+    "email": "cs@seorilabs.com"
+  },
+  "release": {
+    "track": "internal",
+    "artifact": "apps/mobile/android/app/build/outputs/bundle/release/*.aab"
+  },
+  "policy": {
+    "dataSafety": "확정 필요",
+    "ads": "확정 필요",
+    "contentRating": "확정 필요"
+  }
+}

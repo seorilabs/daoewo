@@ -1,0 +1,23 @@
+{
+  "appName": "확정 필요",
+  "displayName": {
+    "ko": "확정 필요",
+    "en": "확정 필요"
+  },
+  "brand": {
+    "primaryColor": "확정 필요",
+    "iconUrl": "확정 필요"
+  },
+  "support": {
+    "email": "cs@seorilabs.com"
+  },
+  "assets": {
+    "logo600": "apps-in-toss/assets/logo-600.png",
+    "thumbnail1932x828": "apps-in-toss/assets/thumbnail-1932x828.png",
+    "screenshots636x1048": "apps-in-toss/assets/screenshots/"
+  },
+  "release": {
+    "artifact": "apps/ait/*.ait",
+    "sandboxQa": "확정 필요"
+  }
+}
