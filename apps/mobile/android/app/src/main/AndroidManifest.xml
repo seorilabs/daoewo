@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission
       android:name="com.google.android.gms.permission.AD_ID"
       tools:node="remove" />
@@ -11,6 +13,12 @@
     <uses-permission
       android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"
       tools:node="remove" />
+
+    <queries>
+      <intent>
+        <action android:name="android.intent.action.TTS_SERVICE" />
+      </intent>
+    </queries>
 
     <application
       android:name=".MainApplication"
@@ -37,6 +45,9 @@
         android:name="google_analytics_default_allow_ad_user_data"
         android:value="false"
         tools:replace="android:value" />
+      <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_notification" />
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -49,5 +60,20 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+      <receiver
+        android:name=".DaoewoNotificationAlarmReceiver"
+        android:enabled="true"
+        android:exported="false" />
+      <receiver
+        android:name=".DaoewoNotificationRescheduleReceiver"
+        android:enabled="true"
+        android:exported="false">
+        <intent-filter>
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+          <action android:name="android.intent.action.TIME_SET" />
+          <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+        </intent-filter>
+      </receiver>
     </application>
 </manifest>

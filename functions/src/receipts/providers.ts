@@ -10,6 +10,12 @@ export interface AuthorityObservationWindow {
   observedAt: string;
 }
 
+/** Raw purchase token을 서버 경계에서 즉시 이중 hash한 교체 체인 식별자다. */
+export interface ReceiptPredecessor {
+  originalTransactionId: string;
+  receiptFingerprint: string;
+}
+
 export interface ReceiptVerificationRequest {
   uid: string;
   platform: ReceiptPlatform;
@@ -32,6 +38,7 @@ export interface VerifiedStoreReceipt {
   expiresAt: string;
   environment: "sandbox" | "production";
   authorityObservation?: AuthorityObservationWindow;
+  predecessor?: ReceiptPredecessor;
   entitlement: Entitlement;
 }
 

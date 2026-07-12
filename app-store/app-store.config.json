@@ -16,17 +16,17 @@
     "en-US": "Build one reliable memory routine for languages, exams, work concepts, and more. Pick a deadline or daily card count and Daoewo plans today's cards. Swipe left when you do not know a card and right when you know it. Missed cards return through spaced review. Browse an expanding catalog of reviewed decks or request a topic. Core study works with free decks; Pro unlocks the full premium catalog, advanced insights, and multi-device sync."
   },
   "keywords": {
-    "ko-KR": "암기,플래시카드,단어장,간격반복,오답노트,시험,자격증,영어,일본어,한국사",
+    "ko-KR": "암기,플래시카드,단어장,간격반복,오답노트,자격증,영어,일본어,한국사",
     "en-US": "flashcards,spaced repetition,memory,study,exam,vocabulary,review,SRS"
   },
   "primaryCategory": "EDUCATION",
   "secondaryCategory": "PRODUCTIVITY",
   "supportEmail": "cs@seorilabs.com",
   "supportUrl": "확정 필요",
-  "marketingUrl": "확정 필요",
+  "marketingUrl": "",
   "privacyPolicyUrl": "확정 필요",
   "copyright": "2026 Seorilabs",
-  "contentRights": "licensed-and-reviewed-curated-content",
+  "contentRights": "review-required-before-submission",
   "exportCompliance": {
     "usesNonExemptEncryption": false,
     "basis": "Apple OS and standard HTTPS/TLS only; no custom cryptography"
@@ -36,12 +36,79 @@
   "privacy": {
     "tracking": false,
     "collected": [
-      "user-id-and-email-for-account",
+      "name-email-and-user-id-for-federated-account",
+      "coarse-location-from-sign-in-ip-for-fraud-prevention",
       "purchase-history-for-entitlement",
       "study-progress-and-product-interaction",
-      "diagnostics-and-crash-data",
-      "push-token-for-notifications"
-    ]
+      "native-crash-state-and-other-diagnostics",
+      "fcm-installation-token-and-device-metadata"
+    ],
+    "dataTypes": {
+      "NSPrivacyCollectedDataTypeUserID": {
+        "linked": true,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+      },
+      "NSPrivacyCollectedDataTypeName": {
+        "linked": true,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+      },
+      "NSPrivacyCollectedDataTypeEmailAddress": {
+        "linked": true,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+      },
+      "NSPrivacyCollectedDataTypeCoarseLocation": {
+        "linked": true,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+      },
+      "NSPrivacyCollectedDataTypePurchaseHistory": {
+        "linked": true,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+      },
+      "NSPrivacyCollectedDataTypeOtherUserContent": {
+        "linked": true,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAppFunctionality"]
+      },
+      "NSPrivacyCollectedDataTypeProductInteraction": {
+        "linked": false,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAnalytics"]
+      },
+      "NSPrivacyCollectedDataTypeCrashData": {
+        "linked": false,
+        "tracking": false,
+        "purposes": ["NSPrivacyCollectedDataTypePurposeAnalytics"]
+      },
+      "NSPrivacyCollectedDataTypeOtherDiagnosticData": {
+        "linked": false,
+        "tracking": false,
+        "purposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality",
+          "NSPrivacyCollectedDataTypePurposeAnalytics"
+        ]
+      },
+      "NSPrivacyCollectedDataTypeOtherDataTypes": {
+        "linked": true,
+        "tracking": false,
+        "purposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality",
+          "NSPrivacyCollectedDataTypePurposeAnalytics"
+        ]
+      },
+      "NSPrivacyCollectedDataTypeDeviceID": {
+        "linked": true,
+        "tracking": false,
+        "purposes": [
+          "NSPrivacyCollectedDataTypePurposeAppFunctionality",
+          "NSPrivacyCollectedDataTypePurposeAnalytics"
+        ]
+      }
+    }
   },
   "review": {
     "notes": "게스트 시작 후 무료 덱 학습이 가능합니다. 잠금 Pro 덱, 월/연 구독, 7일 체험, 구매 복원은 페이월과 설정에서 확인할 수 있습니다.",
@@ -66,8 +133,9 @@
   },
   "blockers": [
     "App Store Connect app and subscription products not registered",
-    "support, marketing and privacy URLs not published",
-    "Notification History reconciliation scheduler is not implemented",
+    "support and privacy URLs not published; marketing URL is intentionally omitted",
+    "curated content rights, source revisions, digests and notices are not approved",
+    "Notification History scheduler IAM/live run and missed-renewal sandbox recovery are not verified",
     "privacy labels, age rating, DSA/trader contact and review details not submitted",
     "signing, iPhone/iPad screenshots, TestFlight and device QA not complete",
     "deployment approval not granted"

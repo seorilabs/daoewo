@@ -1,0 +1,4 @@
+{
+  "mobile_catalog_cache_ttl_minutes": 60,
+  "mobile_deck_updates_push_enabled": false
+}

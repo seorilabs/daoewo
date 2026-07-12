@@ -4,9 +4,12 @@ import {
   calculateStudyStatistics,
   calculateStudyStreak,
   isDateKey,
+  mergeCardProgresses,
   toDateKey,
   type CalendarDayState,
   type CardProgress,
+  type LearningSessionSnapshot,
+  type LearningSyncSnapshot,
   type LocalDateKey,
   type StudyStreak,
 } from '@daoewo/product-core';
@@ -18,20 +21,11 @@ import type {DaoewoStorage} from './runtime';
 export const DAOEWO_LEGACY_LEARNING_STATE_STORAGE_KEY =
   'daoewo:learning-state:v1';
 const DAOEWO_LEARNING_STATE_STORAGE_PREFIX = 'daoewo:learning-state:v2';
-export const DAOEWO_SETTINGS_STORAGE_KEY = 'daoewo:settings:v1';
+/** v1은 계정 구분이 없어 다른 사용자의 설정을 읽을 수 있으므로 마이그레이션하지 않는다. */
+export const DAOEWO_LEGACY_SETTINGS_STORAGE_KEY = 'daoewo:settings:v1';
+const DAOEWO_SETTINGS_STORAGE_PREFIX = 'daoewo:settings:v2';
 
-export interface DaoewoSessionHistory {
-  readonly id: string;
-  readonly deckId: string;
-  readonly date: LocalDateKey;
-  readonly target: number;
-  readonly completed: number;
-  readonly known: number;
-  readonly unknown: number;
-  readonly reviewCount: number;
-  readonly elapsedMs: number;
-  readonly completedAt: string;
-}
+export type DaoewoSessionHistory = LearningSessionSnapshot;
 
 export interface DaoewoLearningState {
   readonly version: 1;
@@ -43,8 +37,18 @@ export interface DaoewoLearningState {
 export interface DaoewoSettingsState {
   readonly dailyReminder: boolean;
   readonly reviewReminder: boolean;
+  readonly deckReadyNotification: boolean;
   readonly ttsEnabled: boolean;
   readonly voiceGuide: boolean;
+}
+
+export interface DaoewoLearningDataExport {
+  readonly schema: 'daoewo-learning-data';
+  readonly version: 1;
+  readonly exportedAt: string;
+  /** 카드 본문·계정 식별자 없이 학습 판정과 SRS 상태만 포함한다. */
+  readonly progresses: readonly CardProgress[];
+  readonly sessions: readonly DaoewoSessionHistory[];
 }
 
 export const EMPTY_LEARNING_STATE: DaoewoLearningState = Object.freeze({
@@ -54,10 +58,11 @@ export const EMPTY_LEARNING_STATE: DaoewoLearningState = Object.freeze({
   sessions: [],
 });
 
-/** 알림 adapter가 없는 공통 UI에서는 알림 계열을 opt-in으로 둔다. */
+/** 알림 adapter가 없는 공통 UI에서는 알림 계열을 false로 fail-closed한다. */
 export const DEFAULT_SETTINGS_STATE: DaoewoSettingsState = Object.freeze({
   dailyReminder: false,
   reviewReminder: false,
+  deckReadyNotification: false,
   ttsEnabled: true,
   voiceGuide: false,
 });
@@ -123,12 +128,75 @@ export async function removeLearningState(
   await storage.removeItem(learningStateStorageKey(ownerId));
 }
 
+export async function loadSettingsState(
+  storage: DaoewoStorage,
+  ownerId: string,
+): Promise<DaoewoSettingsState> {
+  return parseSettingsState(
+    await storage.getItem<unknown>(settingsStorageKey(ownerId)),
+  );
+}
+
+export async function saveSettingsState(
+  storage: DaoewoStorage,
+  ownerId: string,
+  settings: DaoewoSettingsState,
+): Promise<void> {
+  await storage.setItem(settingsStorageKey(ownerId), settings);
+}
+
+export async function removeSettingsState(
+  storage: DaoewoStorage,
+  ownerId: string,
+): Promise<void> {
+  await storage.removeItem(settingsStorageKey(ownerId));
+}
+
 export function learningStateStorageKey(ownerId: string): string {
   const normalized = ownerId.trim();
   if (normalized.length === 0) {
     throw new Error('학습 기록 소유자 식별자가 필요해요.');
   }
   return `${DAOEWO_LEARNING_STATE_STORAGE_PREFIX}:${encodeURIComponent(normalized)}`;
+}
+
+export function settingsStorageKey(ownerId: string): string {
+  const normalized = ownerId.trim();
+  if (normalized.length === 0) {
+    throw new Error('설정 소유자 식별자가 필요해요.');
+  }
+  return `${DAOEWO_SETTINGS_STORAGE_PREFIX}:${encodeURIComponent(normalized)}`;
+}
+
+export function createLearningDataExport(
+  state: DaoewoLearningState,
+  exportedAt: Date,
+): DaoewoLearningDataExport {
+  if (!Number.isFinite(exportedAt.getTime())) {
+    throw new Error('내보내기 시각이 올바르지 않아요.');
+  }
+
+  return {
+    schema: 'daoewo-learning-data',
+    version: 1,
+    exportedAt: exportedAt.toISOString(),
+    progresses: [...state.progresses]
+      .sort((left, right) =>
+        cardKey(left.deckId, left.cardId).localeCompare(
+          cardKey(right.deckId, right.cardId),
+        ),
+      )
+      .map(progress => ({...progress})),
+    sessions: [...state.sessions]
+      .sort((left, right) => left.id.localeCompare(right.id))
+      .map(session => ({...session})),
+  };
+}
+
+export function serializeLearningDataExport(
+  value: DaoewoLearningDataExport,
+): string {
+  return JSON.stringify(value, null, 2);
 }
 
 export function withProgressSnapshot(
@@ -197,6 +265,61 @@ export function mergeLearningStates(
       item => item.id,
       item => parseTimestamp(item.completedAt) ?? Number.NEGATIVE_INFINITY,
     ),
+  };
+}
+
+/** cloud payload에는 카드 본문이 없으며 Free 본문만 target adapter가 로컬에서 복원한다. */
+export function mergeLearningStateFromSync(
+  local: DaoewoLearningState,
+  sync: LearningSyncSnapshot,
+  freeCardSnapshots: readonly DaoewoCardView[],
+): DaoewoLearningState {
+  const freeDeckIds = new Set(
+    sync.backup.freeDecks.map(deck => deck.deckId),
+  );
+  const freeProgresses = sync.backup.freeDecks.flatMap(deck =>
+    deck.progresses.map(progress => progress.state),
+  );
+  const remoteProgresses = mergeCardProgresses(
+    freeProgresses,
+    sync.authoritativeProgresses,
+  );
+  const merged = mergeLearningStates(local, {
+    version: 1,
+    progresses: remoteProgresses,
+    cardSnapshots: freeCardSnapshots,
+    sessions: sync.backup.sessions,
+  });
+  const authoritativePro = new Map(
+    sync.authoritativeProgresses
+      .filter(progress => !freeDeckIds.has(progress.deckId))
+      .map(progress => [cardKey(progress.deckId, progress.cardId), progress]),
+  );
+  const progresses = merged.progresses.map(progress =>
+    authoritativePro.get(cardKey(progress.deckId, progress.cardId)) ?? progress,
+  );
+  for (const [key, progress] of authoritativePro) {
+    if (!progresses.some(item => cardKey(item.deckId, item.cardId) === key)) {
+      progresses.push(progress);
+    }
+  }
+  const progressKeys = new Set(
+    progresses.map(progress => cardKey(progress.deckId, progress.cardId)),
+  );
+  const snapshots = new Map(
+    [...local.cardSnapshots, ...freeCardSnapshots]
+      .filter(card => freeDeckIds.has(card.deckId))
+      .filter(card => progressKeys.has(cardKey(card.deckId, card.id)))
+      .map(card => [cardKey(card.deckId, card.id), card]),
+  );
+
+  return {
+    version: 1,
+    progresses,
+    cardSnapshots: [...snapshots.entries()]
+      .sort(([left], [right]) => left.localeCompare(right))
+      .map(([, card]) => ({...card, tags: [...card.tags]})),
+    sessions: merged.sessions,
   };
 }
 
@@ -298,6 +421,10 @@ export function parseSettingsState(value: unknown): DaoewoSettingsState {
     reviewReminder: booleanOrDefault(
       value.reviewReminder,
       DEFAULT_SETTINGS_STATE.reviewReminder,
+    ),
+    deckReadyNotification: booleanOrDefault(
+      value.deckReadyNotification,
+      DEFAULT_SETTINGS_STATE.deckReadyNotification,
     ),
     ttsEnabled: booleanOrDefault(
       value.ttsEnabled,

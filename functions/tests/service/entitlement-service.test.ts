@@ -9,9 +9,12 @@ describe("EntitlementService", () => {
     let grants = 0;
     const repository = {
       getEntitlement: async (): Promise<Entitlement | null> => null,
-      applyVerifiedReceipt: async (): Promise<Entitlement> => {
+      applyVerifiedReceipt: async () => {
         grants += 1;
-        return { plan: "pro", source: "bad", validUntil: null };
+        return {
+          entitlement: { plan: "pro" as const, source: "bad", validUntil: null },
+          authorityPending: false,
+        };
       },
       applyVerifiedSubscriptionEvent: async () => ({
         uid: "user-a",
@@ -41,9 +44,12 @@ describe("EntitlementService", () => {
     let grants = 0;
     const repository = {
       getEntitlement: async (): Promise<Entitlement | null> => null,
-      applyVerifiedReceipt: async (): Promise<Entitlement> => {
+      applyVerifiedReceipt: async () => {
         grants += 1;
-        return { plan: "pro", source: "bad", validUntil: null };
+        return {
+          entitlement: { plan: "pro" as const, source: "bad", validUntil: null },
+          authorityPending: false,
+        };
       },
     };
     const service = new EntitlementService(
@@ -98,9 +104,9 @@ describe("EntitlementService", () => {
         _receipt: typeof verified,
         fingerprint: string,
         observation: { startedAt: string; observedAt: string },
-      ): Promise<Entitlement> => {
+      ) => {
         applied = { uid, fingerprint, observation };
-        return verified.entitlement;
+        return { entitlement: verified.entitlement, authorityPending: false };
       },
       applyVerifiedSubscriptionEvent: async () => ({
         uid: "user-a",
@@ -134,6 +140,64 @@ describe("EntitlementService", () => {
         `${verified.platform}:${verified.originalTransactionId}`,
       ),
       observation: verified.authorityObservation,
+    });
+  });
+
+  it("returns a retryable failure when a pre-claim authority barrier holds the grant", async () => {
+    const now = new Date("2026-07-12T00:00:00.000Z");
+    const verified = {
+      platform: "google-play" as const,
+      productId: "daoewo.pro.monthly",
+      originalTransactionId: "opaque-store-transaction",
+      active: true,
+      purchasedAt: now.toISOString(),
+      expiresAt: "2026-08-12T00:00:00.000Z",
+      environment: "production" as const,
+      authorityObservation: {
+        startedAt: now.toISOString(),
+        observedAt: now.toISOString(),
+      },
+      entitlement: {
+        plan: "pro" as const,
+        source: "google-play",
+        validUntil: "2026-08-12T00:00:00.000Z",
+      },
+    };
+    const repository = {
+      getEntitlement: async (): Promise<Entitlement | null> => null,
+      applyVerifiedReceipt: async () => ({
+        entitlement: {
+          plan: "free" as const,
+          source: "google-play",
+          validUntil: null,
+        },
+        authorityPending: true,
+      }),
+      applyVerifiedSubscriptionEvent: async () => ({
+        uid: "user-a",
+        entitlement: verified.entitlement,
+        applied: false,
+        idempotent: true,
+      }),
+    };
+    const service = new EntitlementService(
+      repository,
+      repository,
+      new ReceiptProviderRegistry([
+        { platform: "google-play", verify: async () => verified },
+      ]),
+      { now: () => now },
+    );
+
+    await expect(
+      service.verifyReceipt("user-a", {
+        platform: "google-play",
+        productId: verified.productId,
+        purchaseToken: "never-persist-client-token",
+      }),
+    ).rejects.toMatchObject({
+      code: "aborted",
+      details: { kind: "receipt-authority-pending" },
     });
   });
 });

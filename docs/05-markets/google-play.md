@@ -40,8 +40,11 @@
 
 ## 구독
 
-- `apps/mobile/src/runtime-config.ts`의 월간/연간 상품 ID는 현재 빈 값이다.
+- `play-store/google-play.config.json`의 월간/연간 상품 ID는 `확정 필요`,
+  `apps/mobile/src/runtime-config.ts`의 같은 값은 현재 빈 값이다.
 - Functions allowlist `GOOGLE_PLAY_PRODUCT_IDS`도 실제 Console 상품과 같은 값으로 주입해야 한다.
+- release checker는 Play/App Store config, mobile runtime, 두 Functions allowlist의 월/연 SKU를
+  교차 대조하며 하나라도 다르면 실패한다.
 - 월 ₩4,900 / 연 ₩39,000 / 7일 체험은 기획 가격이며 앱은 Play 반환 현지 가격을 표시한다.
 - client는 Firebase UID 기반 `obfuscatedExternalAccountId`를 구매에 전달한다. 서버는
   `purchases.subscriptionsv2.get`, `orders.get`, 필요 시 acknowledge를 통과한 결과만 권한으로 쓴다.
@@ -52,7 +55,20 @@
 - Play Console RTDN은 **Get notifications for subscriptions and all voided purchases**를 선택하고
   Google Play service agent Publisher IAM 및 **Send Test Message** 수신을 확인한다.
 - voided subscription의 `orderId`가 current latest order와 같으면 revoke/expiry 또는 후속
-  성공 renewal이 확인될 때까지 retry하며, order ID와 purchase token은 저장하지 않는다.
+  성공 renewal이 확인될 때까지 retry한다. 과거 renewal이면 과거/current 주문의 token·product를
+  Orders API로 각각 교차검증하고 404 eventual consistency를 재시도한다. raw order ID/token은
+  저장하지 않고 voided order hash만 audit event에 남긴다.
+- `subscriptionsv2.linkedPurchaseToken`은 API 응답 직후 old original ID/fingerprint hash pair로
+  치환한다. direct 검증 transaction은 old claim 소유자(동일 UID 또는 검증된 merge target)를
+  확인하고 old claim을 `superseded` tombstone으로 바꾸며 new claim·entitlement를 함께 적용한다.
+  old-token restore/RTDN은 successor 권한을 변경하지 않고 영구 거부/ACK한다. new-token RTDN은
+  API linked hash pair와 new claim predecessor가 정확히 같아야 한다.
+- 15분 scheduler가 Voided Purchases API의 최근 29일 window를 6시간 overlap으로 조회한다.
+  기존 claim이 있는 subscription token만 현재 `subscriptionsv2`/order 권위 경로로 재검증하고,
+  raw token은 cursor/event에 저장하지 않는다. page token이 만료되면 같은 고정 window의 첫
+  페이지로 원자 reset한 뒤 재시도한다.
+- 비익명 mobile 계정은 서버가 Free를 반환한 앱 세션에 한 번 현재 스토어 구매를 재검증해
+  누락된 renewal을 복구한다. 실패는 Free startup을 막지 않는다.
 
 ## 현재 Blocker
 
@@ -62,9 +78,15 @@
 - Firebase project와 `google-services.json` 미생성
 - Data safety/IARC/GRAC/App access와 실제 screenshot 미완료
 - 영수증 sandbox·복원·환불·결제 보류 E2E 미완료
-- Google RTDN/voided 코드 경로는 구현됐으나 topic/IAM/Test Message/환불 E2E 미검증
-- Voided Purchases API 누락-event reconciliation scheduler/cursor/IAM 미구현
-- past renewal void와 current order 전파 모호성의 ephemeral `orders.get` 검증/hash-only audit 미구현
-- `linkedPurchaseToken` active/direct는 안전하게 거부 중이며 old/new claim 원자 migration 미구현
+- Google RTDN/voided 및 Voided Purchases scheduler/cursor 코드 경로는 구현됐으나
+  topic/runtime IAM/Test Message/scheduler 실행·환불 E2E 미검증
+- `linkedPurchaseToken` 원자 migration은 구현·emulator 검증 완료, Play sandbox의
+  upgrade/downgrade/re-signup 및 unrelated account 공격 E2E 미검증
+- mobile missed-renewal client reverify는 구현됐으나 Play sandbox 자동 복구 E2E 미검증
 
-공식 서버 검증 API: https://developer.android.com/google/play/developer-api
+공식 문서:
+
+- https://developer.android.com/google/play/billing/subscriptions
+- https://developer.android.com/google/play/billing/security
+- https://developers.google.com/android-publisher/api-ref/rest/v3/purchases.subscriptionsv2
+- https://developers.google.com/android-publisher/api-ref/rest/v3/purchases.voidedpurchases/list

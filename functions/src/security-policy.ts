@@ -3,6 +3,7 @@ const MUTATION_HTTP_PATHS = new Set([
   "/v1/goals:deactivate",
   // pull도 Free primary-device binding과 lastSeenAt을 갱신한다.
   "/v1/sync:pull",
+  "/v1/sync:push",
   "/v1/windows:today",
   "/v1/progress:batchSubmit",
   "/v1/deckRequests:create",

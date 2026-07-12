@@ -10,6 +10,12 @@ service cloud.firestore {
       return signedIn() && request.auth.uid == uid;
     }
 
+    function activeOwner(uid) {
+      return owns(uid) &&
+        !exists(/databases/$(database)/documents/accountMerges/$(uid)) &&
+        !exists(/databases/$(database)/documents/accountDeletions/$(uid));
+    }
+
     // 카탈로그에는 카드 본문이 없으며 published metadata만 인증 사용자에게 보인다.
     // tier=pro 문서도 잠금 상태 표시를 위해 읽을 수 있어야 한다.
     match /decks/{deckId} {
@@ -24,7 +30,7 @@ service cloud.firestore {
     }
 
     match /users/{uid} {
-      allow read: if owns(uid);
+      allow read: if activeOwner(uid);
       allow write: if false;
 
       match /goals/{goalId} {
@@ -38,7 +44,7 @@ service cloud.firestore {
       }
 
       match /entitlements/{entitlementId} {
-        allow read: if owns(uid);
+        allow read: if activeOwner(uid);
         allow write: if false;
       }
 
@@ -49,7 +55,7 @@ service cloud.firestore {
 
     // 요청 생성은 검증/rate-limit/Pro 우선순위 판정을 하는 Functions만 수행한다.
     match /deckRequests/{requestId} {
-      allow read: if signedIn() && resource.data.uid == request.auth.uid;
+      allow read: if activeOwner(resource.data.uid);
       allow write: if false;
     }
 
@@ -70,7 +76,17 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // claim 전 store authority barrier는 fingerprint만 key로 사용하는 서버 전용
+    // anti-resurrection 기록이다.
+    match /receiptAuthorityBarriers/{document=**} {
+      allow read, write: if false;
+    }
+
     match /subscriptionEvents/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /storeReconciliationCursors/{document=**} {
       allow read, write: if false;
     }
 
@@ -83,6 +99,19 @@ service cloud.firestore {
     }
 
     match /tossAppCheckRefreshCounters/{document=**} {
+      allow read, write: if false;
+    }
+
+    // FCM token과 delivery outbox는 Auth/App Check를 검증한 Functions/Admin SDK만 다룬다.
+    match /notificationInstallations/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /notificationOutbox/{document=**} {
+      allow read, write: if false;
+    }
+
+    match /catalogNotificationEvents/{document=**} {
       allow read, write: if false;
     }
 

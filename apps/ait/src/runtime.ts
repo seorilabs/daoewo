@@ -6,6 +6,7 @@ import {
   getOperationalEnvironment,
   isMinVersionSupported,
   openURL,
+  share,
   type SubscriptionProductListItem,
 } from '@apps-in-toss/framework';
 import { listPublicCatalog, type CatalogDeckForEntitlement, type PublicDeckMetadata } from '@daoewo/product-catalog';
@@ -38,9 +39,19 @@ import {
   type DaoewoUser,
   type SubscriptionPlan,
 } from '@daoewo/product-ui';
-import { AccessibilityInfo } from 'react-native';
+import {
+  createNoopDaoewoSyncPort,
+  createUnsupportedDaoewoDeckReadyNotifications,
+  createUnsupportedDaoewoNotifications,
+} from '@daoewo/product-ui/runtime';
+import {
+  createLearningSyncPort,
+  type LearningSyncPushInput,
+  type LearningSyncServerState,
+} from '@daoewo/product-ui/sync';
 
 const GUEST_USER_KEY = 'daoewo:auth:guest';
+const TOSS_ACCOUNT_MARKER_KEY = 'daoewo:auth:toss-account:v1';
 const DEVICE_ID_KEY = 'daoewo:device-id:v1';
 const PURCHASE_TIMEOUT_MS = 120_000;
 const TOKEN_REFRESH_MARGIN_MS = 60_000;
@@ -128,6 +139,10 @@ interface AuthenticatedSession {
   readonly user: DaoewoUser;
 }
 
+interface TossAccountMarker {
+  readonly uid: string;
+}
+
 interface ServerCatalogDeck {
   readonly id: string;
   readonly title: string;
@@ -174,8 +189,9 @@ interface ServerSyncState {
   readonly goals: readonly ServerStudyGoal[];
   readonly progress: readonly {
     readonly deckId: string;
-    readonly cards: Readonly<Record<string, unknown>>;
+    readonly cards: Readonly<Record<string, { readonly state?: CardProgress } | CardProgress>>;
   }[];
+  readonly learningBackup?: LearningSyncServerState['learningBackup'];
 }
 
 export function createAppsInTossBackend(config: AppsInTossBackendConfig): AppsInTossBackend {
@@ -353,15 +369,163 @@ export function createAppsInTossBackend(config: AppsInTossBackendConfig): AppsIn
 }
 
 export function createAppsInTossRuntime(
-  backend: AppsInTossBackend = createUnconfiguredBackend(),
-  legalUrls?: {readonly terms: string; readonly privacy: string},
-  bundledFreeContent?: Readonly<Record<string, PublishedDeckContent>>,
+  backend: AppsInTossBackend | undefined = undefined,
+  legalUrls?: { readonly terms: string; readonly privacy: string },
+  bundledFreeContent?: Readonly<Record<string, PublishedDeckContent>>
 ): DaoewoRuntime {
+  const configuredBackend = backend !== undefined;
+  const activeBackend = backend ?? createUnconfiguredBackend();
   const storage = createJsonStorageAdapter(Storage);
   const getDeviceId = createStableDeviceIdProvider(storage);
   const externalLinks = createExternalLinks(legalUrls);
+  let authEpoch = 0;
+  let coldStartRecoveryAttempted = false;
+  let coldStartRecoveryPromise: Promise<DaoewoUser | null> | null = null;
+  let interactiveSignInPromise: Promise<DaoewoUser> | null = null;
+  let backendSessionRejected = false;
+
+  async function readTossAccountMarker(): Promise<TossAccountMarker | null> {
+    const marker = await storage.getItem<unknown>(TOSS_ACCOUNT_MARKER_KEY);
+    if (
+      typeof marker === 'object' &&
+      marker !== null &&
+      'uid' in marker &&
+      typeof marker.uid === 'string' &&
+      marker.uid.trim().length > 0
+    ) {
+      return { uid: marker.uid };
+    }
+    if (marker !== null) {
+      await storage.removeItem(TOSS_ACCOUNT_MARKER_KEY);
+    }
+    return null;
+  }
+
+  async function getAcceptedBackendUser(): Promise<DaoewoUser | null> {
+    if (backendSessionRejected) {
+      return null;
+    }
+    return activeBackend.getCurrentUser();
+  }
+
+  async function closeRejectedBackendSession(): Promise<void> {
+    backendSessionRejected = true;
+    try {
+      await activeBackend.signOut();
+    } finally {
+      await storage.removeItem(TOSS_ACCOUNT_MARKER_KEY);
+    }
+  }
+
+  async function recoverColdStartSessionOnce(): Promise<DaoewoUser | null> {
+    if (!configuredBackend) {
+      return null;
+    }
+    if (coldStartRecoveryPromise !== null) {
+      return coldStartRecoveryPromise;
+    }
+    if (coldStartRecoveryAttempted) {
+      return null;
+    }
+
+    coldStartRecoveryAttempted = true;
+    const recoveryEpoch = authEpoch;
+    const operation = (async (): Promise<DaoewoUser | null> => {
+      try {
+        const marker = await readTossAccountMarker();
+        if (marker === null || authEpoch !== recoveryEpoch) {
+          return null;
+        }
+
+        const loginInput = await appLogin();
+        if (authEpoch !== recoveryEpoch) {
+          return null;
+        }
+
+        const user = await activeBackend.signInWithToss(loginInput);
+        if (authEpoch !== recoveryEpoch) {
+          await activeBackend.signOut();
+          return null;
+        }
+        if (user.id !== marker.uid) {
+          authEpoch += 1;
+          await closeRejectedBackendSession();
+          throw new Error('복구된 토스 계정이 저장된 계정과 달라 로그아웃했어요.');
+        }
+        backendSessionRejected = false;
+        return user;
+      } catch {
+        // 자동 복구 실패는 시작 화면을 막지 않는다. 명시적 로그인은 다시 시도할 수 있다.
+        return null;
+      }
+    })();
+    coldStartRecoveryPromise = operation;
+    try {
+      return await operation;
+    } finally {
+      if (coldStartRecoveryPromise === operation) {
+        coldStartRecoveryPromise = null;
+      }
+    }
+  }
+
+  async function ensureColdStartSession(): Promise<DaoewoUser | null> {
+    if (coldStartRecoveryPromise !== null) {
+      return coldStartRecoveryPromise;
+    }
+    if (interactiveSignInPromise !== null) {
+      return interactiveSignInPromise;
+    }
+    const current = await getAcceptedBackendUser();
+    if (current !== null) {
+      return current;
+    }
+    return recoverColdStartSessionOnce();
+  }
+
+  async function signInInteractively(): Promise<DaoewoUser> {
+    if (interactiveSignInPromise !== null) {
+      return interactiveSignInPromise;
+    }
+    const operation = (async (): Promise<DaoewoUser> => {
+      const signInEpoch = authEpoch + 1;
+      authEpoch = signInEpoch;
+      const guest = await storage.getItem<DaoewoUser>(GUEST_USER_KEY);
+      const loginInput = await appLogin();
+      const user = await activeBackend.signInWithToss(loginInput);
+      if (authEpoch !== signInEpoch) {
+        await activeBackend.signOut();
+        throw new Error('로그인 중 계정 상태가 변경됐어요. 다시 시도해 주세요.');
+      }
+
+      try {
+        await storage.setItem<TossAccountMarker>(TOSS_ACCOUNT_MARKER_KEY, {
+          uid: user.id,
+        });
+        if (guest?.isGuest === true && guest.id !== user.id) {
+          await bundledFree.mergeOwnerState(guest.id, user.id);
+        }
+        await storage.removeItem(GUEST_USER_KEY);
+      } catch (error) {
+        await activeBackend.signOut().catch(() => undefined);
+        await storage.removeItem(TOSS_ACCOUNT_MARKER_KEY).catch(() => undefined);
+        throw error;
+      }
+      backendSessionRejected = false;
+      return user;
+    })();
+    interactiveSignInPromise = operation;
+    try {
+      return await operation;
+    } finally {
+      if (interactiveSignInPromise === operation) {
+        interactiveSignInPromise = null;
+      }
+    }
+  }
+
   async function getRuntimeUser(): Promise<DaoewoUser | null> {
-    const authenticated = await backend.getCurrentUser();
+    const authenticated = await ensureColdStartSession();
     if (authenticated !== null) {
       return authenticated;
     }
@@ -371,7 +535,8 @@ export function createAppsInTossRuntime(
   const bundledFree = createBundledFreeContentAdapter({
     storage,
     getOwnerId: async () => (await getRuntimeUser())?.id ?? null,
-    ...(bundledFreeContent === undefined ? {} : {content: bundledFreeContent}),
+    getEntitlement: () => activeBackend.getEntitlement().catch(() => FREE_ENTITLEMENT),
+    ...(bundledFreeContent === undefined ? {} : { content: bundledFreeContent }),
   });
 
   return {
@@ -390,61 +555,68 @@ export function createAppsInTossRuntime(
         return getRuntimeUser();
       },
       async continueAsGuest() {
+        authEpoch += 1;
+        coldStartRecoveryAttempted = true;
         const guest: DaoewoUser = {
           id: 'ait-local-guest',
           displayName: '게스트',
           isGuest: true,
         };
-        await storage.setItem(GUEST_USER_KEY, guest);
+        await Promise.all([
+          activeBackend.signOut(),
+          storage.removeItem(TOSS_ACCOUNT_MARKER_KEY),
+          storage.setItem(GUEST_USER_KEY, guest),
+        ]);
+        backendSessionRejected = false;
         return guest;
       },
       async signIn(provider) {
         if (provider !== 'toss') {
           throw new Error('AppsInToss에서는 토스 로그인을 사용해 주세요.');
         }
-        const guest = await storage.getItem<DaoewoUser>(GUEST_USER_KEY);
-        const result = await appLogin();
-        const user = await backend.signInWithToss(result);
-        if (guest?.isGuest === true && guest.id !== user.id) {
-          await bundledFree.mergeOwnerState(guest.id, user.id);
+        if (coldStartRecoveryPromise !== null) {
+          const recovered = await coldStartRecoveryPromise;
+          if (recovered !== null) {
+            return recovered;
+          }
         }
-        await storage.removeItem(GUEST_USER_KEY);
-        return user;
+        const current = await getAcceptedBackendUser();
+        return current ?? signInInteractively();
       },
       async signOut() {
-        const current = await getRuntimeUser();
-        if (current !== null) {
-          await bundledFree.removeOwnerState(current.id);
-        }
-        await Promise.all([backend.signOut(), storage.removeItem(GUEST_USER_KEY)]);
+        authEpoch += 1;
+        const current = coldStartRecoveryPromise === null ? await getAcceptedBackendUser() : null;
+        await Promise.all([
+          ...(current === null ? [] : [bundledFree.removeOwnerState(current.id)]),
+          activeBackend.signOut(),
+          storage.removeItem(GUEST_USER_KEY),
+          storage.removeItem(TOSS_ACCOUNT_MARKER_KEY),
+        ]);
+        backendSessionRejected = false;
       },
       async deleteAccount() {
-        const current = await backend.getCurrentUser();
-        const runtimeUser = current ?? await storage.getItem<DaoewoUser>(GUEST_USER_KEY);
+        authEpoch += 1;
+        const current = await getAcceptedBackendUser();
+        const runtimeUser = current ?? (await storage.getItem<DaoewoUser>(GUEST_USER_KEY));
         if (current !== null) {
           // Toss login exchange로 Firebase auth_time을 갱신한 뒤 파괴적 endpoint를 호출한다.
-          const reauthenticated = await backend.signInWithToss(await appLogin());
+          const reauthenticated = await activeBackend.signInWithToss(await appLogin());
           if (reauthenticated.id !== current.id) {
-            await backend.signOut();
+            await closeRejectedBackendSession();
             throw new Error('재인증된 토스 계정이 현재 계정과 달라 탈퇴를 중단했어요.');
           }
-          await backend.deleteAccount();
-        }
-        if (runtimeUser !== null) {
-          await bundledFree.removeOwnerState(runtimeUser.id);
+          await activeBackend.deleteAccount();
         }
         await Promise.all([
+          ...(runtimeUser === null ? [] : [bundledFree.removeOwnerState(runtimeUser.id)]),
           storage.removeItem(GUEST_USER_KEY),
+          storage.removeItem(TOSS_ACCOUNT_MARKER_KEY),
           storage.removeItem(DEVICE_ID_KEY),
           storage.removeItem('daoewo:learning-state:v1'),
           storage.removeItem('daoewo:settings:v1'),
           ...(current === null
             ? []
-            : [
-                storage.removeItem(
-                  `daoewo:learning-state:v2:${encodeURIComponent(current.id)}`
-                ),
-              ]),
+            : [storage.removeItem(`daoewo:learning-state:v2:${encodeURIComponent(current.id)}`)]),
         ]);
       },
     },
@@ -454,24 +626,28 @@ export function createAppsInTossRuntime(
         return listPurchaseOffers();
       },
       async getEntitlement() {
-        return backend.getEntitlement();
+        await ensureColdStartSession();
+        if (backendSessionRejected) {
+          return FREE_ENTITLEMENT;
+        }
+        return activeBackend.getEntitlement();
       },
       async purchase(plan) {
-        if ((await backend.getCurrentUser()) === null) {
+        if ((await ensureColdStartSession()) === null) {
           throw new Error('구독하려면 먼저 토스 로그인을 완료해 주세요.');
         }
         assertSubscriptionRuntimeSupported();
         const product = await findSubscriptionProduct(plan);
-        return purchaseSubscription(backend, product, plan);
+        return purchaseSubscription(activeBackend, product, plan);
       },
       async restore() {
-        if ((await backend.getCurrentUser()) === null) {
+        if ((await ensureColdStartSession()) === null) {
           throw new Error('구독을 복원하려면 먼저 토스 로그인을 완료해 주세요.');
         }
         assertSubscriptionRuntimeSupported();
         const response = await IAP.getPendingOrders();
         for (const order of response?.orders ?? []) {
-          const entitlement = await backend.verifySubscriptionOrder({
+          const entitlement = await activeBackend.verifySubscriptionOrder({
             orderId: order.orderId,
             sku: order.sku,
           });
@@ -481,24 +657,81 @@ export function createAppsInTossRuntime(
             });
           }
         }
-        return backend.getEntitlement();
+        return activeBackend.getEntitlement();
       },
     },
     tts: {
+      availability: 'unsupported',
       async speak(text) {
-        AccessibilityInfo.announceForAccessibility(text);
+        void text;
+        throw new Error('AppsInToss에서는 음성 읽기를 지원하지 않아요.');
       },
       async stop() {
-        // AppsInToss 공개 SDK에는 음성 중지 API가 없어 짧은 접근성 안내만 사용한다.
+        // 지원하지 않는 capability의 멱등 cleanup 경계다.
       },
     },
+    sharing: {
+      availability: 'available',
+      async shareText(input) {
+        await share({ message: input.message });
+      },
+    },
+    notifications: createUnsupportedDaoewoNotifications(),
+    deckReadyNotifications: createUnsupportedDaoewoDeckReadyNotifications(),
     content: createAppsInTossContentPort({
-      backend,
+      backend: activeBackend,
       getDeviceId,
       bundledFree,
     }),
-    ...(externalLinks === undefined ? {} : {externalLinks}),
+    sync: configuredBackend
+      ? createLearningSyncPort({
+          transport: createAppsInTossLearningSyncTransport(activeBackend, getDeviceId),
+          localFree: {
+            exportLearningBackup: (ownerId) => bundledFree.exportLearningBackup(ownerId),
+            importLearningBackup: (ownerId, freeDecks) => bundledFree.importLearningBackup(freeDecks, ownerId),
+            async resolveFreeCardSnapshots(cards) {
+              const resolved = await bundledFree.getCardsByIds(cards);
+              return resolved.map((card) => {
+                const metadata = listPublicCatalog('pro').find((deck) => deck.id === card.deckId);
+                return mapBundledCard(card, metadata?.locale ?? '한국어');
+              });
+            },
+          },
+          getEntitlement: () => activeBackend.getEntitlement(),
+          createMutationId: () => createSafeId('sync'),
+          canSync: async (userId) => (await getAcceptedBackendUser())?.id === userId,
+        })
+      : createNoopDaoewoSyncPort(),
+    ...(externalLinks === undefined ? {} : { externalLinks }),
     now: () => new Date(),
+  };
+}
+
+function createAppsInTossLearningSyncTransport(backend: AppsInTossBackend, getDeviceId: () => Promise<string>) {
+  async function assertCurrentUser(userId: string): Promise<void> {
+    if ((await backend.getCurrentUser())?.id !== userId) {
+      throw new Error('동기화 계정이 현재 로그인 계정과 달라요.');
+    }
+  }
+
+  return {
+    async pull(userId: string): Promise<LearningSyncServerState> {
+      await assertCurrentUser(userId);
+      const result = await backend.request<{ syncState: ServerSyncState }>('/v1/sync:pull', {
+        deviceId: await getDeviceId(),
+      });
+      await assertCurrentUser(userId);
+      return result.syncState;
+    },
+    async push(userId: string, backup: LearningSyncPushInput): Promise<LearningSyncServerState> {
+      await assertCurrentUser(userId);
+      const result = await backend.request<{ syncState: ServerSyncState }>('/v1/sync:push', {
+        deviceId: await getDeviceId(),
+        ...backup,
+      });
+      await assertCurrentUser(userId);
+      return result.syncState;
+    },
   };
 }
 
@@ -558,24 +791,18 @@ function createAppsInTossContentPort(input: {
   const serverWindows = createDeliveryWindowDeckRegistry();
   let catalogCache: readonly DaoewoDeckView[] = [];
 
-  async function localCatalog(
-    entitlement: DaoewoEntitlementState,
-  ): Promise<readonly DaoewoDeckView[]> {
+  async function localCatalog(entitlement: DaoewoEntitlementState): Promise<readonly DaoewoDeckView[]> {
     return Promise.all(
-      listPublicCatalog(entitlement.plan === 'pro' ? 'pro' : 'free').map(
-        async metadata => {
-          const base = mapPublicDeck(metadata);
-          if (!input.bundledFree.hasDeck(metadata.id)) {
-            return base;
-          }
-          const summary = await input.bundledFree
-            .getDeckSummary(metadata.id)
-            .catch(() => null);
-          return summary === null || !summary.active
-            ? base
-            : {...base, progress: summary.progress, daysLeft: summary.daysLeft};
-        },
-      ),
+      listPublicCatalog(entitlement.plan === 'pro' ? 'pro' : 'free').map(async (metadata) => {
+        const base = mapPublicDeck(metadata);
+        if (!input.bundledFree.hasDeck(metadata.id)) {
+          return base;
+        }
+        const summary = await input.bundledFree.getDeckSummary(metadata.id).catch(() => null);
+        return summary === null || !summary.active
+          ? base
+          : { ...base, progress: summary.progress, daysLeft: summary.daysLeft };
+      })
     );
   }
 
@@ -587,8 +814,8 @@ function createAppsInTossContentPort(input: {
     }
 
     let entitlement: DaoewoEntitlementState;
-    let catalog: {decks: readonly ServerCatalogDeck[]};
-    let sync: {syncState: ServerSyncState};
+    let catalog: { decks: readonly ServerCatalogDeck[] };
+    let sync: { syncState: ServerSyncState };
     try {
       const deviceId = await input.getDeviceId();
       [entitlement, catalog, sync] = await Promise.all([
@@ -603,7 +830,7 @@ function createAppsInTossContentPort(input: {
     }
     const publicCatalog = listPublicCatalog(entitlement.plan === 'pro' ? 'pro' : 'free');
     const local = await localCatalog(entitlement);
-    const localById = new Map(local.map(deck => [deck.id, deck] as const));
+    const localById = new Map(local.map((deck) => [deck.id, deck] as const));
     const serverById = new Map(catalog.decks.map((deck) => [deck.id, deck] as const));
     const activeGoalsByDeck = new Map(
       sync.syncState.goals.filter((goal) => goal.active).map((goal) => [goal.deckId, goal] as const)
@@ -678,9 +905,7 @@ function createAppsInTossContentPort(input: {
           id: window.id,
           deckId: window.deckId,
           goalKey: window.goalKey,
-          cards: window.cards.map(card =>
-            mapBundledCard(card, deck?.locale ?? '한국어'),
-          ),
+          cards: window.cards.map((card) => mapBundledCard(card, deck?.locale ?? '한국어')),
           targetCount: window.targetCount,
         };
       }
@@ -717,9 +942,7 @@ function createAppsInTossContentPort(input: {
       if (answers.length === 0) {
         return;
       }
-      const metadata = listPublicCatalog('pro').find(
-        deck => deck.id === batch.deckId,
-      );
+      const metadata = listPublicCatalog('pro').find((deck) => deck.id === batch.deckId);
       if (metadata?.tier !== 'pro') {
         throw new Error('승인된 Free 덱 본문이 아직 준비되지 않았어요.');
       }
@@ -834,9 +1057,7 @@ function mapBundledCard(card: PublishedCard, locale: string): DaoewoCardView {
     ...(card.hint === undefined ? {} : { hint: card.hint }),
     ...(card.reading === undefined ? {} : { reading: card.reading }),
     ...(card.example === undefined ? {} : { example: card.example }),
-    ...(card.exampleMeaning === undefined
-      ? {}
-      : { exampleMeaning: card.exampleMeaning }),
+    ...(card.exampleMeaning === undefined ? {} : { exampleMeaning: card.exampleMeaning }),
     tags: card.tags,
     locale,
   };
@@ -909,17 +1130,13 @@ export function mapAppsInTossPurchaseOffer(
   if (product.renewalCycle !== expectedCycle || product.displayAmount.trim().length === 0) {
     throw new Error('AppsInToss 구독 상품 표시 정보를 확인할 수 없어요.');
   }
-  const trialDays = exactTrialDays(
-    product.offers?.find((offer) => offer.type === 'FREE_TRIAL')?.period
-  );
+  const trialDays = exactTrialDays(product.offers?.find((offer) => offer.type === 'FREE_TRIAL')?.period);
   return {
     plan,
     displayPrice: product.displayAmount,
     periodLabel: plan === 'monthly' ? '월' : '년',
-    ...(product.description.trim().length === 0
-      ? {}
-      : {description: product.description.trim()}),
-    ...(trialDays === undefined ? {} : {trialDays}),
+    ...(product.description.trim().length === 0 ? {} : { description: product.description.trim() }),
+    ...(trialDays === undefined ? {} : { trialDays }),
   };
 }
 
@@ -1010,15 +1227,9 @@ function assertSubscriptionRuntimeSupported(): void {
 }
 
 function createExternalLinks(
-  legalUrls:
-    | {readonly terms: string; readonly privacy: string}
-    | undefined
+  legalUrls: { readonly terms: string; readonly privacy: string } | undefined
 ): DaoewoRuntime['externalLinks'] | undefined {
-  if (
-    legalUrls === undefined ||
-    !isPublishedHttpsUrl(legalUrls.terms) ||
-    !isPublishedHttpsUrl(legalUrls.privacy)
-  ) {
+  if (legalUrls === undefined || !isPublishedHttpsUrl(legalUrls.terms) || !isPublishedHttpsUrl(legalUrls.privacy)) {
     return undefined;
   }
   return {

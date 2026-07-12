@@ -269,9 +269,12 @@ function fakeEntitlements() {
   return {
     getEntitlement: async () => null,
     applyVerifiedReceipt: async () => ({
-      plan: "free" as const,
-      source: "apps-in-toss",
-      validUntil: null,
+      entitlement: {
+        plan: "free" as const,
+        source: "apps-in-toss",
+        validUntil: null,
+      },
+      authorityPending: false,
     }),
     applyVerifiedSubscriptionEvent: async () => ({
       uid: "user-a",

@@ -9,11 +9,13 @@ import {
   googlePlayAccountBinding,
   StoreApiFailure,
 } from "../../src/receipts/providers.js";
+import { googlePlayReceiptIdentity } from "../../src/receipts/fingerprint.js";
 import { sha256 } from "../../src/utils/hash.js";
 
 const PACKAGE_NAME = "com.seorilabs.daoewo";
 const PRODUCT_ID = "daoewo.pro.monthly";
 const PURCHASE_TOKEN = "store-secret-purchase-token";
+const PREDECESSOR_TOKEN = "old-token-must-not-be-persisted";
 const NOW = new Date("2026-07-12T00:00:00.000Z");
 
 describe("GooglePlayReceiptVerificationProvider", () => {
@@ -131,12 +133,31 @@ describe("GooglePlayReceiptVerificationProvider", () => {
     }
   });
 
-  it("fails closed for a linked purchase until atomic chain migration exists", async () => {
+  it("returns only hashed predecessor identity for a linked replacement", async () => {
     const client = fakeClient("user-a");
     client.purchase = {
       ...client.purchase,
-      linkedPurchaseToken: "old-token-must-not-be-persisted",
+      linkedPurchaseToken: PREDECESSOR_TOKEN,
     };
+    const verified = await createProvider(client).verify({
+        uid: "user-a",
+        platform: "google-play",
+        productId: PRODUCT_ID,
+        purchaseToken: PURCHASE_TOKEN,
+      });
+    expect(verified).toMatchObject({
+      predecessor: googlePlayReceiptIdentity(PACKAGE_NAME, PREDECESSOR_TOKEN),
+      entitlement: { plan: "pro" },
+    });
+    expect(JSON.stringify(verified)).not.toContain(PREDECESSOR_TOKEN);
+    expect(JSON.stringify(verified)).not.toContain(PURCHASE_TOKEN);
+    expect(client.orderCalls).toBe(1);
+    expect(client.acknowledgements).toHaveLength(1);
+  });
+
+  it("fails closed for an invalid linked purchase identity", async () => {
+    const client = fakeClient("user-a");
+    client.purchase = { ...client.purchase, linkedPurchaseToken: "" };
     await expect(
       createProvider(client).verify({
         uid: "user-a",
@@ -144,10 +165,7 @@ describe("GooglePlayReceiptVerificationProvider", () => {
         productId: PRODUCT_ID,
         purchaseToken: PURCHASE_TOKEN,
       }),
-    ).rejects.toMatchObject({
-      code: "failed-precondition",
-      details: { kind: "google-play-linked-purchase-unsupported" },
-    });
+    ).rejects.toMatchObject({ code: "permission-denied" });
     expect(client.orderCalls).toBe(0);
     expect(client.acknowledgements).toHaveLength(0);
   });

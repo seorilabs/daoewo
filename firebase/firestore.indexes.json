@@ -68,6 +68,34 @@
         { "fieldPath": "active", "order": "ASCENDING" },
         { "fieldPath": "updatedAt", "order": "DESCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "notificationInstallations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "appId", "order": "ASCENDING" },
+        { "fieldPath": "uid", "order": "ASCENDING" },
+        { "fieldPath": "deckReadyEnabled", "order": "ASCENDING" },
+        { "fieldPath": "expiresAt", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "notificationInstallations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "appId", "order": "ASCENDING" },
+        { "fieldPath": "deckReadyEnabled", "order": "ASCENDING" },
+        { "fieldPath": "expiresAt", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "accountMerges",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "schemaVersion", "order": "ASCENDING" },
+        { "fieldPath": "cleanupStatus", "order": "ASCENDING" },
+        { "fieldPath": "cleanupUpdatedAt", "order": "ASCENDING" }
+      ]
     }
   ],
   "fieldOverrides": [
@@ -83,6 +111,9 @@
     { "collectionGroup": "deckRequestCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
     { "collectionGroup": "tossAuthCodeClaims", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
     { "collectionGroup": "tossAuthExchangeCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
-    { "collectionGroup": "tossAppCheckRefreshCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] }
+    { "collectionGroup": "tossAppCheckRefreshCounters", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "notificationInstallations", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "notificationOutbox", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "catalogNotificationEvents", "fieldPath": "expiresAt", "ttl": true, "indexes": [] }
   ]
 }

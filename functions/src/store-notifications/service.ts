@@ -40,14 +40,20 @@ export class StoreNotificationService {
   private async processOnce(
     notification: VerifiedStoreSubscriptionNotification,
   ): Promise<StoreNotificationApplyResult> {
-    const claim = await this.repository.resolveReceiptClaim(
-      notification.receiptFingerprint,
-    );
+    const claim = await this.repository.resolveReceiptClaimForNotification({
+      fingerprint: notification.receiptFingerprint,
+      platform: notification.platform,
+      now: this.clock.now(),
+    });
     if (claim.kind === "missing") {
-      // A store event can win the race against the client's first verified
-      // receipt claim. ACKing here would let the later direct grant resurrect
-      // an already revoked purchase, so both transports must retry.
+      // Repository가 먼저 durable authority barrier를 원자 생성했다. direct
+      // verification은 claim만 만들고 Pro grant를 보류하며, 이 transport는
+      // claim이 보일 때까지 retry한 뒤 store 현재 상태로 barrier를 해제한다.
       throw pendingReceiptClaim();
+    }
+    if (claim.kind === "superseded") {
+      // 교체된 old token은 store API를 다시 조회하지 않고 영구 ACK한다.
+      return { outcome: "superseded", uid: null };
     }
     if (claim.kind === "account-deleted") {
       return { outcome: "account-deleted", uid: null };

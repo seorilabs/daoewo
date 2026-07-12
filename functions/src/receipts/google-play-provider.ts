@@ -1,5 +1,8 @@
 import { BackendError, assertBackend } from "../errors.js";
-import { googlePlayOriginalTransactionId } from "./fingerprint.js";
+import {
+  googlePlayOriginalTransactionId,
+  googlePlayReceiptIdentity,
+} from "./fingerprint.js";
 import {
   googlePlayAccountBinding,
   resolveReceiptBindingUids,
@@ -112,19 +115,18 @@ export class GooglePlayReceiptVerificationProvider
         this.config.packageName,
         purchaseToken,
       );
+      // API 응답의 linked raw token은 이 지점에서 즉시 이중 hash하고 이후
+      // provider/repository contract에는 비식별 체인 식별자만 전달한다.
+      const predecessor = linkedPurchasePredecessor(
+        this.config.packageName,
+        purchase.linkedPurchaseToken,
+      );
       const now = this.now();
       const nowMs = now.getTime();
       assertBackend(
         Number.isFinite(nowMs),
         "internal",
         "Google Play receipt verification is unavailable.",
-      );
-      assertBackend(
-        purchase.linkedPurchaseToken === null ||
-          purchase.linkedPurchaseToken === undefined,
-        "failed-precondition",
-        "Google Play linked purchase migration is not supported yet.",
-        { kind: "google-play-linked-purchase-unsupported" },
       );
       assertBackend(
         purchase.subscriptionState !== null &&
@@ -216,6 +218,7 @@ export class GooglePlayReceiptVerificationProvider
           startedAt: authorityObservationStartedAt.toISOString(),
           observedAt: now.toISOString(),
         },
+        ...(predecessor === undefined ? {} : { predecessor }),
         entitlement: {
           plan: "pro",
           source: this.platform,
@@ -226,6 +229,21 @@ export class GooglePlayReceiptVerificationProvider
       throw publicGooglePlayError(error);
     }
   }
+}
+
+function linkedPurchasePredecessor(
+  packageName: string,
+  linkedPurchaseToken: string | null | undefined,
+) {
+  if (linkedPurchaseToken === null || linkedPurchaseToken === undefined) {
+    return undefined;
+  }
+  assertBackend(
+    linkedPurchaseToken.length > 0 && linkedPurchaseToken.length <= 4_096,
+    "permission-denied",
+    "Google Play linked purchase identity is invalid.",
+  );
+  return googlePlayReceiptIdentity(packageName, linkedPurchaseToken);
 }
 
 function parseRequiredTime(value: string | null | undefined): number {

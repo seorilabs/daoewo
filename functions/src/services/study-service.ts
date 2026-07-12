@@ -10,7 +10,9 @@ import type {
   Clock,
   DeckProgress,
   DeliveryWindow,
+  LearningBackupFreeDeck,
   ProgressAnswer,
+  PushLearningBackupInput,
   StudyCard,
 } from "../domain/types.js";
 import { assertBackend } from "../errors.js";
@@ -165,7 +167,7 @@ export class StudyService {
     const ids = new Set<string>();
     for (const answer of input.answers) {
       assertBackend(
-        /^[A-Za-z0-9_-]{1,128}$/.test(answer.cardId),
+        /^[A-Za-z0-9._:-]{1,128}$/.test(answer.cardId),
         "invalid-argument",
         "answer.cardId is invalid.",
       );
@@ -221,6 +223,152 @@ export class StudyService {
     const pro = entitlement !== null && isEntitled(entitlement, now);
     await this.repository.ensureDeviceAccess(uid, sha256(input.deviceId), pro, now);
     return this.repository.getSyncState(uid);
+  }
+
+  async pushLearningBackup(uid: string, input: PushLearningBackupInput) {
+    const now = this.clock.now();
+    const entitlement = await this.entitlements.getEntitlement(uid);
+    const pro = entitlement !== null && isEntitled(entitlement, now);
+    const deviceHash = sha256(input.deviceId);
+    await this.repository.ensureDeviceAccess(uid, deviceHash, pro, now);
+    await this.validateLearningBackup(input.snapshot.freeDecks, pro, now);
+    validateBackupSessions(input.snapshot.sessions, now);
+    await this.repository.reconcileLearningBackup({
+      uid,
+      baseRevision: input.baseRevision,
+      mutationId: input.mutationId,
+      snapshot: input.snapshot,
+      maxActiveFreeDecks: pro ? null : 1,
+      now,
+    });
+    return this.repository.getSyncState(uid);
+  }
+
+  private async validateLearningBackup(
+    freeDecks: readonly LearningBackupFreeDeck[],
+    pro: boolean,
+    now: Date,
+  ): Promise<void> {
+    assertBackend(
+      pro || freeDecks.filter((deck) => deck.active).length <= 1,
+      "failed-precondition",
+      "Free plans can back up only one active deck.",
+      { kind: "active-goal-limit", limit: 1 },
+    );
+    for (const backup of freeDecks) {
+      const deck = await this.repository.getDeck(backup.deckId);
+      assertBackend(
+        deck !== null &&
+          deck.status === "published" &&
+          deck.tier === "free" &&
+          deck.version === backup.deckVersion,
+        "failed-precondition",
+        "Free learning backup does not match a published deck version.",
+        { kind: "learning-backup-deck-version" },
+      );
+      assertBackend(
+        !backup.active || backup.goal !== null,
+        "invalid-argument",
+        "An active Free deck requires a study goal.",
+      );
+
+      const requestedIndexes =
+        backup.goal === null
+          ? backup.progresses.map((progress) => progress.cardIndex)
+          : Array.from({ length: deck.cardCount }, (_, index) => index);
+      const cards = await this.content.getCardsByIndexes(deck, requestedIndexes);
+      const cardsByIndex = new Map(cards.map((card) => [card.index, card] as const));
+      const allCardIds = new Set(cards.map((card) => card.id));
+      if (backup.goal !== null) {
+        validateBackupGoal(backup, allCardIds, deck.cardCount, pro);
+      }
+      const progressIndexes = new Set<number>();
+      for (const progress of backup.progresses) {
+        const card = cardsByIndex.get(progress.cardIndex);
+        assertBackend(
+          card !== undefined &&
+            card.id === progress.state.cardId &&
+            progress.state.deckId === deck.id &&
+            !progressIndexes.has(progress.cardIndex),
+          "permission-denied",
+          "Free learning progress does not match bundled card identity.",
+          { kind: "learning-backup-card-identity" },
+        );
+        progressIndexes.add(progress.cardIndex);
+        validateBackupProgressTimestamps(progress.state, now);
+      }
+    }
+  }
+}
+
+function validateBackupGoal(
+  backup: LearningBackupFreeDeck,
+  allCardIds: ReadonlySet<string>,
+  cardCount: number,
+  pro: boolean,
+): void {
+  const goal = backup.goal!;
+  const assignments = Object.entries(goal.assignments).sort(([left], [right]) =>
+    left.localeCompare(right),
+  );
+  const assignedIds = assignments.flatMap(([, cardIds]) => cardIds);
+  assertBackend(
+    goal.deckId === backup.deckId &&
+      goal.key === backup.deckId &&
+      goal.totalCount === cardCount &&
+      goal.days === assignments.length &&
+      assignments[0]?.[0] === goal.startDate &&
+      assignedIds.length === cardCount &&
+      new Set(assignedIds).size === cardCount &&
+      assignedIds.every((cardId) => allCardIds.has(cardId)),
+    "permission-denied",
+    "Free learning goal does not match published bundled content.",
+    { kind: "learning-backup-goal-identity" },
+  );
+  const largestAssignment = Math.max(...assignments.map(([, ids]) => ids.length));
+  assertBackend(
+    largestAssignment === goal.dailyCount &&
+      (pro || largestAssignment <= BACKEND_CONFIG.freeDailyCardLimit),
+    "failed-precondition",
+    "Free learning goal exceeds the plan's daily limit.",
+    { kind: "free-daily-limit", limit: BACKEND_CONFIG.freeDailyCardLimit },
+  );
+}
+
+function validateBackupProgressTimestamps(
+  progress: LearningBackupFreeDeck["progresses"][number]["state"],
+  now: Date,
+): void {
+  const futureLimit = now.getTime() + 5 * 60 * 1_000;
+  const updatedAt = Date.parse(progress.updatedAt);
+  const firstSeenAt =
+    progress.firstSeenAt === null ? null : Date.parse(progress.firstSeenAt);
+  const lastSeenAt =
+    progress.lastSeenAt === null ? null : Date.parse(progress.lastSeenAt);
+  assertBackend(
+    Number.isFinite(updatedAt) &&
+      updatedAt <= futureLimit &&
+      (firstSeenAt === null || firstSeenAt <= updatedAt) &&
+      (lastSeenAt === null || lastSeenAt <= updatedAt) &&
+      (firstSeenAt === null || lastSeenAt === null || firstSeenAt <= lastSeenAt),
+    "invalid-argument",
+    "Free learning progress contains an invalid timestamp ordering.",
+  );
+}
+
+function validateBackupSessions(
+  sessions: readonly PushLearningBackupInput["snapshot"]["sessions"][number][],
+  now: Date,
+): void {
+  const futureLimit = now.getTime() + 5 * 60 * 1_000;
+  for (const session of sessions) {
+    assertBackend(
+      session.completed <= session.target &&
+        session.known + session.unknown <= session.completed &&
+        Date.parse(session.completedAt) <= futureLimit,
+      "invalid-argument",
+      "Learning backup session totals or timestamp are invalid.",
+    );
   }
 }
 

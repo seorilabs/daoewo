@@ -6,6 +6,9 @@ import type {
   LocalDateKey,
   StudyGoal,
   StudyGoalMode,
+  SyncEnvelope,
+  SyncPort,
+  LearningSyncSnapshot,
 } from '@daoewo/product-core';
 import {
   createStudyGoal,
@@ -42,6 +45,8 @@ export interface DaoewoUser {
   readonly displayName: string;
   readonly email?: string;
   readonly isGuest: boolean;
+  /** 대상 계정 Auth는 확정됐지만 anonymous cloud merge 결과를 확인하지 못한 상태다. */
+  readonly accountMergeStatus?: 'complete' | 'pending';
 }
 
 export interface DaoewoEntitlementState extends Entitlement {
@@ -125,9 +130,7 @@ export const DAOEWO_ANALYTICS_PARAMETER_KEYS = {
   memo_streak_extend: ['streak_days'],
   memo_share: ['type'],
 } as const satisfies {
-  readonly [Event in DaoewoAnalyticsEventName]: readonly (
-    keyof DaoewoAnalyticsEventMap[Event]
-  )[];
+  readonly [Event in DaoewoAnalyticsEventName]: readonly (keyof DaoewoAnalyticsEventMap[Event])[];
 };
 
 export interface DaoewoAnalytics {
@@ -143,7 +146,9 @@ export async function trackDaoewoEvent<Event extends DaoewoAnalyticsEventName>(
   event: Event,
   properties: DaoewoAnalyticsEventMap[Event],
 ): Promise<void> {
-  const allowedKeys = DAOEWO_ANALYTICS_PARAMETER_KEYS[event] as readonly string[];
+  const allowedKeys = DAOEWO_ANALYTICS_PARAMETER_KEYS[
+    event
+  ] as readonly string[];
   const input = properties as Readonly<Record<string, DaoewoAnalyticsValue>>;
   const safeProperties: Record<string, DaoewoAnalyticsValue> = {};
 
@@ -197,8 +202,51 @@ export interface DaoewoExternalLinks {
 }
 
 export interface DaoewoTts {
+  readonly availability: 'available' | 'unsupported';
   speak(text: string, locale?: string): Promise<void>;
   stop(): Promise<void>;
+}
+
+export interface DaoewoShareInput {
+  readonly title: string;
+  readonly message: string;
+}
+
+export interface DaoewoSharing {
+  readonly availability: 'available' | 'unsupported';
+  shareText(input: DaoewoShareInput): Promise<void>;
+}
+
+export interface DaoewoNotificationPreferences {
+  readonly dailyReminder: boolean;
+  readonly reviewReminder: boolean;
+  /** 가장 빠른 SRS 도래 시각. 복습 알림을 끄거나 일정이 없으면 null이다. */
+  readonly nextReviewAt: string | null;
+}
+
+export interface DaoewoNotifications {
+  readonly availability: 'available' | 'unsupported';
+  /** 권한 요청과 native schedule 반영이 모두 성공한 경우에만 resolve한다. */
+  applyPreferences(preferences: DaoewoNotificationPreferences): Promise<void>;
+  clear(): Promise<void>;
+}
+
+export type DaoewoDeckReadyNotificationAvailability =
+  | 'available'
+  | 'unsupported'
+  | 'resolving'
+  | 'disabled-by-config';
+
+export interface DaoewoDeckReadyNotifications {
+  readonly availability: DaoewoDeckReadyNotificationAvailability;
+  /** 기기 권한과 서버 installation 반영까지 성공한 경우에만 resolve한다. */
+  setEnabled(enabled: boolean): Promise<void>;
+  /** 로그아웃·탈퇴·계정 전환 시 기기와 서버 binding을 멱등 정리한다. */
+  clear(): Promise<void>;
+  /** transport가 자체 복구 한도를 소진해 fail-closed된 경우 제품 설정을 수렴시킨다. */
+  subscribeTransportDisabled?(listener: () => void): () => void;
+  /** 비동기 Remote Config 판정 완료 시 availability 표시를 갱신한다. */
+  subscribeAvailabilityChanged?(listener: () => void): () => void;
 }
 
 export interface DaoewoCardWindow {
@@ -247,13 +295,25 @@ export interface DaoewoContentPort {
   submitDeckRequest(request: DaoewoDeckRequestInput): Promise<void>;
 }
 
+export interface DaoewoSyncPort extends SyncPort<LearningSyncSnapshot> {
+  readonly availability: 'cloud' | 'local-only';
+  /** 서버 payload에는 본문을 넣지 않고, 동기화된 Free card id만 로컬 bundle에서 복원한다. */
+  resolveFreeCardSnapshots(
+    cards: readonly {readonly deckId: string; readonly cardId: string}[],
+  ): Promise<readonly DaoewoCardView[]>;
+}
+
 export interface DaoewoRuntime {
   readonly analytics: DaoewoAnalytics;
   readonly storage: DaoewoStorage;
   readonly auth: DaoewoAuth;
   readonly purchase: DaoewoPurchase;
   readonly tts: DaoewoTts;
+  readonly sharing: DaoewoSharing;
+  readonly notifications: DaoewoNotifications;
+  readonly deckReadyNotifications: DaoewoDeckReadyNotifications;
   readonly content: DaoewoContentPort;
+  readonly sync: DaoewoSyncPort;
   readonly externalLinks?: DaoewoExternalLinks;
   readonly now: () => Date;
 }
@@ -321,8 +381,8 @@ export function createDemoRuntime(
             provider === 'google'
               ? 'hello@example.com'
               : provider === 'apple'
-                ? 'apple@example.com'
-                : 'toss@example.com',
+              ? 'apple@example.com'
+              : 'toss@example.com',
           isGuest: false,
         };
         return user;
@@ -354,6 +414,7 @@ export function createDemoRuntime(
       },
     },
     tts: {
+      availability: 'unsupported',
       async speak() {
         // No-op by design. A target wrapper may inject a native TTS adapter.
       },
@@ -361,6 +422,14 @@ export function createDemoRuntime(
         // No-op by design.
       },
     },
+    sharing: {
+      availability: 'available',
+      async shareText(input) {
+        values.set('last-share', input);
+      },
+    },
+    notifications: createUnsupportedDaoewoNotifications(),
+    deckReadyNotifications: createUnsupportedDaoewoDeckReadyNotifications(),
     content: {
       async listCatalog() {
         return DEMO_DECKS.map(deck => ({...deck, tags: [...deck.tags]}));
@@ -410,7 +479,9 @@ export function createDemoRuntime(
           ...(input.goalKey ? {goalKey: input.goalKey} : {}),
           cards,
           targetCount: cards.length,
-          expiresAt: new Date(clock().getTime() + 24 * 60 * 60 * 1_000).toISOString(),
+          expiresAt: new Date(
+            clock().getTime() + 24 * 60 * 60 * 1_000,
+          ).toISOString(),
         };
       },
       async commitProgressBatch(batch: DaoewoProgressBatch) {
@@ -418,11 +489,56 @@ export function createDemoRuntime(
       },
       async submitDeckRequest(request: DaoewoDeckRequestInput) {
         const existing =
-          (values.get('deck-requests') as readonly DaoewoDeckRequestInput[] | undefined) ??
-          [];
+          (values.get('deck-requests') as
+            | readonly DaoewoDeckRequestInput[]
+            | undefined) ?? [];
         values.set('deck-requests', [...existing, request]);
       },
     },
+    sync: createNoopDaoewoSyncPort(),
     now: clock,
+  };
+}
+
+export function createUnsupportedDaoewoNotifications(): DaoewoNotifications {
+  return {
+    availability: 'unsupported',
+    async applyPreferences(preferences) {
+      if (preferences.dailyReminder || preferences.reviewReminder) {
+        throw new Error('NOTIFICATIONS_UNSUPPORTED');
+      }
+    },
+    async clear() {
+      // 예약할 수 있는 알림이 없으므로 no-op이다.
+    },
+  };
+}
+
+export function createUnsupportedDaoewoDeckReadyNotifications(): DaoewoDeckReadyNotifications {
+  return {
+    availability: 'unsupported',
+    async setEnabled(enabled) {
+      if (enabled) {
+        throw new Error('DECK_READY_NOTIFICATIONS_UNSUPPORTED');
+      }
+    },
+    async clear() {
+      // 등록할 수 있는 installation이 없으므로 no-op이다.
+    },
+  };
+}
+
+export function createNoopDaoewoSyncPort(): DaoewoSyncPort {
+  return {
+    availability: 'local-only',
+    async pull() {
+      return null;
+    },
+    async push(_userId: string, envelope: SyncEnvelope<LearningSyncSnapshot>) {
+      return envelope;
+    },
+    async resolveFreeCardSnapshots() {
+      return [];
+    },
   };
 }

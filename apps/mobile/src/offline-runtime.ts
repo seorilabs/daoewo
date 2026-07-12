@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {listPublicCatalog} from '@daoewo/product-catalog';
+import { listPublicCatalog } from '@daoewo/product-catalog';
 import {
   createBundledFreeContentAdapter,
   type PublishedDeckContent,
@@ -11,7 +11,15 @@ import {
   type DaoewoRuntime,
   type DaoewoUser,
 } from '@daoewo/product-ui';
-import {AccessibilityInfo, Linking} from 'react-native';
+import {
+  createNoopDaoewoSyncPort,
+  createUnsupportedDaoewoDeckReadyNotifications,
+} from '@daoewo/product-ui/runtime';
+import { Linking } from 'react-native';
+
+import { createMobileNotificationsAdapter } from './mobile-notifications';
+import { createMobileSharingAdapter } from './mobile-sharing';
+import { createNativeTtsAdapter } from './native-tts';
 
 const GUEST_KEY = 'daoewo:auth:offline-guest';
 const DECK_REQUESTS_KEY = 'daoewo:content:offline-deck-requests';
@@ -21,10 +29,13 @@ const FREE_ENTITLEMENT: DaoewoEntitlementState = {
   validUntil: null,
 };
 
-export function createOfflineMobileRuntime(legalUrls?: {
-  readonly terms: string;
-  readonly privacy: string;
-}, bundledFreeContent?: Readonly<Record<string, PublishedDeckContent>>): DaoewoRuntime {
+export function createOfflineMobileRuntime(
+  legalUrls?: {
+    readonly terms: string;
+    readonly privacy: string;
+  },
+  bundledFreeContent?: Readonly<Record<string, PublishedDeckContent>>,
+): DaoewoRuntime {
   const externalLinks = createExternalLinks(legalUrls);
   const storage = createStorage();
   const bundledFree = createBundledFreeContentAdapter({
@@ -33,7 +44,9 @@ export function createOfflineMobileRuntime(legalUrls?: {
       const user = await storage.getItem<DaoewoUser>(GUEST_KEY);
       return user?.isGuest === true ? user.id : null;
     },
-    ...(bundledFreeContent === undefined ? {} : {content: bundledFreeContent}),
+    ...(bundledFreeContent === undefined
+      ? {}
+      : { content: bundledFreeContent }),
   });
   return {
     analytics: {
@@ -91,12 +104,10 @@ export function createOfflineMobileRuntime(legalUrls?: {
         throw new Error('스토어 구독 상품이 아직 설정되지 않았어요.');
       },
     },
-    tts: {
-      async speak(text) {
-        AccessibilityInfo.announceForAccessibility(text);
-      },
-      async stop() {},
-    },
+    tts: createNativeTtsAdapter(),
+    sharing: createMobileSharingAdapter(),
+    notifications: createMobileNotificationsAdapter(),
+    deckReadyNotifications: createUnsupportedDaoewoDeckReadyNotifications(),
     content: {
       async listCatalog() {
         return Promise.all(
@@ -105,10 +116,16 @@ export function createOfflineMobileRuntime(legalUrls?: {
             if (!bundledFree.hasDeck(deck.id)) {
               return base;
             }
-            const summary = await bundledFree.getDeckSummary(deck.id).catch(() => null);
+            const summary = await bundledFree
+              .getDeckSummary(deck.id)
+              .catch(() => null);
             return summary === null || !summary.active
               ? base
-              : {...base, progress: summary.progress, daysLeft: summary.daysLeft};
+              : {
+                  ...base,
+                  progress: summary.progress,
+                  daysLeft: summary.daysLeft,
+                };
           }),
         );
       },
@@ -121,8 +138,11 @@ export function createOfflineMobileRuntime(legalUrls?: {
       },
       async getCardWindow(input) {
         const window = await bundledFree.getCardWindow(input);
-        const deck = listPublicCatalog('free').find(item => item.id === input.deckId);
-        const locale = deck === undefined ? '한국어' : mapLocale(deck.contentLanguage);
+        const deck = listPublicCatalog('free').find(
+          item => item.id === input.deckId,
+        );
+        const locale =
+          deck === undefined ? '한국어' : mapLocale(deck.contentLanguage);
         return {
           id: window.id,
           deckId: window.deckId,
@@ -137,14 +157,17 @@ export function createOfflineMobileRuntime(legalUrls?: {
       async submitDeckRequest(request: DaoewoDeckRequestInput) {
         const raw = await AsyncStorage.getItem(DECK_REQUESTS_KEY);
         const requests =
-          raw === null ? [] : (JSON.parse(raw) as readonly DaoewoDeckRequestInput[]);
+          raw === null
+            ? []
+            : (JSON.parse(raw) as readonly DaoewoDeckRequestInput[]);
         await AsyncStorage.setItem(
           DECK_REQUESTS_KEY,
           JSON.stringify([...requests, request]),
         );
       },
     },
-    ...(externalLinks === undefined ? {} : {externalLinks}),
+    sync: createNoopDaoewoSyncPort(),
+    ...(externalLinks === undefined ? {} : { externalLinks }),
     now: () => new Date(),
   };
 }
@@ -172,9 +195,7 @@ function createStorage(): DaoewoRuntime['storage'] {
   };
 }
 
-function mapPublicDeck(
-  deck: ReturnType<typeof listPublicCatalog>[number],
-) {
+function mapPublicDeck(deck: ReturnType<typeof listPublicCatalog>[number]) {
   return {
     id: deck.id,
     title: deck.title,
@@ -182,7 +203,10 @@ function mapPublicDeck(
     category: mapCategory(deck.category),
     locale: mapLocale(deck.contentLanguage),
     tier: deck.tier,
-    source: deck.sourceType === 'curated-import' ? 'official' as const : 'ai-batch' as const,
+    source:
+      deck.sourceType === 'curated-import'
+        ? ('official' as const)
+        : ('ai-batch' as const),
     cardCount: deck.cardCount,
     tags: deck.tags,
     availability: deck.availability,
@@ -199,21 +223,19 @@ function mapBundledCard(
     deckId: card.deckId,
     front: card.front,
     back: card.back,
-    ...(card.hint === undefined ? {} : {hint: card.hint}),
-    ...(card.reading === undefined ? {} : {reading: card.reading}),
-    ...(card.example === undefined ? {} : {example: card.example}),
+    ...(card.hint === undefined ? {} : { hint: card.hint }),
+    ...(card.reading === undefined ? {} : { reading: card.reading }),
+    ...(card.example === undefined ? {} : { example: card.example }),
     ...(card.exampleMeaning === undefined
       ? {}
-      : {exampleMeaning: card.exampleMeaning}),
+      : { exampleMeaning: card.exampleMeaning }),
     tags: card.tags,
     locale,
   };
 }
 
 function createExternalLinks(
-  legalUrls:
-    | {readonly terms: string; readonly privacy: string}
-    | undefined,
+  legalUrls: { readonly terms: string; readonly privacy: string } | undefined,
 ): DaoewoRuntime['externalLinks'] | undefined {
   if (
     legalUrls === undefined ||

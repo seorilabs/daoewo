@@ -43,6 +43,7 @@ jobs:
 
       - name: Check Release Readiness
         env:
-          APP_STORE_IAP_PRIVATE_KEY_BASE64: ${{ secrets.APP_STORE_IAP_PRIVATE_KEY_BASE64 }}
-          APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON: ${{ secrets.APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON }}
+          # Static inventory에는 raw secret을 넘기지 않고 GitHub-side 존재 여부만 전달한다.
+          APP_STORE_IAP_PRIVATE_KEY_CONFIGURED: ${{ secrets.APP_STORE_IAP_PRIVATE_KEY_BASE64 != '' }}
+          APP_STORE_ROOT_CA_CERTIFICATES_CONFIGURED: ${{ secrets.APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON != '' }}
         run: bash scripts/check_release_readiness.sh

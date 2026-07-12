@@ -1,21 +1,21 @@
 {
   "shared": {
     "claimMissingAuthorityBarrier": {
-      "implemented": false,
+      "implemented": true,
       "liveVerified": false
     }
   },
   "googlePlay": {
     "voidedPurchasesReconciliation": {
-      "implemented": false,
+      "implemented": true,
       "liveVerified": false
     },
     "missedRenewalRecovery": {
-      "implemented": false,
+      "implemented": true,
       "liveVerified": false
     },
     "linkedPurchaseMigration": {
-      "implemented": false,
+      "implemented": true,
       "liveVerified": false
     },
     "rtdnIamAndTestMessage": {
@@ -27,7 +27,7 @@
   },
   "appStore": {
     "notificationHistoryReconciliation": {
-      "implemented": false,
+      "implemented": true,
       "liveVerified": false
     },
     "serverNotificationsV2": {

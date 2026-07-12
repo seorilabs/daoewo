@@ -9,11 +9,11 @@ import {DaoewoApp} from '../src/DaoewoApp';
 import type {DaoewoCardView, DaoewoDeckView} from '../src/demo-data';
 import {
   DAOEWO_LEGACY_LEARNING_STATE_STORAGE_KEY,
-  DAOEWO_SETTINGS_STORAGE_KEY,
   deriveDashboardSummary,
   learningStateStorageKey,
   saveLearningState,
   selectMistakeItems,
+  settingsStorageKey,
   type DaoewoLearningState,
 } from '../src/product-state';
 import {createDemoRuntime, type DaoewoRuntime} from '../src/runtime';
@@ -217,40 +217,84 @@ describe('저장된 학습 상태 기반 UI', () => {
     expect(output).not.toContain('612');
   });
 
-  it('설정 토글을 storage에 저장하고 동기화·내보내기를 미지원으로 표시한다', async () => {
-    const runtime = await runtimeWithState();
+  it('설정을 계정별로 저장하고 미지원 알림은 fail-closed하며 본문 없는 데이터를 공유한다', async () => {
+    const base = await runtimeWithState();
+    const shares: Array<{readonly title: string; readonly message: string}> = [];
+    const runtime: DaoewoRuntime = {
+      ...base,
+      sharing: {
+        availability: 'available',
+        async shareText(input) {
+          shares.push(input);
+        },
+      },
+    };
     const renderer = await renderApp(runtime, 'settings');
+
+    const dailyReminder = renderer.root.findByProps({
+      accessibilityLabel: '일일 학습 알림',
+    });
+    expect(dailyReminder.props.value).toBe(false);
+    expect(dailyReminder.props.accessibilityState).toEqual({
+      checked: false,
+      disabled: true,
+    });
 
     await act(async () => {
       renderer.root
-        .findByProps({accessibilityLabel: '일일 학습 알림'})
-        .props.onValueChange(true);
+        .findByProps({accessibilityLabel: '카드 음성(TTS)'})
+        .props.onValueChange(false);
+      await Promise.resolve();
       await Promise.resolve();
     });
     expect(
-      await runtime.storage.getItem(DAOEWO_SETTINGS_STORAGE_KEY),
-    ).toMatchObject({dailyReminder: true});
+      await runtime.storage.getItem(settingsStorageKey('state-user')),
+    ).toMatchObject({dailyReminder: false, ttsEnabled: false});
 
     await act(async () => {
       renderer.root
         .findByProps({
-          accessibilityLabel: '클라우드 백업·동기화, 상태 확인 미지원',
+          accessibilityLabel: '클라우드 백업·동기화, 이 기기에만',
         })
         .props.onPress();
     });
     expect(JSON.stringify(renderer.toJSON())).toContain(
-      '동기화 상태를 확인하거나 수동 실행하는 기능이 연결되지 않았어요',
+      '현재 앱 환경에서는 학습 기록을 이 기기에만 저장해요',
     );
 
     await act(async () => {
       renderer.root
         .findByProps({
-          accessibilityLabel: '학습 데이터 내보내기, 현재 미지원',
+          accessibilityLabel: '학습 데이터 내보내기, JSON 공유',
         })
         .props.onPress();
+      await Promise.resolve();
+      await Promise.resolve();
     });
-    expect(JSON.stringify(renderer.toJSON())).toContain(
-      '학습 데이터 내보내기 기능은 현재 사용할 수 없어요',
+    expect(shares).toHaveLength(1);
+    expect(shares[0]?.title).toBe('다외워 학습 데이터');
+    expect(JSON.parse(shares[0]?.message ?? '{}')).toMatchObject({
+      schema: 'daoewo-learning-data',
+      version: 1,
+    });
+    expect(shares[0]?.message).not.toContain('저장된 오답 카드');
+    expect(shares[0]?.message).not.toContain('state-user');
+
+    const cloudBase = await runtimeWithState();
+    const cloud = await renderApp(
+      {
+        ...cloudBase,
+        sync: {...cloudBase.sync, availability: 'cloud'},
+      },
+      'settings',
+    );
+    await act(async () => {
+      cloud.root
+        .findByProps({accessibilityLabel: '클라우드 백업·동기화, 자동'})
+        .props.onPress();
+    });
+    expect(JSON.stringify(cloud.toJSON())).toContain(
+      '네트워크 연결 시 자동으로 동기화돼요',
     );
   });
 

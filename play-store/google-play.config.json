@@ -37,6 +37,10 @@
     "koreaDistribution": "yes",
     "koreaGameRating": "not-applicable-non-game-confirm-in-console"
   },
+  "subscription": {
+    "monthlyProductId": "확정 필요",
+    "annualProductId": "확정 필요"
+  },
   "release": {
     "track": "internal",
     "aabPath": "apps/mobile/android/app/build/outputs/bundle/release/app-release.aab",
@@ -50,8 +54,8 @@
     "Play Console app and subscription products not registered",
     "support and privacy URLs not published",
     "production signing and Play App Signing not connected",
-    "Google Play linked purchase token migration is not implemented",
-    "missed RTDN reconciliation policy is not implemented",
+    "Google Play linked purchase migration sandbox E2E is not verified",
+    "Voided Purchases scheduler IAM/live run and missed-renewal sandbox recovery are not verified",
     "Data safety and IARC/GRAC not completed in Console",
     "real phone/tablet screenshots and device QA not complete",
     "deployment approval not granted"

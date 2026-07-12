@@ -10,6 +10,20 @@
     "start": "react-native start",
     "test": "jest"
   },
+  "codegenConfig": {
+    "name": "DaoewoTtsSpec",
+    "type": "modules",
+    "jsSrcsDir": "specs",
+    "android": {
+      "javaPackageName": "com.seorilabs.daoewo"
+    },
+    "ios": {
+      "modulesProvider": {
+        "NativeDaoewoTts": "RCTNativeDaoewoTts",
+        "NativeDaoewoNotifications": "RCTNativeDaoewoNotifications"
+      }
+    }
+  },
   "dependencies": {
     "@daoewo/product-core": "workspace:*",
     "@daoewo/product-catalog": "workspace:*",
