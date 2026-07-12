@@ -20,20 +20,44 @@ describe('Remote Config catalog cache TTL', () => {
     expect(cache.get()).toEqual(['deck-a']);
   });
 
-  it('범위를 벗어난 remote 값은 60분 fallback을 사용하고 clear는 즉시 폐기한다', () => {
+  it('범위를 벗어나거나 읽기 실패한 TTL은 cache miss로 fail-closed한다', () => {
     let now = 1_000;
+    let ttlMinutes: number | 'throw' = 0;
     const cache = createTimedCatalogCache<string>({
-      getTtlMinutes: () => 0,
+      getTtlMinutes: () => {
+        if (ttlMinutes === 'throw') {
+          throw new Error('remote config unavailable');
+        }
+        return ttlMinutes;
+      },
       nowMs: () => now,
     });
 
     cache.set(['deck-a']);
-    now += 60 * 60_000;
-    expect(cache.get()).toEqual(['deck-a']);
-    now += 1;
+    ttlMinutes = 0;
+    expect(cache.get()).toBeNull();
+    ttlMinutes = 5;
     expect(cache.get()).toBeNull();
 
     cache.set(['deck-b']);
+    for (const invalidTtl of [4, 1_441, 5.5, Number.NaN]) {
+      ttlMinutes = invalidTtl;
+      expect(cache.get()).toBeNull();
+      cache.set(['deck-b']);
+    }
+    ttlMinutes = 'throw';
+    expect(cache.get()).toBeNull();
+
+    ttlMinutes = 5;
+    expect(cache.get()).toBeNull();
+    cache.set(['deck-c']);
+    now = 999;
+    expect(cache.get()).toBeNull();
+    now = 1_001;
+    expect(cache.get()).toBeNull();
+
+    now = 2_000;
+    cache.set(['deck-d']);
     cache.clear();
     expect(cache.get()).toBeNull();
   });

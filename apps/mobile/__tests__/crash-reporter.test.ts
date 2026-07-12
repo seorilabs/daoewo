@@ -115,6 +115,22 @@ describe('PII-safe Crashlytics adapter', () => {
         undefined as unknown as Parameters<typeof reporter.record>[0],
       ),
     ).resolves.toBeUndefined();
+
+    const operationGetter = jest.fn(() => {
+      throw new Error('getter-secret-token');
+    });
+    const accessorReport = Object.defineProperty({}, 'operation', {
+      get: operationGetter,
+    }) as Parameters<typeof reporter.record>[0];
+    await expect(reporter.record(accessorReport)).resolves.toBeUndefined();
+    expect(operationGetter).not.toHaveBeenCalled();
+    expect(mockedSetAttributes).toHaveBeenLastCalledWith(expect.anything(), {
+      operation: 'unknown',
+      surface: 'unknown',
+      error_code: 'unknown',
+      platform: 'unknown',
+      build: 'unknown',
+    });
   });
 
   it('사용자 식별은 설정하지 않고 빈 값 clear만 제공한다', async () => {
@@ -215,5 +231,33 @@ describe('PII-safe Crashlytics adapter', () => {
       classifySafeCrashError({ code: 'functions/deadline-exceeded' }),
     ).toBe('timeout');
     expect(classifySafeCrashError({ code: 'secret-token' })).toBe('unknown');
+    expect(
+      classifySafeCrashError({
+        code: 'functions/network-request-failed/user@example.com',
+      }),
+    ).toBe('unknown');
+
+    const abortError = new Error('cancelled');
+    abortError.name = 'AbortError';
+    expect(classifySafeCrashError(abortError)).toBe('cancelled');
+
+    const nameGetter = jest.fn(() => {
+      throw new Error('getter-secret-token');
+    });
+    const accessorError = Object.defineProperty({}, 'name', {
+      get: nameGetter,
+    });
+    expect(classifySafeCrashError(accessorError)).toBe('unknown');
+    expect(nameGetter).not.toHaveBeenCalled();
+
+    const hostileProxy = new Proxy(
+      {},
+      {
+        getPrototypeOf() {
+          throw new Error('prototype-secret-token');
+        },
+      },
+    );
+    expect(classifySafeCrashError(hostileProxy)).toBe('unknown');
   });
 });

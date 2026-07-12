@@ -192,7 +192,7 @@ describe('AppsInToss runtime security boundaries', () => {
     expect([...mockNativeStorage.keys()].some((key) => key.includes(encodeURIComponent('ait-local-guest')))).toBe(true);
   });
 
-  it('성공한 Toss 로그인은 UID marker만 저장하고 인증 code/token은 저장하지 않는다', async () => {
+  it('성공한 Toss 로그인은 UID와 불투명 작업 세대만 저장하고 인증 code/token은 저장하지 않는다', async () => {
     const fetchMock = jest
       .fn()
       .mockResolvedValueOnce(
@@ -226,9 +226,11 @@ describe('AppsInToss runtime security boundaries', () => {
 
     await expect(runtime.auth.signIn('toss')).resolves.toEqual(expect.objectContaining({ id: 'toss_marker_user' }));
 
-    expect([...mockNativeStorage.entries()]).toEqual([
-      [TOSS_ACCOUNT_MARKER_KEY, JSON.stringify({ uid: 'toss_marker_user' })],
-    ]);
+    expect([...mockNativeStorage.keys()]).toEqual([TOSS_ACCOUNT_MARKER_KEY]);
+    expect(JSON.parse(mockNativeStorage.get(TOSS_ACCOUNT_MARKER_KEY)!)).toEqual({
+      uid: 'toss_marker_user',
+      operationId: expect.stringMatching(/^toss-login_/),
+    });
     const stored = JSON.stringify([...mockNativeStorage.entries()]);
     expect(stored).not.toMatch(
       /one-time-authorization-secret|firebase-custom-secret|app-check-secret|firebase-id-secret|firebase-refresh-secret|authorizationCode|idToken|refreshToken/i
@@ -259,6 +261,54 @@ describe('AppsInToss runtime security boundaries', () => {
     await expect(runtime.auth.signIn('toss')).rejects.toThrow('storage full');
     expect(signOut).toHaveBeenCalledTimes(1);
     expect(mockNativeStorage.has(TOSS_ACCOUNT_MARKER_KEY)).toBe(false);
+  });
+
+  it('로그인 marker write와 sign-out을 직렬화해 marker를 남기지 않는다', async () => {
+    const user: DaoewoUser = {
+      id: 'late-marker-user',
+      displayName: '늦은 marker 사용자',
+      isGuest: false,
+    };
+    let currentUser: DaoewoUser | null = null;
+    let notifyMarkerWriteStarted!: () => void;
+    const markerWriteStarted = new Promise<void>((resolve) => {
+      notifyMarkerWriteStarted = resolve;
+    });
+    let releaseMarkerWrite!: () => void;
+    const markerWriteRelease = new Promise<void>((resolve) => {
+      releaseMarkerWrite = resolve;
+    });
+    mockedStorage.setItem.mockImplementationOnce(async (key: string, value: string) => {
+      notifyMarkerWriteStarted();
+      await markerWriteRelease;
+      mockNativeStorage.set(key, value);
+    });
+    mockedAppLogin.mockResolvedValue({
+      authorizationCode: 'late-marker-code',
+      referrer: 'DEFAULT',
+    });
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => currentUser),
+        signInWithToss: jest.fn(async () => {
+          currentUser = user;
+          return user;
+        }),
+        signOut: jest.fn(async () => {
+          currentUser = null;
+        }),
+      })
+    );
+
+    const signingIn = runtime.auth.signIn('toss');
+    await markerWriteStarted;
+    const signingOut = runtime.auth.signOut();
+    releaseMarkerWrite();
+
+    await expect(signingIn).resolves.toEqual(user);
+    await signingOut;
+    expect(mockNativeStorage.has(TOSS_ACCOUNT_MARKER_KEY)).toBe(false);
+    await expect(runtime.auth.getCurrentUser()).resolves.toBeNull();
   });
 
   it('cold start 복구는 동시 startup 호출을 하나의 appLogin 교환으로 coalesce한다', async () => {
@@ -312,6 +362,7 @@ describe('AppsInToss runtime security boundaries', () => {
       isGuest: false,
     };
     let currentUser: DaoewoUser | null = null;
+    const signOut = jest.fn(async () => undefined);
     const signInWithToss = jest.fn(async () => {
       currentUser = user;
       return user;
@@ -325,20 +376,61 @@ describe('AppsInToss runtime security boundaries', () => {
       fakeBackend({
         getCurrentUser: jest.fn(async () => currentUser),
         signInWithToss,
+        signOut,
       })
     );
 
     await expect(
       Promise.all([runtime.auth.getCurrentUser(), runtime.auth.getCurrentUser(), runtime.purchase.getEntitlement()])
-    ).resolves.toEqual([null, null, FREE]);
+    ).resolves.toEqual([
+      null,
+      null,
+      {
+        plan: 'free',
+        source: 'apps-in-toss-local',
+        validUntil: null,
+      },
+    ]);
     await expect(runtime.auth.getCurrentUser()).resolves.toBeNull();
     await expect(runtime.auth.getCurrentUser()).resolves.toBeNull();
     expect(mockedAppLogin).toHaveBeenCalledTimes(1);
     expect(signInWithToss).not.toHaveBeenCalled();
+    expect(signOut).toHaveBeenCalledTimes(1);
+    expect(mockNativeStorage.has(TOSS_ACCOUNT_MARKER_KEY)).toBe(false);
 
     await expect(runtime.auth.signIn('toss')).resolves.toEqual(user);
     expect(mockedAppLogin).toHaveBeenCalledTimes(2);
     expect(signInWithToss).toHaveBeenCalledTimes(1);
+  });
+
+  it('손상된 Toss account marker를 조용히 제거하고 명시적 로그인을 허용한다', async () => {
+    const user: DaoewoUser = {
+      id: 'toss_after_corrupt_marker',
+      displayName: '복구 사용자',
+      isGuest: false,
+    };
+    const signInWithToss = jest.fn(async () => user);
+    mockNativeStorage.set(TOSS_ACCOUNT_MARKER_KEY, '{"uid":');
+    mockedAppLogin.mockResolvedValue({
+      authorizationCode: 'fresh-explicit-code',
+      referrer: 'DEFAULT',
+    });
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        signInWithToss,
+      })
+    );
+
+    await expect(runtime.auth.getCurrentUser()).resolves.toBeNull();
+    expect(mockNativeStorage.has(TOSS_ACCOUNT_MARKER_KEY)).toBe(false);
+    expect(mockedAppLogin).not.toHaveBeenCalled();
+
+    await expect(runtime.auth.signIn('toss')).resolves.toEqual(user);
+    expect(signInWithToss).toHaveBeenCalledTimes(1);
+    expect(JSON.parse(mockNativeStorage.get(TOSS_ACCOUNT_MARKER_KEY)!)).toEqual({
+      uid: user.id,
+      operationId: expect.stringMatching(/^toss-login_/),
+    });
   });
 
   it('게스트 선택은 이전 Toss marker와 backend session을 닫고 자동 복구를 차단한다', async () => {
@@ -514,6 +606,74 @@ describe('AppsInToss runtime security boundaries', () => {
     expect(urls.filter((url) => url.endsWith('/v1/auth/toss:refreshAppCheck'))).toHaveLength(1);
   });
 
+  it('A 요청의 401을 교체된 B session으로 재전송하지 않는다', async () => {
+    let notifyRequestStarted!: () => void;
+    const requestStarted = new Promise<void>((resolve) => {
+      notifyRequestStarted = resolve;
+    });
+    let resolveUnauthorized!: (response: Response) => void;
+    const unauthorized = new Promise<Response>((resolve) => {
+      resolveUnauthorized = resolve;
+    });
+    const fetchMock = jest
+      .fn()
+      .mockResolvedValueOnce(
+        jsonResponse(200, {
+          data: {
+            firebaseCustomToken: 'custom-a',
+            firebaseAppCheckToken: 'app-check-a',
+            appCheckTokenTtlMillis: 3_600_000,
+          },
+        })
+      )
+      .mockResolvedValueOnce(
+        jsonResponse(200, {
+          idToken: 'id-a',
+          refreshToken: 'refresh-a',
+          expiresIn: '3600',
+          localId: 'user-a',
+        })
+      )
+      .mockImplementationOnce(async () => {
+        notifyRequestStarted();
+        return unauthorized;
+      })
+      .mockResolvedValueOnce(
+        jsonResponse(200, {
+          data: {
+            firebaseCustomToken: 'custom-b',
+            firebaseAppCheckToken: 'app-check-b',
+            appCheckTokenTtlMillis: 3_600_000,
+          },
+        })
+      )
+      .mockResolvedValueOnce(
+        jsonResponse(200, {
+          idToken: 'id-b',
+          refreshToken: 'refresh-b',
+          expiresIn: '3600',
+          localId: 'user-b',
+        })
+      );
+    global.fetch = fetchMock as unknown as typeof fetch;
+    const backend = createAppsInTossBackend({
+      apiBaseUrl: 'https://api.example.test',
+      firebaseApiKey: 'public-api-key',
+    });
+    await backend.signInWithToss({ authorizationCode: 'code-a', referrer: 'DEFAULT' });
+
+    const pending = backend.request('/v1/receipts:verify', { orderId: 'order-a' }, 'user-a');
+    await requestStarted;
+    await backend.signOut();
+    await backend.signInWithToss({ authorizationCode: 'code-b', referrer: 'DEFAULT' });
+    resolveUnauthorized(jsonResponse(401, { error: { code: 'unauthenticated' } }));
+
+    await expect(pending).rejects.toThrow('요청 중 로그인 계정이 변경됐어요');
+    expect(fetchMock).toHaveBeenCalledTimes(5);
+    const requestBodies = fetchMock.mock.calls.map((call) => String((call[1] as RequestInit | undefined)?.body ?? ''));
+    expect(requestBodies.filter((body) => body.includes('order-a'))).toHaveLength(1);
+  });
+
   it('entitlement envelope은 active Pro일 때만 Pro로 해석한다', async () => {
     const pro: DaoewoEntitlementState = {
       plan: 'pro',
@@ -558,7 +718,11 @@ describe('AppsInToss runtime security boundaries', () => {
         orderId: 'test-order',
         sku: 'monthly-test-sku',
       })
-    ).resolves.toEqual(expect.objectContaining({ plan: 'free' }));
+    ).resolves.toEqual({
+      plan: 'free',
+      source: 'apps-in-toss-local',
+      validUntil: null,
+    });
   });
 
   it('AIT backend 탈퇴는 Identity Toolkit 직접 삭제 대신 권위 서버 endpoint를 호출한다', async () => {
@@ -669,6 +833,60 @@ describe('AppsInToss runtime security boundaries', () => {
     expect(deleteAccount).not.toHaveBeenCalled();
   });
 
+  it('탈퇴와 guest 전환을 직렬화해 탈퇴 완료 뒤 만든 guest 상태를 보존한다', async () => {
+    const user: DaoewoUser = {
+      id: 'delete-user-a',
+      displayName: '삭제 사용자',
+      isGuest: false,
+    };
+    let currentUser: DaoewoUser | null = user;
+    let notifyReauthStarted!: () => void;
+    const reauthStarted = new Promise<void>((resolve) => {
+      notifyReauthStarted = resolve;
+    });
+    let releaseReauth!: () => void;
+    const reauthRelease = new Promise<void>((resolve) => {
+      releaseReauth = resolve;
+    });
+    mockedAppLogin.mockImplementationOnce(async () => {
+      notifyReauthStarted();
+      await reauthRelease;
+      return { authorizationCode: 'delete-code-a', referrer: 'DEFAULT' };
+    });
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => currentUser),
+        signInWithToss: jest.fn(async () => {
+          currentUser = user;
+          return user;
+        }),
+        deleteAccount: jest.fn(async () => {
+          currentUser = null;
+        }),
+        signOut: jest.fn(async () => {
+          currentUser = null;
+        }),
+      })
+    );
+
+    const deleting = runtime.auth.deleteAccount();
+    await reauthStarted;
+    const continuingAsGuest = runtime.auth.continueAsGuest();
+    await Promise.resolve();
+    expect(mockNativeStorage.has('daoewo:auth:guest')).toBe(false);
+
+    releaseReauth();
+    await deleting;
+    const guest = await continuingAsGuest;
+
+    expect(guest).toEqual({
+      id: 'ait-local-guest',
+      displayName: '게스트',
+      isGuest: true,
+    });
+    await expect(runtime.storage.getItem('daoewo:auth:guest')).resolves.toEqual(guest);
+  });
+
   it('서버 검증이 실패하면 구독 grant와 complete를 진행하지 않는다', async () => {
     let purchaseHooks:
       | {
@@ -732,6 +950,250 @@ describe('AppsInToss runtime security boundaries', () => {
     expect(mockedIap.completeProductGrant).not.toHaveBeenCalled();
   });
 
+  it('최신 결제 검증이 실패하면 이전 성공 entitlement를 재사용하지 않는다', async () => {
+    let purchaseHooks:
+      | {
+          readonly options: {
+            readonly processProductGrant: (input: {
+              readonly orderId: string;
+              readonly subscriptionId?: string;
+            }) => Promise<boolean>;
+          };
+          readonly onEvent: () => Promise<void>;
+        }
+      | undefined;
+    const pro: DaoewoEntitlementState = {
+      plan: 'pro',
+      source: 'apps-in-toss',
+      validUntil: '2026-08-12T00:00:00.000Z',
+    };
+    mockedIap.getProductItemList.mockResolvedValue({
+      products: [
+        {
+          type: 'SUBSCRIPTION',
+          sku: 'monthly-test-sku',
+          renewalCycle: 'MONTHLY',
+          offers: [],
+        },
+      ],
+    });
+    mockedIap.createSubscriptionPurchaseOrder.mockImplementation((hooks: typeof purchaseHooks) => {
+      purchaseHooks = hooks;
+      return jest.fn();
+    });
+    const verifySubscriptionOrder = jest
+      .fn()
+      .mockResolvedValueOnce(pro)
+      .mockRejectedValueOnce(new Error('latest verification rejected'));
+    const getEntitlement = jest.fn(async () => pro);
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => ({
+          id: 'test-user',
+          displayName: '테스트',
+          isGuest: false,
+        })),
+        getEntitlement,
+        verifySubscriptionOrder,
+      })
+    );
+
+    const result = runtime.purchase.purchase('monthly').then(
+      () => 'resolved' as const,
+      () => 'rejected' as const
+    );
+    for (let attempt = 0; attempt < 10 && purchaseHooks === undefined; attempt += 1) {
+      await Promise.resolve();
+    }
+    if (purchaseHooks === undefined) {
+      throw new Error('purchase hooks were not registered');
+    }
+
+    await expect(purchaseHooks.options.processProductGrant({ orderId: 'verified-order' })).resolves.toBe(true);
+    await expect(purchaseHooks.options.processProductGrant({ orderId: 'rejected-order' })).resolves.toBe(false);
+    await purchaseHooks.onEvent();
+
+    expect(await result).toBe('rejected');
+    expect(getEntitlement).not.toHaveBeenCalled();
+  });
+
+  it('복원은 pending order별 최신 검증 결과만 grant하고 최종 권위를 다시 조회한다', async () => {
+    const pro: DaoewoEntitlementState = {
+      plan: 'pro',
+      source: 'apps-in-toss',
+      validUntil: '2026-08-12T00:00:00.000Z',
+    };
+    mockedIap.getPendingOrders.mockResolvedValue({
+      orders: [
+        { orderId: 'verified-pending-order', sku: 'monthly-test-sku' },
+        { orderId: 'inactive-pending-order', sku: 'monthly-test-sku' },
+      ],
+    });
+    const verifySubscriptionOrder = jest.fn().mockResolvedValueOnce(pro).mockResolvedValueOnce(FREE);
+    const getEntitlement = jest.fn(async () => FREE);
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => ({
+          id: 'test-user',
+          displayName: '테스트',
+          isGuest: false,
+        })),
+        getEntitlement,
+        verifySubscriptionOrder,
+      })
+    );
+
+    await expect(runtime.purchase.restore()).resolves.toEqual(FREE);
+
+    expect(verifySubscriptionOrder).toHaveBeenNthCalledWith(
+      1,
+      {
+        orderId: 'verified-pending-order',
+        sku: 'monthly-test-sku',
+      },
+      'test-user'
+    );
+    expect(verifySubscriptionOrder).toHaveBeenNthCalledWith(
+      2,
+      {
+        orderId: 'inactive-pending-order',
+        sku: 'monthly-test-sku',
+      },
+      'test-user'
+    );
+    expect(mockedIap.completeProductGrant).toHaveBeenCalledTimes(1);
+    expect(mockedIap.completeProductGrant).toHaveBeenCalledWith({
+      params: { orderId: 'verified-pending-order' },
+    });
+    expect(getEntitlement).toHaveBeenCalledWith('test-user');
+  });
+
+  it('entitlement 조회 중 로그아웃하면 이전 계정 Pro를 반환하지 않는다', async () => {
+    const user: DaoewoUser = {
+      id: 'entitlement-user-a',
+      displayName: 'A 사용자',
+      isGuest: false,
+    };
+    const pro: DaoewoEntitlementState = {
+      plan: 'pro',
+      source: 'apps-in-toss',
+      validUntil: '2026-08-12T00:00:00.000Z',
+    };
+    let currentUser: DaoewoUser | null = user;
+    let notifyEntitlementStarted!: () => void;
+    const entitlementStarted = new Promise<void>((resolve) => {
+      notifyEntitlementStarted = resolve;
+    });
+    let resolveEntitlement!: (value: DaoewoEntitlementState) => void;
+    const entitlementResult = new Promise<DaoewoEntitlementState>((resolve) => {
+      resolveEntitlement = resolve;
+    });
+    const getEntitlement = jest.fn(async (expectedUserId?: string) => {
+      expect(expectedUserId).toBe(user.id);
+      notifyEntitlementStarted();
+      return entitlementResult;
+    });
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => currentUser),
+        getEntitlement,
+        signOut: jest.fn(async () => {
+          currentUser = null;
+        }),
+      })
+    );
+
+    const pending = runtime.purchase.getEntitlement();
+    await entitlementStarted;
+    await runtime.auth.signOut();
+    resolveEntitlement(pro);
+
+    await expect(pending).resolves.toEqual({
+      plan: 'free',
+      source: 'apps-in-toss-local',
+      validUntil: null,
+    });
+  });
+
+  it('같은 로그인 세션의 entitlement 조회 장애는 Free로 숨기지 않는다', async () => {
+    const user: DaoewoUser = {
+      id: 'entitlement-network-user',
+      displayName: '조회 사용자',
+      isGuest: false,
+    };
+    const getEntitlement = jest.fn(async () => {
+      throw new Error('entitlement network unavailable');
+    });
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => user),
+        getEntitlement,
+      })
+    );
+
+    await expect(runtime.purchase.getEntitlement()).rejects.toThrow('entitlement network unavailable');
+    expect(getEntitlement).toHaveBeenCalledWith(user.id);
+  });
+
+  it('복원 검증 중 B로 전환해도 A order를 B grant로 완료하지 않는다', async () => {
+    const userA: DaoewoUser = {
+      id: 'restore-user-a',
+      displayName: 'A 사용자',
+      isGuest: false,
+    };
+    const userB: DaoewoUser = {
+      id: 'restore-user-b',
+      displayName: 'B 사용자',
+      isGuest: false,
+    };
+    const pro: DaoewoEntitlementState = {
+      plan: 'pro',
+      source: 'apps-in-toss',
+      validUntil: '2026-08-12T00:00:00.000Z',
+    };
+    let currentUser: DaoewoUser | null = userA;
+    let notifyVerifyStarted!: () => void;
+    const verifyStarted = new Promise<void>((resolve) => {
+      notifyVerifyStarted = resolve;
+    });
+    let resolveVerify!: (value: DaoewoEntitlementState) => void;
+    const verifyResult = new Promise<DaoewoEntitlementState>((resolve) => {
+      resolveVerify = resolve;
+    });
+    mockedIap.getPendingOrders.mockResolvedValue({
+      orders: [{ orderId: 'pending-order-a', sku: 'monthly-test-sku' }],
+    });
+    const verifySubscriptionOrder = jest.fn(async (_order: unknown, expectedUserId?: string) => {
+      expect(expectedUserId).toBe(userA.id);
+      notifyVerifyStarted();
+      return verifyResult;
+    });
+    mockedAppLogin.mockResolvedValue({ authorizationCode: 'code-b', referrer: 'DEFAULT' });
+    const runtime = createAppsInTossRuntime(
+      fakeBackend({
+        getCurrentUser: jest.fn(async () => currentUser),
+        signInWithToss: jest.fn(async () => {
+          currentUser = userB;
+          return userB;
+        }),
+        signOut: jest.fn(async () => {
+          currentUser = null;
+        }),
+        verifySubscriptionOrder,
+      })
+    );
+
+    const restoring = runtime.purchase.restore();
+    await verifyStarted;
+    await runtime.auth.signOut();
+    await runtime.auth.signIn('toss');
+    resolveVerify(pro);
+
+    await expect(restoring).rejects.toThrow('구독 처리 중 로그인 계정이 변경됐어요');
+    expect(mockedIap.completeProductGrant).not.toHaveBeenCalled();
+    expect(currentUser).toEqual(userB);
+  });
+
   it('AppsInToss Storage의 device ID를 재사용한다', async () => {
     const values = new Map<string, unknown>();
     const storage: DaoewoStorage = {
@@ -755,6 +1217,28 @@ describe('AppsInToss runtime security boundaries', () => {
     expect(second).toBe(first);
     expect(afterRestart).toBe(first);
     expect(values.size).toBe(1);
+  });
+
+  it('AppsInToss Storage를 사용할 수 없어도 device ID를 세션 내 재사용한다', async () => {
+    const storage: DaoewoStorage = {
+      async getItem() {
+        throw new Error('storage unavailable');
+      },
+      async setItem() {
+        throw new Error('storage unavailable');
+      },
+      async removeItem() {
+        throw new Error('storage unavailable');
+      },
+    };
+    const provider = createStableDeviceIdProvider(storage);
+
+    const [first, second] = await Promise.all([provider(), provider()]);
+    const third = await provider();
+
+    expect(first).toMatch(/^[A-Za-z0-9_-]{16,256}$/);
+    expect(second).toBe(first);
+    expect(third).toBe(first);
   });
 
   it('콘솔 현지화 가격과 정확한 무료 체험 기간만 노출한다', () => {

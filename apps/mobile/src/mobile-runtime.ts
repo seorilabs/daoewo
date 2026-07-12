@@ -33,6 +33,7 @@ import {
   getAuth,
   getIdToken,
   linkWithCredential,
+  onAuthStateChanged,
   reauthenticateWithCredential,
   revokeToken,
   signInAnonymously,
@@ -92,7 +93,12 @@ import {
   createTimedCatalogCache,
   type TimedCatalogCache,
 } from './catalog-cache';
-import { createMissedRenewalEntitlementReader } from './missed-renewal-recovery';
+import {
+  createMissedRenewalEntitlementReader,
+  createRenewalRecoveryAuthSessionTracker,
+  isSameRenewalRecoveryAuthSession,
+  type RenewalRecoveryUser,
+} from './missed-renewal-recovery';
 import { resolveDeckReadyNotificationAvailability } from './deck-ready-notification-capability';
 import {
   createMobileNotificationsAdapter,
@@ -191,6 +197,12 @@ export function createMobileRuntime(
   }
 
   const auth = getAuth();
+  const renewalRecoveryAuthSessions = createRenewalRecoveryAuthSessionTracker(
+    auth.currentUser,
+  );
+  onAuthStateChanged(auth, user => {
+    renewalRecoveryAuthSessions.observe(user);
+  });
   const analytics = getAnalytics();
   const functions = getFunctions(undefined, config.functionsRegion);
   const appCheckReady = initializeAppCheck(undefined, {
@@ -490,12 +502,8 @@ export function createMobileRuntime(
   async function getEntitlement(): Promise<DaoewoEntitlementState> {
     missedRenewalEntitlementReader ??=
       createMissedRenewalEntitlementReader<Purchase>({
-        getCurrentUser: () => {
-          const current = auth.currentUser;
-          return current === null
-            ? null
-            : { uid: current.uid, isAnonymous: current.isAnonymous };
-        },
+        getCurrentUser: () =>
+          renewalRecoveryAuthSessions.snapshot(auth.currentUser),
         getServerEntitlement,
         getStoreReady,
         getAvailablePurchases,
@@ -507,6 +515,31 @@ export function createMobileRuntime(
         freeEntitlement: FREE_ENTITLEMENT,
       });
     return missedRenewalEntitlementReader();
+  }
+
+  function capturePurchaseSession(): {
+    readonly user: User;
+    readonly session: RenewalRecoveryUser;
+  } {
+    const user = ensurePurchasableUser(auth.currentUser);
+    const session = renewalRecoveryAuthSessions.snapshot(user);
+    if (session === null || session.isAnonymous) {
+      throw new Error('구독하려면 로그인 계정 연결을 먼저 완료해 주세요.');
+    }
+    return { user, session };
+  }
+
+  function assertPurchaseSession(expected: RenewalRecoveryUser): void {
+    if (
+      !isSameRenewalRecoveryAuthSession(
+        expected,
+        renewalRecoveryAuthSessions.snapshot(auth.currentUser),
+      )
+    ) {
+      throw new Error(
+        '구매 처리 중 로그인 계정이 변경됐어요. 다시 시도해 주세요.',
+      );
+    }
   }
 
   return {
@@ -709,15 +742,23 @@ export function createMobileRuntime(
           operation: 'purchase',
           surface: 'paywall',
           action: async () => {
-            const purchasingUser = ensurePurchasableUser(auth.currentUser);
+            const purchasing = capturePurchaseSession();
             await getStoreReady();
+            assertPurchaseSession(purchasing.session);
             const productId = productIdForPlan(config, plan);
             const product = await fetchSubscription(productId);
+            assertPurchaseSession(purchasing.session);
             const entitlement = await requestAndVerifySubscription(
               product,
-              createStoreAccountBinding(purchasingUser.uid),
-              purchase => verifyPurchase(purchase),
+              createStoreAccountBinding(purchasing.user.uid),
+              async purchase => {
+                assertPurchaseSession(purchasing.session);
+                const verified = await verifyPurchase(purchase);
+                assertPurchaseSession(purchasing.session);
+                return verified;
+              },
             );
+            assertPurchaseSession(purchasing.session);
             return { ...entitlement, billingPlan: plan };
           },
         });
@@ -728,22 +769,28 @@ export function createMobileRuntime(
           operation: 'purchase',
           surface: 'settings',
           action: async () => {
-            ensurePurchasableUser(auth.currentUser);
+            const purchasing = capturePurchaseSession();
             await getStoreReady();
+            assertPurchaseSession(purchasing.session);
             const configured = new Set([
               config.subscriptionProductIds.monthly,
               config.subscriptionProductIds.annual,
             ]);
             const purchases = await getAvailablePurchases();
+            assertPurchaseSession(purchasing.session);
             let restored: DaoewoEntitlementState | null = null;
             for (const purchase of purchases) {
               if (configured.has(purchase.productId)) {
+                assertPurchaseSession(purchasing.session);
                 restored = await verifyPurchase(purchase);
+                assertPurchaseSession(purchasing.session);
               }
             }
-            return (
-              restored ?? getServerEntitlement().catch(() => FREE_ENTITLEMENT)
-            );
+            const resolved =
+              restored ??
+              (await getServerEntitlement().catch(() => FREE_ENTITLEMENT));
+            assertPurchaseSession(purchasing.session);
+            return resolved;
           },
         });
       },

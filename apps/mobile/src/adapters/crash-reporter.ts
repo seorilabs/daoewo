@@ -48,6 +48,38 @@ export type CrashReportErrorCode = (typeof CRASH_REPORT_ERROR_CODES)[number];
 export type CrashReportPlatform = 'android' | 'ios' | 'unknown';
 export type CrashReportBuild = 'debug' | 'release' | 'unknown';
 
+const SAFE_ERROR_CODE_CLASSIFICATIONS: Readonly<
+  Record<string, CrashReportErrorCode>
+> = Object.freeze({
+  canceled: 'cancelled',
+  cancelled: 'cancelled',
+  'user-canceled': 'cancelled',
+  'user-cancelled': 'cancelled',
+  'e-user-cancelled': 'cancelled',
+  'permission-denied': 'permission-denied',
+  'not-authorized': 'permission-denied',
+  unauthorized: 'permission-denied',
+  network: 'network',
+  'network-error': 'network',
+  'network-request-failed': 'network',
+  offline: 'network',
+  connection: 'network',
+  'connection-error': 'network',
+  'connection-failed': 'network',
+  timeout: 'timeout',
+  'deadline-exceeded': 'timeout',
+  unavailable: 'unavailable',
+  'service-unavailable': 'unavailable',
+  invalid: 'invalid-state',
+  'invalid-argument': 'invalid-state',
+  'failed-precondition': 'invalid-state',
+  'already-exists': 'invalid-state',
+  'not-found': 'invalid-state',
+  configuration: 'configuration',
+  'configuration-error': 'configuration',
+  'invalid-configuration': 'configuration',
+});
+
 export interface SafeCrashReport {
   readonly operation: CrashReportOperation;
   readonly surface: CrashReportSurface;
@@ -83,32 +115,13 @@ export async function observeSafeCrashFailure<Result>(input: {
 }
 
 export function classifySafeCrashError(error: unknown): CrashReportErrorCode {
-  if (error instanceof Error && error.name === 'AbortError') {
+  if (ownDataValue(error, 'name') === 'AbortError') {
     return 'cancelled';
   }
-  const code = safeErrorCode(error);
-  if (code === null) {
-    return 'unknown';
-  }
-  if (/cancel(?:led|ed)|user-cancel/i.test(code)) {
-    return 'cancelled';
-  }
-  if (/permission-denied|not-authorized|unauthorized/i.test(code)) {
-    return 'permission-denied';
-  }
-  if (/network|offline|connection/i.test(code)) {
-    return 'network';
-  }
-  if (/timeout|deadline-exceeded/i.test(code)) {
-    return 'timeout';
-  }
-  if (/unavailable|service-unavailable/i.test(code)) {
-    return 'unavailable';
-  }
-  if (/invalid|failed-precondition|already-exists|not-found/i.test(code)) {
-    return 'invalid-state';
-  }
-  return 'unknown';
+  const codeToken = safeErrorCodeToken(error);
+  return codeToken === null
+    ? 'unknown'
+    : SAFE_ERROR_CODE_CLASSIFICATIONS[codeToken] ?? 'unknown';
 }
 
 export function createSafeCrashReporter(input: {
@@ -122,12 +135,12 @@ export function createSafeCrashReporter(input: {
     return instance;
   }
 
-  const platform = allowedValue(input.platform, [
+  const platform = allowedValue(ownDataValue(input, 'platform'), [
     'android',
     'ios',
     'unknown',
   ] as const);
-  const build = allowedValue(input.build, [
+  const build = allowedValue(ownDataValue(input, 'build'), [
     'debug',
     'release',
     'unknown',
@@ -142,12 +155,17 @@ export function createSafeCrashReporter(input: {
         return;
       }
 
-      const candidate = report as Partial<SafeCrashReport> | null | undefined;
       const attributes = {
-        operation: allowedValue(candidate?.operation, CRASH_REPORT_OPERATIONS),
-        surface: allowedValue(candidate?.surface, CRASH_REPORT_SURFACES),
+        operation: allowedValue(
+          ownDataValue(report, 'operation'),
+          CRASH_REPORT_OPERATIONS,
+        ),
+        surface: allowedValue(
+          ownDataValue(report, 'surface'),
+          CRASH_REPORT_SURFACES,
+        ),
         error_code: allowedValue(
-          candidate?.errorCode,
+          ownDataValue(report, 'errorCode'),
           CRASH_REPORT_ERROR_CODES,
         ),
         platform,
@@ -187,10 +205,32 @@ function allowedValue<Value extends string>(
     : (allowed.at(-1) as Value);
 }
 
-function safeErrorCode(error: unknown): string | null {
-  if (error === null || typeof error !== 'object' || !('code' in error)) {
+function safeErrorCodeToken(error: unknown): string | null {
+  const code = ownDataValue(error, 'code');
+  if (typeof code !== 'string' || code.length > 100) {
     return null;
   }
-  const code = (error as { readonly code?: unknown }).code;
-  return typeof code === 'string' && code.length <= 100 ? code : null;
+  const normalized = code.trim().toLowerCase().replaceAll('_', '-');
+  if (!/^[a-z0-9./-]+$/.test(normalized)) {
+    return null;
+  }
+  return normalized.split('/').at(-1) ?? null;
+}
+
+/** getter/prototype/Proxy에 숨은 자유 입력은 읽지 않고 own data property만 허용한다. */
+function ownDataValue(input: unknown, key: string): unknown {
+  if (
+    input === null ||
+    (typeof input !== 'object' && typeof input !== 'function')
+  ) {
+    return undefined;
+  }
+  try {
+    const descriptor = Object.getOwnPropertyDescriptor(input, key);
+    return descriptor !== undefined && 'value' in descriptor
+      ? descriptor.value
+      : undefined;
+  } catch {
+    return undefined;
+  }
 }

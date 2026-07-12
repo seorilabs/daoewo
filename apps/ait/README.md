@@ -20,7 +20,7 @@ pull/merge/push하며, Free primary device 한 대와 Pro 다기기 정책을 �
 progress는 서버 권위 상태로 hydrate하고 실패 시 로컬 기록을 보존한다. 로그아웃 시 scoped
 local state를 지운다.
 
-성공한 Toss 로그인은 로컬 Storage에 UID marker만 남긴다. cold start에서는 marker가 있을 때
+성공한 Toss 로그인은 로컬 Storage에 UID와 민감정보가 아닌 무작위 작업 세대 marker만 남긴다. cold start에서는 marker가 있을 때
 세션당 한 번 `appLogin()`의 새 일회용 authorization code로 backend session을 복구한다. Firebase
 ID/refresh/App Check token과 authorization code는 Storage에 저장하지 않는다. 복구 UID가 marker와
 다르면 즉시 sign-out하고 marker를 제거하며, 자동 복구 실패 뒤에는 사용자가 명시적으로 다시

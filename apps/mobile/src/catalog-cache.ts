@@ -24,8 +24,21 @@ export function createTimedCatalogCache<Value>(input: {
       if (values.length === 0 || updatedAtMs <= 0) {
         return null;
       }
-      const ttlMinutes = boundedTtlMinutes(input.getTtlMinutes());
-      return nowMs() - updatedAtMs <= ttlMinutes * 60_000 ? values : null;
+      const ttlMinutes = safeTtlMinutes(input.getTtlMinutes);
+      let elapsedMs: number;
+      try {
+        elapsedMs = nowMs() - updatedAtMs;
+      } catch {
+        values = [];
+        updatedAtMs = 0;
+        return null;
+      }
+      if (ttlMinutes === null || !Number.isFinite(elapsedMs) || elapsedMs < 0) {
+        values = [];
+        updatedAtMs = 0;
+        return null;
+      }
+      return elapsedMs <= ttlMinutes * 60_000 ? values : null;
     },
     set(next) {
       values = [...next];
@@ -39,10 +52,16 @@ export function createTimedCatalogCache<Value>(input: {
   };
 }
 
-function boundedTtlMinutes(value: number): number {
+function safeTtlMinutes(getTtlMinutes: () => number): number | null {
+  let value: number;
+  try {
+    value = getTtlMinutes();
+  } catch {
+    return null;
+  }
   return Number.isSafeInteger(value) &&
     value >= MIN_TTL_MINUTES &&
     value <= MAX_TTL_MINUTES
     ? value
-    : 60;
+    : null;
 }

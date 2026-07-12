@@ -79,7 +79,7 @@ Free cloud backup에는 덱/version, 활성 목표, card index/ID별 압축 prog
 포함한다. 카드 앞·뒷면/힌트/예시, UID, device ID/hash는 snapshot에 저장하지 않으며 Free
 본문은 검증된 앱 bundle에서만 다시 결합한다. 스토어 reconciliation cursor에는 조회 window와
 vendor page token만 저장하고 purchase token·order/transaction ID·Apple JWS는 저장하지 않는다.
-AppsInToss Storage에는 cold-start 복구용 Firebase UID marker만 남긴다. Toss authorization code와
+AppsInToss Storage에는 cold-start 복구용 Firebase UID와 민감정보가 아닌 무작위 작업 세대 marker만 남긴다. Toss authorization code와
 Firebase ID/refresh/App Check token은 메모리에만 두고 로그아웃·탈퇴 시 marker도 제거한다.
 
 설정의 JSON 내보내기는 목표·압축 progress·세션 수치만 공유 sheet로 전달한다. 카드 앞/뒤,
