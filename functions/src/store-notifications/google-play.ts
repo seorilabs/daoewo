@@ -14,7 +14,9 @@ import {
 import {
   googlePlayOriginalTransactionId,
   googlePlayReceiptFingerprint,
+  googlePlayReceiptIdentity,
 } from "../receipts/fingerprint.js";
+import { sha256 } from "../utils/hash.js";
 import type {
   AuthoritativeSubscriptionState,
   GooglePlaySubscriptionNotification,
@@ -158,7 +160,13 @@ function googlePlaySubscriptionEnvelope(input: {
         : { voidedRefundType: input.voidedRefundType }),
       ...(input.voidedOrderId === undefined
         ? {}
-        : { voidedOrderId: input.voidedOrderId }),
+        : {
+            voidedOrderId: input.voidedOrderId,
+            voidedOrderFingerprint: googlePlayVoidedOrderFingerprint(
+              input.packageName,
+              input.voidedOrderId,
+            ),
+          }),
       packageName: input.packageName,
       purchaseToken: input.purchaseToken,
       originalTransactionId,
@@ -172,6 +180,13 @@ function googlePlaySubscriptionEnvelope(input: {
       },
     },
   };
+}
+
+export function googlePlayVoidedOrderFingerprint(
+  packageName: string,
+  orderId: string,
+): string {
+  return sha256(`google-play:voided-order:${packageName}:${orderId}`);
 }
 
 export class GooglePlayAuthoritativeStateProvider
@@ -221,11 +236,23 @@ export class GooglePlayAuthoritativeStateProvider
       }
       throw error;
     }
+    // linked raw token은 API 경계에서 즉시 hash pair로 치환하고 이후 로직에는
+    // 전달하지 않는다.
+    const predecessor = linkedPurchasePredecessor(
+      this.config.packageName,
+      purchase.linkedPurchaseToken,
+    );
     const authorityObservedAt = this.now();
     const authorityObservation = {
       startedAt: authorityObservationStartedAt.toISOString(),
       observedAt: authorityObservedAt.toISOString(),
     };
+    assertBackend(
+      samePredecessor(claim.predecessor, predecessor),
+      "failed-precondition",
+      "Google Play linked purchase chain does not match its receipt claim.",
+      { kind: "google-play-linked-purchase-conflict" },
+    );
     validateAccountBinding(purchase, acceptedBindings);
 
     const matchingItems = (purchase.lineItems ?? []).filter(
@@ -257,26 +284,39 @@ export class GooglePlayAuthoritativeStateProvider
         environment,
         expiryMs,
         authorityObservation,
+        predecessor,
       );
     }
 
-    if (
-      notification.notificationType === "voided-purchase" &&
-      requiredString(lineItem.latestSuccessfulOrderId) ===
-        notification.voidedOrderId
-    ) {
-      // The void targets the order still presented as current. Retry until
-      // subscriptionsv2 reflects revoke/expiry or a later successful renewal.
-      throw new StoreApiFailure("unavailable");
+    const currentOrderId = requiredString(lineItem.latestSuccessfulOrderId);
+    if (notification.notificationType === "voided-purchase") {
+      const voidedOrderId = requiredString(notification.voidedOrderId);
+      assertBackend(
+        notification.voidedOrderFingerprint ===
+          googlePlayVoidedOrderFingerprint(notification.packageName, voidedOrderId),
+        "permission-denied",
+        "Google Play voided order identity is invalid.",
+      );
+      if (currentOrderId === voidedOrderId) {
+        // The void targets the order still presented as current. Retry until
+        // subscriptionsv2 reflects revoke/expiry or a later successful renewal.
+        throw new StoreApiFailure("unavailable");
+      }
+      // 과거 renewal void가 같은 token/product chain인지 현재 order와 별도로
+      // 검증한다. raw order ID는 이 stack frame 밖으로 저장하지 않는다.
+      const voidedOrder = await getOrderForAuthority(
+        this.client,
+        notification.packageName,
+        voidedOrderId,
+      );
+      validateOrderIdentity(
+        voidedOrder,
+        voidedOrderId,
+        notification.purchaseToken,
+        claim.productId,
+        nowMs,
+      );
     }
-
-    assertBackend(
-      purchase.linkedPurchaseToken === null ||
-        purchase.linkedPurchaseToken === undefined,
-      "failed-precondition",
-      "Google Play linked purchase migration is not supported yet.",
-      { kind: "google-play-linked-purchase-unsupported" },
-    );
 
     const startMs = requiredTime(purchase.startTime);
     assertBackend(
@@ -284,8 +324,12 @@ export class GooglePlayAuthoritativeStateProvider
       "permission-denied",
       "Google Play subscription start time is invalid.",
     );
-    const orderId = requiredString(lineItem.latestSuccessfulOrderId);
-    const order = await this.client.getOrder(this.config.packageName, orderId);
+    const orderId = currentOrderId;
+    const order = await getOrderForAuthority(
+      this.client,
+      this.config.packageName,
+      orderId,
+    );
     validateOrderIdentity(
       order,
       orderId,
@@ -316,6 +360,7 @@ export class GooglePlayAuthoritativeStateProvider
       environment,
       storeState: state,
       authorityObservation,
+      ...(predecessor === undefined ? {} : { predecessor }),
       purchasedAt: new Date(startMs).toISOString(),
       validUntil,
       entitlement: {
@@ -336,6 +381,9 @@ function inactiveGoogleState(
     startedAt: string;
     observedAt: string;
   },
+  predecessor:
+    | { originalTransactionId: string; receiptFingerprint: string }
+    | undefined,
 ): AuthoritativeSubscriptionState {
   const reason = googleInactiveReason(storeState, expiryMs);
   return {
@@ -346,10 +394,43 @@ function inactiveGoogleState(
     environment,
     storeState,
     authorityObservation,
+    ...(predecessor === undefined ? {} : { predecessor }),
     reason,
     lastKnownExpiry: expiryMs === null ? null : new Date(expiryMs).toISOString(),
     entitlement: { plan: "free", source: "google-play", validUntil: null },
   };
+}
+
+function linkedPurchasePredecessor(
+  packageName: string,
+  linkedPurchaseToken: string | null | undefined,
+) {
+  if (linkedPurchaseToken === null || linkedPurchaseToken === undefined) {
+    return undefined;
+  }
+  assertBackend(
+    linkedPurchaseToken.length > 0 && linkedPurchaseToken.length <= 4_096,
+    "permission-denied",
+    "Google Play linked purchase identity is invalid.",
+  );
+  return googlePlayReceiptIdentity(packageName, linkedPurchaseToken);
+}
+
+function samePredecessor(
+  left:
+    | { originalTransactionId: string; receiptFingerprint: string }
+    | undefined,
+  right:
+    | { originalTransactionId: string; receiptFingerprint: string }
+    | undefined,
+): boolean {
+  return (
+    (left === undefined && right === undefined) ||
+    (left !== undefined &&
+      right !== undefined &&
+      left.originalTransactionId === right.originalTransactionId &&
+      left.receiptFingerprint === right.receiptFingerprint)
+  );
 }
 
 function googleInactiveReason(
@@ -409,6 +490,23 @@ function validateOrderIdentity(
     "permission-denied",
     "Google Play order does not match its subscription.",
   );
+}
+
+async function getOrderForAuthority(
+  client: GooglePlayPublisherClient,
+  packageName: string,
+  orderId: string,
+): Promise<GooglePlayOrder> {
+  try {
+    return await client.getOrder(packageName, orderId);
+  } catch (error) {
+    if (error instanceof StoreApiFailure && error.kind === "not-found") {
+      // subscriptionsv2/Voided Purchases와 Orders API의 eventual consistency는
+      // 영구 payload 오류가 아니므로 transport/scheduler가 재시도한다.
+      throw new StoreApiFailure("unavailable");
+    }
+    throw error;
+  }
 }
 
 function optionalTime(value: string | null | undefined): number | null {

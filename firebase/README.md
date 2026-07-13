@@ -11,13 +11,22 @@ Firebase Auth + App Check를 통과한 `functions/` API가 권위 데이터에 �
 - `users/{uid}/deckProgress/{deckId}`: 카드별 SRS를 합친 압축 progress 문서
 - `users/{uid}/entitlements/pro`: 서버 검증 구독 권한
 - `users/{uid}/sync/devicePolicy`: Free primary device hash, Pro는 접근 제한 미적용
+- `users/{uid}/sync/learningBackup`: 본문·UID·device 식별자 없는 Free 목표/progress·세션 요약
 - `deliveryLogs`, `deliveryCounters`: 오늘 창/고유 premium 카드 soft-cap 감사 로그
-- `deckRequests`: Functions가 rate limit과 Pro 우선순위를 판정해 생성
+- `deckRequests`: Functions가 rate limit과 Pro 우선순위를 판정해 `queued`로 생성하고,
+  서버 작업자가 `readyDeckId`, 단조 증가 `readyRevision`, `readyAt`과 함께 `ready`로 전환
+- `notificationInstallations`: Auth + App Check + 폐기 확인 callable만 쓰는 mobile FCM 설치 정보
+- `notificationOutbox`: `queued → ready` 전환마다 revision 기반 결정적 ID로 한 번 생성하는 전달 작업
 - `receiptClaims`, `subscriptionEvents`: 검증된 store purchase binding/webhook replay 방지
+- `receiptAuthorityBarriers/{receiptFingerprint}`: claim 전 알림이 direct Pro grant를 보류시키는
+  fingerprint-keyed 영구 pending marker(Admin/Functions 전용)
+- `storeReconciliationCursors/{source}`: Google/Apple history 고정 window와 page token만 저장
 - `tossAuthCodeClaims`: `appLogin()` authorizationCode 일회성 소비 기록
 - `tossAuthExchangeCounters`: App Check bootstrap 전 교환 route의 IP 해시 rate limit
 - `tossAppCheckRefreshCounters`: AIT ID token 기반 App Check 재발급 user/IP rate limit
-- `accountMerges/{sourceUid}`: 병합된 source 계정의 재사용 차단 marker
+- `accountMerges/{sourceUid}`: 병합 결과와 post-commit cleanup 상태/5분 lease를 가진 v2 source
+  재사용 차단 marker. 생성 trigger와 15분 bounded reconciliation이 source Auth 폐기와 target
+  claim 투영을 멱등 재시도
 - `accountDeletions/{uid}`: 탈퇴 시작 전에 생성해 동시 쓰기를 차단하는 삭제 marker
 - Storage `decks/{deckId}/v{version}/chunk-{i}.json`: 불변 원본, Admin SDK 전용
 
@@ -65,14 +74,61 @@ App Check를 소유 증명으로 인정한다. 서버는 삭제 marker를 먼저
 subscription event를 멱등 삭제하고 마지막에 Firebase Auth user를 삭제한다. marker를
 읽는 쓰기 transaction은 삭제 시작과 동시에 실패한다.
 
+target 탈퇴가 merge cleanup보다 먼저 시작되면 서버는 각 source Auth 폐기를 먼저 성공시킨
+뒤에만 `accountMerges`를 최소 source deletion tombstone으로 전환한다. Auth cleanup 실패 시 merge
+marker를 유지해 재시도 근거가 사라지지 않는다. rules의 `activeOwner`도 merge/deletion marker가
+생긴 즉시 source token의 직접 user/entitlement/request read를 차단한다.
+Functions의 계정 소유 write transaction도 두 marker를 같은 transaction 안에서 읽어 병합과
+동시 실행된 늦은 source write를 재시도 시점에 거부한다. 신규 병합은 signed token claim뿐 아니라
+Admin Auth의 현재 provider 목록이 비어 있는지도 확인한다.
+
+cleanup reconciliation은 `schemaVersion=2`, 상태 `pending/failed/claimed`,
+`cleanupUpdatedAt <= now-5m`을 oldest-first 최대 50개 조회한다. 이 고정 5분 cutoff는 expired
+claimed lease를 포함하고 active lease는 제외한다. query composite index는
+`schemaVersion + cleanupStatus + cleanupUpdatedAt`이며 scheduler는 15분, max instance/concurrency
+각 1로 동작한다. 로그에는 UID나 provider 원본 오류를 남기지 않고 처리 건수만 기록한다.
+
 `receiptClaims`는 구매 탈취와 환불/복원 재바인딩을 막기 위해 지우지 않는다. 대신 raw
 UID·platform·product·original transaction·merge source를 제거하고
 `ownershipState=account-deleted`, `bindingRetained=true`인 fingerprint tombstone으로
 남긴다. 새 계정은 이 fingerprint를 자동으로 가져갈 수 없다.
 
+Google/Apple 알림이 receipt claim보다 먼저 오면 claim 조회와 같은 Firestore transaction에서
+`receiptAuthorityBarriers`를 생성하고 transport를 retry한다. marker payload는 `state`,
+`platform`, 관측 시각/횟수뿐이며 raw store ID/token/JWS/UID/product/event를 넣지 않는다.
+direct receipt 검증 transaction은 marker가 있으면 claim을 생성할 수 있지만 entitlement는
+Free로 보류한다. claim을 찾은 notification retry가 store API 현재 상태, idempotency event,
+entitlement projection, marker 삭제를 한 transaction으로 commit한 뒤에만 Pro가 열릴 수 있다.
+marker는 TTL 대상이 아니며 account merge에서는 유지되고 account deletion receipt tombstone
+전환에서는 같은 transaction으로 제거된다.
+
+Google `linkedPurchaseToken`은 Functions가 API 응답을 받은 즉시 old hashed original
+ID/fingerprint pair로 바꾼다. direct verification transaction은 old/new claim, entitlement,
+두 pre-claim barrier를 함께 읽어 동일 UID 또는 검증된 merge target인지 확인한다. old claim은
+raw token 없이 `ownershipState=superseded`, hashed `supersededBy`만 가진 tombstone으로 바꾸고
+new claim의 hashed `predecessor`와 entitlement를 같은 commit에 쓴다. old restore는 거부하고
+old RTDN은 store query 없이 ACK한다. new RTDN의 API linked hash가 claim predecessor와 다르면
+fail-closed한다. 탈퇴 시 두 chain 필드와 UID는 모두 제거한다.
+
+Google Voided Purchases와 Apple Notification History scheduler는 기존 receipt claim이 있는
+구독만 현재 store API 권위 경로로 다시 처리한다. cursor에는 window/page token만 남고 raw
+purchase token, order/transaction ID, Apple JWS는 저장하지 않는다. vendor page token이
+만료되면 같은 window의 첫 페이지로 원자 reset하며 이미 반영한 event는 idempotency 문서로
+중복 적용하지 않는다.
+
+덱 준비 알림 outbox에는 `requestId`, `requestRevision`, 상태, 시각, 집계값만 저장한다.
+UID, FCM token, topic, note는 넣지 않고 처리 시점에 권위 `deckRequests`와 현재 설치 정보를
+다시 읽는다. 계정 병합은 요청과 `lastSeenAt` 최신순 계정 합산 10개 설치 소유권을 target UID로
+함께 옮기며, 계정 삭제는 현재 계정과 병합 source의 설치를 제거한다. 클라이언트의 두 컬렉션
+직접 접근은 rules로 차단한다.
+FCM device payload는 고정 제목/본문과 `kind=deck-ready` 또는 `kind=catalog-published`만
+포함하고 request/deck ID를 보내지 않으며, collapse/tag에는 결정적 opaque event hash만 사용한다.
+
 `firebase/firestore.indexes.json`이 `expiresAt` TTL policy의 원장이다. delivery log/counter,
-deck request counter, Toss auth/App Check rate-limit 문서는 TTL 대상이다. account deletion
-marker와 receipt tombstone은 UID/구매 resurrection 차단에 필요한 보안 기록으로 영구
+deck request counter, Toss auth/App Check rate-limit, 마지막 등록 후 35일이 지난 notification
+installation, 완료 후 30일이 지난 notification outbox와 catalog event ledger 문서는 TTL
+대상이다. account deletion marker와 receipt tombstone은 UID/구매 resurrection 차단에 필요한
+보안 기록으로 영구
 보존한다. 병합 source는 target 탈퇴 시 `accountMerges/{sourceUid}` 삭제와 최소
 `accountDeletions/{sourceUid}` 생성이 같은 atomic batch로 전환된다. source tombstone은
 문서 ID와 `status/reason/createdAt`만 남기며 target UID 연결 정보는 보존하지 않는다.

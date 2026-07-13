@@ -29,9 +29,10 @@
 3. **secrets/variables**: org 공통(`APPS_IN_TOSS_API_KEY`, `APPLE_*`, `APP_STORE_CONNECT_*`, `GOOGLE_PLAY_UPLOAD_*`, var `APPLE_TEAM_ID`/`GOOGLE_PLAY_UPLOAD_KEY_ALIAS`/`GOOGLE_WORKLOAD_IDENTITY_PROVIDER`)는 상속. **repo secrets**: `APPLE_PROVISIONING_PROFILE_BASE64`, `FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64`, `FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64`, `APP_STORE_IAP_PRIVATE_KEY_BASE64`, `APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON`. **repo variables**: `FIREBASE_PROJECT_ID`, `FUNCTIONS_REGION`, `GOOGLE_PLAY_PRODUCT_IDS`, `GOOGLE_PLAY_RTDN_TOPIC`, `APP_STORE_APP_APPLE_ID`, `APP_STORE_PRODUCT_IDS`, `APP_STORE_IAP_ISSUER_ID`, `APP_STORE_IAP_KEY_ID`, `TOSS_FIREBASE_APP_ID`, `GOOGLE_PLAY_SERVICE_ACCOUNT_EMAIL`.
 4. **GitHub Environments**: `apps-in-toss`, `google-play`, `app-store` 생성(보호 규칙 권장).
 
-`Release Inventory`는 위 repo secret/variable을 임시 파일·환경 변수로 복원한 뒤
-global release checker를 실행한다. 따라서 외부 설정을 완료하면 CI에서도 green이 될 수 있고,
-값이 비어 있으면 의도대로 fail-closed한다.
+`Release Inventory`는 Firebase 공개 native config만 임시 파일로 복원한다. App Store IAP private
+key와 root certificate 값은 checker process에 주입하지 않고 GitHub expression이 계산한
+`*_CONFIGURED=true|false` marker만 전달한다. 따라서 외부 설정을 완료하면 CI에서도 green이 될
+수 있고, 값이 비어 있으면 raw secret 노출 없이 fail-closed한다.
 
 ## @ref 핀
 

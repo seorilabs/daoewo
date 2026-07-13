@@ -13,7 +13,8 @@ Play/App Store 상품 ID, 약관 URL, 개인정보처리방침 URL은 콘솔/공
 
 - mobile 월/연 product ID, Google Web client ID, terms/privacy URL: 빈 값
 - AIT API base/Firebase API key/terms/privacy URL: 빈 값
-- App Store config 월/연 product ID와 support/privacy URL: `확정 필요`
+- Play/App Store config 월/연 product ID와 support/privacy URL: `확정 필요`
+- 두 store config, mobile runtime과 Functions allowlist SKU가 모두 같아야 release checker 통과
 - Functions Google Play/App Store server provider: 구현됨. 상품 allowlist·IAP key/env/secret과
   runtime IAM이 없으면 store별로 fail-closed
 - Functions AppsInToss partner/receipt provider: official partner 계약·mTLS 인증서 미연결로

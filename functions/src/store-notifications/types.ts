@@ -1,4 +1,5 @@
 import type { Entitlement } from "@daoewo/product-core";
+import type { ReceiptPredecessor } from "../receipts/providers.js";
 
 export type StoreNotificationPlatform = "google-play" | "app-store";
 
@@ -15,6 +16,12 @@ export type ReceiptClaimResolution =
       platform: StoreNotificationPlatform;
       productId: string;
       originalTransactionId: string;
+      predecessor?: ReceiptPredecessor;
+    }
+  | {
+      kind: "superseded";
+      fingerprint: string;
+      successorFingerprint: string;
     }
   | { kind: "account-deleted"; fingerprint: string }
   | { kind: "missing"; fingerprint: string };
@@ -38,6 +45,7 @@ interface AuthoritativeSubscriptionStateBase {
     startedAt: string;
     observedAt: string;
   };
+  predecessor?: ReceiptPredecessor;
 }
 
 export type AuthoritativeSubscriptionState =
@@ -60,6 +68,7 @@ export interface GooglePlaySubscriptionNotification {
   notificationType: number | "voided-purchase";
   voidedRefundType?: 1 | 2;
   voidedOrderId?: string;
+  voidedOrderFingerprint?: string;
   packageName: string;
   purchaseToken: string;
   receiptFingerprint: string;
@@ -111,10 +120,23 @@ export type StoreNotificationApplyResult =
       uid: string;
       entitlement: Entitlement;
     }
-  | { outcome: "account-deleted" | "missing"; uid: null };
+  | { outcome: "account-deleted" | "missing" | "superseded"; uid: null };
+
+export interface StoreNotificationClaimLookup {
+  fingerprint: string;
+  platform: StoreNotificationPlatform;
+  now: Date;
+}
 
 export interface StoreNotificationRepository {
   resolveReceiptClaim(fingerprint: string): Promise<ReceiptClaimResolution>;
+  /**
+   * claim이 아직 없으면 같은 transaction에서 fingerprint 기반 authority barrier를
+   * 생성한 뒤 missing을 반환한다. raw store identifier/payload는 입력받지 않는다.
+   */
+  resolveReceiptClaimForNotification(
+    input: StoreNotificationClaimLookup,
+  ): Promise<ReceiptClaimResolution>;
   applyAuthoritativeSubscriptionState(input: {
     notification: VerifiedStoreSubscriptionNotification;
     expectedClaim: Extract<ReceiptClaimResolution, { kind: "claimed" }>;

@@ -1,4 +1,4 @@
-import {appleAuth} from '@invertase/react-native-apple-authentication';
+import { appleAuth } from '@invertase/react-native-apple-authentication';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   listPublicCatalog,
@@ -22,7 +22,7 @@ import {
   daysBetweenDateKeys,
   toDateKey,
 } from '@daoewo/product-core';
-import {getAnalytics, logEvent} from '@react-native-firebase/analytics';
+import { getAnalytics, logEvent } from '@react-native-firebase/analytics';
 import {
   ReactNativeFirebaseAppCheckProvider,
   initializeAppCheck,
@@ -33,6 +33,7 @@ import {
   getAuth,
   getIdToken,
   linkWithCredential,
+  onAuthStateChanged,
   reauthenticateWithCredential,
   revokeToken,
   signInAnonymously,
@@ -41,8 +42,8 @@ import {
   type AuthCredential,
   type User,
 } from '@react-native-firebase/auth';
-import {getFunctions, httpsCallable} from '@react-native-firebase/functions';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import { getFunctions, httpsCallable } from '@react-native-firebase/functions';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import {
   type DaoewoAnalyticsValue,
   type DaoewoCardView,
@@ -56,6 +57,11 @@ import {
   type SubscriptionPlan,
 } from '@daoewo/product-ui';
 import {
+  createLearningSyncPort,
+  type LearningSyncPushInput,
+  type LearningSyncServerState,
+} from '@daoewo/product-ui/sync';
+import {
   fetchProducts,
   finishTransaction,
   getAvailablePurchases,
@@ -67,10 +73,40 @@ import {
   type ProductSubscription,
   type Purchase,
 } from 'react-native-iap';
-import {AccessibilityInfo, Linking, Platform} from 'react-native';
+import { AccessibilityInfo, Alert, Linking, Platform } from 'react-native';
 
-import type {MobileRuntimeConfig} from './runtime-config';
-import {resolveMobileAccountDeletionProof} from './account-deletion-policy';
+import { resolveMobileAccountDeletionProof } from './account-deletion-policy';
+import { settleAccountMergeAfterTargetSignIn } from './account-merge-recovery';
+import {
+  createSafeCrashReporter,
+  observeSafeCrashFailure,
+  type SafeCrashReporter,
+} from './adapters/crash-reporter';
+import {
+  createDeckReadyMessagingAdapter,
+  DeckReadyMessagingError,
+  type NotificationInstallationRegistration,
+  type NotificationInstallationTransport,
+} from './adapters/firebase-messaging';
+import { createMobileRemoteConfigAdapter } from './adapters/remote-config';
+import {
+  createTimedCatalogCache,
+  type TimedCatalogCache,
+} from './catalog-cache';
+import {
+  createMissedRenewalEntitlementReader,
+  createRenewalRecoveryAuthSessionTracker,
+  isSameRenewalRecoveryAuthSession,
+  type RenewalRecoveryUser,
+} from './missed-renewal-recovery';
+import { resolveDeckReadyNotificationAvailability } from './deck-ready-notification-capability';
+import {
+  createMobileNotificationsAdapter,
+  requestMobileNotificationPermission,
+} from './mobile-notifications';
+import { createMobileSharingAdapter } from './mobile-sharing';
+import { createNativeTtsAdapter } from './native-tts';
+import type { MobileRuntimeConfig } from './runtime-config';
 import {
   createStoreAccountBinding,
   type StoreAccountBinding,
@@ -146,21 +182,32 @@ interface ServerSyncState {
   readonly goals: readonly ServerStudyGoal[];
   readonly progress: readonly {
     readonly deckId: string;
-    readonly cards: Readonly<Record<string, unknown>>;
+    readonly cards: Readonly<
+      Record<string, { readonly state?: CardProgress } | CardProgress>
+    >;
   }[];
+  readonly learningBackup?: LearningSyncServerState['learningBackup'];
 }
 
-export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime {
+export function createMobileRuntime(
+  config: MobileRuntimeConfig,
+): DaoewoRuntime {
   if (!config.firebaseEnabled) {
     throw new Error('Firebase mobile runtime is disabled.');
   }
 
   const auth = getAuth();
+  const renewalRecoveryAuthSessions = createRenewalRecoveryAuthSessionTracker(
+    auth.currentUser,
+  );
+  onAuthStateChanged(auth, user => {
+    renewalRecoveryAuthSessions.observe(user);
+  });
   const analytics = getAnalytics();
   const functions = getFunctions(undefined, config.functionsRegion);
   const appCheckReady = initializeAppCheck(undefined, {
     provider: new ReactNativeFirebaseAppCheckProvider({
-      android: {provider: __DEV__ ? 'debug' : 'playIntegrity'},
+      android: { provider: __DEV__ ? 'debug' : 'playIntegrity' },
       apple: {
         provider: __DEV__ ? 'debug' : 'appAttestWithDeviceCheckFallback',
       },
@@ -171,16 +218,52 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
   const getDeviceId = createDeviceIdProvider();
   const externalLinks = createExternalLinks(config.legalUrls);
   const storage = createJsonAsyncStorage();
+  const crashReporter = createSafeCrashReporter({
+    platform: mobilePlatform(),
+    build: __DEV__ ? 'debug' : 'release',
+  });
+  const remoteConfig = createMobileRemoteConfigAdapter();
+  const availabilityChangedListeners = new Set<() => void>();
+  let remoteConfigResolved = false;
+  const remoteConfigReady = remoteConfig
+    .initialize()
+    .then(() => remoteConfig.refresh())
+    .catch(async () => {
+      await crashReporter.record({
+        operation: 'remote-config',
+        surface: 'background',
+        errorCode: 'unavailable',
+      });
+      return remoteConfig.getSnapshot();
+    })
+    .finally(() => {
+      remoteConfigResolved = true;
+      for (const listener of [...availabilityChangedListeners]) {
+        try {
+          listener();
+        } catch {
+          // 한 UI subscriber 실패가 final capability 판정을 막지 않게 한다.
+        }
+      }
+    });
+  const catalogCache = createTimedCatalogCache<DaoewoDeckView>({
+    getTtlMinutes: () =>
+      remoteConfig.getSnapshot().mobile_catalog_cache_ttl_minutes,
+  });
+  let missedRenewalEntitlementReader:
+    | (() => Promise<DaoewoEntitlementState>)
+    | null = null;
   const bundledFree = createBundledFreeContentAdapter({
     storage,
     getOwnerId: async () =>
       auth.currentUser?.uid ??
       (await storage.getItem<DaoewoUser>(FIREBASE_LOCAL_GUEST_KEY))?.id ??
       null,
+    getEntitlement: () => getEntitlement().catch(() => FREE_ENTITLEMENT),
   });
 
   if (config.googleWebClientId.trim().length > 0) {
-    GoogleSignin.configure({webClientId: config.googleWebClientId});
+    GoogleSignin.configure({ webClientId: config.googleWebClientId });
   }
 
   const callEntitlement = httpsCallable<
@@ -192,13 +275,122 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
     ServerEntitlementResponse
   >(functions, 'verifyReceipt');
   const callMergeAnonymous = httpsCallable<
-    {sourceIdToken: string; targetIdToken: string; deviceId: string},
-    {merge: unknown}
+    { sourceIdToken: string; targetIdToken: string; deviceId: string },
+    { merge: unknown }
   >(functions, 'mergeAnonymousAccount');
   const callDeleteAccount = httpsCallable<
-    {confirmation: 'DELETE'},
-    {deleted: true}
+    { confirmation: 'DELETE' },
+    { deleted: true }
   >(functions, 'deleteAccount');
+  const callRegisterNotificationInstallation = httpsCallable<
+    NotificationInstallationRegistration,
+    { registered: true }
+  >(functions, 'registerNotificationInstallation');
+  const callUnregisterNotificationInstallation = httpsCallable<
+    { deviceId: string },
+    { unregistered: true }
+  >(functions, 'unregisterNotificationInstallation');
+  const notificationTransport: NotificationInstallationTransport = {
+    async registerNotificationInstallation(input) {
+      await appCheckReady;
+      const result = await callRegisterNotificationInstallation(input);
+      return result.data;
+    },
+    async unregisterNotificationInstallation(input) {
+      await appCheckReady;
+      const result = await callUnregisterNotificationInstallation(input);
+      return result.data;
+    },
+  };
+  const transportDisabledListeners = new Set<() => void>();
+  let observedMessagingUid = auth.currentUser?.uid ?? null;
+  let messagingAccountEpoch = 0;
+  const deckReadyMessaging = createDeckReadyMessagingAdapter({
+    transport: notificationTransport,
+    getCurrentAccount: () => {
+      const uid = auth.currentUser?.uid ?? null;
+      if (uid !== observedMessagingUid) {
+        observedMessagingUid = uid;
+        messagingAccountEpoch += 1;
+      }
+      return uid === null ? null : { uid, epoch: messagingAccountEpoch };
+    },
+    getDeviceId,
+    getRemoteConfigSnapshot: () => remoteConfig.getSnapshot(),
+    metadata: {
+      platform: Platform.OS === 'ios' ? 'ios' : 'android',
+      locale: resolvedLocale(),
+      appVersion: config.releaseMetadata.appVersion,
+      buildNumber: config.releaseMetadata.buildNumber,
+    },
+    requestNotificationPermission: requestMobileNotificationPermission,
+    showForegroundNotification: kind => {
+      const body =
+        kind === 'deck-ready'
+          ? '요청한 덱이 준비됐어요.'
+          : '새로운 덱이 공개됐어요.';
+      Alert.alert('다외워', body);
+      AccessibilityInfo.announceForAccessibility(body);
+    },
+    onTokenRefreshRetriesExhausted: async () => {
+      for (const listener of [...transportDisabledListeners]) {
+        try {
+          listener();
+        } catch {
+          // 한 UI subscriber 실패가 다른 subscriber와 cleanup을 막지 않게 한다.
+        }
+      }
+      await crashReporter.record({
+        operation: 'notification',
+        surface: 'background',
+        errorCode: 'network',
+      });
+    },
+  });
+  const messagingReady = deckReadyMessaging.initialize().catch(async () => {
+    await crashReporter.record({
+      operation: 'notification',
+      surface: 'background',
+      errorCode: 'configuration',
+    });
+  });
+  const deckReadyNotifications: DaoewoRuntime['deckReadyNotifications'] = {
+    get availability() {
+      return resolveDeckReadyNotificationAvailability({
+        remoteConfigResolved,
+        pushEnabled:
+          remoteConfig.getSnapshot().mobile_deck_updates_push_enabled,
+      });
+    },
+    async setEnabled(enabled) {
+      if (!enabled) {
+        await deckReadyMessaging.disable();
+        return;
+      }
+      await Promise.all([remoteConfigReady, messagingReady]);
+      try {
+        await deckReadyMessaging.enable();
+      } catch (error) {
+        await recordDeckReadyNotificationFailure(crashReporter, error);
+        throw error;
+      }
+    },
+    async clear() {
+      await deckReadyMessaging.disable();
+    },
+    subscribeTransportDisabled(listener) {
+      transportDisabledListeners.add(listener);
+      return () => {
+        transportDisabledListeners.delete(listener);
+      };
+    },
+    subscribeAvailabilityChanged(listener) {
+      availabilityChangedListeners.add(listener);
+      return () => {
+        availabilityChangedListeners.delete(listener);
+      };
+    },
+  };
 
   async function signInOrLinkAccount(
     credential: AuthCredential,
@@ -212,7 +404,7 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
     const sourceIdToken = await getIdToken(currentUser, true);
     try {
       const linked = await linkWithCredential(currentUser, credential);
-      return toDaoewoUser(linked.user);
+      return toDaoewoUser(linked.user, 'complete');
     } catch (error) {
       if (!isCredentialAlreadyLinkedError(error)) {
         throw error;
@@ -220,23 +412,69 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
     }
 
     const target = await signInWithCredential(auth, credential);
-    const targetIdToken = await getIdToken(target.user, true);
-    await appCheckReady;
-    await callMergeAnonymous({
-      sourceIdToken,
-      targetIdToken,
-      deviceId: await getDeviceId(),
+    const accountMergeStatus = await settleAccountMergeAfterTargetSignIn({
+      mergeServerState: async () => {
+        const targetIdToken = await getIdToken(target.user, true);
+        await appCheckReady;
+        await callMergeAnonymous({
+          sourceIdToken,
+          targetIdToken,
+          deviceId: await getDeviceId(),
+        });
+      },
+      mergeLocalState: () =>
+        bundledFree.mergeOwnerState(currentUser.uid, target.user.uid),
     });
-    await bundledFree.mergeOwnerState(currentUser.uid, target.user.uid);
-    return toDaoewoUser(target.user);
+    return toDaoewoUser(target.user, accountMergeStatus);
   }
 
-  async function getEntitlement(): Promise<DaoewoEntitlementState> {
+  async function transitionMessagingAccount<T>(
+    action: () => Promise<T>,
+  ): Promise<T> {
+    const previousUid = auth.currentUser?.uid ?? null;
+    const restoreOnSameAccount = deckReadyMessaging.getState() === 'enabled';
+    if (restoreOnSameAccount) {
+      await deckReadyMessaging.disable();
+    }
+    try {
+      const result = await action();
+      if (
+        restoreOnSameAccount &&
+        previousUid !== null &&
+        auth.currentUser?.uid === previousUid
+      ) {
+        await deckReadyMessaging
+          .enable()
+          .catch(error =>
+            recordDeckReadyNotificationFailure(crashReporter, error),
+          );
+      }
+      catalogCache.clear();
+      return result;
+    } catch (error) {
+      if (
+        restoreOnSameAccount &&
+        previousUid !== null &&
+        auth.currentUser?.uid === previousUid
+      ) {
+        await deckReadyMessaging
+          .enable()
+          .catch(restoreError =>
+            recordDeckReadyNotificationFailure(crashReporter, restoreError),
+          );
+      }
+      throw error;
+    }
+  }
+
+  async function getServerEntitlement(): Promise<DaoewoEntitlementState> {
     if (auth.currentUser === null) {
       return FREE_ENTITLEMENT;
     }
     await appCheckReady;
-    const result = (await callEntitlement({})) as CallableResult<ServerEntitlementResponse>;
+    const result = (await callEntitlement(
+      {},
+    )) as CallableResult<ServerEntitlementResponse>;
     return result.data.active && result.data.entitlement !== null
       ? result.data.entitlement
       : FREE_ENTITLEMENT;
@@ -247,7 +485,9 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
   ): Promise<DaoewoEntitlementState> {
     await appCheckReady;
     const request = receiptRequestFromPurchase(purchase);
-    const result = (await callVerifyReceipt(request)) as CallableResult<ServerEntitlementResponse>;
+    const result = (await callVerifyReceipt(
+      request,
+    )) as CallableResult<ServerEntitlementResponse>;
     if (
       !result.data.active ||
       result.data.entitlement === null ||
@@ -255,8 +495,51 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
     ) {
       throw new Error('구독 영수증 검증에 실패했어요.');
     }
-    await finishTransaction({purchase, isConsumable: false});
+    await finishTransaction({ purchase, isConsumable: false });
     return result.data.entitlement;
+  }
+
+  async function getEntitlement(): Promise<DaoewoEntitlementState> {
+    missedRenewalEntitlementReader ??=
+      createMissedRenewalEntitlementReader<Purchase>({
+        getCurrentUser: () =>
+          renewalRecoveryAuthSessions.snapshot(auth.currentUser),
+        getServerEntitlement,
+        getStoreReady,
+        getAvailablePurchases,
+        verifyPurchase,
+        configuredProductIds: [
+          config.subscriptionProductIds.monthly,
+          config.subscriptionProductIds.annual,
+        ],
+        freeEntitlement: FREE_ENTITLEMENT,
+      });
+    return missedRenewalEntitlementReader();
+  }
+
+  function capturePurchaseSession(): {
+    readonly user: User;
+    readonly session: RenewalRecoveryUser;
+  } {
+    const user = ensurePurchasableUser(auth.currentUser);
+    const session = renewalRecoveryAuthSessions.snapshot(user);
+    if (session === null || session.isAnonymous) {
+      throw new Error('구독하려면 로그인 계정 연결을 먼저 완료해 주세요.');
+    }
+    return { user, session };
+  }
+
+  function assertPurchaseSession(expected: RenewalRecoveryUser): void {
+    if (
+      !isSameRenewalRecoveryAuthSession(
+        expected,
+        renewalRecoveryAuthSessions.snapshot(auth.currentUser),
+      )
+    ) {
+      throw new Error(
+        '구매 처리 중 로그인 계정이 변경됐어요. 다시 시도해 주세요.',
+      );
+    }
   }
 
   return {
@@ -304,36 +587,66 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
           await storage.setItem(FIREBASE_LOCAL_GUEST_KEY, guest);
           return guest;
         }
-        if (
-          existing?.isGuest === true &&
-          existing.id !== credential.user.uid
-        ) {
+        if (existing?.isGuest === true && existing.id !== credential.user.uid) {
           await bundledFree.mergeOwnerState(existing.id, credential.user.uid);
         }
         await storage.removeItem(FIREBASE_LOCAL_GUEST_KEY);
         return toDaoewoUser(credential.user);
       },
       async signIn(provider) {
-        const localGuest = await storage.getItem<DaoewoUser>(
-          FIREBASE_LOCAL_GUEST_KEY,
-        );
-        let signedIn: DaoewoUser;
-        if (provider === 'google') {
-          const credential = await googleCredential(config.googleWebClientId);
-          signedIn = await signInOrLinkAccount(credential);
-        } else if (provider === 'apple') {
-          const credential = await appleCredential();
-          signedIn = await signInOrLinkAccount(credential);
-        } else {
-          throw new Error('지원하지 않는 로그인 방식이에요.');
-        }
-        if (localGuest?.isGuest === true && localGuest.id !== signedIn.id) {
-          await bundledFree.mergeOwnerState(localGuest.id, signedIn.id);
-        }
-        await storage.removeItem(FIREBASE_LOCAL_GUEST_KEY);
-        return signedIn;
+        return observeSafeCrashFailure({
+          reporter: crashReporter,
+          operation: 'authentication',
+          surface: 'onboarding',
+          action: async () => {
+            const localGuest = await storage.getItem<DaoewoUser>(
+              FIREBASE_LOCAL_GUEST_KEY,
+            );
+            let signedIn: DaoewoUser;
+            if (provider === 'google') {
+              const credential = await googleCredential(
+                config.googleWebClientId,
+              );
+              signedIn = await transitionMessagingAccount(() =>
+                signInOrLinkAccount(credential),
+              );
+            } else if (provider === 'apple') {
+              const credential = await appleCredential();
+              signedIn = await transitionMessagingAccount(() =>
+                signInOrLinkAccount(credential),
+              );
+            } else {
+              throw new Error('지원하지 않는 로그인 방식이에요.');
+            }
+            let accountMergePending = signedIn.accountMergeStatus === 'pending';
+            if (localGuest?.isGuest === true && localGuest.id !== signedIn.id) {
+              try {
+                await bundledFree.mergeOwnerState(localGuest.id, signedIn.id);
+              } catch {
+                accountMergePending = true;
+              }
+            }
+            try {
+              await storage.removeItem(FIREBASE_LOCAL_GUEST_KEY);
+            } catch {
+              accountMergePending = true;
+            }
+            if (accountMergePending) {
+              await crashReporter.record({
+                operation: 'authentication',
+                surface: 'background',
+                errorCode: 'unavailable',
+              });
+              return { ...signedIn, accountMergeStatus: 'pending' };
+            }
+            return signedIn;
+          },
+        });
       },
       async signOut() {
+        await deckReadyMessaging.disable();
+        await crashReporter.clearUserContext();
+        catalogCache.clear();
         const localGuest = await storage.getItem<DaoewoUser>(
           FIREBASE_LOCAL_GUEST_KEY,
         );
@@ -348,95 +661,144 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
         ]);
       },
       async deleteAccount() {
-        const user = auth.currentUser;
-        if (user === null) {
-          await removeAllDaoewoStorage();
-          return;
-        }
-        const providerIds = new Set(
-          user.providerData.map(provider => provider.providerId),
-        );
-        const proof = resolveMobileAccountDeletionProof({
-          isAnonymous: user.isAnonymous,
-          providerIds,
-          platform: Platform.OS,
+        return observeSafeCrashFailure({
+          reporter: crashReporter,
+          operation: 'account-deletion',
+          surface: 'settings',
+          action: async () => {
+            const user = auth.currentUser;
+            if (user === null) {
+              await deckReadyMessaging.disable();
+              await crashReporter.clearUserContext();
+              catalogCache.clear();
+              await removeAllDaoewoStorage();
+              return;
+            }
+            const providerIds = new Set(
+              user.providerData.map(provider => provider.providerId),
+            );
+            const proof = resolveMobileAccountDeletionProof({
+              isAnonymous: user.isAnonymous,
+              providerIds,
+              platform: Platform.OS,
+            });
+            if (proof === 'google-reauthentication') {
+              await reauthenticateWithCredential(
+                user,
+                await googleCredential(config.googleWebClientId),
+              );
+            } else if (proof === 'apple-reauthentication') {
+              const response = await appleAuth.performRequest({
+                requestedOperation: appleAuth.Operation.LOGIN,
+              });
+              if (response.identityToken === null) {
+                throw new Error('Apple 재인증 토큰을 확인할 수 없어요.');
+              }
+              await reauthenticateWithCredential(
+                user,
+                new OAuthProvider('apple.com').credential({
+                  idToken: response.identityToken,
+                  rawNonce: response.nonce ?? undefined,
+                }),
+              );
+              if (response.authorizationCode !== null) {
+                await revokeToken(auth, response.authorizationCode);
+              }
+            } else {
+              // 익명 계정에는 재인증 credential이 없어 서버가 token 폐기 여부와 App Check를 검증한다.
+              await getIdToken(user, true);
+            }
+            // Auth와 App Check가 유효할 때 server installation부터 해제한다.
+            await deckReadyMessaging.disable();
+            await appCheckReady;
+            await callDeleteAccount({ confirmation: 'DELETE' });
+            await GoogleSignin.revokeAccess().catch(() => null);
+            await crashReporter.clearUserContext();
+            catalogCache.clear();
+            await removeAllDaoewoStorage();
+            await signOut(auth).catch(() => undefined);
+          },
         });
-        if (proof === 'google-reauthentication') {
-          await reauthenticateWithCredential(
-            user,
-            await googleCredential(config.googleWebClientId),
-          );
-        } else if (proof === 'apple-reauthentication') {
-          const response = await appleAuth.performRequest({
-            requestedOperation: appleAuth.Operation.LOGIN,
-          });
-          if (response.identityToken === null) {
-            throw new Error('Apple 재인증 토큰을 확인할 수 없어요.');
-          }
-          await reauthenticateWithCredential(
-            user,
-            new OAuthProvider('apple.com').credential({
-              idToken: response.identityToken,
-              rawNonce: response.nonce ?? undefined,
-            }),
-          );
-          if (response.authorizationCode !== null) {
-            await revokeToken(auth, response.authorizationCode);
-          }
-        } else {
-          // 익명 계정에는 재인증 credential이 없어 서버가 token 폐기 여부와 App Check를 검증한다.
-          await getIdToken(user, true);
-        }
-        await appCheckReady;
-        await callDeleteAccount({confirmation: 'DELETE'});
-        await GoogleSignin.revokeAccess().catch(() => null);
-        await removeAllDaoewoStorage();
-        await signOut(auth).catch(() => undefined);
       },
     },
     purchase: {
       async getOffers() {
-        await getStoreReady();
-        return fetchPurchaseOffers(config);
+        return observeSafeCrashFailure({
+          reporter: crashReporter,
+          operation: 'purchase',
+          surface: 'paywall',
+          action: async () => {
+            await getStoreReady();
+            return fetchPurchaseOffers(config);
+          },
+        });
       },
       async getEntitlement() {
         return getEntitlement();
       },
       async purchase(plan) {
-        const purchasingUser = ensurePurchasableUser(auth.currentUser);
-        await getStoreReady();
-        const productId = productIdForPlan(config, plan);
-        const product = await fetchSubscription(productId);
-        const entitlement = await requestAndVerifySubscription(
-          product,
-          createStoreAccountBinding(purchasingUser.uid),
-          purchase => verifyPurchase(purchase),
-        );
-        return {...entitlement, billingPlan: plan};
+        return observeSafeCrashFailure({
+          reporter: crashReporter,
+          operation: 'purchase',
+          surface: 'paywall',
+          action: async () => {
+            const purchasing = capturePurchaseSession();
+            await getStoreReady();
+            assertPurchaseSession(purchasing.session);
+            const productId = productIdForPlan(config, plan);
+            const product = await fetchSubscription(productId);
+            assertPurchaseSession(purchasing.session);
+            const entitlement = await requestAndVerifySubscription(
+              product,
+              createStoreAccountBinding(purchasing.user.uid),
+              async purchase => {
+                assertPurchaseSession(purchasing.session);
+                const verified = await verifyPurchase(purchase);
+                assertPurchaseSession(purchasing.session);
+                return verified;
+              },
+            );
+            assertPurchaseSession(purchasing.session);
+            return { ...entitlement, billingPlan: plan };
+          },
+        });
       },
       async restore() {
-        ensurePurchasableUser(auth.currentUser);
-        await getStoreReady();
-        const configured = new Set([
-          config.subscriptionProductIds.monthly,
-          config.subscriptionProductIds.annual,
-        ]);
-        const purchases = await getAvailablePurchases();
-        let restored: DaoewoEntitlementState | null = null;
-        for (const purchase of purchases) {
-          if (configured.has(purchase.productId)) {
-            restored = await verifyPurchase(purchase);
-          }
-        }
-        return restored ?? getEntitlement();
+        return observeSafeCrashFailure({
+          reporter: crashReporter,
+          operation: 'purchase',
+          surface: 'settings',
+          action: async () => {
+            const purchasing = capturePurchaseSession();
+            await getStoreReady();
+            assertPurchaseSession(purchasing.session);
+            const configured = new Set([
+              config.subscriptionProductIds.monthly,
+              config.subscriptionProductIds.annual,
+            ]);
+            const purchases = await getAvailablePurchases();
+            assertPurchaseSession(purchasing.session);
+            let restored: DaoewoEntitlementState | null = null;
+            for (const purchase of purchases) {
+              if (configured.has(purchase.productId)) {
+                assertPurchaseSession(purchasing.session);
+                restored = await verifyPurchase(purchase);
+                assertPurchaseSession(purchasing.session);
+              }
+            }
+            const resolved =
+              restored ??
+              (await getServerEntitlement().catch(() => FREE_ENTITLEMENT));
+            assertPurchaseSession(purchasing.session);
+            return resolved;
+          },
+        });
       },
     },
-    tts: {
-      async speak(text) {
-        AccessibilityInfo.announceForAccessibility(text);
-      },
-      async stop() {},
-    },
+    tts: createNativeTtsAdapter(),
+    sharing: createMobileSharingAdapter(),
+    notifications: createMobileNotificationsAdapter(),
+    deckReadyNotifications,
     content: createFirebaseContentPort({
       auth,
       functions,
@@ -444,9 +806,104 @@ export function createMobileRuntime(config: MobileRuntimeConfig): DaoewoRuntime 
       getDeviceId,
       getEntitlement,
       bundledFree,
+      catalogCache,
     }),
-    ...(externalLinks === undefined ? {} : {externalLinks}),
+    sync: createLearningSyncPort({
+      transport: createMobileLearningSyncTransport({
+        auth,
+        functions,
+        appCheckReady,
+        getDeviceId,
+        crashReporter,
+      }),
+      localFree: {
+        exportLearningBackup: ownerId =>
+          bundledFree.exportLearningBackup(ownerId),
+        importLearningBackup: (ownerId, freeDecks) =>
+          bundledFree.importLearningBackup(freeDecks, ownerId),
+        async resolveFreeCardSnapshots(cards) {
+          const resolved = await bundledFree.getCardsByIds(cards);
+          return resolved.map(card => {
+            const metadata = listPublicCatalog('pro').find(
+              deck => deck.id === card.deckId,
+            );
+            return mapBundledCard(card, metadata?.locale);
+          });
+        },
+      },
+      getEntitlement,
+      createMutationId: () => createSafeId('sync'),
+      canSync: async userId => inputUserMatches(auth.currentUser?.uid, userId),
+    }),
+    ...(externalLinks === undefined ? {} : { externalLinks }),
     now: () => new Date(),
+  };
+}
+
+function inputUserMatches(
+  currentUserId: string | undefined,
+  requestedUserId: string,
+): boolean {
+  return currentUserId !== undefined && currentUserId === requestedUserId;
+}
+
+function createMobileLearningSyncTransport(input: {
+  readonly auth: ReturnType<typeof getAuth>;
+  readonly functions: ReturnType<typeof getFunctions>;
+  readonly appCheckReady: Promise<unknown>;
+  readonly getDeviceId: () => Promise<string>;
+  readonly crashReporter: SafeCrashReporter;
+}) {
+  const pull = httpsCallable<
+    { deviceId: string },
+    { syncState: ServerSyncState }
+  >(input.functions, 'getSyncState');
+  const push = httpsCallable<
+    Record<string, unknown>,
+    { syncState: ServerSyncState }
+  >(input.functions, 'syncLearningBackup');
+
+  function assertCurrentUser(userId: string): void {
+    if (input.auth.currentUser?.uid !== userId) {
+      throw new Error('동기화 계정이 현재 로그인 계정과 달라요.');
+    }
+  }
+
+  return {
+    async pull(userId: string): Promise<LearningSyncServerState> {
+      return observeSafeCrashFailure({
+        reporter: input.crashReporter,
+        operation: 'learning-sync',
+        surface: 'background',
+        action: async () => {
+          assertCurrentUser(userId);
+          await input.appCheckReady;
+          const result = await pull({ deviceId: await input.getDeviceId() });
+          assertCurrentUser(userId);
+          return result.data.syncState;
+        },
+      });
+    },
+    async push(
+      userId: string,
+      backup: LearningSyncPushInput,
+    ): Promise<LearningSyncServerState> {
+      return observeSafeCrashFailure({
+        reporter: input.crashReporter,
+        operation: 'learning-sync',
+        surface: 'background',
+        action: async () => {
+          assertCurrentUser(userId);
+          await input.appCheckReady;
+          const result = await push({
+            deviceId: await input.getDeviceId(),
+            ...backup,
+          });
+          assertCurrentUser(userId);
+          return result.data.syncState;
+        },
+      });
+    },
   };
 }
 
@@ -487,7 +944,7 @@ async function googleCredential(webClientId: string): Promise<AuthCredential> {
     throw new Error('Google 로그인 설정이 필요해요.');
   }
   if (Platform.OS === 'android') {
-    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+    await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
   }
   const response = await GoogleSignin.signIn();
   if (response.type !== 'success' || response.data.idToken === null) {
@@ -513,12 +970,18 @@ async function appleCredential(): Promise<AuthCredential> {
   });
 }
 
-function toDaoewoUser(user: User): DaoewoUser {
+function toDaoewoUser(
+  user: User,
+  accountMergeStatus?: NonNullable<DaoewoUser['accountMergeStatus']>,
+): DaoewoUser {
   return {
     id: user.uid,
-    displayName: user.displayName?.trim() || (user.isAnonymous ? '게스트' : '다외워 사용자'),
-    ...(user.email === null ? {} : {email: user.email}),
+    displayName:
+      user.displayName?.trim() ||
+      (user.isAnonymous ? '게스트' : '다외워 사용자'),
+    ...(user.email === null ? {} : { email: user.email }),
     isGuest: user.isAnonymous,
+    ...(accountMergeStatus === undefined ? {} : { accountMergeStatus }),
   };
 }
 
@@ -561,8 +1024,7 @@ function mapPublicDeck(deck: CatalogDeckForEntitlement): DaoewoDeckView {
     category: mapCatalogCategory(deck.category),
     locale: mapContentLanguage(deck.contentLanguage),
     tier: deck.tier,
-    source:
-      deck.sourceType === 'curated-import' ? 'official' : 'ai-batch',
+    source: deck.sourceType === 'curated-import' ? 'official' : 'ai-batch',
     availability: deck.availability,
     cardCount: deck.cardCount,
     tags: deck.tags,
@@ -581,8 +1043,7 @@ function mapServerDeck(
     category: mapCatalogCategory(metadata.category),
     locale: mapContentLanguage(metadata.contentLanguage),
     tier: deck.tier,
-    source:
-      metadata.sourceType === 'curated-import' ? 'official' : 'ai-batch',
+    source: metadata.sourceType === 'curated-import' ? 'official' : 'ai-batch',
     availability: 'published',
     cardCount: deck.cardCount,
     tags: deck.tags,
@@ -655,8 +1116,8 @@ function mapServerCard(
     deckId,
     front: card.front,
     back: card.back,
-    ...(card.hint === undefined ? {} : {hint: card.hint}),
-    ...(card.example === undefined ? {} : {example: card.example}),
+    ...(card.hint === undefined ? {} : { hint: card.hint }),
+    ...(card.example === undefined ? {} : { example: card.example }),
     tags: card.tags ?? [],
     locale: locale ?? '한국어',
   };
@@ -671,12 +1132,12 @@ function mapBundledCard(
     deckId: card.deckId,
     front: card.front,
     back: card.back,
-    ...(card.hint === undefined ? {} : {hint: card.hint}),
-    ...(card.reading === undefined ? {} : {reading: card.reading}),
-    ...(card.example === undefined ? {} : {example: card.example}),
+    ...(card.hint === undefined ? {} : { hint: card.hint }),
+    ...(card.reading === undefined ? {} : { reading: card.reading }),
+    ...(card.example === undefined ? {} : { example: card.example }),
     ...(card.exampleMeaning === undefined
       ? {}
-      : {exampleMeaning: card.exampleMeaning}),
+      : { exampleMeaning: card.exampleMeaning }),
     tags: card.tags,
     locale: locale ?? '한국어',
   };
@@ -703,6 +1164,48 @@ function resolvedTimezone(): string {
   } catch {
     return 'Asia/Seoul';
   }
+}
+
+function resolvedLocale(): string {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().locale || 'ko-KR';
+  } catch {
+    return 'ko-KR';
+  }
+}
+
+function mobilePlatform(): 'android' | 'ios' | 'unknown' {
+  return Platform.OS === 'android' || Platform.OS === 'ios'
+    ? Platform.OS
+    : 'unknown';
+}
+
+async function recordDeckReadyNotificationFailure(
+  reporter: SafeCrashReporter,
+  error: unknown,
+): Promise<void> {
+  let errorCode: 'configuration' | 'unavailable' | 'unknown' = 'unknown';
+  if (error instanceof DeckReadyMessagingError) {
+    switch (error.code) {
+      case 'remote-config-disabled':
+      case 'account-unavailable':
+      case 'account-changed':
+      case 'permission-denied':
+        // 운영 오류가 아닌 kill-switch, 계정 전환, 사용자 권한 선택은 Crashlytics에 기록하지 않는다.
+        return;
+      case 'configuration-invalid':
+        errorCode = 'configuration';
+        break;
+      case 'enable-failed':
+        errorCode = 'unavailable';
+        break;
+    }
+  }
+  await reporter.record({
+    operation: 'notification',
+    surface: 'settings',
+    errorCode,
+  });
 }
 
 function addLocalDays(date: LocalDateKey, days: number): LocalDateKey {
@@ -738,34 +1241,33 @@ function createFirebaseContentPort(input: {
   readonly getDeviceId: () => Promise<string>;
   readonly getEntitlement: () => Promise<DaoewoEntitlementState>;
   readonly bundledFree: BundledFreeContentAdapter;
+  readonly catalogCache: TimedCatalogCache<DaoewoDeckView>;
 }): DaoewoContentPort {
   const serverWindows = createDeliveryWindowDeckRegistry();
   const callCatalog = httpsCallable<
     Record<string, never>,
-    {decks: readonly ServerCatalogDeck[]}
+    { decks: readonly ServerCatalogDeck[] }
   >(input.functions, 'getCatalog');
   const callSyncState = httpsCallable<
-    {deviceId: string},
-    {syncState: ServerSyncState}
+    { deviceId: string },
+    { syncState: ServerSyncState }
   >(input.functions, 'getSyncState');
   const callCreateGoal = httpsCallable<
     Record<string, unknown>,
-    {goal: ServerStudyGoal}
+    { goal: ServerStudyGoal }
   >(input.functions, 'createOrResetGoal');
   const callWindow = httpsCallable<
-    {goalId: string; deviceId: string},
-    {window: ServerCardWindow}
+    { goalId: string; deviceId: string },
+    { window: ServerCardWindow }
   >(input.functions, 'getTodayWindow');
-  const callProgress = httpsCallable<
-    Record<string, unknown>,
-    unknown
-  >(input.functions, 'submitProgressBatch');
-  const callDeckRequest = httpsCallable<
-    Record<string, unknown>,
-    unknown
-  >(input.functions, 'createDeckRequest');
-
-  let catalogCache: readonly DaoewoDeckView[] = [];
+  const callProgress = httpsCallable<Record<string, unknown>, unknown>(
+    input.functions,
+    'submitProgressBatch',
+  );
+  const callDeckRequest = httpsCallable<Record<string, unknown>, unknown>(
+    input.functions,
+    'createDeckRequest',
+  );
 
   async function localCatalog(
     entitlement: DaoewoEntitlementState,
@@ -784,36 +1286,40 @@ function createFirebaseContentPort(input: {
           .catch(() => null);
         return summary === null || !summary.active
           ? base
-          : {...base, progress: summary.progress, daysLeft: summary.daysLeft};
+          : { ...base, progress: summary.progress, daysLeft: summary.daysLeft };
       }),
     );
   }
 
   async function listCatalog(): Promise<readonly DaoewoDeckView[]> {
-    const entitlement = await input.getEntitlement().catch(() => FREE_ENTITLEMENT);
+    const entitlement = await input
+      .getEntitlement()
+      .catch(() => FREE_ENTITLEMENT);
     const staticCatalog = listPublicCatalog(
       entitlement.plan === 'pro' ? 'pro' : 'free',
     );
     const local = await localCatalog(entitlement);
     const localById = new Map(local.map(deck => [deck.id, deck] as const));
     if (input.auth.currentUser === null) {
-      catalogCache = local;
-      return catalogCache;
+      return input.catalogCache.set(local);
     }
 
-    let catalogResult: CallableResult<{decks: readonly ServerCatalogDeck[]}>;
-    let syncResult: CallableResult<{syncState: ServerSyncState}>;
+    let catalogResult: CallableResult<{ decks: readonly ServerCatalogDeck[] }>;
+    let syncResult: CallableResult<{ syncState: ServerSyncState }>;
     try {
       await input.appCheckReady;
       const deviceId = await input.getDeviceId();
       [catalogResult, syncResult] = await Promise.all([
-        callCatalog({}) as Promise<CallableResult<{decks: readonly ServerCatalogDeck[]}>>,
-        callSyncState({deviceId}) as Promise<CallableResult<{syncState: ServerSyncState}>>,
+        callCatalog({}) as Promise<
+          CallableResult<{ decks: readonly ServerCatalogDeck[] }>
+        >,
+        callSyncState({ deviceId }) as Promise<
+          CallableResult<{ syncState: ServerSyncState }>
+        >,
       ]);
     } catch {
       // 서버가 오프라인이어도 검증된 Free bundle 학습은 계속 가능하다. Pro는 잠금 상태로 fail-closed한다.
-      catalogCache = await localCatalog(FREE_ENTITLEMENT);
-      return catalogCache;
+      return input.catalogCache.set(await localCatalog(FREE_ENTITLEMENT));
     }
     const serverById = new Map(
       catalogResult.data.decks.map(deck => [deck.id, deck] as const),
@@ -822,13 +1328,12 @@ function createFirebaseContentPort(input: {
       syncResult.data.syncState.goals.map(goal => [goal.deckId, goal] as const),
     );
     const progressByDeck = new Map(
-      syncResult.data.syncState.progress.map(progress => [
-        progress.deckId,
-        progress,
-      ] as const),
+      syncResult.data.syncState.progress.map(
+        progress => [progress.deckId, progress] as const,
+      ),
     );
 
-    catalogCache = staticCatalog.map(metadata => {
+    const catalog = staticCatalog.map(metadata => {
       if (metadata.tier === 'free') {
         return localById.get(metadata.id) ?? mapPublicDeck(metadata);
       }
@@ -852,20 +1357,20 @@ function createFirebaseContentPort(input: {
         daysLeft: remainingAssignmentDays(goal.assignments),
       };
     });
-    return catalogCache;
+    return input.catalogCache.set(catalog);
   }
 
   return {
     listCatalog,
     async getDeck(deckId) {
-      const decks = catalogCache.length > 0 ? catalogCache : await listCatalog();
+      const decks = input.catalogCache.get() ?? (await listCatalog());
       return decks.find(deck => deck.id === deckId) ?? null;
     },
     async createGoal(goalInput: DaoewoCreateGoalInput) {
       if (input.bundledFree.hasDeck(goalInput.deckId)) {
         return input.bundledFree.createGoal(goalInput);
       }
-      const decks = catalogCache.length > 0 ? catalogCache : await listCatalog();
+      const decks = input.catalogCache.get() ?? (await listCatalog());
       const deck = decks.find(item => item.id === goalInput.deckId);
       if (
         deck === undefined ||
@@ -876,7 +1381,9 @@ function createFirebaseContentPort(input: {
         throw new Error('승인된 덱 본문이 아직 준비되지 않았어요.');
       }
       if (deck.tier === 'free') {
-        throw new Error('이 Free 덱은 앱 업데이트 후 오프라인 학습할 수 있어요.');
+        throw new Error(
+          '이 Free 덱은 앱 업데이트 후 오프라인 학습할 수 있어요.',
+        );
       }
       await input.appCheckReady;
       const result = await callCreateGoal({
@@ -886,8 +1393,8 @@ function createFirebaseContentPort(input: {
         timezone: resolvedTimezone(),
         deviceId: await input.getDeviceId(),
         ...(goalInput.mode === 'days'
-          ? {endDate: addLocalDays(goalInput.startDate, goalInput.value - 1)}
-          : {dailyTarget: goalInput.value}),
+          ? { endDate: addLocalDays(goalInput.startDate, goalInput.value - 1) }
+          : { dailyTarget: goalInput.value }),
       });
       return mapServerGoal(result.data.goal, goalInput.mode);
     },
@@ -895,14 +1402,13 @@ function createFirebaseContentPort(input: {
       if (input.bundledFree.hasDeck(windowInput.deckId)) {
         const window = await input.bundledFree.getCardWindow(windowInput);
         const deck =
-          catalogCache.find(item => item.id === window.deckId) ?? null;
+          input.catalogCache.get()?.find(item => item.id === window.deckId) ??
+          null;
         return {
           id: window.id,
           deckId: window.deckId,
           goalKey: window.goalKey,
-          cards: window.cards.map(card =>
-            mapBundledCard(card, deck?.locale),
-          ),
+          cards: window.cards.map(card => mapBundledCard(card, deck?.locale)),
           targetCount: window.targetCount,
         };
       }
@@ -918,8 +1424,9 @@ function createFirebaseContentPort(input: {
         deviceId: await input.getDeviceId(),
       });
       const deck =
-        catalogCache.find(item => item.id === result.data.window.deckId) ??
-        null;
+        input.catalogCache
+          .get()
+          ?.find(item => item.id === result.data.window.deckId) ?? null;
       serverWindows.bind({
         requestedDeckId: windowInput.deckId,
         authoritativeDeckId: result.data.window.deckId,
@@ -930,7 +1437,7 @@ function createFirebaseContentPort(input: {
         deckId: result.data.window.deckId,
         ...(windowInput.goalKey === undefined
           ? {}
-          : {goalKey: windowInput.goalKey}),
+          : { goalKey: windowInput.goalKey }),
         cards: result.data.window.cards.map(card =>
           mapServerCard(card, result.data.window.deckId, deck?.locale),
         ),
@@ -956,7 +1463,7 @@ function createFirebaseContentPort(input: {
           rating: ratingFromProgress(progress),
         }))
         .filter(
-          (answer): answer is {cardId: string; rating: ReviewRating} =>
+          (answer): answer is { cardId: string; rating: ReviewRating } =>
             answer.rating !== null,
         );
       if (answers.length === 0) {
@@ -976,7 +1483,7 @@ function createFirebaseContentPort(input: {
         topic: request.topic,
         category: request.category,
         language: request.locale,
-        ...(request.note === undefined ? {} : {note: request.note}),
+        ...(request.note === undefined ? {} : { note: request.note }),
       });
     },
   };
@@ -1004,7 +1511,7 @@ function createStoreConnectionProvider(): () => Promise<void> {
 async function fetchSubscription(
   productId: string,
 ): Promise<ProductSubscription> {
-  const products = await fetchProducts({skus: [productId], type: 'subs'});
+  const products = await fetchProducts({ skus: [productId], type: 'subs' });
   const matches = (products ?? []).filter(
     (product): product is ProductSubscription =>
       product.type === 'subs' && product.id === productId,
@@ -1054,13 +1561,13 @@ async function mapPurchaseOffer(
     periodLabel: plan === 'monthly' ? '월' : '년',
     ...(product.description.trim().length === 0
       ? {}
-      : {description: product.description.trim()}),
+      : { description: product.description.trim() }),
   } satisfies DaoewoPurchaseOffer;
   const trialDays =
     product.platform === 'android'
       ? androidTrialDays(product)
       : await iosTrialDays(product);
-  return trialDays === undefined ? base : {...base, trialDays};
+  return trialDays === undefined ? base : { ...base, trialDays };
 }
 
 function androidRecurringPrice(
@@ -1072,7 +1579,9 @@ function androidRecurringPrice(
   const offer = selectedAndroidSubscriptionOffer(product);
   const paidPhases =
     offer?.pricingPhasesAndroid?.pricingPhaseList.filter(
-      phase => phase.priceAmountMicros !== '0' && phase.formattedPrice.trim().length > 0,
+      phase =>
+        phase.priceAmountMicros !== '0' &&
+        phase.formattedPrice.trim().length > 0,
     ) ?? [];
   return paidPhases.at(-1)?.formattedPrice;
 }
@@ -1114,7 +1623,7 @@ async function iosTrialDays(
 }
 
 function selectedAndroidSubscriptionOffer(
-  product: Extract<ProductSubscription, {platform: 'android'}>,
+  product: Extract<ProductSubscription, { platform: 'android' }>,
 ) {
   const offers = product.subscriptionOffers.filter(
     offer => offer.offerTokenAndroid != null,
@@ -1185,9 +1694,7 @@ function requestAndVerifySubscription(
     }
 
     const androidOffer =
-      product.platform === 'android'
-        ? selectAndroidOffer(product)
-        : undefined;
+      product.platform === 'android' ? selectAndroidOffer(product) : undefined;
     requestPurchase({
       type: 'subs',
       request: {
@@ -1202,7 +1709,7 @@ function requestAndVerifySubscription(
             ? {}
             : {
                 subscriptionOffers: [
-                  {sku: product.id, offerToken: androidOffer},
+                  { sku: product.id, offerToken: androidOffer },
                 ],
               }),
         },
@@ -1215,7 +1722,9 @@ function selectAndroidOffer(product: ProductSubscription): string | undefined {
   if (product.platform !== 'android') {
     return undefined;
   }
-  return selectedAndroidSubscriptionOffer(product)?.offerTokenAndroid ?? undefined;
+  return (
+    selectedAndroidSubscriptionOffer(product)?.offerTokenAndroid ?? undefined
+  );
 }
 
 function receiptRequestFromPurchase(purchase: Purchase): ReceiptRequest {
@@ -1229,7 +1738,7 @@ function receiptRequestFromPurchase(purchase: Purchase): ReceiptRequest {
       purchaseToken: purchase.purchaseToken,
       ...(purchase.packageNameAndroid == null
         ? {}
-        : {packageName: purchase.packageNameAndroid}),
+        : { packageName: purchase.packageNameAndroid }),
     };
   }
   if (purchase.id.length === 0) {
@@ -1294,8 +1803,9 @@ function normalizeAnalyticsProperties(
 ): Record<string, string | number> {
   return Object.fromEntries(
     Object.entries(properties)
-      .filter((entry): entry is [string, string | number | boolean] =>
-        entry[1] !== null,
+      .filter(
+        (entry): entry is [string, string | number | boolean] =>
+          entry[1] !== null,
       )
       .map(([key, value]) => [
         key,

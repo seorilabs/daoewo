@@ -65,16 +65,23 @@ export class EntitlementService {
       observedAt: verificationCompletedAt.toISOString(),
     };
 
-    const entitlement = await this.receiptEntitlements.applyVerifiedReceipt(
+    const applied = await this.receiptEntitlements.applyVerifiedReceipt(
       uid,
       verified,
       receiptFingerprint(verified.platform, verified.originalTransactionId),
       authorityObservation,
       this.clock.now(),
     );
-    if (!isEntitled(entitlement, this.clock.now())) {
+    if (applied.authorityPending) {
+      throw new BackendError(
+        "aborted",
+        "Store authority reconciliation is pending.",
+        { kind: "receipt-authority-pending" },
+      );
+    }
+    if (!isEntitled(applied.entitlement, this.clock.now())) {
       throw new BackendError("internal", "Verified entitlement was not persisted as active.");
     }
-    return { active: true, entitlement };
+    return { active: true, entitlement: applied.entitlement };
   }
 }

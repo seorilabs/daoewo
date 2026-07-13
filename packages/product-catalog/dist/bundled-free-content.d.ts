@@ -1,4 +1,4 @@
-import { type CardProgress, type LocalDateKey, type StudyGoal, type StudyGoalMode } from '@daoewo/product-core';
+import { type CardProgress, type Entitlement, type FreeDeckLearningSnapshot, type LocalDateKey, type StudyGoal, type StudyGoalMode } from '@daoewo/product-core';
 import type { PublishedCard, PublishedDeckContent } from './types.js';
 export { BUNDLED_FREE_DECK_CONTENT } from './bundled-free-content.generated.js';
 export type { PublishedCard, PublishedCardMedia, PublishedDeckChunk, PublishedDeckContent, } from './types.js';
@@ -40,6 +40,12 @@ export interface BundledFreeContentAdapter {
     }): Promise<BundledFreeCardWindow>;
     commitProgressBatch(batch: BundledFreeProgressBatch): Promise<void>;
     getDeckSummary(deckId: string): Promise<BundledFreeDeckSummary | null>;
+    exportLearningBackup(ownerId?: string): Promise<readonly FreeDeckLearningSnapshot[]>;
+    importLearningBackup(freeDecks: readonly FreeDeckLearningSnapshot[], ownerId?: string): Promise<void>;
+    getCardsByIds(cards: readonly {
+        readonly deckId: string;
+        readonly cardId: string;
+    }[]): Promise<readonly PublishedCard[]>;
     mergeOwnerState(sourceOwnerId: string, targetOwnerId: string): Promise<void>;
     removeOwnerState(ownerId: string): Promise<void>;
 }
@@ -47,6 +53,7 @@ export interface CreateBundledFreeContentAdapterOptions {
     readonly storage: BundledFreeStorage;
     /** 매 호출 시 현재 계정을 다시 읽어 계정 전환 중 stale cache를 공유하지 않는다. */
     readonly getOwnerId: () => Promise<string | null>;
+    readonly getEntitlement?: () => Promise<Entitlement>;
     readonly now?: () => Date;
     /** 테스트에서만 승인 완료 Free fixture를 주입한다. production 기본값은 generated bundle이다. */
     readonly content?: Readonly<Record<string, PublishedDeckContent>>;

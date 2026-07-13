@@ -1,5 +1,6 @@
 export * from './domain/date-key.js';
 export * from './domain/entities.js';
+export * from './domain/sync.js';
 export * from './ports/index.js';
 export * from './use_cases/catalog.js';
 export * from './use_cases/deck-request.js';
@@ -9,3 +10,4 @@ export * from './use_cases/progress.js';
 export * from './use_cases/review.js';
 export * from './use_cases/statistics.js';
 export * from './use_cases/study-goal.js';
+export * from './use_cases/sync.js';

@@ -36,7 +36,7 @@
   "blockers": [
     "AppsInToss appName availability not verified in Console",
     "public icon URL, real vertical screenshots and console asset upload not finalized",
-    "subscription SKU, mTLS server exchange, webhook and pending-order recovery not configured",
+    "subscription SKU, mTLS server exchange and webhook are not configured; pending-order recovery E2E is not verified",
     "Sandbox App does not support subscription testing; supported Toss App verification remains",
     "sandbox device QA not complete",
     "deployment approval not granted"

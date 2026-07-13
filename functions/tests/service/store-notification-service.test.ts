@@ -18,7 +18,13 @@ describe("StoreNotificationService", () => {
     let resolution = 0;
     let storeCalls = 0;
     const repository: StoreNotificationRepository = {
-      resolveReceiptClaim: async () => {
+      resolveReceiptClaim: async () => claimed("user-a"),
+      resolveReceiptClaimForNotification: async (input) => {
+        expect(input).toEqual({
+          fingerprint: FINGERPRINT,
+          platform: "google-play",
+          now: NOW,
+        });
         resolution += 1;
         return resolution === 1
           ? { kind: "missing", fingerprint: FINGERPRINT }
@@ -64,6 +70,10 @@ describe("StoreNotificationService", () => {
         kind: "account-deleted",
         fingerprint: FINGERPRINT,
       }),
+      resolveReceiptClaimForNotification: async () => ({
+        kind: "account-deleted",
+        fingerprint: FINGERPRINT,
+      }),
       applyAuthoritativeSubscriptionState: async () => {
         throw new Error("must not apply");
       },
@@ -76,6 +86,41 @@ describe("StoreNotificationService", () => {
     );
     await expect(service.process(notification())).resolves.toEqual({
       outcome: "account-deleted",
+      uid: null,
+    });
+    expect(storeCalls).toBe(0);
+  });
+
+  it("ACKs a superseded Google Play token without querying or revoking the successor", async () => {
+    let storeCalls = 0;
+    const repository: StoreNotificationRepository = {
+      resolveReceiptClaim: async () => ({
+        kind: "superseded",
+        fingerprint: FINGERPRINT,
+        successorFingerprint: "successor-fingerprint",
+      }),
+      resolveReceiptClaimForNotification: async () => ({
+        kind: "superseded",
+        fingerprint: FINGERPRINT,
+        successorFingerprint: "successor-fingerprint",
+      }),
+      applyAuthoritativeSubscriptionState: async () => {
+        throw new Error("must not apply an old-token event");
+      },
+    };
+    const provider = stateProvider(async () => {
+      storeCalls += 1;
+      return inactiveState();
+    });
+    const service = new StoreNotificationService(
+      repository,
+      provider,
+      {} as never,
+      { now: () => NOW },
+    );
+
+    await expect(service.process(notification())).resolves.toEqual({
+      outcome: "superseded",
       uid: null,
     });
     expect(storeCalls).toBe(0);
@@ -113,7 +158,8 @@ describe("StoreNotificationService", () => {
       },
     };
     const repository: StoreNotificationRepository = {
-      resolveReceiptClaim: async () => {
+      resolveReceiptClaim: async () => claimed("target-user"),
+      resolveReceiptClaimForNotification: async () => {
         resolution += 1;
         return claimed(resolution === 1 ? "source-user" : "target-user");
       },
@@ -153,6 +199,14 @@ describe("StoreNotificationService", () => {
     };
     const repository: StoreNotificationRepository = {
       resolveReceiptClaim: async () => ({
+        kind: "claimed",
+        fingerprint: FINGERPRINT,
+        uid: "user-a",
+        platform: "app-store",
+        productId: oldProductId,
+        originalTransactionId: "apple-original-a",
+      }),
+      resolveReceiptClaimForNotification: async () => ({
         kind: "claimed",
         fingerprint: FINGERPRINT,
         uid: "user-a",
@@ -417,6 +471,7 @@ function fakeClaimedRepository(
 ): StoreNotificationRepository {
   return {
     resolveReceiptClaim: async () => claimed("user-a"),
+    resolveReceiptClaimForNotification: async () => claimed("user-a"),
     applyAuthoritativeSubscriptionState: async () => ({
       outcome,
       uid: "user-a",

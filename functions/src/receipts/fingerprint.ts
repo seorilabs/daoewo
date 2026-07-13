@@ -24,6 +24,20 @@ export function googlePlayReceiptFingerprint(
   );
 }
 
+export function googlePlayReceiptIdentity(
+  packageName: string,
+  purchaseToken: string,
+): { originalTransactionId: string; receiptFingerprint: string } {
+  const originalTransactionId = googlePlayOriginalTransactionId(
+    packageName,
+    purchaseToken,
+  );
+  return {
+    originalTransactionId,
+    receiptFingerprint: receiptFingerprint("google-play", originalTransactionId),
+  };
+}
+
 export function appStoreReceiptFingerprint(originalTransactionId: string): string {
   return receiptFingerprint("app-store", originalTransactionId);
 }

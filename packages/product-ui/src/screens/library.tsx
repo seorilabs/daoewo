@@ -269,6 +269,7 @@ export function deckRequestLocaleCode(
 
 interface DeckRequestScreenProps {
   readonly isPro: boolean;
+  readonly willNotifyWhenReady: boolean;
   readonly onBack: () => void;
   readonly onSubmit: (draft: DeckRequestDraft) => Promise<void>;
 }
@@ -289,6 +290,7 @@ const requestLocales: readonly DeckRequestDraft['locale'][] = [
 
 export function DeckRequestScreen({
   isPro,
+  willNotifyWhenReady,
   onBack,
   onSubmit,
 }: DeckRequestScreenProps) {
@@ -339,7 +341,9 @@ export function DeckRequestScreen({
             요청을 등록했어요
           </AppText>
           <AppText style={[styles.completeDescription, {color: colors.textMuted}]}>
-            “{topic.trim()}” 덱을 검토하고, 준비되면 알림으로 알려 드릴게요.
+            {willNotifyWhenReady
+              ? `“${topic.trim()}” 덱을 검토하고, 준비되면 알림으로 알려 드릴게요.`
+              : `“${topic.trim()}” 덱 요청을 검토 큐에 등록했어요.`}
           </AppText>
           <PrimaryButton label="덱 탐색으로 돌아가기" onPress={onBack} />
         </View>
@@ -440,7 +444,8 @@ interface StatisticsScreenProps {
   readonly summary: DaoewoDashboardSummary;
   readonly navigate: (screen: DaoewoScreen) => void;
   readonly onContinueStudy: () => void;
-  readonly onShare: () => void;
+  readonly onShare: () => Promise<void>;
+  readonly sharingAvailability: 'available' | 'unsupported';
 }
 
 export function StatisticsScreen({
@@ -449,9 +454,25 @@ export function StatisticsScreen({
   navigate,
   onContinueStudy,
   onShare,
+  sharingAvailability,
 }: StatisticsScreenProps) {
   const {colors} = useDaoewoTheme();
-  const [shared, setShared] = useState(false);
+  const [shareStatus, setShareStatus] = useState<
+    'idle' | 'sharing' | 'shared' | 'error'
+  >('idle');
+
+  const share = async () => {
+    if (sharingAvailability !== 'available' || shareStatus === 'sharing') {
+      return;
+    }
+    setShareStatus('sharing');
+    try {
+      await onShare();
+      setShareStatus('shared');
+    } catch {
+      setShareStatus('error');
+    }
+  };
 
   return (
     <Screen
@@ -558,17 +579,25 @@ export function StatisticsScreen({
       <View style={styles.statsPrimaryAction}>
         <PrimaryButton label="오늘 학습 이어하기" onPress={onContinueStudy} />
         <SecondaryButton
-          label="이번 주 기록 공유하기"
-          onPress={() => {
-            onShare();
-            setShared(true);
-          }}
+          label={shareStatus === 'sharing' ? '공유 준비 중…' : '이번 주 기록 공유하기'}
+          disabled={
+            sharingAvailability !== 'available' || shareStatus === 'sharing'
+          }
+          onPress={() => void share()}
         />
-        {shared ? (
+        {sharingAvailability !== 'available' || shareStatus === 'error' ? (
           <AppText
             accessibilityLiveRegion="polite"
             style={[styles.shareMessage, {color: colors.textMuted}]}>
-            공유 기능은 현재 앱에서 지원되지 않아요.
+            {sharingAvailability !== 'available'
+              ? '이 앱 환경에서는 공유 기능을 지원하지 않아요.'
+              : '기록을 공유하지 못했어요. 잠시 후 다시 시도해 주세요.'}
+          </AppText>
+        ) : shareStatus === 'shared' ? (
+          <AppText
+            accessibilityLiveRegion="polite"
+            style={[styles.shareMessage, {color: colors.textMuted}]}>
+            기록 공유 창을 열었어요.
           </AppText>
         ) : null}
       </View>

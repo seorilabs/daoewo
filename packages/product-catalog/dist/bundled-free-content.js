@@ -1,4 +1,4 @@
-import { buildDueReviewQueue, createStudyGoal, daysBetweenDateKeys, evaluateDeckActivation, getStudyGoalEndDate, resolveDailyCardLimit, toDateKey, } from '@daoewo/product-core';
+import { buildDueReviewQueue, createStudyGoal, daysBetweenDateKeys, evaluateDeckActivation, getStudyGoalEndDate, isEntitled, mergeLearningBackupSnapshots, resolveDailyCardLimit, toDateKey, } from '@daoewo/product-core';
 import { BUNDLED_FREE_DECK_CONTENT } from './bundled-free-content.generated.js';
 import { PUBLIC_CATALOG } from './catalog.generated.js';
 const STORAGE_PREFIX = 'daoewo:bundled-free-content:v1';
@@ -9,8 +9,8 @@ const FREE_ENTITLEMENT = Object.freeze({
 });
 export { BUNDLED_FREE_DECK_CONTENT } from './bundled-free-content.generated.js';
 const EMPTY_STATE = Object.freeze({
-    version: 1,
-    activeDeckId: null,
+    version: 2,
+    activeDeckIds: [],
     goals: [],
     progresses: [],
     windows: [],
@@ -22,14 +22,20 @@ const EMPTY_STATE = Object.freeze({
 export function createBundledFreeContentAdapter(options) {
     const content = options.content ?? BUNDLED_FREE_DECK_CONTENT;
     const now = options.now ?? (() => new Date());
+    const getEntitlement = options.getEntitlement ?? (async () => FREE_ENTITLEMENT);
     assertClientSafeContent(content);
-    async function ownerContext() {
-        const ownerId = requireOwnerId(await options.getOwnerId());
+    async function ownerContext(expectedOwnerId) {
+        const ownerId = requireOwnerId(expectedOwnerId ?? await options.getOwnerId());
         const key = bundledFreeStorageKey(ownerId);
+        const raw = await options.storage.getItem(key);
+        const state = parseState(raw);
+        if (!isBundledFreeStateV2(raw)) {
+            await options.storage.setItem(key, state);
+        }
         return {
             ownerId,
             key,
-            state: parseState(await options.storage.getItem(key)),
+            state,
         };
     }
     return {
@@ -40,26 +46,27 @@ export function createBundledFreeContentAdapter(options) {
             const deckContent = requireContent(content, input.deckId);
             assertPositiveInteger(input.value, 'value');
             const context = await ownerContext();
+            const entitlement = await getEntitlement();
             const activation = evaluateDeckActivation({
                 deck: { id: input.deckId, tier: 'free' },
-                activeDeckIds: context.state.activeDeckId === null
-                    ? []
-                    : [context.state.activeDeckId],
-                entitlement: FREE_ENTITLEMENT,
+                activeDeckIds: context.state.activeDeckIds,
+                entitlement,
                 now: now(),
             });
             if (!activation.allowed) {
                 throw new Error('Free 플랜은 활성 덱을 1개만 사용할 수 있어요.');
             }
             const cardIds = flattenCards(deckContent).map(card => card.id);
-            const dailyLimit = resolveDailyCardLimit(FREE_ENTITLEMENT, cardIds.length, now());
+            const dailyLimit = resolveDailyCardLimit(entitlement, cardIds.length, now());
             const value = input.mode === 'daily-count'
                 ? Math.min(input.value, dailyLimit)
                 : Math.max(input.value, Math.ceil(cardIds.length / dailyLimit));
             const goal = createStudyGoal({ ...input, cardIds, value });
             const nextState = {
-                version: 1,
-                activeDeckId: input.deckId,
+                version: 2,
+                activeDeckIds: isEntitled(entitlement, now())
+                    ? mergeUnique(context.state.activeDeckIds, [input.deckId])
+                    : [input.deckId],
                 goals: [
                     ...context.state.goals.filter(item => item.deckId !== input.deckId),
                     goal,
@@ -75,10 +82,12 @@ export function createBundledFreeContentAdapter(options) {
             const context = await ownerContext();
             const goal = context.state.goals.find(item => item.deckId === input.deckId &&
                 (input.goalKey === undefined || item.key === input.goalKey));
-            if (goal === undefined || context.state.activeDeckId !== input.deckId) {
+            if (goal === undefined ||
+                !context.state.activeDeckIds.includes(input.deckId)) {
                 throw new Error('활성화된 Free 학습 목표를 찾을 수 없어요.');
             }
             const current = now();
+            const entitlement = await getEntitlement();
             const date = toDateKey(current);
             const dueIds = buildDueReviewQueue(context.state.progresses.filter(item => item.deckId === input.deckId), current).map(item => item.cardId);
             const progressedIds = new Set(context.state.progresses
@@ -91,7 +100,7 @@ export function createBundledFreeContentAdapter(options) {
                 .flatMap(([, cardIds]) => cardIds)
                 .filter(cardId => !progressedIds.has(cardId));
             const candidateIds = [...new Set([...dueIds, ...assignedIds])];
-            const limit = resolveDailyCardLimit(FREE_ENTITLEMENT, candidateIds.length, current);
+            const limit = resolveDailyCardLimit(entitlement, candidateIds.length, current);
             const cardsById = new Map(flattenCards(deckContent).map(card => [card.id, card]));
             const cards = candidateIds
                 .slice(0, limit)
@@ -155,12 +164,36 @@ export function createBundledFreeContentAdapter(options) {
                 .map(item => item.cardId)).size;
             const endDate = getStudyGoalEndDate(goal);
             return {
-                active: context.state.activeDeckId === deckId,
+                active: context.state.activeDeckIds.includes(deckId),
                 progress: goal.totalCount === 0
                     ? 0
                     : Math.min(1, completed / goal.totalCount),
                 daysLeft: Math.max(0, daysBetweenDateKeys(toDateKey(now()), endDate) + 1),
             };
+        },
+        async exportLearningBackup(ownerId) {
+            const context = await ownerContext(ownerId);
+            return stateToFreeDecks(context.state, content);
+        },
+        async importLearningBackup(freeDecks, ownerId) {
+            const context = await ownerContext(ownerId);
+            validateFreeDeckSnapshots(freeDecks, content);
+            const entitlement = await getEntitlement();
+            const merged = mergeLearningBackupSnapshots({
+                version: 1,
+                freeDecks: stateToFreeDecks(context.state, content),
+                sessions: [],
+            }, { version: 1, freeDecks, sessions: [] }, isEntitled(entitlement, now()));
+            await options.storage.setItem(context.key, freeDecksToState(merged.freeDecks, context.state.windows));
+        },
+        async getCardsByIds(cards) {
+            return cards.flatMap(({ deckId, cardId }) => {
+                const deck = getContent(content, deckId);
+                if (deck === null)
+                    return [];
+                const card = flattenCards(deck).find(item => item.id === cardId);
+                return card === undefined ? [] : [card];
+            });
         },
         async mergeOwnerState(sourceOwnerId, targetOwnerId) {
             const sourceKey = bundledFreeStorageKey(sourceOwnerId);
@@ -172,16 +205,9 @@ export function createBundledFreeContentAdapter(options) {
                 options.storage.getItem(sourceKey).then(parseState),
                 options.storage.getItem(targetKey).then(parseState),
             ]);
-            const activeDeckId = target.activeDeckId ?? source.activeDeckId;
-            const merged = {
-                version: 1,
-                activeDeckId,
-                goals: mergeByKey(source.goals, target.goals, item => item.deckId),
-                progresses: mergeByKey(source.progresses, target.progresses, item => `${item.deckId}:${item.cardId}`, (left, right) => Date.parse(left.updatedAt) > Date.parse(right.updatedAt)
-                    ? left
-                    : right),
-                windows: target.windows,
-            };
+            const entitlement = await getEntitlement();
+            const mergedBackup = mergeLearningBackupSnapshots({ version: 1, freeDecks: stateToFreeDecks(source, content), sessions: [] }, { version: 1, freeDecks: stateToFreeDecks(target, content), sessions: [] }, isEntitled(entitlement, now()));
+            const merged = freeDecksToState(mergedBackup.freeDecks, target.windows);
             await options.storage.setItem(targetKey, merged);
             await options.storage.removeItem(sourceKey);
         },
@@ -233,35 +259,116 @@ function assertClientSafeContent(content) {
     }
 }
 function parseState(value) {
+    if (isBundledFreeStateV2(value)) {
+        return value;
+    }
+    if (isBundledFreeStateV1(value)) {
+        return {
+            version: 2,
+            activeDeckIds: value.activeDeckId === null ? [] : [value.activeDeckId],
+            goals: value.goals,
+            progresses: value.progresses,
+            windows: value.windows,
+        };
+    }
+    return EMPTY_STATE;
+}
+function isBundledFreeStateV1(value) {
     if (typeof value !== 'object' ||
         value === null ||
         value.version !== 1 ||
         !Array.isArray(value.goals) ||
         !Array.isArray(value.progresses) ||
         !Array.isArray(value.windows)) {
-        return EMPTY_STATE;
+        return false;
     }
     const state = value;
     if (state.activeDeckId !== null && typeof state.activeDeckId !== 'string') {
-        return EMPTY_STATE;
+        return false;
     }
-    return state;
+    return true;
+}
+function isBundledFreeStateV2(value) {
+    return (typeof value === 'object' &&
+        value !== null &&
+        value.version === 2 &&
+        Array.isArray(value.activeDeckIds) &&
+        value.activeDeckIds.every(item => typeof item === 'string') &&
+        Array.isArray(value.goals) &&
+        Array.isArray(value.progresses) &&
+        Array.isArray(value.windows));
 }
 function assertPositiveInteger(value, field) {
     if (!Number.isInteger(value) || value <= 0) {
         throw new RangeError(`${field} must be a positive integer`);
     }
 }
-function mergeByKey(source, target, keyOf, resolve = (_source, targetValue) => targetValue) {
-    const merged = new Map();
-    for (const value of source) {
-        merged.set(keyOf(value), value);
+function stateToFreeDecks(state, content) {
+    const deckIds = new Set([
+        ...state.activeDeckIds,
+        ...state.goals.map(goal => goal.deckId),
+        ...state.progresses.map(progress => progress.deckId),
+    ]);
+    return [...deckIds]
+        .sort()
+        .flatMap(deckId => {
+        const deck = getContent(content, deckId);
+        if (deck === null)
+            return [];
+        const indexById = new Map(flattenCards(deck).map(card => [card.id, card.index]));
+        return [{
+                deckId,
+                deckVersion: deck.version,
+                active: state.activeDeckIds.includes(deckId),
+                goal: state.goals.find(goal => goal.deckId === deckId) ?? null,
+                progresses: state.progresses
+                    .filter(progress => progress.deckId === deckId)
+                    .flatMap(progress => {
+                    const cardIndex = indexById.get(progress.cardId);
+                    return cardIndex === undefined ? [] : [{ cardIndex, state: progress }];
+                }),
+            }];
+    });
+}
+function freeDecksToState(freeDecks, windows) {
+    const goals = freeDecks.flatMap(deck => deck.goal === null ? [] : [deck.goal]);
+    const goalKeys = new Set(goals.map(goal => goal.key));
+    return {
+        version: 2,
+        activeDeckIds: freeDecks
+            .filter(deck => deck.active)
+            .map(deck => deck.deckId),
+        goals,
+        progresses: freeDecks.flatMap(deck => deck.progresses.map(progress => progress.state)),
+        windows: windows.filter(window => goalKeys.has(window.goalKey)),
+    };
+}
+function validateFreeDeckSnapshots(freeDecks, content) {
+    const seen = new Set();
+    for (const snapshot of freeDecks) {
+        if (seen.has(snapshot.deckId)) {
+            throw new Error('Free sync snapshot에 중복 덱이 있어요.');
+        }
+        seen.add(snapshot.deckId);
+        const deck = requireContent(content, snapshot.deckId);
+        if (deck.version !== snapshot.deckVersion) {
+            throw new Error('Free sync snapshot의 덱 버전이 현재 bundle과 달라요.');
+        }
+        if (snapshot.goal !== null && snapshot.goal.deckId !== snapshot.deckId) {
+            throw new Error('Free sync snapshot의 목표 덱이 일치하지 않아요.');
+        }
+        const cards = flattenCards(deck);
+        for (const progress of snapshot.progresses) {
+            const card = cards[progress.cardIndex];
+            if (card === undefined ||
+                card.id !== progress.state.cardId ||
+                progress.state.deckId !== snapshot.deckId) {
+                throw new Error('Free sync snapshot의 카드 index와 진도가 일치하지 않아요.');
+            }
+        }
     }
-    for (const value of target) {
-        const key = keyOf(value);
-        const previous = merged.get(key);
-        merged.set(key, previous === undefined ? value : resolve(previous, value));
-    }
-    return [...merged.values()];
+}
+function mergeUnique(first, second) {
+    return [...new Set([...first, ...second])];
 }
 //# sourceMappingURL=bundled-free-content.js.map

@@ -1,12 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
   GooglePlayAuthoritativeStateProvider,
+  googlePlayVoidedOrderFingerprint,
   parseGooglePlayDeveloperNotification,
   readGooglePlayPubSubJson,
 } from "../../src/store-notifications/google-play.js";
 import {
   googlePlayOriginalTransactionId,
   googlePlayReceiptFingerprint,
+  googlePlayReceiptIdentity,
 } from "../../src/receipts/fingerprint.js";
 import { googlePlayAccountBinding } from "../../src/receipts/providers.js";
 import { StoreApiFailure } from "../../src/receipts/providers.js";
@@ -19,6 +21,7 @@ import type {
 const PACKAGE_NAME = "com.seorilabs.daoewo";
 const PRODUCT_ID = "daoewo.pro.monthly";
 const TOKEN = "purchase-token-never-persisted";
+const PREDECESSOR_TOKEN = "old-token-must-not-be-persisted";
 const UID = "user-a";
 const NOW = new Date("2026-07-12T00:00:00.000Z");
 
@@ -84,6 +87,10 @@ describe("Google Play RTDN", () => {
         notificationType: "voided-purchase",
         voidedRefundType: 1,
         voidedOrderId: "GPA.voided",
+        voidedOrderFingerprint: googlePlayVoidedOrderFingerprint(
+          PACKAGE_NAME,
+          "GPA.voided",
+        ),
         receiptFingerprint: googlePlayReceiptFingerprint(PACKAGE_NAME, TOKEN),
       }),
     });
@@ -163,19 +170,52 @@ describe("Google Play RTDN", () => {
       notificationType: "voided-purchase" as const,
       voidedRefundType: 1 as const,
       voidedOrderId: "GPA.older-renewal",
+      voidedOrderFingerprint: googlePlayVoidedOrderFingerprint(
+        PACKAGE_NAME,
+        "GPA.older-renewal",
+      ),
     };
+    const activeClient = fakeClient("SUBSCRIPTION_STATE_ACTIVE");
     await expect(
-      createProvider(fakeClient("SUBSCRIPTION_STATE_ACTIVE")).getState(
+      createProvider(activeClient).getState(
         voidedNotification,
         claim(),
       ),
     ).resolves.toMatchObject({ active: true });
+    expect(activeClient.orderCalls).toBe(2);
     await expect(
       createProvider(fakeClient("SUBSCRIPTION_STATE_EXPIRED")).getState(
         voidedNotification,
         claim(),
       ),
     ).resolves.toMatchObject({ active: false, reason: "expired" });
+  });
+
+  it("fails closed on a mismatched past renewal order and retries Orders API lag", async () => {
+    const input = {
+      ...notification(),
+      notificationType: "voided-purchase" as const,
+      voidedRefundType: 1 as const,
+      voidedOrderId: "GPA.older-renewal",
+      voidedOrderFingerprint: googlePlayVoidedOrderFingerprint(
+        PACKAGE_NAME,
+        "GPA.older-renewal",
+      ),
+    };
+    const mismatched = fakeClient("SUBSCRIPTION_STATE_ACTIVE");
+    mismatched.order = {...mismatched.order, purchaseToken: "another-token"};
+    await expect(
+      createProvider(mismatched).getState(input, claim()),
+    ).rejects.toMatchObject({code: "permission-denied"});
+    expect(mismatched.orderCalls).toBe(1);
+
+    const lagging = fakeClient("SUBSCRIPTION_STATE_ACTIVE");
+    lagging.getOrder = async () => {
+      throw new StoreApiFailure("not-found");
+    };
+    await expect(
+      createProvider(lagging).getState(input, claim()),
+    ).rejects.toMatchObject({kind: "unavailable"});
   });
 
   it("retries when the void targets the order still reported as current active", async () => {
@@ -187,6 +227,10 @@ describe("Google Play RTDN", () => {
           notificationType: "voided-purchase",
           voidedRefundType: 1,
           voidedOrderId: "GPA.1234",
+          voidedOrderFingerprint: googlePlayVoidedOrderFingerprint(
+            PACKAGE_NAME,
+            "GPA.1234",
+          ),
         },
         claim(),
       ),
@@ -194,30 +238,58 @@ describe("Google Play RTDN", () => {
     expect(client.orderCalls).toBe(0);
   });
 
-  it("fails closed for linked purchase notifications until chain migration is atomic", async () => {
+  it("accepts a linked purchase only when the claim has the exact hashed predecessor", async () => {
     const client = fakeClient("SUBSCRIPTION_STATE_ACTIVE");
     client.purchase = {
       ...client.purchase,
-      linkedPurchaseToken: "old-token-must-not-be-persisted",
+      linkedPurchaseToken: PREDECESSOR_TOKEN,
+    };
+    const state = await createProvider(client).getState(
+      notification(),
+      linkedClaim(),
+    );
+    expect(state).toMatchObject({
+      active: true,
+      predecessor: googlePlayReceiptIdentity(PACKAGE_NAME, PREDECESSOR_TOKEN),
+    });
+    expect(JSON.stringify(state)).not.toContain(PREDECESSOR_TOKEN);
+    expect(JSON.stringify(state)).not.toContain(TOKEN);
+    expect(client.orderCalls).toBe(1);
+  });
+
+  it("fails closed when API linked identity and claim predecessor differ", async () => {
+    const client = fakeClient("SUBSCRIPTION_STATE_ACTIVE");
+    client.purchase = {
+      ...client.purchase,
+      linkedPurchaseToken: PREDECESSOR_TOKEN,
     };
     await expect(
       createProvider(client).getState(notification(), claim()),
     ).rejects.toMatchObject({
       code: "failed-precondition",
-      details: { kind: "google-play-linked-purchase-unsupported" },
+      details: { kind: "google-play-linked-purchase-conflict" },
     });
-    expect(client.orderCalls).toBe(0);
+    client.purchase = { ...client.purchase, linkedPurchaseToken: null };
+    await expect(
+      createProvider(client).getState(notification(), linkedClaim()),
+    ).rejects.toMatchObject({
+      details: { kind: "google-play-linked-purchase-conflict" },
+    });
   });
 
   it("still revokes the current linked claim when store authority is inactive", async () => {
     const client = fakeClient("SUBSCRIPTION_STATE_EXPIRED");
     client.purchase = {
       ...client.purchase,
-      linkedPurchaseToken: "old-token-must-not-be-persisted",
+      linkedPurchaseToken: PREDECESSOR_TOKEN,
     };
     await expect(
-      createProvider(client).getState(notification(), claim()),
-    ).resolves.toMatchObject({ active: false, reason: "expired" });
+      createProvider(client).getState(notification(), linkedClaim()),
+    ).resolves.toMatchObject({
+      active: false,
+      reason: "expired",
+      predecessor: googlePlayReceiptIdentity(PACKAGE_NAME, PREDECESSOR_TOKEN),
+    });
     expect(client.orderCalls).toBe(0);
   });
 
@@ -245,9 +317,9 @@ class FakeClient implements GooglePlayPublisherClient {
     return this.purchase;
   }
 
-  async getOrder(): Promise<GooglePlayOrder> {
+  async getOrder(_packageName: string, orderId: string): Promise<GooglePlayOrder> {
     this.orderCalls += 1;
-    return this.order;
+    return { ...this.order, orderId };
   }
 
   async acknowledgeSubscription(): Promise<void> {
@@ -315,5 +387,12 @@ function claim() {
     platform: "google-play" as const,
     productId: PRODUCT_ID,
     originalTransactionId: googlePlayOriginalTransactionId(PACKAGE_NAME, TOKEN),
+  };
+}
+
+function linkedClaim() {
+  return {
+    ...claim(),
+    predecessor: googlePlayReceiptIdentity(PACKAGE_NAME, PREDECESSOR_TOKEN),
   };
 }

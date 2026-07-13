@@ -37,11 +37,18 @@ import {
   type ReceiptVerificationProvider,
   type ReceiptAccountBindingResolver,
 } from "./providers.js";
+import type {
+  AppleNotificationHistoryPageClient,
+  GoogleVoidedPurchasePageClient,
+} from "../store-notifications/reconciliation-sources.js";
+import { ReconciliationPageTokenError } from "../store-notifications/reconciliation.js";
 
 const ANDROID_PUBLISHER_SCOPE =
   "https://www.googleapis.com/auth/androidpublisher";
 
-export class GoogleApisPublisherClient implements GooglePlayPublisherClient {
+export class GoogleApisPublisherClient
+  implements GooglePlayPublisherClient, GoogleVoidedPurchasePageClient
+{
   private readonly publisher: androidpublisher_v3.Androidpublisher;
 
   constructor() {
@@ -89,10 +96,42 @@ export class GoogleApisPublisherClient implements GooglePlayPublisherClient {
       throw normalizeGoogleApiError(error);
     }
   }
+
+  async listVoidedPurchases(input: {
+    packageName: string;
+    startTimeMillis: string;
+    endTimeMillis: string;
+    pageToken: string | null;
+  }) {
+    try {
+      const response = await this.publisher.purchases.voidedpurchases.list({
+        packageName: input.packageName,
+        startTime: input.startTimeMillis,
+        endTime: input.endTimeMillis,
+        ...(input.pageToken === null ? {} : { token: input.pageToken }),
+        type: 1,
+        maxResults: 1_000,
+      });
+      return {
+        items: (response.data.voidedPurchases ?? []).map((item) => ({
+          purchaseToken: item.purchaseToken ?? "",
+          orderId: item.orderId ?? "",
+          voidedTimeMillis: item.voidedTimeMillis ?? "",
+        })),
+        nextPageToken:
+          response.data.tokenPagination?.nextPageToken?.trim() || null,
+      };
+    } catch (error) {
+      if (input.pageToken !== null && httpStatus(error) === 400) {
+        throw new ReconciliationPageTokenError();
+      }
+      throw normalizeGoogleApiError(error);
+    }
+  }
 }
 
 export class AppleServerEnvironmentClient
-  implements AppStoreNotificationEnvironmentClient
+  implements AppStoreNotificationEnvironmentClient, AppleNotificationHistoryPageClient
 {
   readonly environment: AppStoreEnvironment;
 
@@ -174,6 +213,50 @@ export class AppleServerEnvironmentClient
       throw normalizeAppleVerificationError(error);
     }
   }
+
+  async listNotificationHistory(input: {
+    startTimeMillis: number;
+    endTimeMillis: number;
+    pageToken: string | null;
+    onlyFailures: boolean;
+  }) {
+    try {
+      const response = await this.client.getNotificationHistory(
+        input.pageToken,
+        {
+          startDate: input.startTimeMillis,
+          endDate: input.endTimeMillis,
+          onlyFailures: input.onlyFailures,
+        },
+      );
+      const signedPayloads = (response.notificationHistory ?? []).map(
+        (item) => item.signedPayload,
+      );
+      if (signedPayloads.some((payload) => typeof payload !== "string" || payload.length === 0)) {
+        throw new StoreApiFailure("invalid-receipt");
+      }
+      const nextPageToken = response.hasMore
+        ? response.paginationToken?.trim() || null
+        : null;
+      if (response.hasMore && nextPageToken === null) {
+        throw new StoreApiFailure("unavailable");
+      }
+      return {
+        signedPayloads: signedPayloads as string[],
+        nextPageToken,
+      };
+    } catch (error) {
+      if (
+        input.pageToken !== null &&
+        error instanceof APIException &&
+        (error.apiError === APIError.INVALID_PAGINATION_TOKEN ||
+          error.apiError === APIError.PAGINATION_TOKEN_EXPIRED)
+      ) {
+        throw new ReconciliationPageTokenError();
+      }
+      throw normalizeAppleApiError(error);
+    }
+  }
 }
 
 class AppleReceiptUtilityAdapter implements AppStoreReceiptUtility {
@@ -237,8 +320,8 @@ function createAppStoreProvider(
 }
 
 export function createAppleRuntimeClientsFromEnvironment(): {
-  production: AppStoreNotificationEnvironmentClient;
-  sandbox: AppStoreNotificationEnvironmentClient;
+  production: AppStoreNotificationEnvironmentClient & AppleNotificationHistoryPageClient;
+  sandbox: AppStoreNotificationEnvironmentClient & AppleNotificationHistoryPageClient;
   config: {
     bundleId: string;
     appAppleId: number;
@@ -289,7 +372,7 @@ export function createAppleEnvironmentClient(input: {
   signingKey: string;
   rootCertificates: Buffer[];
   appAppleId: number;
-}): AppStoreNotificationEnvironmentClient {
+}): AppStoreNotificationEnvironmentClient & AppleNotificationHistoryPageClient {
   return new AppleServerEnvironmentClient(
     input.environment,
     new AppStoreServerAPIClient(

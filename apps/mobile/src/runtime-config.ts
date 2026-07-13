@@ -6,6 +6,11 @@ export interface MobileRuntimeConfig {
     readonly monthly: string;
     readonly annual: string;
   };
+  /** Native target의 현재 기본 버전과 맞추는 FCM 진단용 비권위 metadata다. */
+  readonly releaseMetadata: {
+    readonly appVersion: string;
+    readonly buildNumber: string;
+  };
   readonly legalUrls: {
     readonly terms: string;
     readonly privacy: string;
@@ -23,6 +28,10 @@ export const MOBILE_RUNTIME_CONFIG: MobileRuntimeConfig = Object.freeze({
   subscriptionProductIds: Object.freeze({
     monthly: '',
     annual: '',
+  }),
+  releaseMetadata: Object.freeze({
+    appVersion: '0.1.0',
+    buildNumber: '1000',
   }),
   legalUrls: Object.freeze({
     terms: '',

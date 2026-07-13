@@ -1,0 +1,20 @@
+{
+  "conditions": [],
+  "parameters": {
+    "mobile_catalog_cache_ttl_minutes": {
+      "defaultValue": {
+        "value": "60"
+      },
+      "description": "모바일 카탈로그 cache TTL. 5~1440분만 client에서 허용하며 권한·콘텐츠 TTL에는 사용하지 않는다.",
+      "valueType": "NUMBER"
+    },
+    "mobile_deck_updates_push_enabled": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "구현·검증된 모바일 신규·요청 덱 push 경로를 켜는 kill switch. entitlement 권위로 사용하지 않는다.",
+      "valueType": "BOOLEAN"
+    }
+  },
+  "parameterGroups": {}
+}

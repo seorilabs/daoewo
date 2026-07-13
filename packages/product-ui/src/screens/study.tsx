@@ -43,6 +43,7 @@ export function swipeOutcomeFromDistance(dx: number): SwipeOutcome | null {
 
 interface StudyScreenProps {
   readonly cards: readonly DaoewoCardView[];
+  readonly ttsEnabled: boolean;
   readonly onClose: () => void;
   readonly onAnswer: (card: DaoewoCardView, outcome: SwipeOutcome) => void;
   readonly onComplete: (unknownCards: readonly DaoewoCardView[]) => void;
@@ -51,6 +52,7 @@ interface StudyScreenProps {
 
 export function StudyScreen({
   cards,
+  ttsEnabled,
   onClose,
   onAnswer,
   onComplete,
@@ -318,7 +320,8 @@ export function StudyScreen({
           tone={isBookmarked ? 'accent' : 'muted'}
         />
         <TextButton
-          label="◖ 발음 듣기"
+          label={ttsEnabled ? '◖ 발음 듣기' : '카드 음성 꺼짐'}
+          disabled={!ttsEnabled}
           onPress={() => onSpeak(currentCard)}
           accessibilityHint="카드 앞면을 음성으로 듣습니다"
           tone="muted"
@@ -330,6 +333,7 @@ export function StudyScreen({
 
 interface QuickReviewScreenProps {
   readonly cards: readonly DaoewoCardView[];
+  readonly ttsEnabled: boolean;
   readonly onClose: () => void;
   readonly onRate: (card: DaoewoCardView, rating: ReviewRating) => void;
   readonly onComplete: () => void;
@@ -346,6 +350,7 @@ const ratingCopy: Readonly<
 
 export function QuickReviewScreen({
   cards,
+  ttsEnabled,
   onClose,
   onRate,
   onComplete,
@@ -448,7 +453,8 @@ export function QuickReviewScreen({
       </View>
 
       <TextButton
-        label="◖ 발음 듣기"
+        label={ttsEnabled ? '◖ 발음 듣기' : '카드 음성 꺼짐'}
+        disabled={!ttsEnabled}
         onPress={() => onSpeak(card)}
         accessibilityHint="카드 앞면을 음성으로 듣습니다"
         tone="muted"

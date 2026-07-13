@@ -8,10 +8,12 @@ import type {
   DeckMetadata,
   DeckProgress,
   DeliveryWindow,
+  LearningBackupEnvelope,
   StudyGoal,
 } from "../../src/domain/types.js";
 import type {
   DeliveryReservationInput,
+  LearningBackupReconcileInput,
   ProgressCommitInput,
   StudyRepository,
 } from "../../src/repositories/contracts.js";
@@ -150,6 +152,148 @@ describe("StudyService", () => {
       }),
     ).rejects.toMatchObject({ code: "permission-denied" });
   });
+
+  it("accepts the dotted hash card IDs produced by the content pipeline", async () => {
+    const repository = new FakeStudyRepository();
+    const service = new StudyService(
+      repository,
+      {
+        getCardsByIndexes: async (_deck, indexes) =>
+          indexes.map((index) => ({
+            id: `deck-pro.hash-${index}`,
+            index,
+            front: `front-${index}`,
+            back: `back-${index}`,
+          })),
+      },
+      {
+        getEntitlement: async () => ({
+          plan: "pro",
+          source: "google-play",
+          validUntil: null,
+        }),
+      },
+      fixedClock,
+    );
+    const window = await service.deliverTodayWindow("user-a", {
+      goalId: "deck-pro",
+      deviceId: "stable-device-id-1234",
+    });
+
+    await expect(
+      service.submitProgressBatch("user-a", {
+        batchId: "batch_dotted_1234",
+        windowId: window.windowId,
+        deviceId: "stable-device-id-1234",
+        answers: [{ cardId: "deck-pro.hash-0", rating: "easy" }],
+      }),
+    ).resolves.toMatchObject({
+      progress: { cards: { "deck-pro.hash-0": { cardIndex: 0 } } },
+    });
+  });
+
+  it("backs up verified Free card identities on the bound primary device", async () => {
+    const repository = new FakeStudyRepository();
+    repository.deck.tier = "free";
+    const service = new StudyService(
+      repository,
+      {
+        getCardsByIndexes: async (_deck, indexes) =>
+          indexes.map((index) => ({
+            id: `card-${index}`,
+            index,
+            front: "server-only front",
+            back: "server-only back",
+          })),
+      },
+      { getEntitlement: async () => null },
+      fixedClock,
+    );
+    const progress = createInitialCardProgress("card-0", "deck-pro", NOW);
+
+    const result = await service.pushLearningBackup("user-a", {
+      deviceId: "stable-device-id-1234",
+      baseRevision: 0,
+      mutationId: "sync_mutation_1234",
+      snapshot: {
+        version: 1,
+        freeDecks: [
+          {
+            deckId: "deck-pro",
+            deckVersion: 1,
+            active: true,
+            goal: {
+              key: "deck-pro",
+              deckId: "deck-pro",
+              mode: "daily-count",
+              startDate: "2026-07-12",
+              totalCount: 4,
+              days: 1,
+              dailyCount: 4,
+              assignments: {
+                "2026-07-12": ["card-0", "card-1", "card-2", "card-3"],
+              },
+            },
+            progresses: [{ cardIndex: 0, state: progress }],
+          },
+        ],
+        sessions: [],
+      },
+    });
+
+    expect(repository.lastLearningBackup).toMatchObject({
+      uid: "user-a",
+      baseRevision: 0,
+      mutationId: "sync_mutation_1234",
+      maxActiveFreeDecks: 1,
+    });
+    expect(result.learningBackup.snapshot.freeDecks[0]?.progresses[0]).toMatchObject({
+      cardIndex: 0,
+      state: { cardId: "card-0" },
+    });
+    expect(JSON.stringify(result.learningBackup)).not.toContain("server-only front");
+  });
+
+  it("rejects Pro decks and forged card-index pairs from client backup", async () => {
+    const repository = new FakeStudyRepository();
+    const service = createService(repository, {
+      plan: "pro",
+      source: "app-store",
+      validUntil: null,
+    });
+    const input = {
+      deviceId: "stable-device-id-1234",
+      baseRevision: 0,
+      mutationId: "sync_mutation_1234",
+      snapshot: {
+        version: 1 as const,
+        freeDecks: [
+          {
+            deckId: "deck-pro",
+            deckVersion: 1,
+            active: false,
+            goal: null,
+            progresses: [
+              {
+                cardIndex: 0,
+                state: createInitialCardProgress("forged", "deck-pro", NOW),
+              },
+            ],
+          },
+        ],
+        sessions: [],
+      },
+    };
+
+    await expect(service.pushLearningBackup("user-a", input)).rejects.toMatchObject({
+      code: "failed-precondition",
+    });
+    repository.deck.tier = "free";
+    await expect(service.pushLearningBackup("user-a", input)).rejects.toMatchObject({
+      code: "permission-denied",
+    });
+    expect(repository.lastLearningBackup).toBeNull();
+  });
 });
 
 const fixedClock: Clock = { now: () => new Date(NOW) };
@@ -214,6 +358,12 @@ class FakeStudyRepository implements StudyRepository {
   freeGoalAllowed = true;
   deviceAccessError: BackendError | null = null;
   deviceAccessCalls: Array<{ uid: string; deviceHash: string; pro: boolean }> = [];
+  lastLearningBackup: LearningBackupReconcileInput | null = null;
+  learningBackup: LearningBackupEnvelope = {
+    revision: 0,
+    updatedAt: "1970-01-01T00:00:00.000Z",
+    snapshot: { version: 1, freeDecks: [], sessions: [] },
+  };
 
   async listPublishedDecks() {
     return [this.deck];
@@ -269,10 +419,21 @@ class FakeStudyRepository implements StudyRepository {
     this.deviceAccessCalls.push({ uid, deviceHash, pro });
     if (this.deviceAccessError !== null) throw this.deviceAccessError;
   }
+  async reconcileLearningBackup(input: LearningBackupReconcileInput) {
+    this.lastLearningBackup = input;
+    this.learningBackup = {
+      revision: this.learningBackup.revision + 1,
+      updatedAt: input.now.toISOString(),
+      lastMutationId: input.mutationId,
+      snapshot: input.snapshot,
+    };
+    return this.learningBackup;
+  }
   async getSyncState() {
     return {
       goals: [this.goal],
       progress: this.progress === null ? [] : [this.progress],
+      learningBackup: this.learningBackup,
     };
   }
 }

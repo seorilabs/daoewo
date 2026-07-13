@@ -11,12 +11,17 @@ class MainApplication : Application(), ReactApplication {
   override val reactHost: ReactHost by lazy {
     getDefaultReactHost(
       context = applicationContext,
-      packageList = PackageList(this).packages,
+      packageList = PackageList(this).packages.apply {
+        add(NativeDaoewoTtsPackage())
+        add(NativeDaoewoNotificationsPackage())
+      },
     )
   }
 
   override fun onCreate() {
     super.onCreate()
+    // FCM이 background에서 process를 시작해도 표시 전에 기본 channel이 존재해야 한다.
+    DaoewoNotificationScheduler.ensureChannel(this)
     loadReactNative(this)
   }
 }

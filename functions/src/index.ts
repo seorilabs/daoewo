@@ -4,13 +4,20 @@ import { logger } from "firebase-functions";
 import { defineSecret, defineString } from "firebase-functions/params";
 import { HttpsError, onCall, onRequest } from "firebase-functions/v2/https";
 import { onMessagePublished } from "firebase-functions/v2/pubsub";
+import { onSchedule } from "firebase-functions/v2/scheduler";
+import {
+  onDocumentCreated,
+  onDocumentUpdated,
+  onDocumentWritten,
+} from "firebase-functions/v2/firestore";
 import type { CallableRequest } from "firebase-functions/v2/https";
-import { services } from "./app.js";
+import { services, storeReconciliationSources } from "./app.js";
 import { BACKEND_CONFIG } from "./config.js";
 import { BackendError } from "./errors.js";
 import {
   parseCatalogFilter,
   parseAnonymousAccountMerge,
+  parseCompleteDeckRequest,
   parseCreateGoal,
   parseDeactivateGoal,
   parseDeckRequest,
@@ -18,8 +25,11 @@ import {
   parseDeliverWindow,
   parseProgressBatch,
   parsePullSyncState,
+  parsePushLearningBackup,
+  parseRegisterNotificationInstallation,
   parseReceipt,
   parseTossLoginExchange,
+  parseUnregisterNotificationInstallation,
 } from "./input.js";
 import { requiresRevocationCheckForHttpPath } from "./security-policy.js";
 import { StoreApiFailure } from "./receipts/providers.js";
@@ -28,6 +38,17 @@ import {
   readGooglePlayPubSubJson,
 } from "./store-notifications/google-play.js";
 import { parseAppStoreNotificationRequest } from "./store-notifications/app-store.js";
+import {
+  DeckReadyNotificationRetryError,
+  deckRequestNotificationState,
+} from "./notifications/deck-ready-outbox.js";
+import {
+  CatalogPublishedNotificationRetryError,
+  catalogPublicationState,
+  isCatalogPublicationInputError,
+} from "./notifications/catalog-published.js";
+import { NotificationMessagingRetryError } from "./notifications/firebase-messaging-sender.js";
+import { AccountMergeCleanupRetryError } from "./services/account-merge-cleanup-service.js";
 
 const functionsRegion = defineString("FUNCTIONS_REGION", {
   input: {
@@ -55,13 +76,208 @@ const callableOptions = {
 };
 
 // App Store Connect signing key와 JWS trust roots는 Secret Manager에서만 주입한다.
-const appStoreIapPrivateKey = defineSecret(
-  "APP_STORE_IAP_PRIVATE_KEY_BASE64",
-);
+const appStoreIapPrivateKey = defineSecret("APP_STORE_IAP_PRIVATE_KEY_BASE64");
 const appStoreRootCertificates = defineSecret(
-  "APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON",
+  "APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON"
 );
 const receiptSecrets = [appStoreIapPrivateKey, appStoreRootCertificates];
+
+const notificationTriggerOptions = {
+  region: functionsRegion,
+  retry: true,
+  timeoutSeconds: 60,
+  memory: "256MiB" as const,
+};
+
+export const enqueueDeckReadyNotification = onDocumentUpdated(
+  {
+    ...notificationTriggerOptions,
+    document: "deckRequests/{requestId}",
+  },
+  async (event) => {
+    const change = event.data;
+    if (change === undefined) return;
+    try {
+      await services.deckReadyNotifications.enqueue({
+        requestId: event.params.requestId,
+        before: deckRequestNotificationState(change.before.data()),
+        after: deckRequestNotificationState(change.after.data()),
+      });
+    } catch (error) {
+      if (
+        error instanceof BackendError &&
+        error.details?.kind === "deck-ready-state-invalid"
+      ) {
+        logger.warn("Deck-ready transition rejected", {
+          failure: "invalid-ready-state",
+        });
+        return;
+      }
+      logger.error("Deck-ready outbox enqueue failed", {
+        failure: "internal",
+      });
+      throw new Error("Deck-ready outbox enqueue failed.");
+    }
+  }
+);
+
+export const processDeckReadyNotificationOutbox = onDocumentCreated(
+  {
+    ...notificationTriggerOptions,
+    document: "notificationOutbox/{eventId}",
+  },
+  async (event) => {
+    if (event.data === undefined) return;
+    try {
+      await services.deckReadyNotifications.process(event.params.eventId);
+    } catch (error) {
+      logger.error("Deck-ready notification delivery failed", {
+        failure:
+          error instanceof DeckReadyNotificationRetryError
+            ? error.safeCode
+            : "internal",
+      });
+      // 원본 Admin Messaging error/message는 Cloud Logging에도 전달하지 않는다.
+      throw new Error("Deck-ready notification delivery failed.");
+    }
+  }
+);
+
+export const sendCatalogPublishedNotification = onDocumentWritten(
+  {
+    ...notificationTriggerOptions,
+    document: "decks/{deckId}",
+  },
+  async (event) => {
+    const change = event.data;
+    if (change === undefined) return;
+    try {
+      await services.catalogPublishedNotifications.send({
+        deckId: event.params.deckId,
+        before: catalogPublicationState(
+          change.before.exists ? change.before.data() : undefined
+        ),
+        after: catalogPublicationState(
+          change.after.exists ? change.after.data() : undefined
+        ),
+      });
+    } catch (error) {
+      if (isCatalogPublicationInputError(error)) {
+        logger.warn("Catalog publication notification rejected", {
+          failure: "invalid-publication-state",
+        });
+        return;
+      }
+      logger.error("Catalog publication notification failed", {
+        failure:
+          error instanceof NotificationMessagingRetryError ||
+          error instanceof CatalogPublishedNotificationRetryError
+            ? error.safeCode
+            : "internal",
+      });
+      throw new Error("Catalog publication notification failed.");
+    }
+  }
+);
+
+export const processAccountMergeCleanup = onDocumentCreated(
+  {
+    region: functionsRegion,
+    retry: true,
+    timeoutSeconds: 60,
+    memory: "256MiB",
+    document: "accountMerges/{sourceUid}",
+  },
+  async (event) => {
+    if (event.data === undefined) return;
+    try {
+      await services.accountMergeCleanup.process(event.params.sourceUid);
+    } catch (error) {
+      logger.error("Account merge post-commit cleanup failed", {
+        failure:
+          error instanceof AccountMergeCleanupRetryError
+            ? error.safeCode
+            : "internal",
+      });
+      // Auth/provider 원본 오류나 UID는 Cloud Logging/Eventarc 오류에 전달하지 않는다.
+      throw new Error("Account merge cleanup failed.");
+    }
+  }
+);
+
+export const accountMergeCleanupReconciliation = onSchedule(
+  {
+    schedule: "every 15 minutes",
+    timeZone: "UTC",
+    region: functionsRegion,
+    timeoutSeconds: 300,
+    memory: "256MiB",
+    maxInstances: 1,
+    concurrency: 1,
+    retryCount: 3,
+    minBackoffSeconds: 60,
+    maxBackoffSeconds: 300,
+    maxRetrySeconds: 900,
+  },
+  async () => {
+    const result = await services.accountMergeCleanup.sweep();
+    logger[result.deferred > 0 || result.failed > 0 ? "warn" : "info"](
+      "Account merge cleanup reconciliation completed",
+      result
+    );
+  }
+);
+
+const reconciliationScheduleOptions = {
+  schedule: "every 15 minutes",
+  timeZone: "UTC",
+  region: functionsRegion,
+  timeoutSeconds: 540,
+  memory: "256MiB" as const,
+  maxInstances: 1,
+  concurrency: 1,
+  retryCount: 3,
+  minBackoffSeconds: 60,
+  maxBackoffSeconds: 900,
+  maxRetrySeconds: 3_600,
+};
+
+export const googlePlayVoidedPurchaseReconciliation = onSchedule(
+  reconciliationScheduleOptions,
+  async () => {
+    const result = await services.storeReconciliation.run(
+      storeReconciliationSources.googlePlay
+    );
+    logger.info("Google Play voided purchase reconciliation completed", result);
+  }
+);
+
+export const appStoreProductionNotificationHistoryReconciliation = onSchedule(
+  { ...reconciliationScheduleOptions, secrets: receiptSecrets },
+  async () => {
+    const result = await services.storeReconciliation.run(
+      storeReconciliationSources.appStoreProduction
+    );
+    logger.info(
+      "App Store production notification history reconciliation completed",
+      result
+    );
+  }
+);
+
+export const appStoreSandboxNotificationHistoryReconciliation = onSchedule(
+  { ...reconciliationScheduleOptions, secrets: receiptSecrets },
+  async () => {
+    const result = await services.storeReconciliation.run(
+      storeReconciliationSources.appStoreSandbox
+    );
+    logger.info(
+      "App Store sandbox notification history reconciliation completed",
+      result
+    );
+  }
+);
+
 export const googlePlaySubscriptionNotification = onMessagePublished(
   {
     // PubSubOptions.topic은 string 타입이므로 CEL string으로 넘긴다.
@@ -77,15 +293,18 @@ export const googlePlaySubscriptionNotification = onMessagePublished(
       const envelope = parseGooglePlayDeveloperNotification(
         readGooglePlayPubSubJson(event.data.message),
         event.data.message.messageId,
-        BACKEND_CONFIG.googlePlayPackageName,
+        BACKEND_CONFIG.googlePlayPackageName
       );
       if (envelope.kind !== "subscription") return;
       await services.storeNotifications.process(envelope.notification);
     } catch (error) {
       if (isRetryableStoreNotificationFailure(error)) {
-        logger.error("Google Play subscription notification retryable failure", {
-          failure: sanitizedFailure(error),
-        });
+        logger.error(
+          "Google Play subscription notification retryable failure",
+          {
+            failure: sanitizedFailure(error),
+          }
+        );
         throw error;
       }
       // Pub/Sub은 영구 payload/binding 오류를 재시도해도 해결되지 않는다.
@@ -93,7 +312,7 @@ export const googlePlaySubscriptionNotification = onMessagePublished(
         failure: sanitizedFailure(error),
       });
     }
-  },
+  }
 );
 
 export const appStoreServerNotification = onRequest(
@@ -113,10 +332,10 @@ export const appStoreServerNotification = onRequest(
     }
     try {
       const signedPayload = parseAppStoreNotificationRequest(
-        request.body as unknown,
+        request.body as unknown
       );
       const envelope = await services.appStoreNotificationVerifier.verify(
-        signedPayload,
+        signedPayload
       );
       if (envelope.kind === "subscription") {
         await services.storeNotifications.process(envelope.notification);
@@ -129,23 +348,26 @@ export const appStoreServerNotification = onRequest(
         retryable
           ? "App Store server notification retryable failure"
           : "App Store server notification rejected",
-        { failure: sanitizedFailure(error) },
+        { failure: sanitizedFailure(error) }
       );
       response.status(retryable ? 503 : 400).end();
     }
-  },
+  }
 );
 
 export const getCatalog = onCall(callableOptions, async (request) =>
   callable(request, async (uid) => ({
     decks: await services.catalog.list(uid, parseCatalogFilter(request.data)),
-  })),
+  }))
 );
 
 export const createOrResetGoal = onCall(callableOptions, async (request) =>
   mutationCallable(request, async (uid) => ({
-    goal: await services.goals.createOrReset(uid, parseCreateGoal(request.data)),
-  })),
+    goal: await services.goals.createOrReset(
+      uid,
+      parseCreateGoal(request.data)
+    ),
+  }))
 );
 
 export const deactivateGoal = onCall(callableOptions, async (request) =>
@@ -153,16 +375,25 @@ export const deactivateGoal = onCall(callableOptions, async (request) =>
     const { goalId, deviceId } = parseDeactivateGoal(request.data);
     await services.goals.deactivate(uid, goalId, deviceId);
     return { ok: true };
-  }),
+  })
 );
 
 export const getSyncState = onCall(callableOptions, async (request) =>
   mutationCallable(request, async (uid) => ({
     syncState: await services.study.pullSyncState(
       uid,
-      parsePullSyncState(request.data),
+      parsePullSyncState(request.data)
     ),
-  })),
+  }))
+);
+
+export const syncLearningBackup = onCall(callableOptions, async (request) =>
+  mutationCallable(request, async (uid) => ({
+    syncState: await services.study.pushLearningBackup(
+      uid,
+      parsePushLearningBackup(request.data)
+    ),
+  }))
 );
 
 export const getTodayWindow = onCall(
@@ -171,50 +402,94 @@ export const getTodayWindow = onCall(
     mutationCallable(request, async (uid) => ({
       window: await services.study.deliverTodayWindow(
         uid,
-        parseDeliverWindow(request.data),
+        parseDeliverWindow(request.data)
       ),
-    })),
+    }))
 );
 
 export const submitProgressBatch = onCall(callableOptions, async (request) =>
   mutationCallable(request, async (uid) => {
     const result = await services.study.submitProgressBatch(
       uid,
-      parseProgressBatch(request.data),
+      parseProgressBatch(request.data)
     );
     return {
       idempotent: result.idempotent,
       receipt: result.receipt,
       progressRevision: result.progress.revision,
     };
-  }),
+  })
 );
 
 export const createDeckRequest = onCall(callableOptions, async (request) =>
   mutationCallable(request, async (uid) => ({
-    request: await services.deckRequests.create(uid, parseDeckRequest(request.data)),
-  })),
+    request: await services.deckRequests.create(
+      uid,
+      parseDeckRequest(request.data)
+    ),
+  }))
+);
+
+export const completeDeckRequest = onCall(callableOptions, async (request) =>
+  mutationCallable(request, async (uid) => {
+    const result = await services.deckRequestOperator.complete(
+      {
+        uid,
+        operatorClaim: request.auth?.token.operator,
+      },
+      parseCompleteDeckRequest(request.data)
+    );
+    return {
+      requestId: result.request.id,
+      readyDeckId: result.request.readyDeckId,
+      readyRevision: result.request.readyRevision,
+      readyAt: result.request.readyAt,
+      idempotent: result.idempotent,
+    };
+  })
+);
+
+export const registerNotificationInstallation = onCall(
+  callableOptions,
+  async (request) =>
+    mutationCallable(request, async (uid) =>
+      services.notificationInstallations.register(
+        uid,
+        parseRegisterNotificationInstallation(request.data)
+      )
+    )
+);
+
+export const unregisterNotificationInstallation = onCall(
+  callableOptions,
+  async (request) =>
+    mutationCallable(request, async (uid) =>
+      services.notificationInstallations.unregister(
+        uid,
+        parseUnregisterNotificationInstallation(request.data)
+      )
+    )
 );
 
 export const getEntitlement = onCall(callableOptions, async (request) =>
-  callable(request, async (uid) => services.entitlements.get(uid)),
+  callable(request, async (uid) => services.entitlements.get(uid))
 );
 
 export const verifyReceipt = onCall(
   { ...callableOptions, timeoutSeconds: 60, secrets: receiptSecrets },
   async (request) =>
     mutationCallable(request, async (uid) =>
-      services.entitlements.verifyReceipt(uid, parseReceipt(request.data)),
-    ),
+      services.entitlements.verifyReceipt(uid, parseReceipt(request.data))
+    )
 );
 
 export const mergeAnonymousAccount = onCall(callableOptions, async (request) =>
   mutationCallable(request, async (uid) => ({
     merge: await services.accountMerge.merge(
       uid,
-      parseAnonymousAccountMerge(request.data),
+      parseAnonymousAccountMerge(request.data)
     ),
-  })),
+  }))
 );
 
 export const deleteAccount = onCall(
@@ -225,14 +500,14 @@ export const deleteAccount = onCall(
         throw new BackendError("unauthenticated", "Firebase Auth is required.");
       }
       if (request.app === undefined) {
-        throw new BackendError("unauthenticated", "Firebase App Check is required.");
+        throw new BackendError(
+          "unauthenticated",
+          "Firebase App Check is required."
+        );
       }
       parseDeleteAccount(request.data);
       const identity = await verifyCallableDeletionIdentity(request);
-      return await services.accountDeletion.delete(
-        identity.uid,
-        identity,
-      );
+      return await services.accountDeletion.delete(identity.uid, identity);
     } catch (error) {
       const backendError = normalizeError(error);
       if (backendError.code === "internal") {
@@ -241,10 +516,10 @@ export const deleteAccount = onCall(
       throw new HttpsError(
         backendError.code,
         backendError.message,
-        backendError.details,
+        backendError.details
       );
     }
-  },
+  }
 );
 
 // AppsInToss 등 callable SDK를 쓸 수 없는 검증된 런타임을 위한 동일 계약의 REST 경계다.
@@ -271,21 +546,21 @@ export const api = onRequest(
         response.status(200).json({
           data: await services.appsInToss.exchangeLogin(
             parseTossLoginExchange(body),
-            request.ip || request.socket.remoteAddress || "unknown",
+            request.ip || request.socket.remoteAddress || "unknown"
           ),
         });
         return;
       }
       if (normalizedPath === "/v1/auth/toss:refreshAppCheck") {
         const identity = await verifyTossRefreshIdentity(
-          request.header("authorization"),
+          request.header("authorization")
         );
         await services.accounts.assertAccountActive(identity.uid);
         response.status(200).json({
           data: await services.appsInToss.refreshAppCheck(
             identity.uid,
             identity.signInProvider,
-            request.ip || request.socket.remoteAddress || "unknown",
+            request.ip || request.socket.remoteAddress || "unknown"
           ),
         });
         return;
@@ -295,15 +570,12 @@ export const api = onRequest(
       const identity = await verifyHttpIdentity(
         request.header("authorization"),
         request.header("x-firebase-appcheck"),
-        checkRevoked,
+        checkRevoked
       );
       if (deletingAccount) {
         parseDeleteAccount(body);
         response.status(200).json({
-          data: await services.accountDeletion.delete(
-            identity.uid,
-            identity,
-          ),
+          data: await services.accountDeletion.delete(identity.uid, identity),
         });
         return;
       }
@@ -312,16 +584,19 @@ export const api = onRequest(
       response.status(200).json({ data: result });
     } catch (error) {
       const backendError = normalizeError(error);
-      if (backendError.code === "internal") logger.error("Daoewo API failure", error);
+      if (backendError.code === "internal")
+        logger.error("Daoewo API failure", error);
       response.status(httpStatus(backendError.code)).json({
         error: {
           code: backendError.code,
           message: backendError.message,
-          ...(backendError.details === undefined ? {} : { details: backendError.details }),
+          ...(backendError.details === undefined
+            ? {}
+            : { details: backendError.details }),
         },
       });
     }
-  },
+  }
 );
 
 // Toss server-to-server callback은 Firebase client Auth/App Check 대상이 아니다.
@@ -359,20 +634,23 @@ export const tossSubscriptionWebhook = onRequest(
         error: { code: backendError.code, message: backendError.message },
       });
     }
-  },
+  }
 );
 
 async function callable<T>(
   request: CallableRequest<unknown>,
   action: (uid: string) => Promise<T>,
-  checkRevoked = false,
+  checkRevoked = false
 ): Promise<T> {
   try {
     if (request.auth === undefined) {
       throw new BackendError("unauthenticated", "Firebase Auth is required.");
     }
     if (request.app === undefined) {
-      throw new BackendError("unauthenticated", "Firebase App Check is required.");
+      throw new BackendError(
+        "unauthenticated",
+        "Firebase App Check is required."
+      );
     }
     if (checkRevoked) {
       await verifyCallableIdentity(request, true);
@@ -381,18 +659,19 @@ async function callable<T>(
     return await action(request.auth.uid);
   } catch (error) {
     const backendError = normalizeError(error);
-    if (backendError.code === "internal") logger.error("Daoewo callable failure", error);
+    if (backendError.code === "internal")
+      logger.error("Daoewo callable failure", error);
     throw new HttpsError(
       backendError.code,
       backendError.message,
-      backendError.details,
+      backendError.details
     );
   }
 }
 
 async function mutationCallable<T>(
   request: CallableRequest<unknown>,
-  action: (uid: string) => Promise<T>,
+  action: (uid: string) => Promise<T>
 ): Promise<T> {
   return callable(request, action, true);
 }
@@ -400,17 +679,26 @@ async function mutationCallable<T>(
 async function verifyHttpIdentity(
   authorization: string | undefined,
   appCheckToken: string | undefined,
-  checkRevoked = false,
+  checkRevoked = false
 ): Promise<{ uid: string; authenticatedAt: Date; signInProvider: string }> {
   if (authorization === undefined || !authorization.startsWith("Bearer ")) {
-    throw new BackendError("unauthenticated", "Bearer Firebase ID token is required.");
+    throw new BackendError(
+      "unauthenticated",
+      "Bearer Firebase ID token is required."
+    );
   }
   if (appCheckToken === undefined || appCheckToken.length === 0) {
-    throw new BackendError("unauthenticated", "X-Firebase-AppCheck is required.");
+    throw new BackendError(
+      "unauthenticated",
+      "X-Firebase-AppCheck is required."
+    );
   }
   try {
     const [decodedIdToken] = await Promise.all([
-      getAuth().verifyIdToken(authorization.slice("Bearer ".length), checkRevoked),
+      getAuth().verifyIdToken(
+        authorization.slice("Bearer ".length),
+        checkRevoked
+      ),
       getAppCheck().verifyToken(appCheckToken),
     ]);
     return {
@@ -421,13 +709,13 @@ async function verifyHttpIdentity(
   } catch {
     throw new BackendError(
       "unauthenticated",
-      "Firebase Auth or App Check token is invalid.",
+      "Firebase Auth or App Check token is invalid."
     );
   }
 }
 
 async function verifyCallableDeletionIdentity(
-  request: CallableRequest<unknown>,
+  request: CallableRequest<unknown>
 ): Promise<{ uid: string; authenticatedAt: Date; signInProvider: string }> {
   const decoded = await verifyCallableIdentity(request, true);
   return {
@@ -439,21 +727,24 @@ async function verifyCallableDeletionIdentity(
 
 async function verifyCallableIdentity(
   request: CallableRequest<unknown>,
-  checkRevoked: boolean,
+  checkRevoked: boolean
 ) {
   const authorization = request.rawRequest.header("authorization");
   if (authorization === undefined || !authorization.startsWith("Bearer ")) {
-    throw new BackendError("unauthenticated", "Bearer Firebase ID token is required.");
+    throw new BackendError(
+      "unauthenticated",
+      "Bearer Firebase ID token is required."
+    );
   }
   try {
     const decoded = await getAuth().verifyIdToken(
       authorization.slice("Bearer ".length),
-      checkRevoked,
+      checkRevoked
     );
     if (request.auth === undefined || decoded.uid !== request.auth.uid) {
       throw new BackendError(
         "permission-denied",
-        "Firebase token does not match the callable identity.",
+        "Firebase token does not match the callable identity."
       );
     }
     return decoded;
@@ -461,41 +752,58 @@ async function verifyCallableIdentity(
     if (error instanceof BackendError) throw error;
     throw new BackendError(
       "unauthenticated",
-      "Firebase ID token is invalid or revoked.",
+      "Firebase ID token is invalid or revoked."
     );
   }
 }
 
 function authenticationTime(value: unknown): Date {
   if (typeof value !== "number" || !Number.isSafeInteger(value) || value <= 0) {
-    throw new BackendError("unauthenticated", "Firebase auth_time claim is invalid.");
+    throw new BackendError(
+      "unauthenticated",
+      "Firebase auth_time claim is invalid."
+    );
   }
   return new Date(value * 1_000);
 }
 
 async function verifyTossRefreshIdentity(
-  authorization: string | undefined,
+  authorization: string | undefined
 ): Promise<{ uid: string; signInProvider: unknown }> {
   if (authorization === undefined || !authorization.startsWith("Bearer ")) {
-    throw new BackendError("unauthenticated", "Bearer Firebase ID token is required.");
+    throw new BackendError(
+      "unauthenticated",
+      "Bearer Firebase ID token is required."
+    );
   }
   try {
     const decoded = await getAuth().verifyIdToken(
       authorization.slice("Bearer ".length),
-      true,
+      true
     );
     return { uid: decoded.uid, signInProvider: decoded.signInProvider };
   } catch {
-    throw new BackendError("unauthenticated", "Firebase ID token is invalid or revoked.");
+    throw new BackendError(
+      "unauthenticated",
+      "Firebase ID token is invalid or revoked."
+    );
   }
 }
 
-async function routeHttp(uid: string, path: string, body: unknown): Promise<unknown> {
+async function routeHttp(
+  uid: string,
+  path: string,
+  body: unknown
+): Promise<unknown> {
   switch (path.replace(/\/+$/, "")) {
     case "/v1/catalog":
-      return { decks: await services.catalog.list(uid, parseCatalogFilter(body)) };
+      return {
+        decks: await services.catalog.list(uid, parseCatalogFilter(body)),
+      };
     case "/v1/goals:createOrReset":
-      return { goal: await services.goals.createOrReset(uid, parseCreateGoal(body)) };
+      return {
+        goal: await services.goals.createOrReset(uid, parseCreateGoal(body)),
+      };
     case "/v1/goals:deactivate": {
       const { goalId, deviceId } = parseDeactivateGoal(body);
       await services.goals.deactivate(uid, goalId, deviceId);
@@ -503,14 +811,30 @@ async function routeHttp(uid: string, path: string, body: unknown): Promise<unkn
     }
     case "/v1/sync:pull":
       return {
-        syncState: await services.study.pullSyncState(uid, parsePullSyncState(body)),
+        syncState: await services.study.pullSyncState(
+          uid,
+          parsePullSyncState(body)
+        ),
+      };
+    case "/v1/sync:push":
+      return {
+        syncState: await services.study.pushLearningBackup(
+          uid,
+          parsePushLearningBackup(body)
+        ),
       };
     case "/v1/windows:today":
       return {
-        window: await services.study.deliverTodayWindow(uid, parseDeliverWindow(body)),
+        window: await services.study.deliverTodayWindow(
+          uid,
+          parseDeliverWindow(body)
+        ),
       };
     case "/v1/progress:batchSubmit": {
-      const result = await services.study.submitProgressBatch(uid, parseProgressBatch(body));
+      const result = await services.study.submitProgressBatch(
+        uid,
+        parseProgressBatch(body)
+      );
       return {
         idempotent: result.idempotent,
         receipt: result.receipt,
@@ -518,7 +842,12 @@ async function routeHttp(uid: string, path: string, body: unknown): Promise<unkn
       };
     }
     case "/v1/deckRequests:create":
-      return { request: await services.deckRequests.create(uid, parseDeckRequest(body)) };
+      return {
+        request: await services.deckRequests.create(
+          uid,
+          parseDeckRequest(body)
+        ),
+      };
     case "/v1/entitlement":
       return services.entitlements.get(uid);
     case "/v1/receipts:verify":
@@ -527,7 +856,7 @@ async function routeHttp(uid: string, path: string, body: unknown): Promise<unkn
       return {
         merge: await services.accountMerge.merge(
           uid,
-          parseAnonymousAccountMerge(body),
+          parseAnonymousAccountMerge(body)
         ),
       };
     default:
@@ -590,11 +919,16 @@ function sanitizedFailure(error: unknown): Readonly<Record<string, string>> {
 }
 
 function normalizeHeaders(
-  headers: Readonly<Record<string, string | string[] | undefined>>,
+  headers: Readonly<Record<string, string | string[] | undefined>>
 ): Readonly<Record<string, string>> {
   return Object.fromEntries(
     Object.entries(headers)
-      .filter((entry): entry is [string, string | string[]] => entry[1] !== undefined)
-      .map(([key, value]) => [key.toLowerCase(), Array.isArray(value) ? value.join(",") : value]),
+      .filter(
+        (entry): entry is [string, string | string[]] => entry[1] !== undefined
+      )
+      .map(([key, value]) => [
+        key.toLowerCase(),
+        Array.isArray(value) ? value.join(",") : value,
+      ])
   );
 }

@@ -6,6 +6,10 @@
     "analytics_default_allow_ad_user_data": false,
     "analytics_default_allow_ad_personalization_signals": false,
     "crashlytics_auto_collection_enabled": true,
-    "messaging_auto_init_enabled": false
+    "crashlytics_is_error_generation_on_js_crash_enabled": false,
+    "messaging_auto_init_enabled": false,
+    "messaging_ios_auto_register_for_remote_messages": false,
+    "messaging_android_notification_channel_id": "daoewo_reminders",
+    "messaging_android_notification_color": "@color/daoewo_indigo"
   }
 }
