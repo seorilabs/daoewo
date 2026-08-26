@@ -4,24 +4,25 @@
 있게 정리한 배포 원장이다. 현재 모든 v1 콘텐츠는 계획 또는 사람 승인 대기 상태이며,
 승인되지 않은 카드 본문은 앱·Firebase·스토어 산출물에 포함하지 않는다.
 
-## 현재 콘텐츠 Inventory (2026-08-26)
+## 현재 콘텐츠 Inventory (2026-08-26, v2 카탈로그 23덱)
 
-- 카탈로그 메타: 14덱(Free 6 / Pro 8), 모두 `coming-soon`
-- 로컬 vocab-swipe import P1 draft: 4개
-  - `english-essential-intro`(Free): 300장, `awaiting-human-approval`
-  - `english-toeic-advanced`(Pro): 950장, `awaiting-human-approval`
-  - `japanese-jlpt-n5-preview`(Free): 525장, `awaiting-human-approval`
-  - `japanese-jlpt-n3-n2`(Pro): 2,688장, `awaiting-human-approval`
+- 카탈로그 메타: 23덱(Free 8 / Pro 15, P1 8 / P2 12 / P3 3), 모두 `coming-soon`
+- 로컬 vocab-swipe import draft: 6개(7,191장), 모두 `awaiting-human-approval`
+  - `english-essential-intro`(Free) 300장, `english-toeic-advanced`(Pro) 950장
+  - `japanese-jlpt-n5-preview`(Free) 525장, `japanese-jlpt-n4`(Pro) 494장,
+    `japanese-jlpt-n3-n2`(Pro) 2,688장, `japanese-jlpt-n1`(Pro) 2,234장
   - provider `vocab-swipe-import-v1`, vocab-swipe commit
     `e1ba2d5503d1f90ee9d6995c80070b0e2e3152e6` 고정
-- 운영자 batch draft: 7개, 각 200장, 모두 `awaiting-human-approval`
-  - `korean-history-cert-core`, `information-processing-engineer`,
-    `it-cs-interview-terms`, `high-school-korean-history-timeline`(이상 Pro),
-    `business-english-expressions`, `wine-basics`(Pro),
+- 운영자 batch draft: 14개, 각 200장(2,800장), 모두 `awaiting-human-approval`
+  - v1: `korean-history-cert-core`, `information-processing-engineer`,
+    `it-cs-interview-terms`, `high-school-korean-history-timeline`,
+    `business-english-expressions`, `wine-basics`(이상 Pro),
     `middle-school-essential-english`(Free)
+  - v2: `sql-interview-core`, `sqld-core-concepts`, `system-design-terms`,
+    `english-phrasal-verbs`, `csat-essential-english`(이상 Pro),
+    `korean-four-character-idioms`, `greek-roman-mythology`(이상 Free)
   - provider `claude-operator-batch-v1`. batch 원본은
     `content-pipeline/batches/*.raw.json`으로 커밋되어 검수자가 diff로 읽을 수 있다.
-  - 기존 Gemini P1 draft 2개(각 20장)는 같은 덱의 batch 200장 초안으로 대체됐다.
 - 미작성 유지: `driving-license-key-points`, `world-capitals-flags` —
   현행 법령·공식 국가 정보 revision 고정이 선행돼야 하므로 `planned`로 남긴다.
   vocab-swipe import 대상인 `korean-vocabulary`(한국어기초사전)는 importer 확장 대기.
@@ -56,9 +57,10 @@ CC BY-SA 4.0 성분(TSL 표제어·정의)을 포함하므로 **발행 전에 �
   배포물에 포함한다.
 - 자체 보강: 한국어 뜻·예문·번역·학습 팁은 별도 provenance로 관리하며 사람 승인
   전 공개하지 않는다. 공식 JLPT 목록이나 제휴로 표시하지 않는다.
-- 현재 import 범위: `japanese-jlpt-n5-preview`(N5 교집합 525장)와
-  `japanese-jlpt-n3-n2`(N3·N2 교집합 2,688장)의 표제어·읽기. 원본의 영어 뜻은
-  카드에 쓰지 않는다. 카드의 뜻·예문·번역·학습 팁은 전부 자체 생성 성분이다.
+- 현재 import 범위: `japanese-jlpt-n5-preview`(N5, 525장),
+  `japanese-jlpt-n4`(N4, 494장), `japanese-jlpt-n3-n2`(N3·N2, 2,688장),
+  `japanese-jlpt-n1`(N1, 2,234장) — 각 레벨과 자체 보강의 교집합 표제어·읽기.
+  원본의 영어 뜻은 카드에 쓰지 않으며 뜻·예문·번역·학습 팁은 전부 자체 생성 성분이다.
 - 고정 pin: vocab-swipe commit `e1ba2d55`, 생성 헤더 revision
   `elzup/jlpt-word-list@master`(bytes는 vocab-swipe commit이 고정), 두 자산 파일의
   SHA-256을 work record `sourceRegistry`에 기록한다. upstream 재수집 시에는
