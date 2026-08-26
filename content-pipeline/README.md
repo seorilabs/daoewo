@@ -9,6 +9,7 @@
 - `schemas/catalog.schema.json`: `source`, `license`, `provenance`, `reviewer`, `status`, `version`, `chunkSize=200`을 강제하는 카탈로그 Schema.
 - `backlog/priority-backlog.json`: 덱 요청·검색 미스·트렌드·운영 기획 집계 신호와 Pro 요청 가산 우선순위.
 - `fixtures/offline/`: P1 `한국사능력검정 핵심`, `IT/CS 면접 용어`의 네트워크 없는 생성·증강 fixture.
+- `src/providers/vocab-swipe-import.mjs`: commit이 고정된 vocab-swipe checkout에서 TOEIC 어휘 덱을 가져오는 importer.
 - `docs/vocab-swipe-import-boundary.md`: CC BY-SA / MIT / WordNet 자산의 import 및 배포 경계.
 
 fixture는 QA 후 `awaiting-human-approval`에서 멈춘다. 저장된 manifest와 fixture 어느 것도 `published`로 표시하지 않는다.
@@ -54,6 +55,35 @@ pnpm --dir content-pipeline exec node src/cli.mjs run \
   --provider offline \
   --output .work/it-cs-interview-terms.json
 ```
+
+## vocab-swipe TOEIC import
+
+`english-essential-intro`와 `english-toeic-advanced`는 AI 생성이 아니라 commit이 고정된
+vocab-swipe checkout에서 가져온다. importer는 checkout의 `git rev-parse HEAD`가 manifest
+`source.commit`과 다르거나 생성 헤더 revision이 `source.revision`과 다르면 즉시 실패한다.
+upstream을 새로 fetch하지 않고 이미 검증된 snapshot bytes만 읽는다.
+
+```bash
+git clone https://github.com/seorilabs/vocab-swipe /path/to/vocab-swipe
+git -C /path/to/vocab-swipe checkout e1ba2d5503d1f90ee9d6995c80070b0e2e3152e6
+
+pnpm --dir content-pipeline exec node src/cli.mjs run \
+  --deck english-essential-intro \
+  --provider vocab-swipe \
+  --source-root /path/to/vocab-swipe \
+  --output .work/english-essential-intro.json
+```
+
+TSL 1.2 1,250행은 두 덱이 겹치지 않게 나눠 가진다.
+
+| 덱 | tier | rank 구간 | 카드 | 본문 구성 |
+| --- | --- | --- | --- | --- |
+| `english-essential-intro` | free | 1~300 | 300 | TSL 정의(`hint`) + 한국어 뜻 + 예문·번역 |
+| `english-toeic-advanced` | pro | 301~1250 | 950 | 한국어 뜻 + 자체 작성 예문·번역 |
+
+`sourceRefs`는 카드가 실제로 쓴 라이선스 성분만 가리킨다. 표제어는 CC BY-SA TSL, 한국어
+뜻과 예문 번역은 자체 작성이고, WordNet 예문을 자체 예문이 덮어쓰면 그 카드의 WordNet
+성분 표시는 사라진다. `difficulty`는 빈도 rank를 250행 단위로 나눈 1~5 값이다.
 
 출력 상태는 `awaiting-human-approval`이다. 실제 사람이 카드, 출처, 라이선스, 사실을 확인하고 근거를 남긴 뒤에만:
 
