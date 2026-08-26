@@ -7,21 +7,31 @@
 ## 현재 콘텐츠 Inventory (2026-08-26)
 
 - 카탈로그 메타: 14덱(Free 6 / Pro 8), 모두 `coming-soon`
-- 로컬 Gemini P1 draft: 2개, 각 20장
-  - `information-processing-engineer`: `awaiting-human-approval`
-  - `korean-history-cert-core`: `awaiting-human-approval`
 - 로컬 vocab-swipe import P1 draft: 2개
   - `english-essential-intro`(Free): 300장, `awaiting-human-approval`
   - `english-toeic-advanced`(Pro): 950장, `awaiting-human-approval`
   - provider `vocab-swipe-import-v1`, vocab-swipe commit
     `e1ba2d5503d1f90ee9d6995c80070b0e2e3152e6` 고정
+- 운영자 batch draft: 7개, 각 200장, 모두 `awaiting-human-approval`
+  - `korean-history-cert-core`, `information-processing-engineer`,
+    `it-cs-interview-terms`, `high-school-korean-history-timeline`(이상 Pro),
+    `business-english-expressions`, `wine-basics`(Pro),
+    `middle-school-essential-english`(Free)
+  - provider `claude-operator-batch-v1`. batch 원본은
+    `content-pipeline/batches/*.raw.json`으로 커밋되어 검수자가 diff로 읽을 수 있다.
+  - 기존 Gemini P1 draft 2개(각 20장)는 같은 덱의 batch 200장 초안으로 대체됐다.
+- 미작성 유지: `driving-license-key-points`, `world-capitals-flags` —
+  현행 법령·공식 국가 정보 revision 고정이 선행돼야 하므로 `planned`로 남긴다.
+  vocab-swipe import 대상인 `japanese-jlpt-n5-preview`, `japanese-jlpt-n3-n2`,
+  `korean-vocabulary`는 importer 확장 대기.
 - 사람 승인·publication: 0개
 - production published body: **0개** (`PUBLISHED_DECK_CONTENT = {}`)
 
-네 draft 모두 gitignored `content-pipeline/.work/`의 operator 작업물이다. 자동
-안전/저작권/사실 QA를 통과했어도 사람 검수 증거가 없으므로 앱 bundle, Firebase,
-store screenshot에 사용할 수 없다. `check:release`는 로컬 draft 수를 참고 출력하고,
-published body가 0이면 반드시 실패한다.
+vocab-swipe import 결과물(`content-pipeline/.work/`)은 gitignored 작업물이고, batch
+초안은 저장소에 커밋된 검수 대기 문서다. 어느 쪽이든 자동 안전/저작권/사실 QA를
+통과했어도 사람 검수 증거가 없으므로 앱 bundle, Firebase, store screenshot에 사용할
+수 없다. `check:release`는 로컬 draft 수를 참고 출력하고, published body가 0이면
+반드시 실패한다.
 
 `english-essential-intro`는 Free라 승인되면 본문이 client bundle로 들어간다. 이 덱은
 CC BY-SA 4.0 성분(TSL 표제어·정의)을 포함하므로 **발행 전에 앱에서 접근 가능한 저작자
