@@ -11,6 +11,9 @@ on:
 
 permissions:
   contents: read
+  # org rn-static-checks.yml@main이 packages: read를 요구한다(GitHub Packages registry 지원).
+  # 재사용 워크플로우 권한은 호출자 권한의 부분집합이어야 하므로 없으면 startup_failure가 난다.
+  packages: read
 
 concurrency:
   group: static-checks-${{ github.ref }}
