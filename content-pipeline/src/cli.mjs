@@ -18,7 +18,8 @@ import { GeminiTextGenerator } from "./providers/gemini.mjs";
 import { ImagenGenerator } from "./providers/imagen.mjs";
 import { OfflineFixtureGenerator } from "./providers/offline-fixture.mjs";
 import { OperatorBatchGenerator } from "./providers/operator-batch.mjs";
-import { VocabSwipeToeicImporter } from "./providers/vocab-swipe-import.mjs";
+import { TOEIC_DECK_RANGES, VocabSwipeToeicImporter } from "./providers/vocab-swipe-import.mjs";
+import { JLPT_DECK_LEVELS, VocabSwipeJlptImporter } from "./providers/vocab-swipe-jlpt.mjs";
 import { HUMAN_REVIEW_CONFIRMATION } from "./state-machine.mjs";
 import { assertBacklog, assertCatalog, assertSchemas } from "./validation.mjs";
 
@@ -109,7 +110,14 @@ async function runCommand(options) {
     if (deck.contentStrategy !== "vocab-swipe-import") {
       throw new Error("vocab-swipe importer는 vocab-swipe-import 덱에만 사용할 수 있다.");
     }
-    generator = new VocabSwipeToeicImporter({ sourceRoot: requireOption(options, "source-root") });
+    const sourceRoot = requireOption(options, "source-root");
+    if (deck.id in TOEIC_DECK_RANGES) {
+      generator = new VocabSwipeToeicImporter({ sourceRoot });
+    } else if (deck.id in JLPT_DECK_LEVELS) {
+      generator = new VocabSwipeJlptImporter({ sourceRoot });
+    } else {
+      throw new Error(`vocab-swipe importer가 아직 지원하지 않는 덱이다: ${deck.id}`);
+    }
   } else {
     throw new Error(`지원하지 않는 provider: ${providerName}`);
   }

@@ -81,6 +81,16 @@ TSL 1.2 1,250행은 두 덱이 겹치지 않게 나눠 가진다.
 | `english-essential-intro` | free | 1~300 | 300 | TSL 정의(`hint`) + 한국어 뜻 + 예문·번역 |
 | `english-toeic-advanced` | pro | 301~1250 | 950 | 한국어 뜻 + 자체 작성 예문·번역 |
 
+JLPT 덱은 같은 provider(`--provider vocab-swipe`)로 실행하며, MIT 표제어·읽기와 자체
+생성 한국어 보강(뜻·예문·번역·학습 팁)의 **교집합**만 카드가 된다. 보강이 의도적으로
+비워진 행(카운터·접사·중복 이표기)은 조용히 건너뛰고, 보강이 있는데 필드가 비면
+실패한다. 같은 표제어가 여러 레벨에 있으면 첫 등장 레벨이 이긴다(N3~N2 덱은 N3 우선).
+
+| 덱 | tier | 레벨 | 카드 | 난이도 |
+| --- | --- | --- | --- | --- |
+| `japanese-jlpt-n5-preview` | free | N5 | 525 | 1 |
+| `japanese-jlpt-n3-n2` | pro | N3, N2 | 2,688 | N3=3, N2=4 |
+
 `sourceRefs`는 카드가 실제로 쓴 라이선스 성분만 가리킨다. 표제어는 CC BY-SA TSL, 한국어
 뜻과 예문 번역은 자체 작성이고, WordNet 예문을 자체 예문이 덮어쓰면 그 카드의 WordNet
 성분 표시는 사라진다. `difficulty`는 빈도 rank를 250행 단위로 나눈 1~5 값이다.

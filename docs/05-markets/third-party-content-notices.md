@@ -7,9 +7,11 @@
 ## 현재 콘텐츠 Inventory (2026-08-26)
 
 - 카탈로그 메타: 14덱(Free 6 / Pro 8), 모두 `coming-soon`
-- 로컬 vocab-swipe import P1 draft: 2개
+- 로컬 vocab-swipe import P1 draft: 4개
   - `english-essential-intro`(Free): 300장, `awaiting-human-approval`
   - `english-toeic-advanced`(Pro): 950장, `awaiting-human-approval`
+  - `japanese-jlpt-n5-preview`(Free): 525장, `awaiting-human-approval`
+  - `japanese-jlpt-n3-n2`(Pro): 2,688장, `awaiting-human-approval`
   - provider `vocab-swipe-import-v1`, vocab-swipe commit
     `e1ba2d5503d1f90ee9d6995c80070b0e2e3152e6` 고정
 - 운영자 batch draft: 7개, 각 200장, 모두 `awaiting-human-approval`
@@ -22,8 +24,7 @@
   - 기존 Gemini P1 draft 2개(각 20장)는 같은 덱의 batch 200장 초안으로 대체됐다.
 - 미작성 유지: `driving-license-key-points`, `world-capitals-flags` —
   현행 법령·공식 국가 정보 revision 고정이 선행돼야 하므로 `planned`로 남긴다.
-  vocab-swipe import 대상인 `japanese-jlpt-n5-preview`, `japanese-jlpt-n3-n2`,
-  `korean-vocabulary`는 importer 확장 대기.
+  vocab-swipe import 대상인 `korean-vocabulary`(한국어기초사전)는 importer 확장 대기.
 - 사람 승인·publication: 0개
 - production published body: **0개** (`PUBLISHED_DECK_CONTENT = {}`)
 
@@ -55,6 +56,13 @@ CC BY-SA 4.0 성분(TSL 표제어·정의)을 포함하므로 **발행 전에 �
   배포물에 포함한다.
 - 자체 보강: 한국어 뜻·예문·번역·학습 팁은 별도 provenance로 관리하며 사람 승인
   전 공개하지 않는다. 공식 JLPT 목록이나 제휴로 표시하지 않는다.
+- 현재 import 범위: `japanese-jlpt-n5-preview`(N5 교집합 525장)와
+  `japanese-jlpt-n3-n2`(N3·N2 교집합 2,688장)의 표제어·읽기. 원본의 영어 뜻은
+  카드에 쓰지 않는다. 카드의 뜻·예문·번역·학습 팁은 전부 자체 생성 성분이다.
+- 고정 pin: vocab-swipe commit `e1ba2d55`, 생성 헤더 revision
+  `elzup/jlpt-word-list@master`(bytes는 vocab-swipe commit이 고정), 두 자산 파일의
+  SHA-256을 work record `sourceRegistry`에 기록한다. upstream 재수집 시에는
+  upstream commit SHA와 다운로드 파일 SHA-256을 새로 확보해야 한다.
 
 ## TOEIC Service List 1.2
 

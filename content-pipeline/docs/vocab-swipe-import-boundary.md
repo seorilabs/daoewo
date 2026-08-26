@@ -71,6 +71,34 @@
 입문 구간은 TSL 정의·품사·예문이 함께 있는 상위 300행이고 심화 구간은 자체 보강으로 채운 나머지다.
 두 구간은 겹치지 않으며 합치면 TSL 1.2 전체 목록이 된다.
 
+## 구현된 JLPT importer
+
+`src/providers/vocab-swipe-jlpt.mjs`가 JLPT 두 덱의 매핑을 실행한다.
+
+- 카드가 되는 것은 `BUNDLED_JLPT_WORDS_BY_LEVEL`(elzup/jlpt-word-list, MIT)의 표제어·읽기와
+  `JLPT_KOREAN_ENRICHMENT`(자체 생성 뜻·예문·번역·학습 팁)의 **교집합**뿐이다. 보강이
+  의도적으로 비워진 행(카운터, 접사, 괄호 부연, 중복 이표기)은 건너뛰고, 보강 항목의
+  필드가 비어 있으면 그 표제어에서 실패한다.
+- checkout commit이 manifest `source.commit`과 다르면 중단한다. 생성 헤더의
+  `BUNDLED_JLPT_REVISION`(`elzup/jlpt-word-list@master`)은 branch pin이지만 실제 bytes는
+  vocab-swipe commit이 고정하므로, manifest `source.revision`이 헤더 revision을 포함하는지
+  검사한다. upstream 재수집 시에는 boundary 요건대로 upstream commit SHA와 파일 SHA-256을
+  새로 확보해야 한다.
+- 읽은 두 파일의 SHA-256을 `sourceRegistry`에 남기고, MIT 표제어 성분
+  (`vocab-swipe-jlpt-headword`)과 자체 보강 성분(`seorilabs-jlpt-korean-enrichment`)을
+  분리해 기록한다. 원본의 영어 뜻은 카드에 쓰지 않는다.
+- 같은 표제어가 레벨 목록에 두 번 나오거나(원본 중복 행) 두 레벨 모두에 보강이 있으면
+  첫 등장이 이긴다. N3~N2 덱은 N3를 먼저 순회하므로 N3 항목이 우선한다.
+
+| 덱 | tier | 레벨 | 카드 수 | 난이도 |
+| --- | --- | --- | --- | --- |
+| `japanese-jlpt-n5-preview` | free | N5 | 525 | 1 |
+| `japanese-jlpt-n3-n2` | pro | N3, N2 | 2,688 | N3=3, N2=4 |
+
+JLPT generated 파일은 값 위치의 타입 import 때문에 Node 타입 스트리핑만으로 로드할 수
+없어, importer가 그 import 한 줄을 로컬 타입 별칭으로 치환한 사본을 임시 경로에서
+import한다. digest는 원본 bytes로 계산하므로 provenance는 변하지 않는다.
+
 ## 배포 체크
 
 1. 외부 `source.commit`이 40자리 SHA이고 `source.revision`이 비어 있지 않다.
