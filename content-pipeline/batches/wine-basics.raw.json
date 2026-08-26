@@ -1,0 +1,3021 @@
+{
+  "schemaVersion": 1,
+  "deckId": "wine-basics",
+  "sourceRegistry": [
+    {
+      "id": "brief-wine-basics-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:wine-basics:v1",
+      "revision": "brief-v1@2026-07-12"
+    },
+    {
+      "id": "claude-authoring-wine-basics-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:wine-basics:v1",
+      "revision": "claude-batch-v1@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "카베르네 소비뇽(Cabernet Sauvignon)이란?",
+      "back": "전 세계에서 가장 널리 재배되는 대표적인 레드 와인 품종이다. 껍질이 두꺼워 타닌이 풍부하고 블랙커런트 같은 검은 과일 향이 특징이며, 프랑스 보르도 좌안 블렌드의 중심 품종이다.",
+      "hint": "보르도 좌안의 대표 레드 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "보르도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "메를로(Merlot)란?",
+      "back": "보르도 우안을 대표하는 레드 품종으로 카베르네 소비뇽보다 타닌이 부드럽다. 자두와 붉은 과일 향이 특징이며 블렌드에서 부드러움을 더하는 역할을 한다.",
+      "hint": "보르도 우안의 중심 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "보르도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "피노 누아(Pinot Noir)란?",
+      "back": "프랑스 부르고뉴를 대표하는 레드 품종이다. 껍질이 얇아 색이 옅고 타닌이 가벼우며, 체리와 딸기 같은 붉은 과일 향과 섬세한 구조가 특징이다. 서늘한 기후에서 잘 자란다.",
+      "hint": "부르고뉴의 레드 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "부르고뉴"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "시라(Syrah)와 쉬라즈(Shiraz)의 관계는?",
+      "back": "같은 품종을 부르는 두 이름이다. 프랑스 론 지역에서는 시라, 호주에서는 쉬라즈라고 부르며, 검은 과일과 후추 향이 특징인 진한 레드 품종이다.",
+      "hint": "론과 호주에서 부르는 이름이 다르다",
+      "tags": [
+        "품종",
+        "레드",
+        "론"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "샤르도네(Chardonnay)란?",
+      "back": "세계에서 가장 널리 재배되는 화이트 품종 가운데 하나로 부르고뉴가 본고장이다. 산지와 양조 방식에 따라 미네랄한 스타일부터 오크 숙성의 풍부한 스타일까지 다양하게 만들어진다.",
+      "hint": "부르고뉴가 본고장인 화이트 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "부르고뉴"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "소비뇽 블랑(Sauvignon Blanc)이란?",
+      "back": "산도가 높고 향이 뚜렷한 화이트 품종이다. 풀, 구스베리, 감귤류 향이 특징이며 프랑스 루아르의 상세르와 뉴질랜드 말버러가 대표 산지다.",
+      "hint": "상세르와 말버러의 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "루아르"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "리슬링(Riesling)이란?",
+      "back": "독일을 대표하는 화이트 품종으로 산도가 높고 향이 화려하다. 드라이부터 스위트까지 폭넓게 만들어지며, 장기 숙성 시 페트롤이라 불리는 독특한 향이 나타나기도 한다.",
+      "hint": "독일의 대표 화이트 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "독일"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "게뷔르츠트라미너(Gewürztraminer)란?",
+      "back": "리치와 장미 향이 뚜렷한 아로마틱 화이트 품종이다. 프랑스 알자스가 대표 산지이며 산도는 비교적 낮고 향과 질감이 풍부하다.",
+      "hint": "리치 향의 알자스 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "알자스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "슈냉 블랑(Chenin Blanc)이란?",
+      "back": "프랑스 루아르 밸리가 본고장인 화이트 품종으로 산도가 높다. 드라이, 스위트, 스파클링까지 다양한 스타일로 만들어지며 남아프리카공화국에서도 널리 재배된다.",
+      "hint": "루아르와 남아공의 다재다능한 화이트",
+      "tags": [
+        "품종",
+        "화이트",
+        "루아르"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "그르나슈(Grenache)란?",
+      "back": "남프랑스와 스페인에서 널리 재배되는 레드 품종으로 스페인에서는 가르나차라고 부른다. 알코올이 높고 붉은 과일과 향신료 향이 특징이며 남부 론 블렌드의 핵심 품종이다.",
+      "hint": "스페인 이름은 가르나차",
+      "tags": [
+        "품종",
+        "레드",
+        "론"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "무르베드르(Mourvèdre)란?",
+      "back": "남프랑스와 스페인에서 재배되는 진한 레드 품종으로 스페인 이름은 모나스트렐이다. 색이 짙고 타닌이 강해 블렌드에 구조감을 더하는 데 자주 쓰인다.",
+      "hint": "스페인 이름은 모나스트렐",
+      "tags": [
+        "품종",
+        "레드",
+        "남프랑스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "템프라니요(Tempranillo)란?",
+      "back": "스페인을 대표하는 레드 품종으로 리오하와 리베라 델 두에로의 중심 품종이다. 붉은 과일과 가죽 향이 특징이며 오크 숙성과 잘 어울리는 스타일로 만들어진다.",
+      "hint": "리오하의 중심 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "스페인"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "산지오베제(Sangiovese)란?",
+      "back": "이탈리아 토스카나를 대표하는 레드 품종이다. 산도가 높고 체리와 허브 향이 특징이며 키안티의 주 품종으로 쓰인다.",
+      "hint": "키안티의 주 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "이탈리아"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "네비올로(Nebbiolo)란?",
+      "back": "이탈리아 피에몬테의 레드 품종으로 바롤로와 바르바레스코를 만든다. 색은 비교적 옅지만 타닌과 산도가 매우 높고, 장미와 타르에 비유되는 향이 유명하다.",
+      "hint": "바롤로를 만드는 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "피에몬테"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "바르베라(Barbera)란?",
+      "back": "이탈리아 피에몬테에서 널리 재배되는 레드 품종이다. 산도는 높지만 타닌이 낮아 비교적 부드럽게 느껴지며 체리 향이 특징이다.",
+      "hint": "산도 높고 타닌 낮은 피에몬테 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "피에몬테"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "돌체토(Dolcetto)란?",
+      "back": "이탈리아 피에몬테의 레드 품종으로 이름은 '작고 달콤한 것'이라는 뜻이지만 와인은 대개 드라이하게 만들어진다. 검은 과일 향과 부드러운 산도가 특징이며 이른 시기에 소비되는 스타일이 많다.",
+      "hint": "이름과 달리 드라이한 피에몬테 레드",
+      "tags": [
+        "품종",
+        "레드",
+        "피에몬테"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "말벡(Malbec)이란?",
+      "back": "프랑스 카오르가 원산지이지만 아르헨티나 멘도사에서 대표 품종으로 자리 잡았다. 색이 짙고 자두와 검은 과일 향이 풍부하며 타닌이 부드러운 편이다.",
+      "hint": "아르헨티나의 대표 레드",
+      "tags": [
+        "품종",
+        "레드",
+        "아르헨티나"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "카르메네르(Carménère)란?",
+      "back": "보르도가 원산지이지만 현재는 칠레를 대표하는 레드 품종이다. 한동안 칠레에서 메를로로 잘못 알려져 있다가 1990년대에 별도 품종으로 확인됐다. 허브와 피망 계열 향이 특징이다.",
+      "hint": "칠레의 대표 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "칠레"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "진판델(Zinfandel)이란?",
+      "back": "미국 캘리포니아를 대표하는 레드 품종으로 이탈리아의 프리미티보와 같은 품종이다. 잘 익은 검은 과일 향과 높은 알코올이 특징이다.",
+      "hint": "프리미티보와 같은 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "캘리포니아"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "피노타지(Pinotage)란?",
+      "back": "남아프리카공화국에서 개발된 레드 품종으로 피노 누아와 생소를 교배해 만들었다. 남아공을 상징하는 품종으로 검은 과일과 스모키한 향이 특징이다.",
+      "hint": "피노 누아와 생소의 교배종",
+      "tags": [
+        "품종",
+        "레드",
+        "남아공"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "가메(Gamay)란?",
+      "back": "프랑스 보졸레 지역의 레드 품종이다. 색이 밝고 타닌이 가벼우며 신선한 붉은 과일 향이 특징으로, 보졸레 누보의 원료로 잘 알려져 있다.",
+      "hint": "보졸레 누보의 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "보졸레"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "카베르네 프랑(Cabernet Franc)이란?",
+      "back": "카베르네 소비뇽의 부모 품종 가운데 하나로 보르도 블렌드와 루아르 밸리에서 중요한 레드 품종이다. 붉은 과일과 피망, 허브 계열 향이 특징이며 카베르네 소비뇽보다 가벼운 편이다.",
+      "hint": "카베르네 소비뇽의 부모 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "루아르"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "비오니에(Viognier)란?",
+      "back": "북부 론의 콩드리외를 대표하는 아로마틱 화이트 품종이다. 살구와 복숭아, 꽃 향이 풍부하고 산도는 비교적 낮으며 질감이 묵직한 편이다.",
+      "hint": "콩드리외의 화이트 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "론"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "피노 그리(Pinot Gris)와 피노 그리조(Pinot Grigio)의 관계는?",
+      "back": "같은 품종의 프랑스식 이름과 이탈리아식 이름이다. 알자스에서는 향과 무게감이 있는 스타일로, 이탈리아에서는 가볍고 상쾌한 스타일로 만드는 경향이 있다.",
+      "hint": "한 품종의 두 이름",
+      "tags": [
+        "품종",
+        "화이트",
+        "알자스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "알바리뇨(Albariño)란?",
+      "back": "스페인 북서부 리아스 바이샤스를 대표하는 화이트 품종이다. 산도가 높고 복숭아와 감귤 향이 특징이며 해산물 요리와의 조합으로 자주 언급된다.",
+      "hint": "리아스 바이샤스의 화이트",
+      "tags": [
+        "품종",
+        "화이트",
+        "스페인"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "베르데호(Verdejo)란?",
+      "back": "스페인 루에다 지역을 대표하는 화이트 품종이다. 신선한 산도와 허브, 감귤류 향이 특징이며 소비뇽 블랑과 비교되곤 한다.",
+      "hint": "루에다의 화이트 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "스페인"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "그뤼너 펠트리너(Grüner Veltliner)란?",
+      "back": "오스트리아를 대표하는 화이트 품종이다. 산도가 높고 감귤류와 흰 후추를 연상시키는 향이 특징이다.",
+      "hint": "오스트리아의 대표 화이트",
+      "tags": [
+        "품종",
+        "화이트",
+        "오스트리아"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "뮈스카(Muscat)란?",
+      "back": "포도 자체의 향이 와인에 그대로 드러나는 오래된 아로마틱 품종군이다. 이탈리아에서는 모스카토라고 부르며 달콤한 약발포성 와인 모스카토 다스티의 원료로 잘 알려져 있다.",
+      "hint": "모스카토의 프랑스 이름",
+      "tags": [
+        "품종",
+        "화이트",
+        "아로마틱"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "세미용(Sémillon)이란?",
+      "back": "보르도의 화이트 품종으로 소비뇽 블랑과 자주 블렌딩된다. 껍질이 얇아 귀부균의 영향을 잘 받기 때문에 소테른 같은 귀부 와인의 핵심 품종이다.",
+      "hint": "소테른 귀부 와인의 핵심 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "보르도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "위니 블랑(Ugni Blanc)이란?",
+      "back": "이탈리아 이름 트레비아노로도 불리는 화이트 품종이다. 산도가 높고 향이 중립적이어서 코냑 같은 브랜디 증류의 원료로 널리 쓰인다.",
+      "hint": "트레비아노와 같은 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "브랜디"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "코르비나(Corvina)란?",
+      "back": "이탈리아 베네토의 레드 품종으로 발폴리첼라와 아마로네의 주 품종이다. 체리 향과 산뜻한 산도가 특징이다.",
+      "hint": "아마로네의 주 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "베네토"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "품종 몬테풀치아노와 와인 '비노 노빌레 디 몬테풀치아노'의 차이는?",
+      "back": "몬테풀치아노는 이탈리아 중부 아브루초 지역에서 재배되는 레드 품종 이름이다. 반면 토스카나의 '비노 노빌레 디 몬테풀치아노'는 몬테풀치아노라는 마을 이름에서 온 와인명으로, 산지오베제 계열 품종으로 만들어 서로 다르다.",
+      "hint": "품종명과 지명이 같은 혼동 사례",
+      "tags": [
+        "품종",
+        "레드",
+        "이탈리아"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "아이렌(Airén)이란?",
+      "back": "스페인 중부 라만차에 넓게 심어진 화이트 품종으로 재배 면적이 세계 최상위권에 든다. 향이 중립적이어서 브랜디 원료나 일상 소비용 와인에 많이 쓰인다.",
+      "hint": "라만차에 가장 넓게 심어진 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "스페인"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "카리냥(Carignan)이란?",
+      "back": "남프랑스와 스페인에서 재배되는 레드 품종으로 스페인에서는 카리녜나 또는 마수엘로라고 부른다. 산도와 타닌이 높아 주로 블렌드에 쓰이며, 수령이 높은 나무에서 농축된 와인이 나온다.",
+      "hint": "남프랑스의 블렌드용 레드",
+      "tags": [
+        "품종",
+        "레드",
+        "남프랑스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "생소(Cinsault)란?",
+      "back": "남프랑스의 레드 품종으로 타닌이 가볍고 향이 부드러워 로제와 블렌드에 자주 쓰인다. 피노타지의 부모 품종 가운데 하나이기도 하다.",
+      "hint": "로제에 많이 쓰이는 남프랑스 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "로제"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "프티 베르도(Petit Verdot)란?",
+      "back": "보르도 블렌드에 소량 쓰이는 레드 품종이다. 늦게 익고 색과 타닌이 진해 블렌드에 색과 구조, 향신료 향을 보태는 역할을 한다.",
+      "hint": "보르도 블렌드의 소량 품종",
+      "tags": [
+        "품종",
+        "레드",
+        "보르도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "토론테스(Torrontés)란?",
+      "back": "아르헨티나를 대표하는 아로마틱 화이트 품종이다. 꽃과 포도 향이 화려하지만 맛은 대개 드라이하다.",
+      "hint": "아르헨티나의 아로마틱 화이트",
+      "tags": [
+        "품종",
+        "화이트",
+        "아르헨티나"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "푸르민트(Furmint)란?",
+      "back": "헝가리 토카이 지역의 화이트 품종이다. 산도가 매우 높아 귀부 스위트 와인인 토카이 아수의 핵심 품종이며 드라이 화이트로도 만들어진다.",
+      "hint": "토카이 아수의 핵심 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "헝가리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "믈롱 드 부르고뉴(Melon de Bourgogne)란?",
+      "back": "프랑스 루아르 하구의 뮈스카데 와인을 만드는 화이트 품종이다. 향이 중립적이고 산도가 높아 쉬르 리 숙성으로 질감을 더하는 경우가 많다.",
+      "hint": "뮈스카데의 품종",
+      "tags": [
+        "품종",
+        "화이트",
+        "루아르"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "국제 품종과 토착 품종의 차이는?",
+      "back": "국제 품종은 카베르네 소비뇽이나 샤르도네처럼 세계 여러 산지에서 널리 재배되는 품종을 말한다. 토착 품종은 특정 지역에서 오랫동안 재배되어 온 그 지역 고유의 품종을 가리킨다.",
+      "hint": "재배 범위에 따른 구분",
+      "tags": [
+        "품종",
+        "개념",
+        "용어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "AOC(원산지 통제 명칭)란?",
+      "back": "프랑스의 원산지 명칭 제도로 산지 범위, 품종, 재배와 양조 방식을 법으로 규정한다. EU 체계에서는 AOP로도 표기되며, 라벨의 지명이 곧 품질 규정의 단위가 된다.",
+      "hint": "프랑스의 원산지 명칭 제도",
+      "tags": [
+        "산지",
+        "프랑스",
+        "등급"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "프랑스 와인 등급 체계의 기본 구조는?",
+      "back": "규제가 가장 엄격한 AOP(AOC)가 상위에 있고, 그 아래에 지리적 표시가 있는 IGP, 규제가 가장 느슨한 뱅 드 프랑스가 있다. 아래 단계일수록 품종과 재배 규정이 자유롭다.",
+      "hint": "AOP-IGP-뱅 드 프랑스",
+      "tags": [
+        "산지",
+        "프랑스",
+        "등급"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "보르도(Bordeaux)는 어떤 산지인가?",
+      "back": "프랑스 남서부 대서양 연안의 대표 산지로 주로 여러 품종을 블렌딩한 레드 와인으로 유명하다. 지롱드 강을 기준으로 좌안과 우안으로 나뉘며 소테른 같은 스위트 화이트도 생산한다.",
+      "hint": "블렌딩 레드의 본고장",
+      "tags": [
+        "산지",
+        "프랑스",
+        "보르도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "보르도 좌안과 우안의 차이는?",
+      "back": "좌안(메독, 그라브)은 자갈 토양에서 카베르네 소비뇽 중심의 블렌드를 만든다. 우안(생테밀리옹, 포므롤)은 점토와 석회 토양에서 메를로 중심의 부드러운 블렌드를 만든다.",
+      "hint": "토양과 중심 품종이 다르다",
+      "tags": [
+        "산지",
+        "프랑스",
+        "보르도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "1855년 메독 등급 분류란?",
+      "back": "보르도 메독 지역의 샤토들을 1등급부터 5등급까지 나눈 역사적 분류다. 1855년 파리 만국박람회를 계기로 만들어졌으며 소수의 예외를 제외하면 지금까지 거의 그대로 유지되고 있다.",
+      "hint": "샤토를 5개 등급으로 나눈 분류",
+      "tags": [
+        "산지",
+        "프랑스",
+        "등급"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "부르고뉴(Bourgogne)는 어떤 산지인가?",
+      "back": "프랑스 동부의 산지로 피노 누아와 샤르도네의 단일 품종 와인으로 유명하다. 밭 단위로 등급을 나누는 체계가 발달해 같은 품종이라도 밭에 따라 스타일과 평가가 크게 달라진다.",
+      "hint": "단일 품종과 밭 등급의 산지",
+      "tags": [
+        "산지",
+        "프랑스",
+        "부르고뉴"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "부르고뉴 등급 체계의 구조는?",
+      "back": "위에서부터 그랑 크뤼, 프르미에 크뤼, 마을(빌라주) 단위, 지역(레지오날) 단위 순이다. 생산자가 아니라 포도밭 자체에 등급이 부여된다는 점이 특징이다.",
+      "hint": "포도밭에 등급이 붙는다",
+      "tags": [
+        "산지",
+        "프랑스",
+        "등급"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "샤블리(Chablis)는 어떤 산지인가?",
+      "back": "부르고뉴 북쪽 끝의 화이트 와인 산지로 샤르도네만 재배한다. 서늘한 기후와 석회질 토양 덕분에 산도가 높고 미네랄한 스타일로 유명하다.",
+      "hint": "미네랄한 샤르도네 산지",
+      "tags": [
+        "산지",
+        "프랑스",
+        "부르고뉴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "보졸레(Beaujolais)와 보졸레 누보란?",
+      "back": "보졸레는 가메 품종으로 가벼운 레드를 만드는 프랑스 산지다. 보졸레 누보는 그해 수확한 포도로 만들어 11월 셋째 주 목요일에 출시하는 햇와인이다.",
+      "hint": "가메로 만드는 햇와인의 고향",
+      "tags": [
+        "산지",
+        "프랑스",
+        "보졸레"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "샴페인이라는 이름을 쓸 수 있는 조건은?",
+      "back": "프랑스 샹파뉴 지역에서 규정된 품종과 전통 방식으로 만든 스파클링 와인만 샴페인이라고 부를 수 있다. 다른 지역의 스파클링은 크레망, 카바 등 별도의 이름을 쓴다.",
+      "hint": "지역 이름이 곧 와인 이름",
+      "tags": [
+        "산지",
+        "프랑스",
+        "스파클링"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "북부 론과 남부 론의 차이는?",
+      "back": "북부 론은 시라 단일 품종 중심으로 코트 로티와 에르미타주가 대표적이다. 남부 론은 그르나슈 중심의 블렌드가 주류이며 생산량도 훨씬 많다.",
+      "hint": "시라 단일과 그르나슈 블렌드",
+      "tags": [
+        "산지",
+        "프랑스",
+        "론"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "샤토네프 뒤 파프(Châteauneuf-du-Pape)란?",
+      "back": "남부 론의 대표 AOC로 그르나슈를 중심으로 여러 품종의 블렌딩이 허용된다. 둥근 자갈로 덮인 포도밭과 묵직한 레드 블렌드로 유명하다.",
+      "hint": "교황의 새 성이라는 뜻의 남부 론 AOC",
+      "tags": [
+        "산지",
+        "프랑스",
+        "론"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "루아르 밸리(Loire Valley)는 어떤 산지인가?",
+      "back": "프랑스에서 가장 긴 강을 따라 이어진 산지로 상세르의 소비뇽 블랑, 부브레의 슈냉 블랑, 뮈스카데 등 다양한 화이트로 유명하다. 서늘한 기후로 산도가 높은 스타일이 많다.",
+      "hint": "상세르와 부브레가 있는 산지",
+      "tags": [
+        "산지",
+        "프랑스",
+        "루아르"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "알자스(Alsace) 와인의 특징은?",
+      "back": "독일과 접한 프랑스 동북부 산지로 리슬링, 게뷔르츠트라미너 같은 아로마틱 화이트가 중심이다. 프랑스에서는 드물게 라벨에 품종명을 표기하는 전통이 있다.",
+      "hint": "품종명을 라벨에 쓰는 프랑스 산지",
+      "tags": [
+        "산지",
+        "프랑스",
+        "알자스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "이탈리아 와인 등급 체계의 구조는?",
+      "back": "규제가 가장 엄격한 DOCG, 그 아래 DOC, 지리적 표시 단계인 IGT, 그리고 일반 테이블 와인 순으로 구성된다. DOCG 와인은 병목에 정부 봉인 띠를 붙인다.",
+      "hint": "DOCG-DOC-IGT 순",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "등급"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "키안티(Chianti)와 키안티 클라시코의 관계는?",
+      "back": "둘 다 토스카나의 산지오베제 중심 레드 와인 산지다. 키안티 클라시코는 그중 역사적 중심 구역으로 검은 수탉 문양을 상징으로 쓰며 별도의 DOCG로 관리된다.",
+      "hint": "검은 수탉의 역사적 중심 구역",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "토스카나"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "바롤로(Barolo)와 바르바레스코(Barbaresco)란?",
+      "back": "모두 피에몬테에서 네비올로만으로 만드는 DOCG 레드다. 바롤로가 대체로 의무 숙성 기간이 더 길고 더 강건한 스타일로 알려져 있다.",
+      "hint": "네비올로로 만드는 두 DOCG",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "피에몬테"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "아마로네 델라 발폴리첼라란?",
+      "back": "이탈리아 베네토에서 코르비나 중심의 포도를 말려서 만드는 드라이 레드다. 수분이 줄어든 포도를 쓰기 때문에 알코올이 높고 농축된 맛이 난다.",
+      "hint": "말린 포도로 만드는 베네토 레드",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "베네토"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "브루넬로 디 몬탈치노(Brunello di Montalcino)란?",
+      "back": "토스카나 몬탈치노 마을에서 산지오베제(현지에서 브루넬로라 부름)만으로 만드는 DOCG 레드다. 긴 의무 숙성 기간과 뛰어난 장기 숙성력으로 유명하다.",
+      "hint": "몬탈치노의 산지오베제 DOCG",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "토스카나"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "슈퍼 투스칸(Super Tuscan)이란?",
+      "back": "전통 규정에 없는 품종이나 블렌드를 써서 등급 규정 밖에서 만든 토스카나의 고급 와인을 부르는 별칭이다. 초기에는 테이블 와인 등급이었지만 이후 IGT 등으로 인정받았다.",
+      "hint": "규정 밖에서 태어난 토스카나 와인",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "토스카나"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "프로세코(Prosecco)란?",
+      "back": "이탈리아 베네토 일대에서 글레라 품종으로 만드는 스파클링 와인이다. 대형 탱크에서 2차 발효하는 샤르마 방식을 주로 써서 신선한 과일 향을 살린다.",
+      "hint": "글레라로 만드는 이탈리아 스파클링",
+      "tags": [
+        "산지",
+        "이탈리아",
+        "스파클링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스페인 와인 등급 체계의 구조는?",
+      "back": "지리적 표시 단계 위에 DO(원산지 명칭)가 있고, 그 위에 리오하와 프리오라트만 지정된 최상위 등급 DOCa가 있다. 등급과 별개로 숙성 기간 표기 제도가 발달했다.",
+      "hint": "DOCa는 두 산지뿐",
+      "tags": [
+        "산지",
+        "스페인",
+        "등급"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스페인의 크리안사·레세르바·그란 레세르바 표기란?",
+      "back": "오크통과 병에서 숙성한 기간에 따라 붙이는 스페인의 표기다. 크리안사, 레세르바, 그란 레세르바 순으로 요구되는 최소 숙성 기간이 길어진다.",
+      "hint": "숙성 기간에 따른 표기",
+      "tags": [
+        "산지",
+        "스페인",
+        "등급"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "셰리(Sherry)란?",
+      "back": "스페인 남부 헤레스 지역에서 만드는 주정 강화 와인이다. 솔레라 시스템으로 여러 해의 와인을 섞어 숙성하며, 피노처럼 가벼운 것부터 올로로소처럼 진한 것까지 스타일이 다양하다.",
+      "hint": "헤레스의 주정 강화 와인",
+      "tags": [
+        "산지",
+        "스페인",
+        "주정강화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "카바(Cava)란?",
+      "back": "스페인의 전통 방식 스파클링 와인으로 주로 카탈루냐 페네데스 지역에서 생산된다. 마카베오, 사렐로, 파레야다 같은 현지 품종을 주로 쓴다.",
+      "hint": "스페인의 전통 방식 스파클링",
+      "tags": [
+        "산지",
+        "스페인",
+        "스파클링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "포트(Port) 와인이란?",
+      "back": "포르투갈 도루 밸리의 포도로 만드는 주정 강화 와인이다. 발효 도중 브랜디를 넣어 발효를 멈추기 때문에 단맛이 남고 알코올이 높다. 루비, 토니 등 숙성 방식에 따라 스타일이 나뉜다.",
+      "hint": "도루 밸리의 주정 강화 와인",
+      "tags": [
+        "산지",
+        "포르투갈",
+        "주정강화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "독일 프레디카츠바인 등급이란?",
+      "back": "수확할 때 포도즙의 당도에 따라 카비네트, 슈페트레제, 아우스레제, 베렌아우스레제, 아이스바인, 트로켄베렌아우스레제로 나뉜다. 완성된 와인의 단맛이 아니라 수확 시 당도가 기준이라는 점이 핵심이다.",
+      "hint": "수확 시 당도로 나누는 등급",
+      "tags": [
+        "산지",
+        "독일",
+        "등급"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "모젤(Mosel)은 어떤 산지인가?",
+      "back": "독일의 대표적인 리슬링 산지로 가파른 점판암 경사면 포도밭으로 유명하다. 알코올이 낮고 산도가 높으며 섬세한 스타일의 화이트가 중심이다.",
+      "hint": "점판암 경사면의 리슬링 산지",
+      "tags": [
+        "산지",
+        "독일",
+        "리슬링"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "토카이 아수(Tokaji Aszú)란?",
+      "back": "헝가리 토카이 지역에서 귀부 포도로 만드는 역사적인 스위트 와인이다. 푸르민트 품종을 중심으로 하며, 귀부 포도의 투입량에 따라 당도 등급을 표기해 왔다.",
+      "hint": "헝가리의 귀부 스위트 와인",
+      "tags": [
+        "산지",
+        "헝가리",
+        "스위트"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "미국의 AVA란?",
+      "back": "미국 정부가 승인하는 포도 재배 지역 단위다. 유럽의 원산지 제도와 달리 지리적 경계만 정할 뿐 품종이나 양조 방식은 규제하지 않는다.",
+      "hint": "지리적 경계만 정하는 미국 제도",
+      "tags": [
+        "산지",
+        "미국",
+        "등급"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "나파 밸리(Napa Valley)는 어떤 산지인가?",
+      "back": "미국 캘리포니아의 대표 산지로 카베르네 소비뇽 중심의 레드로 세계적 명성을 얻었다. 1976년 파리 시음회에서 프랑스 와인들과 겨뤄 주목받은 역사가 있다.",
+      "hint": "캘리포니아의 대표 산지",
+      "tags": [
+        "산지",
+        "미국",
+        "카베르네소비뇽"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "오리건(Oregon) 와인의 특징은?",
+      "back": "미국 북서부의 서늘한 산지로 윌라멧 밸리의 피노 누아가 대표적이다. 부르고뉴와 비교되는 섬세한 스타일로 알려져 있다.",
+      "hint": "윌라멧 밸리의 피노 누아",
+      "tags": [
+        "산지",
+        "미국",
+        "피노누아"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "칠레 와인 산지의 특징은?",
+      "back": "안데스산맥과 태평양 사이에 길게 뻗은 산지로 마이포 밸리, 콜차과 밸리 등이 유명하다. 필록세라 피해가 거의 없었던 지역으로 꼽히며 카르메네르가 대표 품종이다.",
+      "hint": "안데스와 태평양 사이의 산지",
+      "tags": [
+        "산지",
+        "칠레",
+        "신대륙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "멘도사(Mendoza)는 어떤 산지인가?",
+      "back": "아르헨티나 최대의 산지로 안데스 산기슭의 높은 고도에 포도밭이 있다. 건조한 기후와 큰 일교차 덕분에 말벡 중심의 진한 레드로 유명하다.",
+      "hint": "고지대의 말벡 산지",
+      "tags": [
+        "산지",
+        "아르헨티나",
+        "말벡"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "바로사 밸리(Barossa Valley)는 어떤 산지인가?",
+      "back": "호주 남부의 대표 산지로 쉬라즈로 유명하다. 세계에서 가장 오래된 축에 드는 쉬라즈 고목 포도밭이 남아 있다.",
+      "hint": "호주 쉬라즈의 본고장",
+      "tags": [
+        "산지",
+        "호주",
+        "쉬라즈"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "쿠나와라(Coonawarra)는 어떤 산지인가?",
+      "back": "호주 남부의 산지로 테라 로사라 불리는 붉은 석회질 토양으로 유명하다. 이 토양에서 자란 카베르네 소비뇽이 대표 와인이다.",
+      "hint": "테라 로사 토양의 산지",
+      "tags": [
+        "산지",
+        "호주",
+        "카베르네소비뇽"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "말버러(Marlborough)는 어떤 산지인가?",
+      "back": "뉴질랜드 남섬 북단의 산지로 뉴질랜드 와인 생산의 중심이다. 강렬한 향의 소비뇽 블랑으로 세계 시장에서 뉴질랜드 와인의 대명사가 됐다.",
+      "hint": "뉴질랜드 소비뇽 블랑의 중심지",
+      "tags": [
+        "산지",
+        "뉴질랜드",
+        "소비뇽블랑"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스텔렌보스(Stellenbosch)는 어떤 산지인가?",
+      "back": "남아프리카공화국의 대표 산지로 케이프타운 인근에 있다. 카베르네 소비뇽과 시라 등 레드와 슈냉 블랑 화이트가 고루 생산된다.",
+      "hint": "남아공의 대표 산지",
+      "tags": [
+        "산지",
+        "남아공",
+        "신대륙"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "테루아(Terroir)란?",
+      "back": "포도밭의 토양, 기후, 지형과 사람의 관행까지 포함해 와인의 개성을 만드는 환경 전체를 가리키는 프랑스어 개념이다. 같은 품종이라도 테루아에 따라 다른 와인이 된다는 생각이 바탕에 있다.",
+      "hint": "와인의 개성을 만드는 환경 전체",
+      "tags": [
+        "산지",
+        "개념",
+        "프랑스어"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "구세계 와인과 신세계 와인의 구분은?",
+      "back": "구세계는 프랑스, 이탈리아, 스페인 등 유럽의 전통 산지를, 신세계는 미국, 칠레, 호주, 뉴질랜드 등 유럽 밖의 산지를 가리킨다. 구세계는 산지명 중심, 신세계는 품종명 중심의 라벨 표기가 일반적이다.",
+      "hint": "유럽과 유럽 밖 산지의 구분",
+      "tags": [
+        "산지",
+        "개념",
+        "라벨"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "알코올 발효란?",
+      "back": "효모가 포도즙의 당분을 알코올과 이산화탄소로 바꾸는 과정이다. 모든 와인 양조의 핵심 단계로, 발효가 끝나는 시점에 따라 와인의 당도가 달라진다.",
+      "hint": "당분이 알코올로 바뀌는 과정",
+      "tags": [
+        "양조",
+        "발효",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 양조에서 효모의 역할은?",
+      "back": "포도즙의 당분을 알코올로 바꾸는 미생물로, 발효 중에 다양한 향 성분도 함께 만들어 낸다. 배양 효모를 쓰기도 하고 포도밭과 양조장에 있는 자연 효모에 맡기기도 한다.",
+      "hint": "발효를 일으키는 미생물",
+      "tags": [
+        "양조",
+        "발효",
+        "효모"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "젖산 발효(말로락틱 발효)란?",
+      "back": "알코올 발효 뒤에 젖산균이 날카로운 사과산을 부드러운 젖산으로 바꾸는 과정이다. 거의 모든 레드와 일부 화이트에 적용되며, 샤르도네의 버터 향은 이 과정의 부산물에서 온다.",
+      "hint": "사과산이 젖산으로 바뀐다",
+      "tags": [
+        "양조",
+        "발효",
+        "숙성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "침용(마세라시옹)이란?",
+      "back": "포도 껍질과 씨를 즙과 함께 담가 색소, 타닌, 향을 우려내는 과정이다. 레드 와인의 색과 구조는 대부분 이 단계에서 만들어진다.",
+      "hint": "껍질에서 색과 타닌을 우려내기",
+      "tags": [
+        "양조",
+        "추출",
+        "레드"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "펀칭 다운과 펌핑 오버란?",
+      "back": "레드 발효 중 위로 떠오른 껍질 층(캡)을 관리하는 두 방법이다. 펀칭 다운은 캡을 눌러 가라앉히고, 펌핑 오버는 아래쪽 즙을 퍼 올려 캡 위에 뿌린다. 모두 색과 타닌의 추출을 돕는 작업이다.",
+      "hint": "떠오른 껍질 층을 관리하는 방법",
+      "tags": [
+        "양조",
+        "추출",
+        "레드"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "프리 런 주스와 프레스 와인의 차이는?",
+      "back": "압착 전에 자연스럽게 흘러나온 즙을 프리 런, 압착해서 얻은 즙을 프레스 와인이라 한다. 프레스 와인이 타닌과 색이 더 진해 블렌딩으로 농도를 조절하는 데 쓰인다.",
+      "hint": "압착 전과 후의 즙",
+      "tags": [
+        "양조",
+        "압착",
+        "용어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "로제 와인은 어떻게 만드나?",
+      "back": "주로 적포도를 짧게 침용해 옅은 색만 얻은 뒤 화이트처럼 발효하는 방식으로 만든다. 완성된 레드와 화이트를 섞는 방식은 유럽에서는 샹파뉴 등 일부 경우에만 허용된다.",
+      "hint": "짧은 침용으로 색만 얻는다",
+      "tags": [
+        "양조",
+        "로제",
+        "침용"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "오크 숙성의 효과는?",
+      "back": "오크통에서 숙성하면 바닐라, 향신료, 토스트 같은 향이 더해지고 나무를 통한 미세한 산소 접촉으로 타닌이 부드러워진다. 통의 크기와 사용 연수에 따라 영향의 정도가 달라진다.",
+      "hint": "향과 미세 산화를 더한다",
+      "tags": [
+        "양조",
+        "오크",
+        "숙성"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "새 오크통과 사용한 오크통의 차이는?",
+      "back": "새 통은 향과 타닌을 강하게 입히고, 여러 번 쓴 통은 향을 거의 주지 않으면서 서서히 숙성만 시킨다. 생산자는 새 오크 비율로 스타일을 조절한다.",
+      "hint": "새 오크 비율이 스타일을 정한다",
+      "tags": [
+        "양조",
+        "오크",
+        "숙성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "프렌치 오크와 아메리칸 오크의 차이는?",
+      "back": "프렌치 오크는 결이 촘촘해 은은한 향신료와 토스트 향을 주는 것으로, 아메리칸 오크는 바닐라와 코코넛 계열의 향이 더 뚜렷한 것으로 알려져 있다.",
+      "hint": "코코넛 향은 어느 쪽인가",
+      "tags": [
+        "양조",
+        "오크",
+        "숙성"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "바토나주(Bâtonnage)란?",
+      "back": "숙성 중인 와인의 효모 앙금을 막대로 저어 섞는 작업이다. 앙금과의 접촉을 늘려 질감을 부드럽고 풍부하게 만든다.",
+      "hint": "앙금을 저어 주는 작업",
+      "tags": [
+        "양조",
+        "숙성",
+        "앙금"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "쉬르 리(Sur lie) 숙성이란?",
+      "back": "발효를 마친 와인을 효모 앙금 위에서 그대로 숙성하는 방식이다. 빵과 비스킷 같은 향과 크리미한 질감을 더하며 뮈스카데와 샴페인에서 중요한 기법이다.",
+      "hint": "앙금 위에서의 숙성",
+      "tags": [
+        "양조",
+        "숙성",
+        "앙금"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "타닌(Tannin)이란?",
+      "back": "포도 껍질, 씨, 줄기와 오크통에서 오는 떫은맛 성분이다. 입안을 조이는 감촉을 만들며 레드 와인의 구조와 숙성력을 좌우한다.",
+      "hint": "떫은맛을 내는 성분",
+      "tags": [
+        "양조",
+        "성분",
+        "레드"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "디캔팅(Decanting)이란?",
+      "back": "와인을 병에서 디캔터로 옮겨 따르는 일이다. 오래된 와인의 침전물을 걸러 내거나, 어린 와인을 공기와 접촉시켜 향이 열리게 하는 목적으로 한다.",
+      "hint": "침전물 분리와 공기 접촉",
+      "tags": [
+        "양조",
+        "서브기법",
+        "디캔터"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "브리딩(에어레이션)이란?",
+      "back": "와인을 공기와 접촉시켜 향과 맛이 열리도록 하는 것을 말한다. 잔을 돌리거나 디캔터에 옮기는 방식이 쓰이며, 타닌이 강한 어린 레드에서 효과가 뚜렷한 편이다.",
+      "hint": "공기 접촉으로 향을 연다",
+      "tags": [
+        "양조",
+        "서브기법",
+        "산소"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "전통 방식(메토드 트라디시오넬)이란?",
+      "back": "병 안에서 2차 발효를 일으켜 기포를 만드는 스파클링 제조법이다. 샴페인과 카바가 이 방식을 쓰며, 효모 앙금과 함께 병에서 숙성해 빵과 비스킷 향이 생긴다.",
+      "hint": "병내 2차 발효 방식",
+      "tags": [
+        "양조",
+        "스파클링",
+        "발효"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "샤르마 방식(탱크 방식)이란?",
+      "back": "밀폐된 대형 탱크에서 2차 발효를 시켜 기포를 만드는 스파클링 제조법이다. 병내 발효보다 비용이 낮고 과일 향이 신선하게 남아 프로세코에 주로 쓰인다.",
+      "hint": "탱크에서 2차 발효",
+      "tags": [
+        "양조",
+        "스파클링",
+        "발효"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "데고르주망(Dégorgement)이란?",
+      "back": "전통 방식 스파클링에서 병목에 모은 효모 앙금을 얼려서 제거하는 공정이다. 이 단계 이후 도자주로 당도를 맞추고 최종 코르크를 박는다.",
+      "hint": "병목의 앙금 제거 공정",
+      "tags": [
+        "양조",
+        "스파클링",
+        "공정"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "도자주(Dosage)란?",
+      "back": "데고르주망 뒤에 병에 소량의 와인과 당분 혼합액을 채워 최종 당도를 정하는 공정이다. 이때 넣는 당의 양에 따라 브뤼, 드미섹 같은 당도 표기가 정해진다.",
+      "hint": "최종 당도를 정하는 공정",
+      "tags": [
+        "양조",
+        "스파클링",
+        "당도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "르뮈아주(리들링)란?",
+      "back": "병내 2차 발효를 마친 스파클링 병을 조금씩 돌리고 기울여 효모 앙금을 병목으로 모으는 작업이다. 전통적으로는 퓌피트르라는 나무틀에서 손으로 했고 지금은 기계로도 한다.",
+      "hint": "앙금을 병목으로 모으는 작업",
+      "tags": [
+        "양조",
+        "스파클링",
+        "공정"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "주정 강화 와인이란?",
+      "back": "양조 과정에 브랜디 같은 증류주를 첨가해 알코올을 높인 와인이다. 포트, 셰리, 마데이라가 대표적이며 증류주를 넣는 시점에 따라 단맛이 달라진다.",
+      "hint": "증류주를 더한 와인",
+      "tags": [
+        "양조",
+        "주정강화",
+        "용어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "솔레라(Solera) 시스템이란?",
+      "back": "나이가 다른 와인을 여러 단의 통에 두고, 가장 오래된 단에서 일부만 병입하며 위 단의 젊은 와인으로 채워 가는 셰리의 숙성 방식이다. 여러 해의 와인이 섞여 일정한 스타일이 유지된다.",
+      "hint": "셰리의 단계식 숙성 체계",
+      "tags": [
+        "양조",
+        "주정강화",
+        "숙성"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "귀부병(노블 롯)이란?",
+      "back": "보트리티스 곰팡이가 포도의 수분을 증발시켜 당과 향을 농축시키는 현상이다. 조건이 맞으면 소테른이나 토카이 같은 최고급 스위트 와인의 원료가 된다.",
+      "hint": "곰팡이가 만드는 농축 포도",
+      "tags": [
+        "양조",
+        "스위트",
+        "포도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "아이스와인(Icewine)은 어떻게 만드나?",
+      "back": "나무에 매달린 채 언 포도를 수확해 언 상태로 압착해서 만든다. 수분이 얼음으로 남아 농축된 즙만 얻게 되며 캐나다와 독일이 대표 생산국이다.",
+      "hint": "언 포도를 압착한다",
+      "tags": [
+        "양조",
+        "스위트",
+        "수확"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "아파시멘토(Appassimento)란?",
+      "back": "수확한 포도를 말려 수분을 줄인 뒤 양조하는 이탈리아의 기법이다. 당과 향이 농축되어 아마로네처럼 진하고 알코올이 높은 와인이 된다.",
+      "hint": "포도를 말려서 양조",
+      "tags": [
+        "양조",
+        "이탈리아",
+        "농축"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "탄산 침용(카보닉 마세라시옹)이란?",
+      "back": "으깨지 않은 포도송이를 이산화탄소로 채운 탱크에 넣어 포도알 내부에서 발효가 시작되게 하는 기법이다. 타닌이 적고 과일 향이 튀는 가벼운 레드가 되며 보졸레 누보에 널리 쓰인다.",
+      "hint": "포도알 속에서 시작되는 발효",
+      "tags": [
+        "양조",
+        "발효",
+        "보졸레"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "잔당(Residual Sugar)이란?",
+      "back": "발효가 끝난 뒤 와인에 남아 있는 당분을 말한다. 잔당이 거의 없으면 드라이, 많으면 스위트로 분류되며 리터당 그램 단위로 표시한다.",
+      "hint": "발효 후 남은 당분",
+      "tags": [
+        "양조",
+        "당도",
+        "용어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "보당(샵탈리자시옹)이란?",
+      "back": "발효 전의 포도즙에 설탕을 더해 최종 알코올 도수를 높이는 기법이다. 포도가 덜 익는 서늘한 지역에서 허용되며, 단맛을 내는 것이 아니라 알코올을 보충하는 목적이다.",
+      "hint": "알코올을 높이기 위한 가당",
+      "tags": [
+        "양조",
+        "발효",
+        "규정"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 속 아황산염(이산화황)의 역할은?",
+      "back": "산화와 미생물 오염을 막기 위해 양조 과정에서 널리 쓰이는 보존제다. 발효 중 자연적으로도 소량 생성되며, 일정 기준 이상 들어 있으면 라벨에 함유 표시를 한다.",
+      "hint": "널리 쓰이는 보존제",
+      "tags": [
+        "양조",
+        "첨가물",
+        "보존"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "정제(피닝)와 여과란?",
+      "back": "병입 전에 와인을 맑게 만드는 공정이다. 정제는 응집제를 넣어 부유물을 가라앉히는 것, 여과는 필터로 입자를 걸러 내는 것이며 일부러 생략하는 생산자도 있다.",
+      "hint": "와인을 맑게 만드는 공정",
+      "tags": [
+        "양조",
+        "공정",
+        "병입"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "화이트 와인의 저온 발효는 왜 하나?",
+      "back": "신선한 과일 향을 지키기 위해 낮은 온도에서 천천히 발효하는 방식이다. 온도가 높으면 발효는 빨라지지만 섬세한 향이 날아가기 쉽다.",
+      "hint": "향을 지키는 온도 관리",
+      "tags": [
+        "양조",
+        "발효",
+        "화이트"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "자연 효모(토착 효모) 발효란?",
+      "back": "배양 효모를 넣지 않고 포도와 양조장에 사는 효모로 발효를 진행하는 방식이다. 발효가 느리고 결과를 예측하기 어렵지만 복합적인 향을 얻으려는 생산자들이 쓴다.",
+      "hint": "배양 효모 없이 발효",
+      "tags": [
+        "양조",
+        "발효",
+        "효모"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "퀴베(Cuvée)란?",
+      "back": "특정한 통, 블렌드, 병입 단위를 가리키는 프랑스어로 생산자가 구분해 만든 특정 와인을 부를 때 쓴다. 샹파뉴에서는 첫 압착에서 나온 가장 좋은 즙을 뜻하기도 한다.",
+      "hint": "특정 블렌드나 병입 단위",
+      "tags": [
+        "양조",
+        "용어",
+        "프랑스어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인을 블렌딩하는 이유는?",
+      "back": "품종, 밭, 통마다 다른 와인을 섞어 균형과 일관성을 얻기 위해서다. 보르도 블렌드처럼 품종별 장점을 보완하거나, 해마다 비슷한 하우스 스타일을 유지하는 데 쓰인다.",
+      "hint": "균형과 일관성을 위한 혼합",
+      "tags": [
+        "양조",
+        "블렌딩",
+        "공정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "코르크 마개와 스크류캡의 차이는?",
+      "back": "코르크는 전통적인 마개로 미세한 산소 투과가 있어 장기 숙성과 연관지어 논의된다. 스크류캡은 밀봉력이 일정하고 코르크 오염의 위험이 없어 호주와 뉴질랜드에서 널리 쓰인다.",
+      "hint": "두 마개의 장단점",
+      "tags": [
+        "양조",
+        "마개",
+        "숙성"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "부쇼네(코르크 오염)란?",
+      "back": "TCA라는 화합물에 오염된 코르크 때문에 와인에서 젖은 골판지 같은 곰팡내가 나는 결함이다. 와인 자체의 품질과 무관하게 발생하며 마개를 통해 생기는 대표적인 결함이다.",
+      "hint": "젖은 골판지 냄새의 결함",
+      "tags": [
+        "양조",
+        "결함",
+        "코르크"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "송이째 발효(홀 번치)란?",
+      "back": "포도를 줄기에서 떼지 않고 송이째 발효에 넣는 방식이다. 줄기에서 오는 향과 구조가 더해지며 피노 누아와 시라 양조에서 스타일의 선택지로 쓰인다.",
+      "hint": "줄기째 발효하는 방식",
+      "tags": [
+        "양조",
+        "발효",
+        "줄기"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스테인리스 스틸 탱크 발효의 특징은?",
+      "back": "온도 조절이 쉽고 와인에 향을 더하지 않아 품종과 산지의 신선한 과일 향을 그대로 살린다. 소비뇽 블랑이나 리슬링 같은 아로마틱 화이트에 널리 쓰인다.",
+      "hint": "향을 더하지 않는 용기",
+      "tags": [
+        "양조",
+        "발효",
+        "화이트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "리(Lees, 앙금)란?",
+      "back": "발효를 마친 효모 찌꺼기 등이 통 바닥에 가라앉은 침전물을 말한다. 이 앙금과 함께 숙성하면 와인에 빵 계열의 향과 부드러운 질감이 더해진다.",
+      "hint": "발효 후의 침전물",
+      "tags": [
+        "양조",
+        "앙금",
+        "숙성"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "오렌지 와인이란?",
+      "back": "청포도를 레드처럼 껍질과 함께 침용해 만든 와인으로 호박색을 띤다. 조지아의 전통 양조에서 이어진 방식이며 일반 화이트보다 타닌과 구조감이 있다.",
+      "hint": "껍질과 침용한 화이트",
+      "tags": [
+        "양조",
+        "침용",
+        "스타일"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "바디(Body)란?",
+      "back": "입안에서 느껴지는 와인의 무게감과 농도를 말한다. 알코올, 추출물, 당분이 많을수록 풀 바디로 느껴지며 라이트, 미디엄, 풀로 나누어 표현한다.",
+      "hint": "와인의 무게감",
+      "tags": [
+        "테이스팅",
+        "기초",
+        "질감"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인에서 산도(Acidity)의 역할은?",
+      "back": "신맛을 이루는 요소로 와인에 생동감과 청량감을 준다. 산도가 부족하면 밋밋하게, 지나치면 날카롭게 느껴지며 단맛과의 균형에도 중요하다.",
+      "hint": "생동감을 주는 신맛 요소",
+      "tags": [
+        "테이스팅",
+        "기초",
+        "산도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "수렴성(떫은 감촉)이란?",
+      "back": "타닌이 입안의 단백질과 반응해 조이고 마르는 듯한 감촉을 만드는 것을 말한다. 맛이 아니라 촉감에 가까우며 어린 레드에서 강하게 나타난다.",
+      "hint": "타닌이 만드는 조이는 감촉",
+      "tags": [
+        "테이스팅",
+        "타닌",
+        "질감"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "피니시(여운)란?",
+      "back": "와인을 삼킨 뒤 입안에 향과 맛이 남아 있는 시간을 말한다. 여운이 길고 기분 좋게 이어지는 것은 품질 평가에서 긍정적인 요소로 본다.",
+      "hint": "삼킨 뒤 남는 향과 맛",
+      "tags": [
+        "테이스팅",
+        "기초",
+        "평가"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "아로마와 부케의 차이는?",
+      "back": "아로마는 포도 품종과 발효에서 오는 향을, 부케는 병 숙성 과정에서 발달하는 향을 가리키는 전통적 구분이다. 현재는 아로마를 향 전체의 뜻으로 넓게 쓰기도 한다.",
+      "hint": "젊은 향과 숙성 향의 구분",
+      "tags": [
+        "테이스팅",
+        "향",
+        "용어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "1차·2차·3차 향의 구분은?",
+      "back": "1차 향은 포도 자체에서 오는 과일과 꽃 향, 2차 향은 발효와 양조에서 오는 빵·버터·오크 향, 3차 향은 숙성에서 오는 가죽·견과·버섯 향을 말한다.",
+      "hint": "향의 세 가지 기원",
+      "tags": [
+        "테이스팅",
+        "향",
+        "분류"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "드라이(Dry) 와인이란?",
+      "back": "잔당이 거의 없어 단맛이 느껴지지 않는 와인을 말한다. 과일 향이 풍부하면 달게 느껴질 수 있지만 실제 당분과 향은 별개다.",
+      "hint": "단맛이 없는 와인",
+      "tags": [
+        "테이스팅",
+        "당도",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 당도를 단계로 표현하면?",
+      "back": "잔당에 따라 드라이, 오프 드라이, 미디엄 스위트, 스위트 순으로 표현한다. 같은 잔당이라도 산도가 높으면 덜 달게 느껴진다.",
+      "hint": "드라이부터 스위트까지",
+      "tags": [
+        "테이스팅",
+        "당도",
+        "분류"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "밸런스(균형)란?",
+      "back": "산도, 타닌, 알코올, 당분, 과일 풍미가 어느 하나 튀지 않고 조화를 이루는 상태를 말한다. 스타일과 무관하게 품질 평가의 공통 기준으로 쓰인다.",
+      "hint": "요소들의 조화",
+      "tags": [
+        "테이스팅",
+        "평가",
+        "기초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "복합성(Complexity)이란?",
+      "back": "여러 층의 향과 맛이 겹쳐 잔을 들 때마다 다른 인상이 나타나는 성질이다. 단순한 와인과 구분되는 고급 와인의 특징으로 언급된다.",
+      "hint": "여러 층의 향과 맛",
+      "tags": [
+        "테이스팅",
+        "평가",
+        "향"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "미네랄리티(Minerality)란?",
+      "back": "젖은 돌, 부싯돌, 바닷바람 등에 비유되는 비과일 계열의 인상을 가리키는 표현이다. 과학적으로 명확히 정의된 용어는 아니지만 샤블리 같은 와인을 묘사할 때 널리 쓰인다.",
+      "hint": "돌과 부싯돌에 비유되는 인상",
+      "tags": [
+        "테이스팅",
+        "향",
+        "용어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "붉은 과일 향과 검은 과일 향의 구분은?",
+      "back": "붉은 과일은 딸기, 체리, 라즈베리 계열로 피노 누아 같은 가벼운 레드에서, 검은 과일은 블랙커런트, 블랙베리 계열로 카베르네 소비뇽 같은 진한 레드에서 흔히 쓰는 묘사다.",
+      "hint": "레드 와인 과일 향의 두 계열",
+      "tags": [
+        "테이스팅",
+        "향",
+        "레드"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "화이트 와인의 과일 향 계열은?",
+      "back": "감귤류(레몬, 자몽), 핵과류(복숭아, 살구), 열대 과일(파인애플, 망고)로 흔히 나눈다. 서늘한 산지일수록 감귤류, 따뜻한 산지일수록 열대 과일 쪽 묘사가 많아진다.",
+      "hint": "감귤류·핵과류·열대 과일",
+      "tags": [
+        "테이스팅",
+        "향",
+        "화이트"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인의 꽃 향 계열이란?",
+      "back": "장미, 제비꽃, 아카시아, 오렌지 꽃 등에 비유되는 향을 말한다. 게뷔르츠트라미너의 장미 향이나 네비올로의 장미·제비꽃 향처럼 품종을 추리하는 단서가 되기도 한다.",
+      "hint": "장미와 제비꽃 등의 향",
+      "tags": [
+        "테이스팅",
+        "향",
+        "품종단서"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인의 향신료 계열 향이란?",
+      "back": "후추, 감초, 정향, 계피 등에 비유되는 향이다. 시라의 검은 후추처럼 품종에서 오기도 하고 오크 숙성에서 오기도 한다.",
+      "hint": "후추와 정향 등의 향",
+      "tags": [
+        "테이스팅",
+        "향",
+        "오크"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "흙·숲 계열(어시) 향이란?",
+      "back": "젖은 흙, 낙엽, 버섯 등에 비유되는 향으로 주로 숙성된 레드에서 나타난다. 특히 오래 숙성된 피노 누아를 묘사할 때 자주 쓰인다.",
+      "hint": "젖은 흙과 버섯의 향",
+      "tags": [
+        "테이스팅",
+        "향",
+        "숙성"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "오크에서 오는 향의 예는?",
+      "back": "바닐라, 토스트, 훈연, 코코넛, 커피 같은 향이 대표적이다. 통 내부를 불로 그을리는 정도에 따라 토스트와 훈연 계열 향의 강도가 달라진다.",
+      "hint": "바닐라와 토스트의 기원",
+      "tags": [
+        "테이스팅",
+        "향",
+        "오크"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "숙성된 리슬링의 페트롤 노트란?",
+      "back": "숙성된 리슬링에서 나타나는 등유를 연상시키는 독특한 향이다. TDN이라는 성분에서 비롯되며, 이 품종의 개성으로 받아들이는 시각이 일반적이다.",
+      "hint": "등유에 비유되는 숙성 향",
+      "tags": [
+        "테이스팅",
+        "향",
+        "리슬링"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "구조감(Structure)이란?",
+      "back": "산도, 타닌, 알코올 같은 뼈대 요소가 만들어 내는 짜임새를 말한다. 구조가 좋은 와인은 장기 숙성을 버티는 힘이 있다고 평가된다.",
+      "hint": "와인의 뼈대",
+      "tags": [
+        "테이스팅",
+        "평가",
+        "용어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인의 눈물(레그)이란?",
+      "back": "잔을 돌린 뒤 잔 벽면을 타고 흘러내리는 줄기를 말한다. 알코올과 글리세롤 농도와 관련된 물리 현상일 뿐 품질의 지표는 아니다.",
+      "hint": "잔 벽면의 흘러내리는 줄기",
+      "tags": [
+        "테이스팅",
+        "외관",
+        "속설"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 색에서 알 수 있는 것은?",
+      "back": "색의 진하기와 색조로 품종, 숙성 정도, 양조 방식의 단서를 얻을 수 있다. 예를 들어 네비올로는 색이 옅고 시라는 짙으며, 색조는 나이가 들수록 변한다.",
+      "hint": "색이 주는 단서",
+      "tags": [
+        "테이스팅",
+        "외관",
+        "기초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "화이트 와인 색은 숙성되면 어떻게 변하나?",
+      "back": "어릴 때는 옅은 레몬색이던 것이 숙성되면서 금색, 호박색으로 점점 짙어진다. 레드와 반대로 나이가 들수록 색이 진해지는 것이 특징이다.",
+      "hint": "점점 짙어지는 색",
+      "tags": [
+        "테이스팅",
+        "외관",
+        "숙성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "레드 와인 색은 숙성되면 어떻게 변하나?",
+      "back": "어릴 때의 보랏빛과 루비색이 숙성되면서 가넷색, 벽돌색으로 옅어지고 갈색조를 띠게 된다. 잔을 기울여 가장자리 색을 보면 변화를 관찰하기 쉽다.",
+      "hint": "벽돌색으로 변해 간다",
+      "tags": [
+        "테이스팅",
+        "외관",
+        "숙성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "테이스팅의 기본 순서는?",
+      "back": "외관(색과 투명도)을 보고, 향을 맡고, 입에 머금어 맛과 질감을 확인하는 순서로 진행한다. 마지막으로 여운까지 종합해 전체 인상을 정리한다.",
+      "hint": "보고, 맡고, 맛보기",
+      "tags": [
+        "테이스팅",
+        "방법",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스월링(Swirling)을 하는 이유는?",
+      "back": "잔을 돌려 와인을 공기와 섞으면 휘발성 향 성분이 잘 피어올라 향을 또렷하게 맡을 수 있다. 잔을 테이블에 둔 채 돌리는 방법이 배우기 쉽다.",
+      "hint": "향을 피워 올리는 동작",
+      "tags": [
+        "테이스팅",
+        "방법",
+        "향"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "시음 적기(드링킹 윈도)란?",
+      "back": "와인이 가장 좋은 상태에 있다고 여겨지는 기간을 말한다. 대부분의 와인은 출시 직후가 적기이며, 일부 고급 와인만 수년에서 수십 년의 숙성 뒤에 정점에 이른다.",
+      "hint": "가장 좋은 상태의 기간",
+      "tags": [
+        "테이스팅",
+        "숙성",
+        "평가"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "어택(Attack)이란?",
+      "back": "와인을 입에 넣은 순간의 첫인상을 가리키는 테이스팅 용어다. 첫 단맛, 산미, 강도 등이 여기서 평가되며 이후 중간 맛과 여운으로 이어진다.",
+      "hint": "입안의 첫인상",
+      "tags": [
+        "테이스팅",
+        "용어",
+        "평가"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "미드 팔레트(Mid-palate)란?",
+      "back": "첫인상과 여운 사이, 와인을 입에 머금고 있는 동안의 맛과 질감을 가리킨다. 이 구간이 빈약하면 속이 빈 듯하다는 평가를 받는다.",
+      "hint": "머금는 동안의 맛과 질감",
+      "tags": [
+        "테이스팅",
+        "용어",
+        "평가"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "크리스프(Crisp)하다는 표현은?",
+      "back": "산도가 생기 있게 느껴지는 상쾌한 화이트를 묘사하는 말이다. 소비뇽 블랑이나 어린 리슬링처럼 신선한 스타일에 흔히 쓰인다.",
+      "hint": "상쾌한 산도의 표현",
+      "tags": [
+        "테이스팅",
+        "용어",
+        "화이트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "오프 드라이(Off-dry)란?",
+      "back": "약간의 잔당이 있어 은은한 단맛이 느껴지는 상태를 말한다. 드라이와 미디엄 스위트 사이의 단계로, 독일 리슬링 등에서 흔한 스타일이다.",
+      "hint": "은은한 단맛의 단계",
+      "tags": [
+        "테이스팅",
+        "당도",
+        "용어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "라이트 바디와 풀 바디를 가르는 요소는?",
+      "back": "알코올 도수, 추출물의 농도, 당분, 오크 사용 여부 등이 무게감을 좌우한다. 같은 품종이라도 산지의 기후와 양조 방식에 따라 바디가 달라진다.",
+      "hint": "무게감을 정하는 요소들",
+      "tags": [
+        "테이스팅",
+        "질감",
+        "분류"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인에서 알코올이 주는 감각은?",
+      "back": "알코올은 목과 입안에서 따뜻한 느낌과 무게감으로 나타난다. 균형을 잃을 만큼 높으면 화끈거림으로 지적된다.",
+      "hint": "따뜻함과 무게감",
+      "tags": [
+        "테이스팅",
+        "질감",
+        "알코올"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "버터리(Buttery)하다는 표현은?",
+      "back": "젖산 발효의 부산물인 디아세틸에서 오는 버터 향과 크리미한 질감을 묘사하는 말이다. 오크 숙성한 샤르도네에서 흔하게 쓰이는 표현이다.",
+      "hint": "디아세틸이 만드는 향",
+      "tags": [
+        "테이스팅",
+        "향",
+        "샤르도네"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "그린 노트(피망·풀 향)의 원인은?",
+      "back": "피라진이라는 성분에서 오는 피망과 풀 향으로 소비뇽 블랑, 카베르네 프랑, 덜 익은 카베르네 소비뇽에서 흔히 나타난다. 품종의 개성으로 보기도 하고 과하면 미숙한 수확의 신호로 보기도 한다.",
+      "hint": "피라진에서 오는 향",
+      "tags": [
+        "테이스팅",
+        "향",
+        "품종단서"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "브렛(브레타노미세스) 향이란?",
+      "back": "브레타노미세스 효모가 만드는 마구간이나 약품에 비유되는 향이다. 소량이면 개성으로 받아들이는 시각도 있지만 일반적으로는 와인의 결함으로 분류된다.",
+      "hint": "마구간에 비유되는 향",
+      "tags": [
+        "테이스팅",
+        "결함",
+        "향"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "산화된 와인의 특징은?",
+      "back": "공기에 과도하게 노출된 와인은 색이 갈변하고 신선한 과일 향 대신 견과류나 사과 식초 같은 향이 난다. 셰리처럼 의도된 산화 스타일과 결함으로서의 산화는 구분된다.",
+      "hint": "갈변과 견과류 향",
+      "tags": [
+        "테이스팅",
+        "결함",
+        "산소"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "환원취란?",
+      "back": "산소가 부족한 환경에서 생긴 황 화합물 때문에 성냥이나 삶은 달걀 등에 비유되는 냄새가 나는 상태다. 가벼운 경우 디캔팅 같은 공기 접촉으로 줄어들기도 한다.",
+      "hint": "성냥에 비유되는 냄새",
+      "tags": [
+        "테이스팅",
+        "결함",
+        "산소"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인의 질감(텍스처)이란?",
+      "back": "입안에서 느껴지는 촉감을 말하며 실키, 벨벳 같은, 크리미, 거친 등으로 표현한다. 타닌의 질, 잔당, 앙금 숙성 여부 등이 질감에 영향을 준다.",
+      "hint": "입안의 촉감",
+      "tags": [
+        "테이스팅",
+        "질감",
+        "용어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "빈티지에 따라 와인이 달라지는 이유는?",
+      "back": "그해의 기온, 강수, 일조 같은 날씨가 포도의 성숙도와 산도를 바꾸기 때문이다. 기후가 서늘하고 변덕스러운 산지일수록 빈티지 차이가 크게 나타난다.",
+      "hint": "해마다 다른 날씨의 영향",
+      "tags": [
+        "테이스팅",
+        "빈티지",
+        "기후"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "블라인드 테이스팅이란?",
+      "back": "라벨 정보를 가린 채 시음해 선입견 없이 와인을 평가하는 방법이다. 품종과 산지를 추리하는 훈련이나 공정한 품질 비교에 쓰인다.",
+      "hint": "라벨을 가린 시음",
+      "tags": [
+        "테이스팅",
+        "방법",
+        "평가"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "레드 와인의 일반적인 서빙 온도는?",
+      "back": "대개 15~18도 사이가 기준으로 통용된다. 실온보다 약간 낮은 온도로, 너무 따뜻하면 알코올이 도드라지고 너무 차가우면 타닌이 거칠게 느껴진다.",
+      "hint": "실온보다 약간 낮게",
+      "tags": [
+        "서비스",
+        "온도",
+        "레드"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "화이트 와인의 일반적인 서빙 온도는?",
+      "back": "대개 7~13도 사이가 기준으로 통용되며, 가벼운 화이트는 차갑게, 오크 숙성 화이트는 상대적으로 덜 차갑게 낸다. 지나치게 차가우면 향이 잘 드러나지 않는다.",
+      "hint": "스타일에 따라 차게",
+      "tags": [
+        "서비스",
+        "온도",
+        "화이트"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스파클링 와인의 서빙 온도는?",
+      "back": "6~8도 정도로 충분히 차게 내는 것이 일반적인 기준이다. 낮은 온도가 탄산을 안정시켜 거품이 급하게 넘치는 것을 막아 준다.",
+      "hint": "충분히 차게",
+      "tags": [
+        "서비스",
+        "온도",
+        "스파클링"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 장기 보관에 알맞은 온도는?",
+      "back": "10~15도 사이의 서늘하고 일정한 온도가 기준으로 통용된다. 절대 온도보다 급격한 온도 변화가 더 해롭다고 알려져 있다.",
+      "hint": "서늘하고 일정하게",
+      "tags": [
+        "서비스",
+        "보관",
+        "온도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 보관과 습도의 관계는?",
+      "back": "코르크가 마르지 않도록 습도 70% 안팎이 알맞다고 알려져 있다. 너무 건조하면 코르크가 수축해 공기가 들어가고, 너무 습하면 라벨이 상하기 쉽다.",
+      "hint": "코르크를 위한 습도",
+      "tags": [
+        "서비스",
+        "보관",
+        "코르크"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 병을 눕혀 보관하는 이유는?",
+      "back": "코르크가 와인에 닿아 마르지 않게 하기 위해서다. 코르크가 마르면 수축해 산소가 들어갈 수 있다. 스크류캡 와인은 세워 보관해도 무방하다.",
+      "hint": "코르크가 마르지 않게",
+      "tags": [
+        "서비스",
+        "보관",
+        "코르크"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 보관 시 빛과 진동을 피하는 이유는?",
+      "back": "자외선은 와인의 향 성분을 변질시키는 광화학 반응을 일으킬 수 있고, 지속적인 진동은 숙성에 나쁜 영향을 준다고 알려져 있다. 그래서 어둡고 조용한 장소가 기본 조건이다.",
+      "hint": "어둡고 조용한 곳이 기본",
+      "tags": [
+        "서비스",
+        "보관",
+        "조건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "개봉한 와인은 어떻게 보관하나?",
+      "back": "마개를 다시 막아 냉장 보관하면 산화를 늦출 수 있으며 보통 며칠 안에 상태가 눈에 띄게 변한다. 진공 마개나 불활성 가스 제품으로 산소 접촉을 줄이는 방법도 쓰인다.",
+      "hint": "다시 막아 냉장 보관",
+      "tags": [
+        "서비스",
+        "보관",
+        "산화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "보르도 글라스의 특징은?",
+      "back": "볼이 크고 어깨가 높은 튤립형 잔으로 카베르네 소비뇽 같은 풀 바디 레드에 맞춰 설계됐다. 향을 모으면서 와인이 혀 안쪽으로 넓게 흐르도록 만들어졌다.",
+      "hint": "풀 바디 레드용 잔",
+      "tags": [
+        "서비스",
+        "글라스",
+        "레드"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "부르고뉴 글라스의 특징은?",
+      "back": "볼이 넓고 둥근 풍선형 잔으로 피노 누아처럼 향이 섬세한 와인에 맞춰 설계됐다. 넓은 표면적이 공기 접촉을 늘려 향이 잘 피어나게 한다.",
+      "hint": "향이 섬세한 와인용 잔",
+      "tags": [
+        "서비스",
+        "글라스",
+        "피노누아"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "플루트 잔과 튤립 잔의 차이는?",
+      "back": "플루트는 좁고 긴 형태로 기포가 오래 올라오는 모습을 살리고, 튤립은 볼이 약간 넓어 향을 더 잘 모은다. 최근에는 스파클링에도 향을 살리는 튤립형이 많이 쓰인다.",
+      "hint": "기포와 향, 무엇을 살릴까",
+      "tags": [
+        "서비스",
+        "글라스",
+        "스파클링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "화이트 와인 잔이 레드 잔보다 작은 이유는?",
+      "back": "차게 낸 와인의 온도가 오르기 전에 적당량씩 따르기 위해서다. 볼이 작으면 공기 접촉도 줄어 신선한 향이 유지되기 쉽다.",
+      "hint": "온도 유지를 위한 크기",
+      "tags": [
+        "서비스",
+        "글라스",
+        "화이트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 잔의 스템을 잡는 방식이 통용되는 이유는?",
+      "back": "볼을 감싸 쥐면 체온으로 와인의 온도가 오르고 지문이 남기 때문에, 일반적으로 다리(스템) 부분을 잡는 방식이 통용된다. 온도 영향이 적은 상황에서는 볼을 잡는 경우도 있다.",
+      "hint": "체온과 지문을 피하기",
+      "tags": [
+        "서비스",
+        "예절",
+        "글라스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "잔에 와인을 따르는 일반적인 양은?",
+      "back": "잔의 3분의 1 안팎까지 따르는 것이 통용되는 기준이다. 위쪽 공간을 남겨야 잔을 돌려 향을 모을 수 있다.",
+      "hint": "3분의 1 안팎",
+      "tags": [
+        "서비스",
+        "예절",
+        "서빙"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "디캔터와 카라프의 차이는?",
+      "back": "둘 다 와인을 옮겨 담는 용기지만 디캔터는 침전물 분리와 공기 접촉의 목적이 강조되고, 카라프는 서빙용으로 단순히 옮겨 내는 용도에 가깝다. 실제로는 혼용되는 경우가 많다.",
+      "hint": "목적이 다른 두 용기",
+      "tags": [
+        "서비스",
+        "도구",
+        "디캔팅"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "소믈리에(Sommelier)란?",
+      "back": "레스토랑에서 와인 목록의 관리, 서비스, 음식과의 조합 제안을 담당하는 전문 인력이다. 시음 능력과 산지, 빈티지에 대한 지식을 갖추고 손님의 선택을 돕는다.",
+      "hint": "와인 서비스 전문 인력",
+      "tags": [
+        "서비스",
+        "직업",
+        "용어"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "서빙 온도가 와인 맛에 미치는 영향은?",
+      "back": "온도가 낮으면 산도와 타닌이 도드라지고 향은 닫히며, 온도가 높으면 향과 알코올의 느낌이 커진다. 같은 와인도 온도에 따라 인상이 크게 달라진다.",
+      "hint": "온도에 따라 다른 인상",
+      "tags": [
+        "서비스",
+        "온도",
+        "서빙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 라벨의 기본 항목은?",
+      "back": "생산자명, 산지(원산지 명칭), 빈티지, 알코올 도수, 용량이 기본적으로 표시된다. 나라와 등급에 따라 품종명, 당도, 병입 정보가 더해진다.",
+      "hint": "라벨에서 확인할 것들",
+      "tags": [
+        "서비스",
+        "라벨",
+        "기초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "라벨의 빈티지 표기가 뜻하는 것은?",
+      "back": "그 와인의 포도를 수확한 해를 뜻하며 병입이나 출시 연도가 아니다. 여러 해의 와인을 섞은 논빈티지(NV) 제품에는 연도를 표기하지 않는다.",
+      "hint": "수확한 해를 뜻한다",
+      "tags": [
+        "서비스",
+        "라벨",
+        "빈티지"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "샤토와 도멘 표기의 차이는?",
+      "back": "둘 다 포도밭을 소유하고 직접 양조하는 생산자를 가리키는 프랑스어다. 샤토는 주로 보르도에서, 도멘은 주로 부르고뉴에서 쓰는 표현이다.",
+      "hint": "보르도와 부르고뉴의 생산자 호칭",
+      "tags": [
+        "서비스",
+        "라벨",
+        "프랑스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "비에유 비뉴(Vieilles Vignes) 표기란?",
+      "back": "'오래된 포도나무'라는 뜻의 프랑스어 표기다. 수령이 높은 나무는 수확량이 적은 대신 농축된 포도를 맺는다고 알려져 있으나, 몇 년 이상이어야 하는지에 대한 법적 기준은 대부분 없다.",
+      "hint": "오래된 포도나무 표기",
+      "tags": [
+        "서비스",
+        "라벨",
+        "프랑스어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "리제르바(Reserva·Riserva) 표기의 의미는?",
+      "back": "스페인과 이탈리아에서는 법으로 정한 최소 숙성 기간을 채워야 쓸 수 있는 표기다. 반면 미국 등 여러 나라에서 리저브는 법적 기준이 없는 마케팅 용어로 쓰이는 경우가 많다.",
+      "hint": "나라마다 다른 무게의 표기",
+      "tags": [
+        "서비스",
+        "라벨",
+        "등급"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "미 장 부테유 오 샤토(Mis en bouteille au château)란?",
+      "back": "'샤토에서 병입'이라는 뜻의 프랑스어 표기로, 포도 재배부터 병입까지 생산자가 직접 했다는 의미다. 외부에서 사 온 와인을 병입한 네고시앙 제품과 구분하는 단서가 된다.",
+      "hint": "생산자 직접 병입 표기",
+      "tags": [
+        "서비스",
+        "라벨",
+        "프랑스어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "라벨의 품종 표기에는 어떤 규정이 있나?",
+      "back": "품종명을 표기하려면 그 품종이 일정 비율 이상 들어가야 한다는 규정을 두는 나라가 많다. 기준 비율은 나라마다 다르며, 표기된 품종만으로 만들었다고 단정할 수는 없다.",
+      "hint": "최소 비율 규정이 있다",
+      "tags": [
+        "서비스",
+        "라벨",
+        "규정"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 라벨의 알코올 도수 표기는?",
+      "back": "부피 기준 알코올 함량(% vol 또는 ABV)이 의무적으로 표시된다. 일반적인 스틸 와인은 대개 11~15% 범위에 있으며 주정 강화 와인은 이보다 높다.",
+      "hint": "ABV로 표시된다",
+      "tags": [
+        "서비스",
+        "라벨",
+        "알코올"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "독일 라벨의 트로켄(Trocken)과 할프트로켄이란?",
+      "back": "독일 라벨의 당도 표기로 트로켄은 드라이, 할프트로켄은 미디엄 드라이를 뜻한다. 프레디카트 등급과 별개로 완성된 와인의 실제 당도를 알려 주는 단서다.",
+      "hint": "독일의 당도 표기",
+      "tags": [
+        "서비스",
+        "라벨",
+        "독일"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "스파클링의 당도 표기 순서는?",
+      "back": "당도가 낮은 쪽부터 브뤼 나튀르, 엑스트라 브뤼, 브뤼, 엑스트라 드라이, 섹, 드미섹 순으로 표기한다. 엑스트라 드라이가 브뤼보다 오히려 더 달다는 점이 흔한 혼동 지점이다.",
+      "hint": "브뤼가 엑스트라 드라이보다 드라이",
+      "tags": [
+        "서비스",
+        "라벨",
+        "스파클링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "개봉한 스파클링의 탄산을 유지하는 방법은?",
+      "back": "병목을 밀봉하는 전용 스토퍼로 막아 세워서 냉장 보관하면 탄산 손실을 늦출 수 있다. 병에 숟가락을 꽂아 두는 방법은 효과가 확인되지 않은 속설로 알려져 있다.",
+      "hint": "전용 스토퍼로 밀봉",
+      "tags": [
+        "서비스",
+        "보관",
+        "스파클링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 셀러(와인 냉장고)의 역할은?",
+      "back": "온도와 습도를 일정하게 유지하고 진동과 빛을 줄여 가정에서도 보관 조건을 맞춰 주는 장치다. 일반 냉장고는 온도가 너무 낮고 건조해 장기 보관에는 맞지 않는 것으로 알려져 있다.",
+      "hint": "보관 조건을 맞추는 장치",
+      "tags": [
+        "서비스",
+        "보관",
+        "도구"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "웨이터스 프렌드(소믈리에 나이프)란?",
+      "back": "접이식 칼과 스크류, 지렛대가 결합된 휴대용 와인 오프너다. 포일을 자르고 코르크를 지렛대의 원리로 뽑는 구조로 서비스 현장에서 가장 널리 쓰인다.",
+      "hint": "접이식 휴대용 오프너",
+      "tags": [
+        "서비스",
+        "도구",
+        "오프너"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인 포일(캡슐)은 어떻게 자르나?",
+      "back": "병목을 감싼 포일을 병 입구 아래 튀어나온 립 부분에서 둥글게 잘라 벗기는 방식이 통용된다. 따를 때 와인이 포일에 닿지 않게 하기 위한 관례다.",
+      "hint": "립 아래에서 둥글게",
+      "tags": [
+        "서비스",
+        "도구",
+        "예절"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "여러 와인을 내는 일반적인 순서는?",
+      "back": "가벼운 것에서 무거운 것으로, 화이트에서 레드로, 드라이에서 스위트로 진행하는 것이 통용되는 관례다. 진한 와인을 먼저 내면 가벼운 와인의 섬세함이 묻히기 때문이다.",
+      "hint": "가벼운 것부터 무거운 것으로",
+      "tags": [
+        "서비스",
+        "서빙",
+        "순서"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "음식과 와인 조합의 기본 원리는?",
+      "back": "무게를 맞추는 것(가벼운 요리에 가벼운 와인)과, 비슷한 풍미끼리 잇거나 대비시키는 것이 기본 원리로 정리된다. 절대적인 규칙이라기보다 출발점이 되는 지침이다.",
+      "hint": "무게 맞추기와 풍미 잇기",
+      "tags": [
+        "서비스",
+        "페어링",
+        "원리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "타닌과 단백질·지방의 상호작용은?",
+      "back": "타닌은 단백질과 결합하는 성질이 있어 붉은 고기의 단백질, 지방과 만나면 떫은 감촉이 한결 부드럽게 느껴진다. 스테이크와 타닌이 강한 레드의 조합이 자주 언급되는 이유다.",
+      "hint": "타닌을 누그러뜨리는 단백질",
+      "tags": [
+        "서비스",
+        "페어링",
+        "타닌"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "산도가 높은 와인과 음식의 관계는?",
+      "back": "높은 산도는 기름진 음식의 느끼함을 씻어 주는 역할을 한다고 설명된다. 또한 요리보다 와인의 산도가 낮으면 와인이 밋밋하게 느껴지기 쉽다.",
+      "hint": "기름기를 씻어 주는 산도",
+      "tags": [
+        "서비스",
+        "페어링",
+        "산도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "와인의 숙성 잠재력을 좌우하는 요소는?",
+      "back": "높은 산도와 타닌, 충분한 농축도, 그리고 스위트 와인의 경우 당분이 대표적인 요소로 꼽힌다. 이런 뼈대가 있는 와인이 시간 속에서 3차 향을 발달시킨다.",
+      "hint": "산도·타닌·농축도",
+      "tags": [
+        "서비스",
+        "숙성",
+        "보관"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "대부분의 와인과 숙성의 관계는?",
+      "back": "시중 와인의 대부분은 출시 직후의 소비를 전제로 만들어지며 오래 둔다고 좋아지지 않는다. 장기 숙성으로 발전하는 것은 구조와 농축도를 갖춘 일부 와인에 한정된다.",
+      "hint": "오래 둔다고 좋아지지 않는다",
+      "tags": [
+        "서비스",
+        "숙성",
+        "보관"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "매그넘 등 와인 병 크기의 명칭은?",
+      "back": "표준 병은 750ml이고 그 두 배인 1.5L를 매그넘이라 한다. 하프 보틀(375ml), 더블 매그넘(3L) 등도 있으며, 큰 병은 산소 비율이 낮아 숙성이 느리다고 알려져 있다.",
+      "hint": "표준 병의 두 배가 매그넘",
+      "tags": [
+        "서비스",
+        "병",
+        "용어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "펀트(병 바닥의 홈)란?",
+      "back": "와인 병 바닥이 안쪽으로 움푹 들어간 부분을 말한다. 병의 구조적 강도와 관련된 전통적인 형태로, 홈의 깊이가 품질을 말해 주는 것은 아니다.",
+      "hint": "병 바닥의 움푹한 홈",
+      "tags": [
+        "서비스",
+        "병",
+        "속설"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    },
+    {
+      "front": "코르카주(콜키지)란?",
+      "back": "손님이 가져온 와인을 레스토랑에서 개봉하고 서빙해 주는 대가로 받는 요금을 말한다. 업장마다 정책이 다르며 사전에 확인하는 것이 통용되는 예절로 여겨진다.",
+      "hint": "반입 와인의 서비스 요금",
+      "tags": [
+        "서비스",
+        "예절",
+        "용어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-wine-basics-v1",
+        "claude-authoring-wine-basics-v1"
+      ]
+    }
+  ]
+}
