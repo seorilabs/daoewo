@@ -1,0 +1,3140 @@
+{
+  "schemaVersion": 1,
+  "deckId": "csat-essential-english",
+  "sourceRegistry": [
+    {
+      "id": "brief-csat-essential-english-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:csat-essential-english:v1",
+      "revision": "brief-v2@2026-08-26"
+    },
+    {
+      "id": "claude-authoring-csat-essential-english-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:csat-essential-english:v1",
+      "revision": "claude-batch-v2@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "perceive",
+      "back": "v. 인식하다, 지각하다",
+      "hint": "perception n. 지각, 인식",
+      "example": "We tend to perceive familiar objects more quickly than unfamiliar ones.",
+      "exampleMeaning": "우리는 낯선 사물보다 익숙한 사물을 더 빨리 지각하는 경향이 있다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "attribute",
+      "back": "v. ~의 탓으로 돌리다, ~의 결과로 보다 / n. 속성, 자질",
+      "hint": "attribute A to B: A를 B의 결과로 보다",
+      "example": "Many researchers attribute the decline in bee populations to widespread pesticide use.",
+      "exampleMeaning": "많은 연구자들은 벌 개체 수의 감소를 광범위한 살충제 사용의 결과로 본다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "constitute",
+      "back": "v. 구성하다, ~이 되다",
+      "hint": "constitution n. 구성, 헌법",
+      "example": "Small daily choices constitute the foundation of long-term health.",
+      "exampleMeaning": "소소한 일상의 선택들이 장기적인 건강의 토대를 구성한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "undermine",
+      "back": "v. 약화시키다, (기반을) 훼손하다",
+      "hint": "under(아래) + mine(파다): 밑을 파서 무너뜨리다",
+      "example": "Constant criticism can undermine a child's confidence in his or her own judgment.",
+      "exampleMeaning": "끊임없는 비판은 자신의 판단에 대한 아이의 자신감을 약화시킬 수 있다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "derive",
+      "back": "v. 끌어내다, 얻다; (from) ~에서 유래하다",
+      "hint": "derive A from B: B에서 A를 얻다",
+      "example": "Many English scientific terms derive from Latin and Greek roots.",
+      "exampleMeaning": "많은 영어 과학 용어는 라틴어와 그리스어 어근에서 유래한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "imply",
+      "back": "v. 암시하다, 내포하다",
+      "hint": "implication n. 함의 / infer(추론하다)와 구별",
+      "example": "A rise in average temperature implies broader changes in the entire climate system.",
+      "exampleMeaning": "평균 기온의 상승은 기후 시스템 전체의 더 광범위한 변화를 암시한다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "infer",
+      "back": "v. 추론하다, 추리하다",
+      "hint": "글쓴이는 imply(암시)하고 독자는 infer(추론)한다",
+      "example": "Readers infer the writer's attitude from the tone of the passage.",
+      "exampleMeaning": "독자는 글의 어조로부터 글쓴이의 태도를 추론한다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "assume",
+      "back": "v. 가정하다, 추정하다; (책임 등을) 떠맡다",
+      "hint": "assumption n. 가정, 전제",
+      "example": "Economists often assume that consumers act in their own interest.",
+      "exampleMeaning": "경제학자들은 흔히 소비자가 자신의 이익에 따라 행동한다고 가정한다.",
+      "tags": [
+        "동사",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "assert",
+      "back": "v. 주장하다, 단언하다",
+      "hint": "assertion n. 주장",
+      "example": "Some philosophers assert that moral rules exist independently of culture.",
+      "exampleMeaning": "일부 철학자들은 도덕 규칙이 문화와 무관하게 존재한다고 주장한다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "acknowledge",
+      "back": "v. 인정하다; 감사를 표하다",
+      "example": "Scientists must acknowledge the limitations of their own experiments.",
+      "exampleMeaning": "과학자들은 자기 실험의 한계를 인정해야 한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "anticipate",
+      "back": "v. 예상하다, 기대하다",
+      "hint": "anticipation n. 예상, 기대",
+      "example": "Skilled players anticipate their opponent's next move before it happens.",
+      "exampleMeaning": "숙련된 선수는 상대의 다음 움직임을 일어나기 전에 예상한다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "accumulate",
+      "back": "v. 축적하다, 모으다",
+      "hint": "accumulation n. 축적",
+      "example": "Plastic waste continues to accumulate in the deepest parts of the ocean.",
+      "exampleMeaning": "플라스틱 쓰레기는 바다의 가장 깊은 곳에 계속 축적되고 있다.",
+      "tags": [
+        "동사",
+        "환경"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "adapt",
+      "back": "v. 적응하다; 조정하다, 각색하다",
+      "hint": "adopt(채택하다)와 혼동 주의",
+      "example": "Species that fail to adapt to changing environments eventually disappear.",
+      "exampleMeaning": "변화하는 환경에 적응하지 못하는 종은 결국 사라진다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "assess",
+      "back": "v. 평가하다, 가늠하다",
+      "hint": "assessment n. 평가",
+      "example": "Teachers need reliable tools to assess students' actual understanding.",
+      "exampleMeaning": "교사에게는 학생들의 실제 이해도를 평가할 신뢰할 만한 도구가 필요하다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "attain",
+      "back": "v. 이루다, 달성하다; 도달하다",
+      "hint": "attainment n. 성취",
+      "example": "Few athletes attain world-class performance without years of systematic training.",
+      "exampleMeaning": "체계적인 수년간의 훈련 없이 세계적 수준의 기량을 달성하는 선수는 거의 없다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "coincide",
+      "back": "v. 동시에 일어나다, 일치하다",
+      "hint": "coincidence n. 우연의 일치",
+      "example": "The rise of cities coincided with the development of agriculture.",
+      "exampleMeaning": "도시의 발흥은 농업의 발달과 시기적으로 일치했다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "compensate",
+      "back": "v. 보상하다; (for) 보완하다",
+      "hint": "compensate for: ~을 보완하다",
+      "example": "Blind people often compensate for the loss of sight with sharper hearing.",
+      "exampleMeaning": "시각 장애인은 흔히 시력의 상실을 더 예민한 청각으로 보완한다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "comprise",
+      "back": "v. ~로 구성되다; 차지하다",
+      "example": "The human brain comprises billions of neurons connected in complex networks.",
+      "exampleMeaning": "인간의 뇌는 복잡한 연결망으로 이어진 수십억 개의 뉴런으로 구성된다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "conceive",
+      "back": "v. (생각을) 품다, 상상하다; 고안하다",
+      "hint": "conceive of: ~을 상상하다 / concept n. 개념",
+      "example": "It is difficult to conceive of a society without any form of exchange.",
+      "exampleMeaning": "어떤 형태의 교환도 없는 사회를 상상하기는 어렵다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "confine",
+      "back": "v. 한정하다, 국한시키다; 가두다",
+      "hint": "be confined to: ~에 국한되다",
+      "example": "The effects of stress are not confined to the mind; they reach the entire body.",
+      "exampleMeaning": "스트레스의 영향은 마음에 국한되지 않고 몸 전체에 미친다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "conform",
+      "back": "v. (규칙·관습에) 따르다, 순응하다",
+      "hint": "conform to: ~에 순응하다 / confirm(확인하다)과 혼동 주의",
+      "example": "Adolescents often conform to group norms to avoid standing out.",
+      "exampleMeaning": "청소년들은 흔히 튀지 않기 위해 집단의 규범에 순응한다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "contradict",
+      "back": "v. 반박하다, 모순되다",
+      "hint": "contradiction n. 모순",
+      "example": "New evidence sometimes contradicts theories that scientists have long accepted.",
+      "exampleMeaning": "새로운 증거는 때때로 과학자들이 오랫동안 받아들여 온 이론과 모순된다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "convey",
+      "back": "v. 전달하다; 운반하다",
+      "example": "Facial expressions convey emotions more directly than words do.",
+      "exampleMeaning": "표정은 말보다 더 직접적으로 감정을 전달한다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "demonstrate",
+      "back": "v. 입증하다, 보여 주다; 시위하다",
+      "hint": "demonstration n. 입증; 시위",
+      "example": "The experiment demonstrated that memory can be distorted by leading questions.",
+      "exampleMeaning": "그 실험은 기억이 유도 질문에 의해 왜곡될 수 있음을 입증했다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "deprive",
+      "back": "v. 빼앗다, 박탈하다",
+      "hint": "deprive A of B: A에게서 B를 빼앗다",
+      "example": "Excessive screen time can deprive children of opportunities for real-world play.",
+      "exampleMeaning": "지나친 화면 사용 시간은 아이들에게서 현실 세계 놀이의 기회를 빼앗을 수 있다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "deteriorate",
+      "back": "v. 악화되다, 나빠지다",
+      "example": "Air quality in the region deteriorated rapidly as factories multiplied.",
+      "exampleMeaning": "공장이 늘어나면서 그 지역의 대기 질은 급속히 악화되었다.",
+      "tags": [
+        "동사",
+        "환경"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "diminish",
+      "back": "v. 줄어들다; 약화시키다",
+      "example": "The value of information diminishes quickly when everyone has access to it.",
+      "exampleMeaning": "정보의 가치는 모두가 그것에 접근할 수 있게 되면 빠르게 줄어든다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "discard",
+      "back": "v. 버리다, 폐기하다",
+      "example": "Scientific progress often requires us to discard long-held beliefs.",
+      "exampleMeaning": "과학의 진보는 흔히 오래 유지해 온 믿음을 버릴 것을 요구한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "dismiss",
+      "back": "v. 일축하다, 묵살하다; 해고하다",
+      "example": "Experts once dismissed the idea that birds could use tools.",
+      "exampleMeaning": "전문가들은 한때 새가 도구를 사용할 수 있다는 생각을 일축했다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "distinguish",
+      "back": "v. 구별하다, 식별하다",
+      "hint": "distinguish A from B: A를 B와 구별하다",
+      "example": "Young children gradually learn to distinguish fantasy from reality.",
+      "exampleMeaning": "어린아이들은 점차 공상과 현실을 구별하는 법을 배운다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "distort",
+      "back": "v. 왜곡하다, 비틀다",
+      "hint": "distortion n. 왜곡",
+      "example": "Media coverage can distort the public's perception of actual risk.",
+      "exampleMeaning": "언론 보도는 실제 위험에 대한 대중의 인식을 왜곡할 수 있다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "dominate",
+      "back": "v. 지배하다, 우위를 차지하다",
+      "hint": "dominant a. 지배적인",
+      "example": "A few large companies dominate the global market for smartphones.",
+      "exampleMeaning": "소수의 대기업이 스마트폰 세계 시장을 지배한다.",
+      "tags": [
+        "동사",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "eliminate",
+      "back": "v. 제거하다, 없애다",
+      "example": "No policy can completely eliminate the risk of failure.",
+      "exampleMeaning": "어떤 정책도 실패의 위험을 완전히 없앨 수는 없다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "embody",
+      "back": "v. 구현하다, 상징하다",
+      "example": "A nation's public buildings often embody its values and history.",
+      "exampleMeaning": "한 나라의 공공건물은 흔히 그 나라의 가치와 역사를 구현한다.",
+      "tags": [
+        "동사",
+        "문화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "emerge",
+      "back": "v. 나타나다, 드러나다",
+      "hint": "emergence n. 출현",
+      "example": "New patterns of behavior emerge when individuals interact in groups.",
+      "exampleMeaning": "개인들이 집단 속에서 상호 작용할 때 새로운 행동 양식이 나타난다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "emphasize",
+      "back": "v. 강조하다",
+      "hint": "emphasis n. 강조",
+      "example": "The author emphasizes the role of habit in shaping character.",
+      "exampleMeaning": "글쓴이는 성격 형성에서 습관이 하는 역할을 강조한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "enhance",
+      "back": "v. 향상시키다, 높이다",
+      "example": "Regular aerobic exercise enhances the brain's ability to form new memories.",
+      "exampleMeaning": "규칙적인 유산소 운동은 새로운 기억을 형성하는 뇌의 능력을 향상시킨다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "evaluate",
+      "back": "v. 평가하다",
+      "hint": "evaluation n. 평가",
+      "example": "Critical readers evaluate the evidence behind every claim they encounter.",
+      "exampleMeaning": "비판적인 독자는 접하는 모든 주장 뒤의 근거를 평가한다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "evoke",
+      "back": "v. (감정·기억을) 불러일으키다",
+      "example": "A familiar scent can evoke vivid memories of childhood.",
+      "exampleMeaning": "익숙한 냄새는 어린 시절의 생생한 기억을 불러일으킬 수 있다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "exaggerate",
+      "back": "v. 과장하다",
+      "hint": "exaggeration n. 과장",
+      "example": "Advertisements tend to exaggerate the benefits of the products they promote.",
+      "exampleMeaning": "광고는 홍보하는 제품의 이점을 과장하는 경향이 있다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "exploit",
+      "back": "v. 이용하다, 착취하다 / n. 위업, 공적",
+      "example": "Some predators exploit the weaknesses of much larger animals.",
+      "exampleMeaning": "일부 포식자는 훨씬 더 큰 동물의 약점을 이용한다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "facilitate",
+      "back": "v. 용이하게 하다, 촉진하다",
+      "example": "Shared symbols facilitate communication among members of a culture.",
+      "exampleMeaning": "공유된 상징은 한 문화 구성원들 간의 의사소통을 용이하게 한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "flourish",
+      "back": "v. 번성하다, 잘 자라다",
+      "example": "Creativity flourishes in environments where mistakes are tolerated.",
+      "exampleMeaning": "창의성은 실수가 용인되는 환경에서 번성한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "foster",
+      "back": "v. 기르다, 촉진하다; 위탁 양육하다",
+      "example": "Reading aloud to children fosters both vocabulary growth and imagination.",
+      "exampleMeaning": "아이에게 소리 내어 책을 읽어 주는 것은 어휘 성장과 상상력을 모두 길러 준다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "generate",
+      "back": "v. 만들어 내다, 발생시키다",
+      "hint": "generation n. 발생; 세대",
+      "example": "Wind farms generate electricity without emitting greenhouse gases.",
+      "exampleMeaning": "풍력 발전 단지는 온실가스를 배출하지 않고 전기를 만들어 낸다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "hinder",
+      "back": "v. 방해하다, 저해하다",
+      "example": "Fear of failure can hinder students from attempting challenging problems.",
+      "exampleMeaning": "실패에 대한 두려움은 학생들이 어려운 문제에 도전하는 것을 방해할 수 있다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "illustrate",
+      "back": "v. (예를 들어) 설명하다, 보여 주다; 삽화를 넣다",
+      "example": "The following example illustrates how small changes produce large effects.",
+      "exampleMeaning": "다음 예는 작은 변화가 어떻게 큰 효과를 낳는지 보여 준다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "impose",
+      "back": "v. 부과하다, 강요하다",
+      "hint": "impose A on B: A를 B에 부과하다",
+      "example": "Several countries impose heavy taxes on sugary drinks to protect public health.",
+      "exampleMeaning": "여러 나라가 공중 보건을 지키기 위해 설탕이 든 음료에 무거운 세금을 부과한다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "induce",
+      "back": "v. 유발하다, 유도하다",
+      "example": "Prolonged isolation can induce anxiety even in healthy adults.",
+      "exampleMeaning": "장기간의 고립은 건강한 성인에게도 불안을 유발할 수 있다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "inhibit",
+      "back": "v. 억제하다, 저해하다",
+      "hint": "inhabit(거주하다)과 혼동 주의",
+      "example": "High levels of stress hormones inhibit the formation of long-term memories.",
+      "exampleMeaning": "높은 수치의 스트레스 호르몬은 장기 기억의 형성을 억제한다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "integrate",
+      "back": "v. 통합하다, 통합되다",
+      "hint": "integration n. 통합",
+      "example": "Modern medicine integrates knowledge from biology, chemistry, and engineering.",
+      "exampleMeaning": "현대 의학은 생물학, 화학, 공학의 지식을 통합한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "interpret",
+      "back": "v. 해석하다; 통역하다",
+      "hint": "interpretation n. 해석",
+      "example": "Two historians may interpret the same document in opposite ways.",
+      "exampleMeaning": "두 역사가가 같은 문서를 정반대로 해석할 수도 있다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "intervene",
+      "back": "v. 개입하다, 끼어들다",
+      "hint": "intervention n. 개입",
+      "example": "Governments sometimes intervene in markets to prevent extreme price swings.",
+      "exampleMeaning": "정부는 극단적인 가격 변동을 막기 위해 때때로 시장에 개입한다.",
+      "tags": [
+        "동사",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "justify",
+      "back": "v. 정당화하다",
+      "hint": "justification n. 정당화",
+      "example": "The benefits of the new policy hardly justify its enormous cost.",
+      "exampleMeaning": "그 새 정책의 이점은 그것의 막대한 비용을 정당화하기 어렵다.",
+      "tags": [
+        "동사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "manipulate",
+      "back": "v. 조작하다, (교묘하게) 조종하다; 능숙하게 다루다",
+      "hint": "manipulation n. 조작",
+      "example": "Skilled speakers can manipulate an audience's emotions with carefully chosen words.",
+      "exampleMeaning": "능숙한 연설가는 신중하게 고른 말로 청중의 감정을 조종할 수 있다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "modify",
+      "back": "v. 수정하다, 바꾸다",
+      "hint": "modification n. 수정",
+      "example": "Organisms modify their behavior in response to environmental signals.",
+      "exampleMeaning": "생물은 환경 신호에 반응하여 자신의 행동을 수정한다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "neglect",
+      "back": "v. 소홀히 하다, 방치하다 / n. 방치",
+      "example": "Cities that neglect public transportation eventually face severe traffic problems.",
+      "exampleMeaning": "대중교통을 소홀히 하는 도시는 결국 심각한 교통 문제에 직면한다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "obtain",
+      "back": "v. 얻다, 획득하다",
+      "example": "Researchers must obtain consent from participants before collecting data.",
+      "exampleMeaning": "연구자는 자료를 수집하기 전에 참가자의 동의를 얻어야 한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "offset",
+      "back": "v. 상쇄하다 / n. 상쇄",
+      "example": "The gains from faster production were offset by a rise in defective products.",
+      "exampleMeaning": "더 빠른 생산에서 얻은 이득은 불량품 증가로 상쇄되었다.",
+      "tags": [
+        "동사",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "perpetuate",
+      "back": "v. 영속시키다, 지속시키다",
+      "example": "Textbooks can unintentionally perpetuate outdated stereotypes.",
+      "exampleMeaning": "교과서는 의도치 않게 낡은 고정 관념을 영속시킬 수 있다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "preserve",
+      "back": "v. 보존하다, 지키다",
+      "hint": "preservation n. 보존",
+      "example": "Cold, dry conditions preserve ancient documents remarkably well.",
+      "exampleMeaning": "차고 건조한 조건은 고문서를 놀랍도록 잘 보존한다.",
+      "tags": [
+        "동사",
+        "문화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "presume",
+      "back": "v. 추정하다, 간주하다",
+      "hint": "presumably ad. 아마도",
+      "example": "We often presume that expensive products are of higher quality.",
+      "exampleMeaning": "우리는 흔히 비싼 제품이 품질도 더 좋을 것이라고 추정한다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prevail",
+      "back": "v. 만연하다, 우세하다; 승리하다",
+      "hint": "prevalent a. 널리 퍼진",
+      "example": "In small communities, informal rules often prevail over written laws.",
+      "exampleMeaning": "작은 공동체에서는 흔히 비공식적 규칙이 성문법보다 우세하다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "pursue",
+      "back": "v. 추구하다, 뒤쫓다",
+      "hint": "pursuit n. 추구",
+      "example": "Many scientists pursue questions that have no immediate practical use.",
+      "exampleMeaning": "많은 과학자들은 당장의 실용적 쓸모가 없는 질문을 추구한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "reinforce",
+      "back": "v. 강화하다, 보강하다",
+      "hint": "reinforcement n. 강화",
+      "example": "Praise can reinforce desirable behavior more effectively than punishment can remove bad habits.",
+      "exampleMeaning": "칭찬은 처벌이 나쁜 습관을 없애는 것보다 더 효과적으로 바람직한 행동을 강화할 수 있다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "restrict",
+      "back": "v. 제한하다",
+      "hint": "restriction n. 제한",
+      "example": "Some cities restrict car use in downtown areas to reduce pollution.",
+      "exampleMeaning": "일부 도시는 오염을 줄이기 위해 도심에서의 자동차 이용을 제한한다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "retain",
+      "back": "v. 유지하다, 보유하다; 기억하다",
+      "example": "Students retain information better when they test themselves repeatedly.",
+      "exampleMeaning": "학생들은 스스로를 반복해서 시험할 때 정보를 더 잘 기억에 유지한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "reveal",
+      "back": "v. 드러내다, 밝히다",
+      "example": "Satellite images reveal how quickly the glaciers are retreating.",
+      "exampleMeaning": "위성 사진은 빙하가 얼마나 빨리 후퇴하고 있는지를 드러낸다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "stimulate",
+      "back": "v. 자극하다, 활성화하다",
+      "hint": "stimulus n. 자극(복수형 stimuli)",
+      "example": "Open-ended questions stimulate deeper thinking than yes-or-no questions.",
+      "exampleMeaning": "개방형 질문은 예-아니요 질문보다 더 깊은 사고를 자극한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "suppress",
+      "back": "v. 억누르다, 진압하다",
+      "example": "Trying to suppress a thought often makes it return more frequently.",
+      "exampleMeaning": "어떤 생각을 억누르려는 시도는 흔히 그 생각을 더 자주 되돌아오게 만든다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "sustain",
+      "back": "v. 지속하다, 유지하다; 지탱하다",
+      "hint": "sustainable a. 지속 가능한",
+      "example": "No ecosystem can sustain unlimited growth in a single species.",
+      "exampleMeaning": "어떤 생태계도 한 종의 무제한적 성장을 지속시킬 수 없다.",
+      "tags": [
+        "동사",
+        "환경"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "undergo",
+      "back": "v. 겪다, 경험하다",
+      "example": "The brain undergoes dramatic changes during adolescence.",
+      "exampleMeaning": "뇌는 청소년기에 극적인 변화를 겪는다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "yield",
+      "back": "v. (결과를) 낳다, 산출하다; 굴복하다 / n. 산출량, 수확량",
+      "example": "Long-term studies often yield insights that short experiments cannot provide.",
+      "exampleMeaning": "장기 연구는 흔히 단기 실험이 제공할 수 없는 통찰을 낳는다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "accommodate",
+      "back": "v. 수용하다, 부응하다; 숙박시키다",
+      "example": "Successful teachers accommodate the different learning speeds of their students.",
+      "exampleMeaning": "성공적인 교사는 학생들의 서로 다른 학습 속도를 수용한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "advocate",
+      "back": "v. 옹호하다, 지지하다 / n. 옹호자",
+      "example": "Many economists advocate investing in early childhood education.",
+      "exampleMeaning": "많은 경제학자들이 유아 교육에 대한 투자를 지지한다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "aggravate",
+      "back": "v. 악화시키다",
+      "example": "Cutting down coastal forests aggravates the damage caused by storms.",
+      "exampleMeaning": "해안의 숲을 베어 내는 것은 폭풍이 일으키는 피해를 악화시킨다.",
+      "tags": [
+        "동사",
+        "환경"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "allocate",
+      "back": "v. 할당하다, 배분하다",
+      "hint": "allocation n. 할당",
+      "example": "How a society allocates its limited resources reflects its priorities.",
+      "exampleMeaning": "한 사회가 한정된 자원을 어떻게 배분하는지는 그 사회의 우선순위를 반영한다.",
+      "tags": [
+        "동사",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "cultivate",
+      "back": "v. (자질·능력을) 기르다; 경작하다",
+      "example": "Reading widely helps students cultivate the habit of independent thought.",
+      "exampleMeaning": "폭넓은 독서는 학생들이 독립적 사고의 습관을 기르도록 돕는다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "disregard",
+      "back": "v. 무시하다 / n. 무시",
+      "example": "Drivers who disregard warning signs put everyone on the road at risk.",
+      "exampleMeaning": "경고 표지를 무시하는 운전자는 도로 위의 모든 사람을 위험에 빠뜨린다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "embrace",
+      "back": "v. 받아들이다, 포용하다; 껴안다",
+      "example": "Industries that embrace new technology early often gain lasting advantages.",
+      "exampleMeaning": "새로운 기술을 일찍 받아들이는 산업은 흔히 지속적인 우위를 얻는다.",
+      "tags": [
+        "동사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "entail",
+      "back": "v. 수반하다",
+      "example": "Every scientific breakthrough entails countless failed attempts.",
+      "exampleMeaning": "모든 과학적 돌파구는 무수한 실패한 시도를 수반한다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "evolve",
+      "back": "v. 진화하다; 점차 발전하다",
+      "hint": "evolution n. 진화",
+      "example": "Language continues to evolve as speakers invent new expressions.",
+      "exampleMeaning": "언어는 화자들이 새로운 표현을 만들어 내면서 계속 진화한다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "exert",
+      "back": "v. (힘·영향력을) 행사하다, 발휘하다",
+      "hint": "exert influence on: ~에 영향력을 행사하다",
+      "example": "Peer groups exert a powerful influence on teenagers' choices.",
+      "exampleMeaning": "또래 집단은 십 대의 선택에 강력한 영향력을 행사한다.",
+      "tags": [
+        "동사",
+        "심리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "grasp",
+      "back": "v. 파악하다, 이해하다; 움켜쥐다 / n. 이해, 파악",
+      "example": "It takes time to grasp the full implications of a new discovery.",
+      "exampleMeaning": "새로운 발견의 함의를 온전히 파악하는 데는 시간이 걸린다.",
+      "tags": [
+        "동사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "transcend",
+      "back": "v. 초월하다, 넘어서다",
+      "example": "Great works of art transcend the era in which they were created.",
+      "exampleMeaning": "위대한 예술 작품은 그것이 창조된 시대를 초월한다.",
+      "tags": [
+        "동사",
+        "문화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "underlie",
+      "back": "v. ~의 기저를 이루다, 바탕이 되다",
+      "hint": "underlying a. 근본적인, 기저의",
+      "example": "Simple physical principles underlie many complex natural phenomena.",
+      "exampleMeaning": "단순한 물리 원리가 많은 복잡한 자연 현상의 기저를 이룬다.",
+      "tags": [
+        "동사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "phenomenon",
+      "back": "n. 현상",
+      "hint": "복수형은 phenomena",
+      "example": "Migration is a widespread phenomenon observed in many animal species.",
+      "exampleMeaning": "이동은 많은 동물 종에서 관찰되는 광범위한 현상이다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "implication",
+      "back": "n. 함의, 영향; 암시",
+      "hint": "imply v. 암시하다",
+      "example": "The discovery of water on Mars has profound implications for the search for life.",
+      "exampleMeaning": "화성에서의 물 발견은 생명 탐사에 심오한 함의를 지닌다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "consequence",
+      "back": "n. 결과, 영향",
+      "hint": "as a consequence: 그 결과",
+      "example": "Every technological choice carries consequences that are hard to predict.",
+      "exampleMeaning": "모든 기술적 선택은 예측하기 어려운 결과를 수반한다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "notion",
+      "back": "n. 개념, 생각",
+      "example": "The notion that talent alone determines success is misleading.",
+      "exampleMeaning": "재능만이 성공을 결정한다는 생각은 오해를 낳는다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "perspective",
+      "back": "n. 관점, 시각; 원근법",
+      "example": "Traveling abroad gives students a fresh perspective on their own culture.",
+      "exampleMeaning": "해외여행은 학생들에게 자국 문화에 대한 새로운 관점을 준다.",
+      "tags": [
+        "명사",
+        "문화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "insight",
+      "back": "n. 통찰(력), 이해",
+      "example": "Case studies provide insights that large-scale surveys often miss.",
+      "exampleMeaning": "사례 연구는 대규모 설문 조사가 흔히 놓치는 통찰을 제공한다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "hypothesis",
+      "back": "n. 가설",
+      "hint": "복수형은 hypotheses",
+      "example": "A good hypothesis must be capable of being tested and disproved.",
+      "exampleMeaning": "좋은 가설은 검증되고 반증될 수 있어야 한다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "premise",
+      "back": "n. 전제",
+      "example": "The argument rests on the premise that humans are basically rational.",
+      "exampleMeaning": "그 논증은 인간이 기본적으로 합리적이라는 전제에 기초한다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "paradox",
+      "back": "n. 역설",
+      "hint": "paradoxical a. 역설적인",
+      "example": "It is a paradox that having more choices can make us less satisfied.",
+      "exampleMeaning": "선택지가 많아지면 만족은 오히려 줄어들 수 있다는 것은 역설이다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "criterion",
+      "back": "n. 기준",
+      "hint": "복수형은 criteria",
+      "example": "Price should not be the only criterion for judging the value of a product.",
+      "exampleMeaning": "가격이 제품의 가치를 판단하는 유일한 기준이 되어서는 안 된다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "dilemma",
+      "back": "n. 딜레마, 진퇴양난",
+      "example": "Doctors sometimes face the dilemma of telling a painful truth or keeping silent.",
+      "exampleMeaning": "의사들은 때때로 고통스러운 진실을 말할 것인가 침묵할 것인가의 딜레마에 직면한다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "incentive",
+      "back": "n. 유인, 동기, 장려책",
+      "example": "Financial incentives alone rarely produce lasting changes in behavior.",
+      "exampleMeaning": "금전적 유인만으로는 행동의 지속적인 변화가 거의 일어나지 않는다.",
+      "tags": [
+        "명사",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "initiative",
+      "back": "n. 계획, 주도(권); 진취성",
+      "hint": "take the initiative: 주도권을 잡다",
+      "example": "The city launched an initiative to expand green spaces in crowded districts.",
+      "exampleMeaning": "그 도시는 밀집 지역의 녹지를 확대하기 위한 계획에 착수했다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "legacy",
+      "back": "n. 유산",
+      "example": "The scientist's true legacy lies in the students she trained.",
+      "exampleMeaning": "그 과학자의 진정한 유산은 그녀가 길러 낸 학생들에게 있다.",
+      "tags": [
+        "명사",
+        "문화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "mechanism",
+      "back": "n. 기제, 메커니즘; 장치",
+      "example": "Sweating is a natural mechanism for regulating body temperature.",
+      "exampleMeaning": "땀 흘리기는 체온을 조절하는 자연적인 기제이다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "norm",
+      "back": "n. 규범, 표준",
+      "hint": "normative a. 규범적인",
+      "example": "Social norms tell us what behavior is expected in a given situation.",
+      "exampleMeaning": "사회 규범은 주어진 상황에서 어떤 행동이 기대되는지를 알려 준다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "objective",
+      "back": "n. 목표 / a. 객관적인",
+      "hint": "subjective(주관적인)의 반의어",
+      "example": "The primary objective of the program is to reduce food waste in schools.",
+      "exampleMeaning": "그 프로그램의 일차적 목표는 학교에서의 음식물 쓰레기를 줄이는 것이다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "obstacle",
+      "back": "n. 장애(물)",
+      "example": "Fear of embarrassment is a major obstacle to learning a foreign language.",
+      "exampleMeaning": "창피함에 대한 두려움은 외국어 학습의 주요한 장애물이다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "outcome",
+      "back": "n. 결과",
+      "example": "The outcome of an experiment should not be decided before the data are collected.",
+      "exampleMeaning": "실험의 결과는 자료가 수집되기 전에 결정되어서는 안 된다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "paradigm",
+      "back": "n. 패러다임, 인식의 틀",
+      "hint": "paradigm shift: 패러다임 전환",
+      "example": "Darwin's theory created a new paradigm for understanding life.",
+      "exampleMeaning": "다윈의 이론은 생명을 이해하는 새로운 패러다임을 만들었다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prejudice",
+      "back": "n. 편견 / v. 편견을 갖게 하다",
+      "example": "Personal contact between groups is one of the best ways to reduce prejudice.",
+      "exampleMeaning": "집단 간의 개인적 접촉은 편견을 줄이는 가장 좋은 방법 중 하나이다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "priority",
+      "back": "n. 우선순위, 우선 사항",
+      "hint": "prior a. 이전의, 우선하는",
+      "example": "Public safety must remain the highest priority in urban planning.",
+      "exampleMeaning": "공공 안전은 도시 계획에서 최우선 사항으로 남아야 한다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prospect",
+      "back": "n. 전망, 가능성",
+      "hint": "prospective a. 장래의, 유망한",
+      "example": "The prospect of cheaper solar energy is changing global investment patterns.",
+      "exampleMeaning": "더 저렴한 태양 에너지에 대한 전망이 세계의 투자 흐름을 바꾸고 있다.",
+      "tags": [
+        "명사",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "scarcity",
+      "back": "n. 부족, 희소성",
+      "hint": "scarce a. 부족한, 드문",
+      "example": "Economics begins with the fact of scarcity: wants exceed available resources.",
+      "exampleMeaning": "경제학은 욕구가 이용 가능한 자원을 초과한다는 희소성의 사실에서 출발한다.",
+      "tags": [
+        "명사",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "sequence",
+      "back": "n. 순서, 연속 / v. 차례로 배열하다",
+      "example": "The sequence in which information is presented affects how well it is remembered.",
+      "exampleMeaning": "정보가 제시되는 순서는 그것이 얼마나 잘 기억되는지에 영향을 준다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "stereotype",
+      "back": "n. 고정 관념 / v. 정형화하다",
+      "example": "Stereotypes persist because they simplify a complicated social world.",
+      "exampleMeaning": "고정 관념은 복잡한 사회 세계를 단순화해 주기 때문에 지속된다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "tendency",
+      "back": "n. 경향, 성향",
+      "hint": "tend to: ~하는 경향이 있다",
+      "example": "Humans have a strong tendency to seek information that confirms their beliefs.",
+      "exampleMeaning": "인간은 자신의 믿음을 확인해 주는 정보를 찾으려는 강한 경향이 있다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "threshold",
+      "back": "n. 한계점, 문턱; 역치",
+      "example": "Once pollution passes a certain threshold, the lake cannot recover on its own.",
+      "exampleMeaning": "오염이 일정한 한계점을 넘으면 그 호수는 스스로 회복할 수 없다.",
+      "tags": [
+        "명사",
+        "환경"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "trait",
+      "back": "n. 특성, 특징",
+      "example": "Curiosity is a trait shared by nearly all successful researchers.",
+      "exampleMeaning": "호기심은 거의 모든 성공적인 연구자들이 공유하는 특성이다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "virtue",
+      "back": "n. 미덕, 장점",
+      "hint": "by virtue of: ~ 덕분에",
+      "example": "Patience is a virtue that modern consumer culture rarely rewards.",
+      "exampleMeaning": "인내는 현대 소비문화가 좀처럼 보상해 주지 않는 미덕이다.",
+      "tags": [
+        "명사",
+        "문화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "welfare",
+      "back": "n. 복지, 안녕",
+      "example": "The welfare of future generations depends on the choices we make today.",
+      "exampleMeaning": "미래 세대의 안녕은 우리가 오늘 내리는 선택에 달려 있다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "abundance",
+      "back": "n. 풍부, 풍요",
+      "hint": "abundant a. 풍부한",
+      "example": "An abundance of information does not guarantee an abundance of understanding.",
+      "exampleMeaning": "정보의 풍요가 이해의 풍요를 보장하지는 않는다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ambiguity",
+      "back": "n. 모호함, 중의성",
+      "hint": "ambiguous a. 모호한",
+      "example": "Poets often use ambiguity deliberately to invite multiple readings.",
+      "exampleMeaning": "시인들은 여러 갈래의 해석을 이끌어 내기 위해 의도적으로 모호함을 활용하곤 한다.",
+      "tags": [
+        "명사",
+        "문화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "analogy",
+      "back": "n. 유추, 비유",
+      "hint": "by analogy with: ~에 대한 유추로",
+      "example": "The teacher explained electric current by analogy with flowing water.",
+      "exampleMeaning": "그 교사는 흐르는 물에 빗대어 전류를 설명했다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "autonomy",
+      "back": "n. 자율(성), 자치",
+      "hint": "autonomous a. 자율적인",
+      "example": "Giving workers more autonomy often increases both satisfaction and productivity.",
+      "exampleMeaning": "노동자에게 더 많은 자율성을 주면 흔히 만족도와 생산성이 모두 높아진다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "bias",
+      "back": "n. 편향, 편견 / v. 편향되게 하다",
+      "hint": "biased a. 편향된",
+      "example": "Even careful researchers must guard against bias in interpreting their data.",
+      "exampleMeaning": "신중한 연구자조차 자료를 해석할 때의 편향을 경계해야 한다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "capacity",
+      "back": "n. 능력; 수용력, 용량",
+      "example": "The human capacity for language distinguishes us from other species.",
+      "exampleMeaning": "인간의 언어 능력은 우리를 다른 종과 구별해 준다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "cognition",
+      "back": "n. 인지, 인식 (작용)",
+      "hint": "cognitive a. 인지의",
+      "example": "Sleep plays a central role in cognition, especially in consolidating memories.",
+      "exampleMeaning": "수면은 인지, 특히 기억을 공고히 하는 데 핵심적인 역할을 한다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "commodity",
+      "back": "n. 상품, 원자재",
+      "example": "In the digital economy, attention itself has become a valuable commodity.",
+      "exampleMeaning": "디지털 경제에서는 주의력 그 자체가 가치 있는 상품이 되었다.",
+      "tags": [
+        "명사",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "compassion",
+      "back": "n. 연민, 동정심",
+      "hint": "compassionate a. 인정 많은",
+      "example": "Compassion motivates people to help strangers at a cost to themselves.",
+      "exampleMeaning": "연민은 사람들이 자신의 손해를 감수하면서 낯선 이를 돕도록 이끈다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "component",
+      "back": "n. 구성 요소, 부품",
+      "example": "Trust is an essential component of any lasting cooperation.",
+      "exampleMeaning": "신뢰는 모든 지속적인 협력의 필수 구성 요소이다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "consensus",
+      "back": "n. 합의, 의견 일치",
+      "example": "There is broad scientific consensus that human activity is warming the planet.",
+      "exampleMeaning": "인간 활동이 지구를 데우고 있다는 데에는 폭넓은 과학적 합의가 있다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "constraint",
+      "back": "n. 제약, 제한",
+      "hint": "constrain v. 제약하다",
+      "example": "Creative solutions often arise precisely because of tight constraints.",
+      "exampleMeaning": "창의적 해결책은 흔히 빠듯한 제약 때문에 오히려 생겨난다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "controversy",
+      "back": "n. 논란, 논쟁",
+      "hint": "controversial a. 논란이 많은",
+      "example": "The use of animals in research remains a source of controversy.",
+      "exampleMeaning": "연구에서의 동물 이용은 여전히 논란의 원천으로 남아 있다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "correlation",
+      "back": "n. 상관관계",
+      "hint": "상관관계가 곧 인과 관계(causation)는 아니다",
+      "example": "A strong correlation between two variables does not prove that one causes the other.",
+      "exampleMeaning": "두 변수 사이의 강한 상관관계가 한쪽이 다른 쪽의 원인임을 증명하지는 않는다.",
+      "tags": [
+        "명사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "dimension",
+      "back": "n. 차원, 측면; 치수",
+      "example": "Globalization has added a new dimension to local environmental problems.",
+      "exampleMeaning": "세계화는 지역의 환경 문제에 새로운 차원을 더했다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "discourse",
+      "back": "n. 담론, 담화",
+      "example": "Social media has transformed the nature of public discourse.",
+      "exampleMeaning": "소셜 미디어는 공적 담론의 성격을 변화시켰다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "empathy",
+      "back": "n. 공감 (능력)",
+      "hint": "sympathy(동정)와 구별",
+      "example": "Reading fiction can strengthen empathy by letting us live inside other minds.",
+      "exampleMeaning": "소설 읽기는 우리를 타인의 마음속에서 살게 함으로써 공감 능력을 강화할 수 있다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "equilibrium",
+      "back": "n. 평형, 균형",
+      "example": "A market reaches equilibrium when supply and demand are balanced.",
+      "exampleMeaning": "시장은 공급과 수요가 균형을 이룰 때 평형에 도달한다.",
+      "tags": [
+        "명사",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ethics",
+      "back": "n. 윤리(학)",
+      "hint": "ethical a. 윤리적인",
+      "example": "Advances in genetic technology raise difficult questions of ethics.",
+      "exampleMeaning": "유전 기술의 발전은 어려운 윤리적 질문들을 제기한다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "framework",
+      "back": "n. 틀, 체계",
+      "example": "A shared theoretical framework allows scientists in different fields to cooperate.",
+      "exampleMeaning": "공유된 이론적 틀은 서로 다른 분야의 과학자들이 협력할 수 있게 한다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "hierarchy",
+      "back": "n. 위계, 계층 (구조)",
+      "hint": "hierarchical a. 위계적인",
+      "example": "Wolves maintain a strict social hierarchy within the pack.",
+      "exampleMeaning": "늑대는 무리 안에서 엄격한 사회적 위계를 유지한다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "instinct",
+      "back": "n. 본능, 직감",
+      "hint": "instinctive a. 본능적인",
+      "example": "Newly hatched sea turtles find the ocean by instinct, guided by moonlight.",
+      "exampleMeaning": "갓 부화한 바다거북은 달빛에 이끌려 본능적으로 바다를 찾아간다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "integrity",
+      "back": "n. 진실성, 청렴; 온전함",
+      "example": "Scientific integrity requires reporting results honestly, even unwelcome ones.",
+      "exampleMeaning": "과학적 진실성은 반갑지 않은 결과라도 정직하게 보고할 것을 요구한다.",
+      "tags": [
+        "명사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "intuition",
+      "back": "n. 직관",
+      "hint": "intuitive a. 직관적인",
+      "example": "Expert intuition is the product of thousands of hours of experience.",
+      "exampleMeaning": "전문가의 직관은 수천 시간의 경험이 낳은 산물이다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "metaphor",
+      "back": "n. 은유, 비유",
+      "example": "The metaphor of the brain as a computer shapes how we think about memory.",
+      "exampleMeaning": "뇌를 컴퓨터에 빗대는 은유는 우리가 기억에 대해 생각하는 방식을 형성한다.",
+      "tags": [
+        "명사",
+        "문화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "motive",
+      "back": "n. 동기, 이유",
+      "hint": "motivation n. 동기 부여",
+      "example": "Historians ask not only what people did but also what motives drove them.",
+      "exampleMeaning": "역사가는 사람들이 무엇을 했는지뿐 아니라 어떤 동기가 그들을 움직였는지도 묻는다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "novelty",
+      "back": "n. 새로움, 참신함",
+      "hint": "novel a. 새로운, 참신한",
+      "example": "The brain pays special attention to novelty in the environment.",
+      "exampleMeaning": "뇌는 환경 속의 새로움에 특별한 주의를 기울인다.",
+      "tags": [
+        "명사",
+        "심리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "nuance",
+      "back": "n. 미묘한 차이, 뉘앙스",
+      "example": "Machine translation still struggles to capture the nuances of everyday speech.",
+      "exampleMeaning": "기계 번역은 여전히 일상 언어의 미묘한 차이를 포착하는 데 어려움을 겪는다.",
+      "tags": [
+        "명사",
+        "문화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "offspring",
+      "back": "n. 자손, (동물의) 새끼",
+      "hint": "단수와 복수의 형태가 같다",
+      "example": "Many birds risk their lives to protect their offspring from predators.",
+      "exampleMeaning": "많은 새들이 포식자로부터 새끼를 지키기 위해 목숨을 건다.",
+      "tags": [
+        "명사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "inevitable",
+      "back": "a. 불가피한, 필연적인",
+      "hint": "inevitably ad. 필연적으로",
+      "example": "Conflict is inevitable in any group, but violence is not.",
+      "exampleMeaning": "갈등은 어떤 집단에서든 불가피하지만, 폭력은 그렇지 않다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "plausible",
+      "back": "a. 그럴듯한, 타당해 보이는",
+      "example": "A plausible explanation is not necessarily the correct one.",
+      "exampleMeaning": "그럴듯한 설명이 반드시 옳은 설명인 것은 아니다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "abstract",
+      "back": "a. 추상적인 / n. (논문의) 초록, 요약",
+      "hint": "concrete(구체적인)의 반의어",
+      "example": "Young children find abstract concepts like justice difficult to understand.",
+      "exampleMeaning": "어린아이들은 정의와 같은 추상적 개념을 이해하기 어려워한다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "adequate",
+      "back": "a. 충분한, 적절한",
+      "hint": "adequacy n. 적절성",
+      "example": "Without adequate sleep, the brain cannot consolidate what it has learned.",
+      "exampleMeaning": "충분한 수면 없이는 뇌가 학습한 내용을 공고히 할 수 없다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ambiguous",
+      "back": "a. 모호한, 여러 뜻으로 해석되는",
+      "hint": "ambiguity n. 모호함",
+      "example": "The instructions were so ambiguous that each team interpreted them differently.",
+      "exampleMeaning": "지시 사항이 너무 모호해서 각 팀이 그것을 서로 다르게 해석했다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "apparent",
+      "back": "a. 분명한, 명백한; 겉보기의",
+      "hint": "apparently ad. 보아하니, 겉보기에는",
+      "example": "The apparent simplicity of the game hides its deep strategy.",
+      "exampleMeaning": "그 게임의 겉보기의 단순함은 깊은 전략을 감추고 있다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "arbitrary",
+      "back": "a. 임의적인, 자의적인",
+      "example": "The connection between a word's sound and its meaning is largely arbitrary.",
+      "exampleMeaning": "단어의 소리와 의미 사이의 연결은 대체로 자의적이다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "coherent",
+      "back": "a. 일관성 있는, 조리 있는",
+      "hint": "coherence n. 일관성",
+      "example": "A coherent essay connects each paragraph to a single central claim.",
+      "exampleMeaning": "일관성 있는 글은 각 단락을 하나의 중심 주장과 연결한다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "compatible",
+      "back": "a. 양립할 수 있는, 호환되는",
+      "hint": "compatible with: ~과 양립 가능한",
+      "example": "Economic growth and environmental protection can be compatible goals.",
+      "exampleMeaning": "경제 성장과 환경 보호는 양립할 수 있는 목표일 수 있다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "comprehensive",
+      "back": "a. 포괄적인, 종합적인",
+      "hint": "comprehensible(이해할 수 있는)과 구별",
+      "example": "The report offers a comprehensive review of research on adolescent sleep.",
+      "exampleMeaning": "그 보고서는 청소년 수면 연구에 대한 포괄적인 검토를 제공한다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "conspicuous",
+      "back": "a. 눈에 잘 띄는, 뚜렷한",
+      "example": "Bright colors make poisonous frogs conspicuous to potential predators.",
+      "exampleMeaning": "밝은 색은 독개구리를 잠재적 포식자의 눈에 잘 띄게 만든다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "contemporary",
+      "back": "a. 현대의, 동시대의 / n. 동시대인",
+      "example": "Contemporary art often asks questions rather than providing answers.",
+      "exampleMeaning": "현대 미술은 흔히 답을 주기보다 질문을 던진다.",
+      "tags": [
+        "형용사",
+        "문화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "controversial",
+      "back": "a. 논란이 많은",
+      "hint": "controversy n. 논란",
+      "example": "The decision to reintroduce wolves into the park was highly controversial.",
+      "exampleMeaning": "늑대를 그 공원에 다시 들여오기로 한 결정은 큰 논란을 낳았다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "conventional",
+      "back": "a. 관습적인, 재래식의",
+      "hint": "convention n. 관습",
+      "example": "Conventional wisdom is not always supported by the evidence.",
+      "exampleMeaning": "통념이 언제나 증거로 뒷받침되는 것은 아니다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "crucial",
+      "back": "a. 결정적인, 매우 중요한",
+      "example": "The first few years of life are crucial for language development.",
+      "exampleMeaning": "생애 첫 몇 년은 언어 발달에 결정적으로 중요하다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "deliberate",
+      "back": "a. 의도적인; 신중한 / v. 숙고하다",
+      "hint": "deliberately ad. 고의로",
+      "example": "Improvement requires deliberate practice, not mere repetition.",
+      "exampleMeaning": "실력 향상은 단순한 반복이 아니라 의도적인 연습을 필요로 한다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "distinct",
+      "back": "a. 뚜렷한, 별개의",
+      "hint": "distinctive a. 독특한",
+      "example": "The two dialects remain distinct despite centuries of contact.",
+      "exampleMeaning": "그 두 방언은 수 세기에 걸친 접촉에도 불구하고 별개로 남아 있다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "elaborate",
+      "back": "a. 정교한 / v. 정교하게 만들다, 상술하다",
+      "example": "Honeybees perform an elaborate dance to indicate the location of food.",
+      "exampleMeaning": "꿀벌은 먹이의 위치를 알리기 위해 정교한 춤을 춘다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "empirical",
+      "back": "a. 경험적인, 실증적인",
+      "example": "Empirical evidence, not authority, is the final judge in science.",
+      "exampleMeaning": "과학에서 최종 심판자는 권위가 아니라 경험적 증거이다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "equivalent",
+      "back": "a. 동등한, 상응하는 / n. 상응하는 것",
+      "hint": "equivalent to: ~에 상응하는",
+      "example": "Skipping breakfast is not equivalent to eating less over the whole day.",
+      "exampleMeaning": "아침을 거르는 것이 하루 전체로 보아 덜 먹는 것과 같은 것은 아니다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "explicit",
+      "back": "a. 명시적인, 분명한",
+      "hint": "implicit(암묵적인)의 반의어",
+      "example": "Good contracts make expectations explicit to prevent later disputes.",
+      "exampleMeaning": "좋은 계약은 이후의 분쟁을 막기 위해 기대 사항을 명시적으로 만든다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "feasible",
+      "back": "a. 실현 가능한",
+      "hint": "feasibility n. 실현 가능성",
+      "example": "Recycling all urban waste is not yet feasible with current technology.",
+      "exampleMeaning": "현재 기술로는 도시 폐기물 전부를 재활용하는 것이 아직 실현 가능하지 않다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "fragile",
+      "back": "a. 취약한, 깨지기 쉬운",
+      "example": "Coral reefs are fragile ecosystems easily damaged by warming seas.",
+      "exampleMeaning": "산호초는 바다의 온난화로 쉽게 손상되는 취약한 생태계이다.",
+      "tags": [
+        "형용사",
+        "환경"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "immense",
+      "back": "a. 엄청난, 거대한",
+      "example": "The ocean exerts an immense influence on the global climate.",
+      "exampleMeaning": "바다는 지구의 기후에 엄청난 영향을 미친다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "implicit",
+      "back": "a. 암묵적인, 내포된",
+      "hint": "explicit(명시적인)의 반의어",
+      "example": "Every culture teaches implicit rules about personal space.",
+      "exampleMeaning": "모든 문화는 개인 공간에 대한 암묵적 규칙을 가르친다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "indifferent",
+      "back": "a. 무관심한",
+      "hint": "indifference n. 무관심",
+      "example": "Voters who are indifferent to local politics still feel its effects.",
+      "exampleMeaning": "지역 정치에 무관심한 유권자들도 여전히 그 영향을 받는다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "indispensable",
+      "back": "a. 필수적인, 없어서는 안 될",
+      "hint": "dispense with(~ 없이 지내다)에서 파생",
+      "example": "Bees are indispensable to the production of many fruits and vegetables.",
+      "exampleMeaning": "벌은 많은 과일과 채소의 생산에 없어서는 안 될 존재이다.",
+      "tags": [
+        "형용사",
+        "환경"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "inherent",
+      "back": "a. 내재하는, 고유한",
+      "hint": "inherently ad. 본질적으로",
+      "example": "Uncertainty is inherent in every prediction about the future.",
+      "exampleMeaning": "불확실성은 미래에 대한 모든 예측에 내재한다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "innate",
+      "back": "a. 타고난, 선천적인",
+      "hint": "acquired(후천적인)의 반의어",
+      "example": "Infants show an innate preference for human faces.",
+      "exampleMeaning": "영아는 사람의 얼굴에 대한 타고난 선호를 보인다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "intricate",
+      "back": "a. 복잡한, 뒤얽힌",
+      "example": "The intricate patterns of a spider's web serve practical purposes.",
+      "exampleMeaning": "거미줄의 복잡한 무늬는 실용적인 목적에 부합한다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "intrinsic",
+      "back": "a. 내재적인, 본질적인",
+      "hint": "extrinsic(외재적인)의 반의어",
+      "example": "Intrinsic motivation sustains learning long after rewards disappear.",
+      "exampleMeaning": "내재적 동기는 보상이 사라진 뒤에도 오랫동안 학습을 지속시킨다.",
+      "tags": [
+        "형용사",
+        "심리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "legitimate",
+      "back": "a. 정당한, 합법적인",
+      "hint": "legitimacy n. 정당성",
+      "example": "Citizens have a legitimate interest in how public funds are spent.",
+      "exampleMeaning": "시민은 공공 자금이 어떻게 쓰이는지에 대해 정당한 이해관계를 갖는다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "mutual",
+      "back": "a. 상호의, 서로의",
+      "hint": "mutually ad. 서로",
+      "example": "Successful negotiation depends on mutual respect between the parties.",
+      "exampleMeaning": "성공적인 협상은 당사자 간의 상호 존중에 달려 있다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "neutral",
+      "back": "a. 중립적인",
+      "hint": "neutrality n. 중립",
+      "example": "Journalists are expected to remain neutral when reporting on elections.",
+      "exampleMeaning": "기자들은 선거를 보도할 때 중립을 지킬 것으로 기대된다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "obscure",
+      "back": "a. 잘 알려지지 않은, 모호한 / v. 가리다, 흐리게 하다",
+      "example": "The paper was published in an obscure journal and ignored for decades.",
+      "exampleMeaning": "그 논문은 잘 알려지지 않은 학술지에 실려 수십 년간 외면당했다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "persistent",
+      "back": "a. 끈질긴, 지속적인",
+      "hint": "persist v. 지속되다, 고집하다",
+      "example": "Persistent effort matters more than occasional bursts of enthusiasm.",
+      "exampleMeaning": "끈질긴 노력이 이따금 터져 나오는 열정보다 더 중요하다.",
+      "tags": [
+        "형용사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "pervasive",
+      "back": "a. 만연한, 널리 퍼진",
+      "example": "Advertising has become so pervasive that we hardly notice it.",
+      "exampleMeaning": "광고는 너무나 만연해져서 우리는 그것을 거의 알아차리지 못한다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "profound",
+      "back": "a. 심오한, (영향이) 깊은",
+      "hint": "profoundly ad. 깊이",
+      "example": "The printing press had a profound effect on the spread of knowledge.",
+      "exampleMeaning": "인쇄기는 지식의 확산에 심대한 영향을 미쳤다.",
+      "tags": [
+        "형용사",
+        "문화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prominent",
+      "back": "a. 저명한, 두드러진",
+      "example": "Several prominent biologists questioned the study's methods.",
+      "exampleMeaning": "여러 저명한 생물학자들이 그 연구의 방법에 의문을 제기했다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "redundant",
+      "back": "a. 불필요한, 중복되는",
+      "example": "Editing means removing redundant words until only the essential remains.",
+      "exampleMeaning": "퇴고란 본질적인 것만 남을 때까지 불필요한 단어를 제거하는 일이다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "relevant",
+      "back": "a. 관련 있는, 적절한",
+      "hint": "relevance n. 관련성",
+      "example": "Select only the evidence that is directly relevant to your argument.",
+      "exampleMeaning": "당신의 논증과 직접 관련 있는 증거만을 골라라.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "rigid",
+      "back": "a. 경직된, 엄격한; 단단한",
+      "example": "Rigid rules can prevent organizations from responding to change.",
+      "exampleMeaning": "경직된 규칙은 조직이 변화에 대응하는 것을 가로막을 수 있다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "rigorous",
+      "back": "a. 엄밀한, 철저한",
+      "hint": "rigor n. 엄밀함",
+      "example": "Every new drug must pass rigorous testing before reaching patients.",
+      "exampleMeaning": "모든 신약은 환자에게 도달하기 전에 엄밀한 시험을 통과해야 한다.",
+      "tags": [
+        "형용사",
+        "과학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "subsequent",
+      "back": "a. 그 후의, 이어지는",
+      "hint": "subsequently ad. 그 후에",
+      "example": "The initial discovery was confirmed by subsequent experiments.",
+      "exampleMeaning": "최초의 발견은 그 후의 실험들로 확인되었다.",
+      "tags": [
+        "형용사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "subtle",
+      "back": "a. 미묘한, 감지하기 힘든",
+      "hint": "b는 묵음: [서틀]",
+      "example": "Subtle changes in tone can completely alter a sentence's meaning.",
+      "exampleMeaning": "어조의 미묘한 변화가 문장의 의미를 완전히 바꿀 수 있다.",
+      "tags": [
+        "형용사",
+        "문화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "superficial",
+      "back": "a. 피상적인, 표면적인",
+      "example": "A superficial reading of the poem misses its central irony.",
+      "exampleMeaning": "그 시를 피상적으로 읽으면 그 중심에 있는 아이러니를 놓친다.",
+      "tags": [
+        "형용사",
+        "문화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "susceptible",
+      "back": "a. 영향받기 쉬운, 취약한",
+      "hint": "susceptible to: ~에 취약한",
+      "example": "Tired decision-makers are more susceptible to simple persuasion tricks.",
+      "exampleMeaning": "지친 의사 결정자는 단순한 설득 기법에 더 취약하다.",
+      "tags": [
+        "형용사",
+        "심리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "tangible",
+      "back": "a. 유형의, 실체가 있는",
+      "hint": "intangible a. 무형의",
+      "example": "Volunteers want to see tangible results from their efforts.",
+      "exampleMeaning": "자원봉사자들은 자신의 노력에서 눈에 보이는 성과를 확인하고 싶어 한다.",
+      "tags": [
+        "형용사",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "vague",
+      "back": "a. 막연한, 모호한",
+      "example": "Vague goals like 'study harder' rarely lead to concrete action.",
+      "exampleMeaning": "'더 열심히 공부하기' 같은 막연한 목표는 구체적 행동으로 이어지는 일이 드물다.",
+      "tags": [
+        "형용사",
+        "심리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "valid",
+      "back": "a. 타당한, 유효한",
+      "hint": "validity n. 타당성",
+      "example": "An argument can sound convincing without being logically valid.",
+      "exampleMeaning": "논증은 논리적으로 타당하지 않으면서도 설득력 있게 들릴 수 있다.",
+      "tags": [
+        "형용사",
+        "논리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "vulnerable",
+      "back": "a. 취약한, 상처받기 쉬운",
+      "hint": "vulnerability n. 취약성",
+      "example": "Coastal cities are especially vulnerable to rising sea levels.",
+      "exampleMeaning": "해안 도시들은 해수면 상승에 특히 취약하다.",
+      "tags": [
+        "형용사",
+        "환경"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "presumably",
+      "back": "ad. 아마도, 짐작건대",
+      "hint": "presume v. 추정하다",
+      "example": "The ruins were presumably abandoned after a long drought.",
+      "exampleMeaning": "그 유적은 짐작건대 오랜 가뭄 이후에 버려졌을 것이다.",
+      "tags": [
+        "부사",
+        "학술"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "thereby",
+      "back": "ad. 그렇게 함으로써, 그것 때문에",
+      "example": "The dam slowed the river, thereby changing the entire downstream ecosystem.",
+      "exampleMeaning": "그 댐은 강의 흐름을 늦추었고, 그렇게 함으로써 하류 생태계 전체를 변화시켰다.",
+      "tags": [
+        "부사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    },
+    {
+      "front": "nonetheless",
+      "back": "ad. 그럼에도 불구하고",
+      "hint": "nevertheless와 같은 뜻",
+      "example": "The theory has weaknesses; nonetheless, it remains the best explanation available.",
+      "exampleMeaning": "그 이론에는 약점이 있다. 그럼에도 불구하고 그것은 이용 가능한 최선의 설명으로 남아 있다.",
+      "tags": [
+        "부사",
+        "논리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-csat-essential-english-v1",
+        "claude-authoring-csat-essential-english-v1"
+      ]
+    }
+  ]
+}

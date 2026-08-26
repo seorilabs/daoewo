@@ -17,6 +17,9 @@ import { approveRecord, publishApprovedRecord, runToHumanApproval } from "./pipe
 import { GeminiTextGenerator } from "./providers/gemini.mjs";
 import { ImagenGenerator } from "./providers/imagen.mjs";
 import { OfflineFixtureGenerator } from "./providers/offline-fixture.mjs";
+import { OperatorBatchGenerator } from "./providers/operator-batch.mjs";
+import { TOEIC_DECK_RANGES, VocabSwipeToeicImporter } from "./providers/vocab-swipe-import.mjs";
+import { JLPT_DECK_LEVELS, VocabSwipeJlptImporter } from "./providers/vocab-swipe-jlpt.mjs";
 import { HUMAN_REVIEW_CONFIRMATION } from "./state-machine.mjs";
 import { assertBacklog, assertCatalog, assertSchemas } from "./validation.mjs";
 
@@ -98,6 +101,23 @@ async function runCommand(options) {
       throw new Error("vocab-swipe-import 덱은 pinned import 경로로 가져와야 하며 Gemini 신규 생성으로 대체할 수 없다.");
     }
     generator = new GeminiTextGenerator();
+  } else if (providerName === "batch") {
+    if (deck.contentStrategy !== "ai-assisted-operator-batch") {
+      throw new Error("운영자 batch provider는 ai-assisted-operator-batch 덱에만 사용할 수 있다.");
+    }
+    generator = new OperatorBatchGenerator({ inputFile: requireOption(options, "input") });
+  } else if (providerName === "vocab-swipe") {
+    if (deck.contentStrategy !== "vocab-swipe-import") {
+      throw new Error("vocab-swipe importer는 vocab-swipe-import 덱에만 사용할 수 있다.");
+    }
+    const sourceRoot = requireOption(options, "source-root");
+    if (deck.id in TOEIC_DECK_RANGES) {
+      generator = new VocabSwipeToeicImporter({ sourceRoot });
+    } else if (deck.id in JLPT_DECK_LEVELS) {
+      generator = new VocabSwipeJlptImporter({ sourceRoot });
+    } else {
+      throw new Error(`vocab-swipe importer가 아직 지원하지 않는 덱이다: ${deck.id}`);
+    }
   } else {
     throw new Error(`지원하지 않는 provider: ${providerName}`);
   }
@@ -166,6 +186,8 @@ function help() {
     `  node src/cli.mjs backlog\n` +
     `  node src/cli.mjs smoke --offline\n` +
     `  node src/cli.mjs run --deck <id> --provider offline|gemini [--output <file>]\n` +
+    `  node src/cli.mjs run --deck <id> --provider vocab-swipe --source-root <vocab-swipe checkout> [--output <file>]\n` +
+    `  node src/cli.mjs run --deck <id> --provider batch --input <batch raw json> [--output <file>]\n` +
     `  node src/cli.mjs approve --work <file> --reviewer <name> --evidence <path-or-ticket> --confirm-human-review ${HUMAN_REVIEW_CONFIRMATION}\n` +
     `  node src/cli.mjs publish --work <file> [--output <directory>]\n` +
     `  node src/cli.mjs image --prompt-file <file> --output <png> [--aspect-ratio 1:1]\n`);

@@ -36,6 +36,71 @@
 
 가져온 뒤 원천 순서를 그대로 신뢰하지 않는다. generic Card로 normalize하고, 동일 front/back 제거, 동일 front/다른 back 충돌 해소, safety/copyright/factual QA, 사람 승인을 차례로 수행한다.
 
+## 구현된 TOEIC importer
+
+`src/providers/vocab-swipe-import.mjs`가 위 매핑을 실행한다. 아래는 코드가 강제하는 사항이다.
+
+- checkout의 `git rev-parse HEAD`가 manifest `source.commit`과 정확히 같아야 하고, 생성 헤더의
+  `BUNDLED_TOEIC_REVISION`이 `source.revision`과 같아야 한다. 둘 중 하나라도 다르면 import를 중단한다.
+- 읽은 세 파일(`toeic-word-list.generated.ts`, `toeic-korean-glosses.ts`,
+  `toeic-self-authored-enrichment.ts`)의 SHA-256을 `sourceRegistry`에 남긴다.
+- 목록이 1,250행이 아니거나 rank가 1부터 연속하지 않으면 중단한다.
+- 한국어 뜻, 예문, 예문 번역, 품사 중 하나라도 비면 그 표제어에서 중단한다. 빈 칸을 가진 카드를
+  만들지 않는다.
+
+라이선스 성분별 `sourceRefs` id는 다음과 같다.
+
+| sourceRef id | 라이선스 | 카드에 붙는 조건 |
+| --- | --- | --- |
+| `vocab-swipe-toeic-tsl-headword` | CC BY-SA 4.0 | 항상 |
+| `seorilabs-toeic-korean-gloss` | 자체 작성 | 항상 |
+| `seorilabs-toeic-self-authored-enrichment` | 자체 작성 | 항상(예문 번역) |
+| `vocab-swipe-toeic-tsl-definition` | CC BY-SA 4.0 | TSL 정의를 `hint`로 쓸 때 |
+| `vocab-swipe-toeic-wordnet-example` | WordNet 3.0 | WordNet 예문을 그대로 쓸 때만 |
+
+자체 보강이 예문을 덮어쓰면 그 카드의 예문 출처는 언제나 자체 작성이고 WordNet 성분을 붙이지
+않는다. 반대로 자체 예문을 WordNet 출처로 표시하지도 않는다.
+
+## 덱별 rank 구간
+
+| 덱 | tier | rank | 카드 수 |
+| --- | --- | --- | --- |
+| `english-essential-intro` | free | 1~300 | 300 |
+| `english-toeic-advanced` | pro | 301~1250 | 950 |
+
+입문 구간은 TSL 정의·품사·예문이 함께 있는 상위 300행이고 심화 구간은 자체 보강으로 채운 나머지다.
+두 구간은 겹치지 않으며 합치면 TSL 1.2 전체 목록이 된다.
+
+## 구현된 JLPT importer
+
+`src/providers/vocab-swipe-jlpt.mjs`가 JLPT 네 덱의 매핑을 실행한다.
+
+- 카드가 되는 것은 `BUNDLED_JLPT_WORDS_BY_LEVEL`(elzup/jlpt-word-list, MIT)의 표제어·읽기와
+  `JLPT_KOREAN_ENRICHMENT`(자체 생성 뜻·예문·번역·학습 팁)의 **교집합**뿐이다. 보강이
+  의도적으로 비워진 행(카운터, 접사, 괄호 부연, 중복 이표기)은 건너뛰고, 보강 항목의
+  필드가 비어 있으면 그 표제어에서 실패한다.
+- checkout commit이 manifest `source.commit`과 다르면 중단한다. 생성 헤더의
+  `BUNDLED_JLPT_REVISION`(`elzup/jlpt-word-list@master`)은 branch pin이지만 실제 bytes는
+  vocab-swipe commit이 고정하므로, manifest `source.revision`이 헤더 revision을 포함하는지
+  검사한다. upstream 재수집 시에는 boundary 요건대로 upstream commit SHA와 파일 SHA-256을
+  새로 확보해야 한다.
+- 읽은 두 파일의 SHA-256을 `sourceRegistry`에 남기고, MIT 표제어 성분
+  (`vocab-swipe-jlpt-headword`)과 자체 보강 성분(`seorilabs-jlpt-korean-enrichment`)을
+  분리해 기록한다. 원본의 영어 뜻은 카드에 쓰지 않는다.
+- 같은 표제어가 레벨 목록에 두 번 나오거나(원본 중복 행) 두 레벨 모두에 보강이 있으면
+  첫 등장이 이긴다. N3~N2 덱은 N3를 먼저 순회하므로 N3 항목이 우선한다.
+
+| 덱 | tier | 레벨 | 카드 수 | 난이도 |
+| --- | --- | --- | --- | --- |
+| `japanese-jlpt-n5-preview` | free | N5 | 525 | 1 |
+| `japanese-jlpt-n4` | pro | N4 | 494 | 2 |
+| `japanese-jlpt-n3-n2` | pro | N3, N2 | 2,688 | N3=3, N2=4 |
+| `japanese-jlpt-n1` | pro | N1 | 2,234 | 5 |
+
+JLPT generated 파일은 값 위치의 타입 import 때문에 Node 타입 스트리핑만으로 로드할 수
+없어, importer가 그 import 한 줄을 로컬 타입 별칭으로 치환한 사본을 임시 경로에서
+import한다. digest는 원본 bytes로 계산하므로 provenance는 변하지 않는다.
+
 ## 배포 체크
 
 1. 외부 `source.commit`이 40자리 SHA이고 `source.revision`이 비어 있지 않다.

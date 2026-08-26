@@ -1,0 +1,3012 @@
+{
+  "schemaVersion": 1,
+  "deckId": "information-processing-engineer",
+  "sourceRegistry": [
+    {
+      "id": "brief-information-processing-engineer-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:information-processing-engineer:v1",
+      "revision": "brief-v1@2026-07-12"
+    },
+    {
+      "id": "claude-authoring-information-processing-engineer-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:information-processing-engineer:v1",
+      "revision": "claude-batch-v1@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "요구공학에서 요구사항 개발 프로세스의 네 단계는 무엇인가?",
+      "back": "요구사항 도출(Elicitation), 분석(Analysis), 명세(Specification), 확인(Validation)의 순서로 진행된다. 도출은 이해관계자에게서 요구를 수집하는 활동이고, 확인은 명세된 요구사항이 실제 요구를 올바르게 반영했는지 검토하는 활동이다.",
+      "hint": "도출-분석-명세-확인",
+      "tags": [
+        "소프트웨어설계",
+        "요구공학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "기능 요구사항과 비기능 요구사항의 차이는 무엇인가?",
+      "back": "기능 요구사항은 시스템이 제공해야 하는 기능과 동작(입력, 출력, 처리)을 정의하고, 비기능 요구사항은 성능, 보안, 가용성, 사용성처럼 시스템이 만족해야 하는 품질과 제약 조건을 정의한다. 예를 들어 '응답 시간 2초 이내'는 비기능 요구사항이다.",
+      "hint": "무엇을 하는가 vs 얼마나 잘 하는가",
+      "tags": [
+        "소프트웨어설계",
+        "요구공학",
+        "요구사항분류"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "요구사항 확인(Validation) 단계에서 사용하는 대표적인 기법은?",
+      "back": "요구사항 검토(리뷰·인스펙션·워크스루), 프로토타이핑, 모델 검증, 인수 테스트 기준 정의가 대표적이다. 명세서가 완전성, 일관성, 검증 가능성을 갖추었는지 이해관계자와 함께 확인한다.",
+      "hint": "리뷰, 프로토타이핑, 인수 기준",
+      "tags": [
+        "소프트웨어설계",
+        "요구공학",
+        "검증"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "요구사항 명세 기법 중 정형 명세와 비정형 명세를 비교하면?",
+      "back": "정형 명세는 수학적 기호와 정형 언어(Z, VDM 등)로 기술해 모호성이 적고 검증이 엄밀하지만 작성과 이해가 어렵다. 비정형 명세는 자연어나 다이어그램 중심으로 작성해 이해하기 쉽지만 해석의 모호성이 생길 수 있다.",
+      "hint": "수학적 기법 vs 자연어",
+      "tags": [
+        "소프트웨어설계",
+        "요구공학",
+        "명세"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "유스케이스 다이어그램의 기본 구성 요소는 무엇인가?",
+      "back": "액터(시스템 외부에서 상호작용하는 사람이나 외부 시스템), 유스케이스(시스템이 제공하는 기능 단위), 시스템 경계, 그리고 관계(연관, 포함 include, 확장 extend, 일반화)로 구성된다.",
+      "hint": "액터, 유스케이스, 관계",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "유스케이스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "UML 유스케이스의 include 관계와 extend 관계를 비교하면?",
+      "back": "include는 기본 유스케이스가 실행될 때 포함된 유스케이스가 항상 함께 수행되는 필수 관계이고, extend는 특정 조건에서만 선택적으로 수행되는 확장 관계다. 화살표 방향도 달라서 include는 기본에서 포함 대상으로, extend는 확장 유스케이스에서 기본 쪽으로 향한다.",
+      "hint": "항상 수행 vs 조건부 수행",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "유스케이스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "UML에서 구조(정적) 다이어그램에 속하는 종류를 나열하면?",
+      "back": "클래스, 객체, 컴포넌트, 배치(Deployment), 패키지, 복합 구조(Composite Structure) 다이어그램이 구조 다이어그램에 속한다. 시스템의 정적인 구성 요소와 그들 사이의 관계를 표현한다.",
+      "hint": "클래스·객체·컴포넌트·배치·패키지",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "다이어그램분류"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "UML에서 행위(동적) 다이어그램에 속하는 종류를 나열하면?",
+      "back": "유스케이스, 시퀀스, 커뮤니케이션, 상태(State Machine), 활동(Activity), 타이밍, 상호작용 개요 다이어그램이 행위 다이어그램에 속한다. 시간 흐름이나 상태 변화에 따른 시스템의 동적 동작을 표현한다.",
+      "hint": "시퀀스·활동·상태 등",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "다이어그램분류"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "시퀀스 다이어그램은 무엇을 표현하는 다이어그램인가?",
+      "back": "객체들 사이에 주고받는 메시지를 시간 순서에 따라 표현하는 행위 다이어그램이다. 생명선(Lifeline), 활성 구간(Activation), 메시지 화살표로 구성되며 상호작용의 시간적 흐름을 파악하기에 적합하다.",
+      "hint": "메시지의 시간 순서",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "시퀀스다이어그램"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "UML 클래스 다이어그램에서 +, -, #, ~ 기호가 나타내는 접근 제어는?",
+      "back": "+는 public(어디서나 접근), -는 private(해당 클래스 내부만), #은 protected(클래스와 하위 클래스), ~는 package(같은 패키지 내부)를 의미한다. 속성과 연산 앞에 표기해 가시성을 나타낸다.",
+      "hint": "public, private, protected, package",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "클래스다이어그램"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "클래스 사이의 집합(Aggregation) 관계와 합성(Composition) 관계의 차이는?",
+      "back": "둘 다 전체-부분 관계지만, 집합은 부분이 전체와 독립적인 생명주기를 가지는 약한 관계(빈 마름모)이고, 합성은 전체가 소멸하면 부분도 함께 소멸하는 강한 소유 관계(채운 마름모)다. 자동차와 엔진은 합성, 팀과 선수는 집합으로 보는 식이다.",
+      "hint": "빈 마름모 vs 채운 마름모",
+      "tags": [
+        "소프트웨어설계",
+        "UML",
+        "클래스관계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "GoF 디자인 패턴을 목적에 따라 세 가지로 분류하면?",
+      "back": "객체 생성 방식을 다루는 생성(Creational) 패턴, 클래스와 객체의 구성을 다루는 구조(Structural) 패턴, 객체 간 상호작용과 책임 분배를 다루는 행위(Behavioral) 패턴으로 분류된다. 생성 5개, 구조 7개, 행위 11개로 총 23개다.",
+      "hint": "생성·구조·행위",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "싱글턴(Singleton) 패턴의 목적과 구현 핵심은?",
+      "back": "클래스의 인스턴스가 오직 하나만 생성되도록 보장하고 그 인스턴스에 대한 전역 접근점을 제공하는 생성 패턴이다. 생성자를 외부에서 호출하지 못하게 막고, 정적 메서드를 통해 유일한 인스턴스를 반환하도록 구현한다.",
+      "hint": "인스턴스 하나 보장",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "생성패턴"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "팩토리 메서드(Factory Method) 패턴은 어떤 문제를 해결하는가?",
+      "back": "객체 생성 코드를 서브클래스로 미루어, 어떤 구체 클래스를 생성할지는 하위 클래스가 결정하도록 하는 생성 패턴이다. 상위 클래스는 생성 인터페이스만 정의하므로 새로운 제품 클래스가 추가되어도 기존 코드를 수정하지 않고 확장할 수 있다.",
+      "hint": "생성을 서브클래스에 위임",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "생성패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "추상 팩토리(Abstract Factory) 패턴과 팩토리 메서드 패턴을 비교하면?",
+      "back": "팩토리 메서드는 하나의 제품 생성을 서브클래스에 위임하는 메서드 수준의 패턴이고, 추상 팩토리는 서로 관련된 여러 제품군(버튼, 창, 메뉴 등)을 일관성 있게 생성하는 객체 수준의 패턴이다. 추상 팩토리는 내부적으로 여러 팩토리 메서드로 구성되는 경우가 많다.",
+      "hint": "제품 하나 vs 제품군",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "생성패턴"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "빌더(Builder) 패턴의 특징은 무엇인가?",
+      "back": "복잡한 객체의 생성 절차와 표현을 분리해, 동일한 생성 절차로 서로 다른 표현의 객체를 만들 수 있게 하는 생성 패턴이다. 선택적 속성이 많은 객체를 단계적으로 조립하듯 생성할 때 유용하다.",
+      "hint": "생성 절차와 표현의 분리",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "생성패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "어댑터(Adapter) 패턴은 언제 사용하는가?",
+      "back": "인터페이스가 서로 달라 함께 사용할 수 없는 클래스들을 변환 계층을 두어 연결하는 구조 패턴이다. 기존 클래스를 수정하지 않고 클라이언트가 기대하는 인터페이스로 감싸므로, 레거시 코드나 외부 라이브러리를 재사용할 때 유용하다.",
+      "hint": "인터페이스 변환기",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "구조패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "데코레이터(Decorator) 패턴의 원리는 무엇인가?",
+      "back": "객체를 동일한 인터페이스의 래퍼 객체로 감싸서 기존 코드 수정 없이 기능을 동적으로 추가하는 구조 패턴이다. 상속 대신 합성을 사용하므로 기능 조합이 필요할 때 서브클래스 폭발을 피할 수 있다.",
+      "hint": "래퍼로 기능 추가",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "구조패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "프록시(Proxy) 패턴의 목적과 활용 예는?",
+      "back": "실제 객체에 대한 접근을 대리 객체가 통제하는 구조 패턴이다. 지연 로딩(가상 프록시), 접근 권한 검사(보호 프록시), 원격 객체 접근(원격 프록시), 캐싱 등에 활용되며 클라이언트는 실제 객체와 동일한 인터페이스로 프록시를 사용한다.",
+      "hint": "대리인을 통한 접근 제어",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "구조패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "퍼사드(Facade) 패턴은 어떤 상황에서 유용한가?",
+      "back": "복잡한 서브시스템의 여러 클래스를 단순한 통합 인터페이스 하나로 감싸 제공하는 구조 패턴이다. 클라이언트와 서브시스템 사이의 결합을 줄이고 사용법을 단순화하지만, 필요하면 서브시스템에 직접 접근하는 것도 막지는 않는다.",
+      "hint": "복잡한 내부를 단순한 창구로",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "구조패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "컴포지트(Composite) 패턴의 구조와 장점은?",
+      "back": "개별 객체(Leaf)와 객체들의 그룹(Composite)을 공통 인터페이스(Component)로 다루게 하여 부분-전체의 트리 구조를 표현하는 구조 패턴이다. 클라이언트가 단일 객체와 복합 객체를 구분하지 않고 재귀적으로 동일하게 처리할 수 있다.",
+      "hint": "트리 구조, 부분-전체",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "구조패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "옵저버(Observer) 패턴의 동작 방식은?",
+      "back": "주제(Subject) 객체의 상태가 변하면 등록된 관찰자(Observer)들에게 자동으로 통지되어 갱신되는 일대다 의존 관계를 정의하는 행위 패턴이다. 발행-구독 구조로 느슨한 결합을 유지하며 이벤트 처리, MVC의 뷰 갱신 등에 널리 쓰인다.",
+      "hint": "상태 변화 통지, 발행-구독",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "행위패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스트래티지(Strategy) 패턴은 어떤 문제를 해결하는가?",
+      "back": "알고리즘군을 각각 클래스로 캡슐화하고 상호 교환 가능하게 만들어, 클라이언트 코드 변경 없이 실행 중에 알고리즘을 바꿀 수 있게 하는 행위 패턴이다. 조건문으로 알고리즘을 분기하는 코드를 다형성으로 대체한다.",
+      "hint": "알고리즘 교체 가능",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "행위패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "템플릿 메서드 패턴과 스트래티지 패턴의 차이는 무엇인가?",
+      "back": "템플릿 메서드는 상위 클래스가 알고리즘의 골격을 고정하고 일부 단계만 하위 클래스가 오버라이드하는 상속 기반 패턴이고, 스트래티지는 알고리즘 전체를 별도 객체로 캡슐화해 위임하는 합성 기반 패턴이다. 스트래티지는 실행 중 교체가 자유롭고, 템플릿 메서드는 구조 재사용에 강점이 있다.",
+      "hint": "상속 기반 vs 합성 기반",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "행위패턴"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "커맨드(Command) 패턴의 핵심 아이디어는?",
+      "back": "요청 자체를 객체로 캡슐화하여 요청을 큐에 저장하거나 로그로 남기고 실행 취소(Undo)까지 지원할 수 있게 하는 행위 패턴이다. 요청을 보내는 쪽과 수행하는 쪽을 분리해 결합도를 낮춘다.",
+      "hint": "요청을 객체로",
+      "tags": [
+        "소프트웨어설계",
+        "디자인패턴",
+        "행위패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "MVC 아키텍처에서 세 구성 요소의 역할은 무엇인가?",
+      "back": "Model은 데이터와 비즈니스 로직을 관리하고, View는 사용자에게 정보를 표시하며, Controller는 사용자 입력을 해석해 Model과 View를 연결한다. 표현과 로직을 분리해 유지보수성과 병행 개발 효율을 높인다.",
+      "hint": "모델-뷰-컨트롤러",
+      "tags": [
+        "소프트웨어설계",
+        "아키텍처",
+        "MVC"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "계층형(Layered) 아키텍처 스타일의 특징은?",
+      "back": "시스템을 프레젠테이션, 비즈니스, 퍼시스턴스, 데이터베이스처럼 역할별 계층으로 나누고, 일반적으로 인접한 계층끼리만 통신하도록 제한하는 스타일이다. 계층 교체와 유지보수가 쉬운 반면 계층 통과 오버헤드가 생길 수 있다.",
+      "hint": "역할별 층 분리",
+      "tags": [
+        "소프트웨어설계",
+        "아키텍처",
+        "아키텍처스타일"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "파이프-필터(Pipe and Filter) 아키텍처 스타일은 어떤 구조인가?",
+      "back": "데이터 스트림이 여러 필터(처리 단계)를 순차적으로 통과하며 변환되고, 필터 사이는 파이프로 연결되는 스타일이다. 유닉스 셸 파이프라인과 컴파일러 단계가 대표 예이며 필터의 재사용과 교체가 쉽다.",
+      "hint": "데이터 흐름 변환 단계",
+      "tags": [
+        "소프트웨어설계",
+        "아키텍처",
+        "아키텍처스타일"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "소프트웨어 아키텍처의 4+1 뷰 모델을 구성하는 뷰는?",
+      "back": "논리 뷰(기능 구조), 구현(개발) 뷰(모듈 구성), 프로세스 뷰(동시성·성능), 배치 뷰(하드웨어 배치)의 네 가지 뷰를 유스케이스 시나리오 뷰가 묶어 검증하는 모델이다. 이해관계자별 관점을 분리해 아키텍처를 기술한다.",
+      "hint": "논리·구현·프로세스·배치+시나리오",
+      "tags": [
+        "소프트웨어설계",
+        "아키텍처",
+        "4+1뷰"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "결합도(Coupling)의 종류를 낮은 것부터 높은 순서로 나열하면?",
+      "back": "자료(Data) → 스탬프(Stamp) → 제어(Control) → 외부(External) → 공통(Common) → 내용(Content) 결합도 순이다. 자료 결합도가 가장 바람직하고, 다른 모듈 내부를 직접 참조하는 내용 결합도가 가장 나쁘다.",
+      "hint": "자스제외공내",
+      "tags": [
+        "소프트웨어설계",
+        "모듈화",
+        "결합도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "응집도(Cohesion)의 종류를 높은 것부터 낮은 순서로 나열하면?",
+      "back": "기능적(Functional) → 순차적(Sequential) → 통신적(Communicational) → 절차적(Procedural) → 시간적(Temporal) → 논리적(Logical) → 우연적(Coincidental) 응집도 순이다. 하나의 기능만 수행하는 기능적 응집도가 가장 바람직하다.",
+      "hint": "기순통절시논우",
+      "tags": [
+        "소프트웨어설계",
+        "모듈화",
+        "응집도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "좋은 모듈 설계의 기본 원칙과 팬인·팬아웃의 의미는?",
+      "back": "응집도는 높이고 결합도는 낮추는 것이 기본 원칙이다. 팬인은 해당 모듈을 호출하는 상위 모듈의 수로 높을수록 재사용이 잘 된 것이고, 팬아웃은 해당 모듈이 호출하는 하위 모듈의 수로 적절히 제한하는 것이 바람직하다.",
+      "hint": "고응집 저결합",
+      "tags": [
+        "소프트웨어설계",
+        "모듈화",
+        "팬인팬아웃"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "객체지향 설계의 SOLID 원칙 다섯 가지는 무엇인가?",
+      "back": "단일 책임 원칙(SRP), 개방-폐쇄 원칙(OCP), 리스코프 치환 원칙(LSP), 인터페이스 분리 원칙(ISP), 의존성 역전 원칙(DIP)이다. 변경에 유연하고 유지보수하기 쉬운 객체지향 구조를 만들기 위한 다섯 가지 설계 원칙이다.",
+      "hint": "SRP OCP LSP ISP DIP",
+      "tags": [
+        "소프트웨어설계",
+        "객체지향설계",
+        "SOLID"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "개방-폐쇄 원칙(OCP)이 의미하는 것은?",
+      "back": "소프트웨어 구성 요소는 확장에는 열려 있고 수정에는 닫혀 있어야 한다는 원칙이다. 새로운 기능을 추가할 때 기존 코드를 고치는 대신 추상화된 인터페이스를 구현하는 새 클래스를 추가하는 방식으로 달성한다.",
+      "hint": "확장 개방, 수정 폐쇄",
+      "tags": [
+        "소프트웨어설계",
+        "객체지향설계",
+        "SOLID"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "의존성 역전 원칙(DIP)이 의미하는 것은?",
+      "back": "상위 수준 모듈이 하위 수준 모듈의 구체 구현에 의존하지 말고, 둘 다 추상화(인터페이스)에 의존해야 한다는 원칙이다. 구체 클래스 대신 인터페이스에 의존하면 구현 교체가 쉬워지고 결합도가 낮아진다.",
+      "hint": "구체가 아닌 추상에 의존",
+      "tags": [
+        "소프트웨어설계",
+        "객체지향설계",
+        "SOLID"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "UI 설계의 4대 기본 원칙은 무엇인가?",
+      "back": "직관성(누구나 쉽게 이해하고 사용), 유효성(사용자의 목적을 정확하게 달성), 학습성(쉽게 배우고 익힘), 유연성(다양한 요구와 실수를 수용)이다. 사용자 중심으로 인터페이스를 설계하기 위한 기준이다.",
+      "hint": "직관성·유효성·학습성·유연성",
+      "tags": [
+        "소프트웨어설계",
+        "UI설계",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "사용자 인터페이스 유형인 CLI, GUI, NUI, VUI를 구분하면?",
+      "back": "CLI는 명령어 입력 기반, GUI는 그래픽 요소를 마우스 등으로 조작하는 방식, NUI는 터치·제스처처럼 자연스러운 신체 동작 기반, VUI는 음성 대화 기반 인터페이스다. 상호작용 수단에 따라 구분한다.",
+      "hint": "명령어·그래픽·자연동작·음성",
+      "tags": [
+        "소프트웨어설계",
+        "UI설계",
+        "UI유형"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "와이어프레임, 목업, 스토리보드, 프로토타입의 차이는?",
+      "back": "와이어프레임은 화면의 뼈대 레이아웃, 목업은 실제와 유사한 정적 시각 디자인, 스토리보드는 화면 흐름과 기능 설명을 함께 담은 문서, 프로토타입은 인터랙션이 동작하는 시제품이다. 뒤로 갈수록 완성도와 상호작용 수준이 높아진다.",
+      "hint": "뼈대→정적→흐름→동작",
+      "tags": [
+        "소프트웨어설계",
+        "UI설계",
+        "설계산출물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "미들웨어의 주요 종류에는 어떤 것들이 있는가?",
+      "back": "원격 프로시저 호출(RPC), 메시지 지향 미들웨어(MOM), 트랜잭션 처리 모니터(TP-Monitor), 객체 요청 브로커(ORB), 웹 애플리케이션 서버(WAS), 데이터베이스 접속 미들웨어 등이 있다. 분산 환경에서 응용 프로그램 사이의 통신과 연동을 중개한다.",
+      "hint": "RPC, MOM, TP, ORB, WAS",
+      "tags": [
+        "소프트웨어설계",
+        "아키텍처",
+        "미들웨어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "럼바우(Rumbaugh) 객체지향 분석 기법의 세 가지 모델링은?",
+      "back": "객체 모델링(객체와 관계를 객체 다이어그램으로), 동적 모델링(상태 다이어그램으로 시간 흐름과 상태 변화를), 기능 모델링(자료 흐름도로 데이터 변환 과정을) 순서로 수행한다. 객체-동적-기능의 순서가 특징이다.",
+      "hint": "객체→동적→기능",
+      "tags": [
+        "소프트웨어설계",
+        "객체지향분석",
+        "럼바우"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스택(Stack) 자료구조의 특징과 기본 연산은?",
+      "back": "가장 나중에 삽입된 데이터가 가장 먼저 꺼내지는 후입선출(LIFO) 구조다. 삽입은 push, 삭제는 pop 연산으로 한쪽 끝(top)에서만 이루어지며, 함수 호출 관리, 수식 계산, 되돌리기 기능 등에 활용된다.",
+      "hint": "LIFO, push/pop",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "스택"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "큐(Queue) 자료구조의 특징과 변형 구조는?",
+      "back": "먼저 삽입된 데이터가 먼저 꺼내지는 선입선출(FIFO) 구조로, 삽입은 rear, 삭제는 front에서 일어난다. 배열의 공간 낭비를 줄인 원형 큐, 양쪽 끝에서 삽입·삭제가 가능한 덱(Deque) 같은 변형이 있다.",
+      "hint": "FIFO, front/rear",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "큐"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스택이 활용되는 대표적인 사례를 세 가지 이상 들면?",
+      "back": "함수 호출과 복귀 주소 관리, 중위 수식의 후위 표기 변환과 후위 표기식 계산, 웹 브라우저 방문 기록 되돌아가기, 재귀 호출 구현, 괄호 짝 검사, 깊이 우선 탐색(DFS) 등이 있다. 모두 최근 항목을 먼저 처리하는 LIFO 특성을 이용한다.",
+      "hint": "함수 호출, 수식 변환, DFS",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "스택"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "이진 트리의 전위·중위·후위 순회는 각각 어떤 순서로 방문하는가?",
+      "back": "전위(Preorder)는 루트→왼쪽→오른쪽, 중위(Inorder)는 왼쪽→루트→오른쪽, 후위(Postorder)는 왼쪽→오른쪽→루트 순서로 방문한다. 루트를 방문하는 시점이 앞·중간·뒤 어디인지로 구분하면 된다.",
+      "hint": "루트 방문 시점으로 구분",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "트리순회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "이진 탐색 트리(BST)의 성질은 무엇인가?",
+      "back": "모든 노드에 대해 왼쪽 서브트리의 값은 그 노드보다 작고 오른쪽 서브트리의 값은 크다는 성질을 유지하는 이진 트리다. 중위 순회하면 오름차순 정렬 결과가 나오며, 균형이 잡힌 경우 탐색·삽입·삭제가 평균 O(log n)이다.",
+      "hint": "왼쪽<루트<오른쪽",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "이진탐색트리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "힙(Heap) 자료구조의 특징과 용도는?",
+      "back": "완전 이진 트리 형태를 유지하면서 부모가 자식보다 크거나(최대 힙) 작은(최소 힙) 성질을 만족하는 자료구조다. 루트에 항상 최댓값 또는 최솟값이 위치하므로 우선순위 큐 구현과 힙 정렬에 사용된다.",
+      "hint": "완전 이진 트리, 우선순위 큐",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "힙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "그래프를 인접 행렬과 인접 리스트로 표현할 때의 장단점은?",
+      "back": "인접 행렬은 두 정점의 연결 여부를 O(1)에 확인하지만 정점 수 제곱만큼 공간을 차지해 희소 그래프에 낭비가 크다. 인접 리스트는 간선 수에 비례한 공간만 쓰고 인접 정점 순회에 유리하지만 특정 간선 존재 확인은 리스트 탐색이 필요하다.",
+      "hint": "밀집은 행렬, 희소는 리스트",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "그래프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "배열과 연결 리스트의 차이를 접근·삽입 관점에서 비교하면?",
+      "back": "배열은 연속된 메모리에 저장되어 인덱스로 O(1) 임의 접근이 가능하지만 중간 삽입·삭제 시 원소 이동이 필요하다. 연결 리스트는 포인터로 연결되어 삽입·삭제가 링크 조정만으로 가능하지만 특정 위치 접근에 순차 탐색이 필요하다.",
+      "hint": "임의 접근 vs 유연한 삽입",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "리스트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "해시 테이블에서 충돌(Collision)을 해결하는 대표적인 방법은?",
+      "back": "같은 버킷에 연결 리스트로 저장하는 체이닝(개방 해싱)과, 빈 슬롯을 찾아 이동하는 개방 주소법(선형 조사, 이차 조사, 이중 해싱)이 있다. 적재율이 높아지면 충돌이 늘어나므로 테이블 크기 재조정이 필요하다.",
+      "hint": "체이닝, 개방 주소법",
+      "tags": [
+        "소프트웨어개발",
+        "자료구조",
+        "해싱"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "버블 정렬(Bubble Sort)의 원리와 시간 복잡도는?",
+      "back": "인접한 두 원소를 비교해 순서가 틀리면 교환하는 과정을 반복해, 매 회전마다 가장 큰 값이 끝으로 이동하는 정렬이다. 평균과 최악 모두 O(n²)이며 구현이 단순하지만 대량 데이터에는 비효율적이다.",
+      "hint": "인접 교환, O(n²)",
+      "tags": [
+        "소프트웨어개발",
+        "정렬",
+        "버블정렬"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "선택 정렬(Selection Sort)의 원리와 특징은?",
+      "back": "미정렬 구간에서 최솟값을 찾아 맨 앞 원소와 교환하는 과정을 반복하는 정렬로, 비교 횟수는 항상 O(n²)이지만 교환 횟수는 회전당 최대 1회로 적다. 입력 상태와 무관하게 수행 시간이 거의 일정하다.",
+      "hint": "최솟값 선택 후 교환",
+      "tags": [
+        "소프트웨어개발",
+        "정렬",
+        "선택정렬"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "삽입 정렬(Insertion Sort)이 유리한 상황은 언제인가?",
+      "back": "각 원소를 이미 정렬된 앞부분의 알맞은 위치에 끼워 넣는 방식으로, 평균은 O(n²)이지만 거의 정렬된 데이터에서는 O(n)에 가깝게 동작한다. 데이터가 적거나 대부분 정렬되어 있을 때 효율적이며 안정 정렬이다.",
+      "hint": "거의 정렬된 데이터에 강함",
+      "tags": [
+        "소프트웨어개발",
+        "정렬",
+        "삽입정렬"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "퀵 정렬(Quick Sort)의 원리와 시간 복잡도는?",
+      "back": "피벗을 기준으로 작은 값과 큰 값을 좌우로 분할한 뒤 각 부분을 재귀적으로 정렬하는 분할 정복 알고리즘이다. 평균 O(n log n)으로 빠르지만 피벗이 치우치면 최악 O(n²)이 되며, 기본 형태는 안정 정렬이 아니다.",
+      "hint": "피벗 분할 정복",
+      "tags": [
+        "소프트웨어개발",
+        "정렬",
+        "퀵정렬"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "힙 정렬(Heap Sort)의 동작 방식과 복잡도는?",
+      "back": "데이터를 최대 힙으로 구성한 뒤 루트(최댓값)를 끝으로 보내고 힙을 재구성하는 과정을 반복하는 정렬이다. 최선·평균·최악 모두 O(n log n)이 보장되고 추가 메모리가 거의 필요 없지만 안정 정렬은 아니다.",
+      "hint": "힙 구성 후 루트 추출 반복",
+      "tags": [
+        "소프트웨어개발",
+        "정렬",
+        "힙정렬"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "합병 정렬(Merge Sort)과 퀵 정렬을 비교하면?",
+      "back": "합병 정렬은 절반으로 나눠 정렬 후 병합하는 방식으로 최악에도 O(n log n)이 보장되고 안정 정렬이지만 병합용 추가 메모리 O(n)이 필요하다. 퀵 정렬은 평균적으로 더 빠르고 제자리 정렬에 가깝지만 최악 O(n²)이고 안정성이 없다.",
+      "hint": "안정·보장 vs 평균 속도",
+      "tags": [
+        "소프트웨어개발",
+        "정렬",
+        "정렬비교"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "이진 탐색(Binary Search)의 전제 조건과 시간 복잡도는?",
+      "back": "데이터가 정렬되어 있어야 한다는 전제 아래, 중간 값과 비교해 탐색 범위를 절반씩 줄여 나가는 방식이다. 시간 복잡도는 O(log n)이며, 정렬되지 않은 데이터에는 적용할 수 없다.",
+      "hint": "정렬 전제, O(log n)",
+      "tags": [
+        "소프트웨어개발",
+        "탐색",
+        "이진탐색"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "빅오(Big-O) 표기법이 나타내는 것은 무엇인가?",
+      "back": "입력 크기 n이 커질 때 알고리즘 수행 시간이나 공간이 증가하는 비율의 상한을 나타내는 점근적 표기법이다. 상수와 낮은 차수 항을 무시하며, O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) 순으로 성능이 나빠진다.",
+      "hint": "증가율의 상한",
+      "tags": [
+        "소프트웨어개발",
+        "알고리즘",
+        "복잡도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "블랙박스 테스트 기법의 종류에는 무엇이 있는가?",
+      "back": "동등 분할(동치 분할), 경계값 분석, 원인-효과 그래프, 의사결정 테이블, 상태 전이 테스트, 오류 추정, 페어와이즈(조합) 테스트 등이 있다. 내부 구조를 보지 않고 명세 기반으로 입력과 출력을 검증한다.",
+      "hint": "명세 기반 기법들",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "블랙박스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "화이트박스 테스트 기법의 종류에는 무엇이 있는가?",
+      "back": "구문(문장) 커버리지, 결정(분기) 커버리지, 조건 커버리지, 조건/결정 커버리지, 변경 조건/결정 커버리지(MC/DC), 기초 경로 검사, 제어 흐름·데이터 흐름 검사 등이 있다. 소스 코드 내부 구조와 논리를 기반으로 검증한다.",
+      "hint": "구조 기반 기법들",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "화이트박스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "동등 분할(Equivalence Partitioning) 기법의 원리는?",
+      "back": "입력 값을 동일한 결과를 낳는 유효·무효 클래스들로 나누고 각 클래스에서 대표값 하나씩만 테스트하는 블랙박스 기법이다. 같은 클래스의 값들은 같은 방식으로 처리된다고 가정해 테스트 케이스 수를 줄인다.",
+      "hint": "클래스별 대표값",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "동등분할"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "경계값 분석(Boundary Value Analysis)은 왜 효과적인가?",
+      "back": "오류가 입력 범위의 경계 근처에서 자주 발생한다는 경험에 근거해, 경계값과 그 바로 안팎의 값(최솟값-1, 최솟값, 최댓값, 최댓값+1 등)을 집중적으로 테스트하는 블랙박스 기법이다. 동등 분할을 보완한다.",
+      "hint": "경계 근처 집중",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "경계값분석"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "맥케이브(McCabe)의 순환 복잡도는 어떻게 계산하는가?",
+      "back": "제어 흐름 그래프에서 V(G) = 간선 수 - 노드 수 + 2, 또는 분기 판단 노드 수 + 1로 계산하며, 프로그램의 독립 경로 개수를 나타낸다. 값이 클수록 복잡도가 높아 테스트와 유지보수가 어려워지며, 일반적으로 10 이하를 권장한다.",
+      "hint": "E - N + 2",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "순환복잡도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "소프트웨어 테스트 레벨을 순서대로 나열하면?",
+      "back": "단위 테스트(모듈 단위 검증) → 통합 테스트(모듈 간 인터페이스 검증) → 시스템 테스트(전체 시스템의 기능·비기능 검증) → 인수 테스트(사용자 관점의 최종 확인) 순으로 진행된다. V 모델에서는 각 개발 단계와 테스트 레벨이 대응된다.",
+      "hint": "단위→통합→시스템→인수",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "테스트레벨"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "상향식 통합 테스트와 하향식 통합 테스트를 비교하면?",
+      "back": "하향식은 상위 모듈부터 통합하며 아직 없는 하위 모듈을 스텁(Stub)으로 대체하고, 상향식은 하위 모듈부터 통합하며 상위 역할을 하는 드라이버(Driver)를 만들어 테스트한다. 하향식은 주요 제어 구조를 조기 검증하고, 상향식은 하위 모듈 검증이 철저하다.",
+      "hint": "스텁 vs 드라이버",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "통합테스트"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "회귀 테스트(Regression Test)란 무엇인가?",
+      "back": "코드 수정이나 기능 추가 후, 변경이 기존 기능에 새로운 결함을 만들지 않았는지 이전 테스트를 다시 수행해 확인하는 테스트다. 반복 실행되므로 테스트 자동화의 효과가 가장 큰 영역이다.",
+      "hint": "변경 후 기존 기능 재확인",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "회귀테스트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "알파 테스트와 베타 테스트의 차이는?",
+      "back": "알파 테스트는 개발 조직 내부 환경에서 개발자가 지켜보는 가운데 통제된 방식으로 수행하는 인수 테스트이고, 베타 테스트는 실제 사용자 환경에서 다수의 외부 사용자가 자유롭게 사용하며 결함을 보고하는 테스트다.",
+      "hint": "통제된 내부 vs 실사용 환경",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "인수테스트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "테스트 오라클(Test Oracle)이란 무엇인가?",
+      "back": "테스트 실행 결과가 옳은지 판단하기 위한 기댓값 비교 근거를 말한다. 모든 입력에 기댓값을 제공하는 참(True) 오라클, 일부 값만 검증하는 샘플링 오라클, 근사값으로 판단하는 휴리스틱 오라클, 동일 입력의 결과 일관성만 보는 일관성 검사 오라클 등이 있다.",
+      "hint": "결과 판단의 근거",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "테스트오라클"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "정적 테스트와 동적 테스트의 차이는?",
+      "back": "정적 테스트는 프로그램을 실행하지 않고 요구사항 문서, 설계서, 소스 코드를 리뷰·인스펙션·정적 분석 도구로 검토하는 것이고, 동적 테스트는 프로그램을 실제로 실행하며 결함을 찾는 것이다. 정적 테스트는 개발 초기에 결함을 조기 발견할 수 있다.",
+      "hint": "실행 없이 vs 실행하며",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "정적동적"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "구문 커버리지, 결정 커버리지, 조건 커버리지를 비교하면?",
+      "back": "구문 커버리지는 모든 문장이 한 번 이상 실행되는지, 결정(분기) 커버리지는 모든 분기의 참·거짓이 각각 실행되는지, 조건 커버리지는 분기 내 개별 조건식 각각의 참·거짓이 실행되는지를 본다. 일반적으로 결정 커버리지가 구문 커버리지를 포함한다.",
+      "hint": "문장·분기·개별조건",
+      "tags": [
+        "소프트웨어개발",
+        "테스트",
+        "커버리지"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "형상 관리(SCM)의 정의와 주요 절차는?",
+      "back": "소프트웨어 개발 과정에서 산출물의 변경을 체계적으로 통제하고 추적하는 활동이다. 형상 식별(관리 대상 정의) → 형상 통제(변경 요청 검토·승인) → 형상 감사(무결성 검증) → 형상 기록(상태 보고)의 절차로 수행된다.",
+      "hint": "식별-통제-감사-기록",
+      "tags": [
+        "소프트웨어개발",
+        "형상관리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "형상 관리 도구의 저장소 운영 방식 세 가지는?",
+      "back": "공유 폴더 방식(RCS 계열처럼 파일 잠금 중심), 클라이언트-서버 방식(SVN처럼 중앙 저장소 하나에 접속), 분산 저장소 방식(Git처럼 개발자마다 전체 저장소 복제본을 보유)으로 나뉜다. 분산 방식은 오프라인 커밋과 브랜치 활용이 자유롭다.",
+      "hint": "공유폴더·중앙집중·분산",
+      "tags": [
+        "소프트웨어개발",
+        "형상관리",
+        "버전관리도구"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "형상 관리에서 기준선(Baseline)이란 무엇인가?",
+      "back": "공식적으로 검토·합의되어 이후 변경 시 정식 변경 통제 절차를 거쳐야 하는 산출물의 기준 시점 상태를 말한다. 개발 단계별 이정표 역할을 하며, 기준선 설정 이후의 변경은 변경통제위원회(CCB) 승인을 받아 반영한다.",
+      "hint": "합의된 기준 시점",
+      "tags": [
+        "소프트웨어개발",
+        "형상관리",
+        "기준선"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "버전 관리에서 체크아웃, 체크인, 커밋 용어의 의미는?",
+      "back": "체크아웃은 저장소에서 파일을 받아 작업 공간으로 가져오는 것, 체크인(커밋)은 수정한 파일을 저장소에 반영해 새 버전을 만드는 것이다. 이 밖에 여러 사람의 변경을 합치는 병합(Merge), 저장소 변경 사항을 받아오는 업데이트 등이 기본 용어다.",
+      "hint": "받기 vs 반영하기",
+      "tags": [
+        "소프트웨어개발",
+        "형상관리",
+        "버전관리용어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "소프트웨어 패키징 시 고려해야 할 사항은 무엇인가?",
+      "back": "사용자 중심으로 실행 환경(OS, 하드웨어)을 고려해 모듈을 묶고, 설치와 배포가 쉬운 형태로 만들며, 버전 관리와 릴리스 노트를 함께 준비한다. 이기종 환경 호환성과 보안(불법 복제 방지)도 함께 검토한다.",
+      "hint": "사용자 중심, 환경 호환",
+      "tags": [
+        "소프트웨어개발",
+        "패키징"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "릴리스 노트(Release Note)에 포함되는 주요 항목은?",
+      "back": "머리말(제품명, 버전, 릴리스 날짜), 개요, 새로운 기능과 개선 사항, 수정된 결함 목록, 알려진 문제와 제약 사항, 설치·업그레이드 방법, 지원 연락처 등이 포함된다. 사용자와 운영자가 변경 내용을 파악하는 공식 문서다.",
+      "hint": "버전, 변경 내용, 알려진 문제",
+      "tags": [
+        "소프트웨어개발",
+        "패키징",
+        "릴리스노트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "DRM(디지털 저작권 관리) 시스템의 주요 구성 요소는?",
+      "back": "콘텐츠를 암호화해 유통 형태로 만드는 패키저, 콘텐츠 제공자와 소비자를 연결하는 클리어링 하우스(라이선스 발급·정산), 사용자 측에서 라이선스를 검증하고 콘텐츠를 복호화해 재생하는 DRM 컨트롤러, 그리고 보안 컨테이너로 구성된다.",
+      "hint": "패키저, 클리어링하우스, 컨트롤러",
+      "tags": [
+        "소프트웨어개발",
+        "패키징",
+        "DRM"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "빌드 자동화 도구의 역할과 대표적인 예는?",
+      "back": "소스 코드 컴파일, 의존성 관리, 테스트 실행, 패키징을 자동으로 수행해 반복 빌드의 일관성을 보장하는 도구다. Java 진영의 Ant, Maven, Gradle이 대표적이며, Jenkins 같은 CI 도구와 결합해 지속적 통합 파이프라인을 구성한다.",
+      "hint": "컴파일·의존성·패키징 자동화",
+      "tags": [
+        "소프트웨어개발",
+        "빌드",
+        "자동화도구"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "정적 분석 도구는 무엇을 검사하는가?",
+      "back": "프로그램을 실행하지 않고 소스 코드를 분석해 코딩 표준 위반, 잠재적 결함, 보안 취약점, 복잡도 지표를 찾아내는 도구다. pmd, cppcheck, SonarQube 계열 도구가 이 범주에 속하며, 실행 중 메모리 사용을 검사하는 동적 분석 도구와 구별된다.",
+      "hint": "실행 없이 코드 결함 탐지",
+      "tags": [
+        "소프트웨어개발",
+        "품질",
+        "정적분석"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "클린 코드 작성의 기본 원칙에는 어떤 것들이 있는가?",
+      "back": "가독성(이해하기 쉬운 이름과 구조), 단순성(한 기능만 하는 작은 단위), 의존성 최소화, 중복 제거, 추상화 수준의 일관성이 대표 원칙이다. 남이 읽기 쉬운 코드가 유지보수 비용을 낮춘다는 것이 핵심이다.",
+      "hint": "가독성, 단순성, 중복 제거",
+      "tags": [
+        "소프트웨어개발",
+        "품질",
+        "클린코드"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "EAI(기업 애플리케이션 통합)의 구축 유형 네 가지는?",
+      "back": "포인트 투 포인트(1:1 직접 연결), 허브 앤 스포크(중앙 허브 경유), 메시지 버스(ESB, 미들웨어 버스 활용), 하이브리드(그룹 내부는 허브, 그룹 간은 버스)로 나뉜다. 연결 수가 늘수록 포인트 투 포인트는 유지보수가 급격히 어려워진다.",
+      "hint": "P2P, 허브앤스포크, 버스, 하이브리드",
+      "tags": [
+        "소프트웨어개발",
+        "인터페이스",
+        "EAI"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스의 정의를 구성하는 네 가지 특성은?",
+      "back": "통합 데이터(중복 최소화), 저장 데이터(컴퓨터가 접근 가능한 매체에 저장), 운영 데이터(조직 업무에 지속적으로 필요), 공용 데이터(여러 사용자가 공동 이용)의 특성을 갖는 데이터 집합이다.",
+      "hint": "통합·저장·운영·공용",
+      "tags": [
+        "데이터베이스",
+        "DB개념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "DBMS의 세 가지 필수 기능은 무엇인가?",
+      "back": "정의 기능(데이터 구조와 제약 조건 명세), 조작 기능(검색·삽입·수정·삭제 인터페이스 제공), 제어 기능(무결성 유지, 보안·권한 관리, 병행 제어)이다. 응용 프로그램과 데이터 사이에서 데이터를 일관되게 관리한다.",
+      "hint": "정의·조작·제어",
+      "tags": [
+        "데이터베이스",
+        "DB개념",
+        "DBMS"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스 3단계 스키마 구조를 설명하면?",
+      "back": "외부 스키마(개별 사용자 관점의 뷰, 여러 개 존재 가능), 개념 스키마(조직 전체 관점의 논리 구조, 하나만 존재), 내부 스키마(물리적 저장 구조)로 구성된다. 단계를 분리해 데이터 독립성을 확보하는 것이 목적이다.",
+      "hint": "외부-개념-내부",
+      "tags": [
+        "데이터베이스",
+        "DB개념",
+        "스키마"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "논리적 데이터 독립성과 물리적 데이터 독립성의 차이는?",
+      "back": "논리적 독립성은 개념 스키마가 변해도 외부 스키마와 응용 프로그램이 영향받지 않는 성질이고, 물리적 독립성은 내부 스키마(저장 구조, 인덱스 등)가 변해도 개념·외부 스키마가 영향받지 않는 성질이다.",
+      "hint": "개념 변경 vs 저장 변경",
+      "tags": [
+        "데이터베이스",
+        "DB개념",
+        "데이터독립성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "관계 대수와 관계 해석의 차이는 무엇인가?",
+      "back": "관계 대수는 원하는 결과를 얻는 연산 절차를 순서대로 기술하는 절차적 언어이고, 관계 해석은 원하는 결과의 조건만 기술하는 비절차적(선언적) 언어다. 두 언어의 표현력은 동등하다.",
+      "hint": "절차적 vs 비절차적",
+      "tags": [
+        "데이터베이스",
+        "관계모델",
+        "관계대수"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "슈퍼키, 후보키, 기본키, 대체키, 외래키를 구분하면?",
+      "back": "슈퍼키는 유일성만 만족하는 속성 집합, 후보키는 유일성과 최소성을 모두 만족하는 키, 기본키는 후보키 중 대표로 선택된 키, 대체키는 기본키로 선택되지 않은 나머지 후보키, 외래키는 다른 릴레이션의 기본키를 참조하는 속성이다.",
+      "hint": "유일성·최소성 기준",
+      "tags": [
+        "데이터베이스",
+        "관계모델",
+        "키"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "개체 무결성과 참조 무결성 제약 조건은 무엇을 요구하는가?",
+      "back": "개체 무결성은 기본키가 널(NULL)이거나 중복될 수 없다는 제약이고, 참조 무결성은 외래키 값이 참조하는 릴레이션의 기본키 값이거나 널이어야 한다는 제약이다. 이 밖에 속성 값의 범위를 제한하는 도메인 무결성이 있다.",
+      "hint": "기본키 NULL 금지, 외래키 일치",
+      "tags": [
+        "데이터베이스",
+        "관계모델",
+        "무결성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "E-R 다이어그램에서 사각형, 타원, 마름모가 나타내는 것은?",
+      "back": "사각형은 개체(Entity), 타원은 속성(Attribute), 마름모는 개체 간의 관계(Relationship)를 나타내고 선으로 이들을 연결한다. 밑줄 친 속성은 기본키, 이중 타원은 다중값 속성을 의미한다.",
+      "hint": "개체·속성·관계",
+      "tags": [
+        "데이터베이스",
+        "데이터모델링",
+        "ER모델"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "릴레이션에서 차수(Degree)와 카디널리티(Cardinality)의 의미는?",
+      "back": "차수는 릴레이션이 가진 속성(열)의 개수이고, 카디널리티는 튜플(행)의 개수다. 예를 들어 속성 4개에 데이터 100건이 저장된 릴레이션은 차수 4, 카디널리티 100이다.",
+      "hint": "열 개수 vs 행 개수",
+      "tags": [
+        "데이터베이스",
+        "관계모델",
+        "릴레이션"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스 정규화의 목적은 무엇인가?",
+      "back": "데이터 중복을 줄여 삽입·삭제·갱신 이상 현상을 방지하고, 데이터 일관성과 무결성을 높이는 것이 목적이다. 속성 간 함수적 종속성을 분석해 릴레이션을 더 작은 릴레이션들로 무손실 분해하는 과정으로 수행된다.",
+      "hint": "중복 제거, 이상 방지",
+      "tags": [
+        "데이터베이스",
+        "정규화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "제1정규형(1NF)의 조건은 무엇인가?",
+      "back": "릴레이션의 모든 속성 값이 더 이상 나눌 수 없는 원자값으로만 구성되어야 한다는 조건이다. 하나의 칸에 여러 값이 들어 있는 다중값이나 반복 그룹이 있으면 1NF를 만족하지 못한다.",
+      "hint": "원자값",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "1NF"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "제2정규형(2NF)의 조건은 무엇인가?",
+      "back": "1NF를 만족하면서 기본키의 일부에만 종속되는 부분 함수 종속이 제거되어, 모든 비주요 속성이 기본키 전체에 완전 함수 종속이어야 한다는 조건이다. 기본키가 복합키일 때 문제가 되며, 부분 종속된 속성을 별도 릴레이션으로 분리해 달성한다.",
+      "hint": "부분 함수 종속 제거",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "2NF"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스 정규화에서 제3정규형(3NF)의 조건은?",
+      "back": "2NF를 만족하면서 비주요 속성이 기본키에 이행적으로 종속(A→B, B→C 형태)되지 않아야 한다는 조건이다. 즉 키가 아닌 속성이 다른 비키 속성을 거쳐 기본키에 종속되는 이행적 함수 종속을 제거한 상태다.",
+      "hint": "이행적 종속 제거",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "3NF"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "BCNF(보이스-코드 정규형)의 조건은 무엇인가?",
+      "back": "릴레이션의 모든 결정자가 후보키여야 한다는 조건으로, 3NF보다 강화된 정규형이다. 후보키가 여러 개이고 서로 겹치는 복합 후보키가 존재할 때 3NF를 만족해도 BCNF를 위반하는 경우가 생길 수 있다.",
+      "hint": "모든 결정자가 후보키",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "BCNF"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "정규형의 단계를 순서대로 나열하고 각 단계에서 제거하는 것은?",
+      "back": "1NF(원자값 위반) → 2NF(부분 함수 종속) → 3NF(이행적 함수 종속) → BCNF(후보키가 아닌 결정자) → 4NF(다치 종속) → 5NF(조인 종속) 순으로, 단계가 올라갈수록 제약이 강해진다.",
+      "hint": "부분→이행→결정자→다치→조인",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "정규형단계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "반정규화(De-normalization)는 언제, 왜 수행하는가?",
+      "back": "정규화된 구조가 조인 증가 등으로 조회 성능을 떨어뜨릴 때, 의도적으로 테이블 통합·중복 컬럼 추가·집계 테이블 생성 등을 하는 것이다. 성능은 개선되지만 중복으로 인한 갱신 이상 위험이 커지므로 무결성 유지 방안을 함께 마련해야 한다.",
+      "hint": "성능 위해 의도적 중복",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "반정규화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "함수적 종속(Functional Dependency)이란 무엇인가?",
+      "back": "속성 X의 값이 정해지면 속성 Y의 값이 유일하게 정해지는 관계를 X→Y로 표기하고 'Y는 X에 함수적으로 종속된다'고 한다. X를 결정자, Y를 종속자라 부르며 정규화의 판단 기준이 된다.",
+      "hint": "X가 Y를 유일하게 결정",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "함수적종속"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "이상 현상(Anomaly)의 세 가지 종류를 설명하면?",
+      "back": "삽입 이상(불필요한 값 없이는 삽입 불가), 삭제 이상(튜플 삭제 시 필요한 정보까지 연쇄 손실), 갱신 이상(중복된 값 일부만 수정되어 불일치 발생)이다. 정규화되지 않은 릴레이션의 중복 저장 때문에 발생한다.",
+      "hint": "삽입·삭제·갱신",
+      "tags": [
+        "데이터베이스",
+        "정규화",
+        "이상현상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL의 DDL에 속하는 명령어와 각 역할은?",
+      "back": "CREATE(테이블·뷰·인덱스 등 객체 생성), ALTER(구조 변경), DROP(객체 삭제), TRUNCATE(테이블 구조는 남기고 전체 데이터 제거)가 DDL에 속한다. 데이터 자체가 아니라 데이터의 구조를 정의하는 언어다.",
+      "hint": "CREATE, ALTER, DROP",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "DDL"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL의 DML에 속하는 명령어와 각 역할은?",
+      "back": "SELECT(조회), INSERT(삽입), UPDATE(수정), DELETE(삭제)가 DML에 속하며 테이블에 저장된 데이터를 조작한다. DELETE는 WHERE 조건으로 특정 행만 지울 수 있고 롤백이 가능하다는 점에서 DDL인 TRUNCATE와 다르다.",
+      "hint": "SELECT, INSERT, UPDATE, DELETE",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "DML"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL의 DCL 명령어 GRANT와 REVOKE의 역할은?",
+      "back": "GRANT는 사용자에게 객체에 대한 권한(SELECT, INSERT 등)을 부여하고, REVOKE는 부여한 권한을 회수한다. GRANT ... WITH GRANT OPTION을 쓰면 권한을 받은 사용자가 다시 다른 사용자에게 부여할 수 있다.",
+      "hint": "권한 부여와 회수",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "DCL"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL에서 GROUP BY와 HAVING 절의 역할 차이는?",
+      "back": "GROUP BY는 지정한 컬럼 값이 같은 행들을 그룹으로 묶어 집계 함수(COUNT, SUM, AVG 등)를 적용하게 하고, HAVING은 그렇게 만들어진 그룹에 조건을 걸어 걸러낸다. WHERE는 그룹화 이전의 개별 행에, HAVING은 그룹화 이후에 적용된다는 점이 다르다.",
+      "hint": "그룹화 vs 그룹 조건",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "집계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL 조인의 종류(INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER)를 구분하면?",
+      "back": "INNER JOIN은 양쪽 테이블에서 조건이 일치하는 행만 반환하고, LEFT OUTER는 왼쪽 테이블의 모든 행을 유지하며 오른쪽에 짝이 없으면 NULL을 채운다. RIGHT OUTER는 그 반대, FULL OUTER는 양쪽 모두의 비일치 행까지 반환한다.",
+      "hint": "일치만 vs 한쪽 전체 유지",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "조인"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL 집합 연산자 UNION과 UNION ALL의 차이는?",
+      "back": "둘 다 두 SELECT 결과를 세로로 합치지만 UNION은 중복 행을 제거하고 UNION ALL은 중복을 그대로 유지한다. 중복 제거에는 정렬·비교 비용이 들므로 중복이 없다고 확실할 때는 UNION ALL이 더 효율적이다. 이 밖에 교집합 INTERSECT, 차집합 EXCEPT(MINUS)가 있다.",
+      "hint": "중복 제거 여부",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "집합연산"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "뷰(View)의 특징과 장단점은 무엇인가?",
+      "back": "하나 이상의 테이블에서 유도되는 가상 테이블로, 정의만 저장되고 데이터는 물리적으로 저장되지 않는다. 보안(필요한 컬럼만 노출)과 질의 단순화에 유리하지만, 정의 변경이 불가하여 삭제 후 재생성해야 하고 뷰에 대한 삽입·갱신에는 제약이 따른다.",
+      "hint": "정의만 저장되는 가상 테이블",
+      "tags": [
+        "데이터베이스",
+        "SQL",
+        "뷰"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "인덱스(Index)의 개념과 장단점은?",
+      "back": "검색 속도를 높이기 위해 컬럼 값과 행 위치를 별도 구조(주로 B+ 트리)로 유지하는 데이터베이스 객체다. 조회는 빨라지지만 삽입·수정·삭제 때마다 인덱스도 갱신되어 쓰기 성능과 저장 공간의 비용이 발생하므로, 검색 조건에 자주 쓰이는 컬럼에 선별적으로 만든다.",
+      "hint": "조회 빠름, 갱신 비용",
+      "tags": [
+        "데이터베이스",
+        "인덱스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "클러스터드 인덱스와 넌클러스터드 인덱스의 차이는?",
+      "back": "클러스터드 인덱스는 테이블의 실제 데이터 행을 인덱스 키 순서로 물리적으로 정렬해 저장하므로 테이블당 하나만 만들 수 있고 범위 검색에 강하다. 넌클러스터드 인덱스는 데이터와 분리된 구조에 키와 행 포인터를 저장하며 여러 개 생성할 수 있다.",
+      "hint": "데이터 자체 정렬 vs 별도 구조",
+      "tags": [
+        "데이터베이스",
+        "인덱스",
+        "인덱스종류"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "트랜잭션의 ACID 특성 네 가지를 설명하면?",
+      "back": "원자성(Atomicity, 전부 수행되거나 전혀 수행되지 않음), 일관성(Consistency, 수행 전후 데이터 무결성 유지), 격리성(Isolation, 동시 실행 트랜잭션 간 간섭 차단), 지속성(Durability, 완료된 결과는 장애가 나도 보존)이다.",
+      "hint": "원자성·일관성·격리성·지속성",
+      "tags": [
+        "데이터베이스",
+        "트랜잭션",
+        "ACID"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "트랜잭션의 상태 전이(활동, 부분 완료, 완료, 실패, 철회)를 설명하면?",
+      "back": "활동(Active)은 연산 실행 중, 부분 완료(Partially Committed)는 마지막 연산까지 마쳤지만 아직 커밋 전, 완료(Committed)는 커밋까지 끝나 결과가 확정된 상태다. 실패(Failed)는 오류로 중단된 상태, 철회(Aborted)는 롤백이 끝나 실행 전으로 되돌아간 상태다.",
+      "hint": "Active→Partially→Committed",
+      "tags": [
+        "데이터베이스",
+        "트랜잭션",
+        "상태전이"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "COMMIT, ROLLBACK, SAVEPOINT 명령의 역할은?",
+      "back": "COMMIT은 트랜잭션의 변경을 확정해 데이터베이스에 반영하고, ROLLBACK은 변경을 취소해 트랜잭션 시작 시점(또는 저장점)으로 되돌린다. SAVEPOINT는 트랜잭션 내부에 되돌아갈 중간 지점을 만들어 부분 롤백을 가능하게 한다.",
+      "hint": "확정·취소·중간지점",
+      "tags": [
+        "데이터베이스",
+        "트랜잭션",
+        "TCL"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "병행 제어(Concurrency Control)가 없을 때 발생하는 문제들은?",
+      "back": "갱신 손실(두 트랜잭션의 갱신 중 하나가 덮어써짐), 오손 판독(커밋되지 않은 데이터 읽기), 반복 불가능 판독(같은 질의의 결과가 달라짐), 팬텀 판독(없던 행이 나타남), 모순성, 연쇄 복귀(연쇄 롤백) 등이 발생한다.",
+      "hint": "갱신 손실, 오손 판독 등",
+      "tags": [
+        "데이터베이스",
+        "병행제어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "로킹(Locking) 단위의 크기가 성능에 미치는 영향은?",
+      "back": "로킹 단위가 크면(테이블 단위) 관리할 락 수가 적어 오버헤드는 줄지만 병행성(동시성)이 떨어지고, 단위가 작으면(행 단위) 병행성은 높아지지만 락 관리 오버헤드가 커진다. 즉 로킹 단위와 병행성 수준은 반비례 관계다.",
+      "hint": "단위 크기와 병행성 반비례",
+      "tags": [
+        "데이터베이스",
+        "병행제어",
+        "로킹"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "2단계 로킹 규약(Two-Phase Locking)의 동작 방식은?",
+      "back": "트랜잭션이 락을 획득만 하는 확장 단계와, 해제만 하는 축소 단계로 나누어 일단 락을 하나라도 해제하면 새 락을 얻지 못하게 하는 규약이다. 직렬 가능성을 보장하지만 교착상태를 막지는 못한다.",
+      "hint": "확장 단계와 축소 단계",
+      "tags": [
+        "데이터베이스",
+        "병행제어",
+        "2PL"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL 표준의 트랜잭션 격리 수준 네 가지를 낮은 것부터 나열하면?",
+      "back": "READ UNCOMMITTED → READ COMMITTED → REPEATABLE READ → SERIALIZABLE 순이다. 수준이 높아질수록 격리성이 강해져 이상 현상은 줄지만 동시성(병행성)은 낮아지는 트레이드오프가 있다.",
+      "hint": "RU→RC→RR→S",
+      "tags": [
+        "데이터베이스",
+        "병행제어",
+        "격리수준"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "격리 수준별로 허용되는 읽기 이상 현상을 비교하면?",
+      "back": "READ UNCOMMITTED는 오손 판독까지 허용하고, READ COMMITTED는 오손 판독을 막지만 반복 불가능 판독이 가능하며, REPEATABLE READ는 반복 불가능 판독까지 막지만 팬텀 판독이 남을 수 있고, SERIALIZABLE은 세 가지 모두 차단한다.",
+      "hint": "Dirty→Non-repeatable→Phantom",
+      "tags": [
+        "데이터베이스",
+        "병행제어",
+        "격리수준비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "로그 기반 회복 기법에서 즉시 갱신과 지연 갱신의 차이는?",
+      "back": "즉시 갱신은 트랜잭션 수행 중에도 변경을 데이터베이스에 바로 반영하므로 장애 시 로그로 REDO와 UNDO를 모두 수행한다. 지연 갱신은 커밋 전까지 변경을 로그에만 기록하고 반영을 미루므로 UNDO가 필요 없고 REDO만 수행한다.",
+      "hint": "REDO+UNDO vs REDO만",
+      "tags": [
+        "데이터베이스",
+        "회복",
+        "로그기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "체크포인트(Checkpoint) 회복 기법의 목적은 무엇인가?",
+      "back": "일정 주기로 메모리의 변경 내용을 디스크에 반영하고 그 시점을 로그에 기록해 두는 기법이다. 장애 발생 시 로그 전체가 아니라 마지막 체크포인트 이후만 검사하면 되므로 회복 시간이 크게 줄어든다.",
+      "hint": "회복 검사 범위 축소",
+      "tags": [
+        "데이터베이스",
+        "회복",
+        "체크포인트"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스 회복에서 REDO와 UNDO 연산의 차이는?",
+      "back": "REDO는 커밋된 트랜잭션의 변경이 디스크에 반영되지 못했을 때 로그를 앞에서부터 재실행해 결과를 다시 반영하는 것이고, UNDO는 커밋되지 않은 트랜잭션의 변경을 로그를 역순으로 따라가며 취소해 원래 값으로 되돌리는 것이다.",
+      "hint": "재실행 vs 취소",
+      "tags": [
+        "데이터베이스",
+        "회복",
+        "REDO·UNDO"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "분산 데이터베이스의 4대 투명성은 무엇인가?",
+      "back": "위치 투명성(데이터의 물리적 위치를 몰라도 접근), 중복 투명성(복제본 존재를 의식하지 않음), 병행 투명성(여러 트랜잭션 동시 수행에도 일관성 유지), 장애 투명성(일부 구성 요소 장애에도 트랜잭션 처리 지속)이다.",
+      "hint": "위치·중복·병행·장애",
+      "tags": [
+        "데이터베이스",
+        "분산DB",
+        "투명성"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "테이블 파티셔닝의 주요 방식(범위, 해시, 리스트)을 구분하면?",
+      "back": "범위 분할은 날짜처럼 연속 값의 구간으로 나누고, 해시 분할은 해시 함수 값으로 데이터를 고르게 분산시키며, 리스트 분할은 지역 코드처럼 명시적으로 열거한 값 목록으로 나눈다. 이들을 조합한 컴포지트(조합) 분할도 있다.",
+      "hint": "구간·해시값·열거값",
+      "tags": [
+        "데이터베이스",
+        "파티셔닝"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "컴파일러 방식과 인터프리터 방식의 차이는 무엇인가?",
+      "back": "컴파일러는 소스 코드 전체를 미리 기계어(또는 중간 코드)로 번역해 실행 파일을 만들므로 실행 속도가 빠르고, 인터프리터는 실행 시점에 한 문장씩 해석하며 실행하므로 번역 단계 없이 바로 실행할 수 있지만 상대적으로 느리다.",
+      "hint": "전체 번역 vs 한 줄씩 해석",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "번역방식"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "절차적 프로그래밍과 객체지향 프로그래밍의 관점 차이는?",
+      "back": "절차적 프로그래밍은 순차적인 함수(프로시저) 호출 흐름으로 문제를 해결하며 데이터와 처리 로직이 분리되어 있다. 객체지향은 데이터와 그 데이터를 다루는 메서드를 객체로 묶고, 객체 간 메시지 교환으로 프로그램을 구성한다.",
+      "hint": "함수 중심 vs 객체 중심",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "패러다임"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "객체지향의 4대 특징(캡슐화, 상속, 다형성, 추상화)을 설명하면?",
+      "back": "캡슐화는 데이터와 메서드를 묶고 내부를 은닉하는 것, 상속은 상위 클래스의 속성과 동작을 하위 클래스가 물려받는 것, 다형성은 동일한 메시지에 객체마다 다른 방식으로 응답하는 것, 추상화는 공통된 본질만 뽑아 모델링하는 것이다.",
+      "hint": "캡슐화·상속·다형성·추상화",
+      "tags": [
+        "프로그래밍언어",
+        "객체지향",
+        "4대특징"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "오버로딩(Overloading)과 오버라이딩(Overriding)의 차이는?",
+      "back": "오버로딩은 한 클래스 안에서 이름은 같지만 매개변수의 개수나 타입이 다른 메서드를 여러 개 정의하는 것이고, 오버라이딩은 상속 관계에서 하위 클래스가 상위 클래스의 메서드를 같은 시그니처로 재정의하는 것이다. 오버라이딩이 실행 시간 다형성의 핵심이다.",
+      "hint": "같은 이름 다른 매개변수 vs 재정의",
+      "tags": [
+        "프로그래밍언어",
+        "객체지향",
+        "다형성"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "지역 변수와 전역 변수의 차이와 유효 범위(Scope)란?",
+      "back": "유효 범위는 이름이 참조될 수 있는 코드 영역을 말한다. 지역 변수는 선언된 함수나 블록 안에서만 유효하고 해당 블록이 끝나면 소멸하며, 전역 변수는 프로그램 전체에서 접근 가능하지만 남용하면 결합도가 높아져 유지보수가 어려워진다.",
+      "hint": "블록 내부 vs 프로그램 전체",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "변수범위"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "정적 타입 언어와 동적 타입 언어의 차이는?",
+      "back": "정적 타입 언어(C, Java 등)는 컴파일 시점에 변수의 타입이 결정되고 검사되어 타입 오류를 조기에 발견할 수 있고, 동적 타입 언어(Python, JavaScript 등)는 실행 시점에 값에 따라 타입이 정해져 유연하지만 타입 오류가 실행 중에 드러난다.",
+      "hint": "컴파일 시 vs 실행 시 타입 결정",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "타입시스템"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "C 언어에서 포인터란 무엇이며 어떤 연산이 가능한가?",
+      "back": "포인터는 다른 변수의 메모리 주소를 저장하는 변수다. & 연산자로 변수의 주소를 얻고 * 연산자로 주소가 가리키는 값을 참조(역참조)하며, 배열 순회를 위한 증감 연산, 함수 인자로 주소를 넘겨 원본을 수정하는 참조 전달에 활용된다.",
+      "hint": "주소를 담는 변수",
+      "tags": [
+        "프로그래밍언어",
+        "C언어",
+        "포인터"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "가비지 컬렉션(Garbage Collection)의 역할은 무엇인가?",
+      "back": "프로그램이 더 이상 참조하지 않는 힙 메모리 객체를 런타임이 자동으로 찾아 회수하는 기법이다. Java, C#, Python 등이 채택해 메모리 누수와 해제 오류 위험을 줄여 주지만, 회수 시점에 일시 정지(Stop-the-world)가 생길 수 있다.",
+      "hint": "미사용 메모리 자동 회수",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "메모리관리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "파이썬(Python) 언어의 주요 특징은?",
+      "back": "인터프리터 방식의 동적 타입 언어로, 들여쓰기로 블록을 구분하는 간결한 문법을 가진다. 리스트·딕셔너리·튜플 같은 내장 자료형이 풍부하고 라이브러리 생태계가 넓어 데이터 분석, 자동화, 웹 개발 등에 널리 쓰인다.",
+      "hint": "인터프리터, 들여쓰기 블록",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "파이썬"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스크립트 언어의 일반적인 특징과 예는?",
+      "back": "별도의 컴파일 없이 인터프리터가 실행하며, 응용 프로그램이나 시스템의 동작을 제어·자동화하는 데 쓰이는 언어군이다. JavaScript, Python, PHP, 셸 스크립트가 대표적이고, 개발 생산성이 높은 대신 실행 성능은 컴파일 언어보다 낮은 편이다.",
+      "hint": "인터프리터 기반 자동화",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "스크립트언어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "묵시적 형변환과 명시적 형변환의 차이는?",
+      "back": "묵시적 형변환은 연산 과정에서 컴파일러가 자동으로 작은 타입을 큰 타입으로 승격시키는 것(int가 double과 연산되며 double로)이고, 명시적 형변환(캐스팅)은 개발자가 (int)3.7처럼 직접 지정하는 것이다. 큰 타입을 작은 타입으로 좁히면 정밀도나 값 손실이 생길 수 있다.",
+      "hint": "자동 승격 vs 캐스팅",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "형변환"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "논리 연산자의 단락 평가(Short-circuit Evaluation)란?",
+      "back": "AND(&&) 연산에서 앞 항이 거짓이면 뒤 항을 평가하지 않고 거짓으로, OR(||) 연산에서 앞 항이 참이면 뒤 항을 평가하지 않고 참으로 확정하는 방식이다. 뒤 항의 부수 효과가 실행되지 않을 수 있다는 점을 코드 해석 시 유의해야 한다.",
+      "hint": "앞 항으로 결과 확정",
+      "tags": [
+        "프로그래밍언어",
+        "언어특성",
+        "연산자"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "운영체제의 주요 역할은 무엇인가?",
+      "back": "프로세서, 메모리, 입출력 장치, 파일 같은 자원을 관리하고, 사용자와 하드웨어 사이의 인터페이스를 제공하는 시스템 소프트웨어다. 프로세스 관리, 기억장치 관리, 파일 시스템 관리, 입출력 관리, 보안이 핵심 기능이다.",
+      "hint": "자원 관리와 인터페이스",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "OS역할"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "운영체제에서 커널(Kernel)의 역할은?",
+      "back": "운영체제의 핵심부로 메모리에 상주하면서 프로세스 스케줄링, 메모리 관리, 장치 드라이버, 시스템 호출 처리를 담당한다. 응용 프로그램은 시스템 호출(System Call)을 통해서만 커널의 기능을 이용할 수 있다.",
+      "hint": "OS의 핵심 상주부",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "커널"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "프로세스와 스레드의 차이는 무엇인가?",
+      "back": "프로세스는 독립된 메모리 공간(코드, 데이터, 힙, 스택)을 가진 실행 단위이고, 스레드는 한 프로세스 안에서 스택과 레지스터만 따로 가지며 코드·데이터·힙을 공유하는 더 작은 실행 단위다. 스레드는 문맥 교환 비용이 적지만 공유 자원 동기화 문제가 따른다.",
+      "hint": "독립 공간 vs 자원 공유",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "프로세스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "프로세스의 상태 전이(생성, 준비, 실행, 대기, 종료)를 설명하면?",
+      "back": "생성된 프로세스는 준비(Ready) 상태에서 CPU 할당을 기다리다가 스케줄러의 디스패치로 실행(Running) 상태가 된다. 실행 중 입출력을 기다리면 대기(Waiting/Blocked)로 전환되고, 입출력이 끝나면 다시 준비로 돌아가며, 할당 시간이 다 되면 준비로 밀려난다(타임아웃).",
+      "hint": "준비↔실행→대기→준비",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "프로세스상태"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "PCB(Process Control Block)에 저장되는 정보는?",
+      "back": "프로세스 식별자(PID), 프로세스 상태, 프로그램 카운터, 레지스터 값, 스케줄링 우선순위, 메모리 할당 정보, 열린 파일 목록 등이 저장된다. 운영체제가 프로세스를 관리하고 문맥 교환을 수행하는 데 필요한 모든 정보의 저장소다.",
+      "hint": "프로세스 관리 정보 블록",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "PCB"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "문맥 교환(Context Switching)이란 무엇인가?",
+      "back": "CPU가 실행 중인 프로세스를 바꿀 때 현재 프로세스의 상태(레지스터, 프로그램 카운터 등)를 PCB에 저장하고, 다음 프로세스의 상태를 복원하는 작업이다. 문맥 교환 자체는 유용한 계산을 하지 않는 오버헤드이므로 지나치게 잦으면 성능이 떨어진다.",
+      "hint": "상태 저장과 복원",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "문맥교환"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "선점형 스케줄링과 비선점형 스케줄링의 차이는?",
+      "back": "선점형은 운영체제가 실행 중인 프로세스에서 CPU를 강제로 회수해 다른 프로세스에 줄 수 있는 방식(라운드 로빈, SRT 등)이고, 비선점형은 프로세스가 스스로 CPU를 놓을 때까지 기다리는 방식(FCFS, SJF, HRN 등)이다. 선점형은 응답성이 좋지만 오버헤드가 크다.",
+      "hint": "강제 회수 가능 여부",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "스케줄링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "FCFS(First Come First Served) 스케줄링의 특징은?",
+      "back": "준비 큐에 도착한 순서대로 CPU를 할당하는 가장 단순한 비선점형 기법이다. 구현이 쉽고 기아가 없지만, 긴 작업이 앞에 있으면 짧은 작업들이 오래 기다리는 호위 효과(Convoy Effect)로 평균 대기 시간이 길어질 수 있다.",
+      "hint": "도착 순서대로, 호위 효과",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "스케줄링기법"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SJF 스케줄링과 SRT 스케줄링의 관계는?",
+      "back": "SJF(Shortest Job First)는 실행 시간이 가장 짧은 작업부터 처리하는 비선점형 기법으로 평균 대기 시간을 최소화하지만 긴 작업의 기아가 생길 수 있다. SRT(Shortest Remaining Time)는 SJF의 선점형 변형으로, 남은 실행 시간이 더 짧은 프로세스가 도착하면 CPU를 빼앗는다.",
+      "hint": "비선점 SJF, 선점 SRT",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "스케줄링기법"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "라운드 로빈(Round Robin) 스케줄링의 동작과 시간 할당량의 영향은?",
+      "back": "각 프로세스에 동일한 시간 할당량(Time Quantum)을 주고 시간이 끝나면 준비 큐의 뒤로 보내는 선점형 기법으로, 시분할 시스템에 적합하다. 할당량이 너무 크면 FCFS에 가까워지고, 너무 작으면 문맥 교환 오버헤드가 커진다.",
+      "hint": "시간 할당량 순환",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "스케줄링기법"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "HRN(Highest Response Ratio Next) 스케줄링의 우선순위 계산식은?",
+      "back": "우선순위 = (대기 시간 + 서비스 시간) / 서비스 시간으로 계산해 값이 큰 프로세스부터 처리하는 비선점형 기법이다. 오래 기다릴수록 우선순위가 올라가므로 SJF의 긴 작업 기아 문제를 완화한다.",
+      "hint": "(대기+서비스)/서비스",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "스케줄링기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "교착상태(Deadlock)가 발생하기 위한 네 가지 필요조건은?",
+      "back": "상호 배제(자원을 한 프로세스만 사용), 점유와 대기(자원을 쥔 채 다른 자원 대기), 비선점(자원을 강제로 빼앗을 수 없음), 환형 대기(프로세스들이 원형으로 서로의 자원을 대기)의 네 조건이 모두 성립해야 교착상태가 발생할 수 있다.",
+      "hint": "상호배제·점유대기·비선점·환형대기",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "교착상태"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "교착상태에 대응하는 네 가지 전략은 무엇인가?",
+      "back": "예방(네 가지 필요조건 중 하나를 원천 차단), 회피(은행가 알고리즘처럼 안전 상태를 유지하며 할당), 발견(자원 할당 그래프 등으로 교착 탐지), 회복(프로세스 강제 종료나 자원 선점으로 해소)의 전략이 있다. 예방은 자원 활용률이 낮아지는 대가가 따른다.",
+      "hint": "예방·회피·발견·회복",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "교착상태대응"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "세마포어와 뮤텍스의 차이는 무엇인가?",
+      "back": "뮤텍스는 잠금을 획득한 주체만 해제할 수 있는 1개 자원의 상호 배제 장치이고, 세마포어는 정수 카운터로 여러 개의 자원 접근을 허용(카운팅 세마포어)하거나 신호 전달에 쓸 수 있으며 다른 주체가 해제(signal)할 수도 있다. 이진 세마포어는 뮤텍스와 유사하게 동작한다.",
+      "hint": "소유권 있는 잠금 vs 카운터",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "동기화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "임계 구역(Critical Section)이란 무엇이며 왜 보호해야 하는가?",
+      "back": "여러 프로세스나 스레드가 공유 자원에 접근하는 코드 영역을 말한다. 동시에 진입하면 실행 순서에 따라 결과가 달라지는 경쟁 조건(Race Condition)이 발생하므로, 상호 배제 기법으로 한 번에 하나의 주체만 진입하도록 보호해야 한다.",
+      "hint": "공유 자원 접근 코드",
+      "tags": [
+        "프로그래밍언어",
+        "운영체제",
+        "임계구역"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "페이징(Paging)과 세그먼테이션(Segmentation) 기법을 비교하면?",
+      "back": "페이징은 메모리를 동일 크기의 페이지로 나누어 관리해 외부 단편화가 없지만 내부 단편화가 생길 수 있다. 세그먼테이션은 코드·데이터·스택처럼 논리적 의미 단위의 가변 크기로 나누어 보호와 공유에 유리하지만 외부 단편화가 발생한다.",
+      "hint": "고정 크기 vs 가변 논리 단위",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "가상메모리기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "가상 메모리(Virtual Memory)의 개념과 장점은?",
+      "back": "실제 물리 메모리보다 큰 주소 공간을 프로그램에 제공하고, 당장 필요한 부분만 메모리에 올리고 나머지는 디스크에 두는 기법이다. 물리 메모리 크기의 제약을 넘어서 프로그램을 실행할 수 있고 다중 프로그래밍 정도를 높인다.",
+      "hint": "필요한 부분만 적재",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "가상메모리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "페이지 교체 알고리즘 FIFO, LRU, LFU, OPT를 구분하면?",
+      "back": "FIFO는 가장 먼저 들어온 페이지를, LRU는 가장 오랫동안 사용되지 않은 페이지를, LFU는 사용 빈도가 가장 낮은 페이지를 교체한다. OPT는 앞으로 가장 오래 사용되지 않을 페이지를 교체하는 이론적 최적 기법으로 비교 기준으로만 쓰인다.",
+      "hint": "들어온 순·최근성·빈도·최적",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "페이지교체"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스래싱(Thrashing)이란 무엇이며 어떻게 완화하는가?",
+      "back": "프로세스가 실제 작업보다 페이지 부재 처리(페이지 교체)에 더 많은 시간을 쓰는 상태로, 다중 프로그래밍 정도가 지나치게 높을 때 발생한다. 워킹셋 모델이나 페이지 부재 빈도(PFF) 조절로 프로세스별 적정 프레임을 보장해 완화한다.",
+      "hint": "페이지 부재 폭증",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "스래싱"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "워킹셋(Working Set) 모델은 무엇을 위한 기법인가?",
+      "back": "최근 일정 시간 창(윈도우) 동안 프로세스가 실제로 참조한 페이지 집합을 워킹셋으로 정의하고, 그 집합이 메모리에 유지되도록 프레임을 할당하는 기법이다. 지역성에 근거해 스래싱을 예방하는 것이 목적이다.",
+      "hint": "최근 참조 페이지 집합 유지",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "워킹셋"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "참조 지역성(Locality)의 두 가지 유형은?",
+      "back": "시간 지역성은 한 번 참조된 데이터가 곧 다시 참조될 가능성이 높다는 성질(반복문 변수)이고, 공간 지역성은 참조된 주소 근처의 데이터가 이어서 참조될 가능성이 높다는 성질(배열 순회)이다. 캐시와 가상 메모리 설계의 이론적 근거다.",
+      "hint": "시간 지역성, 공간 지역성",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "지역성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "내부 단편화와 외부 단편화의 차이는?",
+      "back": "내부 단편화는 고정 크기로 할당된 블록 안에서 쓰이지 않고 남는 공간(페이지 내부의 잔여)이고, 외부 단편화는 할당과 해제가 반복되며 생긴 흩어진 빈 공간들이 총합은 충분해도 연속되지 않아 할당에 쓰지 못하는 상태다. 외부 단편화는 압축(Compaction)으로 해소할 수 있다.",
+      "hint": "블록 내부 낭비 vs 흩어진 빈 공간",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "단편화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "메모리 배치 전략인 최초 적합, 최적 적합, 최악 적합을 구분하면?",
+      "back": "최초 적합(First Fit)은 조건을 만족하는 첫 번째 빈 공간에, 최적 적합(Best Fit)은 요청 크기와 가장 근접한 가장 작은 공간에, 최악 적합(Worst Fit)은 가장 큰 공간에 배치한다. 최초 적합은 탐색이 빠르고, 최적 적합은 작은 잔여 조각을 많이 만든다.",
+      "hint": "첫 공간·가장 작게 남는 곳·가장 큰 곳",
+      "tags": [
+        "프로그래밍언어",
+        "메모리",
+        "배치전략"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "OSI 7계층을 하위부터 순서대로 나열하고 핵심 역할을 요약하면?",
+      "back": "물리(비트 전송)-데이터링크(프레임, 인접 노드 오류 제어)-네트워크(패킷 경로 설정, IP)-전송(종단 간 신뢰성, TCP/UDP)-세션(대화 연결 관리)-표현(암호화, 인코딩)-응용(사용자 서비스) 순이다. 계층별 캡슐화로 통신 기능을 분담한다.",
+      "hint": "물데네전세표응",
+      "tags": [
+        "프로그래밍언어",
+        "네트워크",
+        "OSI7계층"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "TCP와 UDP의 차이는 무엇인가?",
+      "back": "TCP는 연결 설정(3-way handshake) 후 순서 보장, 재전송, 흐름·혼잡 제어를 제공하는 신뢰성 있는 전송 프로토콜이고, UDP는 연결 없이 데이터그램을 보내는 비신뢰 프로토콜로 오버헤드가 적어 실시간 스트리밍, DNS 질의처럼 속도가 중요한 곳에 쓰인다.",
+      "hint": "신뢰성 vs 속도",
+      "tags": [
+        "프로그래밍언어",
+        "네트워크",
+        "전송계층"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "IP 주소와 서브넷 마스크의 관계는 무엇인가?",
+      "back": "IP 주소는 네트워크 부분과 호스트 부분으로 이루어지며, 서브넷 마스크는 어디까지가 네트워크 부분인지를 1비트 구간으로 표시한다. IP 주소와 마스크를 AND 연산하면 네트워크 주소가 나오고, 이를 통해 같은 네트워크 소속 여부를 판단하고 서브넷을 분할한다.",
+      "hint": "네트워크/호스트 경계 표시",
+      "tags": [
+        "프로그래밍언어",
+        "네트워크",
+        "IP주소"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "주요 응용 계층 프로토콜 HTTP, FTP, SMTP, DNS의 역할을 구분하면?",
+      "back": "HTTP는 웹 문서 전송, FTP는 파일 송수신, SMTP는 전자우편 발송, DNS는 도메인 이름을 IP 주소로 변환하는 프로토콜이다. HTTP에 TLS 암호화를 더한 것이 HTTPS이고, 메일 수신에는 POP3나 IMAP이 쓰인다.",
+      "hint": "웹·파일·메일·이름변환",
+      "tags": [
+        "프로그래밍언어",
+        "네트워크",
+        "응용프로토콜"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "IPv4와 IPv6의 주요 차이는 무엇인가?",
+      "back": "IPv4는 32비트 주소(약 43억 개)를 점-십진 표기로, IPv6는 128비트 주소를 콜론-16진수 표기로 쓴다. IPv6는 주소 고갈 문제를 해결하고 헤더 단순화, 기본 IPsec 지원, 자동 주소 설정을 제공하며 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.",
+      "hint": "32비트 vs 128비트",
+      "tags": [
+        "프로그래밍언어",
+        "네트워크",
+        "IPv6"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "폭포수(Waterfall) 모델의 특징과 한계는?",
+      "back": "요구 분석→설계→구현→테스트→유지보수 단계를 순차적으로 진행하며 각 단계가 끝나야 다음으로 넘어가는 고전적 개발 모델이다. 관리와 문서화가 체계적이지만, 앞 단계로 되돌아가기 어려워 요구사항 변경에 취약하다.",
+      "hint": "순차 단계, 변경에 취약",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "폭포수"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "나선형(Spiral) 모델의 4단계 활동은 무엇인가?",
+      "back": "계획 수립 → 위험 분석 → 개발 및 검증 → 고객 평가의 활동을 나선을 돌 듯 반복하며 점진적으로 완성하는 모델이다. 매 주기마다 위험 분석을 수행하므로 대규모·고위험 프로젝트에 적합하지만 관리가 복잡하다.",
+      "hint": "계획-위험분석-개발-평가 반복",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "나선형"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "프로토타입(Prototype) 모델의 장점과 단점은?",
+      "back": "시제품을 빨리 만들어 사용자에게 보여주고 피드백을 받아 요구사항을 명확히 하는 모델이다. 요구사항 오해를 줄이고 사용자 참여를 높이지만, 시제품을 완제품으로 오해하거나 임시 코드가 그대로 유지되는 문제가 생길 수 있다.",
+      "hint": "시제품으로 요구 확인",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "프로토타입"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "애자일 선언(Agile Manifesto)의 네 가지 가치는?",
+      "back": "공정과 도구보다 개인과 상호작용을, 포괄적인 문서보다 작동하는 소프트웨어를, 계약 협상보다 고객과의 협력을, 계획을 따르기보다 변화에 대응하기를 더 가치 있게 여긴다. 왼쪽 항목도 가치가 있지만 오른쪽을 더 중시한다는 선언이다.",
+      "hint": "상호작용·동작SW·협력·변화대응",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "애자일"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "XP(eXtreme Programming)의 5가지 가치는 무엇인가?",
+      "back": "의사소통(Communication), 단순성(Simplicity), 피드백(Feedback), 용기(Courage), 존중(Respect)이다. 실천 방법으로는 짝 프로그래밍, 테스트 주도 개발, 지속적 통합, 소규모 릴리스, 리팩터링 등이 있다.",
+      "hint": "소통·단순·피드백·용기·존중",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "XP"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스크럼(Scrum)의 역할, 이벤트, 산출물을 요약하면?",
+      "back": "역할은 제품 책임자(PO), 스크럼 마스터, 개발팀이고, 이벤트는 스프린트, 스프린트 계획, 일일 스크럼, 스프린트 리뷰, 회고다. 산출물로는 제품 백로그, 스프린트 백로그, 증분(Increment)이 있으며 고정 길이 스프린트로 반복 개발한다.",
+      "hint": "PO·스크럼마스터·개발팀",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "스크럼"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "폭포수 모델과 애자일 방법론을 비교하면?",
+      "back": "폭포수는 초기에 요구사항을 확정하고 단계별 산출물 중심으로 순차 진행해 예측 가능성이 높지만 변경 비용이 크다. 애자일은 짧은 반복 주기로 동작하는 소프트웨어를 점진적으로 전달하며 변화 수용에 강하지만 문서 산출물과 장기 예측은 상대적으로 약하다.",
+      "hint": "계획 주도 vs 변화 적응",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "방법론비교"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "소프트웨어 개발 방법론 테일러링(Tailoring)이란?",
+      "back": "표준 방법론을 프로젝트의 규모, 기간, 팀 역량, 도메인 특성, 법적 요구 같은 내·외부 기준에 맞게 절차와 산출물을 조정해 적용하는 활동이다. 모든 프로젝트에 동일한 방법론을 그대로 쓰는 비효율을 막는 것이 목적이다.",
+      "hint": "프로젝트에 맞게 조정",
+      "tags": [
+        "정보시스템관리",
+        "개발방법론",
+        "테일러링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "CMMI의 성숙도 5단계를 순서대로 나열하면?",
+      "back": "1단계 초기(Initial, 예측 불가) → 2단계 관리(Managed, 프로젝트 단위 관리) → 3단계 정의(Defined, 조직 표준 프로세스) → 4단계 정량적 관리(Quantitatively Managed, 통계적 관리) → 5단계 최적화(Optimizing, 지속적 개선)이다. 조직의 프로세스 성숙도를 평가하는 모델이다.",
+      "hint": "초기-관리-정의-정량-최적화",
+      "tags": [
+        "정보시스템관리",
+        "프로세스성숙도",
+        "CMMI"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SPICE(ISO/IEC 15504)의 프로세스 수행 능력 수준 6단계는?",
+      "back": "0 불완전(Incomplete) → 1 수행(Performed) → 2 관리(Managed) → 3 확립(Established) → 4 예측(Predictable) → 5 최적화(Optimizing)의 6단계로 프로세스 능력을 평가한다. 소프트웨어 프로세스 심사를 위한 국제 표준 프레임워크다.",
+      "hint": "0~5 능력 수준",
+      "tags": [
+        "정보시스템관리",
+        "프로세스성숙도",
+        "SPICE"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "비용 산정의 하향식 기법과 상향식 기법을 구분하면?",
+      "back": "하향식은 전문가 판단이나 델파이 기법처럼 과거 경험과 전체 관점에서 총비용을 먼저 산정해 세부로 배분하는 방식이고, 상향식은 LOC나 기능 점수처럼 세부 작업 단위를 측정해 합산하는 방식이다. 델파이 기법은 여러 전문가의 익명 의견을 반복 수렴해 편향을 줄인다.",
+      "hint": "전체→세부 vs 세부→합산",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "비용산정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "LOC(원시 코드 라인 수) 기법의 산정 공식은?",
+      "back": "예측치 = (낙관치 + 4×기대치 + 비관치) / 6 으로 구한다. 산정된 총 라인 수를 1인당 월평균 생산 라인으로 나누면 노력(man-month)을, 노력에 단가를 곱하면 비용을 구할 수 있다. 측정이 쉽지만 언어와 코딩 스타일에 따라 편차가 크다.",
+      "hint": "(낙관+4×기대+비관)/6",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "LOC"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "COCOMO 모델의 세 가지 프로젝트 유형은 무엇인가?",
+      "back": "조직형(Organic, 5만 라인 이하의 소규모 업무 처리), 반분리형(Semi-detached, 30만 라인 이하의 중간 규모, 컴파일러·DBMS 등), 내장형(Embedded, 30만 라인 이상 또는 하드웨어가 강하게 결합된 대규모 시스템)으로 나눈다. 규모가 클수록 라인당 노력이 커진다.",
+      "hint": "조직형·반분리형·내장형",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "COCOMO"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "기능 점수(Function Point) 기법은 무엇을 기준으로 규모를 산정하는가?",
+      "back": "입력, 출력, 조회(질의), 내부 논리 파일, 외부 인터페이스 파일의 다섯 가지 기능 유형의 수와 복잡도에 가중치를 부여해 합산하고, 보정 계수를 적용해 규모를 산정한다. 코드 라인 수와 달리 언어에 독립적으로 사용자 관점의 기능 규모를 측정한다.",
+      "hint": "입력·출력·조회·파일·인터페이스",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "기능점수"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "PERT와 CPM 일정 관리 기법의 차이는?",
+      "back": "둘 다 작업 네트워크로 일정을 관리하지만, PERT는 작업 시간이 불확실한 경우 낙관·기대·비관 세 추정치의 확률적 계산을 쓰고, CPM은 경험이 있어 시간 예측이 가능한 경우 단일 추정치로 임계 경로(Critical Path)를 찾는다. 임계 경로는 지연되면 전체 일정이 늦어지는 최장 경로다.",
+      "hint": "확률적 vs 확정적, 임계경로",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "일정관리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "간트 차트(Gantt Chart)의 용도와 한계는?",
+      "back": "작업별 시작·종료 시점을 가로 막대로 표현해 일정 계획과 진척 상황을 한눈에 보여주는 도구다. 이해하기 쉽지만 작업 간의 선후 의존 관계와 임계 경로를 표현하기 어려워 네트워크 기법을 보완적으로 사용한다.",
+      "hint": "막대형 일정표",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "간트차트"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "브룩스(Brooks)의 법칙이 말하는 것은?",
+      "back": "지연된 소프트웨어 프로젝트에 인력을 추가하면 오히려 더 늦어진다는 경험 법칙이다. 새 인력의 교육 시간과 의사소통 경로의 급증(n명이면 n(n-1)/2개) 때문에 생기는 현상으로, 인력과 기간이 단순히 교환되지 않음을 보여준다.",
+      "hint": "인력 추가가 지연을 키움",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "브룩스법칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "위험 관리(Risk Management)의 절차는 어떻게 되는가?",
+      "back": "위험 식별 → 위험 분석(발생 확률과 영향도 평가) → 위험 대응 계획(회피, 전가, 완화, 수용) → 위험 감시 및 통제의 순서로 수행한다. 위험을 조기에 식별해 프로젝트에 미치는 영향을 관리 가능한 수준으로 유지하는 것이 목적이다.",
+      "hint": "식별-분석-대응-감시",
+      "tags": [
+        "정보시스템관리",
+        "프로젝트관리",
+        "위험관리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "ISO/IEC 25010 품질 모델의 주요 품질 특성에는 무엇이 있는가?",
+      "back": "기능 적합성, 성능 효율성, 호환성, 사용성, 신뢰성, 보안성, 유지보수성, 이식성의 8가지 주특성으로 제품 품질을 평가한다. 소프트웨어 품질 특성을 정의했던 ISO/IEC 9126을 대체한 국제 표준이다.",
+      "hint": "8가지 품질 주특성",
+      "tags": [
+        "정보시스템관리",
+        "품질관리",
+        "ISO25010"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "정보보안의 3요소(CIA)는 무엇인가?",
+      "back": "기밀성(Confidentiality, 인가된 사용자만 정보 접근), 무결성(Integrity, 정보가 승인 없이 변경되지 않음), 가용성(Availability, 필요할 때 정보와 서비스에 접근 가능)이다. 보안 대책은 이 세 가지 목표의 균형 위에서 설계된다.",
+      "hint": "기밀성·무결성·가용성",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "보안3요소"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "대칭키 암호와 공개키(비대칭) 암호 방식을 비교하면?",
+      "back": "대칭키는 암호화와 복호화에 같은 키를 사용해 속도가 빠르지만 키를 안전하게 나눠 갖는 분배 문제가 있고, 공개키는 공개키로 암호화해 개인키로 복호화하므로 키 분배가 쉽지만 연산이 느리다. 실무에서는 공개키로 대칭키를 교환하고 데이터는 대칭키로 암호화하는 혼합 방식을 쓴다.",
+      "hint": "같은 키 vs 키 쌍",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "암호방식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "블록 암호 알고리즘 DES와 AES의 관계는?",
+      "back": "DES는 56비트 키의 구식 표준으로 키 길이가 짧아 전수 조사에 취약해졌고, 이를 대체해 채택된 AES(Rijndael)는 128비트 블록에 128·192·256비트 키를 지원하는 현재의 대칭키 표준이다. 국내에서 개발된 블록 암호로는 SEED, ARIA, LEA가 있다.",
+      "hint": "구표준 DES, 현표준 AES",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "대칭암호"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "RSA 암호 알고리즘의 안전성은 무엇에 근거하는가?",
+      "back": "매우 큰 두 소수의 곱은 쉽게 계산되지만, 그 곱을 다시 소인수분해하는 것은 계산적으로 어렵다는 성질에 근거한 공개키 알고리즘이다. 암호화와 전자서명에 모두 사용되며, 키 길이는 2048비트 이상이 권장된다.",
+      "hint": "소인수분해의 어려움",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "공개키암호"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "암호학적 해시 함수가 갖추어야 할 성질은?",
+      "back": "임의 길이 입력을 고정 길이 출력으로 바꾸면서, 출력에서 입력을 되찾기 어려운 역상 저항성, 같은 해시를 갖는 다른 입력을 찾기 어려운 제2역상 저항성과 충돌 저항성을 갖추어야 한다. SHA-256 계열이 널리 쓰이며 무결성 검증과 비밀번호 저장에 활용된다.",
+      "hint": "일방향성, 충돌 저항성",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "해시함수"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "전자서명(Digital Signature)은 무엇을 보장하는가?",
+      "back": "송신자가 자신의 개인키로 메시지(의 해시)에 서명하고 수신자가 송신자의 공개키로 검증하는 방식이다. 서명자가 본인임을 확인하는 인증, 내용이 바뀌지 않았다는 무결성, 서명 사실을 나중에 부인할 수 없는 부인 방지를 보장한다.",
+      "hint": "인증·무결성·부인방지",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "전자서명"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "DoS 공격과 DDoS 공격의 차이는 무엇인가?",
+      "back": "DoS는 하나의 공격원이 대량 트래픽이나 취약점으로 서비스 자원을 고갈시켜 정상 사용자의 이용을 막는 공격이고, DDoS는 악성코드에 감염된 다수의 좀비 PC(봇넷)를 원격 조종해 분산된 지점에서 동시에 수행하는 DoS다. 분산 공격은 차단할 출발지가 많아 방어가 더 어렵다.",
+      "hint": "단일 공격원 vs 봇넷 분산",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "서비스거부공격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "SQL 삽입(SQL Injection) 공격의 원리와 대응 방법은?",
+      "back": "사용자 입력값이 검증 없이 SQL 문에 이어 붙여질 때, 입력에 질의 조각을 넣어 의도하지 않은 질의를 실행시키는 공격이다. 대응으로는 매개변수화된 질의(Prepared Statement) 사용, 입력값 검증, 최소 권한의 DB 계정 사용, 오류 메시지 노출 최소화가 있다.",
+      "hint": "입력으로 질의 조작, 매개변수화로 방어",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "SQL인젝션"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "XSS(크로스 사이트 스크립팅) 공격의 원리는 무엇인가?",
+      "back": "공격자가 게시판 등 웹 페이지에 악성 스크립트를 심어, 그 페이지를 열람한 다른 사용자의 브라우저에서 스크립트가 실행되게 하는 공격이다. 세션 쿠키 탈취 등에 악용되며, 대응은 입력값 검증과 출력 시 HTML 이스케이프 처리다.",
+      "hint": "열람자 브라우저에서 스크립트 실행",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "XSS"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "XSS 공격과 CSRF 공격의 차이는 무엇인가?",
+      "back": "XSS는 악성 스크립트를 다른 사용자의 브라우저에서 실행시켜 정보를 탈취하는 것이 핵심이고, CSRF는 로그인된 사용자의 브라우저가 자신도 모르게 위조된 요청을 서버로 보내게 하여 사용자의 권한으로 행위를 수행시키는 공격이다. XSS는 사용자를, CSRF는 서버의 신뢰를 악용한다.",
+      "hint": "스크립트 실행 vs 위조 요청",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "CSRF"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "스니핑(Sniffing)과 스푸핑(Spoofing) 공격을 구분하면?",
+      "back": "스니핑은 네트워크를 지나는 패킷을 몰래 엿보는 수동적 도청 공격이고, 스푸핑은 IP 주소, ARP, DNS 응답 등을 위조해 자신을 신뢰된 대상인 것처럼 속이는 능동적 공격이다. 통신 암호화는 스니핑 피해를, 인증 강화는 스푸핑 피해를 줄인다.",
+      "hint": "엿듣기 vs 위장",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "네트워크공격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "바이러스, 웜, 트로이 목마를 구분하면?",
+      "back": "바이러스는 다른 파일에 기생해 실행 시 감염을 퍼뜨리고, 웜은 숙주 없이 네트워크를 통해 스스로 복제·전파되며, 트로이 목마는 정상 프로그램으로 위장해 설치되지만 자기 복제는 하지 않는 악성코드다. 랜섬웨어는 데이터를 암호화해 금전을 요구하는 유형이다.",
+      "hint": "기생·자가전파·위장",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "악성코드"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "방화벽, IDS, IPS의 역할 차이는 무엇인가?",
+      "back": "방화벽은 정책에 따라 네트워크 경계에서 트래픽을 허용·차단하는 접근 통제 장비이고, IDS는 침입 징후를 탐지해 경보하는 장비이며, IPS는 트래픽 경로에 위치해 탐지 즉시 차단까지 수행하는 장비다. IDS는 우회로 밖에서 감시(수동), IPS는 인라인 차단(능동)이 특징이다.",
+      "hint": "차단·탐지·탐지+차단",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "보안장비"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "VPN(가상 사설망)의 개념과 핵심 기술은?",
+      "back": "공중망(인터넷) 위에 암호화된 터널을 만들어 마치 전용선처럼 안전하게 통신하는 기술이다. IPsec(네트워크 계층)과 SSL/TLS(전송 계층 위) 방식이 대표적이며, 터널링과 암호화로 기밀성과 무결성을 확보한다.",
+      "hint": "공중망 위 암호화 터널",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "VPN"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "접근 통제 모델 DAC, MAC, RBAC를 비교하면?",
+      "back": "DAC(임의적 접근 통제)는 자원 소유자가 권한을 재량으로 부여하고, MAC(강제적 접근 통제)는 보안 등급과 규칙에 따라 시스템이 강제로 통제하며, RBAC(역할 기반 접근 통제)는 사용자에게 직접이 아니라 역할에 권한을 부여하고 사용자를 역할에 배정한다. 조직 규모가 크면 RBAC가 관리에 유리하다.",
+      "hint": "소유자 재량·등급 강제·역할 기반",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "접근통제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "사용자 인증의 세 가지 요소(지식, 소유, 생체)는 무엇인가?",
+      "back": "지식 기반(비밀번호, PIN처럼 아는 것), 소유 기반(OTP 토큰, 스마트카드처럼 가진 것), 생체 기반(지문, 홍채처럼 본인 자체)이다. 서로 다른 두 요소 이상을 결합하면 다중 요소 인증(MFA)이 되어 도용 위험이 크게 줄어든다.",
+      "hint": "아는 것·가진 것·본인인 것",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "인증요소"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "시큐어 코딩(Secure Coding)의 대표 점검 항목에는 무엇이 있는가?",
+      "back": "입력 데이터 검증과 표현(인젝션·XSS 방지), 보안 기능(인증·접근 통제·암호화의 올바른 사용), 에러 처리(오류 메시지의 정보 노출 방지), 세션 통제, 캡슐화, API 오용 방지 등이 대표 점검 영역이다. 구현 단계에서 취약점을 만들지 않는 것이 목적이다.",
+      "hint": "입력 검증, 에러 처리 등",
+      "tags": [
+        "정보시스템관리",
+        "보안",
+        "시큐어코딩"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "클라우드 서비스 모델 IaaS, PaaS, SaaS를 구분하면?",
+      "back": "IaaS는 서버·스토리지·네트워크 같은 인프라 자원을, PaaS는 애플리케이션 개발·실행 플랫폼(런타임, 미들웨어)을, SaaS는 완성된 응용 소프트웨어 자체를 서비스로 제공한다. 아래로 갈수록 사용자가 직접 관리하는 범위가 넓어진다.",
+      "hint": "인프라·플랫폼·소프트웨어",
+      "tags": [
+        "정보시스템관리",
+        "신기술",
+        "클라우드"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "컨테이너 기반 가상화와 하이퍼바이저 기반 가상 머신의 차이는?",
+      "back": "가상 머신은 하이퍼바이저 위에 게스트 운영체제를 통째로 올려 격리 수준이 높지만 무겁고 부팅이 느리다. 컨테이너는 호스트 커널을 공유하면서 프로세스 수준에서 격리하므로 가볍고 기동이 빠르며, 도커가 대표적인 컨테이너 플랫폼이다.",
+      "hint": "게스트 OS 유무",
+      "tags": [
+        "정보시스템관리",
+        "신기술",
+        "컨테이너"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "블록체인(Blockchain) 기술의 핵심 개념은 무엇인가?",
+      "back": "거래 기록을 블록으로 묶어 해시로 이전 블록과 연결하고, 중앙 기관 없이 분산된 참여자들이 합의 알고리즘으로 동일한 장부를 유지하는 분산 원장 기술이다. 이미 기록된 블록을 고치려면 이후 블록 전체를 다시 만들어야 하므로 위·변조가 어렵다.",
+      "hint": "해시로 연결된 분산 원장",
+      "tags": [
+        "정보시스템관리",
+        "신기술",
+        "블록체인"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    },
+    {
+      "front": "빅데이터의 3V 특성은 무엇인가?",
+      "back": "규모(Volume, 대용량), 속도(Velocity, 빠른 생성과 처리), 다양성(Variety, 정형·비정형 데이터 혼재)의 세 가지 특성이다. 여기에 정확성(Veracity)과 가치(Value)를 더해 5V로 확장해 설명하기도 한다.",
+      "hint": "Volume, Velocity, Variety",
+      "tags": [
+        "정보시스템관리",
+        "신기술",
+        "빅데이터"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-information-processing-engineer-v1",
+        "claude-authoring-information-processing-engineer-v1"
+      ]
+    }
+  ]
+}

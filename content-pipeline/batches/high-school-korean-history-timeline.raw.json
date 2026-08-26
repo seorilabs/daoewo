@@ -1,0 +1,2832 @@
+{
+  "schemaVersion": 1,
+  "deckId": "high-school-korean-history-timeline",
+  "sourceRegistry": [
+    {
+      "id": "brief-high-school-korean-history-timeline-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:high-school-korean-history-timeline:v1",
+      "revision": "brief-v1@2026-07-12"
+    },
+    {
+      "id": "claude-authoring-high-school-korean-history-timeline-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:high-school-korean-history-timeline:v1",
+      "revision": "claude-batch-v1@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "고조선이 한 무제의 침입으로 멸망한 해는?",
+      "back": "기원전 108년, 왕검성이 함락되며 고조선이 멸망했다. 이후 한은 옛 땅에 군현을 설치했다.",
+      "hint": "기원전 2세기 말",
+      "tags": [
+        "고대",
+        "연도",
+        "고조선"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "위만이 준왕을 몰아내고 고조선의 왕위에 오른 해는?",
+      "back": "기원전 194년, 위만이 집권하면서 고조선은 철기 문화를 본격적으로 수용하고 중계 무역으로 성장했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "고조선"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "위만의 집권과 고조선 멸망 중 먼저 일어난 것은?",
+      "back": "위만의 집권(기원전 194년)이 먼저다. 그로부터 약 90년 뒤인 기원전 108년에 고조선이 멸망했다.",
+      "tags": [
+        "고대",
+        "순서",
+        "고조선"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "백제 근초고왕이 평양성을 공격해 고구려 고국원왕이 전사한 해는?",
+      "back": "371년, 평양성 전투에서 백제가 승리했다. 4세기 백제 전성기를 보여 주는 사건이다.",
+      "hint": "4세기 후반",
+      "tags": [
+        "고대",
+        "연도",
+        "백제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "372년, 고구려 소수림왕이 시행한 두 가지 정책은?",
+      "back": "372년 소수림왕은 불교를 수용하고 태학을 세워 중앙 집권 체제 정비의 기틀을 마련했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "고구려"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고국원왕 전사와 광개토대왕 즉위 사이에 고구려가 추진한 일은?",
+      "back": "371년 고국원왕 전사 이후 소수림왕이 372년 불교 수용과 태학 설립, 373년 율령 반포로 체제를 정비했고, 그 토대 위에서 391년 광개토대왕이 즉위해 정복 활동을 폈다.",
+      "tags": [
+        "고대",
+        "흐름",
+        "고구려"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고구려 장수왕이 수도를 평양으로 옮긴 해는?",
+      "back": "427년, 평양 천도로 장수왕은 남진 정책을 본격화했다.",
+      "hint": "5세기 전반",
+      "tags": [
+        "고대",
+        "연도",
+        "고구려"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고구려의 남진에 맞서 백제와 신라가 나제동맹을 맺은 해는?",
+      "back": "433년, 백제 비유왕과 신라 눌지왕이 동맹을 맺어 장수왕의 남진 정책에 대응했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "나제동맹"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "475년, 한강 유역에서 벌어진 일과 그 직후 백제의 대응은?",
+      "back": "475년 장수왕이 한성을 함락해 개로왕이 전사했고, 백제는 웅진(공주)으로 도읍을 옮겼다.",
+      "tags": [
+        "고대",
+        "연도",
+        "백제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신라 지증왕이 나라 이름을 신라로 정하고 왕이라는 칭호를 쓰기 시작한 해는?",
+      "back": "503년, 국호 신라와 왕호를 확정하며 중앙 집권 국가로 정비되기 시작했다.",
+      "hint": "6세기 초",
+      "tags": [
+        "고대",
+        "연도",
+        "신라"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이사부가 우산국을 정복해 신라 영토로 편입한 해는?",
+      "back": "512년, 지증왕 때 이사부가 우산국(울릉도 일대)을 복속시켰다.",
+      "tags": [
+        "고대",
+        "연도",
+        "신라"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신라 법흥왕이 율령을 반포한 해는?",
+      "back": "520년, 법흥왕은 율령을 반포하고 관등제와 공복을 정비해 통치 체제를 갖추었다.",
+      "tags": [
+        "고대",
+        "연도",
+        "신라"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이차돈의 순교를 계기로 신라가 불교를 공인한 해는?",
+      "back": "527년, 법흥왕 때 불교가 공인되어 왕권 강화의 사상적 기반이 되었다.",
+      "tags": [
+        "고대",
+        "연도",
+        "신라"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "백제 성왕이 사비로 도읍을 옮긴 해는?",
+      "back": "538년, 성왕은 사비(부여)로 천도하고 국호를 남부여라 하며 중흥을 꾀했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "백제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "554년, 백제와 신라 사이에 벌어진 전투와 그 결과는?",
+      "back": "554년 관산성 전투에서 백제 성왕이 전사했다. 한강 하류를 둘러싼 다툼으로 나제동맹은 완전히 깨졌다.",
+      "tags": [
+        "고대",
+        "연도",
+        "백제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "백제의 사비 천도와 관산성 전투 중 먼저 일어난 것은?",
+      "back": "사비 천도(538년)가 먼저고 관산성 전투(554년)가 뒤다. 천도로 중흥을 꾀하던 성왕이 관산성에서 전사했다.",
+      "tags": [
+        "고대",
+        "순서",
+        "백제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "을지문덕이 수의 대군을 살수에서 크게 물리친 해는?",
+      "back": "612년, 살수대첩으로 고구려는 수 양제의 침공을 격퇴했고, 수는 이후 국력이 급격히 기울었다.",
+      "hint": "7세기 초",
+      "tags": [
+        "고대",
+        "연도",
+        "고구려"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "당 태종의 침공을 고구려가 안시성에서 막아 낸 해는?",
+      "back": "645년, 안시성 전투에서 고구려가 승리해 당의 1차 침공을 좌절시켰다.",
+      "tags": [
+        "고대",
+        "연도",
+        "고구려"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "660년, 황산벌에서 맞선 두 장수와 전투의 결과는?",
+      "back": "660년 계백의 결사대가 김유신의 신라군에 맞섰으나 패했고, 사비성이 함락되며 백제가 멸망했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "백제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고구려가 나당 연합군에 의해 멸망한 해는?",
+      "back": "668년, 평양성이 함락되며 고구려가 멸망했다. 이후 당은 안동도호부를 두어 한반도 지배를 꾀했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "고구려"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "백제 멸망과 고구려 멸망 사이에 있었던 부흥 운동과 전투는?",
+      "back": "660년 백제 멸망 후 복신과 도침 등이 주류성을 근거지로 부흥 운동을 벌였으나 663년 백강 전투 패배로 좌절되었고, 고구려는 668년에 멸망했다.",
+      "tags": [
+        "고대",
+        "흐름",
+        "부흥운동"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신라가 매소성에서 당의 대군을 격파한 해는?",
+      "back": "675년, 매소성 전투의 승리로 신라는 나당 전쟁의 주도권을 잡았다.",
+      "hint": "기벌포 전투 한 해 전",
+      "tags": [
+        "고대",
+        "연도",
+        "나당전쟁"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "676년, 신라가 기벌포에서 이룬 일은?",
+      "back": "676년 기벌포 전투에서 당의 수군을 격파하고 당군을 몰아내 삼국 통일을 완성했다.",
+      "tags": [
+        "고대",
+        "연도",
+        "나당전쟁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신문왕이 유학 교육 기관인 국학을 설립한 해는?",
+      "back": "682년, 국학을 세워 유학 교육으로 왕권을 뒷받침할 인재를 길렀다.",
+      "tags": [
+        "고대",
+        "연도",
+        "통일신라"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신문왕이 귀족의 경제 기반인 녹읍을 폐지한 해는?",
+      "back": "689년, 녹읍을 폐지하고 관료전 지급을 확대해 진골 귀족의 세력을 약화시켰다.",
+      "tags": [
+        "고대",
+        "연도",
+        "통일신라"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "대조영이 동모산에서 발해를 세운 해는?",
+      "back": "698년, 고구려 유민과 말갈인을 이끌고 발해를 건국하면서 남북국 시대가 열렸다.",
+      "hint": "7세기 말",
+      "tags": [
+        "고대",
+        "연도",
+        "발해"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "발해 무왕이 장문휴를 보내 당의 등주를 공격한 해는?",
+      "back": "732년, 발해는 산둥반도의 등주를 선제 공격하며 당과 정면으로 맞섰다.",
+      "tags": [
+        "고대",
+        "연도",
+        "발해"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "장보고가 완도에 청해진을 설치한 해는?",
+      "back": "828년, 청해진을 거점으로 해적을 소탕하고 동아시아 해상 무역을 장악했다.",
+      "hint": "9세기 전반",
+      "tags": [
+        "고대",
+        "연도",
+        "통일신라"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "889년, 신라 사벌주에서 일어난 농민 봉기는?",
+      "back": "889년 진성여왕 때 원종과 애노가 봉기했다. 신라 말 지방 통제력이 무너졌음을 보여 준다.",
+      "tags": [
+        "고대",
+        "연도",
+        "신라말"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "견훤의 후백제 건국과 궁예의 후고구려 건국 중 먼저인 것은?",
+      "back": "후백제 건국(900년)이 먼저다. 궁예는 이듬해인 901년에 후고구려를 세웠다.",
+      "tags": [
+        "고대",
+        "순서",
+        "후삼국"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "왕건이 고려를 세운 해는?",
+      "back": "918년, 왕건이 궁예를 몰아내고 고려를 건국했으며 이듬해 송악으로 도읍을 옮겼다.",
+      "tags": [
+        "고려",
+        "연도",
+        "건국"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "926년, 거란의 공격으로 멸망한 나라는?",
+      "back": "926년 발해가 거란(요)에 멸망했고, 태자 대광현 등 유민이 고려로 망명해 왔다.",
+      "tags": [
+        "고려",
+        "연도",
+        "발해"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신라 경순왕이 고려에 나라를 넘긴 해는?",
+      "back": "935년, 경순왕이 스스로 고려에 항복하면서 천년 왕국 신라가 막을 내렸다.",
+      "tags": [
+        "고려",
+        "연도",
+        "후삼국"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "936년, 일리천 전투의 결과는?",
+      "back": "936년 고려가 일리천 전투에서 신검의 후백제군을 격파하고 후삼국을 통일했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "후삼국"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신라의 고려 귀부와 후백제 멸망 중 먼저 일어난 것은?",
+      "back": "신라의 귀부(935년)가 먼저고, 후백제는 이듬해인 936년에 멸망해 후삼국이 통일되었다.",
+      "tags": [
+        "고려",
+        "순서",
+        "후삼국"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "광종이 노비안검법을 실시한 해는?",
+      "back": "956년, 불법으로 노비가 된 사람을 양인으로 풀어 주어 호족의 세력 기반을 약화시켰다.",
+      "hint": "10세기 중반",
+      "tags": [
+        "고려",
+        "연도",
+        "광종"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "쌍기의 건의로 과거제가 처음 실시된 해는?",
+      "back": "958년, 광종이 과거제를 도입해 유교적 소양을 갖춘 신진 인사를 관료로 등용했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "광종"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "982년, 최승로가 성종에게 올린 개혁안은?",
+      "back": "982년 최승로가 시무 28조를 올렸고, 성종은 이를 받아들여 유교 정치 이념에 따라 통치 체제를 정비했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "성종"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "서희가 거란 장수 소손녕과 담판해 강동 6주를 확보한 해는?",
+      "back": "993년, 거란의 1차 침입 때 서희는 외교 담판으로 압록강 동쪽의 강동 6주를 얻었다.",
+      "tags": [
+        "고려",
+        "연도",
+        "거란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1019년, 강감찬이 거둔 승리는?",
+      "back": "1019년 귀주대첩에서 강감찬이 거란의 3차 침입군을 크게 물리쳤다. 이후 고려, 송, 거란 사이에 세력 균형이 이루어졌다.",
+      "tags": [
+        "고려",
+        "연도",
+        "거란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "거란의 1차 침입과 귀주대첩 사이에 있었던 침입은?",
+      "back": "1차 침입(993년)과 귀주대첩(1019년) 사이인 1010년, 강조의 정변을 구실로 거란이 2차 침입을 일으켜 개경이 함락되기도 했다.",
+      "tags": [
+        "고려",
+        "흐름",
+        "거란"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "윤관이 별무반을 이끌고 여진을 정벌한 뒤 동북 9성을 쌓은 해는?",
+      "back": "1107년, 여진을 몰아내고 동북 지방에 9성을 쌓았으나 방어의 어려움으로 뒤에 돌려주었다.",
+      "tags": [
+        "고려",
+        "연도",
+        "여진"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "왕실 외척 이자겸이 난을 일으킨 해는?",
+      "back": "1126년, 이자겸이 척준경과 함께 난을 일으켰다. 고려 문벌 사회의 동요를 보여 주는 사건이다.",
+      "tags": [
+        "고려",
+        "연도",
+        "문벌사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "묘청 세력이 서경에서 난을 일으킨 해는?",
+      "back": "1135년, 서경 천도와 금국 정벌을 주장하던 묘청 세력이 봉기했으나 김부식이 이끄는 관군에 진압되었다.",
+      "tags": [
+        "고려",
+        "연도",
+        "문벌사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1145년, 김부식이 왕명으로 완성한 역사서는?",
+      "back": "1145년 삼국사기가 편찬되었다. 현재 남아 있는 우리나라에서 가장 오래된 역사서다.",
+      "tags": [
+        "고려",
+        "연도",
+        "역사서"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이자겸의 난과 묘청의 서경 천도 운동 중 먼저 일어난 것은?",
+      "back": "이자겸의 난(1126년)이 먼저고 묘청의 난(1135년)이 뒤다. 두 사건 모두 문벌 사회의 동요를 보여 준다.",
+      "tags": [
+        "고려",
+        "순서",
+        "문벌사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "정중부 등이 무신정변을 일으킨 해는?",
+      "back": "1170년, 보현원에서 무신들이 정변을 일으켜 의종을 폐위하고 무신 정권 시대를 열었다.",
+      "hint": "12세기 후반",
+      "tags": [
+        "고려",
+        "연도",
+        "무신정권"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1176년, 공주 명학소에서 봉기한 형제는?",
+      "back": "1176년 망이와 망소이가 명학소에서 봉기해 특수 행정 구역 주민에 대한 차별에 저항했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "민란"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "최충헌이 이의민을 제거하고 집권한 해는?",
+      "back": "1196년, 최충헌이 권력을 잡으면서 4대 60여 년에 걸친 최씨 무신 정권이 시작되었다.",
+      "tags": [
+        "고려",
+        "연도",
+        "무신정권"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1198년, 개경에서 신분 해방을 내걸고 봉기를 모의한 인물은?",
+      "back": "1198년 최충헌의 사노비 만적이 왕후장상의 씨가 따로 없다며 봉기를 모의했으나 사전에 발각되었다.",
+      "tags": [
+        "고려",
+        "연도",
+        "민란"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "몽골이 고려를 처음 침입한 해는?",
+      "back": "1231년, 몽골 사신 저고여 피살을 구실로 살리타가 이끄는 몽골군이 1차 침입을 일으켰다.",
+      "tags": [
+        "고려",
+        "연도",
+        "몽골"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1232년, 고려 조정의 천도와 김윤후의 활약은?",
+      "back": "1232년 최우 정권은 강화도로 천도해 장기 항전 태세를 갖추었고, 김윤후는 처인성에서 몽골 장수 살리타를 사살했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "몽골"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "16년에 걸친 조판 끝에 팔만대장경이 완성된 해는?",
+      "back": "1251년, 부처의 힘으로 몽골의 침입을 물리치고자 새긴 팔만대장경(재조대장경)이 완성되었다.",
+      "hint": "1236년 조판 시작",
+      "tags": [
+        "고려",
+        "연도",
+        "몽골"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1270년, 고려 조정과 삼별초가 각각 선택한 길은?",
+      "back": "1270년 고려 조정은 개경으로 환도했고, 이에 반발한 삼별초는 배중손의 지휘 아래 진도로 옮겨 대몽 항쟁을 이어 갔다.",
+      "tags": [
+        "고려",
+        "연도",
+        "삼별초"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "삼별초 항쟁이 제주에서 최종 진압된 해는?",
+      "back": "1273년, 여몽 연합군이 제주도의 삼별초를 진압하면서 항쟁이 끝났다.",
+      "tags": [
+        "고려",
+        "연도",
+        "삼별초"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "공민왕이 쌍성총관부를 공격해 철령 이북 땅을 되찾은 해는?",
+      "back": "1356년, 반원 개혁의 일환으로 쌍성총관부를 수복해 원에 빼앗겼던 영토를 회복했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "공민왕"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1377년, 청주 흥덕사에서 금속활자로 간행된 책은?",
+      "back": "1377년 직지심체요절이 인쇄되었다. 현재 남아 있는 세계에서 가장 오래된 금속활자본이다.",
+      "tags": [
+        "고려",
+        "연도",
+        "인쇄술"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이성계가 위화도에서 군대를 돌린 해는?",
+      "back": "1388년, 요동 정벌에 나섰던 이성계가 위화도에서 회군해 정치와 군사의 실권을 장악했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "여말선초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고려 말 과전법이 제정된 해는?",
+      "back": "1391년, 신진 사대부가 과전법을 시행해 권문세족의 대농장을 혁파하고 새 왕조의 경제 기반을 마련했다.",
+      "tags": [
+        "고려",
+        "연도",
+        "여말선초"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "위화도 회군과 과전법 제정 중 먼저 일어난 것은?",
+      "back": "위화도 회군(1388년)이 먼저다. 실권을 잡은 이성계 세력이 1391년 과전법을 시행했고 이듬해 조선을 세웠다.",
+      "tags": [
+        "고려",
+        "순서",
+        "여말선초"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이성계가 조선을 건국한 해는?",
+      "back": "1392년, 이성계가 공양왕에게 왕위를 물려받아 조선을 세웠다.",
+      "tags": [
+        "조선",
+        "연도",
+        "건국"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "조선이 한양으로 천도한 해는?",
+      "back": "1394년, 태조는 도읍을 한양으로 옮기고 경복궁 건설을 시작했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "건국"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "제1차 왕자의 난이 일어난 해는?",
+      "back": "1398년, 이방원이 정도전과 세자 방석을 제거하며 왕위 계승의 주도권을 잡았다.",
+      "tags": [
+        "조선",
+        "연도",
+        "태종"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이종무가 왜구의 근거지 쓰시마섬을 정벌한 해는?",
+      "back": "1419년, 세종 원년에 이종무가 쓰시마섬(대마도)을 정벌해 왜구를 소탕했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세종"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1420년, 세종이 확대 개편한 학문 연구 기관은?",
+      "back": "1420년 집현전을 확대 개편해 학문 연구와 정책 자문을 맡겼다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세종"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "훈민정음이 창제된 해는?",
+      "back": "1443년, 세종이 훈민정음을 창제했고 3년 뒤 반포했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세종"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1446년, 세종이 백성을 위해 반포한 것은?",
+      "back": "1446년 훈민정음을 반포해 누구나 쉽게 배울 수 있는 문자를 보급했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세종"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "훈민정음의 창제와 반포 중 어느 쪽이 먼저인가?",
+      "back": "창제(1443년)가 먼저고, 3년 뒤인 1446년에 반포되었다.",
+      "tags": [
+        "조선",
+        "순서",
+        "세종"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1434년, 장영실 등이 만든 자동 물시계는?",
+      "back": "1434년 자격루가 완성되어 표준 시계로 사용되었다. 같은 해 금속활자 갑인자도 주조되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "과학기술"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "수양대군이 계유정난을 일으킨 해는?",
+      "back": "1453년, 수양대군이 김종서 등을 제거하고 정권을 장악한 뒤 왕위(세조)에 올랐다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세조"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "조선 통치의 기본 법전인 경국대전이 반포되어 시행된 해는?",
+      "back": "1485년, 성종 때 경국대전이 반포, 시행되어 유교적 통치 체제가 완성되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "성종"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1498년, 김종직의 조의제문을 빌미로 일어난 사화는?",
+      "back": "1498년 무오사화로 연산군 때 사림이 화를 입었다. 조선 4대 사화의 시작이다.",
+      "tags": [
+        "조선",
+        "연도",
+        "사화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "연산군이 생모 폐비 윤씨 사건을 구실로 갑자사화를 일으킨 해는?",
+      "back": "1504년, 갑자사화로 훈구와 사림이 대거 숙청되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "사화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "연산군이 폐위되고 중종이 즉위한 반정이 일어난 해는?",
+      "back": "1506년, 중종반정으로 연산군이 쫓겨나고 중종이 왕위에 올랐다.",
+      "tags": [
+        "조선",
+        "연도",
+        "반정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1519년, 조광조와 사림이 화를 입은 사건은?",
+      "back": "1519년 기묘사화로 위훈 삭제 등 급진 개혁을 추진하던 조광조 일파가 제거되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "사화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "명종 즉위 직후 외척 간의 다툼으로 을사사화가 일어난 해는?",
+      "back": "1545년, 대윤(윤임)과 소윤(윤원형)의 대립 속에 사림이 다시 화를 입었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "사화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "기묘사화와 을사사화 중 먼저 일어난 것은?",
+      "back": "기묘사화(1519년)가 먼저고, 을사사화(1545년)가 조선 4대 사화의 마지막이다.",
+      "tags": [
+        "조선",
+        "순서",
+        "사화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "임진왜란이 시작된 해는?",
+      "back": "1592년, 일본군이 부산에 상륙하며 임진왜란이 일어났고 20일 만에 한양이 함락되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "왜란"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1592년 7월, 이순신이 학익진으로 대승을 거둔 해전은?",
+      "back": "1592년 한산도대첩에서 학익진 전법으로 일본 수군을 격파해 남해의 제해권을 지켰다.",
+      "tags": [
+        "조선",
+        "연도",
+        "왜란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "권율이 행주산성에서 일본군을 물리친 해는?",
+      "back": "1593년, 행주대첩으로 관군과 백성이 힘을 합쳐 한양 수복의 발판을 마련했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "왜란"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1597년, 이순신이 13척의 배로 승리한 해전은?",
+      "back": "1597년 정유재란 중 명량대첩에서 울돌목의 빠른 물살을 이용해 일본 수군을 대파했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "왜란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "노량해전이 벌어지고 7년의 왜란이 끝난 해는?",
+      "back": "1598년, 노량해전에서 이순신이 전사했고 일본군이 철수하며 왜란이 막을 내렸다.",
+      "tags": [
+        "조선",
+        "연도",
+        "왜란"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "한산도대첩과 명량대첩 사이에 있었던 일은?",
+      "back": "한산도대첩(1592년)과 명량대첩(1597년) 사이에 명과 일본의 휴전 협상이 결렬되어 1597년 정유재란이 일어났고, 이순신은 한때 파직되기도 했다.",
+      "tags": [
+        "조선",
+        "흐름",
+        "왜란"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "광해군 때 대동법이 경기도에서 처음 시행된 해는?",
+      "back": "1608년, 공물을 쌀로 걷는 대동법이 경기도에서 시작되어 방납의 폐단을 줄였다.",
+      "tags": [
+        "조선",
+        "연도",
+        "대동법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1610년, 허준이 완성한 의학서는?",
+      "back": "1610년 동의보감이 완성되었다. 전통 의학을 집대성한 책으로 뒤에 유네스코 세계기록유산이 되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "광해군"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "서인이 광해군을 몰아낸 인조반정이 일어난 해는?",
+      "back": "1623년, 인조반정으로 광해군이 폐위되었고 이후 친명배금 정책이 강화되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "반정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "후금이 침입한 정묘호란이 일어난 해는?",
+      "back": "1627년, 후금이 침입해 조선과 형제 관계를 맺고 물러갔다.",
+      "tags": [
+        "조선",
+        "연도",
+        "호란"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1636년, 청 태종의 침입으로 일어난 전쟁과 그 결과는?",
+      "back": "1636년 병자호란이 일어나 인조가 남한산성에서 항전했으나 이듬해 삼전도에서 항복하고 청과 군신 관계를 맺었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "호란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "정묘호란과 병자호란 중 먼저 일어난 것은?",
+      "back": "정묘호란(1627년)이 먼저다. 9년 뒤인 1636년 병자호란이 일어났다.",
+      "tags": [
+        "조선",
+        "순서",
+        "호란"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "숙종 때 상평통보가 공식 화폐로 주조되어 유통되기 시작한 해는?",
+      "back": "1678년, 상평통보가 법화로 주조, 유통되며 상품 화폐 경제의 발달을 뒷받침했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "경제"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "대동법이 잉류 지역을 제외한 전국으로 확대 완성된 해는?",
+      "back": "1708년, 숙종 때 황해도까지 시행되며 대동법이 전국으로 확대되었다. 경기 시행부터 100년이 걸린 셈이다.",
+      "tags": [
+        "조선",
+        "연도",
+        "대동법"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "조선과 청이 국경을 정해 백두산정계비를 세운 해는?",
+      "back": "1712년, 백두산에 정계비를 세워 양국의 경계를 표시했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "숙종"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1742년, 영조가 성균관 앞에 세운 비석은?",
+      "back": "1742년 탕평비를 세워 붕당 정치의 폐단을 경계하고 탕평 의지를 밝혔다.",
+      "tags": [
+        "조선",
+        "연도",
+        "영조"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "영조가 군포 부담을 절반으로 줄인 균역법을 시행한 해는?",
+      "back": "1750년, 균역법으로 1년에 군포 2필을 1필로 줄이고 부족분은 결작 등으로 보충했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "영조"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1776년, 정조가 즉위하며 설치한 왕실 도서관은?",
+      "back": "1776년 규장각을 설치해 학문 연구와 개혁 정치를 뒷받침할 인재를 길렀다.",
+      "tags": [
+        "조선",
+        "연도",
+        "정조"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "정조가 육의전을 제외한 시전의 금난전권을 폐지한 해는?",
+      "back": "1791년, 신해통공으로 사상들의 자유로운 상업 활동이 확대되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "정조"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "정약용의 거중기가 활용된 수원 화성이 완공된 해는?",
+      "back": "1796년, 수원 화성이 완공되었다. 정조 개혁 정치의 상징으로 꼽힌다.",
+      "tags": [
+        "조선",
+        "연도",
+        "정조"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "순조 즉위 직후 천주교를 대대적으로 탄압한 신유박해의 해는?",
+      "back": "1801년, 신유박해로 이승훈과 정약종 등이 처형되고 정약용은 유배되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "천주교"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "평안도 지역 차별에 반발해 홍경래가 봉기한 해는?",
+      "back": "1811년, 홍경래의 난이 일어나 한때 청천강 이북을 장악했으나 정주성에서 진압되었다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세도정치"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1862년, 진주에서 시작해 전국으로 번진 농민 봉기는?",
+      "back": "1862년 임술 농민 봉기가 일어나자 정부는 삼정이정청을 설치해 수습을 꾀했다.",
+      "tags": [
+        "조선",
+        "연도",
+        "세도정치"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1866년, 천주교 박해와 이를 구실로 한 프랑스의 침공은?",
+      "back": "1866년 병인박해가 일어났고, 프랑스군이 강화도를 침공한 병인양요 때 외규장각 도서가 약탈당했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "양요"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "미국 상선 제너럴셔먼호가 평양에서 불태워진 해는?",
+      "back": "1866년, 통상을 요구하며 행패를 부리던 제너럴셔먼호를 평양의 관민이 불태웠다. 신미양요의 빌미가 되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "양요"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "오페르트가 남연군 묘 도굴을 시도한 해는?",
+      "back": "1868년, 독일 상인 오페르트의 도굴 미수 사건으로 서양 세력에 대한 반감이 더욱 커졌다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "대원군"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1871년, 미군의 강화도 침공과 흥선대원군의 대응은?",
+      "back": "1871년 신미양요가 일어나 어재연 부대가 광성보에서 항전했고, 이후 대원군은 전국에 척화비를 세웠다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "양요"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "병인양요와 신미양요 중 먼저 일어난 것은?",
+      "back": "병인양요(1866년, 프랑스)가 먼저고 신미양요(1871년, 미국)가 뒤다.",
+      "tags": [
+        "개항기",
+        "순서",
+        "양요"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "조선이 일본과 강화도 조약을 맺은 해는?",
+      "back": "1876년, 운요호 사건을 계기로 맺은 최초의 근대적 조약이자 불평등 조약으로, 부산 등 3개 항구를 개항하게 되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "개항"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "김윤식이 이끄는 영선사가 청에 파견된 해는?",
+      "back": "1881년, 근대 무기 제조 기술을 배우기 위해 영선사가 톈진에 파견되었고, 이는 기기창 설치로 이어졌다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "개화"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "조선이 서양 국가 가운데 처음으로 미국과 수호통상조약을 맺은 해는?",
+      "back": "1882년, 조미수호통상조약이 체결되었다. 거중조정과 최혜국 대우 조항이 담긴 불평등 조약이었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "개항"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1882년, 구식 군인들이 일으킨 봉기와 그 결과는?",
+      "back": "1882년 임오군란이 일어나 흥선대원군이 잠시 재집권했으나 청군의 개입으로 진압되었고, 일본과 제물포 조약을 맺게 되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "임오군란"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "김옥균 등 급진 개화파가 갑신정변을 일으킨 해는?",
+      "back": "1884년, 우정총국 개국 축하연을 이용해 정변을 일으키고 개혁 정강을 발표했으나 청군의 개입으로 3일 만에 실패했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "갑신정변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "임오군란과 갑신정변 사이에 조선 정치에서 강해진 흐름은?",
+      "back": "임오군란(1882년) 진압 이후 청의 내정 간섭이 심해졌고, 이에 반발한 급진 개화파가 1884년 갑신정변을 일으켰다.",
+      "tags": [
+        "개항기",
+        "흐름",
+        "개화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "영국이 러시아 견제를 내세워 거문도를 불법 점령하기 시작한 해는?",
+      "back": "1885년, 거문도 사건으로 한반도를 둘러싼 열강의 각축이 드러났다. 영국군은 1887년에 철수했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "열강침탈"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "함경도 관찰사 조병식이 방곡령을 선포한 해는?",
+      "back": "1889년, 곡물의 일본 유출을 막으려 방곡령을 내렸으나 일본의 항의로 철회하고 배상금까지 물었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "경제침탈"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1894년 봄, 고부에서 시작된 농민 봉기의 전개 과정은?",
+      "back": "1894년 동학농민운동이 일어나 황토현 전투에서 승리하고 전주성을 점령했으며, 정부와 전주화약을 맺고 집강소를 설치했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "동학"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1894년, 군국기무처를 통해 추진된 개혁의 내용은?",
+      "back": "1894년 제1차 갑오개혁으로 신분제와 과거제가 폐지되고 조혼 금지 등이 단행되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "갑오개혁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "전주화약과 우금치 전투 사이에 일어난 대외 전쟁은?",
+      "back": "전주화약(1894년 5월) 직후 일본이 경복궁을 점령하고 청일전쟁을 일으켰으며, 이에 동학농민군이 재봉기했으나 그해 11월 우금치에서 패배했다.",
+      "tags": [
+        "개항기",
+        "흐름",
+        "동학"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "일본 낭인들이 명성황후를 시해한 을미사변의 해는?",
+      "back": "1895년, 을미사변이 일어났고 이어진 단발령과 함께 을미의병 봉기의 원인이 되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "을미사변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고종이 러시아 공사관으로 거처를 옮긴 해는?",
+      "back": "1896년, 아관파천으로 친일 내각이 무너졌으나 러시아를 비롯한 열강의 이권 침탈이 심해졌다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "아관파천"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1896년, 서재필이 창간한 신문과 창립을 주도한 단체는?",
+      "back": "1896년 독립신문을 창간하고 독립협회를 창립해 자주 국권과 자유 민권 운동을 폈다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "독립협회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "고종이 환구단에서 황제로 즉위하고 대한제국을 선포한 해는?",
+      "back": "1897년, 국호를 대한제국, 연호를 광무로 정하고 구본신참의 광무개혁을 추진했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "대한제국"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1898년, 관민공동회에서 결의되어 고종의 재가를 받은 것은?",
+      "back": "1898년 헌의 6조가 채택되었으나, 이후 독립협회는 강제 해산되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "독립협회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "러일전쟁이 시작된 해는?",
+      "back": "1904년, 일본의 뤼순항 기습으로 러일전쟁이 일어났고, 일본은 대한제국에 한일의정서를 강요했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "러일전쟁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1905년, 대한제국의 외교권을 빼앗은 조약은?",
+      "back": "1905년 을사늑약이 강제 체결되어 외교권이 박탈되고 통감부가 설치되었다. 장지연은 시일야방성대곡으로 이를 규탄했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "국권피탈"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "을사늑약과 군대 해산 사이에 고종이 시도한 일은?",
+      "back": "을사늑약(1905년)의 부당함을 알리기 위해 고종은 1907년 헤이그 만국평화회의에 특사를 파견했으나, 일제는 이를 구실로 고종을 강제 퇴위시키고 군대를 해산했다.",
+      "tags": [
+        "개항기",
+        "흐름",
+        "국권피탈"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "국채보상운동이 대구에서 시작된 해는?",
+      "back": "1907년, 서상돈 등의 제안으로 일본에 진 빚을 갚자는 국채보상운동이 일어나 전국으로 확산되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "국채보상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "안창호와 양기탁 등이 비밀 결사 신민회를 조직한 해는?",
+      "back": "1907년, 신민회는 오산학교와 대성학교를 세우고 국외 독립운동 기지 건설을 추진했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "신민회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1907년 8월, 대한제국 군대 해산에 맞서 일어난 의병은?",
+      "back": "1907년 해산 군인들이 합류한 정미의병이 일어났고, 이듬해 13도 창의군이 서울 진공 작전을 시도했다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "의병"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "안중근이 하얼빈에서 이토 히로부미를 처단한 해는?",
+      "back": "1909년, 안중근 의거는 국권 피탈에 맞선 대표적인 의열 투쟁이다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "의열투쟁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "일제가 대한제국의 국권을 강탈한 해는?",
+      "back": "1910년, 한일병합조약이 강제 체결되어 대한제국이 멸망하고 조선총독부가 설치되었다.",
+      "tags": [
+        "개항기",
+        "연도",
+        "국권피탈"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "헤이그 특사 파견과 안중근 의거 중 먼저 일어난 것은?",
+      "back": "헤이그 특사 파견(1907년)이 먼저고, 안중근 의거는 1909년이다.",
+      "tags": [
+        "개항기",
+        "순서",
+        "국권피탈"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "일제가 회사 설립을 허가제로 묶은 회사령을 공포한 해는?",
+      "back": "1910년, 회사령으로 민족 자본의 성장을 억눌렀다. 이 제도는 1920년에 철폐되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무단통치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1911년, 일제가 신민회를 와해시키려고 조작한 사건은?",
+      "back": "1911년 105인 사건으로 신민회 간부들이 대거 검거되어 조직이 해체되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무단통치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "일제가 토지조사령을 공포하고 토지조사사업을 본격화한 해는?",
+      "back": "1912년, 토지조사령을 공포해 1918년까지 토지조사사업을 벌이며 식민지 수탈의 기반을 닦았다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "수탈"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "3·1 운동이 일어난 해는?",
+      "back": "1919년, 민족 대표의 독립선언과 만세 시위가 전국과 국외로 퍼졌고, 일제는 통치 방식을 이른바 문화 통치로 바꾸었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "삼일운동"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1919년 4월, 상하이에서 수립된 독립운동의 구심점은?",
+      "back": "1919년 대한민국 임시정부가 수립되어 연통제와 교통국을 운영하며 독립운동을 이끌었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "임시정부"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "김원봉이 만주 지린에서 의열단을 조직한 해는?",
+      "back": "1919년, 의열단은 조선총독부와 동양척식주식회사 등 식민 통치 기관을 겨냥한 의열 투쟁을 벌였다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "의열투쟁"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1920년 6월, 홍범도의 대한독립군이 승리한 전투는?",
+      "back": "1920년 봉오동 전투에서 일본군을 격파했다. 같은 해 10월 청산리 대첩으로 이어졌다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무장투쟁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "김좌진과 홍범도의 연합 부대가 청산리에서 대승한 해는?",
+      "back": "1920년, 청산리 대첩은 독립군 최대의 승리로 꼽힌다. 일제는 보복으로 간도 참변을 일으켰다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무장투쟁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "봉오동 전투와 청산리 대첩 중 먼저 벌어진 것은?",
+      "back": "봉오동 전투(1920년 6월)가 먼저고, 청산리 대첩(1920년 10월)이 뒤다.",
+      "tags": [
+        "일제강점기",
+        "순서",
+        "무장투쟁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1920년, 총독부의 허가로 창간된 두 한글 신문은?",
+      "back": "1920년 조선일보와 동아일보가 창간되었다. 이른바 문화 통치기의 제한적 언론 허용이었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "문화통치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "러시아령에서 독립군이 큰 피해를 입은 자유시 참변이 일어난 해는?",
+      "back": "1921년, 지휘권 다툼과 무장 해제 과정에서 많은 독립군이 희생되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무장투쟁"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "조만식 등이 평양에서 물산장려운동을 시작한 해는?",
+      "back": "1920년, 조선 사람 조선 것이라는 구호 아래 국산품 애용 운동이 시작되어 전국으로 퍼졌다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "실력양성"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1923년, 전라남도 신안의 섬에서 일어난 대표적 소작 쟁의는?",
+      "back": "1923년 암태도 소작쟁의가 일어나 소작료 인하를 관철한 농민 운동의 모범이 되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "농민운동"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이상재 등이 참여한 조선민립대학기성회가 조직된 해는?",
+      "back": "1923년, 한민족 1천만이 한 사람이 1원씩이라는 구호로 민립대학 설립 모금 운동을 벌였으나 일제의 방해로 좌절되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "실력양성"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "일제가 치안유지법을 시행해 사상 통제를 강화한 해는?",
+      "back": "1925년, 치안유지법으로 사회주의 운동과 독립운동에 대한 탄압이 한층 강화되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "탄압"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1925년, 총독부 경무국장과 만주 군벌 사이에 맺어진 협정은?",
+      "back": "1925년 미쓰야 협정으로 만주 지역 독립군의 활동이 크게 위축되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무장투쟁"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "순종의 인산일을 기해 6·10 만세운동이 일어난 해는?",
+      "back": "1926년, 학생들이 주도한 6·10 만세운동은 민족 유일당 운동이 일어나는 계기 중 하나가 되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "학생운동"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1926년 12월, 나석주가 폭탄을 던진 곳은?",
+      "back": "1926년 의열단원 나석주가 동양척식주식회사와 식산은행에 폭탄을 투척했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "의열투쟁"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "민족주의와 사회주의 세력이 연합한 신간회가 창립된 해는?",
+      "back": "1927년, 신간회는 일제강점기 최대의 합법적 민족 운동 단체로 전국에 지회를 두었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "신간회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1929년 1월, 함경남도에서 일어난 최대 규모의 노동 쟁의는?",
+      "back": "1929년 원산 총파업이 일어나 국내외 노동 단체의 지지를 받았다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "노동운동"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "광주학생항일운동이 일어난 해는?",
+      "back": "1929년, 한일 학생 간 충돌을 계기로 광주에서 시작되어 전국으로 확산된, 3·1 운동 이후 최대의 민족 운동이다. 신간회가 진상 조사단을 파견했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "학생운동"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "신간회 창립과 광주학생항일운동 중 먼저인 것은?",
+      "back": "신간회 창립(1927년)이 먼저다. 신간회는 1929년 광주학생항일운동을 지원했고 1931년 해소되었다.",
+      "tags": [
+        "일제강점기",
+        "순서",
+        "신간회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "일제가 만주사변을 일으킨 해는?",
+      "back": "1931년, 일제는 만주를 침략하고 이듬해 괴뢰국인 만주국을 세웠다. 대륙 침략 전쟁의 시작이다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "침략전쟁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1931년, 김구가 임시정부의 침체를 타개하려고 조직한 단체는?",
+      "back": "1931년 한인애국단이 조직되어 이봉창과 윤봉길의 의거를 이끌었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "한인애국단"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이봉창이 도쿄에서 일왕의 마차에 폭탄을 던진 해는?",
+      "back": "1932년 1월, 이봉창 의거는 뜻을 이루지 못했지만 한인애국단 활동의 신호탄이 되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "한인애국단"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1932년 4월, 상하이 훙커우 공원에서 있었던 의거는?",
+      "back": "1932년 윤봉길이 일본군 전승 기념식장에 폭탄을 던졌다. 중국 국민당 정부가 임시정부를 지원하는 계기가 되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "한인애국단"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "이봉창 의거와 윤봉길 의거 중 먼저 일어난 것은?",
+      "back": "이봉창 의거(1932년 1월, 도쿄)가 먼저고, 윤봉길 의거(1932년 4월, 상하이)가 뒤다.",
+      "tags": [
+        "일제강점기",
+        "순서",
+        "한인애국단"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "양세봉의 조선혁명군이 한중 연합으로 영릉가 전투에서 승리한 해는?",
+      "back": "1932년, 조선혁명군은 중국 의용군과 연합해 영릉가 전투에서 일본군을 격파했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "무장투쟁"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1935년, 중국 관내 독립운동 세력이 통합해 결성한 정당은?",
+      "back": "1935년 김원봉의 주도로 민족혁명당이 결성되어 통일 전선 운동을 폈다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "통일전선"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "손기정이 베를린 올림픽 마라톤에서 우승한 해는?",
+      "back": "1936년, 우승 보도 사진에서 일장기를 지운 일장기 말소 사건으로 동아일보가 무기 정간을 당했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "민족의식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "중일전쟁이 시작된 해는?",
+      "back": "1937년, 일제는 중일전쟁을 일으킨 뒤 황국 신민화 정책과 인력, 물자 수탈을 강화했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "침략전쟁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1938년, 전시 수탈의 법적 기반이 된 법과 같은 해 창설된 부대는?",
+      "back": "1938년 국가총동원법이 공포되었고, 같은 해 중국 우한에서 김원봉이 조선의용대를 창설했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "전시체제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "대한민국 임시정부가 충칭에서 한국광복군을 창설한 해는?",
+      "back": "1940년, 한국광복군은 태평양 전쟁이 일어나자 대일 선전 포고를 하고 국내 진공 작전을 준비했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "임시정부"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1942년, 우리말 사전 편찬을 준비하던 학자들이 대거 검거된 사건은?",
+      "back": "1942년 조선어학회 사건으로 이윤재와 최현배 등이 투옥되고 사전 편찬이 중단되었다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "민족문화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "연합국이 카이로 선언에서 한국의 독립을 처음 약속한 해는?",
+      "back": "1943년, 카이로 회담에서 미국, 영국, 중국이 적절한 시기에 한국을 독립시키기로 결의했다.",
+      "tags": [
+        "일제강점기",
+        "연도",
+        "국제사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "우리 민족이 광복을 맞은 해는?",
+      "back": "1945년 8월 15일, 일제의 패망으로 광복을 맞았으나 38도선을 경계로 미군과 소련군이 분할 주둔했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "광복"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1945년 12월, 한반도 문제를 논의해 신탁 통치안을 결정한 회의는?",
+      "back": "1945년 모스크바 3국 외상 회의에서 임시 민주 정부 수립과 최대 5년의 신탁 통치가 결정되어 좌우 대립이 격화되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "해방정국"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "제1차 미소공동위원회가 열린 해는?",
+      "back": "1946년, 서울에서 열렸으나 협의 대상 범위를 둘러싼 이견으로 결렬되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "해방정국"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1946년, 여운형과 김규식이 주도한 통일 정부 수립 노력은?",
+      "back": "1946년 좌우합작위원회가 구성되어 좌우합작 7원칙을 발표했으나 끝내 성과를 거두지 못했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "해방정국"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "우리나라 최초의 보통 선거인 5·10 총선거가 실시된 해는?",
+      "back": "1948년, 유엔 감시 아래 남한에서 총선거가 실시되어 제헌국회가 구성되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "정부수립"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1948년 7월 17일에 있었던 일은?",
+      "back": "1948년 제헌헌법이 공포되었다. 제헌절은 이날을 기념하는 국경일이다.",
+      "tags": [
+        "현대",
+        "연도",
+        "정부수립"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "대한민국 정부가 수립을 선포한 해는?",
+      "back": "1948년 8월 15일, 이승만을 대통령으로 하는 대한민국 정부가 수립되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "정부수립"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "5·10 총선거와 정부 수립 선포 사이에 있었던 일은?",
+      "back": "총선거(1948년 5월)로 구성된 제헌국회가 7월 17일 헌법을 공포하고 대통령을 선출했으며, 8월 15일 정부 수립이 선포되었다.",
+      "tags": [
+        "현대",
+        "흐름",
+        "정부수립"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "제주 4·3 사건이 시작된 해는?",
+      "back": "1948년, 단독 선거 반대 등을 내세운 무장봉기와 진압 과정에서 수많은 제주도민이 희생되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "해방정국"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1949년, 유상 매수와 유상 분배를 원칙으로 제정된 법은?",
+      "back": "1949년 농지개혁법이 제정되어 이듬해부터 시행되었고, 지주제가 사실상 해체되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "6·25 전쟁이 발발한 해는?",
+      "back": "1950년 6월 25일, 북한의 남침으로 전쟁이 시작되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "전쟁"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1950년 9월 15일, 전세를 단숨에 뒤집은 작전은?",
+      "back": "1950년 인천상륙작전의 성공으로 국군과 유엔군은 서울을 수복하고 압록강 부근까지 북진했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "전쟁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "중국군의 개입으로 서울에서 다시 철수한 1·4 후퇴의 해는?",
+      "back": "1951년 1월 4일, 중국군의 대공세로 서울을 다시 내주고 철수했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "전쟁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "판문점에서 정전협정이 체결된 해는?",
+      "back": "1953년 7월 27일, 정전협정이 체결되어 3년여에 걸친 전쟁이 멈췄다.",
+      "tags": [
+        "현대",
+        "연도",
+        "전쟁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1953년 10월, 한국과 미국이 맺은 조약은?",
+      "back": "1953년 한미상호방위조약이 체결되어 한미 동맹의 법적 기반이 마련되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "외교"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "초대 대통령의 중임 제한을 없앤 사사오입 개헌이 일어난 해는?",
+      "back": "1954년, 개헌 정족수에 미달한 표결을 사사오입 논리로 뒤집어 통과시켰다.",
+      "tags": [
+        "현대",
+        "연도",
+        "이승만정부"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "정전협정과 4·19 혁명 사이에 있었던 이승만 정부의 장기 집권 시도는?",
+      "back": "정전(1953년) 이후 1954년 사사오입 개헌으로 중임 제한을 없앴고, 1960년 3·15 부정선거가 결국 4·19 혁명을 불러왔다.",
+      "tags": [
+        "현대",
+        "흐름",
+        "민주주의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1960년 3월 15일, 정부통령 선거에서 벌어진 일은?",
+      "back": "1960년 3·15 부정선거가 자행되었고, 마산 시위에서 희생된 김주열 학생의 죽음이 알려지며 4·19 혁명으로 이어졌다.",
+      "tags": [
+        "현대",
+        "연도",
+        "민주주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "4·19 혁명이 일어난 해는?",
+      "back": "1960년, 학생과 시민의 시위로 이승만 대통령이 하야했고, 내각 책임제 개헌을 거쳐 장면 내각이 출범했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "민주주의"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "5·16 군사정변이 일어난 해는?",
+      "back": "1961년, 박정희를 중심으로 한 군부가 정변으로 권력을 장악하고 국가재건최고회의를 세웠다.",
+      "tags": [
+        "현대",
+        "연도",
+        "군사정변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1965년, 대규모 반대 시위 속에 체결된 조약은?",
+      "back": "1965년 한일기본조약이 체결되어 일본과 국교가 정상화되었다. 앞서 1964년에는 이에 반대하는 6·3 시위가 일어났다.",
+      "tags": [
+        "현대",
+        "연도",
+        "외교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "북한 무장 부대가 청와대 습격을 시도한 1·21 사태의 해는?",
+      "back": "1968년, 1·21 사태와 푸에블로호 사건이 잇따르자 향토예비군이 창설되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "남북관계"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1970년, 경제 성장과 노동 현실을 함께 보여 준 두 사건은?",
+      "back": "1970년 경부고속도로가 개통되었고, 같은 해 11월 전태일이 근로기준법 준수를 외치며 분신했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "산업화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "농촌 근대화를 내세운 새마을운동이 시작된 해는?",
+      "back": "1970년, 새마을운동이 시작되어 농촌 환경 개선 사업이 전국으로 확대되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "산업화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1972년 7월 4일, 남북이 동시에 발표한 것은?",
+      "back": "1972년 7·4 남북공동성명으로 자주, 평화, 민족 대단결이라는 통일 3대 원칙에 합의했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "남북관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "10월 유신이 단행된 해는?",
+      "back": "1972년, 유신헌법으로 대통령 간선제와 긴급조치권 등 초헌법적 권한이 대통령에게 부여되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "유신"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "7·4 남북공동성명과 10월 유신 중 먼저 발표된 것은?",
+      "back": "7·4 남북공동성명(1972년 7월)이 먼저고, 같은 해 10월에 유신이 선포되었다.",
+      "tags": [
+        "현대",
+        "순서",
+        "유신"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1979년 10월, 유신 체제를 뒤흔든 두 사건은?",
+      "back": "1979년 부마민주항쟁이 일어났고, 곧이어 10·26 사태로 박정희 대통령이 피살되며 유신 체제가 무너졌다.",
+      "tags": [
+        "현대",
+        "연도",
+        "유신"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "전두환과 노태우 등 신군부가 12·12 군사반란을 일으킨 해는?",
+      "back": "1979년 12월 12일, 신군부가 군 지휘권을 장악하며 권력 전면에 등장했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "신군부"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "5·18 민주화운동이 일어난 해는?",
+      "back": "1980년, 광주에서 신군부의 계엄 확대에 맞선 민주화 운동이 일어났으나 무력으로 진압되었다.",
+      "tags": [
+        "현대",
+        "연도",
+        "민주주의"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1987년 6월, 대통령 직선제 개헌을 이끌어 낸 항쟁과 선언은?",
+      "back": "1987년 6월 민주항쟁이 일어났고, 6·29 선언으로 5년 단임의 대통령 직선제 개헌이 이루어졌다.",
+      "tags": [
+        "현대",
+        "연도",
+        "민주주의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "서울 올림픽이 열린 해는?",
+      "back": "1988년, 서울 올림픽은 냉전 말기에 동서 양 진영이 함께 참가한 대회로 한국의 국제적 위상을 높였다.",
+      "tags": [
+        "현대",
+        "연도",
+        "국제사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "1991년, 남북 관계에서 있었던 두 가지 큰 진전은?",
+      "back": "1991년 9월 남북한이 유엔에 동시 가입했고, 12월에는 남북기본합의서를 채택했다.",
+      "tags": [
+        "현대",
+        "연도",
+        "남북관계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "김영삼 정부가 금융실명제를 전격 시행한 해는?",
+      "back": "1993년, 대통령 긴급명령으로 금융실명제가 시행되어 금융 거래의 투명성을 높였다.",
+      "tags": [
+        "현대",
+        "연도",
+        "문민정부"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    },
+    {
+      "front": "외환 위기로 국제통화기금에 구제 금융을 요청한 해는?",
+      "back": "1997년, 외환 위기로 IMF 구제 금융을 받게 되었고 이후 금 모으기 운동 등 극복 노력이 이어졌다.",
+      "tags": [
+        "현대",
+        "연도",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-high-school-korean-history-timeline-v1",
+        "claude-authoring-high-school-korean-history-timeline-v1"
+      ]
+    }
+  ]
+}

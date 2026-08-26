@@ -1,0 +1,3021 @@
+{
+  "schemaVersion": 1,
+  "deckId": "middle-school-essential-english",
+  "sourceRegistry": [
+    {
+      "id": "brief-middle-school-essential-english-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:middle-school-essential-english:v1",
+      "revision": "brief-v1@2026-07-12"
+    },
+    {
+      "id": "claude-authoring-middle-school-essential-english-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:middle-school-essential-english:v1",
+      "revision": "claude-batch-v1@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "classroom",
+      "back": "교실",
+      "example": "Our classroom is on the second floor.",
+      "exampleMeaning": "우리 교실은 2층에 있다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "homework",
+      "back": "숙제",
+      "example": "I do my homework after dinner.",
+      "exampleMeaning": "나는 저녁 식사 후에 숙제를 한다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "classmate",
+      "back": "반 친구",
+      "example": "My classmate helped me find my pencil case.",
+      "exampleMeaning": "반 친구가 내 필통 찾는 것을 도와주었다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "subject",
+      "back": "과목; 주제",
+      "example": "Science is my favorite subject.",
+      "exampleMeaning": "과학은 내가 가장 좋아하는 과목이다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "textbook",
+      "back": "교과서",
+      "example": "Open your textbook to page ten.",
+      "exampleMeaning": "교과서 10쪽을 펴세요.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "playground",
+      "back": "운동장, 놀이터",
+      "example": "We play soccer on the playground after school.",
+      "exampleMeaning": "우리는 방과 후에 운동장에서 축구를 한다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "uniform",
+      "back": "교복, 제복",
+      "example": "We wear our school uniform every day.",
+      "exampleMeaning": "우리는 매일 교복을 입는다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "vacation",
+      "back": "방학, 휴가",
+      "example": "Summer vacation starts next week.",
+      "exampleMeaning": "여름 방학이 다음 주에 시작된다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "breakfast",
+      "back": "아침 식사",
+      "example": "I eat breakfast at seven every morning.",
+      "exampleMeaning": "나는 매일 아침 7시에 아침을 먹는다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "weekend",
+      "back": "주말",
+      "example": "What do you usually do on the weekend?",
+      "exampleMeaning": "너는 주말에 보통 무엇을 하니?",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "weather",
+      "back": "날씨",
+      "example": "The weather is sunny today.",
+      "exampleMeaning": "오늘은 날씨가 화창하다.",
+      "tags": [
+        "명사",
+        "자연"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "hobby",
+      "back": "취미",
+      "example": "My hobby is drawing cartoons.",
+      "exampleMeaning": "내 취미는 만화 그리기이다.",
+      "tags": [
+        "명사",
+        "취미"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "library",
+      "back": "도서관",
+      "example": "I borrow books from the school library.",
+      "exampleMeaning": "나는 학교 도서관에서 책을 빌린다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "museum",
+      "back": "박물관",
+      "example": "We visited the science museum last week.",
+      "exampleMeaning": "우리는 지난주에 과학 박물관을 방문했다.",
+      "tags": [
+        "명사",
+        "장소"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "market",
+      "back": "시장",
+      "example": "Mom buys fruit at the market.",
+      "exampleMeaning": "엄마는 시장에서 과일을 사신다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "garden",
+      "back": "정원, 뜰",
+      "example": "Grandma grows tomatoes in her garden.",
+      "exampleMeaning": "할머니는 정원에서 토마토를 기르신다.",
+      "tags": [
+        "명사",
+        "가족"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "season",
+      "back": "계절",
+      "example": "Spring is my favorite season.",
+      "exampleMeaning": "봄은 내가 가장 좋아하는 계절이다.",
+      "tags": [
+        "명사",
+        "자연"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "birthday",
+      "back": "생일",
+      "example": "My birthday is in October.",
+      "exampleMeaning": "내 생일은 10월이다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "present",
+      "back": "선물; 현재",
+      "example": "I got a nice present on my birthday.",
+      "exampleMeaning": "나는 생일에 멋진 선물을 받았다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "letter",
+      "back": "편지; 글자",
+      "example": "I wrote a letter to my grandmother.",
+      "exampleMeaning": "나는 할머니께 편지를 썼다.",
+      "tags": [
+        "명사",
+        "가족"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "mountain",
+      "back": "산",
+      "example": "We climbed the mountain last Sunday.",
+      "exampleMeaning": "우리는 지난 일요일에 그 산에 올랐다.",
+      "tags": [
+        "명사",
+        "자연"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "river",
+      "back": "강",
+      "example": "The river near our town is very clean.",
+      "exampleMeaning": "우리 마을 근처의 강은 매우 깨끗하다.",
+      "tags": [
+        "명사",
+        "자연"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "bridge",
+      "back": "다리",
+      "example": "We walked across the old bridge.",
+      "exampleMeaning": "우리는 오래된 다리를 걸어서 건넜다.",
+      "tags": [
+        "명사",
+        "장소"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "station",
+      "back": "역, 정거장",
+      "example": "The bus station is next to the bakery.",
+      "exampleMeaning": "버스 정거장은 빵집 옆에 있다.",
+      "tags": [
+        "명사",
+        "장소"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ticket",
+      "back": "표, 입장권",
+      "example": "I bought two tickets for the movie.",
+      "exampleMeaning": "나는 영화표 두 장을 샀다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "map",
+      "back": "지도",
+      "example": "We found the museum on the map.",
+      "exampleMeaning": "우리는 지도에서 박물관을 찾았다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "plan",
+      "back": "계획; 계획하다",
+      "example": "What is your plan for the weekend?",
+      "exampleMeaning": "주말 계획이 뭐야?",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "diary",
+      "back": "일기",
+      "example": "I write in my diary every night.",
+      "exampleMeaning": "나는 매일 밤 일기를 쓴다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "snack",
+      "back": "간식",
+      "example": "We had a snack after class.",
+      "exampleMeaning": "우리는 수업 후에 간식을 먹었다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "backpack",
+      "back": "책가방, 배낭",
+      "example": "My backpack is heavy with books.",
+      "exampleMeaning": "내 책가방은 책 때문에 무겁다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "arrive",
+      "back": "도착하다",
+      "example": "The train arrives at nine.",
+      "exampleMeaning": "기차는 9시에 도착한다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "borrow",
+      "back": "빌리다",
+      "example": "Can I borrow your umbrella?",
+      "exampleMeaning": "네 우산을 빌려도 될까?",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "bring",
+      "back": "가져오다, 데려오다",
+      "example": "Please bring your notebook tomorrow.",
+      "exampleMeaning": "내일 공책을 가져오세요.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "carry",
+      "back": "나르다, 들고 다니다",
+      "example": "He carried the box to the classroom.",
+      "exampleMeaning": "그는 상자를 교실로 날랐다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "enjoy",
+      "back": "즐기다",
+      "example": "We enjoyed the school festival.",
+      "exampleMeaning": "우리는 학교 축제를 즐겼다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "finish",
+      "back": "끝내다, 끝나다",
+      "example": "I finished my homework before dinner.",
+      "exampleMeaning": "나는 저녁 식사 전에 숙제를 끝냈다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "join",
+      "back": "가입하다, 함께하다",
+      "example": "I want to join the soccer club.",
+      "exampleMeaning": "나는 축구 동아리에 가입하고 싶다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "learn",
+      "back": "배우다",
+      "example": "We learn English at school.",
+      "exampleMeaning": "우리는 학교에서 영어를 배운다.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "move",
+      "back": "움직이다; 이사하다",
+      "example": "My family moved to a new town last year.",
+      "exampleMeaning": "우리 가족은 작년에 새 동네로 이사했다.",
+      "tags": [
+        "동사",
+        "가족"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "practice",
+      "back": "연습하다; 연습",
+      "example": "She practices the piano every day.",
+      "exampleMeaning": "그녀는 매일 피아노를 연습한다.",
+      "tags": [
+        "동사",
+        "취미"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "remember",
+      "back": "기억하다",
+      "example": "Do you remember our first day of school?",
+      "exampleMeaning": "우리의 학교 첫날을 기억하니?",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ride",
+      "back": "타다",
+      "example": "I ride my bike to school.",
+      "exampleMeaning": "나는 자전거를 타고 학교에 간다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "save",
+      "back": "구하다; 아껴 모으다",
+      "example": "I save money to buy a new bag.",
+      "exampleMeaning": "나는 새 가방을 사려고 돈을 모은다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "show",
+      "back": "보여 주다",
+      "example": "He showed me his drawing.",
+      "exampleMeaning": "그는 나에게 자기 그림을 보여 주었다.",
+      "tags": [
+        "동사",
+        "취미"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "visit",
+      "back": "방문하다",
+      "example": "We visited our grandparents during the holiday.",
+      "exampleMeaning": "우리는 휴일 동안 조부모님을 방문했다.",
+      "tags": [
+        "동사",
+        "가족"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "wait",
+      "back": "기다리다",
+      "example": "Please wait for me at the school gate.",
+      "exampleMeaning": "학교 정문에서 나를 기다려 줘.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "wash",
+      "back": "씻다",
+      "example": "Wash your hands before lunch.",
+      "exampleMeaning": "점심 먹기 전에 손을 씻어라.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "wear",
+      "back": "입다, 쓰다, 신다",
+      "example": "She wears glasses.",
+      "exampleMeaning": "그녀는 안경을 쓴다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "win",
+      "back": "이기다, 우승하다",
+      "example": "Our team won the game.",
+      "exampleMeaning": "우리 팀이 경기에서 이겼다.",
+      "tags": [
+        "동사",
+        "취미"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "worry",
+      "back": "걱정하다",
+      "example": "Don't worry about the test.",
+      "exampleMeaning": "시험에 대해 걱정하지 마.",
+      "tags": [
+        "동사",
+        "감정"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "hurry",
+      "back": "서두르다",
+      "example": "Hurry up, or we will be late for school.",
+      "exampleMeaning": "서둘러, 안 그러면 학교에 늦을 거야.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "invite",
+      "back": "초대하다",
+      "example": "I invited my friends to my birthday party.",
+      "exampleMeaning": "나는 친구들을 내 생일 파티에 초대했다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "answer",
+      "back": "대답하다; 답",
+      "example": "She answered the question first.",
+      "exampleMeaning": "그녀가 그 질문에 가장 먼저 대답했다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "busy",
+      "back": "바쁜",
+      "example": "My mom is busy in the morning.",
+      "exampleMeaning": "우리 엄마는 아침에 바쁘시다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "early",
+      "back": "이른; 일찍",
+      "example": "I get up early on school days.",
+      "exampleMeaning": "나는 학교 가는 날에는 일찍 일어난다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "famous",
+      "back": "유명한",
+      "example": "The singer is famous in Korea.",
+      "exampleMeaning": "그 가수는 한국에서 유명하다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "favorite",
+      "back": "가장 좋아하는",
+      "example": "Blue is my favorite color.",
+      "exampleMeaning": "파란색은 내가 가장 좋아하는 색이다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "healthy",
+      "back": "건강한, 건강에 좋은",
+      "example": "Vegetables are healthy food.",
+      "exampleMeaning": "채소는 건강에 좋은 음식이다.",
+      "tags": [
+        "형용사",
+        "건강"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "quiet",
+      "back": "조용한",
+      "example": "Please be quiet in the library.",
+      "exampleMeaning": "도서관에서는 조용히 해 주세요.",
+      "tags": [
+        "형용사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ready",
+      "back": "준비된",
+      "example": "Are you ready for the quiz?",
+      "exampleMeaning": "쪽지 시험 볼 준비가 됐니?",
+      "tags": [
+        "형용사",
+        "학교"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "safe",
+      "back": "안전한",
+      "example": "Wear a helmet to stay safe.",
+      "exampleMeaning": "안전하게 있으려면 헬멧을 써라.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "tired",
+      "back": "피곤한",
+      "example": "I was tired after the long trip.",
+      "exampleMeaning": "나는 긴 여행 후에 피곤했다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "useful",
+      "back": "유용한",
+      "example": "This dictionary is very useful.",
+      "exampleMeaning": "이 사전은 매우 유용하다.",
+      "tags": [
+        "형용사",
+        "학습"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "always",
+      "back": "항상",
+      "example": "She always smiles at everyone.",
+      "exampleMeaning": "그녀는 항상 모두에게 미소 짓는다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "often",
+      "back": "자주",
+      "example": "We often play badminton after school.",
+      "exampleMeaning": "우리는 방과 후에 자주 배드민턴을 친다.",
+      "tags": [
+        "부사",
+        "취미"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "sometimes",
+      "back": "가끔",
+      "example": "Sometimes I cook dinner with my dad.",
+      "exampleMeaning": "가끔 나는 아빠와 함께 저녁을 요리한다.",
+      "tags": [
+        "부사",
+        "가족"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "together",
+      "back": "함께",
+      "example": "We studied together at the library.",
+      "exampleMeaning": "우리는 도서관에서 함께 공부했다.",
+      "tags": [
+        "부사",
+        "관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "agree",
+      "back": "동의하다",
+      "example": "I agree with your idea.",
+      "exampleMeaning": "나는 네 생각에 동의해.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "believe",
+      "back": "믿다",
+      "example": "I believe my best friend.",
+      "exampleMeaning": "나는 나의 가장 친한 친구를 믿는다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "choose",
+      "back": "고르다, 선택하다",
+      "example": "Choose one book for your report.",
+      "exampleMeaning": "독후감을 쓸 책을 한 권 골라라.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "collect",
+      "back": "모으다, 수집하다",
+      "example": "My brother collects old coins.",
+      "exampleMeaning": "내 남동생은 오래된 동전을 모은다.",
+      "tags": [
+        "동사",
+        "취미"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "continue",
+      "back": "계속하다",
+      "example": "The rain continued all day.",
+      "exampleMeaning": "비가 하루 종일 계속 내렸다.",
+      "tags": [
+        "동사",
+        "자연"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "create",
+      "back": "만들어 내다, 창조하다",
+      "example": "We created a poster for the school festival.",
+      "exampleMeaning": "우리는 학교 축제 포스터를 만들었다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "decide",
+      "back": "결정하다",
+      "example": "I decided to join the art club.",
+      "exampleMeaning": "나는 미술 동아리에 들기로 결정했다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "explain",
+      "back": "설명하다",
+      "example": "The teacher explained the rule again.",
+      "exampleMeaning": "선생님께서 그 규칙을 다시 설명해 주셨다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "express",
+      "back": "표현하다",
+      "example": "It is hard to express my feelings in English.",
+      "exampleMeaning": "내 감정을 영어로 표현하기는 어렵다.",
+      "tags": [
+        "동사",
+        "감정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "forget",
+      "back": "잊다",
+      "example": "Don't forget to bring your lunch box.",
+      "exampleMeaning": "도시락 가져오는 것을 잊지 마.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "guess",
+      "back": "추측하다; 추측",
+      "example": "Can you guess my age?",
+      "exampleMeaning": "내 나이를 맞혀 볼래?",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "imagine",
+      "back": "상상하다",
+      "example": "Imagine a world without music.",
+      "exampleMeaning": "음악이 없는 세상을 상상해 봐.",
+      "tags": [
+        "동사",
+        "취미"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "improve",
+      "back": "향상시키다, 나아지다",
+      "example": "Reading every day improves your English.",
+      "exampleMeaning": "매일 읽으면 영어 실력이 좋아진다.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "introduce",
+      "back": "소개하다",
+      "example": "Let me introduce my new friend.",
+      "exampleMeaning": "내 새 친구를 소개할게.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "invent",
+      "back": "발명하다",
+      "example": "Who invented the telephone?",
+      "exampleMeaning": "누가 전화기를 발명했을까?",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prepare",
+      "back": "준비하다",
+      "example": "We prepared sandwiches for the picnic.",
+      "exampleMeaning": "우리는 소풍을 위해 샌드위치를 준비했다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "promise",
+      "back": "약속하다; 약속",
+      "example": "He promised to come to my concert.",
+      "exampleMeaning": "그는 내 연주회에 오겠다고 약속했다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "protect",
+      "back": "보호하다",
+      "example": "We should protect wild animals.",
+      "exampleMeaning": "우리는 야생 동물을 보호해야 한다.",
+      "tags": [
+        "동사",
+        "자연"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "receive",
+      "back": "받다",
+      "example": "I received a letter from my pen pal.",
+      "exampleMeaning": "나는 펜팔 친구에게서 편지를 받았다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "repair",
+      "back": "고치다, 수리하다",
+      "example": "Dad repaired my broken bike.",
+      "exampleMeaning": "아빠가 고장 난 내 자전거를 고쳐 주셨다.",
+      "tags": [
+        "동사",
+        "가족"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "return",
+      "back": "돌아오다; 돌려주다",
+      "example": "Please return the book by Friday.",
+      "exampleMeaning": "금요일까지 책을 반납해 주세요.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "solve",
+      "back": "풀다, 해결하다",
+      "example": "She solved the math problem quickly.",
+      "exampleMeaning": "그녀는 수학 문제를 빨리 풀었다.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "travel",
+      "back": "여행하다; 여행",
+      "example": "My family will travel to Jeju this summer.",
+      "exampleMeaning": "우리 가족은 이번 여름에 제주로 여행 갈 것이다.",
+      "tags": [
+        "동사",
+        "가족"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "wonder",
+      "back": "궁금해하다",
+      "example": "I wonder why the sky is blue.",
+      "exampleMeaning": "나는 하늘이 왜 파란지 궁금하다.",
+      "tags": [
+        "동사",
+        "자연"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "activity",
+      "back": "활동",
+      "example": "Our club has many fun activities.",
+      "exampleMeaning": "우리 동아리에는 재미있는 활동이 많다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "advice",
+      "back": "조언, 충고",
+      "example": "My teacher gave me good advice.",
+      "exampleMeaning": "선생님께서 나에게 좋은 조언을 해 주셨다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "contest",
+      "back": "대회, 경연",
+      "example": "She won first prize in the English contest.",
+      "exampleMeaning": "그녀는 영어 대회에서 1등 상을 받았다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "culture",
+      "back": "문화",
+      "example": "We learned about Korean culture in class.",
+      "exampleMeaning": "우리는 수업 시간에 한국 문화에 대해 배웠다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "dictionary",
+      "back": "사전",
+      "example": "Look up the word in your dictionary.",
+      "exampleMeaning": "그 단어를 사전에서 찾아봐라.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "festival",
+      "back": "축제",
+      "example": "Our school festival is in May.",
+      "exampleMeaning": "우리 학교 축제는 5월에 있다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "future",
+      "back": "미래",
+      "example": "I want to be a doctor in the future.",
+      "exampleMeaning": "나는 미래에 의사가 되고 싶다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "grade",
+      "back": "학년; 성적",
+      "example": "My sister is in the second grade of middle school.",
+      "exampleMeaning": "내 여동생은 중학교 2학년이다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "habit",
+      "back": "습관",
+      "example": "Eating breakfast is a good habit.",
+      "exampleMeaning": "아침을 먹는 것은 좋은 습관이다.",
+      "tags": [
+        "명사",
+        "건강"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "health",
+      "back": "건강",
+      "example": "Exercise is good for your health.",
+      "exampleMeaning": "운동은 건강에 좋다.",
+      "tags": [
+        "명사",
+        "건강"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "history",
+      "back": "역사",
+      "example": "History is an interesting subject.",
+      "exampleMeaning": "역사는 흥미로운 과목이다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "holiday",
+      "back": "휴일, 공휴일",
+      "example": "We visited our uncle on the holiday.",
+      "exampleMeaning": "우리는 휴일에 삼촌 댁을 방문했다.",
+      "tags": [
+        "명사",
+        "가족"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "hometown",
+      "back": "고향",
+      "example": "My hometown is a small town near the sea.",
+      "exampleMeaning": "내 고향은 바다 근처의 작은 마을이다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "information",
+      "back": "정보",
+      "example": "You can find useful information in this book.",
+      "exampleMeaning": "이 책에서 유용한 정보를 찾을 수 있다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "invitation",
+      "back": "초대, 초대장",
+      "example": "I got an invitation to her birthday party.",
+      "exampleMeaning": "나는 그녀의 생일 파티 초대장을 받았다.",
+      "tags": [
+        "명사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "language",
+      "back": "언어",
+      "example": "She can speak three languages.",
+      "exampleMeaning": "그녀는 세 가지 언어를 말할 수 있다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "meal",
+      "back": "식사",
+      "example": "We enjoy a family meal on Sundays.",
+      "exampleMeaning": "우리는 일요일마다 가족 식사를 즐긴다.",
+      "tags": [
+        "명사",
+        "가족"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "memory",
+      "back": "기억, 추억",
+      "example": "The school trip left us good memories.",
+      "exampleMeaning": "수학여행은 우리에게 좋은 추억을 남겼다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "message",
+      "back": "메시지, 전할 말",
+      "example": "I sent a message to my friend.",
+      "exampleMeaning": "나는 친구에게 메시지를 보냈다.",
+      "tags": [
+        "명사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "mistake",
+      "back": "실수",
+      "example": "Don't be afraid of making mistakes.",
+      "exampleMeaning": "실수하는 것을 두려워하지 마.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "nature",
+      "back": "자연",
+      "example": "We should keep nature clean.",
+      "exampleMeaning": "우리는 자연을 깨끗하게 지켜야 한다.",
+      "tags": [
+        "명사",
+        "자연"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "neighbor",
+      "back": "이웃",
+      "example": "Our neighbor has a cute dog.",
+      "exampleMeaning": "우리 이웃은 귀여운 개를 키운다.",
+      "tags": [
+        "명사",
+        "관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prize",
+      "back": "상, 상품",
+      "example": "The winner will get a special prize.",
+      "exampleMeaning": "우승자는 특별한 상을 받을 것이다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "teenager",
+      "back": "십 대, 청소년",
+      "example": "Many teenagers like this song.",
+      "exampleMeaning": "많은 십 대들이 이 노래를 좋아한다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "afraid",
+      "back": "두려워하는, 겁내는",
+      "example": "I am afraid of high places.",
+      "exampleMeaning": "나는 높은 곳을 무서워한다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "brave",
+      "back": "용감한",
+      "example": "The brave firefighter saved the cat.",
+      "exampleMeaning": "용감한 소방관이 고양이를 구했다.",
+      "tags": [
+        "형용사",
+        "성격"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "careful",
+      "back": "조심하는, 주의 깊은",
+      "example": "Be careful when you cross the street.",
+      "exampleMeaning": "길을 건널 때 조심해라.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "comfortable",
+      "back": "편안한",
+      "example": "This chair is very comfortable.",
+      "exampleMeaning": "이 의자는 매우 편안하다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "curious",
+      "back": "궁금해하는, 호기심 많은",
+      "example": "The curious boy asked many questions.",
+      "exampleMeaning": "호기심 많은 소년은 질문을 많이 했다.",
+      "tags": [
+        "형용사",
+        "성격"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "excited",
+      "back": "신이 난, 들뜬",
+      "example": "I am excited about the school trip.",
+      "exampleMeaning": "나는 수학여행 때문에 신이 난다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "foreign",
+      "back": "외국의",
+      "example": "She wants to learn a foreign language.",
+      "exampleMeaning": "그녀는 외국어를 배우고 싶어 한다.",
+      "tags": [
+        "형용사",
+        "학습"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "friendly",
+      "back": "다정한, 친절한",
+      "example": "Our new teacher is very friendly.",
+      "exampleMeaning": "우리 새 선생님은 매우 다정하시다.",
+      "tags": [
+        "형용사",
+        "성격"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "honest",
+      "back": "정직한",
+      "example": "An honest person tells the truth.",
+      "exampleMeaning": "정직한 사람은 진실을 말한다.",
+      "tags": [
+        "형용사",
+        "성격"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "lonely",
+      "back": "외로운",
+      "example": "He felt lonely on his first day at the new school.",
+      "exampleMeaning": "그는 새 학교에서의 첫날에 외로움을 느꼈다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "nervous",
+      "back": "긴장한",
+      "example": "I was nervous before my speech.",
+      "exampleMeaning": "나는 발표 전에 긴장했다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "popular",
+      "back": "인기 있는",
+      "example": "This game is popular among students.",
+      "exampleMeaning": "이 게임은 학생들 사이에서 인기가 있다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "proud",
+      "back": "자랑스러워하는",
+      "example": "I am proud of my little brother.",
+      "exampleMeaning": "나는 내 남동생이 자랑스럽다.",
+      "tags": [
+        "형용사",
+        "가족"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "carefully",
+      "back": "조심스럽게, 주의 깊게",
+      "example": "Listen carefully to the directions.",
+      "exampleMeaning": "안내 사항을 주의 깊게 들어라.",
+      "tags": [
+        "부사",
+        "학교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "finally",
+      "back": "마침내",
+      "example": "We finally arrived at the top of the mountain.",
+      "exampleMeaning": "우리는 마침내 산 정상에 도착했다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "suddenly",
+      "back": "갑자기",
+      "example": "Suddenly, it started to rain.",
+      "exampleMeaning": "갑자기 비가 내리기 시작했다.",
+      "tags": [
+        "부사",
+        "자연"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "everywhere",
+      "back": "어디에나, 모든 곳에",
+      "example": "I looked everywhere for my key.",
+      "exampleMeaning": "나는 열쇠를 찾아 모든 곳을 살펴보았다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "instead",
+      "back": "대신에",
+      "example": "He was sick, so I went instead.",
+      "exampleMeaning": "그가 아파서 내가 대신 갔다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "luckily",
+      "back": "다행히, 운 좋게",
+      "example": "Luckily, the rain stopped before the game.",
+      "exampleMeaning": "다행히 경기 전에 비가 그쳤다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "achieve",
+      "back": "달성하다, 이루다",
+      "example": "You can achieve your goal with steady effort.",
+      "exampleMeaning": "꾸준한 노력으로 목표를 이룰 수 있다.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "allow",
+      "back": "허락하다",
+      "example": "My parents allow me to play games on weekends.",
+      "exampleMeaning": "부모님은 내가 주말에 게임하는 것을 허락하신다.",
+      "tags": [
+        "동사",
+        "가족"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "avoid",
+      "back": "피하다",
+      "example": "Avoid drinking too much soda.",
+      "exampleMeaning": "탄산음료를 너무 많이 마시는 것을 피해라.",
+      "tags": [
+        "동사",
+        "건강"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "compare",
+      "back": "비교하다",
+      "example": "Don't compare yourself with others.",
+      "exampleMeaning": "자신을 다른 사람과 비교하지 마라.",
+      "tags": [
+        "동사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "complain",
+      "back": "불평하다",
+      "example": "He complained about the cold weather.",
+      "exampleMeaning": "그는 추운 날씨에 대해 불평했다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "concentrate",
+      "back": "집중하다",
+      "example": "I can't concentrate with loud music on.",
+      "exampleMeaning": "시끄러운 음악이 나오면 나는 집중할 수 없다.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "consider",
+      "back": "고려하다, 깊이 생각하다",
+      "example": "We are considering a trip to the sea.",
+      "exampleMeaning": "우리는 바다로 여행 가는 것을 고려하고 있다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "describe",
+      "back": "묘사하다, 설명하다",
+      "example": "Can you describe your lost bag?",
+      "exampleMeaning": "잃어버린 가방이 어떻게 생겼는지 설명해 줄래?",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "disappear",
+      "back": "사라지다",
+      "example": "The rainbow disappeared after a few minutes.",
+      "exampleMeaning": "무지개는 몇 분 후에 사라졌다.",
+      "tags": [
+        "동사",
+        "자연"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "discover",
+      "back": "발견하다",
+      "example": "Scientists discovered a new star.",
+      "exampleMeaning": "과학자들이 새로운 별을 발견했다.",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "discuss",
+      "back": "토론하다, 상의하다",
+      "example": "We discussed the plan for the club project.",
+      "exampleMeaning": "우리는 동아리 프로젝트 계획을 상의했다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "encourage",
+      "back": "격려하다",
+      "example": "My coach encouraged me to try again.",
+      "exampleMeaning": "코치님은 내가 다시 도전하도록 격려해 주셨다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "expect",
+      "back": "기대하다, 예상하다",
+      "example": "I didn't expect to see snow in April.",
+      "exampleMeaning": "나는 4월에 눈을 보게 될 줄은 예상하지 못했다.",
+      "tags": [
+        "동사",
+        "자연"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "explore",
+      "back": "탐험하다",
+      "example": "The children explored the cave near the beach.",
+      "exampleMeaning": "아이들은 해변 근처의 동굴을 탐험했다.",
+      "tags": [
+        "동사",
+        "취미"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "include",
+      "back": "포함하다",
+      "example": "The team includes five students.",
+      "exampleMeaning": "그 팀은 다섯 명의 학생을 포함한다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "notice",
+      "back": "알아차리다; 안내문",
+      "example": "I noticed a small cat under the bench.",
+      "exampleMeaning": "나는 벤치 아래에 있는 작은 고양이를 알아차렸다.",
+      "tags": [
+        "동사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prefer",
+      "back": "더 좋아하다, 선호하다",
+      "example": "I prefer spring to winter.",
+      "exampleMeaning": "나는 겨울보다 봄을 더 좋아한다.",
+      "tags": [
+        "동사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "prevent",
+      "back": "막다, 예방하다",
+      "example": "Washing your hands prevents colds.",
+      "exampleMeaning": "손을 씻으면 감기를 예방할 수 있다.",
+      "tags": [
+        "동사",
+        "건강"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "provide",
+      "back": "제공하다",
+      "example": "The school provides free textbooks.",
+      "exampleMeaning": "학교는 무료 교과서를 제공한다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "realize",
+      "back": "깨닫다",
+      "example": "I realized I left my homework at home.",
+      "exampleMeaning": "나는 숙제를 집에 두고 온 것을 깨달았다.",
+      "tags": [
+        "동사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "recommend",
+      "back": "추천하다",
+      "example": "Can you recommend a good book for me?",
+      "exampleMeaning": "나에게 좋은 책 한 권을 추천해 줄래?",
+      "tags": [
+        "동사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "reduce",
+      "back": "줄이다",
+      "example": "We should reduce plastic waste.",
+      "exampleMeaning": "우리는 플라스틱 쓰레기를 줄여야 한다.",
+      "tags": [
+        "동사",
+        "자연"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "remind",
+      "back": "상기시키다, 떠올리게 하다",
+      "example": "This song reminds me of my old friends.",
+      "exampleMeaning": "이 노래는 나에게 옛 친구들을 떠올리게 한다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "respond",
+      "back": "응답하다, 반응하다",
+      "example": "She didn't respond to my message.",
+      "exampleMeaning": "그녀는 내 메시지에 답하지 않았다.",
+      "tags": [
+        "동사",
+        "관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ability",
+      "back": "능력",
+      "example": "She has the ability to learn languages fast.",
+      "exampleMeaning": "그녀는 언어를 빨리 배우는 능력이 있다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "advantage",
+      "back": "이점, 장점",
+      "example": "Living near school has one big advantage.",
+      "exampleMeaning": "학교 근처에 사는 것에는 큰 장점이 하나 있다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "attention",
+      "back": "주의, 관심",
+      "example": "Please pay attention to the teacher.",
+      "exampleMeaning": "선생님 말씀에 주의를 기울이세요.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "attitude",
+      "back": "태도",
+      "example": "A good attitude helps you learn better.",
+      "exampleMeaning": "좋은 태도는 더 잘 배우도록 도와준다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "behavior",
+      "back": "행동",
+      "example": "His kind behavior surprised everyone.",
+      "exampleMeaning": "그의 친절한 행동은 모두를 놀라게 했다.",
+      "tags": [
+        "명사",
+        "성격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ceremony",
+      "back": "의식, 식",
+      "example": "We took photos at the graduation ceremony.",
+      "exampleMeaning": "우리는 졸업식에서 사진을 찍었다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "challenge",
+      "back": "도전",
+      "example": "Learning to swim was a big challenge for me.",
+      "exampleMeaning": "수영을 배우는 것은 나에게 큰 도전이었다.",
+      "tags": [
+        "명사",
+        "취미"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "character",
+      "back": "성격; 등장인물",
+      "example": "The main character of the story is a smart girl.",
+      "exampleMeaning": "그 이야기의 주인공은 똑똑한 소녀이다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "community",
+      "back": "공동체, 지역 사회",
+      "example": "We cleaned the park for our community.",
+      "exampleMeaning": "우리는 지역 사회를 위해 공원을 청소했다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "condition",
+      "back": "상태; 조건",
+      "example": "The old piano is still in good condition.",
+      "exampleMeaning": "그 오래된 피아노는 아직 상태가 좋다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "confidence",
+      "back": "자신감",
+      "example": "Practice gives you confidence.",
+      "exampleMeaning": "연습은 자신감을 준다.",
+      "tags": [
+        "명사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "courage",
+      "back": "용기",
+      "example": "It took courage to speak in front of the class.",
+      "exampleMeaning": "반 아이들 앞에서 말하는 데는 용기가 필요했다.",
+      "tags": [
+        "명사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "difference",
+      "back": "차이",
+      "example": "What is the difference between the two words?",
+      "exampleMeaning": "그 두 단어의 차이는 무엇이니?",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "direction",
+      "back": "방향; 지시",
+      "example": "We walked in the wrong direction.",
+      "exampleMeaning": "우리는 잘못된 방향으로 걸어갔다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "distance",
+      "back": "거리",
+      "example": "The distance from home to school is one kilometer.",
+      "exampleMeaning": "집에서 학교까지의 거리는 1킬로미터이다.",
+      "tags": [
+        "명사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "education",
+      "back": "교육",
+      "example": "Every child has the right to education.",
+      "exampleMeaning": "모든 어린이는 교육받을 권리가 있다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "emotion",
+      "back": "감정",
+      "example": "Music can express deep emotions.",
+      "exampleMeaning": "음악은 깊은 감정을 표현할 수 있다.",
+      "tags": [
+        "명사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "experiment",
+      "back": "실험",
+      "example": "We did a fun experiment in science class.",
+      "exampleMeaning": "우리는 과학 시간에 재미있는 실험을 했다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "generation",
+      "back": "세대",
+      "example": "My grandparents' generation grew up without smartphones.",
+      "exampleMeaning": "우리 조부모님 세대는 스마트폰 없이 자라셨다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "knowledge",
+      "back": "지식",
+      "example": "Books give us knowledge about the world.",
+      "exampleMeaning": "책은 우리에게 세상에 대한 지식을 준다.",
+      "tags": [
+        "명사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "opportunity",
+      "back": "기회",
+      "example": "The contest is a good opportunity to show your talent.",
+      "exampleMeaning": "그 대회는 재능을 보여 줄 좋은 기회이다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "patience",
+      "back": "인내심",
+      "example": "Fishing needs a lot of patience.",
+      "exampleMeaning": "낚시에는 많은 인내심이 필요하다.",
+      "tags": [
+        "명사",
+        "성격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "purpose",
+      "back": "목적",
+      "example": "The purpose of the meeting is to plan the festival.",
+      "exampleMeaning": "그 모임의 목적은 축제를 계획하는 것이다.",
+      "tags": [
+        "명사",
+        "학교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "relationship",
+      "back": "관계",
+      "example": "I have a good relationship with my sister.",
+      "exampleMeaning": "나는 언니와 사이가 좋다.",
+      "tags": [
+        "명사",
+        "가족"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "tradition",
+      "back": "전통",
+      "example": "Eating rice cake soup on New Year's Day is a Korean tradition.",
+      "exampleMeaning": "설날에 떡국을 먹는 것은 한국의 전통이다.",
+      "tags": [
+        "명사",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ancient",
+      "back": "고대의, 아주 오래된",
+      "example": "We learned about ancient Egypt in history class.",
+      "exampleMeaning": "우리는 역사 시간에 고대 이집트에 대해 배웠다.",
+      "tags": [
+        "형용사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "convenient",
+      "back": "편리한",
+      "example": "The subway is a convenient way to travel.",
+      "exampleMeaning": "지하철은 편리한 이동 수단이다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "embarrassed",
+      "back": "당황한, 창피한",
+      "example": "I was embarrassed when I fell in the hallway.",
+      "exampleMeaning": "나는 복도에서 넘어졌을 때 창피했다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "familiar",
+      "back": "익숙한, 친숙한",
+      "example": "Her face looks familiar to me.",
+      "exampleMeaning": "그녀의 얼굴이 나에게 낯익어 보인다.",
+      "tags": [
+        "형용사",
+        "관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "grateful",
+      "back": "감사하는",
+      "example": "I am grateful for my teacher's help.",
+      "exampleMeaning": "나는 선생님의 도움에 감사한다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "harmful",
+      "back": "해로운",
+      "example": "Too much sugar is harmful to your teeth.",
+      "exampleMeaning": "너무 많은 설탕은 치아에 해롭다.",
+      "tags": [
+        "형용사",
+        "건강"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "independent",
+      "back": "독립적인",
+      "example": "She is independent and solves problems by herself.",
+      "exampleMeaning": "그녀는 독립적이어서 문제를 스스로 해결한다.",
+      "tags": [
+        "형용사",
+        "성격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "necessary",
+      "back": "필요한, 필수적인",
+      "example": "Enough sleep is necessary for your brain.",
+      "exampleMeaning": "충분한 잠은 뇌에 꼭 필요하다.",
+      "tags": [
+        "형용사",
+        "건강"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "ordinary",
+      "back": "평범한, 보통의",
+      "example": "It was an ordinary Monday morning.",
+      "exampleMeaning": "그날은 평범한 월요일 아침이었다.",
+      "tags": [
+        "형용사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "polite",
+      "back": "예의 바른",
+      "example": "Be polite to older people.",
+      "exampleMeaning": "어른들께 예의 바르게 행동해라.",
+      "tags": [
+        "형용사",
+        "성격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "positive",
+      "back": "긍정적인",
+      "example": "Positive words make people happy.",
+      "exampleMeaning": "긍정적인 말은 사람들을 행복하게 한다.",
+      "tags": [
+        "형용사",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "various",
+      "back": "다양한",
+      "example": "The library has various kinds of books.",
+      "exampleMeaning": "도서관에는 다양한 종류의 책이 있다.",
+      "tags": [
+        "형용사",
+        "학습"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "actually",
+      "back": "사실은, 실제로",
+      "example": "Actually, I have never seen the sea.",
+      "exampleMeaning": "사실 나는 바다를 한 번도 본 적이 없다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "especially",
+      "back": "특히",
+      "example": "I like fruit, especially watermelon.",
+      "exampleMeaning": "나는 과일, 특히 수박을 좋아한다.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "immediately",
+      "back": "즉시",
+      "example": "Call me immediately when you arrive.",
+      "exampleMeaning": "도착하면 즉시 나에게 전화해.",
+      "tags": [
+        "부사",
+        "일상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "probably",
+      "back": "아마",
+      "example": "It will probably rain tomorrow.",
+      "exampleMeaning": "내일 아마 비가 올 것이다.",
+      "tags": [
+        "부사",
+        "자연"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    },
+    {
+      "front": "recently",
+      "back": "최근에",
+      "example": "I recently started learning the guitar.",
+      "exampleMeaning": "나는 최근에 기타를 배우기 시작했다.",
+      "tags": [
+        "부사",
+        "취미"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-middle-school-essential-english-v1",
+        "claude-authoring-middle-school-essential-english-v1"
+      ]
+    }
+  ]
+}

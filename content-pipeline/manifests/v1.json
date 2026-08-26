@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogId": "daoewo-v1",
-  "version": 1,
+  "version": 2,
   "chunkSize": 200,
   "decks": [
     {
@@ -55,11 +55,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["영어", "입문", "필수어휘"]
+      "tags": [
+        "영어",
+        "입문",
+        "필수어휘"
+      ]
     },
     {
       "id": "english-toeic-advanced",
@@ -112,11 +121,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["영어", "TOEIC", "심화"]
+      "tags": [
+        "영어",
+        "TOEIC",
+        "심화"
+      ]
     },
     {
       "id": "japanese-jlpt-n5-preview",
@@ -162,11 +180,21 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["일본어", "JLPT", "N5", "입문"]
+      "tags": [
+        "일본어",
+        "JLPT",
+        "N5",
+        "입문"
+      ]
     },
     {
       "id": "japanese-jlpt-n3-n2",
@@ -212,11 +240,21 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["일본어", "JLPT", "N3", "N2"]
+      "tags": [
+        "일본어",
+        "JLPT",
+        "N3",
+        "N2"
+      ]
     },
     {
       "id": "korean-vocabulary",
@@ -255,11 +293,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["한국어", "국어", "어휘"]
+      "tags": [
+        "한국어",
+        "국어",
+        "어휘"
+      ]
     },
     {
       "id": "korean-history-cert-core",
@@ -298,11 +345,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["한국사", "자격증", "시험"]
+      "tags": [
+        "한국사",
+        "자격증",
+        "시험"
+      ]
     },
     {
       "id": "information-processing-engineer",
@@ -341,11 +397,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["정보처리기사", "자격증", "IT"]
+      "tags": [
+        "정보처리기사",
+        "자격증",
+        "IT"
+      ]
     },
     {
       "id": "driving-license-key-points",
@@ -384,11 +449,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["운전면허", "교통안전", "법규"]
+      "tags": [
+        "운전면허",
+        "교통안전",
+        "법규"
+      ]
     },
     {
       "id": "it-cs-interview-terms",
@@ -427,11 +501,21 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["IT", "CS", "면접", "개발자"]
+      "tags": [
+        "IT",
+        "CS",
+        "면접",
+        "개발자"
+      ]
     },
     {
       "id": "business-english-expressions",
@@ -470,11 +554,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["영어", "비즈니스", "실무"]
+      "tags": [
+        "영어",
+        "비즈니스",
+        "실무"
+      ]
     },
     {
       "id": "world-capitals-flags",
@@ -513,11 +606,21 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["세계", "수도", "국기", "교양"]
+      "tags": [
+        "세계",
+        "수도",
+        "국기",
+        "교양"
+      ]
     },
     {
       "id": "wine-basics",
@@ -556,11 +659,20 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["와인", "교양", "용어"]
+      "tags": [
+        "와인",
+        "교양",
+        "용어"
+      ]
     },
     {
       "id": "middle-school-essential-english",
@@ -599,11 +711,21 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["중학교", "영어", "필수어휘", "13세이상"]
+      "tags": [
+        "중학교",
+        "영어",
+        "필수어휘",
+        "13세이상"
+      ]
     },
     {
       "id": "high-school-korean-history-timeline",
@@ -642,11 +764,505 @@
         "inputDigest": null,
         "generatedBy": "operator-cli"
       },
-      "reviewer": { "status": "pending", "name": null, "reviewedAt": null, "evidence": null },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
       "status": "planned",
       "version": 1,
       "chunkSize": 200,
-      "tags": ["고등학교", "한국사", "연표", "13세이상"]
+      "tags": [
+        "고등학교",
+        "한국사",
+        "연표",
+        "13세이상"
+      ]
+    },
+    {
+      "id": "japanese-jlpt-n4",
+      "title": "일본어 JLPT N4",
+      "description": "N5 다음 단계 학습자를 위한 N4 핵심 어휘 덱",
+      "category": "language",
+      "locale": "ko-KR",
+      "contentLanguage": "ja",
+      "tier": "pro",
+      "priority": "P2",
+      "contentStrategy": "vocab-swipe-import",
+      "source": {
+        "kind": "repository-snapshot",
+        "name": "seorilabs/vocab-swipe JLPT 변환 자산",
+        "uri": "https://github.com/seorilabs/vocab-swipe",
+        "external": true,
+        "commit": "e1ba2d5503d1f90ee9d6995c80070b0e2e3152e6",
+        "revision": "elzup/jlpt-word-list@master captured by pinned vocab-swipe commit"
+      },
+      "license": {
+        "policy": "mixed",
+        "components": [
+          {
+            "id": "MIT",
+            "attribution": "elzup/jlpt-word-list",
+            "evidenceUri": "https://github.com/elzup/jlpt-word-list",
+            "commercialUse": true,
+            "shareAlike": false
+          },
+          {
+            "id": "LicenseRef-Seorilabs-Self-Authored",
+            "attribution": "Seorilabs 자체 생성 한국어 뜻·예문·학습 팁",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "MIT 고지와 원저작권 고지를 유지한다. 공식 JLPT 출제 목록 또는 공식 제휴로 표시하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "vocab-swipe N4 표제어와 자체 생성 보강의 교집합을 가져와 검수한다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "일본어",
+        "JLPT",
+        "N4"
+      ]
+    },
+    {
+      "id": "japanese-jlpt-n1",
+      "title": "일본어 JLPT N1 최상급",
+      "description": "고급 일본어 학습자를 위한 N1 수준 어휘 덱",
+      "category": "language",
+      "locale": "ko-KR",
+      "contentLanguage": "ja",
+      "tier": "pro",
+      "priority": "P2",
+      "contentStrategy": "vocab-swipe-import",
+      "source": {
+        "kind": "repository-snapshot",
+        "name": "seorilabs/vocab-swipe JLPT 변환 자산",
+        "uri": "https://github.com/seorilabs/vocab-swipe",
+        "external": true,
+        "commit": "e1ba2d5503d1f90ee9d6995c80070b0e2e3152e6",
+        "revision": "elzup/jlpt-word-list@master captured by pinned vocab-swipe commit"
+      },
+      "license": {
+        "policy": "mixed",
+        "components": [
+          {
+            "id": "MIT",
+            "attribution": "elzup/jlpt-word-list",
+            "evidenceUri": "https://github.com/elzup/jlpt-word-list",
+            "commercialUse": true,
+            "shareAlike": false
+          },
+          {
+            "id": "LicenseRef-Seorilabs-Self-Authored",
+            "attribution": "Seorilabs 자체 생성 한국어 뜻·예문·학습 팁",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "MIT 고지와 원저작권 고지를 유지한다. 공식 JLPT 출제 목록 또는 공식 제휴로 표시하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "vocab-swipe N1 표제어와 자체 생성 보강의 교집합을 가져와 검수한다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "일본어",
+        "JLPT",
+        "N1",
+        "고급"
+      ]
+    },
+    {
+      "id": "sql-interview-core",
+      "title": "SQL 면접 핵심",
+      "description": "데이터 직군과 개발자 면접을 위한 SQL 핵심 질문·개념 덱",
+      "category": "career",
+      "locale": "ko-KR",
+      "contentLanguage": "ko",
+      "tier": "pro",
+      "priority": "P1",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 SQL 면접 핵심 기획 브리프",
+        "uri": "urn:daoewo:brief:sql-interview-core:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "공개 SQL 표준과 일반 개념을 자체 문장으로 설명하며 특정 면접서·강의·문제은행의 문항, 보기, 해설을 복제하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "공개 SQL 표준·일반 개념을 주제 브리프로 정리하고 운영자 batch 생성 후 기술·사람 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "SQL",
+        "면접",
+        "데이터"
+      ]
+    },
+    {
+      "id": "english-phrasal-verbs",
+      "title": "영어 구동사·숙어",
+      "description": "실무와 시험에 자주 나오는 영어 구동사와 숙어 덱",
+      "category": "language",
+      "locale": "ko-KR",
+      "contentLanguage": "en",
+      "tier": "pro",
+      "priority": "P2",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 영어 구동사·숙어 기획 브리프",
+        "uri": "urn:daoewo:brief:english-phrasal-verbs:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "예문은 자체 작성하며 회화 교재·강의 대본을 복제하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "빈용 구동사·숙어 브리프별 표현과 자체 예문을 운영자 batch로 작성하고 사람 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "영어",
+        "구동사",
+        "숙어"
+      ]
+    },
+    {
+      "id": "korean-four-character-idioms",
+      "title": "사자성어·고사성어",
+      "description": "일상과 시험에 자주 쓰이는 사자성어·고사성어 덱",
+      "category": "language",
+      "locale": "ko-KR",
+      "contentLanguage": "ko",
+      "tier": "free",
+      "priority": "P2",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 사자성어·고사성어 기획 브리프",
+        "uri": "urn:daoewo:brief:korean-four-character-idioms:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "성어의 뜻과 유래를 자체 문장으로 설명하며 특정 사전·교재의 표제 해설을 복제하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "널리 확립된 성어의 뜻·유래·용례를 자체 문장으로 작성하고 사람 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "사자성어",
+        "고사성어",
+        "한자"
+      ]
+    },
+    {
+      "id": "sqld-core-concepts",
+      "title": "SQLD 핵심 개념",
+      "description": "SQL 개발자 자격 학습을 위한 데이터 모델링·SQL 핵심 개념 덱",
+      "category": "certification",
+      "locale": "ko-KR",
+      "contentLanguage": "ko",
+      "tier": "pro",
+      "priority": "P2",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 SQLD 핵심 개념 기획 브리프",
+        "uri": "urn:daoewo:brief:sqld-core-concepts:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "공개 표준 개념을 자체 문장으로 설명하며 교재·기출문제의 문장, 보기, 해설을 복제하지 않는다. 공식 제휴로 오인시키지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "공개 데이터 모델링·SQL 표준 개념을 주제 브리프로 정리하고 운영자 batch 생성 후 사람 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "SQLD",
+        "자격증",
+        "데이터베이스"
+      ]
+    },
+    {
+      "id": "system-design-terms",
+      "title": "시스템 디자인 용어",
+      "description": "백엔드 면접과 실무를 위한 시스템 설계 핵심 개념 덱",
+      "category": "career",
+      "locale": "ko-KR",
+      "contentLanguage": "ko",
+      "tier": "pro",
+      "priority": "P2",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 시스템 디자인 용어 기획 브리프",
+        "uri": "urn:daoewo:brief:system-design-terms:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "공개 기술 개념을 자체 문장으로 요약하고 특정 면접서·강의의 문답을 복제하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "공개 기술 명세와 자체 브리프를 바탕으로 운영자 batch 생성 후 기술·사람 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "시스템디자인",
+        "백엔드",
+        "면접"
+      ]
+    },
+    {
+      "id": "greek-roman-mythology",
+      "title": "그리스·로마 신화",
+      "description": "신·영웅·상징을 익히는 그리스·로마 신화 교양 덱",
+      "category": "general-knowledge",
+      "locale": "ko-KR",
+      "contentLanguage": "ko",
+      "tier": "free",
+      "priority": "P3",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 그리스·로마 신화 기획 브리프",
+        "uri": "urn:daoewo:brief:greek-roman-mythology:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "신화 내용을 자체 문장으로 요약하며 특정 번역서·해설서의 문장을 복제하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "널리 확립된 신화 인물·사건·상징을 자체 문장으로 정리하고 사실·사람 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "신화",
+        "교양",
+        "인문"
+      ]
+    },
+    {
+      "id": "csat-essential-english",
+      "title": "수능 필수 영단어",
+      "description": "13세 이상 고등학생의 수능 대비 필수 영어 어휘 덱",
+      "category": "k12-secondary",
+      "locale": "ko-KR",
+      "contentLanguage": "en",
+      "tier": "pro",
+      "priority": "P2",
+      "contentStrategy": "ai-assisted-operator-batch",
+      "source": {
+        "kind": "operator-topic-brief",
+        "name": "다외워 수능 필수 영단어 기획 브리프",
+        "uri": "urn:daoewo:brief:csat-essential-english:v1",
+        "external": false,
+        "commit": null,
+        "revision": "brief-v2@2026-08-26"
+      },
+      "license": {
+        "policy": "single",
+        "components": [
+          {
+            "id": "LicenseRef-Seorilabs-Proprietary-Content",
+            "attribution": "Seorilabs 자체 기획·작성·AI 보조 후 사람 검수",
+            "evidenceUri": "urn:daoewo:content-policy:v1",
+            "commercialUse": true,
+            "shareAlike": false
+          }
+        ],
+        "distributionNotice": "공개 교육과정의 범위만 참고하고 출판사 교과서·문제집의 단어 선정표와 예문, 평가원·EBS 문항을 복제하지 않는다."
+      },
+      "provenance": {
+        "kind": "planned",
+        "recipe": "고등 교육과정 수준 브리프를 기반으로 자체 목록·예문을 작성하고 교육 검수를 거친다.",
+        "inputDigest": null,
+        "generatedBy": "operator-cli"
+      },
+      "reviewer": {
+        "status": "pending",
+        "name": null,
+        "reviewedAt": null,
+        "evidence": null
+      },
+      "status": "planned",
+      "version": 1,
+      "chunkSize": 200,
+      "tags": [
+        "수능",
+        "고등학교",
+        "영어",
+        "13세이상"
+      ]
     }
   ]
 }

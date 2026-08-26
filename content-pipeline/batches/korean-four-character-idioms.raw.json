@@ -1,0 +1,2940 @@
+{
+  "schemaVersion": 1,
+  "deckId": "korean-four-character-idioms",
+  "sourceRegistry": [
+    {
+      "id": "brief-korean-four-character-idioms-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:korean-four-character-idioms:v1",
+      "revision": "brief-v2@2026-08-26"
+    },
+    {
+      "id": "claude-authoring-korean-four-character-idioms-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:korean-four-character-idioms:v1",
+      "revision": "claude-batch-v2@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "온고지신(溫故知新)",
+      "back": "옛것을 익히고 그것을 바탕으로 새로운 것을 알아낸다는 뜻. (한자 풀이: 溫 익힐 온, 故 옛 고, 知 알 지, 新 새 신)",
+      "hint": "《논어》 위정편에서 공자가 스승 될 자격을 말한 데서 유래한다.",
+      "example": "고전을 다시 읽으며 새 기획의 실마리를 찾는 것도 온고지신의 자세다.",
+      "tags": [
+        "배움",
+        "고전",
+        "논어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "교학상장(敎學相長)",
+      "back": "가르치는 일과 배우는 일이 서로를 자라게 한다는 뜻. (한자 풀이: 敎 가르칠 교, 學 배울 학, 相 서로 상, 長 자랄 장)",
+      "hint": "《예기》 학기편에서 유래한다.",
+      "example": "후배를 가르치다 보니 내 실력도 늘어 교학상장이라는 말을 실감했다.",
+      "tags": [
+        "배움",
+        "교육"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "주경야독(晝耕夜讀)",
+      "back": "낮에는 밭을 갈고 밤에는 글을 읽는다는 뜻으로, 어려운 처지에서도 꿋꿋이 공부함을 이르는 말. (한자 풀이: 晝 낮 주, 耕 밭갈 경, 夜 밤 야, 讀 읽을 독)",
+      "example": "그는 낮에는 회사에서 일하고 밤에는 야간 대학에 다니며 주경야독으로 학위를 마쳤다.",
+      "tags": [
+        "배움",
+        "노력"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "형설지공(螢雪之功)",
+      "back": "반딧불과 눈빛으로 글을 읽어 이룬 공이라는 뜻으로, 고생 속에서도 부지런히 공부하여 얻은 보람을 이르는 말. (한자 풀이: 螢 반딧불이 형, 雪 눈 설, 之 갈 지, 功 공 공)",
+      "hint": "진(晉)나라 차윤이 반딧불로, 손강이 눈빛으로 글을 읽었다는 고사에서 유래한다.",
+      "example": "어려운 형편에도 형설지공으로 공부해 마침내 교수가 되었다.",
+      "tags": [
+        "배움",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "위편삼절(韋編三絶)",
+      "back": "책을 묶은 가죽끈이 세 번이나 끊어졌다는 뜻으로, 책이 닳도록 되풀이해 읽을 만큼 열심히 공부함을 이르는 말. (한자 풀이: 韋 가죽 위, 編 엮을 편, 三 석 삼, 絶 끊을 절)",
+      "hint": "공자가 만년에 《주역》을 즐겨 읽어 죽간을 묶은 가죽끈이 세 번 끊어졌다는 고사에서 유래한다.",
+      "example": "위편삼절이라는 말처럼 그는 같은 책을 닳도록 반복해서 읽었다.",
+      "tags": [
+        "배움",
+        "독서"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "절차탁마(切磋琢磨)",
+      "back": "옥이나 뼈를 자르고 갈고 쪼고 다듬듯이 학문과 인격을 힘써 갈고닦음을 이르는 말. (한자 풀이: 切 끊을 절, 磋 갈 차, 琢 다듬을 탁, 磨 갈 마)",
+      "hint": "《시경》의 구절로, 옥과 뼈를 다듬는 공정에 수양의 과정을 비유했다.",
+      "example": "오랜 절차탁마 끝에 그의 연주는 완숙한 경지에 이르렀다.",
+      "tags": [
+        "배움",
+        "수양"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "자강불식(自强不息)",
+      "back": "스스로 힘쓰며 쉬지 않는다는 뜻으로, 게으름 없이 꾸준히 노력함을 이르는 말. (한자 풀이: 自 스스로 자, 强 굳셀 강, 不 아닐 불, 息 쉴 식)",
+      "hint": "《주역》의 \"하늘의 운행은 굳세니 군자는 이를 본받아 스스로 힘쓰고 쉬지 않는다\"에서 유래한다.",
+      "example": "자강불식의 자세로 매일 조금씩이라도 실력을 쌓아 나갔다.",
+      "tags": [
+        "배움",
+        "수양"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "수불석권(手不釋卷)",
+      "back": "손에서 책을 놓지 않는다는 뜻으로, 늘 글을 가까이하며 부지런히 공부함을 이르는 말. (한자 풀이: 手 손 수, 不 아닐 불, 釋 풀 석, 卷 책 권)",
+      "hint": "오나라 장수 여몽에게 손권이 책 읽기를 권한 이야기와 함께 전한다.",
+      "example": "그는 지하철에서도 수불석권이라 할 만큼 늘 책을 들고 다닌다.",
+      "tags": [
+        "배움",
+        "독서"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "대기만성(大器晩成)",
+      "back": "큰 그릇은 늦게 이루어진다는 뜻으로, 크게 될 사람은 오랜 공을 쌓아 뒤늦게 이루어짐을 이르는 말. (한자 풀이: 大 큰 대, 器 그릇 기, 晩 늦을 만, 成 이룰 성)",
+      "hint": "《노자》에서 유래한다.",
+      "example": "늦깎이로 데뷔했지만 대기만성이라더니 마흔에 최고의 배우가 되었다.",
+      "tags": [
+        "배움",
+        "인생"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "청출어람(靑出於藍)",
+      "back": "푸른색은 쪽에서 나왔지만 쪽보다 더 푸르다는 뜻으로, 제자가 스승보다 나아짐을 이르는 말. (한자 풀이: 靑 푸를 청, 出 날 출, 於 어조사 어, 藍 쪽 람)",
+      "hint": "《순자》 권학편의 비유에서 유래한다.",
+      "example": "제자가 스승보다 뛰어난 성과를 내자 모두 청출어람이라며 감탄했다.",
+      "tags": [
+        "배움",
+        "사제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "후생가외(後生可畏)",
+      "back": "뒤에 태어난 사람, 곧 후배나 젊은이가 두려워할 만하다는 뜻으로, 젊은 세대의 가능성을 높이 평가하는 말. (한자 풀이: 後 뒤 후, 生 날 생, 可 옳을 가, 畏 두려워할 외)",
+      "hint": "《논어》 자한편에서 유래한다.",
+      "example": "신입 사원의 참신한 기획을 보며 후생가외라는 말이 떠올랐다.",
+      "tags": [
+        "배움",
+        "세대"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "불치하문(不恥下問)",
+      "back": "자기보다 아래인 사람에게 묻는 것을 부끄러워하지 않는다는 뜻. (한자 풀이: 不 아닐 불, 恥 부끄러울 치, 下 아래 하, 問 물을 문)",
+      "hint": "《논어》 공야장편에서 유래한다.",
+      "example": "그 교수는 학생에게도 스스럼없이 물어보는 불치하문의 태도를 지녔다.",
+      "tags": [
+        "배움",
+        "겸손"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "박학다식(博學多識)",
+      "back": "학문이 넓고 아는 것이 많음. (한자 풀이: 博 넓을 박, 學 배울 학, 多 많을 다, 識 알 식)",
+      "example": "그는 역사부터 과학까지 두루 아는 박학다식한 사람이다.",
+      "tags": [
+        "배움",
+        "지식"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "격물치지(格物致知)",
+      "back": "사물의 이치를 끝까지 파고들어 참된 앎에 이른다는 뜻. (한자 풀이: 格 이를 격, 物 물건 물, 致 이를 치, 知 알 지)",
+      "hint": "유교 경전 《대학》의 여덟 조목 가운데 처음 두 조목이다.",
+      "example": "격물치지의 정신으로 사물을 끝까지 파고들어야 참된 앎에 이른다.",
+      "tags": [
+        "배움",
+        "유학"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "문일지십(聞一知十)",
+      "back": "하나를 들으면 열을 미루어 안다는 뜻으로, 매우 총명함을 이르는 말. (한자 풀이: 聞 들을 문, 一 한 일, 知 알 지, 十 열 십)",
+      "hint": "《논어》에서 자공이 안회의 총명함을 평한 말에서 유래한다.",
+      "example": "하나를 가르치면 열을 아는 문일지십의 영재였다.",
+      "tags": [
+        "배움",
+        "재능"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "일취월장(日就月將)",
+      "back": "날마다 나아가고 달마다 발전한다는 뜻으로, 학문이나 실력이 꾸준히 늘어 감을 이르는 말. (한자 풀이: 日 날 일, 就 나아갈 취, 月 달 월, 將 나아갈 장)",
+      "hint": "《시경》에서 유래한다.",
+      "example": "매일 꾸준히 연습하더니 실력이 일취월장했다.",
+      "tags": [
+        "배움",
+        "성장"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "괄목상대(刮目相對)",
+      "back": "눈을 비비고 상대를 다시 본다는 뜻으로, 남의 학식이나 재주가 몰라보게 늘었음을 이르는 말. (한자 풀이: 刮 긁을 괄, 目 눈 목, 相 서로 상, 對 대할 대)",
+      "hint": "오나라 여몽의 학식이 놀랍게 늘자 노숙이 눈을 비비고 다시 보았다는 고사에서 유래한다.",
+      "example": "몇 달 사이 실력이 늘어 괄목상대할 정도가 되었다.",
+      "tags": [
+        "배움",
+        "성장"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "발분망식(發憤忘食)",
+      "back": "무엇에 분발하여 끼니마저 잊는다는 뜻으로, 한 가지 일에 온 정신을 쏟음을 이르는 말. (한자 풀이: 發 필 발, 憤 분할 분, 忘 잊을 망, 食 밥 식)",
+      "hint": "《논어》 술이편에서 공자가 스스로를 평한 말에서 유래한다.",
+      "example": "그는 연구에 발분망식하여 끼니를 거르기 일쑤였다.",
+      "tags": [
+        "배움",
+        "몰입"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "맹모삼천(孟母三遷)",
+      "back": "맹자의 어머니가 자식 교육을 위해 세 번 이사했다는 뜻으로, 교육에는 환경이 중요함을 이르는 말. (한자 풀이: 孟 맏 맹, 母 어머니 모, 三 석 삼, 遷 옮길 천)",
+      "hint": "맹자의 어머니가 묘지, 시장 근처를 거쳐 서당 곁으로 집을 옮겼다는 고사에서 유래한다.",
+      "example": "아이 교육을 위해 이사를 결심한 부모를 보고 맹모삼천이 떠올랐다.",
+      "tags": [
+        "배움",
+        "교육"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "단기지계(斷機之戒)",
+      "back": "짜던 베를 끊어 훈계한다는 뜻으로, 학업을 중도에 그만두면 그동안의 공이 허사가 됨을 경계하는 말. (한자 풀이: 斷 끊을 단, 機 베틀 기, 之 갈 지, 戒 경계할 계)",
+      "hint": "학업을 중단하고 돌아온 맹자에게 어머니가 짜던 베를 끊어 보이며 훈계한 고사에서 유래한다.",
+      "example": "중도에 포기하려는 아들에게 어머니는 단기지계의 고사를 들려주었다.",
+      "tags": [
+        "배움",
+        "경계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "주마가편(走馬加鞭)",
+      "back": "달리는 말에 채찍질한다는 뜻으로, 잘하는 사람을 더욱 북돋아 힘쓰게 함을 이르는 말. (한자 풀이: 走 달릴 주, 馬 말 마, 加 더할 가, 鞭 채찍 편)",
+      "example": "잘하고 있는 선수에게 감독은 주마가편으로 더 높은 목표를 제시했다.",
+      "tags": [
+        "배움",
+        "격려"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "독서삼매(讀書三昧)",
+      "back": "다른 것을 잊고 책 읽기에만 골똘히 빠져 있는 경지. (한자 풀이: 讀 읽을 독, 書 글 서, 三 석 삼, 昧 어두울 매)",
+      "hint": "삼매는 본래 불교에서 마음이 한곳에 모여 흐트러지지 않는 경지를 이르는 말이다.",
+      "example": "휴일이면 그는 독서삼매에 빠져 시간 가는 줄 모른다.",
+      "tags": [
+        "배움",
+        "독서"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "수신제가(修身齊家)",
+      "back": "자기 몸과 마음을 닦고 집안을 가지런히 다스린다는 뜻. (한자 풀이: 修 닦을 수, 身 몸 신, 齊 가지런할 제, 家 집 가)",
+      "hint": "《대학》의 \"수신제가치국평천하\"에서 온 말이다.",
+      "example": "수신제가라는 말처럼 자기 관리가 먼저 되어야 조직도 이끌 수 있다.",
+      "tags": [
+        "배움",
+        "수양"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "극기복례(克己復禮)",
+      "back": "자기의 사사로운 욕심을 이겨 내고 예로 돌아간다는 뜻. (한자 풀이: 克 이길 극, 己 자기 기, 復 회복할 복, 禮 예도 례)",
+      "hint": "《논어》 안연편에서 공자가 인(仁)을 설명한 말에서 유래한다.",
+      "example": "극기복례라, 욕심을 누르고 예의를 지키는 일이 수양의 시작이다.",
+      "tags": [
+        "배움",
+        "수양"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "타산지석(他山之石)",
+      "back": "다른 산의 하찮은 돌이라도 내 옥을 가는 데 쓸 수 있다는 뜻으로, 남의 부족한 점도 내 수양에 도움이 됨을 이르는 말. (한자 풀이: 他 다를 타, 山 뫼 산, 之 갈 지, 石 돌 석)",
+      "hint": "《시경》의 구절에서 유래한다.",
+      "example": "경쟁사의 실패 사례를 타산지석으로 삼아 같은 실수를 피했다.",
+      "tags": [
+        "배움",
+        "교훈"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "반면교사(反面敎師)",
+      "back": "잘못된 사례를 거울삼아 가르침을 얻는다는 뜻으로, 부정적인 본보기에서 배우는 대상을 이르는 말. (한자 풀이: 反 돌이킬 반, 面 낯 면, 敎 가르칠 교, 師 스승 사)",
+      "example": "무리한 확장으로 무너진 기업을 반면교사로 삼았다.",
+      "tags": [
+        "배움",
+        "교훈"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "심기일전(心機一轉)",
+      "back": "어떤 계기로 마음가짐을 완전히 바꾼다는 뜻. (한자 풀이: 心 마음 심, 機 틀 기, 一 한 일, 轉 구를 전)",
+      "example": "시험에 떨어진 뒤 심기일전하여 다시 책상 앞에 앉았다.",
+      "tags": [
+        "배움",
+        "각오"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "등화가친(燈火可親)",
+      "back": "등불을 가까이할 만하다는 뜻으로, 서늘한 가을밤이 글 읽기에 좋음을 이르는 말. (한자 풀이: 燈 등 등, 火 불 화, 可 옳을 가, 親 친할 친)",
+      "hint": "당나라 한유가 아들에게 독서를 권한 시에서 유래하며, 가을을 독서의 계절로 이를 때 쓴다.",
+      "example": "등화가친의 계절인 가을을 맞아 도서관을 찾는 사람이 늘었다.",
+      "tags": [
+        "배움",
+        "독서"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "개권유익(開卷有益)",
+      "back": "책을 펼치기만 해도 이로움이 있다는 뜻으로, 독서를 권장하는 말. (한자 풀이: 開 열 개, 卷 책 권, 有 있을 유, 益 더할 익)",
+      "hint": "송나라 태종이 독서를 즐기며 한 말로 전한다.",
+      "example": "개권유익이라니, 어떤 책이든 펼치면 배울 점이 있다.",
+      "tags": [
+        "배움",
+        "독서"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "법고창신(法古創新)",
+      "back": "옛것을 본받되 새것을 만들어 낸다는 뜻으로, 전통을 바탕으로 한 창조를 이르는 말. (한자 풀이: 法 본받을 법, 古 옛 고, 創 비롯할 창, 新 새 신)",
+      "hint": "조선 후기 실학자 박지원이 글쓰기의 태도로 강조한 말로 알려져 있다.",
+      "example": "전통 국악에 재즈를 접목한 무대는 법고창신의 좋은 본보기였다.",
+      "tags": [
+        "배움",
+        "전통"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "우공이산(愚公移山)",
+      "back": "우공이 산을 옮긴다는 뜻으로, 어떤 일이든 꾸준히 노력하면 마침내 이루어짐을 이르는 말. (한자 풀이: 愚 어리석을 우, 公 공평할 공, 移 옮길 이, 山 뫼 산)",
+      "hint": "《열자》에서 우공 노인이 집 앞을 막은 산을 대대로 파서 옮기려 했다는 고사에서 유래한다.",
+      "example": "우공이산의 마음으로 십 년간 사막에 나무를 심어 숲을 만들었다.",
+      "tags": [
+        "노력",
+        "끈기"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "마부작침(磨斧作針)",
+      "back": "도끼를 갈아 바늘을 만든다는 뜻으로, 아무리 어려운 일도 꾸준히 노력하면 이룰 수 있음을 이르는 말. (한자 풀이: 磨 갈 마, 斧 도끼 부, 作 지을 작, 針 바늘 침)",
+      "hint": "젊은 이백이 도끼를 갈아 바늘을 만들려는 노파를 보고 깨달아 학업으로 돌아갔다는 고사에서 유래한다.",
+      "example": "마부작침이라는 말처럼 포기하지 않으면 도끼도 바늘이 된다.",
+      "tags": [
+        "노력",
+        "끈기"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "수적천석(水滴穿石)",
+      "back": "물방울이 돌을 뚫는다는 뜻으로, 작은 힘도 꾸준히 계속하면 큰일을 이룰 수 있음을 이르는 말. (한자 풀이: 水 물 수, 滴 물방울 적, 穿 뚫을 천, 石 돌 석)",
+      "example": "하루 30분의 연습이 쌓여 수적천석처럼 실력이 되었다.",
+      "tags": [
+        "노력",
+        "끈기"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "십벌지목(十伐之木)",
+      "back": "열 번 찍어 베는 나무라는 뜻으로, 열 번 찍어 안 넘어가는 나무가 없음을 이르는 말. (한자 풀이: 十 열 십, 伐 칠 벌, 之 갈 지, 木 나무 목)",
+      "example": "십벌지목이라고, 거듭 설득하자 완강하던 그도 마음을 돌렸다.",
+      "tags": [
+        "노력",
+        "끈기"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "백절불굴(百折不屈)",
+      "back": "백 번 꺾여도 굽히지 않는다는 뜻으로, 어떤 어려움에도 뜻을 굽히지 않음을 이르는 말. (한자 풀이: 百 일백 백, 折 꺾을 절, 不 아닐 불, 屈 굽힐 굴)",
+      "example": "그는 거듭된 실패에도 백절불굴의 의지로 다시 도전했다.",
+      "tags": [
+        "노력",
+        "의지"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "칠전팔기(七顚八起)",
+      "back": "일곱 번 넘어져도 여덟 번째 일어난다는 뜻으로, 여러 번 실패해도 굴하지 않고 다시 일어섬을 이르는 말. (한자 풀이: 七 일곱 칠, 顚 넘어질 전, 八 여덟 팔, 起 일어날 기)",
+      "example": "칠전팔기 끝에 여덟 번째 도전에서 면허 시험에 합격했다.",
+      "tags": [
+        "노력",
+        "의지"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "와신상담(臥薪嘗膽)",
+      "back": "섶에 눕고 쓸개를 맛본다는 뜻으로, 뜻을 이루려고 온갖 괴로움을 참고 견딤을 이르는 말. (한자 풀이: 臥 누울 와, 薪 섶 신, 嘗 맛볼 상, 膽 쓸개 담)",
+      "hint": "오왕 부차는 섶 위에서 자고 월왕 구천은 쓸개를 맛보며 서로에 대한 복수를 다짐했다는 고사에서 유래한다.",
+      "example": "지난해 결승에서 진 팀은 와신상담하며 일 년을 준비했다.",
+      "tags": [
+        "노력",
+        "인내",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "절치부심(切齒腐心)",
+      "back": "이를 갈고 마음을 썩인다는 뜻으로, 몹시 분하여 이를 악물고 벼름을 이르는 말. (한자 풀이: 切 끊을 절, 齒 이 치, 腐 썩을 부, 心 마음 심)",
+      "example": "패배 후 절치부심한 그는 몰라보게 강해져 돌아왔다.",
+      "tags": [
+        "노력",
+        "각오"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "분골쇄신(粉骨碎身)",
+      "back": "뼈가 가루가 되고 몸이 부서지도록 있는 힘을 다해 애씀을 이르는 말. (한자 풀이: 粉 가루 분, 骨 뼈 골, 碎 부술 쇄, 身 몸 신)",
+      "example": "분골쇄신의 각오로 새 사업에 뛰어들었다.",
+      "tags": [
+        "노력",
+        "헌신"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "견인불발(堅忍不拔)",
+      "back": "굳게 참고 견디어 마음이 흔들리거나 뽑히지 않음을 이르는 말. (한자 풀이: 堅 굳을 견, 忍 참을 인, 不 아닐 불, 拔 뽑을 발)",
+      "example": "견인불발의 자세로 흔들림 없이 목표를 향해 나아갔다.",
+      "tags": [
+        "노력",
+        "인내"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "은인자중(隱忍自重)",
+      "back": "마음속으로 참으며 몸가짐을 신중히 한다는 뜻. (한자 풀이: 隱 숨을 은, 忍 참을 인, 自 스스로 자, 重 무거울 중)",
+      "example": "때가 올 때까지 은인자중하며 실력을 갈고닦았다.",
+      "tags": [
+        "노력",
+        "인내"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "불철주야(不撤晝夜)",
+      "back": "밤낮을 가리지 않는다는 뜻으로, 조금도 쉬지 않고 일에 힘씀을 이르는 말. (한자 풀이: 不 아닐 불, 撤 거둘 철, 晝 낮 주, 夜 밤 야)",
+      "example": "연구팀은 불철주야로 백신 개발에 매달렸다.",
+      "tags": [
+        "노력",
+        "근면"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "각고면려(刻苦勉勵)",
+      "back": "고생을 견디며 몸과 마음을 다해 부지런히 힘씀을 이르는 말. (한자 풀이: 刻 새길 각, 苦 쓸 고, 勉 힘쓸 면, 勵 힘쓸 려)",
+      "example": "각고면려 끝에 논문이 세계적 학술지에 실렸다.",
+      "tags": [
+        "노력",
+        "근면"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "유지경성(有志竟成)",
+      "back": "뜻이 있으면 마침내 이루어진다는 뜻으로, 굳은 뜻을 지니면 일은 성사됨을 이르는 말. (한자 풀이: 有 있을 유, 志 뜻 지, 竟 마침내 경, 成 이룰 성)",
+      "hint": "《후한서》에서 광무제가 뜻을 관철한 장수 경엄을 칭찬한 말에서 유래한다.",
+      "example": "유지경성이라는 말을 믿고 끝까지 매달린 끝에 창업의 꿈을 이뤘다.",
+      "tags": [
+        "노력",
+        "의지"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "초지일관(初志一貫)",
+      "back": "처음에 세운 뜻을 끝까지 밀고 나감. (한자 풀이: 初 처음 초, 志 뜻 지, 一 한 일, 貫 꿸 관)",
+      "example": "그는 초지일관 환경 운동가의 길을 걸어왔다.",
+      "tags": [
+        "노력",
+        "의지"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "시종일관(始終一貫)",
+      "back": "처음부터 끝까지 한결같이 함. (한자 풀이: 始 비로소 시, 終 마칠 종, 一 한 일, 貫 꿸 관)",
+      "example": "그녀는 회의 내내 시종일관 침착한 태도를 유지했다.",
+      "tags": [
+        "노력",
+        "일관성"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "적토성산(積土成山)",
+      "back": "흙을 쌓아 산을 이룬다는 뜻으로, 작은 것도 쌓이면 크게 됨을 이르는 말. (한자 풀이: 積 쌓을 적, 土 흙 토, 成 이룰 성, 山 뫼 산)",
+      "hint": "《순자》 권학편에서 유래한다.",
+      "example": "매일 한 문장씩 쓴 글이 적토성산으로 한 권의 책이 되었다.",
+      "tags": [
+        "노력",
+        "축적"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "적소성대(積小成大)",
+      "back": "작은 것을 쌓아 큰 것을 이룸. (한자 풀이: 積 쌓을 적, 小 작을 소, 成 이룰 성, 大 큰 대)",
+      "example": "적소성대라, 소액 적금이 모여 목돈이 되었다.",
+      "tags": [
+        "노력",
+        "축적"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "고진감래(苦盡甘來)",
+      "back": "쓴 것이 다하면 단 것이 온다는 뜻으로, 고생 끝에 즐거움이 옴을 이르는 말. (한자 풀이: 苦 쓸 고, 盡 다할 진, 甘 달 감, 來 올 래)",
+      "example": "고진감래라더니 오랜 무명 생활 끝에 드디어 빛을 봤다.",
+      "tags": [
+        "노력",
+        "보람"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "일로매진(一路邁進)",
+      "back": "한길로 곧장 힘차게 나아감. (한자 풀이: 一 한 일, 路 길 로, 邁 갈 매, 進 나아갈 진)",
+      "example": "데뷔 후 20년간 연기 한길로 일로매진해 왔다.",
+      "tags": [
+        "노력",
+        "전념"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "견마지로(犬馬之勞)",
+      "back": "개나 말 정도의 하찮은 수고라는 뜻으로, 윗사람이나 나라를 위해 바치는 자기 노력을 겸손하게 이르는 말. (한자 풀이: 犬 개 견, 馬 말 마, 之 갈 지, 勞 수고로울 로)",
+      "example": "나라를 위해 견마지로를 다하겠다고 다짐했다.",
+      "tags": [
+        "노력",
+        "겸손"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "전심전력(全心全力)",
+      "back": "온 마음과 온 힘을 다 기울임. (한자 풀이: 全 온전할 전, 心 마음 심, 全 온전할 전, 力 힘 력)",
+      "example": "결승전에서 선수들은 전심전력을 다해 뛰었다.",
+      "tags": [
+        "노력",
+        "전념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "배수지진(背水之陣)",
+      "back": "물을 등지고 치는 진이라는 뜻으로, 물러설 곳 없이 목숨을 걸고 어떤 일에 임함을 이르는 말. (한자 풀이: 背 등 배, 水 물 수, 之 갈 지, 陣 진칠 진)",
+      "hint": "한나라 한신이 강을 등지고 진을 쳐 병사들이 죽기로 싸우게 했다는 고사에서 유래한다.",
+      "example": "배수지진의 각오로 전 재산을 들여 가게를 열었다.",
+      "tags": [
+        "노력",
+        "각오",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "파부침주(破釜沈舟)",
+      "back": "솥을 깨뜨리고 배를 가라앉힌다는 뜻으로, 살아 돌아갈 기약 없이 결사적으로 싸움에 임함을 이르는 말. (한자 풀이: 破 깨뜨릴 파, 釜 가마 부, 沈 잠길 침, 舟 배 주)",
+      "hint": "항우가 진나라와 싸울 때 솥을 깨고 배를 가라앉혀 결전 의지를 보인 고사에서 유래한다.",
+      "example": "파부침주의 결의로 퇴로를 끊고 신제품 개발에 모든 것을 걸었다.",
+      "tags": [
+        "노력",
+        "각오",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "권토중래(捲土重來)",
+      "back": "흙먼지를 말아 일으키며 다시 온다는 뜻으로, 한 번 실패한 사람이 힘을 회복해 다시 도전함을 이르는 말. (한자 풀이: 捲 말 권, 土 흙 토, 重 거듭 중, 來 올 래)",
+      "hint": "당나라 시인 두목이 항우를 애도하며 지은 시구에서 유래한다.",
+      "example": "낙선한 그는 권토중래를 기약하며 지역구를 다시 다졌다.",
+      "tags": [
+        "노력",
+        "재기"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "불요불굴(不撓不屈)",
+      "back": "휘지도 않고 굽히지도 않는다는 뜻으로, 어떤 난관에도 뜻을 꺾지 않음을 이르는 말. (한자 풀이: 不 아닐 불, 撓 휠 요, 不 아닐 불, 屈 굽힐 굴)",
+      "example": "불요불굴의 정신으로 어떤 압박에도 소신을 굽히지 않았다.",
+      "tags": [
+        "노력",
+        "의지"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "자수성가(自手成家)",
+      "back": "물려받은 재산 없이 자기 손으로 재산을 모으고 집안을 일으킴. (한자 풀이: 自 스스로 자, 手 손 수, 成 이룰 성, 家 집 가)",
+      "example": "맨손으로 시작해 자수성가한 기업인의 이야기가 감동을 준다.",
+      "tags": [
+        "노력",
+        "성취"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "주야장천(晝夜長川)",
+      "back": "밤낮으로 쉬지 않고 흐르는 시냇물처럼, 쉬지 않고 잇따라 계속됨을 이르는 말. (한자 풀이: 晝 낮 주, 夜 밤 야, 長 길 장, 川 내 천)",
+      "example": "그 공장 기계는 주야장천 쉬지 않고 돌아간다.",
+      "tags": [
+        "노력",
+        "지속"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "등고자비(登高自卑)",
+      "back": "높은 곳에 오르려면 낮은 곳에서부터 시작해야 한다는 뜻으로, 일은 순서를 밟아야 하며 지위가 높을수록 겸손해야 함을 이르는 말. (한자 풀이: 登 오를 등, 高 높을 고, 自 부터 자, 卑 낮을 비)",
+      "hint": "《중용》에서 유래한다.",
+      "example": "등고자비라, 큰 꿈일수록 기본기부터 다져야 한다.",
+      "tags": [
+        "노력",
+        "기본"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "공휴일궤(功虧一簣)",
+      "back": "산을 쌓는 공이 삼태기 하나 때문에 무너진다는 뜻으로, 거의 다 된 일이 마지막 한 번의 소홀로 실패함을 이르는 말. (한자 풀이: 功 공 공, 虧 이지러질 휴, 一 한 일, 簣 삼태기 궤)",
+      "hint": "《서경》의 \"아홉 길 산을 쌓는데 공이 삼태기 하나로 이지러진다\"에서 유래한다.",
+      "example": "공휴일궤가 되지 않도록 마지막 마무리까지 긴장을 늦추지 말자.",
+      "tags": [
+        "노력",
+        "마무리"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "관포지교(管鮑之交)",
+      "back": "관중과 포숙아의 사귐이라는 뜻으로, 서로를 깊이 이해하고 믿는 변치 않는 우정을 이르는 말. (한자 풀이: 管 대롱 관, 鮑 절인 물고기 포, 之 갈 지, 交 사귈 교)",
+      "hint": "제나라 관중과 포숙아가 어떤 처지에서도 서로를 알아주고 감싼 고사에서 유래한다.",
+      "example": "두 사람은 서로의 허물까지 감싸 주는 관포지교를 이어 왔다.",
+      "tags": [
+        "관계",
+        "우정",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "죽마고우(竹馬故友)",
+      "back": "대나무 말을 타고 놀던 옛 친구라는 뜻으로, 어릴 때부터 함께 자란 벗을 이르는 말. (한자 풀이: 竹 대 죽, 馬 말 마, 故 옛 고, 友 벗 우)",
+      "example": "고향에서 함께 자란 죽마고우를 30년 만에 다시 만났다.",
+      "tags": [
+        "관계",
+        "우정"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "막역지우(莫逆之友)",
+      "back": "서로 거스름이 없는 벗이라는 뜻으로, 허물없이 아주 친한 친구를 이르는 말. (한자 풀이: 莫 없을 막, 逆 거스를 역, 之 갈 지, 友 벗 우)",
+      "hint": "《장자》에서 마음이 통해 거슬릴 것이 없는 벗을 이른 데서 유래한다.",
+      "example": "그와 나는 무슨 말이든 터놓는 막역지우 사이다.",
+      "tags": [
+        "관계",
+        "우정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "문경지교(刎頸之交)",
+      "back": "목이 베여도 후회하지 않을 사귐이라는 뜻으로, 생사를 같이할 만큼 두터운 우정을 이르는 말. (한자 풀이: 刎 목 벨 문, 頸 목 경, 之 갈 지, 交 사귈 교)",
+      "hint": "조나라 인상여와 염파가 죽음을 함께하기로 맹세한 고사에서 유래한다.",
+      "example": "두 창업 동지는 문경지교라 할 만큼 서로를 믿었다.",
+      "tags": [
+        "관계",
+        "우정",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "수어지교(水魚之交)",
+      "back": "물과 물고기의 사귐이라는 뜻으로, 떨어질 수 없는 아주 친밀한 사이를 이르는 말. (한자 풀이: 水 물 수, 魚 물고기 어, 之 갈 지, 交 사귈 교)",
+      "hint": "유비가 제갈량과 자신의 관계를 물 만난 물고기에 비유한 데서 유래한다.",
+      "example": "감독과 주장은 물과 물고기 같은 수어지교로 팀을 이끌었다.",
+      "tags": [
+        "관계",
+        "우정",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "금란지교(金蘭之交)",
+      "back": "쇠처럼 단단하고 난초처럼 향기로운 사귐이라는 뜻으로, 매우 두터운 우정을 이르는 말. (한자 풀이: 金 쇠 금, 蘭 난초 란, 之 갈 지, 交 사귈 교)",
+      "hint": "《주역》의 \"두 사람이 마음을 같이하면 그 날카로움이 쇠를 끊고 그 말은 난초처럼 향기롭다\"에서 유래한다.",
+      "example": "어려울 때마다 힘이 되어 준 벗과의 금란지교가 자랑스럽다.",
+      "tags": [
+        "관계",
+        "우정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "백아절현(伯牙絶絃)",
+      "back": "백아가 거문고 줄을 끊었다는 뜻으로, 자기를 알아주는 참된 벗의 죽음을 슬퍼함을 이르는 말. (한자 풀이: 伯 맏 백, 牙 어금니 아, 絶 끊을 절, 絃 줄 현)",
+      "hint": "거문고 명인 백아가 자기 소리를 알아주던 종자기가 죽자 줄을 끊고 다시 연주하지 않은 고사에서 유래한다.",
+      "example": "평생의 음악 동료를 떠나보낸 그의 슬픔은 백아절현에 비할 만했다.",
+      "tags": [
+        "관계",
+        "우정",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "간담상조(肝膽相照)",
+      "back": "간과 쓸개를 서로 내보인다는 뜻으로, 속마음을 터놓고 친밀하게 사귐을 이르는 말. (한자 풀이: 肝 간 간, 膽 쓸개 담, 相 서로 상, 照 비칠 조)",
+      "example": "간담상조하는 친구가 한 명만 있어도 인생은 든든하다.",
+      "tags": [
+        "관계",
+        "우정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "순망치한(脣亡齒寒)",
+      "back": "입술이 없으면 이가 시리다는 뜻으로, 서로 의지하는 사이에서 한쪽이 망하면 다른 쪽도 위태로움을 이르는 말. (한자 풀이: 脣 입술 순, 亡 잃을 망, 齒 이 치, 寒 찰 한)",
+      "hint": "진(晉)나라에 길을 빌려주면 우나라도 위태로워진다며 괵나라와의 관계를 입술과 이에 비유한 간언에서 유래한다.",
+      "example": "두 회사는 순망치한의 관계라 한쪽이 흔들리면 다른 쪽도 위태롭다.",
+      "tags": [
+        "관계",
+        "상호의존"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "동병상련(同病相憐)",
+      "back": "같은 병을 앓는 사람끼리 서로 가엾게 여긴다는 뜻으로, 어려운 처지의 사람끼리 서로 동정하고 도움을 이르는 말. (한자 풀이: 同 한가지 동, 病 병 병, 相 서로 상, 憐 불쌍히 여길 련)",
+      "example": "같은 수험 생활을 겪는 처지라 동병상련의 마음으로 서로를 격려했다.",
+      "tags": [
+        "관계",
+        "공감"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "유유상종(類類相從)",
+      "back": "같은 무리끼리 서로 따르고 어울린다는 뜻. (한자 풀이: 類 무리 류, 類 무리 류, 相 서로 상, 從 좇을 종)",
+      "example": "유유상종이라고 책을 좋아하는 사람 곁엔 책 친구들이 모인다.",
+      "tags": [
+        "관계",
+        "어울림"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "초록동색(草綠同色)",
+      "back": "풀빛과 녹색은 같은 색이라는 뜻으로, 처지가 같은 사람끼리 어울리게 마련임을 이르는 말. (한자 풀이: 草 풀 초, 綠 푸를 록, 同 한가지 동, 色 빛 색)",
+      "example": "초록동색이라더니 결국 같은 처지끼리 뭉치더라.",
+      "tags": [
+        "관계",
+        "어울림"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "이심전심(以心傳心)",
+      "back": "마음에서 마음으로 뜻이 전해진다는 뜻으로, 말하지 않아도 서로 마음이 통함을 이르는 말. (한자 풀이: 以 써 이, 心 마음 심, 傳 전할 전, 心 마음 심)",
+      "hint": "본래 불교에서 말이나 글에 의하지 않고 마음으로 가르침을 전한다는 말이다.",
+      "example": "오래 함께한 부부는 말하지 않아도 이심전심으로 통한다.",
+      "tags": [
+        "관계",
+        "소통"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "염화미소(拈華微笑)",
+      "back": "꽃을 집어 들자 미소 지었다는 뜻으로, 말을 하지 않고도 마음이 서로 통함을 이르는 말. (한자 풀이: 拈 집을 념, 華 빛날 화, 微 작을 미, 笑 웃음 소)",
+      "hint": "석가가 연꽃을 들어 보이자 제자 가섭만이 그 뜻을 깨닫고 미소 지었다는 불교 고사에서 유래한다.",
+      "example": "스승의 눈짓 하나에 제자가 고개를 끄덕이는 모습이 염화미소 같았다.",
+      "tags": [
+        "관계",
+        "소통",
+        "불교"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "부창부수(夫唱婦隨)",
+      "back": "남편이 이끌고 아내가 따른다는 뜻으로, 부부가 서로 손발이 잘 맞음을 이르는 말. (한자 풀이: 夫 지아비 부, 唱 부를 창, 婦 아내 부, 隨 따를 수)",
+      "example": "가게를 함께 꾸리는 두 사람은 부창부수로 손발이 척척 맞는다.",
+      "tags": [
+        "관계",
+        "부부"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "백년해로(百年偕老)",
+      "back": "부부가 되어 한평생을 사이좋게 지내며 함께 늙음. (한자 풀이: 百 일백 백, 年 해 년, 偕 함께 해, 老 늙을 로)",
+      "example": "두 사람은 백년해로를 약속하며 혼인 서약을 나눴다.",
+      "tags": [
+        "관계",
+        "부부"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "조강지처(糟糠之妻)",
+      "back": "지게미와 쌀겨를 함께 먹던 아내라는 뜻으로, 가난하고 어려울 때부터 고생을 함께한 아내를 이르는 말. (한자 풀이: 糟 지게미 조, 糠 겨 강, 之 갈 지, 妻 아내 처)",
+      "hint": "《후한서》에서 송홍이 \"가난할 때 함께한 아내는 집에서 내치지 않는다\"고 한 말에서 유래한다.",
+      "example": "그는 성공한 뒤에도 조강지처와의 의리를 지켰다.",
+      "tags": [
+        "관계",
+        "부부",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "반포지효(反哺之孝)",
+      "back": "까마귀 새끼가 자라서 늙은 어미에게 먹이를 물어다 주는 효라는 뜻으로, 자식이 자라 부모를 봉양함을 이르는 말. (한자 풀이: 反 돌이킬 반, 哺 먹일 포, 之 갈 지, 孝 효도 효)",
+      "hint": "까마귀가 자란 뒤 어미에게 먹이를 되물어다 준다는 이야기에서 유래한다.",
+      "example": "월급을 받아 부모님 생활비를 챙기는 그의 모습은 반포지효 그 자체였다.",
+      "tags": [
+        "관계",
+        "효도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "풍수지탄(風樹之嘆)",
+      "back": "바람에 흔들리는 나무의 탄식이라는 뜻으로, 부모가 돌아가셔서 효도할 기회를 잃은 슬픔을 이르는 말. (한자 풀이: 風 바람 풍, 樹 나무 수, 之 갈 지, 嘆 탄식할 탄)",
+      "hint": "\"나무는 고요하고자 하나 바람이 그치지 않고, 자식이 봉양하려 하나 어버이는 기다려 주지 않는다\"는 옛말에서 유래한다.",
+      "example": "부모님이 돌아가신 뒤에야 효도를 미룬 것을 풍수지탄으로 후회했다.",
+      "tags": [
+        "관계",
+        "효도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "혼정신성(昏定晨省)",
+      "back": "저녁에는 잠자리를 보아 드리고 새벽에는 안부를 살핀다는 뜻으로, 부모를 정성껏 섬기는 효행을 이르는 말. (한자 풀이: 昏 어두울 혼, 定 정할 정, 晨 새벽 신, 省 살필 성)",
+      "hint": "《예기》에 전하는 자식의 예절에서 유래한다.",
+      "example": "아침저녁으로 부모님께 안부 전화를 드리는 것이 요즘식 혼정신성이다.",
+      "tags": [
+        "관계",
+        "효도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "결초보은(結草報恩)",
+      "back": "풀을 묶어 은혜를 갚는다는 뜻으로, 죽어서까지도 은혜를 잊지 않고 갚음을 이르는 말. (한자 풀이: 結 맺을 결, 草 풀 초, 報 갚을 보, 恩 은혜 은)",
+      "hint": "위과가 아버지의 첩을 살려 주자 그녀 아버지의 혼령이 풀을 묶어 적장을 넘어뜨려 은혜를 갚았다는 고사에서 유래한다.",
+      "example": "어려울 때 도와주신 은혜는 결초보은의 마음으로 갚겠습니다.",
+      "tags": [
+        "관계",
+        "은혜",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "각골난망(刻骨難忘)",
+      "back": "은혜가 뼈에 새겨져 잊기 어렵다는 뜻으로, 입은 은혜에 대한 고마움이 마음속 깊이 사무침을 이르는 말. (한자 풀이: 刻 새길 각, 骨 뼈 골, 難 어려울 난, 忘 잊을 망)",
+      "example": "선생님의 가르침은 각골난망이라 평생 잊지 못할 것이다.",
+      "tags": [
+        "관계",
+        "은혜"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "백골난망(白骨難忘)",
+      "back": "죽어 백골이 되어도 잊을 수 없다는 뜻으로, 큰 은혜에 대한 고마움을 이르는 말. (한자 풀이: 白 흰 백, 骨 뼈 골, 難 어려울 난, 忘 잊을 망)",
+      "example": "위기에서 구해 주신 은혜는 백골난망입니다.",
+      "tags": [
+        "관계",
+        "은혜"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "십시일반(十匙一飯)",
+      "back": "열 사람이 한 술씩 보태면 한 사람 먹을 밥이 된다는 뜻으로, 여럿이 조금씩 힘을 합하면 한 사람을 돕기 쉬움을 이르는 말. (한자 풀이: 十 열 십, 匙 숟가락 시, 一 한 일, 飯 밥 반)",
+      "example": "동료들이 십시일반으로 돈을 모아 수술비를 보탰다.",
+      "tags": [
+        "관계",
+        "협동"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "상부상조(相扶相助)",
+      "back": "서로서로 도움. (한자 풀이: 相 서로 상, 扶 도울 부, 相 서로 상, 助 도울 조)",
+      "example": "이웃끼리 상부상조하는 전통이 아직 이 마을에 남아 있다.",
+      "tags": [
+        "관계",
+        "협동"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "동고동락(同苦同樂)",
+      "back": "괴로움도 즐거움도 함께한다는 뜻. (한자 풀이: 同 한가지 동, 苦 쓸 고, 同 한가지 동, 樂 즐길 락)",
+      "example": "10년을 동고동락한 팀원들과 헤어지려니 눈물이 났다.",
+      "tags": [
+        "관계",
+        "동료"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "오월동주(吳越同舟)",
+      "back": "원수 사이인 오나라와 월나라 사람이 한배에 탔다는 뜻으로, 사이가 나쁜 사람들도 공통의 어려움 앞에서는 서로 협력함을 이르는 말. (한자 풀이: 吳 나라 이름 오, 越 나라 이름 월, 同 한가지 동, 舟 배 주)",
+      "hint": "《손자병법》에서 원수라도 같은 배에서 풍랑을 만나면 서로 돕는다고 한 데서 유래한다.",
+      "example": "경쟁사였던 두 회사가 위기 앞에서 오월동주로 손을 잡았다.",
+      "tags": [
+        "관계",
+        "협력",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "견원지간(犬猿之間)",
+      "back": "개와 원숭이 사이라는 뜻으로, 사이가 매우 나쁜 두 사람의 관계를 이르는 말. (한자 풀이: 犬 개 견, 猿 원숭이 원, 之 갈 지, 間 사이 간)",
+      "example": "견원지간이던 두 사람이 프로젝트를 계기로 화해했다.",
+      "tags": [
+        "관계",
+        "불화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "빙탄지간(氷炭之間)",
+      "back": "얼음과 숯 사이라는 뜻으로, 서로 성질이 반대여서 도저히 어울릴 수 없는 사이를 이르는 말. (한자 풀이: 氷 얼음 빙, 炭 숯 탄, 之 갈 지, 間 사이 간)",
+      "example": "두 파벌은 빙탄지간이라 한자리에 앉는 것조차 어려웠다.",
+      "tags": [
+        "관계",
+        "불화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "지란지교(芝蘭之交)",
+      "back": "지초와 난초 같은 사귐이라는 뜻으로, 벗끼리 서로 좋은 영향을 주고받는 향기로운 우정을 이르는 말. (한자 풀이: 芝 지초 지, 蘭 난초 란, 之 갈 지, 交 사귈 교)",
+      "hint": "좋은 사람과 사귀면 지초와 난초가 있는 방에 든 것처럼 향에 물든다는 옛글에서 유래한다.",
+      "example": "서로의 성장을 돕는 지란지교 같은 우정을 나누고 싶다.",
+      "tags": [
+        "관계",
+        "우정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "지피지기(知彼知己)",
+      "back": "상대를 알고 나를 알아야 한다는 뜻으로, 상대와 나의 형편을 자세히 알아야 일을 그르치지 않음을 이르는 말. (한자 풀이: 知 알 지, 彼 저 피, 知 알 지, 己 자기 기)",
+      "hint": "《손자병법》의 \"지피지기면 백 번 싸워도 위태롭지 않다\"에서 유래한다.",
+      "example": "지피지기라고, 협상 전에 상대 회사 사정부터 파악했다.",
+      "tags": [
+        "처세",
+        "전략"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "유비무환(有備無患)",
+      "back": "미리 준비가 되어 있으면 근심할 것이 없다는 뜻. (한자 풀이: 有 있을 유, 備 갖출 비, 無 없을 무, 患 근심 환)",
+      "hint": "《서경》에서 유래한다.",
+      "example": "유비무환의 자세로 미리 비상금을 마련해 두었다.",
+      "tags": [
+        "처세",
+        "대비"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "거안사위(居安思危)",
+      "back": "편안할 때에도 위태로울 때를 생각한다는 뜻으로, 평안할 때 미리 어려움에 대비함을 이르는 말. (한자 풀이: 居 살 거, 安 편안 안, 思 생각 사, 危 위태할 위)",
+      "example": "실적이 좋은 지금이야말로 거안사위해야 할 때다.",
+      "tags": [
+        "처세",
+        "대비"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "명철보신(明哲保身)",
+      "back": "밝고 슬기롭게 처신하여 자기 몸을 보전한다는 뜻으로, 이치에 밝아 위험에 휘말리지 않게 처신함을 이르는 말. (한자 풀이: 明 밝을 명, 哲 밝을 철, 保 지킬 보, 身 몸 신)",
+      "example": "그는 명철보신에 능해 정권이 바뀌어도 자리를 지켰다.",
+      "tags": [
+        "처세",
+        "처신"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "안분지족(安分知足)",
+      "back": "자기 분수에 편안해하며 만족할 줄 앎. (한자 풀이: 安 편안 안, 分 나눌 분, 知 알 지, 足 족할 족)",
+      "example": "그는 안분지족하며 소박한 시골 생활에 만족한다.",
+      "tags": [
+        "처세",
+        "만족"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "안빈낙도(安貧樂道)",
+      "back": "가난한 생활 속에서도 편안한 마음으로 도를 즐긴다는 뜻. (한자 풀이: 安 편안 안, 貧 가난할 빈, 樂 즐길 락, 道 길 도)",
+      "example": "월급은 적어도 좋아하는 연구를 하며 안빈낙도의 삶을 산다.",
+      "tags": [
+        "처세",
+        "만족"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "과유불급(過猶不及)",
+      "back": "지나침은 미치지 못함과 같다는 뜻으로, 무엇이든 정도를 지나치면 좋지 않음을 이르는 말. (한자 풀이: 過 지날 과, 猶 같을 유, 不 아닐 불, 及 미칠 급)",
+      "hint": "《논어》 선진편에서 공자가 제자들을 평한 말에서 유래한다.",
+      "example": "운동도 과유불급이라 무리하면 오히려 몸을 해친다.",
+      "tags": [
+        "처세",
+        "중용",
+        "논어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "역지사지(易地思之)",
+      "back": "처지를 바꾸어 생각해 본다는 뜻. (한자 풀이: 易 바꿀 역, 地 땅 지, 思 생각 사, 之 갈 지)",
+      "example": "역지사지로 고객 입장에서 생각하니 문제가 보였다.",
+      "tags": [
+        "처세",
+        "공감"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "살신성인(殺身成仁)",
+      "back": "자기 몸을 희생하여 인(仁)을 이룬다는 뜻으로, 옳은 일을 위해 자신을 바침을 이르는 말. (한자 풀이: 殺 죽일 살, 身 몸 신, 成 이룰 성, 仁 어질 인)",
+      "hint": "《논어》 위령공편에서 유래한다.",
+      "example": "불길 속에서 아이를 구한 소방관의 살신성인이 큰 울림을 줬다.",
+      "tags": [
+        "처세",
+        "희생",
+        "논어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "읍참마속(泣斬馬謖)",
+      "back": "울면서 마속을 벤다는 뜻으로, 큰 목적을 위해 아끼는 사람도 원칙대로 처단함을 이르는 말. (한자 풀이: 泣 울 읍, 斬 벨 참, 馬 말 마, 謖 일어날 속)",
+      "hint": "제갈량이 군령을 어겨 싸움에서 진 아끼는 부하 마속을 눈물을 흘리며 처형한 고사에서 유래한다.",
+      "example": "감독은 읍참마속의 심정으로 에이스를 징계했다.",
+      "tags": [
+        "처세",
+        "원칙",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "토사구팽(兎死狗烹)",
+      "back": "토끼가 죽으면 사냥개를 삶는다는 뜻으로, 쓸모가 없어지면 야박하게 버려짐을 이르는 말. (한자 풀이: 兎 토끼 토, 死 죽을 사, 狗 개 구, 烹 삶을 팽)",
+      "hint": "한나라 개국 공신 한신이 자신의 처지를 한탄하며 인용한 말로 유명하다.",
+      "example": "공을 세운 뒤 밀려난 그는 토사구팽당했다며 씁쓸해했다.",
+      "tags": [
+        "처세",
+        "세태",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "새옹지마(塞翁之馬)",
+      "back": "변방 노인의 말이라는 뜻으로, 인생의 화와 복은 미리 헤아릴 수 없음을 이르는 말. (한자 풀이: 塞 변방 새, 翁 늙은이 옹, 之 갈 지, 馬 말 마)",
+      "hint": "변방 노인의 말이 달아나고 돌아오는 사이 화와 복이 갈마들었다는 《회남자》의 고사에서 유래한다.",
+      "example": "인생은 새옹지마라더니 해고가 오히려 창업의 기회가 되었다.",
+      "tags": [
+        "처세",
+        "운명",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "전화위복(轉禍爲福)",
+      "back": "재앙이 바뀌어 오히려 복이 된다는 뜻. (한자 풀이: 轉 구를 전, 禍 재앙 화, 爲 될 위, 福 복 복)",
+      "example": "부상으로 쉬는 동안 새 기술을 익혀 전화위복이 되었다.",
+      "tags": [
+        "처세",
+        "운명"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "삼고초려(三顧草廬)",
+      "back": "초가집을 세 번 찾아간다는 뜻으로, 인재를 맞아들이기 위해 정성을 다함을 이르는 말. (한자 풀이: 三 석 삼, 顧 돌아볼 고, 草 풀 초, 廬 농막집 려)",
+      "hint": "유비가 제갈량을 얻으려고 그의 초가집을 세 번 찾아간 고사에서 유래한다.",
+      "example": "구단은 삼고초려 끝에 명장을 감독으로 모셔 왔다.",
+      "tags": [
+        "처세",
+        "인재",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "고육지책(苦肉之策)",
+      "back": "제 몸을 상하게 하면서까지 꾸며 내는 계책이라는 뜻으로, 어려운 상황을 벗어나려고 어쩔 수 없이 쓰는 계책을 이르는 말. (한자 풀이: 苦 쓸 고, 肉 고기 육, 之 갈 지, 策 꾀 책)",
+      "hint": "적벽대전에서 황개가 제 몸을 상하게 하며 거짓 항복 계책을 쓴 이야기와 함께 전한다.",
+      "example": "적자를 줄이려 주력 매장을 파는 고육지책을 썼다.",
+      "tags": [
+        "처세",
+        "계책"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "궁여지책(窮餘之策)",
+      "back": "궁한 나머지 짜낸 계책이라는 뜻으로, 막다른 처지에서 어쩔 수 없이 내놓는 방책을 이르는 말. (한자 풀이: 窮 다할 궁, 餘 남을 여, 之 갈 지, 策 꾀 책)",
+      "example": "표가 매진되자 궁여지책으로 새벽 버스를 예매했다.",
+      "tags": [
+        "처세",
+        "계책"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "임기응변(臨機應變)",
+      "back": "그때그때 처한 형편에 따라 알맞게 일을 처리함. (한자 풀이: 臨 임할 림, 機 틀 기, 應 응할 응, 變 변할 변)",
+      "example": "발표 자료가 열리지 않자 그는 임기응변으로 칠판에 그려 가며 설명했다.",
+      "tags": [
+        "처세",
+        "융통성"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "이열치열(以熱治熱)",
+      "back": "열은 열로써 다스린다는 뜻으로, 힘든 상황을 같은 성질의 것으로 이겨 냄을 이르는 말. (한자 풀이: 以 써 이, 熱 더울 열, 治 다스릴 치, 熱 더울 열)",
+      "example": "복날에 뜨거운 삼계탕을 먹는 것은 이열치열의 지혜다.",
+      "tags": [
+        "처세",
+        "지혜"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "일석이조(一石二鳥)",
+      "back": "돌 하나로 새 두 마리를 잡는다는 뜻으로, 한 가지 일로 두 가지 이익을 얻음을 이르는 말. (한자 풀이: 一 한 일, 石 돌 석, 二 두 이, 鳥 새 조)",
+      "example": "자전거 출근은 운동도 되고 교통비도 아끼니 일석이조다.",
+      "tags": [
+        "처세",
+        "이득"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "일거양득(一擧兩得)",
+      "back": "한 가지 일을 하여 두 가지 이익을 얻음. (한자 풀이: 一 한 일, 擧 들 거, 兩 두 량, 得 얻을 득)",
+      "example": "폐열을 난방에 쓰니 에너지 절약과 비용 절감의 일거양득이다.",
+      "tags": [
+        "처세",
+        "이득"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "어부지리(漁夫之利)",
+      "back": "어부의 이익이라는 뜻으로, 둘이 다투는 사이에 엉뚱한 제삼자가 이익을 가로챔을 이르는 말. (한자 풀이: 漁 고기 잡을 어, 夫 지아비 부, 之 갈 지, 利 이로울 리)",
+      "hint": "도요새와 조개가 물고 물리며 다투는 사이 어부가 둘 다 잡았다는 《전국책》의 고사에서 유래한다.",
+      "example": "두 후보가 다투는 사이 제3 후보가 어부지리로 당선됐다.",
+      "tags": [
+        "처세",
+        "이득",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "견리사의(見利思義)",
+      "back": "이익을 보면 먼저 그것이 의로운지를 생각한다는 뜻. (한자 풀이: 見 볼 견, 利 이로울 리, 思 생각 사, 義 옳을 의)",
+      "hint": "《논어》 헌문편에서 유래한다.",
+      "example": "견리사의라, 이익 앞에서 먼저 옳은지부터 따져야 한다.",
+      "tags": [
+        "처세",
+        "의리",
+        "논어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "명경지수(明鏡止水)",
+      "back": "맑은 거울과 고요한 물이라는 뜻으로, 잡념 없이 맑고 고요한 마음을 이르는 말. (한자 풀이: 明 밝을 명, 鏡 거울 경, 止 그칠 지, 水 물 수)",
+      "hint": "《장자》에서 유래한다.",
+      "example": "큰 경기를 앞두고도 그는 명경지수의 마음을 유지했다.",
+      "tags": [
+        "처세",
+        "평정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "대의명분(大義名分)",
+      "back": "사람으로서 마땅히 지켜야 할 큰 도리와 일을 꾀할 때 내세우는 정당한 명목. (한자 풀이: 大 큰 대, 義 옳을 의, 名 이름 명, 分 나눌 분)",
+      "example": "대의명분이 없는 싸움엔 시민들이 등을 돌린다.",
+      "tags": [
+        "처세",
+        "명분"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "선견지명(先見之明)",
+      "back": "앞을 내다보는 밝은 눈이라는 뜻으로, 닥쳐올 일을 미리 아는 지혜를 이르는 말. (한자 풀이: 先 먼저 선, 見 볼 견, 之 갈 지, 明 밝을 명)",
+      "example": "10년 전 전기차에 투자한 것은 선견지명이었다.",
+      "tags": [
+        "처세",
+        "예견"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "심사숙고(深思熟考)",
+      "back": "깊이 생각하고 곰곰이 따져 봄. (한자 풀이: 深 깊을 심, 思 생각 사, 熟 익을 숙, 考 생각할 고)",
+      "example": "진로는 심사숙고 끝에 결정해야 후회가 없다.",
+      "tags": [
+        "처세",
+        "신중"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "신상필벌(信賞必罰)",
+      "back": "공이 있으면 어김없이 상을 주고 죄가 있으면 어김없이 벌을 준다는 뜻으로, 상벌을 공정하고 엄격하게 함을 이르는 말. (한자 풀이: 信 믿을 신, 賞 상줄 상, 必 반드시 필, 罰 벌할 벌)",
+      "example": "감독은 신상필벌의 원칙으로 팀 기강을 세웠다.",
+      "tags": [
+        "처세",
+        "원칙"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "쾌도난마(快刀亂麻)",
+      "back": "잘 드는 칼로 엉킨 삼 가닥을 자른다는 뜻으로, 복잡하게 얽힌 문제를 명쾌하게 처리함을 이르는 말. (한자 풀이: 快 쾌할 쾌, 刀 칼 도, 亂 어지러울 란, 麻 삼 마)",
+      "example": "새 대표는 얽힌 계약 문제를 쾌도난마로 정리했다.",
+      "tags": [
+        "처세",
+        "결단"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "화이부동(和而不同)",
+      "back": "남과 사이좋게 지내되 무턱대고 같아지지는 않는다는 뜻으로, 어울리면서도 자기 중심을 지킴을 이르는 말. (한자 풀이: 和 화할 화, 而 말 이을 이, 不 아닐 부, 同 한가지 동)",
+      "hint": "《논어》 자로편의 \"군자는 화이부동하고 소인은 동이불화한다\"에서 유래한다.",
+      "example": "화이부동이라, 협력하되 소신까지 버릴 필요는 없다.",
+      "tags": [
+        "처세",
+        "소신",
+        "논어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "외유내강(外柔內剛)",
+      "back": "겉은 부드러우나 속은 굳세다는 뜻. (한자 풀이: 外 바깥 외, 柔 부드러울 유, 內 안 내, 剛 굳셀 강)",
+      "example": "그녀는 부드러운 말씨 뒤에 강단이 있는 외유내강형 리더다.",
+      "tags": [
+        "처세",
+        "성품"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "각주구검(刻舟求劍)",
+      "back": "배가 움직이는 줄 모르고 뱃전에 표시를 새겨 물에 빠뜨린 칼을 찾으려 한다는 뜻으로, 상황 변화를 모르는 어리석음을 이르는 말. (한자 풀이: 刻 새길 각, 舟 배 주, 求 구할 구, 劍 칼 검)",
+      "hint": "《여씨춘추》에서 초나라 사람이 강에 칼을 떨어뜨리고 뱃전에 자국을 새겨 찾으려 한 이야기에서 유래한다.",
+      "example": "바뀐 시장을 보지 못하고 옛 성공 방식만 고집하는 것은 각주구검이다.",
+      "tags": [
+        "경계",
+        "어리석음",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "수주대토(守株待兎)",
+      "back": "그루터기를 지키며 토끼를 기다린다는 뜻으로, 요행만 바라며 헛되이 기다리는 어리석음을 이르는 말. (한자 풀이: 守 지킬 수, 株 그루 주, 待 기다릴 대, 兎 토끼 토)",
+      "hint": "《한비자》에서 토끼가 그루터기에 부딪혀 죽는 것을 본 농부가 농사를 접고 그루터기만 지켰다는 이야기에서 유래한다.",
+      "example": "한 번의 행운만 기다리며 노력하지 않는 것은 수주대토와 같다.",
+      "tags": [
+        "경계",
+        "어리석음",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "연목구어(緣木求魚)",
+      "back": "나무에 올라가 물고기를 구한다는 뜻으로, 도저히 불가능한 일을 하려 함을 이르는 말. (한자 풀이: 緣 인연 연, 木 나무 목, 求 구할 구, 魚 물고기 어)",
+      "hint": "《맹자》에서 무력으로 천하를 얻으려는 것을 나무에 올라 물고기를 찾는 일에 비유한 데서 유래한다.",
+      "example": "준비 없이 합격을 바라는 것은 연목구어나 다름없다.",
+      "tags": [
+        "경계",
+        "불가능"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "우이독경(牛耳讀經)",
+      "back": "쇠귀에 경 읽기라는 뜻으로, 아무리 가르치고 일러 주어도 알아듣지 못함을 이르는 말. (한자 풀이: 牛 소 우, 耳 귀 이, 讀 읽을 독, 經 글 경)",
+      "example": "아무리 타일러도 우이독경이라 그는 도무지 듣지 않았다.",
+      "tags": [
+        "경계",
+        "소통"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "마이동풍(馬耳東風)",
+      "back": "말 귀에 동풍이 스친다는 뜻으로, 남의 말을 귀담아듣지 않고 흘려버림을 이르는 말. (한자 풀이: 馬 말 마, 耳 귀 이, 東 동녘 동, 風 바람 풍)",
+      "hint": "이백의 시구에서 유래한다.",
+      "example": "안전 수칙을 늘 마이동풍으로 흘려듣다가 사고가 났다.",
+      "tags": [
+        "경계",
+        "소통"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "대우탄금(對牛彈琴)",
+      "back": "소를 마주하고 거문고를 탄다는 뜻으로, 어리석은 사람에게 깊은 이치를 말해 주어도 소용없음을 이르는 말. (한자 풀이: 對 대할 대, 牛 소 우, 彈 튕길 탄, 琴 거문고 금)",
+      "example": "관심 없는 사람에게 아무리 설명해 봐야 대우탄금이다.",
+      "tags": [
+        "경계",
+        "소통"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "정저지와(井底之蛙)",
+      "back": "우물 밑의 개구리라는 뜻으로, 보고 들은 것이 좁아 세상 넓은 줄 모르는 사람을 이르는 말. (한자 풀이: 井 우물 정, 底 밑 저, 之 갈 지, 蛙 개구리 와)",
+      "hint": "《장자》 추수편의 우물 안 개구리 이야기에서 유래한다.",
+      "example": "정저지와가 되지 않으려면 넓은 세상의 흐름을 봐야 한다.",
+      "tags": [
+        "경계",
+        "좁은시야"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "좌정관천(坐井觀天)",
+      "back": "우물에 앉아 하늘을 본다는 뜻으로, 견문이 매우 좁음을 이르는 말. (한자 풀이: 坐 앉을 좌, 井 우물 정, 觀 볼 관, 天 하늘 천)",
+      "example": "한 분야만 보고 전체를 판단하는 것은 좌정관천의 오류다.",
+      "tags": [
+        "경계",
+        "좁은시야"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "소탐대실(小貪大失)",
+      "back": "작은 것을 탐하다가 큰 것을 잃음. (한자 풀이: 小 작을 소, 貪 탐낼 탐, 大 큰 대, 失 잃을 실)",
+      "example": "몇 푼 아끼려다 단골을 잃었으니 소탐대실이다.",
+      "tags": [
+        "경계",
+        "욕심"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "교각살우(矯角殺牛)",
+      "back": "뿔을 바로잡으려다 소를 죽인다는 뜻으로, 작은 흠을 고치려다 도리어 일을 그르침을 이르는 말. (한자 풀이: 矯 바로잡을 교, 角 뿔 각, 殺 죽일 살, 牛 소 우)",
+      "example": "사소한 오타를 고치려다 문서 전체를 망쳤으니 교각살우다.",
+      "tags": [
+        "경계",
+        "과욕"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "견문발검(見蚊拔劍)",
+      "back": "모기를 보고 칼을 뺀다는 뜻으로, 하찮은 일에 지나치게 크게 대응함을 이르는 말. (한자 풀이: 見 볼 견, 蚊 모기 문, 拔 뽑을 발, 劍 칼 검)",
+      "example": "가벼운 농담에 소송 운운하는 것은 견문발검이다.",
+      "tags": [
+        "경계",
+        "과잉반응"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "당랑거철(螳螂拒轍)",
+      "back": "사마귀가 수레바퀴를 막아선다는 뜻으로, 제 분수를 모르고 강한 상대에게 덤비는 무모함을 이르는 말. (한자 풀이: 螳 사마귀 당, 螂 사마귀 랑, 拒 막을 거, 轍 바퀴 자국 철)",
+      "hint": "사마귀가 앞발을 들어 수레를 막아서더라는 옛이야기에서 유래한다.",
+      "example": "거대 기업을 상대로 한 무모한 소송은 당랑거철처럼 보였다.",
+      "tags": [
+        "경계",
+        "무모함",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "이란투석(以卵投石)",
+      "back": "달걀로 돌을 친다는 뜻으로, 약한 것으로 강한 것을 당해 내려는 무모한 짓을 이르는 말. (한자 풀이: 以 써 이, 卵 알 란, 投 던질 투, 石 돌 석)",
+      "example": "장비도 없이 프로 팀에 도전하는 것은 이란투석이었다.",
+      "tags": [
+        "경계",
+        "무모함"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "자가당착(自家撞着)",
+      "back": "자기의 말과 행동이 앞뒤가 서로 맞지 않고 모순됨을 이르는 말. (한자 풀이: 自 스스로 자, 家 집 가, 撞 칠 당, 着 붙을 착)",
+      "example": "어제 한 말과 오늘 한 말이 달라 자가당착에 빠졌다.",
+      "tags": [
+        "경계",
+        "모순"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "자승자박(自繩自縛)",
+      "back": "자기 노끈으로 자기를 묶는다는 뜻으로, 자기가 한 말과 행동에 자기가 얽혀 곤란해짐을 이르는 말. (한자 풀이: 自 스스로 자, 繩 노끈 승, 自 스스로 자, 縛 얽을 박)",
+      "example": "본인이 만든 규정에 본인이 걸렸으니 자승자박이다.",
+      "tags": [
+        "경계",
+        "자충수"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "자업자득(自業自得)",
+      "back": "자기가 저지른 일의 결과를 자기가 받음. (한자 풀이: 自 스스로 자, 業 업 업, 自 스스로 자, 得 얻을 득)",
+      "example": "밤새 게임하고 시험을 망쳤으니 자업자득이다.",
+      "tags": [
+        "경계",
+        "책임"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "인과응보(因果應報)",
+      "back": "원인과 결과는 서로 맞물려 갚아진다는 뜻으로, 행한 대로 그에 상응하는 결과를 받음을 이르는 말. (한자 풀이: 因 인할 인, 果 실과 과, 應 응할 응, 報 갚을 보)",
+      "hint": "본래 선악의 행위에 따라 그 갚음이 있다는 불교의 가르침에서 온 말이다.",
+      "example": "남을 속이던 그가 사기를 당했으니 인과응보라 할 만하다.",
+      "tags": [
+        "경계",
+        "책임",
+        "불교"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "사상누각(沙上樓閣)",
+      "back": "모래 위에 세운 누각이라는 뜻으로, 기초가 약하여 오래가지 못하는 것을 이르는 말. (한자 풀이: 沙 모래 사, 上 윗 상, 樓 다락 루, 閣 집 각)",
+      "example": "기초 공사 없이 올린 사업 계획은 사상누각일 뿐이다.",
+      "tags": [
+        "경계",
+        "부실"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "탁상공론(卓上空論)",
+      "back": "탁자 위에서만 오가는 헛된 논의라는 뜻으로, 현실성이 없는 허황된 이론이나 논의를 이르는 말. (한자 풀이: 卓 높을 탁, 上 윗 상, 空 빌 공, 論 논할 론)",
+      "example": "현장을 모르는 대책은 탁상공론에 그치기 쉽다.",
+      "tags": [
+        "경계",
+        "공론"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "조삼모사(朝三暮四)",
+      "back": "아침에 세 개, 저녁에 네 개라는 뜻으로, 잔꾀로 남을 속여 희롱함을 이르는 말. (한자 풀이: 朝 아침 조, 三 석 삼, 暮 저물 모, 四 넉 사)",
+      "hint": "도토리를 아침에 세 개, 저녁에 네 개 주겠다고 하자 원숭이들이 화내다가 반대로 바꾸자 기뻐했다는 《장자》의 고사에서 유래한다.",
+      "example": "혜택을 앞당겨 줄 뿐 총액은 같은 조삼모사식 할인이었다.",
+      "tags": [
+        "경계",
+        "속임수",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "감언이설(甘言利說)",
+      "back": "달콤한 말과 이로운 조건을 내세워 남을 꾀는 말. (한자 풀이: 甘 달 감, 言 말씀 언, 利 이로울 리, 說 말씀 설)",
+      "example": "고수익을 미끼로 한 감언이설에 속아 투자금을 날렸다.",
+      "tags": [
+        "경계",
+        "속임수"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "구밀복검(口蜜腹劍)",
+      "back": "입에는 꿀이 있고 배 속에는 칼을 품었다는 뜻으로, 겉으로는 친한 체하나 속으로는 해칠 생각을 품음을 이르는 말. (한자 풀이: 口 입 구, 蜜 꿀 밀, 腹 배 복, 劍 칼 검)",
+      "hint": "당나라 재상 이임보의 위선을 평한 말에서 유래한다.",
+      "example": "겉으론 칭찬하며 뒤로 험담하는 구밀복검형 인물을 조심해라.",
+      "tags": [
+        "경계",
+        "위선",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "표리부동(表裏不同)",
+      "back": "겉과 속이 같지 않다는 뜻으로, 겉으로 드러나는 언행과 속마음이 다름을 이르는 말. (한자 풀이: 表 겉 표, 裏 속 리, 不 아닐 부, 同 한가지 동)",
+      "example": "앞에서는 웃고 뒤에서는 헐뜯는 표리부동한 태도에 실망했다.",
+      "tags": [
+        "경계",
+        "위선"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "양두구육(羊頭狗肉)",
+      "back": "양 머리를 걸어 놓고 개고기를 판다는 뜻으로, 겉은 그럴듯하게 내세우나 속은 변변치 않음을 이르는 말. (한자 풀이: 羊 양 양, 頭 머리 두, 狗 개 구, 肉 고기 육)",
+      "example": "광고와 딴판인 제품이라니 양두구육이 따로 없다.",
+      "tags": [
+        "경계",
+        "위선"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "침소봉대(針小棒大)",
+      "back": "바늘만 한 것을 몽둥이만 하다고 말한다는 뜻으로, 작은 일을 크게 부풀려 말함을 이르는 말. (한자 풀이: 針 바늘 침, 小 작을 소, 棒 막대 봉, 大 큰 대)",
+      "example": "작은 실수를 침소봉대해 보도하는 것은 옳지 않다.",
+      "tags": [
+        "경계",
+        "과장"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "허장성세(虛張聲勢)",
+      "back": "실속은 없으면서 허세로 목소리와 기세만 부풀림을 이르는 말. (한자 풀이: 虛 빌 허, 張 베풀 장, 聲 소리 성, 勢 형세 세)",
+      "example": "실속 없이 몸집만 부풀린 허장성세 경영은 오래가지 못한다.",
+      "tags": [
+        "경계",
+        "허세"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "유명무실(有名無實)",
+      "back": "이름만 있고 실속은 없음. (한자 풀이: 有 있을 유, 名 이름 명, 無 없을 무, 實 열매 실)",
+      "example": "규정은 있지만 지켜지지 않아 유명무실해졌다.",
+      "tags": [
+        "경계",
+        "형식"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "등하불명(燈下不明)",
+      "back": "등잔 밑이 어둡다는 뜻으로, 가까이 있는 것을 도리어 잘 알지 못함을 이르는 말. (한자 풀이: 燈 등 등, 下 아래 하, 不 아닐 불, 明 밝을 명)",
+      "example": "등하불명이라고 정작 안경을 머리에 쓰고 찾고 있었다.",
+      "tags": [
+        "경계",
+        "맹점"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "아전인수(我田引水)",
+      "back": "제 논에 물 대기라는 뜻으로, 자기에게만 이롭게 되도록 생각하거나 행동함을 이르는 말. (한자 풀이: 我 나 아, 田 밭 전, 引 끌 인, 水 물 수)",
+      "example": "같은 통계를 서로 아전인수로 해석해 결론이 갈렸다.",
+      "tags": [
+        "경계",
+        "이기심"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "견강부회(牽强附會)",
+      "back": "이치에 맞지 않는 말을 억지로 끌어다 자기 주장에 맞춘다는 뜻. (한자 풀이: 牽 이끌 견, 强 굳셀 강, 附 붙을 부, 會 모일 회)",
+      "example": "무관한 근거를 끌어다 붙인 견강부회식 주장이었다.",
+      "tags": [
+        "경계",
+        "억지"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "상전벽해(桑田碧海)",
+      "back": "뽕나무밭이 푸른 바다가 되었다는 뜻으로, 세상이 몰라볼 정도로 크게 변함을 이르는 말. (한자 풀이: 桑 뽕나무 상, 田 밭 전, 碧 푸를 벽, 海 바다 해)",
+      "example": "20년 만에 찾은 고향은 상전벽해라 할 만큼 변해 있었다.",
+      "tags": [
+        "시간",
+        "변화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "격세지감(隔世之感)",
+      "back": "다른 세대를 사이에 둔 듯한 느낌이라는 뜻으로, 변화가 커서 아주 딴 세상이 된 것 같은 느낌을 이르는 말. (한자 풀이: 隔 사이 뜰 격, 世 인간 세, 之 갈 지, 感 느낄 감)",
+      "example": "필름 카메라 세대로서 스마트폰 세상을 보니 격세지감이 든다.",
+      "tags": [
+        "시간",
+        "변화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "일장춘몽(一場春夢)",
+      "back": "한바탕의 봄꿈이라는 뜻으로, 부귀영화의 덧없음을 이르는 말. (한자 풀이: 一 한 일, 場 마당 장, 春 봄 춘, 夢 꿈 몽)",
+      "example": "벼락부자의 꿈은 일장춘몽으로 끝났다.",
+      "tags": [
+        "시간",
+        "무상"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "남가일몽(南柯一夢)",
+      "back": "남쪽 나뭇가지 아래의 한바탕 꿈이라는 뜻으로, 덧없는 꿈이나 한때의 부귀영화를 이르는 말. (한자 풀이: 南 남녘 남, 柯 가지 가, 一 한 일, 夢 꿈 몽)",
+      "hint": "순우분이 홰나무 남쪽 가지 아래에서 잠들어 꿈속 나라에서 한평생 부귀를 누렸다는 이야기에서 유래한다.",
+      "example": "화려했던 시절은 남가일몽처럼 덧없이 지나갔다.",
+      "tags": [
+        "시간",
+        "무상",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "한단지몽(邯鄲之夢)",
+      "back": "한단에서 꾼 꿈이라는 뜻으로, 인생의 부귀영화가 덧없음을 이르는 말. (한자 풀이: 邯 조나라 서울 한, 鄲 조나라 서울 단, 之 갈 지, 夢 꿈 몽)",
+      "hint": "노생이 한단의 주막에서 밥이 익는 짧은 사이에 부귀영화를 누리는 한평생의 꿈을 꾸었다는 이야기에서 유래한다.",
+      "example": "부귀영화도 한단지몽이라 생각하니 마음이 한결 가벼워졌다.",
+      "tags": [
+        "시간",
+        "무상",
+        "고사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "무릉도원(武陵桃源)",
+      "back": "무릉의 복숭아꽃 피는 수원지라는 뜻으로, 속세를 떠난 이상향을 이르는 말. (한자 풀이: 武 호반 무, 陵 언덕 릉, 桃 복숭아 도, 源 근원 원)",
+      "hint": "도연명의 《도화원기》에서 어부가 복숭아꽃이 흘러오는 물길을 따라 별천지를 발견했다는 이야기에서 유래한다.",
+      "example": "안개 낀 계곡의 풍경이 무릉도원이 따로 없었다.",
+      "tags": [
+        "자연",
+        "이상향",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "금수강산(錦繡江山)",
+      "back": "비단에 수를 놓은 듯 아름다운 강산이라는 뜻으로, 우리나라 국토의 아름다움을 이르는 말. (한자 풀이: 錦 비단 금, 繡 수놓을 수, 江 강 강, 山 뫼 산)",
+      "example": "가을 단풍으로 물든 설악산은 금수강산이라는 말 그대로였다.",
+      "tags": [
+        "자연",
+        "국토"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "산자수명(山紫水明)",
+      "back": "산은 자줏빛으로 물들고 물은 맑다는 뜻으로, 산수의 경치가 매우 아름다움을 이르는 말. (한자 풀이: 山 뫼 산, 紫 자줏빛 자, 水 물 수, 明 밝을 명)",
+      "example": "산자수명한 고장이라 예부터 시인 묵객이 많이 찾았다.",
+      "tags": [
+        "자연",
+        "경치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "청풍명월(淸風明月)",
+      "back": "맑은 바람과 밝은 달. (한자 풀이: 淸 맑을 청, 風 바람 풍, 明 밝을 명, 月 달 월)",
+      "example": "청풍명월을 벗 삼아 정자에 앉아 차를 마셨다.",
+      "tags": [
+        "자연",
+        "풍류"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "음풍농월(吟風弄月)",
+      "back": "바람을 읊고 달을 즐긴다는 뜻으로, 자연을 노래하며 풍류를 즐김을 이르는 말. (한자 풀이: 吟 읊을 음, 風 바람 풍, 弄 희롱할 롱, 月 달 월)",
+      "example": "선비들은 강가 정자에서 음풍농월하며 시를 지었다.",
+      "tags": [
+        "자연",
+        "풍류"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "만경창파(萬頃蒼波)",
+      "back": "한없이 넓고 푸른 바다의 물결. (한자 풀이: 萬 일만 만, 頃 이랑 경, 蒼 푸를 창, 波 물결 파)",
+      "example": "배는 만경창파를 헤치고 남쪽으로 나아갔다.",
+      "tags": [
+        "자연",
+        "바다"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "엄동설한(嚴冬雪寒)",
+      "back": "눈 내리는 한겨울의 매서운 추위. (한자 풀이: 嚴 엄할 엄, 冬 겨울 동, 雪 눈 설, 寒 찰 한)",
+      "example": "엄동설한에도 새벽 배송 기사들은 거리를 달린다.",
+      "tags": [
+        "자연",
+        "계절"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "삼한사온(三寒四溫)",
+      "back": "사흘 춥고 나흘 따뜻하다는 뜻으로, 겨울철에 추위와 따뜻함이 번갈아 나타나는 날씨를 이르는 말. (한자 풀이: 三 석 삼, 寒 찰 한, 四 넉 사, 溫 따뜻할 온)",
+      "example": "삼한사온이라더니 며칠 춥다가 다시 포근해졌다.",
+      "tags": [
+        "자연",
+        "날씨"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "춘하추동(春夏秋冬)",
+      "back": "봄·여름·가을·겨울의 네 계절. (한자 풀이: 春 봄 춘, 夏 여름 하, 秋 가을 추, 冬 겨울 동)",
+      "example": "그 사진가는 같은 나무의 춘하추동을 10년간 기록했다.",
+      "tags": [
+        "자연",
+        "계절"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "조변석개(朝變夕改)",
+      "back": "아침에 바꾸고 저녁에 또 고친다는 뜻으로, 계획이나 결정을 일관성 없이 자주 바꿈을 이르는 말. (한자 풀이: 朝 아침 조, 變 변할 변, 夕 저녁 석, 改 고칠 개)",
+      "example": "정책이 조변석개하니 현장의 혼란만 커졌다.",
+      "tags": [
+        "시간",
+        "변덕"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "일각천금(一刻千金)",
+      "back": "짧은 한때가 천금의 값어치가 있다는 뜻으로, 시간의 귀중함을 이르는 말. (한자 풀이: 一 한 일, 刻 새길 각, 千 일천 천, 金 쇠 금)",
+      "hint": "소식의 시 \"봄밤의 한 순간은 천금에 값한다\"에서 유래한다.",
+      "example": "시험 전날의 시간은 일각천금이라 잠시도 허투루 쓸 수 없다.",
+      "tags": [
+        "시간",
+        "소중함"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "백년하청(百年河淸)",
+      "back": "백 년을 기다린들 황하가 맑아지겠느냐는 뜻으로, 아무리 오래 기다려도 이루어지기 어려운 일을 이르는 말. (한자 풀이: 百 일백 백, 年 해 년, 河 물 하, 淸 맑을 청)",
+      "hint": "늘 흐린 황하가 맑아지기를 기다린다는 옛말에서 유래한다.",
+      "example": "양측이 양보하지 않으니 합의는 백년하청이다.",
+      "tags": [
+        "시간",
+        "기다림"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "오리무중(五里霧中)",
+      "back": "오 리에 걸친 짙은 안개 속이라는 뜻으로, 일의 갈피를 잡을 수 없음을 이르는 말. (한자 풀이: 五 다섯 오, 里 마을 리, 霧 안개 무, 中 가운데 중)",
+      "example": "수사가 두 달째 이어졌지만 범인의 행방은 오리무중이다.",
+      "tags": [
+        "자연",
+        "혼미"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "화조월석(花朝月夕)",
+      "back": "꽃 피는 아침과 달 밝은 저녁이라는 뜻으로, 경치가 좋은 시절을 이르는 말. (한자 풀이: 花 꽃 화, 朝 아침 조, 月 달 월, 夕 저녁 석)",
+      "example": "화조월석의 좋은 날마다 가족과 산책을 나섰다.",
+      "tags": [
+        "자연",
+        "풍류"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "천석고황(泉石膏肓)",
+      "back": "샘과 돌이 고황에 들었다는 뜻으로, 자연을 사랑하는 마음이 고치기 어려운 병처럼 깊음을 이르는 말. (한자 풀이: 泉 샘 천, 石 돌 석, 膏 기름 고, 肓 명치끝 황)",
+      "hint": "고황은 약이 미치지 못하는 몸속 깊은 곳으로, 산수 사랑이 불치병처럼 깊다는 비유로 쓰인다.",
+      "example": "천석고황이라, 그는 주말마다 산을 찾지 않고는 못 배긴다.",
+      "tags": [
+        "자연",
+        "산수"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "요산요수(樂山樂水)",
+      "back": "산을 좋아하고 물을 좋아한다는 뜻으로, 자연을 즐기고 사랑함을 이르는 말. (한자 풀이: 樂 좋아할 요, 山 뫼 산, 樂 좋아할 요, 水 물 수)",
+      "hint": "《논어》의 \"지혜로운 이는 물을 좋아하고 어진 이는 산을 좋아한다\"에서 유래한다.",
+      "example": "요산요수라고, 어진 이는 산을 좋아하고 지혜로운 이는 물을 좋아한다 했다.",
+      "tags": [
+        "자연",
+        "산수",
+        "논어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "만고불변(萬古不變)",
+      "back": "오랜 세월이 지나도 변하지 않음. (한자 풀이: 萬 일만 만, 古 옛 고, 不 아닐 불, 變 변할 변)",
+      "example": "부모의 자식 사랑은 만고불변의 진리다.",
+      "tags": [
+        "시간",
+        "불변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "명산대천(名山大川)",
+      "back": "이름난 산과 큰 내라는 뜻으로, 경치 좋고 이름난 자연을 이르는 말. (한자 풀이: 名 이름 명, 山 뫼 산, 大 큰 대, 川 내 천)",
+      "example": "그는 전국의 명산대천을 두루 돌며 사진을 찍었다.",
+      "tags": [
+        "자연",
+        "경치"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "청산유수(靑山流水)",
+      "back": "푸른 산에 흐르는 맑은 물이라는 뜻으로, 막힘없이 썩 잘하는 말을 비유하는 말. (한자 풀이: 靑 푸를 청, 山 뫼 산, 流 흐를 류, 水 물 수)",
+      "example": "그의 발표는 청산유수라 막힘이 없었다.",
+      "tags": [
+        "자연",
+        "언변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "조령모개(朝令暮改)",
+      "back": "아침에 내린 명령을 저녁에 고친다는 뜻으로, 법령이나 방침이 일관성 없이 자꾸 바뀜을 이르는 말. (한자 풀이: 朝 아침 조, 令 하여금 령, 暮 저물 모, 改 고칠 개)",
+      "example": "입시 제도가 조령모개로 바뀌어 수험생들이 혼란스러워한다.",
+      "tags": [
+        "시간",
+        "변덕"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "설상가상(雪上加霜)",
+      "back": "눈 위에 서리가 더해진다는 뜻으로, 어려운 일이 겹쳐 일어남을 이르는 말. (한자 풀이: 雪 눈 설, 上 윗 상, 加 더할 가, 霜 서리 상)",
+      "example": "지갑을 잃어버렸는데 설상가상으로 비까지 쏟아졌다.",
+      "tags": [
+        "상식",
+        "불운"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "금상첨화(錦上添花)",
+      "back": "비단 위에 꽃을 더한다는 뜻으로, 좋은 일에 또 좋은 일이 더해짐을 이르는 말. (한자 풀이: 錦 비단 금, 上 윗 상, 添 더할 첨, 花 꽃 화)",
+      "example": "경치 좋은 집인데 교통까지 편리하니 금상첨화다.",
+      "tags": [
+        "상식",
+        "행운"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "점입가경(漸入佳境)",
+      "back": "갈수록 더욱 좋은 경지로 들어간다는 뜻으로, 일이나 이야기가 갈수록 재미있어짐을 이르는 말. (한자 풀이: 漸 점점 점, 入 들 입, 佳 아름다울 가, 境 지경 경)",
+      "example": "드라마가 회를 거듭할수록 점입가경으로 흥미진진해진다.",
+      "tags": [
+        "상식",
+        "전개"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "진퇴양난(進退兩難)",
+      "back": "나아가기도 물러서기도 다 어렵다는 뜻으로, 이러지도 저러지도 못하는 곤란한 처지를 이르는 말. (한자 풀이: 進 나아갈 진, 退 물러날 퇴, 兩 두 량, 難 어려울 난)",
+      "example": "계약을 물릴 수도 진행할 수도 없는 진퇴양난에 빠졌다.",
+      "tags": [
+        "상식",
+        "곤경"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "사면초가(四面楚歌)",
+      "back": "사방에서 초나라 노래가 들린다는 뜻으로, 도움을 받을 수 없는 고립된 처지를 이르는 말. (한자 풀이: 四 넉 사, 面 낯 면, 楚 초나라 초, 歌 노래 가)",
+      "hint": "해하에서 포위된 항우가 사방의 한나라 진영에서 들려오는 초나라 노래를 듣고 초나라 군사가 모두 넘어간 줄 알았다는 고사에서 유래한다.",
+      "example": "여론도 자금도 등을 돌려 회사는 사면초가에 몰렸다.",
+      "tags": [
+        "상식",
+        "곤경",
+        "고사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "백척간두(百尺竿頭)",
+      "back": "백 자나 되는 장대 끝이라는 뜻으로, 몹시 위태롭고 어려운 지경을 이르는 말. (한자 풀이: 百 일백 백, 尺 자 척, 竿 장대 간, 頭 머리 두)",
+      "example": "회사 운명이 백척간두에 선 지금이야말로 힘을 모아야 한다.",
+      "tags": [
+        "상식",
+        "위기"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "풍전등화(風前燈火)",
+      "back": "바람 앞의 등불이라는 뜻으로, 매우 위태로운 처지를 이르는 말. (한자 풀이: 風 바람 풍, 前 앞 전, 燈 등 등, 火 불 화)",
+      "example": "환율 급등으로 수출 기업들의 처지가 풍전등화가 되었다.",
+      "tags": [
+        "상식",
+        "위기"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "누란지위(累卵之危)",
+      "back": "알을 쌓아 놓은 듯한 위태로움이라는 뜻으로, 몹시 아슬아슬한 위기를 이르는 말. (한자 풀이: 累 여러 루, 卵 알 란, 之 갈 지, 危 위태할 위)",
+      "example": "보급이 끊긴 부대는 누란지위에 놓였다.",
+      "tags": [
+        "상식",
+        "위기"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "명약관화(明若觀火)",
+      "back": "불을 보듯 분명하다는 뜻으로, 더 말할 나위 없이 명백함을 이르는 말. (한자 풀이: 明 밝을 명, 若 같을 약, 觀 볼 관, 火 불 화)",
+      "example": "준비 없이 나서면 결과가 어떨지는 명약관화하다.",
+      "tags": [
+        "상식",
+        "명백"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "명불허전(名不虛傳)",
+      "back": "이름은 헛되이 전해지지 않는다는 뜻으로, 명성이 널리 알려진 데는 그만한 까닭이 있음을 이르는 말. (한자 풀이: 名 이름 명, 不 아닐 불, 虛 빌 허, 傳 전할 전)",
+      "example": "소문난 맛집에서 먹어 보니 과연 명불허전이었다.",
+      "tags": [
+        "상식",
+        "명성"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "화룡점정(畵龍點睛)",
+      "back": "용을 그리고 마지막에 눈동자를 찍는다는 뜻으로, 가장 중요한 부분을 마쳐 일을 완성함을 이르는 말. (한자 풀이: 畵 그림 화, 龍 용 룡, 點 점 점, 睛 눈동자 정)",
+      "hint": "장승요가 그린 용에 눈동자를 찍자 용이 하늘로 날아올랐다는 고사에서 유래한다.",
+      "example": "마지막 무대의 불꽃놀이가 축제의 화룡점정이었다.",
+      "tags": [
+        "상식",
+        "완성",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "군계일학(群鷄一鶴)",
+      "back": "닭 무리 속의 한 마리 학이라는 뜻으로, 여럿 가운데서 홀로 빼어난 사람을 이르는 말. (한자 풀이: 群 무리 군, 鷄 닭 계, 一 한 일, 鶴 학 학)",
+      "example": "무명 배우들 사이에서 그녀의 연기는 군계일학이었다.",
+      "tags": [
+        "상식",
+        "출중"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "낭중지추(囊中之錐)",
+      "back": "주머니 속의 송곳이라는 뜻으로, 재능이 뛰어난 사람은 숨어 있어도 저절로 드러남을 이르는 말. (한자 풀이: 囊 주머니 낭, 中 가운데 중, 之 갈 지, 錐 송곳 추)",
+      "hint": "모수가 스스로를 천거하자 평원군이 유능한 사람은 주머니 속 송곳처럼 끝이 드러난다고 답한 고사에서 유래한다.",
+      "example": "실력이 있으면 낭중지추처럼 언젠가 드러나기 마련이다.",
+      "tags": [
+        "상식",
+        "재능",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "청천벽력(靑天霹靂)",
+      "back": "맑은 하늘에 치는 벼락이라는 뜻으로, 뜻밖에 일어난 큰 변고나 사건을 이르는 말. (한자 풀이: 靑 푸를 청, 天 하늘 천, 霹 벼락 벽, 靂 벼락 력)",
+      "example": "갑작스러운 폐업 통보는 직원들에게 청천벽력이었다.",
+      "tags": [
+        "상식",
+        "충격"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "아연실색(啞然失色)",
+      "back": "너무 놀라 말문이 막히고 얼굴빛이 변함. (한자 풀이: 啞 벙어리 아, 然 그럴 연, 失 잃을 실, 色 빛 색)",
+      "example": "계좌 잔고가 사라진 것을 보고 그는 아연실색했다.",
+      "tags": [
+        "상식",
+        "충격"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "혼비백산(魂飛魄散)",
+      "back": "혼백이 날아 흩어진다는 뜻으로, 몹시 놀라 넋을 잃음을 이르는 말. (한자 풀이: 魂 넋 혼, 飛 날 비, 魄 넋 백, 散 흩을 산)",
+      "example": "사이렌이 울리자 사람들은 혼비백산하여 흩어졌다.",
+      "tags": [
+        "상식",
+        "놀람"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "우왕좌왕(右往左往)",
+      "back": "오른쪽으로 갔다 왼쪽으로 갔다 한다는 뜻으로, 방향을 잡지 못하고 갈팡질팡함을 이르는 말. (한자 풀이: 右 오른쪽 우, 往 갈 왕, 左 왼 좌, 往 갈 왕)",
+      "example": "안내 방송이 없어 승객들은 출구를 찾지 못하고 우왕좌왕했다.",
+      "tags": [
+        "상식",
+        "혼란"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "좌충우돌(左衝右突)",
+      "back": "왼쪽으로 찌르고 오른쪽으로 부딪친다는 뜻으로, 이리저리 마구 부딪치며 좌우로 날뜀을 이르는 말. (한자 풀이: 左 왼 좌, 衝 찌를 충, 右 오른쪽 우, 突 부딪칠 돌)",
+      "example": "신입 시절에는 좌충우돌했지만 그 경험이 밑거름이 되었다.",
+      "tags": [
+        "상식",
+        "혼란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "동분서주(東奔西走)",
+      "back": "동쪽으로 뛰고 서쪽으로 달린다는 뜻으로, 여기저기 몹시 바쁘게 돌아다님을 이르는 말. (한자 풀이: 東 동녘 동, 奔 달릴 분, 西 서녘 서, 走 달릴 주)",
+      "example": "행사 준비로 담당자들은 일주일 내내 동분서주했다.",
+      "tags": [
+        "상식",
+        "분주"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "인산인해(人山人海)",
+      "back": "사람이 산을 이루고 바다를 이루었다는 뜻으로, 사람이 헤아릴 수 없이 많이 모인 상태를 이르는 말. (한자 풀이: 人 사람 인, 山 뫼 산, 人 사람 인, 海 바다 해)",
+      "example": "불꽃 축제가 열린 강변은 인산인해를 이루었다.",
+      "tags": [
+        "상식",
+        "군중"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "문전성시(門前成市)",
+      "back": "문 앞이 시장을 이룬다는 뜻으로, 찾아오는 사람이 많아 문 앞이 붐빔을 이르는 말. (한자 풀이: 門 문 문, 前 앞 전, 成 이룰 성, 市 저자 시)",
+      "example": "방송에 나온 뒤 그 빵집은 연일 문전성시다.",
+      "tags": [
+        "상식",
+        "성황"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "어불성설(語不成說)",
+      "back": "말이 조금도 이치에 맞지 않아 말이 되지 않음. (한자 풀이: 語 말씀 어, 不 아닐 불, 成 이룰 성, 說 말씀 설)",
+      "example": "증거도 없이 우기는 것은 어불성설이다.",
+      "tags": [
+        "상식",
+        "언변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "횡설수설(橫說竪說)",
+      "back": "가로로 말했다 세로로 말했다 한다는 뜻으로, 조리 없이 함부로 지껄이는 말을 이르는 말. (한자 풀이: 橫 가로 횡, 說 말씀 설, 竪 세울 수, 說 말씀 설)",
+      "example": "당황한 그는 횡설수설하며 요점을 말하지 못했다.",
+      "tags": [
+        "상식",
+        "언변"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "중구난방(衆口難防)",
+      "back": "뭇사람의 입은 막기 어렵다는 뜻으로, 여러 사람이 마구 떠들어 감당할 수 없는 상태를 이르는 말. (한자 풀이: 衆 무리 중, 口 입 구, 難 어려울 난, 防 막을 방)",
+      "example": "회의가 중구난방으로 흘러 결론을 내지 못했다.",
+      "tags": [
+        "상식",
+        "소란"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    },
+    {
+      "front": "파죽지세(破竹之勢)",
+      "back": "대나무를 쪼개는 기세라는 뜻으로, 거침없이 적을 물리치며 나아가는 맹렬한 기세를 이르는 말. (한자 풀이: 破 깨뜨릴 파, 竹 대 죽, 之 갈 지, 勢 형세 세)",
+      "hint": "진(晉)나라 두예가 오나라를 칠 때 지금의 기세는 대나무를 쪼개는 것과 같다고 한 데서 유래한다.",
+      "example": "그 팀은 개막 후 파죽지세로 10연승을 달렸다.",
+      "tags": [
+        "상식",
+        "기세",
+        "고사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-four-character-idioms-v1",
+        "claude-authoring-korean-four-character-idioms-v1"
+      ]
+    }
+  ]
+}

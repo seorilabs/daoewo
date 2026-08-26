@@ -1,0 +1,3021 @@
+{
+  "schemaVersion": 1,
+  "deckId": "korean-history-cert-core",
+  "sourceRegistry": [
+    {
+      "id": "brief-korean-history-cert-core-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:korean-history-cert-core:v1",
+      "revision": "brief-v1@2026-07-12"
+    },
+    {
+      "id": "claude-authoring-korean-history-cert-core-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:korean-history-cert-core:v1",
+      "revision": "claude-batch-v1@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "구석기 시대를 대표하는 뗀석기로, 사냥과 도구 제작에 두루 쓰인 만능 석기는?",
+      "back": "주먹도끼. 경기 연천 전곡리 유적에서 출토되어 동아시아 구석기 문화 연구에 중요한 자료가 되었다.",
+      "hint": "전곡리 유적",
+      "tags": [
+        "선사·고조선",
+        "문화유산",
+        "구석기"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "신석기 시대를 대표하는, 표면에 기하학적 무늬를 새긴 토기의 이름은?",
+      "back": "빗살무늬 토기. 식량을 저장하고 조리하는 데 쓰였으며 서울 암사동 등 강가·바닷가 유적에서 많이 나온다.",
+      "hint": "암사동 유적",
+      "tags": [
+        "선사·고조선",
+        "문화유산",
+        "신석기"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "농경과 목축이 시작되어 정착 생활이 이루어진 우리 역사 최초의 시대는?",
+      "back": "신석기 시대. 조·피 등 잡곡 농사를 짓고 움집을 지어 살았으며 가락바퀴로 실을 뽑았다.",
+      "hint": "움집, 가락바퀴",
+      "tags": [
+        "선사·고조선",
+        "사회",
+        "신석기"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "청동기 시대 지배층(군장)의 무덤으로 만들어진 대표적 거석 기념물은?",
+      "back": "고인돌. 많은 노동력을 동원할 수 있는 지배자의 존재를 보여 주며, 고창·화순·강화 고인돌 유적은 유네스코 세계유산이다.",
+      "hint": "탁자식·바둑판식",
+      "tags": [
+        "선사·고조선",
+        "문화유산",
+        "청동기"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "청동기 시대에 만주와 한반도에서 널리 쓰인, 악기 비파를 닮은 청동 검은?",
+      "back": "비파형 동검. 고조선의 문화 범위를 짐작하게 하는 유물로, 철기 시대에는 세형 동검으로 형태가 변화한다.",
+      "hint": "세형 동검과 비교",
+      "tags": [
+        "선사·고조선",
+        "문화유산",
+        "청동기"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "삼국유사 기록을 기준으로 한 고조선의 건국 연도와 건국 시조는?",
+      "back": "기원전 2333년, 단군왕검. 단군 이야기는 제정일치 사회와 홍익인간 이념을 보여 준다.",
+      "hint": "제정일치",
+      "tags": [
+        "선사·고조선",
+        "연표",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고조선 사회의 모습을 알려 주는, 현재 3개 조항만 전하는 법은?",
+      "back": "범금 8조(8조법). 살인·상해·절도를 처벌한 내용에서 노동력과 사유 재산을 중시한 계급 사회였음을 알 수 있다.",
+      "hint": "한서 지리지에 일부 전함",
+      "tags": [
+        "선사·고조선",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "기원전 194년 준왕을 몰아내고 고조선의 왕이 되어 철기 문화를 본격 수용한 인물은?",
+      "back": "위만. 위만 조선은 철기 문화를 바탕으로 중계 무역을 하며 성장하여 한과 대립하였다.",
+      "hint": "준왕은 남쪽으로 이동",
+      "tags": [
+        "선사·고조선",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고조선이 멸망한 연도와 고조선을 공격해 멸망시킨 중국 왕조의 군주는?",
+      "back": "기원전 108년, 한 무제. 왕검성이 함락된 뒤 한은 고조선 옛 땅에 군현을 설치하였다.",
+      "hint": "왕검성 함락",
+      "tags": [
+        "선사·고조선",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "철기 시대 유적에서 출토되어 중국과의 교류를 보여 주는 중국 연나라 계통의 화폐는?",
+      "back": "명도전. 반량전·오수전과 함께 철기 시대 한반도와 중국의 교역을 뒷받침하는 유물이다.",
+      "hint": "칼 모양 화폐",
+      "tags": [
+        "선사·고조선",
+        "문화유산",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "부여에서 12월에 열린 제천 행사의 이름과 부여의 정치 조직은?",
+      "back": "제천 행사는 영고, 정치 조직은 왕 아래 마가·우가·저가·구가가 별도 행정 구역을 다스린 사출도이다.",
+      "hint": "가축 이름 관직",
+      "tags": [
+        "선사·고조선",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "삼한에서 제사장 천군이 다스리며 죄인이 도망쳐도 잡아가지 못한 신성 지역은?",
+      "back": "소도. 정치적 지배자(신지·읍차)와 제사장이 분리된 제정 분리 사회였음을 보여 준다.",
+      "hint": "솟대와 관련",
+      "tags": [
+        "선사·고조선",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "영고·동맹·무천이라는 제천 행사를 각각 연 초기 국가를 순서대로 짝지으면?",
+      "back": "영고는 부여(12월), 동맹은 고구려(10월), 무천은 동예(10월)의 제천 행사이다. 동예에는 책화와 족외혼 풍습도 있었다.",
+      "hint": "부여만 12월",
+      "tags": [
+        "삼국·가야",
+        "제도",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고구려를 건국한 시조와 건국 연도, 첫 도읍지는?",
+      "back": "주몽(동명성왕), 기원전 37년, 졸본. 이후 유리왕 때 국내성으로 도읍을 옮겼다.",
+      "hint": "부여에서 남하",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "백제를 건국한 시조와 건국 연도, 초기 도읍지는?",
+      "back": "온조, 기원전 18년, 하남 위례성. 고구려 계통 유이민과 한강 유역 토착 세력이 결합해 세웠다.",
+      "hint": "주몽의 아들",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "신라의 시조와 건국 연도는?",
+      "back": "박혁거세, 기원전 57년. 경주 지역 사로국에서 출발했으며 초기에는 박·석·김 세 성씨가 번갈아 왕위에 올랐다.",
+      "hint": "사로국",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "372년 불교를 수용하고 태학을 세운 고구려의 왕은?",
+      "back": "소수림왕. 전진에서 불교를 받아들이고 태학 설립·율령 반포로 중앙 집권 체제의 기틀을 마련했다.",
+      "hint": "고국원왕 전사 이후 체제 정비",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "영락이라는 연호를 쓰고 400년 신라에 침입한 왜를 격퇴한 고구려의 왕은?",
+      "back": "광개토대왕. 만주와 한강 이북으로 영토를 크게 넓혔고, 신라 구원을 계기로 가야 연맹의 중심이 금관가야에서 대가야로 이동했다.",
+      "hint": "연호 영락",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "427년 평양으로 천도하고 475년 백제 한성을 함락한 고구려의 왕은?",
+      "back": "장수왕. 남진 정책을 펴 한강 유역을 차지했으며, 이때 백제 개로왕이 전사하고 백제는 웅진으로 천도했다.",
+      "hint": "남진 정책",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "광개토대왕릉비를 세운 왕과 건립 연도는?",
+      "back": "장수왕, 414년. 아버지 광개토대왕의 업적을 기리기 위해 국내성 지역(지안)에 세웠다.",
+      "hint": "지안(집안) 소재",
+      "tags": [
+        "삼국·가야",
+        "문화유산",
+        "연표"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "4세기 백제 전성기를 이끌며 371년 평양성을 공격해 고구려 고국원왕을 전사시킨 왕은?",
+      "back": "근초고왕. 마한 잔여 세력을 정복하고 중국 동진·왜와 교류했으며, 이 시기 왜에 칠지도가 전해진 것으로 본다.",
+      "hint": "칠지도",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "지방 요지에 왕족을 파견하는 22담로를 정비해 지방 통제를 강화한 백제의 왕은?",
+      "back": "무령왕. 중국 남조 양과 활발히 교류했으며, 그의 무덤인 무령왕릉은 벽돌무덤 양식으로 만들어졌다.",
+      "hint": "웅진 시기",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "538년 사비로 천도하고 국호를 남부여로 고친 백제의 왕은?",
+      "back": "성왕. 신라 진흥왕과 연합해 한강 하류를 되찾았으나 신라의 배신 후 554년 관산성 전투에서 전사했다.",
+      "hint": "관산성 전투",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "국호를 신라로 확정하고 512년 이사부를 보내 우산국을 정복한 왕은?",
+      "back": "지증왕. 마립간 대신 왕 칭호를 사용하고 우경을 장려했으며 순장을 금지했다.",
+      "hint": "우산국=울릉도",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "율령을 반포하고 이차돈의 순교를 계기로 불교를 공인한 신라의 왕은?",
+      "back": "법흥왕. 527년 불교를 공인하고 병부를 설치했으며 532년 금관가야를 병합했다.",
+      "hint": "건원 연호",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "한강 유역 전체를 확보하고 순수비를 세웠으며 562년 대가야를 정복한 신라의 왕은?",
+      "back": "진흥왕. 화랑도를 국가 조직으로 개편하고 북한산비·창녕비·황초령비·마운령비 등 순수비를 세웠다.",
+      "hint": "6세기 신라 전성기",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "612년 수 양제의 대군을 살수에서 크게 물리친 고구려의 장수는?",
+      "back": "을지문덕. 우중문에게 시를 보내 조롱하고 살수(청천강)에서 수군을 궤멸시켰다(살수 대첩).",
+      "hint": "여수장우중문시",
+      "tags": [
+        "삼국·가야",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "645년 당 태종의 침입을 성주와 군민이 힘을 합쳐 막아 낸 전투는?",
+      "back": "안시성 전투. 연개소문 집권기 당의 침입을 격퇴한 싸움으로, 고구려는 이후에도 당의 공격을 여러 차례 막아 냈다.",
+      "hint": "당 태종 친정 격퇴",
+      "tags": [
+        "삼국·가야",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "백제가 멸망한 연도와 계백이 결사대를 이끌고 싸운 전투는?",
+      "back": "660년, 황산벌 전투. 계백의 5천 결사대가 김유신의 신라군에 패한 뒤 사비성이 나당 연합군에 함락되었다.",
+      "hint": "나당 연합군",
+      "tags": [
+        "삼국·가야",
+        "사건",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고구려가 나당 연합군에 멸망한 연도는?",
+      "back": "668년. 연개소문 사후 지배층의 내분 속에 평양성이 함락되었고, 당은 안동도호부를 설치했다.",
+      "hint": "평양성 함락",
+      "tags": [
+        "삼국·가야",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "복신·도침이 왕자 부여풍을 추대하며 주류성에서 전개한 운동과 그 좌절을 보여 주는 663년의 전투는?",
+      "back": "백제 부흥 운동과 백강 전투. 왜의 지원군이 백강에서 나당 연합군에 대패하면서 부흥 운동은 실패했고, 흑치상지는 임존성에서 활약했다.",
+      "hint": "왜 지원군 참전",
+      "tags": [
+        "삼국·가야",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "김수로왕이 세운 나라로, 김해 지역에서 철을 바탕으로 성장한 전기 가야 연맹의 중심국은?",
+      "back": "금관가야. 덩이쇠를 화폐처럼 쓰고 낙랑·왜를 잇는 중계 무역으로 번성했으며 532년 신라 법흥왕에게 병합되었다.",
+      "hint": "김해, 철",
+      "tags": [
+        "삼국·가야",
+        "경제",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "5세기 이후 고령 지역을 중심으로 후기 가야 연맹을 이끈 나라는?",
+      "back": "대가야. 시조는 이진아시왕으로 전하며 562년 신라 진흥왕에게 정복되었다. 지산동 고분군이 대표 유적이다.",
+      "hint": "고령 지산동 고분군",
+      "tags": [
+        "삼국·가야",
+        "사건",
+        "문화유산"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "공주 송산리 고분군에 있는, 중국 남조의 영향을 받은 벽돌무덤은?",
+      "back": "무령왕릉. 무덤 주인을 알려 주는 지석이 발견된 유일한 백제 왕릉으로, 금제 관식 등 많은 유물이 나왔다.",
+      "hint": "지석 출토",
+      "tags": [
+        "삼국·가야",
+        "문화유산",
+        "대외관계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "무용총 수렵도처럼 벽화가 그려진 고구려 후기의 대표적 무덤 양식은?",
+      "back": "굴식 돌방무덤. 돌로 널방을 만들고 벽과 천장에 생활 모습·사신도 등을 그렸으며, 초기의 돌무지무덤(장군총)과 구별된다.",
+      "hint": "장군총은 돌무지무덤",
+      "tags": [
+        "삼국·가야",
+        "문화유산",
+        "비교"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "신라에서 혈통에 따라 관직 승진과 일상생활까지 제한한 폐쇄적 신분 제도는?",
+      "back": "골품제. 성골·진골과 6~1두품으로 나뉘었고, 6두품은 능력이 있어도 고위 관직 진출이 막혀 학문·종교로 진출하는 경우가 많았다.",
+      "hint": "6두품의 한계",
+      "tags": [
+        "삼국·가야",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "선덕여왕 때 세워진 것으로 전하는, 현존하는 동양에서 가장 오래된 천문 관측 시설은?",
+      "back": "첨성대. 경주에 있으며 신라의 천문 관측과 농업의 관련성을 보여 주는 문화유산이다.",
+      "hint": "경주",
+      "tags": [
+        "삼국·가야",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "신라가 매소성·기벌포 전투에서 당군을 몰아내고 삼국 통일을 완성한 연도와 당시 왕은?",
+      "back": "676년, 문무왕. 매소성 전투(675)와 기벌포 전투(676)에서 승리해 대동강 이남에서 당 세력을 축출했다.",
+      "hint": "나당 전쟁",
+      "tags": [
+        "남북국",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "김흠돌의 난을 진압하고 국학을 설립했으며 관료전을 지급하고 녹읍을 폐지한 신라의 왕은?",
+      "back": "신문왕. 진골 귀족 세력을 누르고 왕권을 강화했으며 9주 5소경의 지방 제도를 완비했다.",
+      "hint": "만파식적 설화",
+      "tags": [
+        "남북국",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "통일 신라의 중앙군과 지방군 편제를 각각 부르는 이름은?",
+      "back": "중앙군은 9서당, 지방군은 10정. 9서당에는 고구려·백제·말갈인까지 포함해 민족 융합을 꾀했다.",
+      "hint": "피정복민 포함",
+      "tags": [
+        "남북국",
+        "제도",
+        "군사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "아미타 신앙으로 불교 대중화에 힘쓰고 대승기신론소를 지었으며 일심 사상을 주장한 신라 승려는?",
+      "back": "원효. 무애가를 부르며 백성에게 나무아미타불 염불을 권했고 화쟁 사상으로 종파 대립의 조화를 추구했다.",
+      "hint": "설총의 아버지",
+      "tags": [
+        "남북국",
+        "인물",
+        "문화유산"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "화엄일승법계도를 지어 화엄 사상을 정리하고 부석사를 창건한 신라 승려는?",
+      "back": "의상. 당에 유학한 뒤 화엄종을 열었으며 관음 신앙을 전파했다.",
+      "hint": "일즉다 다즉일",
+      "tags": [
+        "남북국",
+        "인물",
+        "문화유산"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "인도와 중앙아시아를 순례하고 왕오천축국전을 남긴 신라 승려는?",
+      "back": "혜초. 왕오천축국전은 프랑스 학자에 의해 둔황에서 발견되어 현재 프랑스 국립도서관에 있다.",
+      "hint": "둔황에서 발견",
+      "tags": [
+        "남북국",
+        "인물",
+        "문화유산"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "경덕왕 때 김대성이 창건을 주도했다고 전하는 경주의 절과 인공 석굴 사원은?",
+      "back": "불국사와 석굴암. 불국토의 이상을 표현한 유적으로 함께 유네스코 세계유산에 등재되었다. 불국사에는 3층 석탑(석가탑)과 다보탑이 있다.",
+      "hint": "무구정광대다라니경 발견",
+      "tags": [
+        "남북국",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "일본에서 발견된, 서원경 부근 4개 촌의 인구·토지·소와 말 등을 3년마다 조사해 기록한 통일 신라 문서는?",
+      "back": "신라 촌락 문서(민정 문서). 조세와 노동력 징발의 기초 자료로, 일본 도다이사 쇼소인에서 발견되었다.",
+      "hint": "쇼소인",
+      "tags": [
+        "남북국",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "828년 완도에 청해진을 설치해 해적을 소탕하고 해상 무역을 장악한 인물은?",
+      "back": "장보고. 당의 산둥에 법화원을 세웠고 당-신라-일본을 잇는 해상 교역을 주도했다.",
+      "hint": "법화원",
+      "tags": [
+        "남북국",
+        "인물",
+        "경제"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "889년 진성여왕 때 사벌주에서 일어난 농민 봉기는?",
+      "back": "원종과 애노의 난. 과도한 조세 독촉에 반발해 일어났으며 신라 말 전국적 농민 봉기의 신호탄이 되었다.",
+      "hint": "사벌주=상주",
+      "tags": [
+        "남북국",
+        "사건",
+        "사회"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "698년 동모산에서 발해를 세운 인물과 그 출신은?",
+      "back": "대조영(고왕), 고구려 유민 출신. 고구려 유민과 말갈인을 이끌고 건국했으며, 발해는 고구려 계승 의식을 내세웠다.",
+      "hint": "지린성 둔화 부근",
+      "tags": [
+        "남북국",
+        "인물",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "인안이라는 연호를 쓰고 장문휴를 보내 당의 산둥 등주를 공격한 발해의 왕은?",
+      "back": "무왕(대무예). 당·신라와 대립하며 돌궐·일본과 연결해 세력 균형을 꾀했다.",
+      "hint": "문왕과 혼동 주의",
+      "tags": [
+        "남북국",
+        "인물",
+        "대외관계"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "대흥 연호를 사용하고 상경 용천부로 천도했으며 당과 친선으로 돌아선 발해의 왕은?",
+      "back": "문왕(대흠무). 당의 제도를 받아들여 3성 6부를 정비하고 신라도 등 교통로를 열었다.",
+      "hint": "무왕 다음 왕",
+      "tags": [
+        "남북국",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "발해가 5경 15부 62주의 지방 제도를 정비하고 전성기를 맞은 9세기의 왕은?",
+      "back": "선왕(대인수). 이 무렵 발해는 중국으로부터 바다 동쪽의 융성한 나라라는 뜻의 해동성국으로 불렸다.",
+      "hint": "해동성국",
+      "tags": [
+        "남북국",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "900년 완산주에서 후백제를 세운 인물과 901년 송악에서 후고구려를 세운 인물은?",
+      "back": "견훤과 궁예. 견훤은 완산주(전주)를 도읍으로 삼았고, 궁예는 뒤에 국호를 마진·태봉으로 바꾸고 철원으로 천도했다.",
+      "hint": "후삼국 시대 개막",
+      "tags": [
+        "남북국",
+        "인물",
+        "연표"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "왕건이 고려를 건국한 연도와 도읍은?",
+      "back": "918년, 송악(개경). 궁예를 몰아내고 즉위했으며 935년 신라 경순왕의 항복을 받고 936년 후삼국을 통일했다.",
+      "hint": "국호는 고구려 계승 의미",
+      "tags": [
+        "고려",
+        "연표",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고려가 일리천 전투에서 신검의 후백제군을 격파하고 후삼국을 통일한 연도는?",
+      "back": "936년. 앞서 935년에는 신라 경순왕이 스스로 항복했고, 견훤도 아들 신검에게 쫓겨나 고려에 귀부한 상태였다.",
+      "hint": "일리천 전투",
+      "tags": [
+        "고려",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고려 태조가 지방 호족을 견제하기 위해 실시한 두 가지 제도는?",
+      "back": "사심관 제도와 기인 제도. 중앙 고관을 출신 지역 사심관으로 삼고, 호족 자제를 수도에 머물게 했다. 태조는 흑창을 두어 빈민도 구제했다.",
+      "hint": "호족 통제책",
+      "tags": [
+        "고려",
+        "제도",
+        "인물"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "956년 노비안검법을 실시하고 958년 쌍기의 건의로 과거제를 도입한 고려의 왕은?",
+      "back": "광종. 광덕·준풍 등 독자 연호를 쓰고 스스로 황제라 칭하며 공신·호족 세력을 숙청해 왕권을 강화했다.",
+      "hint": "칭제건원",
+      "tags": [
+        "고려",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "최승로의 시무 28조를 받아들여 유교 정치를 펴고 전국 12목에 지방관을 파견한 고려의 왕은?",
+      "back": "성종. 국자감을 정비하고 의창·상평창을 두었으며 2성 6부의 중앙 관제를 마련했다.",
+      "hint": "982년 시무 28조",
+      "tags": [
+        "고려",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고려 중앙 정치 조직에서 최고 관서인 2성의 이름은?",
+      "back": "중서문하성과 상서성. 중서문하성은 국정을 총괄하고 문하시중이 수상이 되었으며, 상서성 아래 6부가 행정을 나눠 맡았다.",
+      "hint": "당 제도 수용",
+      "tags": [
+        "고려",
+        "제도",
+        "정치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고려에서 중서문하성과 중추원의 고관이 모여 국방 문제를 논의하던 회의 기구와 그 후신은?",
+      "back": "도병마사이며, 원 간섭기에 도평의사사(도당)로 개편되어 국정 전반을 관장했다. 법제 제정은 식목도감이 담당한 것과 구별해야 한다.",
+      "hint": "식목도감과 비교",
+      "tags": [
+        "고려",
+        "제도",
+        "정치"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고려의 토지 제도인 전시과가 처음 마련된 왕과 마지막으로 정비(경정 전시과)된 왕은?",
+      "back": "경종 때 시정 전시과(976)가 마련되었고 문종 때 경정 전시과(1076)로 완성되었다. 관직 복무 대가로 전지와 시지의 수조권을 지급했다.",
+      "hint": "시정→개정→경정",
+      "tags": [
+        "고려",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "993년 거란의 1차 침입 때 소손녕과 담판해 강동 6주를 확보한 인물은?",
+      "back": "서희. 고려가 고구려의 계승국임을 내세워 압록강 동쪽의 강동 6주를 얻고 송과의 관계를 조정하기로 했다.",
+      "hint": "외교 담판",
+      "tags": [
+        "고려",
+        "인물",
+        "대외관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1019년 거란의 3차 침입군을 귀주에서 크게 물리친 인물은?",
+      "back": "강감찬. 소배압이 이끈 거란군을 귀주에서 섬멸했으며(귀주 대첩), 이후 개경에 나성이 축조되었다.",
+      "hint": "소배압 격퇴",
+      "tags": [
+        "고려",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "거란 침입 이후 고려가 국경 방어를 위해 압록강 하구에서 도련포까지 쌓은 방어 시설은?",
+      "back": "천리장성. 덕종~정종 대에 걸쳐 축조되었으며, 개경 주위에는 강감찬의 건의로 나성을 쌓았다.",
+      "hint": "고구려 천리장성과 구별",
+      "tags": [
+        "고려",
+        "제도",
+        "대외관계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "여진 정벌을 위해 숙종 때 윤관의 건의로 조직된 부대와 그 성과는?",
+      "back": "별무반(신기군·신보군·항마군). 예종 때인 1107년 여진을 정벌하고 동북 9성을 쌓았으나 방어의 어려움으로 곧 돌려주었다.",
+      "hint": "1107년",
+      "tags": [
+        "고려",
+        "제도",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1126년 왕실 외척으로 권력을 독점하다 척준경과 함께 반란을 일으킨 인물은?",
+      "back": "이자겸. 인종이 진압에 성공했으나 궁궐이 불타는 등 문벌 귀족 사회의 동요가 드러났다.",
+      "hint": "경원 이씨 가문",
+      "tags": [
+        "고려",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1135년 서경 천도와 금국 정벌을 주장하며 국호를 대위라 하고 봉기한 승려와 이를 진압한 인물은?",
+      "back": "묘청이 서경에서 난을 일으켰고 김부식이 이끄는 관군이 진압했다. 칭제건원과 자주적 전통 사상이 배경이 되었다.",
+      "hint": "연호 천개",
+      "tags": [
+        "고려",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1170년 보현원에서 정중부·이의방 등이 일으켜 문벌 귀족 정치를 무너뜨린 사건은?",
+      "back": "무신정변. 의종이 폐위되고 무신들이 중방을 중심으로 권력을 장악했으며 이후 100년간 무신 정권이 이어졌다.",
+      "hint": "보현원 사건",
+      "tags": [
+        "고려",
+        "사건",
+        "정치"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "최충헌이 설치한 무신 정권 최고 권력 기구와 최우가 인사 행정을 위해 자기 집에 둔 기구는?",
+      "back": "최충헌은 교정도감, 최우는 정방을 두었다. 최우는 문인을 우대하는 서방과 군사 기반인 삼별초도 조직했다.",
+      "hint": "교정도감·정방·서방",
+      "tags": [
+        "고려",
+        "제도",
+        "인물"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1198년 개경에서 왕후장상의 씨가 따로 있느냐며 신분 해방을 외친 사노비의 봉기 모의는?",
+      "back": "만적의 난. 최충헌의 사노비 만적이 주도했으나 사전에 발각되어 실패했다. 무신 집권기 하층민 봉기의 대표 사례다.",
+      "hint": "최충헌의 노비",
+      "tags": [
+        "고려",
+        "사건",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1232년 몽골의 침입에 맞서 최우 정권이 단행한 조치는?",
+      "back": "강화도 천도. 바다에 약한 몽골에 맞서 장기 항전을 꾀했으며, 개경 환도는 1270년에 이루어졌다.",
+      "hint": "환도는 1270년",
+      "tags": [
+        "고려",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1232년 처인성에서 몽골 장수 살리타를 사살한 인물은?",
+      "back": "김윤후. 승려 출신으로 처인 부곡민과 함께 싸웠으며, 이후 충주성 전투에서도 노비 문서를 불태우며 항전을 이끌었다.",
+      "hint": "처인 부곡",
+      "tags": [
+        "고려",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "개경 환도에 반발해 강화도에서 진도·제주도로 근거지를 옮기며 항전한 부대와 지도자들은?",
+      "back": "삼별초. 배중손이 진도 용장성에서, 김통정이 제주 항파두리에서 항전했으나 1273년 여몽 연합군에 진압되었다.",
+      "hint": "1270~1273년",
+      "tags": [
+        "고려",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1356년 쌍성총관부를 무력으로 되찾고 전민변정도감을 설치한 고려의 왕은?",
+      "back": "공민왕. 기철 등 친원 세력을 숙청하고 정동행성 이문소를 폐지했으며 신돈을 등용해 권문세족이 빼앗은 토지와 노비를 되돌렸다.",
+      "hint": "반원 자주 개혁",
+      "tags": [
+        "고려",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1388년 요동 정벌에 나섰던 이성계가 군대를 돌려 정권을 장악한 사건은?",
+      "back": "위화도 회군. 4불가론을 내세워 회군한 뒤 우왕과 최영을 제거하고 신진 사대부와 함께 개혁을 주도했다.",
+      "hint": "4불가론",
+      "tags": [
+        "고려",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1391년 신진 사대부가 권문세족의 경제 기반을 무너뜨리기 위해 실시한 토지 제도는?",
+      "back": "과전법. 경기 지역 토지의 수조권을 전·현직 관리에게 지급했으며 조선 건국의 경제적 기반이 되었다.",
+      "hint": "경기 한정",
+      "tags": [
+        "고려",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "몽골 침입을 물리치려는 염원으로 강화도에서 조판한 대장경과 현재 보관 장소는?",
+      "back": "팔만대장경(재조대장경). 합천 해인사 장경판전에 보관되어 있으며 판전 건물은 유네스코 세계유산, 대장경판은 세계기록유산이다.",
+      "hint": "초조대장경은 소실",
+      "tags": [
+        "고려",
+        "문화유산",
+        "대외관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1377년 청주 흥덕사에서 간행된, 현존하는 세계에서 가장 오래된 금속 활자본은?",
+      "back": "직지심체요절(직지). 현재 프랑스 국립도서관에 소장되어 있으며 유네스코 세계기록유산으로 등재되었다.",
+      "hint": "박병선 박사가 확인",
+      "tags": [
+        "고려",
+        "문화유산",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "기록상 세계 최초의 금속 활자 인쇄물로 전하는 1234년 무렵의 책은?",
+      "back": "상정고금예문. 이규보의 동국이상국집에 금속 활자로 28부를 찍었다는 기록만 남아 있고 실물은 전하지 않는다.",
+      "hint": "실물 없음, 직지와 구별",
+      "tags": [
+        "고려",
+        "문화유산",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "12세기 고려에서 발달한, 표면을 파내고 다른 흙을 메워 무늬를 내는 독창적 자기 기법은?",
+      "back": "상감 기법(상감 청자). 청자 상감 운학문 매병이 대표작이며, 고려 말 이후 분청사기로 변화해 갔다.",
+      "hint": "운학문 매병",
+      "tags": [
+        "고려",
+        "문화유산",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1145년 김부식이 왕명으로 편찬한 현존 최고(最古)의 역사서와 그 서술 체제는?",
+      "back": "삼국사기, 기전체. 유교적 합리주의 사관에 따라 삼국의 역사를 정리했다.",
+      "hint": "인종 대",
+      "tags": [
+        "고려",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "승려 일연이 충렬왕 대에 지은, 단군 신화를 수록한 역사서는?",
+      "back": "삼국유사. 불교사와 민간 설화를 풍부하게 담았으며, 비슷한 시기 이승휴는 제왕운기에서 단군을 우리 역사의 시작으로 서술했다.",
+      "hint": "제왕운기와 함께 기억",
+      "tags": [
+        "고려",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "고려 불교에서 교관겸수를 주장한 승려와 정혜쌍수·돈오점수를 주장한 승려를 각각 말하면?",
+      "back": "의천과 지눌. 의천은 해동 천태종을 열어 교종 중심의 통합을, 지눌은 수선사 결사를 통해 선종 중심의 통합을 추구했다.",
+      "hint": "천태종/조계종",
+      "tags": [
+        "고려",
+        "인물",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "조선이 건국된 연도와 한양 천도가 이루어진 연도는?",
+      "back": "1392년 건국, 1394년 한양 천도. 이성계가 공양왕의 양위를 받아 즉위했고 정도전이 경복궁 등 새 도읍 설계를 주도했다.",
+      "hint": "정도전의 설계",
+      "tags": [
+        "조선 전기",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "두 차례 왕자의 난을 거쳐 즉위해 6조 직계제와 호패법을 시행하고 사병을 혁파한 조선의 왕은?",
+      "back": "태종(이방원). 의정부의 권한을 줄여 왕권을 강화하고 양전 사업과 호구 파악에 힘썼다.",
+      "hint": "신문고 설치",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "훈민정음이 창제된 해와 반포된 해는?",
+      "back": "1443년 창제, 1446년 반포. 세종이 백성을 가르치는 바른 소리라는 뜻으로 만들었으며 용비어천가가 훈민정음으로 지어졌다.",
+      "hint": "세종",
+      "tags": [
+        "조선 전기",
+        "문화유산",
+        "연표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "세종 대 북방 영토 개척에서 4군과 6진을 각각 개척한 인물은?",
+      "back": "4군은 최윤덕, 6진은 김종서. 압록강과 두만강을 경계로 하는 오늘날 국경선의 바탕이 되었다.",
+      "hint": "압록강·두만강",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "세종 대에 만들어진 강우량 측정 기구와 자동 물시계의 이름은?",
+      "back": "측우기와 자격루. 장영실 등이 제작을 주도했으며 해시계인 앙부일구도 이 시기에 만들어졌다.",
+      "hint": "장영실",
+      "tags": [
+        "조선 전기",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "세종 대 한양을 기준으로 천체 운동을 계산한 역법서는?",
+      "back": "칠정산(내편·외편). 중국 수시력과 아라비아 회회력을 참고해 우리 실정에 맞게 만든 자주적 역법이다.",
+      "hint": "내편·외편",
+      "tags": [
+        "조선 전기",
+        "문화유산",
+        "제도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1453년 계유정난으로 정권을 잡고 즉위해 6조 직계제를 부활시키고 직전법을 실시한 왕은?",
+      "back": "세조(수양대군). 김종서·황보인을 제거하고 단종을 몰아냈으며, 이에 반발한 사육신의 단종 복위 운동을 진압했다.",
+      "hint": "사육신",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "경국대전을 완성해 반포하고 홍문관을 설치한 조선의 왕은?",
+      "back": "성종. 1485년 경국대전을 시행해 유교적 통치 체제를 완성했으며 국가 의례서인 국조오례의도 편찬했다.",
+      "hint": "1485년",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "조선에서 언론 기능을 담당한 3사에 해당하는 세 관청은?",
+      "back": "사헌부·사간원·홍문관. 관리 감찰, 국왕에 대한 간쟁, 경연과 자문을 맡아 권력 독점을 견제했다.",
+      "hint": "대간=사헌부+사간원",
+      "tags": [
+        "조선 전기",
+        "제도",
+        "정치"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "현량과 실시와 위훈 삭제를 추진하다 1519년 기묘사화로 제거된 사림의 개혁가는?",
+      "back": "조광조. 중종 대 소격서 폐지, 향약 보급 등 급진적 개혁을 추진하다 훈구 세력의 반격으로 사사되었다.",
+      "hint": "주초위왕 이야기",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "조선 4대 사화를 일어난 순서대로 나열하면?",
+      "back": "무오사화(1498)→갑자사화(1504)→기묘사화(1519)→을사사화(1545). 무오사화는 김종직의 조의제문이 발단이었고 을사사화는 외척 대윤·소윤의 다툼에서 비롯됐다.",
+      "hint": "무갑기을",
+      "tags": [
+        "조선 전기",
+        "연표",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "세조 즉위를 도운 공신 집단과 성종 대부터 3사를 통해 중앙에 진출한 세력을 각각 부르는 말은?",
+      "back": "훈구와 사림. 사림은 김종직 등 영남 출신 성리학자들이 중심이었고, 네 차례 사화에도 서원과 향약을 기반으로 성장해 선조 대 정국을 주도했다.",
+      "hint": "사화의 두 당사자",
+      "tags": [
+        "조선 전기",
+        "정치",
+        "비교"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1543년 주세붕이 세운 우리나라 최초의 서원과 이후 사액을 받은 이름은?",
+      "back": "백운동 서원이며, 이황의 건의로 소수 서원으로 사액되었다. 사액 서원은 토지·노비·서적과 면세 특권을 받았다.",
+      "hint": "안향을 배향",
+      "tags": [
+        "조선 전기",
+        "제도",
+        "문화유산"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "조선 시대 향촌 사회의 자치 규약으로, 덕업상권 등 4대 덕목을 내세운 것은?",
+      "back": "향약. 중종 대 조광조가 보급을 시작했고 이황(예안 향약)·이이(해주 향약)가 우리 실정에 맞게 정착시켰다.",
+      "hint": "덕업상권·과실상규",
+      "tags": [
+        "조선 전기",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "성학십도를 지은 학자와 성학집요를 지은 학자를 각각 말하면?",
+      "back": "성학십도는 이황, 성학집요는 이이. 이황은 일본 성리학에 영향을 주었고, 이이는 동호문답에서 수미법 등 개혁안을 제시했다.",
+      "hint": "퇴계/율곡",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "임진왜란이 시작된 연도와 개전 직후 부산에서 순절한 두 장수는?",
+      "back": "1592년. 부산진 첨사 정발과 동래 부사 송상현이 왜군에 맞서 싸우다 전사했고, 선조는 의주로 피란했다.",
+      "hint": "동래성 전투",
+      "tags": [
+        "조선 전기",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1592년 이순신이 학익진 전법으로 왜 수군을 대파한 해전은?",
+      "back": "한산도 대첩. 남해의 제해권을 장악해 왜군의 수륙 병진 작전을 좌절시켰으며 왜란 3대첩의 하나로 꼽힌다.",
+      "hint": "학익진",
+      "tags": [
+        "조선 전기",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1593년 권율이 서울 근교 산성에서 왜군을 물리친 전투는?",
+      "back": "행주 대첩. 관군과 백성이 힘을 합쳐 승리했으며 진주 대첩·한산도 대첩과 함께 임진왜란 3대첩으로 불린다.",
+      "hint": "행주산성",
+      "tags": [
+        "조선 전기",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1592년 10월 진주성에서 왜군의 대공세를 막아 낸 진주 목사는?",
+      "back": "김시민. 진주 대첩으로 곡창 지대인 전라도 진출을 저지했으나, 이듬해 2차 진주성 전투에서는 성이 함락되었다.",
+      "hint": "1차 진주성 전투",
+      "tags": [
+        "조선 전기",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "임진왜란 중 설치된 중앙군으로, 포수·사수·살수의 삼수병으로 편성된 부대는?",
+      "back": "훈련도감. 1593년 유성룡의 건의로 설치되었으며 급료를 받는 상비군이라는 점이 특징이다. 이후 5군영 체제의 중심이 되었다.",
+      "hint": "삼수병",
+      "tags": [
+        "조선 전기",
+        "제도",
+        "군사"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1597년 이순신이 13척으로 왜 수군을 물리친 해전과 1598년 이순신이 전사한 해전은?",
+      "back": "명량 해전과 노량 해전. 명량에서는 울돌목의 물살을 이용해 대승을 거뒀고, 노량 해전을 끝으로 7년간의 왜란이 마무리되었다.",
+      "hint": "정유재란",
+      "tags": [
+        "조선 전기",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "조선 전기 토지 제도가 과전법 이후 변화해 간 순서는?",
+      "back": "과전법(1391)→직전법(세조, 현직 관리에게만 지급)→관수 관급제(성종, 국가가 조세를 거두어 지급)→직전법 폐지(명종). 수조권 지급이 소멸하며 녹봉제가 자리 잡았다.",
+      "hint": "지급 대상 축소 과정",
+      "tags": [
+        "조선 전기",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "사초와 시정기를 바탕으로 왕의 사후 실록청에서 편찬한 조선의 국가 기록물은?",
+      "back": "조선왕조실록. 태조부터 철종까지의 기록이 유네스코 세계기록유산으로 등재되었으며 사고에 나누어 보관했다.",
+      "hint": "4대 사고 분산 보관",
+      "tags": [
+        "조선 전기",
+        "문화유산",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1402년 태종 대에 제작된, 현존하는 동양에서 가장 오래된 세계 지도는?",
+      "back": "혼일강리역대국도지도. 중국 중심 세계관 속에서도 유럽·아프리카까지 그려 조선 초 지리 지식의 폭을 보여 준다.",
+      "hint": "필사본이 일본에 전함",
+      "tags": [
+        "조선 전기",
+        "문화유산",
+        "연표"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1447년 안평대군이 꿈에서 본 이상 세계를 안견이 그린 그림은?",
+      "back": "몽유도원도. 조선 전기 회화의 대표작으로, 자연스러운 현실 공간과 환상적인 도원 세계를 함께 담았다.",
+      "hint": "안견",
+      "tags": [
+        "조선 전기",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "명과 후금 사이에서 중립 외교를 펴다 서인이 주도한 1623년 정변으로 폐위된 왕은?",
+      "back": "광해군. 인조반정으로 물러났으며, 반정 이후 집권한 서인 정권은 친명 배금 정책을 펴 후금을 자극했다.",
+      "hint": "인조반정",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1627년 후금이 침입해 조선과 형제 관계를 맺고 물러간 전쟁은?",
+      "back": "정묘호란. 정봉수·이립 등이 의병으로 항전했으며, 이후 후금이 청으로 국호를 바꾸고 군신 관계를 요구하면서 병자호란으로 이어졌다.",
+      "hint": "형제 관계",
+      "tags": [
+        "조선 후기",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1636년 청 태종의 침입으로 인조가 남한산성에서 항전하다 항복한 전쟁과 그 굴욕적 의식은?",
+      "back": "병자호란과 삼전도의 항복. 45일 항전 끝에 군신 관계를 맺었고 소현세자와 봉림대군이 청에 인질로 끌려갔다.",
+      "hint": "삼전도비",
+      "tags": [
+        "조선 후기",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "청에 당한 치욕을 씻자며 효종이 송시열·이완 등과 추진한 정책은?",
+      "back": "북벌 운동. 성곽 수리와 군대 양성을 추진했으나 효종의 죽음으로 실현되지 못했고, 훗날 북학론으로 흐름이 바뀌었다.",
+      "hint": "효종 대",
+      "tags": [
+        "조선 후기",
+        "정치",
+        "인물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "효종 대 청의 요청으로 조선 조총 부대가 러시아군과 싸운 사건은?",
+      "back": "나선 정벌. 1654년과 1658년 두 차례 헤이룽강 방면에 파병되어 성과를 거두었다. 북벌을 준비하던 군사력이 동원된 사례다.",
+      "hint": "나선=러시아",
+      "tags": [
+        "조선 후기",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "공납을 토지 기준으로 쌀·베·돈으로 내게 한 제도와 처음 실시된 시기·지역은?",
+      "back": "대동법, 1608년 광해군 때 이원익의 건의로 경기도에서 시작. 숙종 대에 이르러 전국으로 확대되었고, 관청에 물품을 조달하는 공인이 등장해 상품 화폐 경제가 발달했다.",
+      "hint": "공인 등장",
+      "tags": [
+        "조선 후기",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1750년 영조가 군포 부담을 2필에서 1필로 줄인 제도와 부족분 보충 방법은?",
+      "back": "균역법. 부족한 재정은 결작(토지 1결당 2두), 선무군관포, 어장세·염세·선박세 등으로 보충했다.",
+      "hint": "결작 2두",
+      "tags": [
+        "조선 후기",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "인조 대에 전세를 풍흉에 관계없이 토지 1결당 쌀 4두로 고정한 제도는?",
+      "back": "영정법. 전세 부담은 낮아졌으나 각종 부가세 때문에 농민의 실질 부담은 크게 줄지 않았다. 대동법(공납)·균역법(군포)과 대상 세목을 구별해야 한다.",
+      "hint": "전세 개혁",
+      "tags": [
+        "조선 후기",
+        "제도",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "탕평비를 세우고 속대전을 편찬했으며 청계천 준설을 시행한 조선의 왕은?",
+      "back": "영조. 붕당의 폐해를 줄이려 탕평책을 폈고 가혹한 형벌을 폐지했으며 균역법으로 군역 부담을 낮췄다.",
+      "hint": "성균관 앞 탕평비",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "규장각을 육성하고 장용영을 설치했으며 신해통공으로 금난전권을 폐지한 왕은?",
+      "back": "정조. 초계문신제로 젊은 관료를 재교육하고 서얼 출신 검서관을 등용했으며 수원 화성을 건설했다.",
+      "hint": "1791년 신해통공",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "정조가 건설한 계획 도시 성곽으로, 거중기가 사용된 유네스코 세계유산은?",
+      "back": "수원 화성. 정약용이 고안한 거중기와 녹로가 공사에 활용되었고, 축조 전 과정이 화성성역의궤에 기록되었다.",
+      "hint": "화성성역의궤",
+      "tags": [
+        "조선 후기",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "순조·헌종·철종 3대에 걸쳐 안동 김씨 등 소수 외척 가문이 권력을 독점한 정치 형태는?",
+      "back": "세도 정치. 매관매직과 삼정의 문란이 심해져 농민 봉기가 잇따랐다.",
+      "hint": "약 60년간",
+      "tags": [
+        "조선 후기",
+        "정치",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1811년 평안도 지역 차별과 세도 정치에 반발해 일어난 봉기는?",
+      "back": "홍경래의 난. 몰락 양반 홍경래가 광산 노동자·상인 등과 봉기해 청천강 이북을 장악했으나 정주성에서 진압되었다.",
+      "hint": "정주성",
+      "tags": [
+        "조선 후기",
+        "사건",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1862년 진주에서 시작되어 전국으로 번진 농민 봉기와 정부의 대응은?",
+      "back": "임술 농민 봉기. 유계춘의 주도로 백낙신의 탐학에 항거했으며, 정부는 안핵사 박규수를 파견하고 삼정이정청을 설치했으나 개혁은 흐지부지되었다.",
+      "hint": "삼정이정청",
+      "tags": [
+        "조선 후기",
+        "사건",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "세도 정치기 수취 체제 문란을 가리키는 삼정은 무엇무엇인가?",
+      "back": "전정(토지세)·군정(군포)·환곡(구휼미 대여). 특히 환곡의 폐단이 가장 심해 농민 봉기의 주요 원인이 되었다.",
+      "hint": "환곡 폐단이 최악",
+      "tags": [
+        "조선 후기",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "중농학파 실학자 유형원·이익·정약용이 각각 주장한 토지 개혁론은?",
+      "back": "유형원은 균전론(반계수록), 이익은 한전론(성호사설), 정약용은 여전론(공동 소유·공동 경작, 뒤에 정전제)을 주장했다.",
+      "hint": "균전·한전·여전",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "상공업 진흥과 청 문물 수용을 주장한 조선 후기 실학의 흐름과 대표 학자들은?",
+      "back": "중상학파(북학파). 유수원(우서), 홍대용(의산문답, 지전설), 박지원, 박제가가 대표적이며 수레와 선박 이용, 화폐 유통을 강조했다.",
+      "hint": "북학파",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "목민심서·경세유표·흠흠신서를 지은 실학자는?",
+      "back": "정약용. 지방관의 자세, 국가 제도 개혁, 형법 운영을 각각 다뤘으며 신유박해로 강진에서 유배 생활을 하며 저술에 힘썼다.",
+      "hint": "강진 유배",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "문화유산"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "청에 다녀온 견문을 열하일기로 남기고 양반전 등에서 양반의 허례를 풍자한 실학자는?",
+      "back": "박지원. 수레와 선박의 이용, 화폐 유통의 필요성을 주장했으며 허생전·호질도 그의 작품이다.",
+      "hint": "연암",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "문화유산"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "북학의에서 소비를 우물물에 비유하며 소비 촉진을 주장한 실학자는?",
+      "back": "박제가. 서얼 출신으로 정조 때 규장각 검서관으로 등용되었으며 청과의 통상 확대를 주장했다.",
+      "hint": "우물론",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1861년 김정호가 제작한, 10리마다 눈금을 표시한 22첩 목판본 전국 지도는?",
+      "back": "대동여지도. 분첩절첩식으로 만들어 휴대가 편했고 목판으로 대량 인쇄가 가능했다.",
+      "hint": "분첩절첩식",
+      "tags": [
+        "조선 후기",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "허준이 광해군 대에 완성한 의학 서적으로, 유네스코 세계기록유산에 오른 책은?",
+      "back": "동의보감. 1610년 완성되었으며 전통 의학을 집대성해 동아시아 의학에 큰 영향을 주었다.",
+      "hint": "1610년 완성",
+      "tags": [
+        "조선 후기",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "허균이 지은 것으로 전하는, 서얼 차별을 비판한 최초의 한글 소설은?",
+      "back": "홍길동전. 조선 후기에는 한글 소설과 사설시조가 유행하고 판소리·탈춤 등 서민 문화가 발달했다.",
+      "hint": "서얼 차별 비판",
+      "tags": [
+        "조선 후기",
+        "문화유산",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "우리 산천을 사실적으로 그리는 진경산수화를 개척한 화가와 대표작 두 점은?",
+      "back": "정선, 인왕제색도와 금강전도. 이후 김홍도·신윤복의 풍속화가 서민과 양반의 생활상을 담았다.",
+      "hint": "겸재",
+      "tags": [
+        "조선 후기",
+        "문화유산",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1860년 최제우가 경주에서 창시한 종교와 핵심 사상은?",
+      "back": "동학. 시천주(한울님을 모심) 사상을 바탕으로 신분 차별에 반대했으며, 정부는 혹세무민 죄목으로 1864년 최제우를 처형했다.",
+      "hint": "서학에 대응",
+      "tags": [
+        "조선 후기",
+        "인물",
+        "사회"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "경복궁을 중건하고 서원을 47개만 남기고 철폐했으며 호포제를 실시한 인물은?",
+      "back": "흥선대원군. 경복궁 중건 비용 마련을 위해 당백전을 발행했고, 사창제로 환곡의 폐단을 바로잡으려 했다.",
+      "hint": "당백전",
+      "tags": [
+        "개항기·대한제국",
+        "인물",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1866년 프랑스군이 강화도를 침공해 외규장각 도서를 약탈해 간 사건은?",
+      "back": "병인양요. 병인박해를 구실로 침입했으며 양헌수 부대가 정족산성에서, 한성근 부대가 문수산성에서 항전했다.",
+      "hint": "외규장각 의궤",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1871년 미국이 제너럴셔먼호 사건을 구실로 강화도를 침공한 사건과 항전한 장수는?",
+      "back": "신미양요, 어재연. 광성보에서 결사 항전했으며 수(帥)자기를 빼앗겼다. 이후 흥선대원군은 전국에 척화비를 세웠다.",
+      "hint": "광성보 전투",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "운요호 사건을 계기로 1876년 체결된 조선 최초의 근대적 조약과 대표적 불평등 조항은?",
+      "back": "강화도 조약(조일수호조규). 부산·원산·인천 개항과 함께 해안 측량권과 영사 재판권(치외법권)을 인정한 불평등 조약이었다.",
+      "hint": "해안 측량권·치외법권",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1882년 조선이 서양 국가와 맺은 최초의 조약과 그 배경이 된 책은?",
+      "back": "조미 수호 통상 조약이며 황준헌의 조선책략 유포가 배경이 되었다. 거중조정과 관세 조항을 두었으나 최혜국 대우를 인정한 불평등 조약이었다.",
+      "hint": "거중조정·최혜국 대우",
+      "tags": [
+        "개항기·대한제국",
+        "대외관계",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1882년 구식 군인들이 별기군과의 차별에 반발해 일으킨 사건과 그 결과 맺어진 조약은?",
+      "back": "임오군란과 제물포 조약. 일본 공사관 경비병 주둔을 허용했고, 청이 군란을 진압하면서 내정 간섭이 심해지고 조청 상민 수륙 무역 장정이 체결되었다.",
+      "hint": "별기군 차별",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1884년 김옥균 등 급진 개화파가 우정총국 개국 축하연을 이용해 일으킨 정변은?",
+      "back": "갑신정변. 14개조 개혁 정강을 발표했으나 청군의 개입으로 3일 만에 실패했고, 이후 한성 조약과 톈진 조약이 맺어졌다.",
+      "hint": "3일 천하",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1894년 전봉준이 이끈 농민군이 정부와 전주 화약을 맺은 뒤 전라도 각지에 설치한 자치 개혁 기구는?",
+      "back": "집강소. 폐정 개혁안을 실천했으며, 앞서 농민군은 황토현·황룡촌 전투에서 관군을 격파하고 전주성을 점령했다.",
+      "hint": "폐정 개혁 12개조",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1894년 군국기무처가 주도한 개혁에서 폐지된 대표적 신분·인사 제도는?",
+      "back": "신분제(공사 노비 제도)와 과거제. 1차 갑오개혁은 이 밖에 조혼 금지, 과부 재가 허용, 도량형 통일, 연좌제 폐지를 담았다.",
+      "hint": "군국기무처",
+      "tags": [
+        "개항기·대한제국",
+        "제도",
+        "사건"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1895년 일본이 명성황후를 시해한 사건과 직후 개혁에서 내려져 의병을 촉발한 조치는?",
+      "back": "을미사변과 단발령. 을미개혁은 태양력과 건양 연호를 채택했으며, 을미의병은 유인석·이소응 등 위정척사 유생들이 주도했다.",
+      "hint": "을미의병",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1896년 고종이 러시아 공사관으로 거처를 옮긴 사건은?",
+      "back": "아관파천. 을미사변 이후 신변 위협을 느낀 고종이 단행했으며, 이 시기 열강의 이권 침탈이 심해졌다.",
+      "hint": "1년 뒤 경운궁 환궁",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1896년 서재필 등이 창립해 만민 공동회를 열고 헌의 6조를 결의한 단체는?",
+      "back": "독립협회. 독립문을 세우고 독립신문을 발간했으며 러시아의 절영도 조차 요구를 저지하는 등 이권 수호 운동을 폈다.",
+      "hint": "만민 공동회",
+      "tags": [
+        "개항기·대한제국",
+        "제도",
+        "사건"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1897년 고종이 환구단에서 황제 즉위식을 올리며 선포한 나라 이름과 연호는?",
+      "back": "대한제국, 광무. 1899년 대한국 국제를 제정해 황제의 전제권을 명시했다.",
+      "hint": "환구단",
+      "tags": [
+        "개항기·대한제국",
+        "연표",
+        "제도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "옛 제도를 근본으로 새 제도를 참작한다는 대한제국 개혁의 원칙과 대표 정책은?",
+      "back": "구본신참. 광무개혁은 양전 사업을 벌여 지계(토지 소유 문서)를 발급하고 원수부를 설치했으며 상공업 진흥책을 폈다.",
+      "hint": "지계 발급",
+      "tags": [
+        "개항기·대한제국",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1905년 일본이 대한제국의 외교권을 빼앗은 조약과 이에 따라 설치된 통치 기구는?",
+      "back": "을사늑약과 통감부. 초대 통감으로 이토 히로부미가 부임했으며, 민영환은 자결로 항거하고 장지연은 황성신문에 시일야방성대곡을 실었다.",
+      "hint": "시일야방성대곡",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1907년 고종이 을사늑약의 부당함을 알리려 만국 평화 회의에 보낸 세 특사는?",
+      "back": "이상설·이준·이위종. 헤이그 특사 사건을 구실로 일본은 고종을 강제 퇴위시키고 정미 7조약으로 대한제국 군대를 해산시켰다.",
+      "hint": "고종 강제 퇴위",
+      "tags": [
+        "개항기·대한제국",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1907년 대구에서 서상돈 등이 시작한, 나라 빚을 갚자는 경제적 구국 운동은?",
+      "back": "국채보상운동. 금연·금주와 비녀·가락지 모으기로 확산되었고 대한매일신보 등 언론이 후원했으나 통감부의 방해로 좌절되었다.",
+      "hint": "대한매일신보 후원",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1907년 안창호·양기탁 등이 세운 비밀 결사로, 대성학교·오산학교를 설립한 단체는?",
+      "back": "신민회. 공화정 수립을 목표로 태극서관·자기 회사를 운영하고 남만주 삼원보에 독립운동 기지를 건설했으며 1911년 105인 사건으로 와해되었다.",
+      "hint": "105인 사건",
+      "tags": [
+        "개항기·대한제국",
+        "제도",
+        "인물"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1907년 군대 해산 이후 결성된 13도 창의군이 시도한 작전과 총대장은?",
+      "back": "서울 진공 작전, 총대장 이인영. 해산 군인의 합류로 전투력이 강해진 정미의병이 연합했으나 작전은 실패했다.",
+      "hint": "정미의병",
+      "tags": [
+        "개항기·대한제국",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1909년 하얼빈에서 이토 히로부미를 사살한 인물과 옥중 저술은?",
+      "back": "안중근, 동양평화론(미완). 뤼순 감옥에서 1910년 순국했으며 단지 동맹으로도 알려져 있다.",
+      "hint": "뤼순 감옥",
+      "tags": [
+        "개항기·대한제국",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "일제에 국권을 빼앗긴 연도와 이후 식민 통치의 최고 기구는?",
+      "back": "1910년, 조선총독부. 총독은 일본 육해군 대장 출신이 임명되어 입법·사법·행정·군사권을 장악했다.",
+      "hint": "경술국치",
+      "tags": [
+        "일제강점기",
+        "연표",
+        "제도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1910년대 일제 통치 방식과 이 시기 토지 정책은?",
+      "back": "헌병 경찰을 앞세운 무단 통치이며, 토지 조사 사업(1910~1918)을 벌여 총독부 지세 수입을 늘리고 미신고 토지를 빼앗았다. 조선 태형령과 회사령(허가제)도 이 시기다.",
+      "hint": "기한부 신고제",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1919년 3월 1일 시작된 만세 운동의 배경 두 가지와 가장 큰 결과는?",
+      "back": "윌슨의 민족 자결주의와 도쿄 유학생의 2·8 독립 선언이 배경이 되었고, 대한민국 임시정부 수립의 계기가 되었다. 일제는 통치 방식을 문화 통치로 바꿨다.",
+      "hint": "유관순, 제암리 사건",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "사회운동"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1919년 상하이에서 수립된 대한민국 임시정부의 정치 체제와 비밀 연락 조직은?",
+      "back": "삼권 분립에 기초한 민주 공화제였으며, 국내와의 연락을 위해 연통제와 교통국을 운영하고 독립 공채를 발행했다.",
+      "hint": "초대 대통령 이승만",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "3·1 운동 이후 일제가 표방한 통치 방식과 1920년 시작된 농업 수탈 정책은?",
+      "back": "문화 통치(보통 경찰제, 조선일보·동아일보 발행 허용)와 산미 증식 계획. 증산량보다 많은 쌀이 일본으로 반출되어 조선의 식량 사정은 악화되었다.",
+      "hint": "기만적 유화 통치",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1920년 6월 홍범도의 대한독립군 등이 일본군을 격파한 전투는?",
+      "back": "봉오동 전투. 최진동의 군무도독부군 등 연합 부대가 함께 싸웠으며, 같은 해 10월 청산리 대첩으로 이어졌다.",
+      "hint": "홍범도",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1920년 10월 김좌진의 북로군정서군과 홍범도 연합 부대가 6일간 일본군을 대파한 전투는?",
+      "back": "청산리 대첩. 백운평·어랑촌 등지에서 승리한 독립 전쟁 사상 최대의 전과로 꼽힌다.",
+      "hint": "김좌진",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "청산리 대첩 직후 일제가 간도 한인 사회를 보복 학살한 사건과 1921년 러시아에서 독립군이 희생된 사건은?",
+      "back": "간도 참변과 자유시 참변. 독립군은 밀산부에 집결해 대한독립군단을 결성하고 러시아령으로 이동했다가 자유시에서 큰 피해를 입었다.",
+      "hint": "1920~1921년",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1919년 김원봉이 조직해 식민 통치 기관 파괴와 요인 처단에 나선 단체와 그 활동 지침은?",
+      "back": "의열단이며, 신채호가 1923년 작성한 조선혁명선언을 지침으로 삼았다. 김익상(조선총독부)·김상옥(종로 경찰서)·나석주(동양척식주식회사) 의거가 대표적이다.",
+      "hint": "조선혁명선언",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "인물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1931년 김구가 조직한 단체와 1932년 이 단체 소속 두 의사의 의거는?",
+      "back": "한인애국단. 이봉창은 도쿄에서 일왕 행렬에 폭탄을 던졌고, 윤봉길은 상하이 훙커우 공원에서 일본군 수뇌부를 처단해 중국 국민당 정부가 임시정부를 지원하는 계기를 만들었다.",
+      "hint": "훙커우 공원 의거",
+      "tags": [
+        "일제강점기",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "조선 사람 조선 것이라는 구호 아래 1920년 평양에서 조만식 등이 시작한 운동은?",
+      "back": "물산 장려 운동. 토산품 애용과 자급자족을 내세운 실력 양성 운동이었으나 자본가 배만 불린다는 사회주의 계열의 비판도 받았다.",
+      "hint": "토산품 애용",
+      "tags": [
+        "일제강점기",
+        "사회운동",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "한민족 1천만이 한 사람이 1원씩이라는 구호로 이상재 등이 전개한 교육 운동은?",
+      "back": "민립 대학 설립 운동. 모금 부진과 일제의 방해로 실패했고, 일제는 1924년 경성제국대학을 세워 여론을 무마했다.",
+      "hint": "경성제국대학",
+      "tags": [
+        "일제강점기",
+        "사회운동",
+        "제도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1926년 순종의 인산일에 일어난 만세 운동과 그 의의는?",
+      "back": "6·10 만세 운동. 사회주의 세력과 학생이 함께 준비하면서 민족주의·사회주의 진영의 연대 가능성을 보여 주어 민족 유일당 운동의 계기가 되었다.",
+      "hint": "신간회 창립의 배경",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "사회운동"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1929년 한일 학생 충돌에서 비롯되어 3·1 운동 이후 최대 규모로 확산된 항일 운동은?",
+      "back": "광주 학생 항일 운동. 나주역 사건이 발단이었고 신간회가 진상 조사단을 파견해 지원했다.",
+      "hint": "11월 3일",
+      "tags": [
+        "일제강점기",
+        "사건",
+        "사회운동"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1927년 비타협적 민족주의 세력과 사회주의 세력이 연합해 창립한 최대 규모의 합법적 항일 단체는?",
+      "back": "신간회. 초대 회장은 이상재였고 기회주의 배격 등의 강령을 내세웠으며 1931년 해소되었다. 자매 단체로 여성 단체인 근우회가 있다.",
+      "hint": "민족 유일당 운동",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "사회운동"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1923년 진주에서 백정에 대한 차별 철폐를 내걸고 조직된 단체와 그 운동은?",
+      "back": "조선형평사, 형평 운동. 갑오개혁으로 법적 신분제는 폐지되었지만 남아 있던 사회적 차별에 맞선 인권 운동이었다.",
+      "hint": "저울처럼 평등하게",
+      "tags": [
+        "일제강점기",
+        "사회운동",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1930년대 후반 이후 일제가 강요한 민족 말살 정책의 사례 세 가지는?",
+      "back": "황국 신민 서사 암송, 신사 참배, 창씨개명. 내선일체·일선동조론을 내세웠으며 1938년 국가 총동원법으로 인력과 물자를 수탈했다.",
+      "hint": "병참 기지화와 병행",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "한글 맞춤법 통일안을 제정하고 우리말 큰사전 편찬을 준비하다 1942년 일제의 탄압을 받은 단체는?",
+      "back": "조선어학회. 이윤재·최현배 등 회원들이 조선어학회 사건으로 투옥되었고 사전 편찬은 광복 후에 완성되었다.",
+      "hint": "우리말 큰사전",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "문화유산"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "역사를 아와 비아의 투쟁으로 정의한 조선상고사의 저자는?",
+      "back": "신채호. 독사신론에서 민족 중심 사관을 제시했으며 조선사연구초에서 묘청의 난을 높이 평가했다. 백남운은 유물 사관으로 식민 사학의 정체성론을 반박한 것과 구별된다.",
+      "hint": "민족주의 사학",
+      "tags": [
+        "일제강점기",
+        "인물",
+        "문화유산"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1940년 충칭에서 창설된 대한민국 임시정부의 정규군과 총사령관은?",
+      "back": "한국광복군, 지청천. 태평양 전쟁 발발 후 대일 선전 포고를 하고 인도·미얀마 전선에 참전했으며 미국 OSS와 국내 진공 작전을 준비했다.",
+      "hint": "국내 진공 작전",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "인물"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1938년 김원봉이 중국 우한에서 조직한, 중국 관내 최초의 한인 무장 부대는?",
+      "back": "조선의용대. 중국 국민당 정부의 지원을 받았으며 일부는 화북으로 이동해 조선의용군으로 개편되었고, 김원봉 등 일부는 한국광복군에 합류했다.",
+      "hint": "우한에서 창설",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "인물"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1930년대 초 북만주의 한국독립군과 남만주의 조선혁명군을 이끈 지휘관과 대표 전투를 짝지으면?",
+      "back": "한국독립군은 지청천이 이끌어 쌍성보·대전자령 전투에서, 조선혁명군은 양세봉이 이끌어 영릉가·흥경성 전투에서 한중 연합 작전으로 승리했다.",
+      "hint": "북만주/남만주 구별",
+      "tags": [
+        "일제강점기",
+        "인물",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1931년 동아일보가 주도한 농촌 계몽 운동은?",
+      "back": "브나로드 운동. 민중 속으로라는 뜻의 러시아어 구호를 내걸고 한글 보급과 계몽 활동을 폈다. 조선일보의 문자 보급 운동과 함께 기억해 둔다.",
+      "hint": "민중 속으로",
+      "tags": [
+        "일제강점기",
+        "사회운동",
+        "문화유산"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1943년 미·영·중 정상이 한국의 독립을 처음으로 국제적으로 약속한 회담은?",
+      "back": "카이로 회담. 적당한 시기에 한국을 독립시킨다고 선언했으며, 1945년 포츠담 선언에서 이를 재확인했다.",
+      "hint": "적당한 시기에",
+      "tags": [
+        "일제강점기",
+        "연표",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1912년 제정되어 조선인에게만 적용된 대표적 무단 통치기 형벌 법령은?",
+      "back": "조선 태형령. 헌병 경찰의 즉결 처분권과 함께 무단 통치의 강압성을 보여 주며 1920년 문화 통치로 전환하며 폐지되었다.",
+      "hint": "조선인에게만 적용",
+      "tags": [
+        "일제강점기",
+        "제도",
+        "사회"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "우리나라가 일제로부터 해방된 날짜는?",
+      "back": "1945년 8월 15일. 일본의 무조건 항복으로 광복을 맞았으며, 국내에서는 여운형 등이 조선 건국 준비 위원회를 조직했다.",
+      "hint": "건국 준비 위원회",
+      "tags": [
+        "현대",
+        "연표",
+        "사건"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1945년 12월 한반도 문제를 논의하며 최대 5년의 신탁 통치를 결정한 회의는?",
+      "back": "모스크바 3국 외상 회의. 임시 민주 정부 수립과 미소 공동 위원회 설치를 결정했으며, 신탁 통치를 둘러싸고 좌우 대립이 격화되었다.",
+      "hint": "미소 공동 위원회",
+      "tags": [
+        "현대",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1946년 여운형과 김규식이 중심이 되어 통일 정부 수립을 위해 벌인 운동은?",
+      "back": "좌우 합작 운동. 좌우 합작 7원칙을 발표했으나 좌우 양측의 반대와 1947년 여운형 암살로 좌절되었다.",
+      "hint": "합작 7원칙",
+      "tags": [
+        "현대",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1948년 5월 10일 실시된 선거의 의의와 이렇게 구성된 국회의 이름은?",
+      "back": "우리 역사 최초의 민주적 보통 선거였으며 제헌 국회가 구성되었다. 유엔 소총회 결의에 따라 선거가 가능한 남한 지역에서만 실시되었다.",
+      "hint": "임기 2년",
+      "tags": [
+        "현대",
+        "연표",
+        "제도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "대한민국 정부가 수립된 날짜와 초대 대통령은?",
+      "back": "1948년 8월 15일, 이승만. 제헌 국회에서 간선제로 선출되었으며, 같은 해 12월 유엔 총회는 대한민국 정부를 한반도의 유일한 합법 정부로 승인했다.",
+      "hint": "제헌 헌법 7월 17일 공포",
+      "tags": [
+        "현대",
+        "연표",
+        "인물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1948년 4월 남한 단독 선거에 반대해 평양의 남북 연석 회의에 참석한 두 지도자는?",
+      "back": "김구와 김규식. 남북 협상으로 통일 정부 수립을 시도했으나 성과 없이 끝났고, 김구는 1949년 암살되었다.",
+      "hint": "삼천만 동포에게 읍고함",
+      "tags": [
+        "현대",
+        "인물",
+        "사건"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "제헌 국회가 친일파 청산과 농민 문제 해결을 위해 각각 제정한 법은?",
+      "back": "반민족 행위 처벌법(1948, 반민특위 구성)과 농지 개혁법(1949, 유상 매수·유상 분배). 반민특위는 이승만 정부의 비협조 속에 와해되었다.",
+      "hint": "유상 매수·유상 분배",
+      "tags": [
+        "현대",
+        "제도",
+        "정치"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "6·25 전쟁의 전개에서 전세를 뒤집은 1950년 9월의 작전과 정전 협정 체결일은?",
+      "back": "인천 상륙 작전(1950.9.15)과 1953년 7월 27일 정전 협정. 이후 중국군 개입으로 1·4 후퇴를 겪었고, 정전 직후 한미 상호 방위 조약이 체결되었다.",
+      "hint": "한미 상호 방위 조약",
+      "tags": [
+        "현대",
+        "사건",
+        "연표"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "이승만 정부가 대통령 직선제를 도입한 1952년 개헌과 중임 제한을 없앤 1954년 개헌을 각각 부르는 말은?",
+      "back": "발췌 개헌과 사사오입 개헌. 발췌 개헌은 부산 정치 파동 속에 통과되었고, 사사오입 개헌은 반올림 논리로 초대 대통령의 중임 제한을 철폐했다.",
+      "hint": "부산 정치 파동",
+      "tags": [
+        "현대",
+        "제도",
+        "비교"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1960년 3·15 부정 선거에 항의해 일어나 이승만 대통령을 하야시킨 민주화 운동은?",
+      "back": "4·19 혁명. 마산에서 김주열 학생의 시신이 발견되며 전국으로 확산되었고, 대학 교수단의 시위 후 이승만이 물러났다.",
+      "hint": "김주열",
+      "tags": [
+        "현대",
+        "사건",
+        "사회운동"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "4·19 혁명 이후 개헌으로 출범한 장면 내각 시기의 정부 형태는?",
+      "back": "내각 책임제와 양원제(민의원·참의원) 국회. 대통령은 윤보선이었으며, 1961년 5·16 군사 정변으로 9개월 만에 무너졌다.",
+      "hint": "제2공화국",
+      "tags": [
+        "현대",
+        "제도",
+        "정치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1961년 박정희 등 군부가 정권을 장악한 사건과 이후 설치된 최고 권력 기구는?",
+      "back": "5·16 군사 정변, 국가 재건 최고 회의. 군정은 1963년 대통령 선거를 거쳐 제3공화국으로 이어졌다.",
+      "hint": "1963년 민정 이양",
+      "tags": [
+        "현대",
+        "사건",
+        "정치"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1965년 체결된 한일 협정에 반대해 1964년 일어난 시위는?",
+      "back": "6·3 시위. 굴욕적 대일 외교 반대를 외쳤으나 정부는 계엄령으로 진압하고 국교 정상화를 강행했으며, 청구권 자금은 경제 개발에 사용되었다.",
+      "hint": "굴욕 외교 반대",
+      "tags": [
+        "현대",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1972년 10월 선포된 헌법의 이름과 대통령 선출 방식은?",
+      "back": "유신 헌법. 통일 주체 국민 회의에서 대통령을 간선제로 뽑았으며 임기 6년에 중임 제한이 없고 대통령에게 긴급 조치권과 국회 해산권을 부여했다.",
+      "hint": "긴급 조치",
+      "tags": [
+        "현대",
+        "제도",
+        "정치"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1972년 남북이 자주·평화·민족 대단결의 통일 원칙에 합의한 최초의 공동 성명은?",
+      "back": "7·4 남북 공동 성명. 서울과 평양에서 동시 발표되었고 남북 조절 위원회가 설치되었으나, 남북 모두 체제 강화에 이용했다.",
+      "hint": "3대 통일 원칙",
+      "tags": [
+        "현대",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1979년 10월 유신 체제에 저항해 부산·마산에서 일어난 항쟁과 그 직후의 사건은?",
+      "back": "부마 민주 항쟁과 10·26 사태. YH 무역 사건과 김영삼 의원 제명이 도화선이 되었고, 10월 26일 박정희 대통령이 피살되며 유신 체제가 막을 내렸다.",
+      "hint": "YH 사건",
+      "tags": [
+        "현대",
+        "사건",
+        "정치"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1980년 5월 신군부의 계엄 확대에 맞서 광주에서 일어난 민주화 운동은?",
+      "back": "5·18 민주화 운동. 계엄군의 진압에 맞서 시민군이 결성되었으며, 관련 기록물은 2011년 유네스코 세계기록유산으로 등재되었다.",
+      "hint": "기록물 유네스코 등재",
+      "tags": [
+        "현대",
+        "사건",
+        "사회운동"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1987년 6월 민주 항쟁의 도화선이 된 두 사건과 그 결과 발표된 선언은?",
+      "back": "박종철 고문치사 사건과 이한열 최루탄 피격 사건이며, 6·29 민주화 선언으로 5년 단임 대통령 직선제 개헌이 이루어졌다.",
+      "hint": "호헌 철폐 구호",
+      "tags": [
+        "현대",
+        "사건",
+        "사회운동"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1991년 남북 관계에서 이루어진 두 가지 큰 진전은?",
+      "back": "9월 남북 유엔 동시 가입과 12월 남북 기본 합의서 채택. 기본 합의서는 상대 체제 인정과 상호 불가침에 합의했고 한반도 비핵화 공동 선언도 이 시기에 채택되었다.",
+      "hint": "노태우 정부",
+      "tags": [
+        "현대",
+        "대외관계",
+        "연표"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1993년 김영삼 정부가 대통령 긴급 명령으로 전격 시행한 경제 개혁 조치는?",
+      "back": "금융 실명제. 가명·차명 금융 거래를 금지해 부정한 자금 흐름을 차단하려 했으며, 김영삼 정부는 지방 자치제도 전면 실시했다.",
+      "hint": "문민정부",
+      "tags": [
+        "현대",
+        "제도",
+        "경제"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1997년 말 우리나라가 겪은 경제 위기와 이를 극복하는 과정에서 벌어진 국민 운동은?",
+      "back": "외환 위기(IMF 구제 금융 요청)와 금 모으기 운동. 김대중 정부 시기 구조 조정을 거쳐 2001년 IMF 지원금을 조기 상환했다.",
+      "hint": "2001년 조기 상환",
+      "tags": [
+        "현대",
+        "사건",
+        "경제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "2000년 평양에서 열린 최초의 남북 정상 회담에서 발표된 선언은?",
+      "back": "6·15 남북 공동 선언. 김대중 대통령과 김정일 국방위원장이 서명했으며 이산가족 상봉과 개성 공단 조성 등 교류 협력이 확대되었다.",
+      "hint": "햇볕 정책",
+      "tags": [
+        "현대",
+        "사건",
+        "대외관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    },
+    {
+      "front": "1970년 근로 기준법을 준수하라고 외치며 분신해 노동 운동의 전환점이 된 인물은?",
+      "back": "전태일. 서울 평화시장 재단사로 열악한 노동 현실을 고발했으며, 그의 죽음 이후 노동 문제에 대한 사회적 관심이 크게 높아졌다.",
+      "hint": "평화시장",
+      "tags": [
+        "현대",
+        "인물",
+        "사회운동"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-korean-history-cert-core-v1",
+        "claude-authoring-korean-history-cert-core-v1"
+      ]
+    }
+  ]
+}

@@ -261,7 +261,7 @@ export function assertCatalog(catalog) {
   if (!Array.isArray(catalog?.decks)) {
     errors.push("decks 배열이 필요하다.");
   } else {
-    if (catalog.decks.length !== 14) errors.push(`v1은 정확히 14덱이어야 한다(현재 ${catalog.decks.length}).`);
+    if (catalog.decks.length !== 23) errors.push(`v2는 정확히 23덱이어야 한다(현재 ${catalog.decks.length}).`);
     catalog.decks.forEach((deck, index) => validateDeck(deck).forEach((error) => errors.push(`decks[${index}]: ${error}`)));
 
     const ids = catalog.decks.map((deck) => deck.id);
@@ -269,11 +269,11 @@ export function assertCatalog(catalog) {
 
     const count = (field, value) => catalog.decks.filter((deck) => deck[field] === value).length;
     const expectedCounts = [
-      ["tier", "free", 6],
-      ["tier", "pro", 8],
-      ["priority", "P1", 7],
-      ["priority", "P2", 5],
-      ["priority", "P3", 2],
+      ["tier", "free", 8],
+      ["tier", "pro", 15],
+      ["priority", "P1", 8],
+      ["priority", "P2", 12],
+      ["priority", "P3", 3],
     ];
     for (const [field, value, expected] of expectedCounts) {
       const actual = count(field, value);
@@ -331,8 +331,8 @@ export function assertSchemas(cardSchema, catalogSchema) {
     errors.push("Card difficulty 범위가 1~5가 아니다.");
   }
   if (catalogSchema?.properties?.chunkSize?.const !== 200) errors.push("Catalog schema chunkSize가 200이 아니다.");
-  if (catalogSchema?.properties?.decks?.minItems !== 14 || catalogSchema?.properties?.decks?.maxItems !== 14) {
-    errors.push("Catalog schema가 정확히 14덱을 요구하지 않는다.");
+  if (catalogSchema?.properties?.decks?.minItems !== 23 || catalogSchema?.properties?.decks?.maxItems !== 23) {
+    errors.push("Catalog schema가 정확히 23덱을 요구하지 않는다.");
   }
   assertNoErrors("JSON Schema", errors);
 }

@@ -1,0 +1,2861 @@
+{
+  "schemaVersion": 1,
+  "deckId": "greek-roman-mythology",
+  "sourceRegistry": [
+    {
+      "id": "brief-greek-roman-mythology-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:greek-roman-mythology:v1",
+      "revision": "brief-v2@2026-08-26"
+    },
+    {
+      "id": "claude-authoring-greek-roman-mythology-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:greek-roman-mythology:v1",
+      "revision": "claude-batch-v2@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "올림포스의 최고신으로 하늘과 번개를 다스리는 신은?",
+      "back": "제우스다. 아버지 크로노스를 물리치고 신들의 왕이 되어 하늘과 날씨, 질서를 다스리며, 무기로 번개를 쓴다.",
+      "hint": "신들의 왕",
+      "tags": [
+        "올림포스",
+        "12신",
+        "제우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스의 아내이자 결혼과 가정을 지키는 여신은?",
+      "back": "헤라다. 신들의 여왕으로 결혼과 가정, 출산을 관장하며, 제우스가 사랑에 빠진 상대들을 질투해 벌을 내리는 이야기가 많다.",
+      "hint": "신들의 여왕",
+      "tags": [
+        "올림포스",
+        "12신",
+        "헤라"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "바다의 신이자 삼지창을 든 제우스의 형제는?",
+      "back": "포세이돈이다. 바다와 폭풍을 다스리며 삼지창으로 파도와 지진을 일으킨다고 여겨졌다. 로마명은 넵투누스다.",
+      "hint": "삼지창",
+      "tags": [
+        "올림포스",
+        "12신",
+        "포세이돈"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "곡물과 대지의 수확을 다스리는 올림포스 여신은?",
+      "back": "데메테르다. 농사와 곡물을 관장하며, 딸 페르세포네가 저승으로 납치되자 슬픔에 잠겨 땅이 메말랐다는 이야기로 유명하다.",
+      "hint": "밀 이삭의 여신",
+      "tags": [
+        "올림포스",
+        "12신",
+        "데메테르"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "지혜와 전략의 여신으로 제우스의 머리에서 완전무장한 채 태어난 신은?",
+      "back": "아테나다. 지혜, 전략적 전쟁, 공예를 관장하며 도시 아테네의 수호신이다. 로마명은 미네르바다.",
+      "hint": "아테네의 수호신",
+      "tags": [
+        "올림포스",
+        "12신",
+        "아테나"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "음악·예언·의술·활을 관장하며 태양과도 동일시된 신은?",
+      "back": "아폴론이다. 리라를 연주하는 음악의 신이자 델포이 신탁의 주인이며, 그리스와 로마에서 같은 이름(아폴로)으로 불렸다.",
+      "hint": "델포이의 주인",
+      "tags": [
+        "올림포스",
+        "12신",
+        "아폴론"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "달과 사냥의 여신이자 아폴론의 쌍둥이 남매는?",
+      "back": "아르테미스다. 활을 든 사냥의 여신으로 야생 동물과 달을 관장하며, 로마에서는 디아나라고 불렸다.",
+      "hint": "사냥의 여신",
+      "tags": [
+        "올림포스",
+        "12신",
+        "아르테미스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "전쟁의 격렬한 싸움 그 자체를 상징하는 올림포스의 신은?",
+      "back": "아레스다. 아테나가 전략과 지혜의 전쟁을 상징한다면, 아레스는 힘과 충돌의 전쟁을 상징한다. 로마명 마르스는 화성의 이름이 됐다.",
+      "hint": "아테나와 대비되는 전쟁신",
+      "tags": [
+        "올림포스",
+        "12신",
+        "아레스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "사랑과 아름다움을 관장하는 올림포스 여신은?",
+      "back": "아프로디테다. 사랑과 미의 여신으로 트로이 전쟁의 발단인 황금 사과 심판에서 파리스의 선택을 받았다. 로마명은 베누스(비너스)다.",
+      "hint": "비너스",
+      "tags": [
+        "올림포스",
+        "12신",
+        "아프로디테"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "대장간과 불을 다스리며 신들의 무기와 도구를 만든 신은?",
+      "back": "헤파이스토스다. 올림포스의 대장장이로 제우스의 방패 아이기스, 아킬레우스의 갑옷 등 명품을 만들었다. 로마명은 불카누스다.",
+      "hint": "신들의 대장장이",
+      "tags": [
+        "올림포스",
+        "12신",
+        "헤파이스토스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "날개 달린 샌들을 신고 신들의 소식을 전하는 전령의 신은?",
+      "back": "헤르메스다. 전령이자 여행자·상인·나그네의 수호신으로, 죽은 자의 영혼을 저승까지 안내하는 역할도 맡았다.",
+      "hint": "날개 달린 샌들",
+      "tags": [
+        "올림포스",
+        "12신",
+        "헤르메스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "포도주와 축제, 연극을 관장하는 올림포스의 신은?",
+      "back": "디오니소스다. 포도 재배와 포도주의 신으로 그의 축제에서 그리스 연극이 발전했다. 로마명은 바쿠스다.",
+      "hint": "포도주의 신",
+      "tags": [
+        "올림포스",
+        "12신",
+        "디오니소스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "화로와 가정의 불을 지키다 훗날 디오니소스에게 12신 자리를 양보했다고 전해지는 여신은?",
+      "back": "헤스티아다. 크로노스와 레아의 맏딸로 화로의 불을 지키는 온화한 여신이며, 다툼을 피해 조용히 물러난 것으로 유명하다.",
+      "hint": "화로의 여신",
+      "tags": [
+        "올림포스",
+        "12신",
+        "헤스티아"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스를 상징하는 무기는 무엇인가?",
+      "back": "번개(벼락)다. 외눈 거인 키클로페스가 만들어 준 무기로, 제우스의 절대 권위를 상징한다. 독수리와 참나무도 제우스의 상징이다.",
+      "tags": [
+        "올림포스",
+        "상징",
+        "제우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아테나를 상징하는 새와 나무는?",
+      "back": "부엉이와 올리브 나무다. 부엉이는 지혜를 상징하고, 올리브 나무는 아테나가 아테네 시민에게 준 선물이다.",
+      "tags": [
+        "올림포스",
+        "상징",
+        "아테나"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라를 상징하는 새는?",
+      "back": "공작이다. 헤라가 눈이 백 개 달린 파수꾼 아르고스가 죽자 그 눈들을 공작의 꼬리 깃털에 옮겨 새겼다는 이야기에서 나왔다.",
+      "hint": "꼬리 깃털의 무늬",
+      "tags": [
+        "올림포스",
+        "상징",
+        "헤라"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아폴론을 상징하는 현악기는?",
+      "back": "리라다. 헤르메스가 거북 등딱지로 만든 악기를 아폴론에게 선물했고, 이후 리라는 음악의 신 아폴론의 대표 상징이 됐다.",
+      "tags": [
+        "올림포스",
+        "상징",
+        "아폴론"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아르테미스가 늘 지니고 다니는 무기는?",
+      "back": "활과 화살이다. 은활을 든 사냥의 여신으로 숲에서 님프들과 함께 사냥하는 모습으로 그려진다.",
+      "tags": [
+        "올림포스",
+        "상징",
+        "아르테미스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤르메스가 든, 뱀 두 마리가 감긴 지팡이의 이름은?",
+      "back": "케리케이온(라틴어로 카두케우스)이다. 전령의 지팡이로 헤르메스의 상징이며, 뱀 한 마리가 감긴 아스클레피오스의 의술 지팡이와는 다른 물건이다.",
+      "hint": "카두케우스",
+      "tags": [
+        "올림포스",
+        "상징",
+        "헤르메스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "바다 거품에서 태어났다고 전해지는 올림포스의 여신은?",
+      "back": "아프로디테다. 바다 거품에서 태어나 키프로스섬 해안에 도착했다고 전해지며, 이 장면은 보티첼리의 그림 '비너스의 탄생'으로도 유명하다.",
+      "hint": "탄생 설화",
+      "tags": [
+        "올림포스",
+        "아프로디테",
+        "탄생"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "올림포스 신들이 마시는 음료와 먹는 음식을 각각 무엇이라 하나?",
+      "back": "음료는 넥타르, 음식은 암브로시아다. 신들의 불멸을 지켜 주는 음식으로 여겨졌다.",
+      "tags": [
+        "올림포스",
+        "신들의생활"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "그리스 신들이 산다고 여겨진 그리스에서 가장 높은 산은?",
+      "back": "올림포스산이다. 그리스 북부에 실재하는 산으로, 신화에서는 구름 위 신들의 궁전이 있는 곳으로 그려진다.",
+      "tags": [
+        "올림포스",
+        "신들의생활"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아테나와 포세이돈이 수호신 자리를 놓고 겨룬 끝에 아테나가 차지한 도시는?",
+      "back": "아테네다. 포세이돈은 샘(말)을, 아테나는 올리브 나무를 선물했는데 시민들이 올리브 나무를 더 유용하게 여겨 아테나를 수호신으로 삼았다.",
+      "hint": "올리브 나무의 승리",
+      "tags": [
+        "올림포스",
+        "아테나",
+        "포세이돈"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "디오니소스를 열광적으로 따르며 축제를 벌인 여성 신도들을 부르는 말은?",
+      "back": "마이나데스(단수 마이나스)다. '광란하는 여인들'이라는 뜻으로, 디오니소스 축제에서 춤추고 노래하며 산야를 누볐다고 전해진다.",
+      "hint": "바카이라고도 불림",
+      "tags": [
+        "올림포스",
+        "디오니소스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤파이스토스의 아내로 짝지어진 올림포스 여신은?",
+      "back": "아프로디테다. 가장 뛰어난 장인과 가장 아름다운 여신의 결혼이었지만, 아프로디테는 아레스와 가까이 지내 부부 사이가 순탄치 않았다고 전해진다.",
+      "tags": [
+        "올림포스",
+        "헤파이스토스",
+        "아프로디테"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "활을 쏘아 사람을 사랑에 빠지게 하는 사랑의 신은?",
+      "back": "에로스다. 통설에서는 아프로디테의 아들로, 황금 화살을 맞으면 사랑에 빠지고 납 화살을 맞으면 상대를 멀리하게 된다. 로마명은 쿠피도(큐피드)다.",
+      "hint": "황금 화살",
+      "tags": [
+        "올림포스",
+        "에로스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "포세이돈은 바다 외에 어떤 자연 현상을 일으키는 신으로 불렸나?",
+      "back": "지진이다. '대지를 흔드는 자'라는 별칭으로 불렸으며, 말(馬)의 신이기도 해서 말을 처음 인간에게 주었다고 전해진다.",
+      "hint": "대지를 흔드는 자",
+      "tags": [
+        "올림포스",
+        "포세이돈"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스·포세이돈·하데스 삼형제가 세계를 나눌 때 제우스가 차지한 영역은?",
+      "back": "하늘이다. 제비뽑기로 제우스는 하늘, 포세이돈은 바다, 하데스는 저승을 맡았고 땅과 올림포스는 공동의 영역으로 남겼다.",
+      "hint": "삼형제의 분할",
+      "tags": [
+        "올림포스",
+        "제우스",
+        "삼형제"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아폴론의 신탁이 내려지던 그리스의 유명한 성지는?",
+      "back": "델포이다. '세계의 배꼽'이라 불린 성지로, 여사제 피티아가 아폴론의 뜻을 전하는 신탁으로 고대 그리스 전역에서 순례자가 모여들었다.",
+      "hint": "세계의 배꼽",
+      "tags": [
+        "올림포스",
+        "아폴론",
+        "델포이"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아테네 아크로폴리스에 세워진 아테나의 대표 신전은?",
+      "back": "파르테논 신전이다. '처녀신의 신전'이라는 뜻으로, 기원전 5세기에 세워져 그리스 건축의 상징이 됐다.",
+      "tags": [
+        "올림포스",
+        "아테나",
+        "신전"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "올림포스 신들 이전에 세계를 다스린 크로노스 세대의 거대한 신족을 부르는 이름은?",
+      "back": "티탄(티탄 신족)이다. 우라노스와 가이아의 자식들로, 제우스가 이끄는 올림포스 신들과의 전쟁에서 패해 지하 깊은 곳 타르타로스에 갇혔다.",
+      "tags": [
+        "티탄·기타신",
+        "티탄"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스의 아버지로, 왕좌를 잃을 것이 두려워 자식들을 삼켰던 티탄은?",
+      "back": "크로노스다. 자식에게 왕좌를 빼앗긴다는 예언 때문에 태어난 자식들을 삼켰지만, 어머니 레아가 숨겨 키운 제우스에게 결국 왕좌를 빼앗겼다.",
+      "hint": "제우스의 아버지",
+      "tags": [
+        "티탄·기타신",
+        "티탄",
+        "크로노스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "크로노스의 아내이자 제우스의 어머니인 티탄 여신은?",
+      "back": "레아다. 막내 제우스를 크레타섬에 숨기고 크로노스에게는 돌덩이를 강보에 싸서 건넸고, 장성한 제우스는 삼켜졌던 형제들을 되찾았다.",
+      "tags": [
+        "티탄·기타신",
+        "티탄",
+        "레아"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "인간에게 불을 훔쳐다 준 죄로 바위산에 묶인 티탄은?",
+      "back": "프로메테우스다. '먼저 생각하는 자'라는 뜻의 이름처럼 인간을 아껴 신들의 불을 훔쳐다 주었고, 그 벌로 카우카소스 바위산에 묶였다.",
+      "hint": "불을 준 티탄",
+      "tags": [
+        "티탄·기타신",
+        "프로메테우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "바위산에 묶인 프로메테우스가 받은 형벌의 내용은?",
+      "back": "낮마다 독수리가 날아와 간을 쪼아 먹는 벌이다. 간은 밤사이 다시 회복돼 고통이 되풀이됐고, 먼 훗날 헤라클레스가 독수리를 쏘아 그를 풀어 주었다.",
+      "hint": "헤라클레스가 해방시킴",
+      "tags": [
+        "티탄·기타신",
+        "프로메테우스",
+        "형벌"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "티탄 전쟁에서 패한 뒤 하늘을 어깨로 떠받치는 벌을 받은 티탄은?",
+      "back": "아틀라스다. 세상의 서쪽 끝에서 영원히 하늘을 떠받치게 됐으며, 그의 이름은 훗날 지도책(atlas)과 대서양(Atlantic)의 어원이 됐다.",
+      "hint": "하늘을 떠받치는 자",
+      "tags": [
+        "티탄·기타신",
+        "티탄",
+        "아틀라스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "죽은 자들의 나라인 저승을 다스리는 제우스의 형제는?",
+      "back": "하데스다. 삼형제의 세계 분할에서 저승을 맡아 지하 세계의 왕이 됐으며, '보이지 않는 자'라는 뜻의 이름처럼 모습을 감추는 투구를 가졌다.",
+      "hint": "저승의 왕",
+      "tags": [
+        "티탄·기타신",
+        "하데스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "하데스에게 납치되어 저승의 여왕이 된 데메테르의 딸은?",
+      "back": "페르세포네다. 꽃을 꺾다 하데스에게 납치돼 저승으로 갔고, 어머니 데메테르의 애원 끝에 1년의 일부만 저승에서 지내게 됐다.",
+      "tags": [
+        "티탄·기타신",
+        "페르세포네"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "페르세포네가 해마다 일정 기간을 저승에서 보내야 했던 이유는?",
+      "back": "저승에서 석류 알을 먹었기 때문이다. 저승의 음식을 먹은 자는 저승에 속하게 된다는 규칙 때문에, 먹은 석류 알 수만큼의 계절을 저승에서 보내게 됐다.",
+      "hint": "저승의 음식",
+      "tags": [
+        "티탄·기타신",
+        "페르세포네",
+        "석류"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "페르세포네 신화가 설명하는 자연 현상은?",
+      "back": "계절의 변화다. 딸이 저승에 있는 동안 데메테르가 슬퍼해 땅이 메마르고(겨울), 딸이 돌아오면 기뻐해 만물이 자란다(봄·여름)고 설명했다.",
+      "tags": [
+        "티탄·기타신",
+        "페르세포네",
+        "계절"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "저승의 입구를 지키는 머리 셋 달린 개의 이름은?",
+      "back": "케르베로스다. 죽은 자는 들여보내되 산 자는 막고 나가려는 영혼을 붙잡는 저승의 파수꾼으로, 헤라클레스의 마지막 과업의 상대이기도 하다.",
+      "tags": [
+        "티탄·기타신",
+        "저승",
+        "케르베로스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "저승의 강에서 죽은 자의 영혼을 배로 건네주는 뱃사공은?",
+      "back": "카론이다. 뱃삯으로 동전 한 닢을 받았기 때문에 고대 그리스에서는 죽은 이의 입에 동전을 넣어 장례를 치렀다.",
+      "hint": "동전 한 닢",
+      "tags": [
+        "티탄·기타신",
+        "저승",
+        "카론"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "신들조차 이 강에 걸고 한 맹세는 어길 수 없었다는 저승의 강은?",
+      "back": "스틱스강이다. '증오'라는 뜻의 저승의 강으로, 신들의 가장 엄숙한 맹세의 증인이었다. 아킬레우스가 담가진 강으로도 유명하다.",
+      "tags": [
+        "티탄·기타신",
+        "저승",
+        "스틱스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "시와 음악, 역사와 천문 등 예술과 학문을 관장하는 아홉 자매 여신은?",
+      "back": "무사이(단수 무사, 영어로 뮤즈)다. 제우스와 기억의 여신 므네모시네의 딸들로, 시인들은 작품을 시작할 때 무사이에게 영감을 청했다.",
+      "hint": "뮤즈",
+      "tags": [
+        "티탄·기타신",
+        "무사이"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "인간의 운명의 실을 잣고, 재고, 끊는 세 여신을 부르는 이름은?",
+      "back": "모이라이(운명의 세 여신)다. 클로토가 실을 잣고 라케시스가 길이를 재며 아트로포스가 끊는데, 신들도 이들이 정한 운명은 바꾸기 어려웠다.",
+      "tags": [
+        "티탄·기타신",
+        "모이라이",
+        "운명"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "죄지은 자를 끝까지 뒤쫓는 복수의 세 여신을 부르는 이름은?",
+      "back": "에리니에스다. 특히 가족에게 잘못을 저지른 자를 쫓았으며, 훗날 '자비로운 여신들(에우메니데스)'이라는 완곡한 이름으로도 불렸다.",
+      "tags": [
+        "티탄·기타신",
+        "에리니에스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "장밋빛 손가락으로 하늘의 문을 여는 새벽의 여신은?",
+      "back": "에오스다. 호메로스의 서사시에서 '장밋빛 손가락의 에오스'로 거듭 묘사되며, 로마에서는 아우로라(오로라)라고 불렸다.",
+      "hint": "로마명 아우로라",
+      "tags": [
+        "티탄·기타신",
+        "에오스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "무지개를 타고 신들의 소식을 전한 여신은?",
+      "back": "이리스다. 무지개의 여신으로 주로 헤라의 전령 역할을 했으며, 눈의 홍채(iris)와 꽃 아이리스의 이름이 여기서 나왔다.",
+      "tags": [
+        "티탄·기타신",
+        "이리스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "네 마리 말이 끄는 태양 마차를 몰고 매일 하늘을 가로지른 티탄 신은?",
+      "back": "헬리오스다. 태양 그 자체를 상징하는 티탄으로, 아들 파에톤에게 마차를 맡겼다가 큰 재앙이 벌어진 이야기로 유명하다.",
+      "hint": "파에톤의 아버지",
+      "tags": [
+        "티탄·기타신",
+        "헬리오스",
+        "태양"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아르테미스 이전에 달을 상징한 티탄 여신은?",
+      "back": "셀레네다. 달 그 자체를 상징하며 은빛 마차로 밤하늘을 달린다고 여겨졌다. 로마명 루나는 '달'을 뜻하는 말로 남았다.",
+      "hint": "로마명 루나",
+      "tags": [
+        "티탄·기타신",
+        "셀레네",
+        "달"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "잠을 관장하는 신의 이름은?",
+      "back": "히프노스다. 밤의 여신 닉스의 아들로, 그의 이름에서 최면(hypnosis)이라는 말이 나왔다. 꿈의 신 모르페우스가 그의 아들로 전해진다.",
+      "tags": [
+        "티탄·기타신",
+        "히프노스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "죽음을 관장하며 히프노스와 쌍둥이 형제인 신은?",
+      "back": "타나토스다. 잠(히프노스)과 죽음(타나토스)이 형제라는 발상으로, 신화에서는 죽은 자를 데려가는 역할로 등장한다.",
+      "hint": "잠의 신의 형제",
+      "tags": [
+        "티탄·기타신",
+        "타나토스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "기억을 관장하며 무사이 아홉 자매를 낳은 티탄 여신은?",
+      "back": "므네모시네다. 제우스와의 사이에서 무사이를 낳았으며, 기억술을 뜻하는 '니모닉(mnemonic)'이라는 말의 어원이 됐다.",
+      "tags": [
+        "티탄·기타신",
+        "므네모시네"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "염소의 뿔과 다리를 가진 목동과 들판의 신은?",
+      "back": "판이다. 숲과 목동, 가축을 지키는 신으로 갈대 피리(팬파이프)를 즐겨 불었고, 그가 일으키는 갑작스러운 공포에서 '패닉'이라는 말이 나왔다.",
+      "hint": "팬파이프",
+      "tags": [
+        "티탄·기타신",
+        "판"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "뱀 한 마리가 감긴 지팡이를 든 의술의 신으로 아폴론의 아들은?",
+      "back": "아스클레피오스다. 켄타우로스 케이론에게 의술을 배워 죽은 사람까지 살릴 정도가 되자, 세계의 질서를 걱정한 제우스가 그를 별로 만들었다고 전해진다.",
+      "tags": [
+        "티탄·기타신",
+        "아스클레피오스",
+        "의술"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아름다움과 우아함을 상징하는 세 자매 여신을 부르는 이름은?",
+      "back": "카리테스(삼미신, 영어로 그레이스)다. 기쁨·우아함·아름다움을 상징하며 아프로디테를 따르는 여신들로 그려진다.",
+      "hint": "삼미신",
+      "tags": [
+        "티탄·기타신",
+        "카리테스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "혼돈(카오스) 다음에 나타난 태초의 대지의 여신은?",
+      "back": "가이아다. 만물의 어머니인 대지 그 자체로, 하늘 우라노스를 낳고 그와의 사이에서 티탄들을 낳았다. 지구과학의 '가이아 이론'에 이름이 남았다.",
+      "hint": "대지의 어머니",
+      "tags": [
+        "티탄·기타신",
+        "가이아",
+        "태초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "가이아가 낳은 태초의 하늘의 신은?",
+      "back": "우라노스다. 하늘 그 자체를 상징하며 가이아와의 사이에서 티탄, 키클로페스 등을 낳았다. 아들 크로노스에게 권좌를 빼앗겼고, 천왕성의 이름이 됐다.",
+      "hint": "천왕성",
+      "tags": [
+        "티탄·기타신",
+        "우라노스",
+        "태초"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스 진영과 크로노스의 티탄 진영이 10년간 벌인 전쟁을 부르는 말은?",
+      "back": "티타노마키아(티탄 전쟁)다. 제우스가 형제들과 키클로페스의 도움으로 승리해 티탄들을 타르타로스에 가두고 올림포스 시대를 열었다.",
+      "tags": [
+        "티탄·기타신",
+        "티타노마키아"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "이마에 눈이 하나뿐인 거인족으로 제우스에게 번개를 만들어 준 존재는?",
+      "back": "키클로페스(단수 키클롭스)다. 솜씨 좋은 대장장이 거인들로 제우스의 번개, 포세이돈의 삼지창, 하데스의 투구를 만들었다고 전해진다.",
+      "hint": "외눈 거인",
+      "tags": [
+        "티탄·기타신",
+        "키클로페스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "12과업을 완수한 그리스 최고의 힘센 영웅은?",
+      "back": "헤라클레스다. 제우스와 알크메네의 아들로, 헤라의 미움을 받으면서도 수많은 괴물을 물리쳤고 죽은 뒤 신의 반열에 올랐다.",
+      "tags": [
+        "영웅",
+        "헤라클레스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스가 12과업을 수행하게 된 계기는?",
+      "back": "헤라가 내린 광기에 사로잡혀 저지른 큰 잘못을 씻기 위해서다. 델포이 신탁의 지시에 따라 에우리스테우스 왕을 섬기며 열두 가지 과업을 수행했다.",
+      "hint": "속죄의 과업",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스의 첫 번째 과업에서 물리친, 무기가 통하지 않는 가죽을 가진 괴물은?",
+      "back": "네메아의 사자다. 화살이 튕겨 나가는 가죽 때문에 맨손으로 제압했고, 이후 그 가죽을 갑옷처럼 걸치고 다녔다.",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "머리를 자르면 그 자리에 머리가 다시 자라나는 물뱀 괴물로, 헤라클레스의 두 번째 과업 상대는?",
+      "back": "히드라다. 레르나 늪의 괴물로, 조카 이올라오스가 잘린 자리를 횃불로 지져 재생을 막은 덕에 물리칠 수 있었다.",
+      "hint": "레르나 늪",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스가 강물의 물길을 돌려 하루 만에 청소한 거대한 외양간의 주인은?",
+      "back": "아우게이아스 왕이다. 소 3천 마리의 외양간을 30년간 치우지 않았는데, 헤라클레스가 알페이오스 강물을 끌어들여 단숨에 씻어 냈다.",
+      "hint": "강물로 청소",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스가 산 채로 잡아 와야 했던 황금 뿔 사슴은 어느 여신의 신성한 동물이었나?",
+      "back": "아르테미스다. 케리네이아의 암사슴으로 1년 내내 뒤쫓은 끝에 사로잡았고, 여신에게 사정을 설명해 용서를 받았다.",
+      "hint": "케리네이아의 암사슴",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스가 마지막 열두 번째 과업으로 저승에서 데려온 존재는?",
+      "back": "케르베로스다. 하데스의 허락을 받아 무기 없이 맨손으로 제압해 지상으로 데려왔다가 다시 돌려보냈다.",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스가 헤스페리데스의 황금 사과를 얻는 동안 아틀라스 대신 짊어진 것은?",
+      "back": "하늘이다. 아틀라스에게 사과를 대신 따다 달라고 부탁하며 하늘을 떠받쳤고, 돌아온 아틀라스가 계속 맡기려 하자 꾀를 내어 다시 넘겼다.",
+      "hint": "아틀라스와의 거래",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스가 아마조네스의 여왕 히폴리테에게서 가져와야 했던 물건은?",
+      "back": "허리띠다. 전쟁의 신 아레스가 준 여왕의 허리띠로, 아홉 번째 과업의 목표였다.",
+      "tags": [
+        "영웅",
+        "헤라클레스",
+        "12과업"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "10년에 걸친 파란만장한 귀향 모험으로 유명한 이타카의 왕은?",
+      "back": "오디세우스다. 트로이 전쟁의 지략가로 목마 계책을 냈고, 전쟁이 끝난 뒤 10년을 더 떠돌아 고향 이타카로 돌아갔다.",
+      "tags": [
+        "영웅",
+        "오디세우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오디세우스의 귀향 모험을 그린 호메로스의 서사시는?",
+      "back": "'오디세이아'다. '일리아스'와 함께 서양 문학의 뿌리로 꼽히며, 긴 모험을 뜻하는 '오디세이'라는 말의 유래가 됐다.",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "서사시"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "외눈 거인 폴리페모스의 동굴에서 오디세우스는 자기 이름을 뭐라고 속였나?",
+      "back": "'아무도 아니다(우티스)'라고 속였다. 눈을 잃은 폴리페모스가 '아무도 아닌 자가 나를 해쳤다'고 외치자 다른 거인들이 도우러 오지 않았다.",
+      "hint": "이름을 이용한 꾀",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "폴리페모스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "노랫소리로 뱃사람을 홀리는 세이렌 곁을 지날 때 오디세우스가 쓴 방법은?",
+      "back": "부하들의 귀는 밀랍으로 막고, 노래가 궁금했던 자신은 돛대에 몸을 묶게 했다. 세이렌의 노래를 듣고도 살아남은 인물로 전해진다.",
+      "hint": "밀랍과 돛대",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "세이렌"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오디세우스의 부하들을 돼지로 바꿔 버린 마녀는?",
+      "back": "키르케다. 아이아이에섬의 마녀로, 헤르메스가 준 약초 덕에 마법을 피한 오디세우스가 부하들을 되돌려 놓게 했다.",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "키르케"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오디세우스를 7년 동안 자기 섬에 붙잡아 둔 님프는?",
+      "back": "칼립소다. 오디세우스를 남편으로 삼고 싶어 오기기아섬에 붙잡아 뒀지만, 제우스의 명을 받고 그를 놓아 주었다.",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "칼립소"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "낮에 짠 수의를 밤마다 풀며 구혼자들을 20년간 물리친 오디세우스의 아내는?",
+      "back": "페넬로페다. '베 짜기가 끝나면 재혼하겠다'며 시간을 벌었고, 지조와 지혜의 상징이 됐다.",
+      "hint": "베 짜기의 지혜",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "페넬로페"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오디세우스와 페넬로페 사이의 아들 이름은?",
+      "back": "텔레마코스다. 아버지를 찾아 여행을 떠났고, 돌아온 오디세우스와 함께 구혼자들을 몰아냈다.",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "텔레마코스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오디세우스가 좁은 해협에서 마주친, 여섯 머리 괴물과 배를 삼키는 소용돌이의 이름은?",
+      "back": "스킬라와 카리브디스다. 둘 사이를 지나야 하는 진퇴양난의 상황에서 나온 '스킬라와 카리브디스 사이'라는 표현은 딜레마를 뜻하게 됐다.",
+      "tags": [
+        "영웅",
+        "오디세우스",
+        "괴물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "메두사의 목을 벤 영웅은?",
+      "back": "페르세우스다. 제우스와 다나에의 아들로, 아테나와 헤르메스의 도움을 받아 메두사를 물리치고 어머니를 지켜냈다.",
+      "tags": [
+        "영웅",
+        "페르세우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "머리카락이 뱀이고 눈을 마주친 자를 돌로 만드는 괴물은?",
+      "back": "메두사다. 고르곤 세 자매 중 유일하게 불사신이 아니었기에 페르세우스의 표적이 됐다.",
+      "hint": "고르곤 자매",
+      "tags": [
+        "영웅",
+        "메두사",
+        "괴물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "페르세우스가 메두사를 직접 보지 않고 처치하기 위해 사용한 방법은?",
+      "back": "반들반들한 청동 방패에 비친 모습을 보며 다가갔다. 아테나가 준 방패 덕분에 돌이 되지 않고 메두사의 목을 벨 수 있었다.",
+      "hint": "방패를 거울처럼",
+      "tags": [
+        "영웅",
+        "페르세우스",
+        "메두사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "페르세우스가 바다 괴물의 제물로 바쳐질 뻔한 상황에서 구해 아내로 맞은 공주는?",
+      "back": "안드로메다다. 에티오피아의 공주로, 어머니 카시오페이아의 오만한 자랑 때문에 제물로 바쳐질 뻔했다. 훗날 별자리와 은하의 이름이 됐다.",
+      "tags": [
+        "영웅",
+        "페르세우스",
+        "안드로메다"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "메두사의 목이 잘릴 때 태어난 날개 달린 천마는?",
+      "back": "페가수스다. 포세이돈과 메두사 사이에서 잉태된 천마로, 훗날 영웅 벨레로폰을 태우고 하늘을 날았다.",
+      "tags": [
+        "영웅",
+        "페가수스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "황금 비로 변한 제우스가 찾아온 페르세우스의 어머니는?",
+      "back": "다나에다. 아르고스 왕 아크리시오스가 '외손자에게 왕좌를 잃는다'는 신탁 때문에 청동 방에 가뒀지만, 제우스가 황금 비로 변해 찾아왔다.",
+      "tags": [
+        "영웅",
+        "페르세우스",
+        "다나에"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "미노타우로스를 물리친 아테네의 영웅은?",
+      "back": "테세우스다. 아테네 왕 아이게우스의 아들로, 크레타의 미궁에 제물로 바쳐지던 젊은이들을 구하기 위해 스스로 미궁에 들어갔다.",
+      "tags": [
+        "영웅",
+        "테세우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "몸은 사람이고 머리는 황소인 크레타의 괴물 이름은?",
+      "back": "미노타우로스다. '미노스의 황소'라는 뜻으로, 미노스 왕이 미궁 라비린토스에 가두고 아테네의 젊은이들을 제물로 바치게 했다.",
+      "tags": [
+        "영웅",
+        "미노타우로스",
+        "괴물"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "테세우스가 미궁에서 길을 잃지 않도록 실타래를 건네준 인물은?",
+      "back": "아리아드네다. 크레타의 공주로 테세우스에게 반해 실타래를 주었고, '아리아드네의 실'은 어려운 문제를 푸는 실마리를 뜻하게 됐다.",
+      "hint": "실타래",
+      "tags": [
+        "영웅",
+        "테세우스",
+        "아리아드네"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "미노타우로스를 가둔 미궁 라비린토스를 설계한 명장인은?",
+      "back": "다이달로스다. 그리스 신화 최고의 발명가이자 장인으로, 훗날 자신도 미궁에 갇히자 밀랍 날개를 만들어 아들 이카로스와 함께 탈출을 시도했다.",
+      "tags": [
+        "영웅",
+        "다이달로스",
+        "미궁"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "테세우스가 흰 돛으로 바꿔 달기로 한 약속을 잊는 바람에 이름이 붙은 바다는?",
+      "back": "에게해다. 검은 돛을 본 아버지 아이게우스 왕이 아들이 죽은 줄로 오해해 절벽 아래 바다에 떨어져 목숨을 잃었고, 그 바다에 왕의 이름이 붙었다.",
+      "hint": "검은 돛의 비극",
+      "tags": [
+        "영웅",
+        "테세우스",
+        "에게해"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "테세우스와 함께 저승에 내려갔다가 그곳에 갇히고 만 절친한 친구는?",
+      "back": "페이리토오스다. 페르세포네를 데려오겠다는 무모한 계획에 테세우스를 끌어들였고, 테세우스만 헤라클레스의 도움으로 풀려났다.",
+      "tags": [
+        "영웅",
+        "테세우스",
+        "페이리토오스"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "황금 양털을 찾아 떠난 원정대를 이끈 영웅은?",
+      "back": "이아손이다. 빼앗긴 이올코스의 왕위를 되찾는 조건으로 콜키스의 황금 양털을 가져오는 모험에 나섰다.",
+      "tags": [
+        "영웅",
+        "이아손"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "이아손의 원정대가 타고 떠난 배의 이름은?",
+      "back": "아르고호다. 아테나의 도움으로 만든 당대 최고의 배로, 뱃머리에는 말을 하는 신성한 참나무 조각이 붙어 있었다고 전해진다.",
+      "tags": [
+        "영웅",
+        "이아손",
+        "아르고호"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아르고호에 오른 원정대원들을 통틀어 부르는 말은?",
+      "back": "아르고나우타이(아르고 원정대)다. 헤라클레스, 오르페우스, 카스토르와 폴리데우케스 등 당대의 영웅들이 대거 참여했다.",
+      "tags": [
+        "영웅",
+        "이아손",
+        "아르고나우타이"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "마법에 능통해 이아손이 황금 양털을 얻도록 도운 콜키스의 공주는?",
+      "back": "메데이아다. 이아손에게 반해 아버지를 배신하고 마법으로 그를 도왔으며, 함께 그리스로 떠났다.",
+      "tags": [
+        "영웅",
+        "이아손",
+        "메데이아"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "황금 양털이 보관되어 있던 흑해 동쪽 끝의 나라는?",
+      "back": "콜키스다. 지금의 조지아(그루지야) 부근으로 여겨지며, 아이에테스 왕이 황금 양털을 지키고 있었다.",
+      "tags": [
+        "영웅",
+        "이아손",
+        "콜키스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "콜키스에서 황금 양털을 지키고 있던 존재는?",
+      "back": "잠들지 않는 용이다. 메데이아가 마법의 약으로 용을 잠재운 사이 이아손이 황금 양털을 손에 넣었다.",
+      "tags": [
+        "영웅",
+        "이아손",
+        "황금양털"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "천마 페가수스를 타고 괴물 키마이라를 물리친 영웅은?",
+      "back": "벨레로폰이다. 아테나가 준 황금 굴레로 페가수스를 길들여 하늘에서 키마이라를 공격했다. 훗날 올림포스까지 오르려는 오만으로 몰락했다.",
+      "tags": [
+        "영웅",
+        "벨레로폰"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "사자의 머리, 염소의 몸, 뱀의 꼬리를 가진 불을 뿜는 괴물은?",
+      "back": "키마이라다. 벨레로폰이 물리친 괴물로, 오늘날 '키메라'는 서로 다른 것이 섞인 존재를 뜻하는 말로 쓰인다.",
+      "tags": [
+        "영웅",
+        "키마이라",
+        "괴물"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "달리기 경주에서 자신을 이겨야 결혼할 수 있다고 했던 여성 사냥꾼 영웅은?",
+      "back": "아탈란테다. 구혼자 히포메네스가 아프로디테에게 받은 황금 사과 세 개를 떨어뜨려 그녀가 줍는 사이 앞질러 경주에서 이겼다.",
+      "hint": "황금 사과 세 개",
+      "tags": [
+        "영웅",
+        "아탈란테"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'아침엔 네 발, 낮엔 두 발, 저녁엔 세 발'이라는 스핑크스의 수수께끼를 푼 인물은?",
+      "back": "오이디푸스다. 답은 '사람'으로, 수수께끼가 풀리자 스핑크스는 스스로 절벽에서 몸을 던져 사라졌고 테베는 재앙에서 벗어났다.",
+      "hint": "답은 사람",
+      "tags": [
+        "영웅",
+        "오이디푸스",
+        "스핑크스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "트로이 전쟁의 불씨가 된 황금 사과에 적혀 있던 문구는?",
+      "back": "'가장 아름다운 여신에게'다. 불화의 여신 에리스가 결혼 잔치에 던진 사과를 두고 세 여신이 다투면서 트로이 전쟁의 씨앗이 됐다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "황금사과"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "황금 사과를 서로 차지하겠다고 다툰 세 여신은?",
+      "back": "헤라, 아테나, 아프로디테다. 각각 권력, 지혜와 승리, 가장 아름다운 여인을 약속하며 심판 파리스의 마음을 얻으려 했다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "황금사과"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "세 여신 중 가장 아름다운 이를 고르는 심판을 맡은 트로이의 왕자는?",
+      "back": "파리스다. 양치기로 자란 트로이의 왕자로, 이 심판의 결과가 트로이 전쟁으로 이어졌다. '파리스의 심판'이라는 표현이 여기서 나왔다.",
+      "hint": "파리스의 심판",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "파리스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "파리스가 아프로디테를 선택한 대가로 약속받은 것은?",
+      "back": "세상에서 가장 아름다운 여인 헬레네의 사랑이다. 스파르타의 왕비였던 헬레네가 파리스와 함께 트로이로 떠나면서 그리스 연합군의 원정이 시작됐다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "헬레네"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "트로이 전쟁의 분노와 영웅들을 노래한 호메로스의 서사시는?",
+      "back": "'일리아스'다. 트로이의 옛 이름 '일리온'에서 나온 제목으로, 아킬레우스의 분노를 중심으로 전쟁의 마지막 해를 그린다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "일리아스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "그리스 최강의 전사로 발뒤꿈치가 유일한 약점이었던 인물은?",
+      "back": "아킬레우스다. 바다의 여신 테티스의 아들로 트로이 전쟁 최고의 전사였으나, 파리스의 화살에 발뒤꿈치를 맞아 최후를 맞았다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "아킬레우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아킬레우스의 약점이 하필 발뒤꿈치가 된 이유는?",
+      "back": "어머니 테티스가 아기 아킬레우스를 스틱스 강물에 담가 몸을 강하게 만들 때 손으로 잡고 있던 발뒤꿈치만 물이 닿지 않았기 때문이다.",
+      "hint": "스틱스 강물",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "아킬레우스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "트로이 제일의 장수로 아킬레우스와 성 앞에서 결투를 벌인 왕자는?",
+      "back": "헥토르다. 트로이의 큰 왕자이자 총사령관으로, 친구 파트로클로스를 잃고 분노한 아킬레우스와의 결투에서 최후를 맞았다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "헥토르"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "10년을 끌던 트로이 전쟁을 끝낸 그리스군의 계책은?",
+      "back": "트로이 목마다. 거대한 목마 안에 정예 병사를 숨기고 철수한 척했고, 목마를 성안으로 들인 트로이는 그날 밤 함락됐다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "목마"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "트로이의 멸망을 정확히 내다봤지만 아무도 믿어 주지 않은 예언자는?",
+      "back": "카산드라다. 아폴론에게 예언 능력을 받았지만 약속을 어긴 대가로 '아무도 그 예언을 믿지 않는' 저주를 함께 받았다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "카산드라"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "트로이 전쟁에서 그리스 연합군의 총사령관을 맡은 미케네의 왕은?",
+      "back": "아가멤논이다. 헬레네의 형부이자 스파르타 왕 메넬라오스의 형으로, 그리스 각지의 왕들을 모아 원정을 이끌었다.",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "아가멤논"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "트로이가 무너진 뒤 유민을 이끌고 떠나 로마 건국 전승의 시조가 된 영웅은?",
+      "back": "아이네이아스다. 아프로디테의 아들로, 그의 방랑을 그린 베르길리우스의 서사시 '아이네이스'는 로마인의 뿌리를 트로이에 연결했다.",
+      "hint": "아이네이스",
+      "tags": [
+        "신화이야기",
+        "트로이전쟁",
+        "아이네이아스",
+        "로마"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "신들이 만든 최초의 여성으로, 열지 말라던 상자를 열어 버린 인물은?",
+      "back": "판도라다. '모든 선물을 받은 여인'이라는 뜻으로, 상자를 열자 온갖 재앙과 고통이 세상으로 퍼져 나갔다.",
+      "tags": [
+        "신화이야기",
+        "판도라"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "판도라가 상자를 닫았을 때 상자 안에 마지막으로 남아 있던 것은?",
+      "back": "희망이다. 재앙이 모두 빠져나간 뒤에도 희망만은 상자 안에 남아, 인간이 어떤 고난 속에서도 희망을 잃지 않게 됐다고 해석된다.",
+      "tags": [
+        "신화이야기",
+        "판도라",
+        "희망"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "만지는 것마다 황금으로 변하게 해 달라고 소원을 빈 프리기아의 왕은?",
+      "back": "미다스다. 디오니소스에게 은혜를 베푼 보답으로 '황금 손'을 소원으로 빌어 이뤄졌지만, 곧 저주임을 깨달았다.",
+      "tags": [
+        "신화이야기",
+        "미다스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "미다스 왕의 황금 손 소원이 축복이 아니라 저주가 된 이유는?",
+      "back": "빵과 물까지 입에 닿는 순간 황금으로 변해 먹을 수 없었기 때문이다. 전승에 따라 사랑하는 딸마저 황금상이 됐다고도 하며, 왕은 강물에 씻고서야 능력을 되돌렸다.",
+      "tags": [
+        "신화이야기",
+        "미다스",
+        "황금손"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "음악 경연의 판정에 불만을 산 미다스 왕이 아폴론에게 받은 벌은?",
+      "back": "당나귀 귀다. 판의 피리가 더 좋다고 말한 벌로 귀가 당나귀 귀로 변했고, 이 비밀을 안 이발사가 구덩이에 속삭인 이야기는 '임금님 귀는 당나귀 귀' 설화로 이어진다.",
+      "hint": "임금님 귀는 당나귀 귀",
+      "tags": [
+        "신화이야기",
+        "미다스",
+        "당나귀귀"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "밀랍으로 붙인 날개로 날다가 태양에 너무 가까이 가서 바다에 떨어진 인물은?",
+      "back": "이카로스다. 아버지 다이달로스가 '너무 높지도 낮지도 않게 날라'고 당부했지만, 나는 기쁨에 취해 높이 오르다 밀랍이 녹아 추락했다.",
+      "tags": [
+        "신화이야기",
+        "이카로스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "이카로스의 아버지로 밀랍과 깃털로 날개를 만든 사람은?",
+      "back": "다이달로스다. 미노스 왕에 의해 크레타에 갇히자 하늘로 탈출할 날개를 만들었고, 아들을 잃은 뒤 무사히 시칠리아에 도착했다.",
+      "tags": [
+        "신화이야기",
+        "이카로스",
+        "다이달로스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "먼저 세상을 떠난 아내를 되찾으러 저승까지 내려간 전설의 음악가는?",
+      "back": "오르페우스다. 리라 연주로 저승의 신들까지 감동시켜 아내 에우리디케를 데려가도 좋다는 허락을 받아냈다.",
+      "tags": [
+        "신화이야기",
+        "오르페우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오르페우스가 아내 에우리디케를 끝내 지상으로 데려오지 못한 이유는?",
+      "back": "지상에 다다르기 전에 뒤를 돌아봤기 때문이다. '지상에 나갈 때까지 뒤돌아보지 말라'는 조건을 어긴 순간 에우리디케는 다시 저승으로 사라졌다.",
+      "hint": "돌아보지 말라",
+      "tags": [
+        "신화이야기",
+        "오르페우스",
+        "에우리디케"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "물에 비친 자기 모습과 사랑에 빠져 그 자리에서 수선화가 된 미소년은?",
+      "back": "나르키소스다. 자기 그림자에서 눈을 떼지 못하다 스러졌고, 그 자리에 수선화(나르시스)가 피었다. 자기애를 뜻하는 나르시시즘의 유래다.",
+      "tags": [
+        "신화이야기",
+        "나르키소스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "나르키소스를 사랑했지만 남의 말끝만 따라 하게 된 저주를 받은 님프는?",
+      "back": "에코다. 헤라의 벌로 스스로 말을 걸지 못하고 남의 말끝만 되풀이하게 됐고, 사랑을 이루지 못한 채 목소리만 남아 메아리가 됐다.",
+      "hint": "메아리",
+      "tags": [
+        "신화이야기",
+        "에코"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "베 짜기 솜씨를 뽐내며 아테나에게 도전했다가 거미가 된 여인은?",
+      "back": "아라크네다. 솜씨는 훌륭했으나 신을 모욕한 오만의 대가로 거미가 되어 영원히 실을 잣게 됐다. 거미류 학명 '아라크니다'의 유래다.",
+      "tags": [
+        "신화이야기",
+        "아라크네"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "신들을 속인 벌로 산꼭대기까지 바위를 끝없이 밀어 올리게 된 코린토스의 왕은?",
+      "back": "시시포스다. 꾀가 많아 죽음의 신까지 속였지만, 바위가 정상 직전에 굴러떨어져 영원히 다시 밀어 올리는 형벌을 받았다.",
+      "tags": [
+        "신화이야기",
+        "시시포스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "물속에 서 있어도 물을 마실 수 없고 과일이 눈앞에 있어도 먹을 수 없는 벌을 받은 인물은?",
+      "back": "탄탈로스다. 신들의 비밀을 누설하고 신들을 시험한 죄로, 손을 뻗으면 물과 과일이 멀어지는 영원한 갈증과 허기의 벌을 받았다. 영어 tantalize의 유래다.",
+      "tags": [
+        "신화이야기",
+        "탄탈로스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "자신이 조각한 여인상과 사랑에 빠진 키프로스의 조각가는?",
+      "back": "피그말리온이다. 이상적인 여인을 상아로 조각해 진심으로 사랑했고, 그 간절함이 이뤄져 조각상이 실제 사람이 됐다.",
+      "tags": [
+        "신화이야기",
+        "피그말리온"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "피그말리온의 조각상을 살아 있는 여인으로 만들어 준 여신은?",
+      "back": "아프로디테다. 피그말리온의 간절한 기도를 들어주었고, 사람이 된 여인은 갈라테이아라고 불린다. 기대가 실현되는 효과를 뜻하는 '피그말리온 효과'의 유래다.",
+      "hint": "갈라테이아",
+      "tags": [
+        "신화이야기",
+        "피그말리온",
+        "아프로디테"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아폴론의 구애를 피해 달아나다 월계수 나무로 변한 님프는?",
+      "back": "다프네다. 에로스의 화살로 아폴론은 사랑에, 다프네는 거부에 빠졌고, 다프네는 아버지 강의 신에게 부탁해 월계수로 변했다.",
+      "tags": [
+        "신화이야기",
+        "다프네",
+        "아폴론"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아폴론이 월계수 잎으로 관을 만들어 쓰기 시작한 이유는?",
+      "back": "월계수로 변한 다프네를 영원히 기리기 위해서다. 이후 월계관은 시가와 경기의 승리자에게 씌우는 영광의 상징이 됐다.",
+      "hint": "월계관의 기원",
+      "tags": [
+        "신화이야기",
+        "다프네",
+        "월계관"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아버지 헬리오스의 태양 마차를 몰다가 제어하지 못해 벼락을 맞고 떨어진 인물은?",
+      "back": "파에톤이다. 태양신의 아들임을 증명하려 마차를 몰았지만 말들을 다루지 못해 하늘과 땅이 불탈 지경이 되자, 제우스가 벼락으로 마차를 멈췄다.",
+      "tags": [
+        "신화이야기",
+        "파에톤"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스가 일으킨 대홍수에서 살아남아 어깨 너머로 돌을 던져 인류를 다시 만든 부부는?",
+      "back": "데우칼리온과 피라다. 프로메테우스의 아들 데우칼리온 부부가 던진 돌이 사람으로 변해 새 인류가 됐다는 그리스판 홍수 신화다.",
+      "tags": [
+        "신화이야기",
+        "데우칼리온",
+        "홍수"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "에로스와 프시케 이야기에서 프시케가 어긴 금기는?",
+      "back": "남편의 얼굴을 보지 말라는 약속이다. 밤에 등불로 잠든 에로스의 얼굴을 확인하다 기름을 떨어뜨려 들켰고, 여러 시련을 거친 끝에야 다시 맺어져 불사의 몸이 됐다.",
+      "hint": "등불과 기름 한 방울",
+      "tags": [
+        "신화이야기",
+        "에로스",
+        "프시케"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "나그네로 변장한 신들을 정성껏 대접해 축복을 받은 가난한 노부부는?",
+      "back": "필레몬과 바우키스다. 제우스와 헤르메스를 알아보지 못하고도 극진히 대접했고, 소원대로 한날한시에 나란히 나무로 변해 영원히 함께하게 됐다.",
+      "tags": [
+        "신화이야기",
+        "필레몬",
+        "바우키스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "자식이 많다고 뽐내며 레토 여신을 모욕했다가 모든 것을 잃고 돌이 된 여인은?",
+      "back": "니오베다. 아폴론과 아르테미스의 어머니 레토를 업신여긴 대가로 자식들을 모두 잃었고, 슬픔에 잠겨 눈물 흘리는 바위가 됐다고 전해진다.",
+      "tags": [
+        "신화이야기",
+        "니오베"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스가 흰 황소로 변신해 등에 태우고 바다를 건너간, 유럽 대륙 이름의 유래가 된 공주는?",
+      "back": "에우로페다. 페니키아의 공주로 크레타섬으로 건너가 미노스 왕의 어머니가 됐고, 그 이름이 유럽(Europe)이라는 지명으로 남았다.",
+      "tags": [
+        "신화이야기",
+        "에우로페",
+        "제우스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "신들의 결혼 잔치에 초대받지 못하자 황금 사과를 던져 다툼을 일으킨 여신은?",
+      "back": "에리스다. 불화의 여신으로, 펠레우스와 테티스의 결혼 잔치에 '가장 아름다운 여신에게'라고 쓴 사과를 던져 트로이 전쟁의 씨앗을 뿌렸다.",
+      "hint": "불화의 여신",
+      "tags": [
+        "신화이야기",
+        "에리스",
+        "트로이전쟁"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "상반신은 사람, 하반신은 말인 신화 속 종족은?",
+      "back": "켄타우로스다. 대체로 거칠고 난폭한 종족으로 그려지지만, 케이론처럼 지혜로운 예외도 있다. 궁수자리의 모습으로도 남아 있다.",
+      "tags": [
+        "신화이야기",
+        "켄타우로스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아킬레우스, 이아손, 아스클레피오스 등 영웅들을 가르친 켄타우로스족의 현자는?",
+      "back": "케이론이다. 의술·음악·궁술에 능통한 스승으로, 난폭한 다른 켄타우로스들과 달리 지혜와 온화함의 상징이었다.",
+      "tags": [
+        "신화이야기",
+        "케이론"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "대지의 여신 가이아가 낳은 거인족과 올림포스 신들이 벌인 전쟁을 부르는 말은?",
+      "back": "기간토마키아(거인족 전쟁)다. 신들은 인간 영웅의 도움이 있어야 이길 수 있다는 예언에 따라 헤라클레스와 함께 거인족을 물리쳤다.",
+      "tags": [
+        "신화이야기",
+        "기간토마키아"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스의 로마명은?",
+      "back": "유피테르(영어식 주피터)다. 로마의 최고신으로 숭배됐으며, 태양계에서 가장 큰 행성인 목성(Jupiter)의 이름이 됐다.",
+      "hint": "목성",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "제우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라의 로마명은?",
+      "back": "유노(영어식 주노)다. 결혼의 수호 여신으로, 결혼의 달로 여겨진 6월(June)의 어원과 이어진다.",
+      "hint": "6월의 어원",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "헤라"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "포세이돈의 로마명은?",
+      "back": "넵투누스(영어식 넵튠)다. 바다의 신으로, 바다처럼 푸른 행성 해왕성(Neptune)의 이름이 됐다.",
+      "hint": "해왕성",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "포세이돈"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "하데스의 로마명은?",
+      "back": "플루토(플루톤)다. '부유한 자'라는 뜻으로 땅속의 보물을 다스린다는 의미이며, 명왕성(Pluto)의 이름이 됐다.",
+      "hint": "명왕성",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "하데스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아테나의 로마명은?",
+      "back": "미네르바다. 지혜의 여신으로 로마에서도 부엉이와 함께 그려졌으며, '미네르바의 부엉이'는 지혜와 성찰의 상징으로 쓰인다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "아테나"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아르테미스의 로마명은?",
+      "back": "디아나(영어식 다이애나)다. 달과 사냥의 여신으로, 서양에서 여성 이름으로 널리 쓰이게 됐다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "아르테미스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아레스의 로마명은?",
+      "back": "마르스다. 로마에서는 국가를 지키는 중요한 신으로 격이 높아졌으며, 붉은 행성 화성(Mars)의 이름이 됐다.",
+      "hint": "화성",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "아레스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아프로디테의 로마명은?",
+      "back": "베누스(영어식 비너스)다. 사랑과 미의 여신으로, 새벽과 저녁 하늘에서 가장 밝게 빛나는 금성(Venus)의 이름이 됐다.",
+      "hint": "금성",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "아프로디테"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤르메스의 로마명은?",
+      "back": "메르쿠리우스(영어식 머큐리)다. 발 빠른 전령의 신답게 태양 주위를 가장 빨리 도는 행성 수성(Mercury)의 이름이 됐다.",
+      "hint": "수성",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "헤르메스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤파이스토스의 로마명은?",
+      "back": "불카누스(영어식 벌컨)다. 불과 대장간의 신으로, 화산을 뜻하는 영어 volcano가 이 이름에서 나왔다.",
+      "hint": "volcano의 어원",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "헤파이스토스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "데메테르의 로마명은?",
+      "back": "케레스다. 곡물의 여신으로, 곡물 가공식품을 뜻하는 시리얼(cereal)과 왜행성 세레스의 이름이 여기서 나왔다.",
+      "hint": "cereal의 어원",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "데메테르"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "디오니소스의 로마명은?",
+      "back": "바쿠스다. 포도주와 축제의 신으로, 떠들썩한 술잔치를 그린 그림 제목이나 음료 이름 등 오늘날에도 널리 쓰인다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "디오니소스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤스티아의 로마명은?",
+      "back": "베스타다. 화로의 여신으로 로마에서는 국가의 성화를 모시는 베스타 신전이 있었고, 소행성 베스타에 이름이 남았다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "헤스티아"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "에로스의 로마명은?",
+      "back": "쿠피도(영어식 큐피드)다. 활과 화살을 든 날개 달린 아기 모습으로 그려지며, 밸런타인데이 카드의 단골 상징이 됐다.",
+      "hint": "큐피드",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "에로스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "크로노스와 동일시된 로마의 농경신은?",
+      "back": "사투르누스(영어식 새턴)다. 로마의 사투르날리아 축제로 기려졌으며, 토성(Saturn)과 토요일(Saturday)의 이름이 됐다.",
+      "hint": "토성과 토요일",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "크로노스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "페르세포네의 로마명은?",
+      "back": "프로세르피나다. 로마 신화에서도 플루토에게 납치되어 저승의 여왕이 되는 같은 줄거리로 전해진다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "페르세포네"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤라클레스의 로마식 이름은?",
+      "back": "헤르쿨레스(영어식 허큘리스)다. 로마에서도 힘의 상징으로 사랑받았으며, 헤라클레스자리라는 별자리 이름으로도 남았다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "헤라클레스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오디세우스의 로마식(라틴어) 이름은?",
+      "back": "울릭세스(영어식 율리시스)다. 제임스 조이스의 소설 '율리시스' 등 서양 문학에서 이 라틴식 이름이 널리 쓰였다.",
+      "hint": "율리시스",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "오디세우스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "그리스의 니케와 동일시되는 로마의 승리의 여신은?",
+      "back": "빅토리아다. 승리를 뜻하는 영어 victory와 같은 뿌리의 이름으로, 로마 군단의 수호 여신으로 숭배됐다.",
+      "tags": [
+        "로마명·상징",
+        "로마명",
+        "니케"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "포세이돈이 늘 들고 다니는 세 갈래 창을 부르는 말은?",
+      "back": "삼지창(트리아이나)이다. 바다를 다스리는 권능의 상징으로, 이 창으로 바위를 쳐서 샘을 솟게 했다고 전해진다.",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "포세이돈"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "하데스가 가진, 머리에 쓰면 모습이 보이지 않게 되는 물건은?",
+      "back": "투구(퀴네에)다. 키클로페스가 만들어 준 보물로, 페르세우스가 메두사를 물리칠 때 빌려 썼다고 전해진다.",
+      "hint": "보이지 않는 투구",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "하데스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "제우스의 방패로 아테나도 함께 사용한 무적의 방패 이름은?",
+      "back": "아이기스다. 어떤 공격도 막아 내는 방패로, '이지스(Aegis) 함대'처럼 강력한 방어 체계를 뜻하는 말로 오늘날에도 쓰인다.",
+      "hint": "이지스",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "아이기스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아테나의 방패나 가슴받이에 새겨진 얼굴은 누구의 것인가?",
+      "back": "메두사다. 페르세우스가 바친 메두사의 머리를 방패에 붙여 적을 물리치는 힘으로 삼았고, 이 문양을 고르고네이온이라 부른다.",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "아테나"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "디오니소스를 상징하는 식물 두 가지는?",
+      "back": "포도나무와 담쟁이덩굴이다. 디오니소스와 신도들은 담쟁이 관을 쓰고 솔방울 달린 지팡이 티르소스를 들고 다녔다.",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "디오니소스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "아프로디테를 상징하는 새는?",
+      "back": "비둘기다. 사랑의 여신의 새로 여겨져 비둘기가 끄는 마차를 탄 모습으로 그려지곤 했으며, 장미와 도금양도 그녀의 상징이다.",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "아프로디테"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "헤르메스의 상징인 두 가지 착용물은?",
+      "back": "날개 달린 샌들(탈라리아)과 날개 달린 모자(페타소스)다. 하늘과 땅, 저승까지 빠르게 오가는 전령의 신의 상징이다.",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "헤르메스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오늘날 의학의 상징으로 쓰이는 '뱀 한 마리가 감긴 지팡이'는 어느 신의 것인가?",
+      "back": "아스클레피오스다. 의술의 신의 지팡이로, 세계보건기구(WHO) 로고에도 들어 있다. 뱀 두 마리가 감긴 헤르메스의 지팡이와 혼동하기 쉽다.",
+      "hint": "WHO 로고",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "아스클레피오스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "정의의 여신상이 들고 있는 두 가지 물건은?",
+      "back": "저울과 칼이다. 저울은 공평한 판단을, 칼은 엄정한 집행을 상징한다. 그리스의 디케, 로마의 유스티티아에서 유래했으며 눈가리개는 공정함을 뜻한다.",
+      "tags": [
+        "로마명·상징",
+        "상징물",
+        "정의의여신"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "두 얼굴로 앞뒤를 동시에 보는, 문과 시작을 다스리는 로마 고유의 신은?",
+      "back": "야누스다. 시작과 끝, 문과 경계를 관장하며, 한 해를 여는 달 1월(January)의 어원이 됐다. '야누스의 얼굴'은 이중성을 뜻한다.",
+      "hint": "1월의 어원",
+      "tags": [
+        "로마명·상징",
+        "로마신",
+        "야누스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "로마에서 베스타 여신의 꺼지지 않는 성화를 지킨 여사제들을 부르는 말은?",
+      "back": "베스타 여사제(베스탈리스)다. 국가의 화로인 성화를 지키는 명예로운 직책으로, 로마에서 높은 존경을 받았다.",
+      "tags": [
+        "로마명·상징",
+        "로마신",
+        "베스타"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'아킬레스건'이라는 말의 유래는?",
+      "back": "영웅 아킬레우스의 유일한 약점이 발뒤꿈치였다는 이야기에서 나왔다. 오늘날 치명적인 약점을 뜻하며, 발뒤꿈치 힘줄의 해부학 명칭이기도 하다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "아킬레우스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'판도라의 상자'는 어떤 의미로 쓰이는 표현인가?",
+      "back": "건드리는 순간 걷잡을 수 없는 문제들이 쏟아져 나오는 화근을 뜻한다. 판도라가 상자를 열자 온갖 재앙이 세상에 퍼졌다는 신화에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "판도라"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'나르시시즘'이라는 말의 유래가 된 신화 속 인물은?",
+      "back": "나르키소스다. 물에 비친 자기 모습과 사랑에 빠진 미소년의 이야기에서, 지나친 자기애를 뜻하는 심리학 용어가 나왔다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "나르키소스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'미다스의 손'은 어떤 사람을 가리키는 표현인가?",
+      "back": "손대는 일마다 큰 성과를 내는 사람을 뜻한다. 만지는 것마다 황금으로 변했다는 미다스 왕 이야기에서 나왔지만, 원래 신화에서는 저주에 가까운 능력이었다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "미다스"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "긴 여정이나 파란만장한 모험을 뜻하는 일반명사가 된 서사시 제목은?",
+      "back": "오디세이(odyssey)다. 오디세우스의 10년 귀향기를 그린 '오디세이아'에서 나와, '우주 오디세이'처럼 긴 여정을 뜻하는 말로 굳었다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "오디세우스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "경험 많은 조언자를 뜻하는 '멘토'라는 말의 유래는?",
+      "back": "오디세우스가 전쟁에 나가며 아들 텔레마코스의 교육을 맡긴 친구 멘토르의 이름에서 나왔다. 아테나가 멘토르의 모습으로 나타나 조언한 이야기도 전해진다.",
+      "hint": "멘토르",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "오디세우스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'시시포스의 형벌'이라는 표현은 어떤 상황을 비유하나?",
+      "back": "아무리 해도 끝나지 않는 헛된 노동의 반복을 뜻한다. 정상 직전마다 굴러떨어지는 바위를 영원히 밀어 올리는 시시포스의 형벌에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "시시포스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'애태우다, 감질나게 하다'를 뜻하는 영어 단어 tantalize의 유래가 된 인물은?",
+      "back": "탄탈로스다. 눈앞의 물과 과일에 영원히 손이 닿지 않는 형벌을 받은 이야기에서, 애타게 만든다는 뜻의 단어가 나왔다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "탄탈로스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'프로크루스테스의 침대'는 어떤 태도를 비판하는 표현인가?",
+      "back": "자기 기준에 맞춰 남을 억지로 재단하는 획일적 태도를 뜻한다. 나그네를 침대 길이에 억지로 맞추려 한 악당 프로크루스테스를 테세우스가 똑같은 방식으로 응징한 이야기에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "프로크루스테스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'카산드라의 경고'는 어떤 상황을 비유하는 표현인가?",
+      "back": "옳은 경고인데도 아무도 믿어 주지 않는 상황을 뜻한다. 트로이의 멸망을 정확히 예언했지만 저주 때문에 신뢰받지 못한 카산드라에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "카산드라"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "컴퓨터 보안에서 '트로이 목마'는 무엇을 뜻하나?",
+      "back": "정상 프로그램으로 위장해 몰래 침입하는 악성 프로그램을 뜻한다. 선물로 위장한 목마 속에 병사를 숨겨 성을 함락시킨 트로이 전쟁의 계책에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "트로이목마"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'큐피드의 화살'은 무엇을 비유하는 표현인가?",
+      "back": "예고 없이 찾아오는 갑작스러운 사랑을 뜻한다. 사랑의 신 에로스(큐피드)의 황금 화살을 맞으면 처음 본 상대와 사랑에 빠진다는 신화에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "에로스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "갑작스러운 공포를 뜻하는 영어 단어 '패닉(panic)'의 유래가 된 신은?",
+      "back": "목신 판이다. 판이 낮잠을 방해받으면 크게 소리를 질러 가축 떼와 사람들을 까닭 모를 공포에 빠뜨렸다는 이야기에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "판"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "최면을 뜻하는 영어 단어 hypnosis의 유래가 된 신은?",
+      "back": "잠의 신 히프노스다. 19세기에 최면술을 가리키는 용어를 만들 때 잠의 신의 이름을 빌렸다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "히프노스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "진통제 '모르핀'의 이름은 어느 신에서 유래했나?",
+      "back": "꿈의 신 모르페우스다. 아편에서 분리한 성분이 잠과 꿈을 부른다는 데서 꿈의 신의 이름을 붙였다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "모르페우스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "스포츠 브랜드 '나이키'의 이름의 유래가 된 여신은?",
+      "back": "승리의 여신 니케다. 브랜드 로고인 스우시도 니케의 날개에서 영감을 받았다고 알려져 있으며, 루브르의 '사모트라케의 니케' 조각상이 유명하다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "니케"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'아마존'이라는 이름의 유래가 된 신화 속 종족은?",
+      "back": "여전사 부족 아마조네스다. 활과 말에 능한 여성 전사들의 나라로 그려졌으며, 남아메리카의 아마존강도 이 이름에서 유래했다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "아마조네스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'뮤직(music)'과 '뮤지엄(museum)'의 공통 어원이 된 여신들은?",
+      "back": "예술과 학문의 여신 무사이(뮤즈)다. 음악은 '무사이의 기술', 박물관은 '무사이의 신전(무세이온)'에서 나온 말이다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "무사이"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "여객선 '타이타닉'호의 이름은 어떤 신족에서 따왔나?",
+      "back": "티탄 신족이다. 티탄처럼 거대하다는 뜻의 'titanic'에서 배 이름을 따왔으며, 금속 원소 티타늄의 이름도 같은 뿌리다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "티탄"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'올림픽'이라는 대회 이름의 유래는?",
+      "back": "고대 그리스의 올림피아 제전이다. 제우스를 기리기 위해 성지 올림피아에서 4년마다 열린 경기로, 1896년 근대 올림픽으로 부활했다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "올림픽"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'아틀라스'가 지도책을 뜻하는 말이 된 이유는?",
+      "back": "16세기 지도학자 메르카토르가 지도책 표지에 하늘(천구)을 짊어진 아틀라스를 그려 넣고 책 제목으로 삼은 데서 비롯됐다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "아틀라스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "오리온자리의 주인공 오리온은 신화에서 어떤 인물이었나?",
+      "back": "거대한 사냥꾼이다. 통설에서는 전갈에 쏘여 최후를 맞아 별자리가 됐고, 그래서 오리온자리는 전갈자리가 떠오르면 지평선 아래로 진다고 이야기된다.",
+      "hint": "전갈자리와의 관계",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "오리온"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "페르세우스가 구한 공주의 이름이 붙은 별자리이자 은하는?",
+      "back": "안드로메다다. 안드로메다자리 곁에는 페르세우스자리와 카시오페이아자리도 있어 한 가족의 이야기가 밤하늘에 함께 남았다.",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "안드로메다"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "곰으로 변한 뒤 하늘에 올라 큰곰자리가 됐다고 전해지는 님프는?",
+      "back": "칼리스토다. 제우스의 사랑을 받다 곰으로 변했고, 아들 아르카스와 함께 하늘에 올라 큰곰자리와 작은곰자리가 됐다고 전해진다.",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "칼리스토"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "황소자리는 어떤 신화에서 유래했다고 이야기되나?",
+      "back": "제우스가 흰 황소로 변신해 에우로페 공주를 태우고 바다를 건넌 이야기다. 그 황소의 모습이 하늘에 올라 황소자리가 됐다는 설명이 널리 전해진다.",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "황소자리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "쌍둥이자리의 두 주인공은 누구인가?",
+      "back": "카스토르와 폴리데우케스(로마명 폴룩스)다. 디오스쿠로이라 불린 형제로, 형이 목숨을 잃자 폴리데우케스가 불사를 나누어 함께 별이 됐다고 전해진다.",
+      "hint": "디오스쿠로이",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "쌍둥이자리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "은하수를 뜻하는 'Milky Way'의 유래가 된 신화는?",
+      "back": "아기 헤라클레스에게 젖을 물린 헤라의 젖이 하늘에 흩뿌려져 은하수가 됐다는 이야기다. '젖의 길'이라는 뜻이 그대로 이름이 됐다.",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "은하수"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "사자자리의 유래가 된 신화 속 사자는?",
+      "back": "네메아의 사자다. 헤라클레스의 첫 과업에서 쓰러진 뒤 하늘에 올라 별자리가 됐다고 전해진다.",
+      "tags": [
+        "유래표현",
+        "별자리",
+        "사자자리"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "'이카로스의 날개'는 무엇을 경계하는 표현인가?",
+      "back": "분수를 넘어선 지나친 욕심과 무모한 도전을 경계하는 말이다. 태양에 너무 가까이 날다 밀랍 날개가 녹아 추락한 이카로스에서 나왔다.",
+      "tags": [
+        "유래표현",
+        "관용표현",
+        "이카로스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    },
+    {
+      "front": "3월을 뜻하는 영어 March의 어원이 된 로마의 신은?",
+      "back": "전쟁의 신 마르스다. 로마의 옛 달력에서 한 해가 시작되는 달이 마르스의 달(Martius)이었고, 이것이 3월 March가 됐다.",
+      "tags": [
+        "유래표현",
+        "현대어휘",
+        "마르스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-greek-roman-mythology-v1",
+        "claude-authoring-greek-roman-mythology-v1"
+      ]
+    }
+  ]
+}
