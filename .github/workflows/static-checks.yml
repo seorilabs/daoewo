@@ -38,7 +38,9 @@ jobs:
 
   firebase-rules:
     name: Firebase Rules
-    runs-on: ubuntu-latest
+    # private 저장소에서 GitHub-hosted 러너가 step 없이 즉시 실패해(과금 한도 또는 org 정책)
+    # checks job과 동일하게 self-hosted ARM64로 라우팅한다. Temurin과 firestore emulator는 aarch64에서 동작한다.
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
     timeout-minutes: 15
     steps:
       - name: Checkout
