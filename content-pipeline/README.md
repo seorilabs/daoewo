@@ -101,6 +101,25 @@ pnpm --dir content-pipeline exec node src/cli.mjs publish \
 
 `publish`는 Cloud Storage 업로드가 아니라 배포 후보 불변 JSON을 만든다. 실제 버킷 업로드와 카탈로그 공개는 배포 자격증명·승인 범위에서 별도로 수행해야 한다.
 
+## 운영자 batch 파일
+
+`ai-assisted-operator-batch` 덱은 Gemini adapter 외에, 운영자가 오프라인에서 작성해
+`batches/<deckId>.raw.json`으로 커밋한 batch 파일로도 실행할 수 있다. batch 파일은
+카드 배열과 revision이 고정된 `sourceRegistry`를 담아야 하며, provider 이름
+(`claude-operator-batch-v1`)이 provenance `generatedBy`로 기록되어 생성 주체가 남는다.
+
+```bash
+pnpm --dir content-pipeline exec node src/cli.mjs run \
+  --deck wine-basics \
+  --provider batch \
+  --input batches/wine-basics.raw.json \
+  --output .work/wine-basics.json
+```
+
+batch 파일은 검수 대기 초안이지 앱 콘텐츠가 아니다. 다른 경로와 동일하게
+normalize/dedupe/QA를 거쳐 `awaiting-human-approval`에서 멈추고, 사람 승인 없이는
+`publish`가 거부한다. `fixtureOnly: true`가 붙은 파일은 이 provider가 거부한다.
+
 ## Gemini 운영 adapter
 
 텍스트 생성은 `src/providers/gemini.mjs`의 **server/operator CLI adapter**에서만 실행한다. 키는 환경변수에서만 읽고 URL, 오류 본문, 로그에 출력하지 않는다.
