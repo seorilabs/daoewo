@@ -1,0 +1,2771 @@
+{
+  "schemaVersion": 1,
+  "deckId": "system-design-terms",
+  "sourceRegistry": [
+    {
+      "id": "brief-system-design-terms-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:system-design-terms:v1",
+      "revision": "brief-v2@2026-08-26"
+    },
+    {
+      "id": "claude-authoring-system-design-terms-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:system-design-terms:v1",
+      "revision": "claude-batch-v2@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "로드 밸런서(load balancer)란?",
+      "back": "여러 서버 인스턴스에 들어오는 요청을 분산시켜 주는 네트워크 구성 요소다. 한 서버의 처리 용량 한계를 넘어서는 트래픽을 수평 확장된 서버 군으로 나누어 처리량과 가용성을 높인다. 장애 서버를 감지해 트래픽에서 제외하는 역할도 하므로 무중단 운영의 기본 요소다.",
+      "tags": [
+        "로드밸런싱",
+        "기본개념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "L4 로드 밸런싱과 L7 로드 밸런싱의 차이는?",
+      "back": "L4는 전송 계층에서 IP·포트 정보만으로 트래픽을 분산하고, L7은 애플리케이션 계층에서 HTTP 헤더·URL 경로·쿠키 등 요청 내용을 보고 분산한다. L4는 패킷 내용을 해석하지 않아 빠르고 오버헤드가 적지만 세밀한 라우팅이 불가능하다. L7은 경로 기반 라우팅, A/B 테스트, 인증 오프로딩 같은 고급 기능이 가능하지만 처리 비용이 더 크다.",
+      "tags": [
+        "로드밸런싱",
+        "네트워크계층",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "라운드 로빈(round robin) 분산 방식이란?",
+      "back": "요청을 서버 목록에 순서대로 하나씩 돌아가며 배분하는 가장 단순한 로드 밸런싱 알고리즘이다. 구현이 쉽고 서버 성능이 균일할 때 잘 동작한다. 다만 서버 사양이 다르거나 요청별 처리 비용 편차가 크면 부하가 고르지 않게 쏠릴 수 있다.",
+      "tags": [
+        "로드밸런싱",
+        "알고리즘"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "가중 라운드 로빈(weighted round robin)이란?",
+      "back": "서버마다 가중치를 부여해 성능이 좋은 서버에 더 많은 요청을 배분하는 라운드 로빈의 변형이다. 서버 사양이 이질적인 환경에서 자원 활용도를 높일 수 있다. 가중치를 정적으로 정하면 실제 부하 변화를 반영하지 못하므로 동적 조정이 필요할 수 있다.",
+      "tags": [
+        "로드밸런싱",
+        "알고리즘"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "최소 연결(least connections) 분산 방식이란?",
+      "back": "현재 활성 연결 수가 가장 적은 서버로 새 요청을 보내는 로드 밸런싱 알고리즘이다. 요청별 처리 시간이 들쭉날쭉한 워크로드에서 라운드 로빈보다 부하를 고르게 맞춘다. 연결 수 추적 비용이 들고, 연결 수가 실제 CPU·메모리 부하와 항상 비례하지는 않는다는 한계가 있다.",
+      "tags": [
+        "로드밸런싱",
+        "알고리즘"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "IP 해시 등 해시 기반 로드 밸런싱이란?",
+      "back": "클라이언트 IP나 특정 키를 해싱해 같은 클라이언트가 항상 같은 서버로 가도록 만드는 분산 방식이다. 서버 로컬 캐시 적중률을 높이고 세션 유지가 필요한 경우에 유용하다. 서버 증감 시 해시 결과가 대거 바뀌는 문제가 있어 컨시스턴트 해싱으로 보완하기도 하며, 특정 키에 트래픽이 몰리면 부하 불균형이 생긴다.",
+      "tags": [
+        "로드밸런싱",
+        "알고리즘",
+        "해싱"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "스티키 세션(sticky session)이란? 트레이드오프는?",
+      "back": "한 사용자의 요청을 세션 동안 같은 서버로 고정해 보내는 방식으로, 서버 메모리에 세션 상태를 두는 구조에서 쓰인다. 세션 저장소 없이도 로그인 상태 등을 유지할 수 있어 구현이 간단하다. 그러나 특정 서버에 부하가 쏠릴 수 있고, 해당 서버가 죽으면 세션이 유실되며 오토스케일링과 궁합이 나쁘다. 그래서 규모가 커지면 세션을 외부 저장소로 빼는 무상태 설계가 선호된다.",
+      "tags": [
+        "로드밸런싱",
+        "세션관리",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "리버스 프록시(reverse proxy)란?",
+      "back": "클라이언트와 백엔드 서버 사이에서 서버를 대신해 요청을 받는 중개 서버다. 백엔드의 실제 주소를 숨기고, 로드 밸런싱·TLS 종료·캐싱·압축·요청 필터링 등을 한곳에서 처리할 수 있다. 대신 추가 홉이 생겨 지연이 약간 늘고, 프록시 자체가 단일 장애점이 되지 않도록 이중화가 필요하다.",
+      "tags": [
+        "로드밸런싱",
+        "프록시"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "포워드 프록시(forward proxy)와 리버스 프록시의 차이는?",
+      "back": "포워드 프록시는 클라이언트 편에 서서 클라이언트를 대신해 외부 서버에 요청하며, 발신자 숨김·접근 제어·외부 요청 캐싱에 쓰인다. 리버스 프록시는 서버 편에 서서 서버를 대신해 요청을 받아 내부로 전달하며, 로드 밸런싱과 보안 경계 역할을 한다. 누구를 대리하는가, 즉 트래픽 방향에서 어느 쪽 끝을 감추는가가 핵심 차이다.",
+      "tags": [
+        "로드밸런싱",
+        "프록시"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "API 게이트웨이(API gateway)란?",
+      "back": "여러 백엔드 서비스 앞에 놓여 단일 진입점을 제공하는 컴포넌트로, 라우팅·인증·인가·rate limiting·요청 변환·응답 집계를 담당한다. 마이크로서비스 환경에서 공통 관심사를 각 서비스에서 분리해 중복 구현을 줄인다. 다만 모든 트래픽이 지나는 지점이므로 병목이나 단일 장애점이 되지 않게 확장·이중화해야 하고, 로직이 과도하게 몰리면 배포 결합도가 커진다.",
+      "tags": [
+        "로드밸런싱",
+        "게이트웨이",
+        "마이크로서비스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "API 게이트웨이와 리버스 프록시의 차이는?",
+      "back": "둘 다 클라이언트와 서버 사이의 중개자지만 추상화 수준이 다르다. 리버스 프록시는 주로 트래픽 전달·부하 분산·TLS 종료 같은 인프라 기능에 집중한다. API 게이트웨이는 그 위에 인증·API 키 관리·사용량 제한·버전 라우팅·응답 조합 등 API 관리 기능을 얹은 것으로, 리버스 프록시의 상위 확장으로 볼 수 있다.",
+      "tags": [
+        "로드밸런싱",
+        "게이트웨이",
+        "프록시"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "BFF(Backend for Frontend) 패턴이란?",
+      "back": "웹·모바일 등 프런트엔드 종류별로 전용 백엔드 계층을 두는 패턴이다. 각 클라이언트에 맞는 응답 형태·집계·인증 흐름을 제공해 프런트엔드가 여러 서비스를 직접 호출하는 복잡함을 줄인다. 클라이언트 종류가 늘면 BFF도 늘어나 유지보수 비용이 커지고, 공통 로직 중복을 관리해야 하는 트레이드오프가 있다.",
+      "tags": [
+        "로드밸런싱",
+        "게이트웨이",
+        "아키텍처패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "헬스 체크(health check)에서 liveness와 readiness의 차이는?",
+      "back": "liveness는 프로세스가 살아 있는지, readiness는 트래픽을 받을 준비가 됐는지를 확인한다. liveness 실패는 재시작으로 대응하고, readiness 실패는 로드 밸런서 대상에서 잠시 제외하는 식으로 대응이 다르다. 이 둘을 구분하지 않으면 초기화 중이거나 일시 과부하인 인스턴스를 불필요하게 재시작해 장애를 키울 수 있다.",
+      "tags": [
+        "로드밸런싱",
+        "헬스체크",
+        "운영"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "TLS 터미네이션(TLS termination)이란?",
+      "back": "로드 밸런서나 프록시가 클라이언트와의 TLS 암호화를 대신 종료하고, 내부 구간은 평문 또는 재암호화로 통신하는 구성이다. 인증서 관리와 암복호화 부담을 한곳에 모아 백엔드 서버의 CPU 부하를 줄이고 운영을 단순화한다. 내부 구간을 평문으로 두면 내부망 침해 시 노출 위험이 있어, 보안 요건에 따라 종단 간 암호화(mTLS 재암호화)와 트레이드오프를 따져야 한다.",
+      "tags": [
+        "로드밸런싱",
+        "보안",
+        "TLS"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "커넥션 드레이닝(connection draining)이란?",
+      "back": "서버를 로드 밸런서에서 제외할 때 새 요청은 보내지 않되, 이미 처리 중인 요청은 끝날 때까지 기다려 주는 기능이다. 배포나 스케일 인 시 진행 중인 요청이 강제로 끊기는 것을 막아 무중단 배포를 가능하게 한다. 대기 시간 상한을 두지 않으면 오래 걸리는 요청 때문에 배포가 지연되므로 적절한 타임아웃과 함께 쓴다.",
+      "tags": [
+        "로드밸런싱",
+        "배포",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "DNS 라운드 로빈이란? 한계는?",
+      "back": "하나의 도메인에 여러 IP를 등록해 DNS 응답 순서를 바꿔가며 트래픽을 분산하는 방식이다. 별도 장비 없이 저렴하게 분산할 수 있다. 그러나 DNS 캐싱 때문에 트래픽 이동이 느리고, 서버 장애를 감지해 즉시 제외하지 못하며, 클라이언트 리졸버 동작에 분산 품질이 좌우된다. 그래서 보통 헬스 체크가 있는 로드 밸런서와 병행해 사용한다.",
+      "tags": [
+        "로드밸런싱",
+        "DNS",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "GSLB(글로벌 서버 로드 밸런싱)란?",
+      "back": "여러 지역(리전)의 데이터센터에 걸쳐 DNS 기반으로 트래픽을 분산하는 기법이다. 사용자를 지리적으로 가까운 곳으로 보내 지연을 줄이고, 한 리전 전체 장애 시 다른 리전으로 우회시켜 재해 복구를 지원한다. DNS TTL 때문에 전환이 즉각적이지 않고, 리전 간 데이터 복제·일관성 문제는 별도로 풀어야 한다는 한계가 있다.",
+      "tags": [
+        "로드밸런싱",
+        "멀티리전",
+        "DNS"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "애니캐스트(anycast) 라우팅이란?",
+      "back": "여러 위치의 서버가 같은 IP 주소를 광고하고, 네트워크 라우팅이 사용자를 가장 가까운 서버로 자연스럽게 인도하는 기법이다. DNS 서버나 CDN 엣지에서 지연 감소와 DDoS 트래픽 분산에 널리 쓰인다. 라우팅 경로 변화로 연결이 다른 서버로 옮겨갈 수 있어 긴 TCP 세션 유지에는 불리하고, 트래픽 배분을 세밀하게 제어하기 어렵다.",
+      "tags": [
+        "로드밸런싱",
+        "네트워크",
+        "멀티리전"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "CDN(콘텐츠 전송 네트워크)이란?",
+      "back": "전 세계에 분산된 엣지 서버에 콘텐츠를 캐싱해 사용자와 가까운 곳에서 응답하는 인프라다. 정적 자원의 지연 시간을 줄이고 원본 서버의 트래픽 부담을 크게 덜어 준다. 캐시 무효화 지연으로 오래된 콘텐츠가 보일 수 있고, 동적·개인화 콘텐츠는 캐싱 효과가 제한적이라 엣지 로직이나 짧은 TTL 등의 보완이 필요하다.",
+      "tags": [
+        "로드밸런싱",
+        "CDN",
+        "캐싱"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "엣지 서버(edge server)란?",
+      "back": "사용자와 물리적으로 가까운 네트워크 가장자리에 배치된 서버로, CDN 캐싱·TLS 종료·간단한 연산을 수행한다. 왕복 지연을 줄이고 원본 데이터센터까지 가는 트래픽을 걸러 준다. 엣지에 로직을 둘수록 배포·관측이 분산되어 복잡해지고, 상태를 가진 처리는 여전히 중앙에서 해야 하는 한계가 있다.",
+      "tags": [
+        "로드밸런싱",
+        "CDN",
+        "엣지컴퓨팅"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "서비스 메시(service mesh)란?",
+      "back": "마이크로서비스 간 통신을 전담하는 인프라 계층으로, 각 서비스 옆의 프록시들이 트래픽을 대신 주고받으며 mTLS·재시도·타임아웃·트래픽 분할·관측을 일괄 제공한다. 통신 관련 공통 기능을 애플리케이션 코드에서 분리해 언어와 무관하게 표준화할 수 있다. 대신 프록시 홉 추가로 지연과 자원 소비가 늘고 운영 복잡도가 상당해, 서비스 수가 적을 때는 과한 선택일 수 있다.",
+      "tags": [
+        "로드밸런싱",
+        "마이크로서비스",
+        "인프라"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "사이드카 패턴(sidecar pattern)이란?",
+      "back": "애플리케이션 컨테이너 옆에 보조 컨테이너를 함께 배치해 프록시·로그 수집·설정 갱신 같은 부가 기능을 위임하는 패턴이다. 애플리케이션 코드를 바꾸지 않고 공통 기능을 추가할 수 있어 서비스 메시의 구현 기반이 된다. 인스턴스마다 사이드카가 붙으므로 메모리·CPU 오버헤드가 늘고 배포 단위가 복잡해지는 비용이 있다.",
+      "tags": [
+        "로드밸런싱",
+        "마이크로서비스",
+        "아키텍처패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "무상태(stateless) 서버가 로드 밸런싱에 유리한 이유는?",
+      "back": "서버가 요청 처리에 필요한 상태를 로컬에 두지 않으면 어떤 요청이든 아무 서버나 처리할 수 있어 자유로운 분산·확장·교체가 가능해진다. 세션 등 상태는 외부 저장소(캐시·DB)로 분리한다. 외부 저장소 조회로 지연이 약간 늘지만, 스티키 세션 의존을 없애 오토스케일링과 장애 복구가 단순해지는 이득이 훨씬 크다.",
+      "tags": [
+        "로드밸런싱",
+        "확장성",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "로드 밸런서 자체의 단일 장애점 문제는 어떻게 완화하나?",
+      "back": "로드 밸런서를 이중화해 active-passive 또는 active-active로 구성하고, 가상 IP(VIP)와 VRRP 같은 프로토콜로 장애 시 대기 장비가 주소를 이어받게 한다. DNS에 여러 로드 밸런서를 등록하거나 애니캐스트를 쓰는 방법도 있다. 이중화는 비용과 구성 복잡도를 높이지만, 모든 트래픽의 관문이 죽으면 전체 서비스가 중단되므로 필수적인 투자다.",
+      "tags": [
+        "로드밸런싱",
+        "고가용성",
+        "이중화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "경로 기반 라우팅(path-based routing)이란?",
+      "back": "L7 로드 밸런서나 게이트웨이가 URL 경로에 따라 요청을 서로 다른 백엔드 서비스로 보내는 기법이다. 예를 들어 /api는 API 서버로, /static은 정적 서버로 나눌 수 있어 하나의 도메인 아래 여러 서비스를 구성할 때 유용하다. 라우팅 규칙이 늘어나면 관리가 복잡해지고, 규칙 평가 비용이 L4 방식보다 크다는 점을 감안해야 한다.",
+      "tags": [
+        "로드밸런싱",
+        "라우팅"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시(cache)를 도입하는 이유는?",
+      "back": "자주 읽는 데이터를 원본 저장소보다 빠른 계층(메모리 등)에 복사해 두어 응답 지연을 줄이고 원본의 부하를 덜기 위해서다. 읽기 비중이 높은 워크로드에서 효과가 크다. 대신 원본과 캐시 사이의 데이터 불일치 가능성, 무효화 관리, 추가 인프라 비용이라는 대가를 치른다.",
+      "tags": [
+        "캐싱",
+        "기본개념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시 적중률(cache hit ratio)이란?",
+      "back": "전체 조회 중 캐시에서 바로 응답한 비율이다. 적중률이 높을수록 평균 지연이 줄고 원본 부하가 감소하므로 캐시 효과를 판단하는 핵심 지표다. 적중률이 낮다면 캐시 대상 선정, TTL, 키 설계, 캐시 크기를 재검토해야 하며, 무작정 캐시 크기만 늘리면 메모리 비용이 커진다.",
+      "tags": [
+        "캐싱",
+        "지표"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "cache-aside(lazy loading) 전략이란?",
+      "back": "애플리케이션이 먼저 캐시를 조회하고, 미스가 나면 DB에서 읽어 캐시에 채운 뒤 응답하는 가장 흔한 캐싱 패턴이다. 실제로 요청된 데이터만 캐시에 올라가 메모리를 아끼고, 캐시 장애 시에도 DB로 동작을 이어갈 수 있다. 단점은 첫 요청은 항상 느리고(cold miss), 데이터 변경 시 캐시 무효화를 애플리케이션이 직접 챙겨야 해 불일치 창이 생긴다는 점이다.",
+      "tags": [
+        "캐싱",
+        "캐싱전략"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "write-through 캐시 전략이란?",
+      "back": "쓰기 시 캐시와 원본 저장소에 동시에(캐시를 거쳐) 기록하는 전략이다. 캐시가 항상 최신 상태라 읽기 일관성이 좋고 무효화 로직이 단순해진다. 대신 모든 쓰기가 두 곳에 기록되어 쓰기 지연이 늘고, 다시 읽히지 않을 데이터까지 캐시에 적재되어 메모리를 낭비할 수 있다. 읽기 비중이 높고 일관성이 중요한 데이터에 알맞다.",
+      "tags": [
+        "캐싱",
+        "캐싱전략",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "write-back(write-behind) 캐시 전략이란?",
+      "back": "쓰기를 우선 캐시에만 기록하고 원본 저장소에는 비동기로 나중에 반영하는 전략이다. 쓰기 지연이 매우 낮아지고 여러 쓰기를 묶어 원본 부하를 줄일 수 있다. 그러나 원본 반영 전에 캐시 노드가 죽으면 데이터가 유실될 수 있어 내구성 위험이 가장 큰 방식이며, 복제나 영속화 같은 보완 장치가 필요하다. 쓰기 폭주를 흡수해야 하는 카운터·집계성 데이터에 주로 쓰인다.",
+      "tags": [
+        "캐싱",
+        "캐싱전략",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "write-around 캐시 전략이란?",
+      "back": "쓰기는 캐시를 건너뛰고 원본 저장소에만 기록하고, 읽기는 cache-aside처럼 미스 시 캐시에 채우는 전략이다. 한 번 쓰고 잘 읽지 않는 데이터가 캐시를 오염시키는 것을 막는다. 대신 쓴 직후 읽으면 캐시 미스가 나서 첫 읽기가 느리고, 캐시에 남아 있던 이전 값을 무효화하지 않으면 오래된 데이터를 읽을 수 있다.",
+      "tags": [
+        "캐싱",
+        "캐싱전략"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "TTL(Time To Live)이란?",
+      "back": "캐시 항목이 유효한 기간을 정해 두고 만료되면 자동으로 버리는 메커니즘이다. 명시적 무효화가 어려운 상황에서도 오래된 데이터가 무한정 남는 것을 막는 안전장치가 된다. TTL이 짧으면 미스가 늘어 원본 부하가 커지고, 길면 불일치 기간이 길어지므로 데이터의 변경 빈도와 신선도 요구에 맞춰 조정해야 한다.",
+      "tags": [
+        "캐싱",
+        "기본개념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시 무효화(cache invalidation)가 어려운 이유는?",
+      "back": "원본 데이터가 바뀌는 모든 경로에서 관련 캐시 키를 빠짐없이, 올바른 시점에 지워야 하기 때문이다. 무효화가 누락되면 오래된 데이터가 서빙되고, DB 갱신과 캐시 삭제 사이의 순서·경쟁 조건에 따라 미묘한 불일치가 생긴다. 파생 데이터나 목록 캐시는 어떤 키가 영향을 받는지 추적하기도 어렵다. 그래서 TTL을 안전망으로 함께 두는 것이 일반적이다.",
+      "tags": [
+        "캐싱",
+        "일관성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시 스탬피드(cache stampede)란?",
+      "back": "인기 있는 캐시 항목이 만료되는 순간 다수의 요청이 동시에 미스를 내고 일제히 원본 DB로 몰려가 부하가 폭증하는 현상이다. 같은 값을 여러 요청이 중복 계산·중복 조회하면서 DB가 과부하로 무너지고, 그 여파로 연쇄 장애까지 이어질 수 있다. 트래픽이 큰 서비스에서 단일 키 만료가 장애의 방아쇠가 될 수 있어 별도의 완화 설계가 필요하다.",
+      "tags": [
+        "캐싱",
+        "장애패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시 스탬피드를 완화하는 기법은?",
+      "back": "대표적으로 세 가지가 쓰인다. 첫째, 뮤텍스 잠금이나 single-flight로 미스 시 한 요청만 원본을 조회하고 나머지는 결과를 기다리게 한다. 둘째, 만료 전에 백그라운드에서 미리 갱신하거나 확률적 조기 만료(early recomputation)로 갱신 시점을 분산한다. 셋째, TTL에 지터(jitter)를 더해 여러 키가 동시에 만료되지 않게 한다. 잠금은 지연 증가, 사전 갱신은 불필요한 계산이라는 비용이 있어 트래픽 특성에 맞게 조합한다.",
+      "tags": [
+        "캐싱",
+        "장애패턴",
+        "완화기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "LRU(Least Recently Used) 교체 정책이란?",
+      "back": "캐시가 가득 찼을 때 가장 오랫동안 사용되지 않은 항목부터 내보내는 교체 정책이다. 최근에 쓰인 데이터가 다시 쓰일 가능성이 높다는 시간 지역성 가정에 기반하며 구현 대비 효과가 좋아 기본값으로 널리 쓰인다. 대규모 순차 스캔이 한 번 지나가면 유용한 항목까지 밀어내는 약점이 있다.",
+      "tags": [
+        "캐싱",
+        "교체정책"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "LFU와 LRU 교체 정책의 차이는?",
+      "back": "LRU는 마지막 사용 시점이 오래된 항목을, LFU는 사용 빈도가 낮은 항목을 내보낸다. LFU는 꾸준히 인기 있는 항목을 잘 지키지만, 과거에만 인기였던 항목이 높은 카운트로 오래 남는 문제가 있어 시간 감쇠를 함께 쓴다. LRU는 구현이 가볍고 최근성 변화에 빠르게 적응하지만 일시적 스캔에 취약하다. 실무에서는 둘을 절충한 변형(예: TinyLFU, LRU-K)이 쓰이기도 한다.",
+      "tags": [
+        "캐싱",
+        "교체정책",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시 워밍(cache warming)이란?",
+      "back": "서비스 시작이나 배포 직후, 예상되는 인기 데이터를 미리 캐시에 적재해 두는 작업이다. 콜드 캐시 상태에서 미스가 폭주해 원본 DB가 과부하되는 것을 막는다. 어떤 데이터를 예열할지 예측이 필요하고, 예열 트래픽 자체가 원본에 부하를 주므로 점진적으로 수행하는 것이 좋다.",
+      "tags": [
+        "캐싱",
+        "운영"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "로컬 캐시와 분산 캐시의 차이는?",
+      "back": "로컬 캐시는 애플리케이션 프로세스 메모리 안에 있어 네트워크 왕복 없이 가장 빠르지만, 서버마다 내용이 달라 불일치가 생기고 인스턴스 수만큼 메모리가 중복된다. 분산 캐시는 별도 캐시 서버를 여러 인스턴스가 공유해 일관된 뷰와 큰 용량을 제공하지만 네트워크 지연과 운영 비용이 든다. 흔히 로컬 캐시를 1차, 분산 캐시를 2차로 계층화해 절충한다.",
+      "tags": [
+        "캐싱",
+        "아키텍처",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "인메모리 캐시 저장소(Redis 등)가 널리 쓰이는 이유는?",
+      "back": "데이터를 메모리에 두어 마이크로초에서 밀리초 수준의 응답을 내고, 문자열 외에 리스트·해시·정렬 집합 같은 자료구조와 TTL·원자적 연산을 지원해 캐시 외 용도(순위표, 분산 잠금, rate limiting)까지 아우르기 때문이다. 단일 스레드 이벤트 루프 모델이라 명령이 원자적으로 처리되는 장점이 있지만, 메모리 비용이 크고 오래 걸리는 명령 하나가 전체를 막을 수 있다는 점을 유의해야 한다.",
+      "tags": [
+        "캐싱",
+        "인메모리저장소"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "HTTP 캐싱에서 Cache-Control 헤더의 역할은?",
+      "back": "응답을 브라우저·CDN이 얼마나, 어떻게 캐싱할지 서버가 지시하는 표준 헤더다. max-age로 유효 기간을, public/private으로 공유 캐시 저장 가능 여부를, no-store로 캐싱 금지를 지정한다. 정적 자원에 긴 max-age와 파일명 해싱(버전 지정)을 조합하면 캐시 효율과 즉시 갱신을 동시에 얻을 수 있다. 지시를 잘못 주면 개인 정보가 공유 캐시에 저장되는 사고로 이어질 수 있다.",
+      "tags": [
+        "캐싱",
+        "HTTP",
+        "CDN"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "DB와 캐시 사이의 불일치는 왜 생기고 어떻게 줄이나?",
+      "back": "갱신 시 DB 쓰기와 캐시 무효화가 원자적으로 묶이지 않아, 둘 사이 순서가 엇갈리거나 한쪽이 실패하면 캐시에 오래된 값이 남는다. 예를 들어 캐시 삭제 후 DB 커밋 전에 다른 요청이 이전 값을 다시 캐싱할 수 있다. 완화책으로 DB 쓰기 후 캐시를 삭제하는 순서 채택, 짧은 TTL 안전망, CDC(변경 데이터 캡처) 기반 무효화, 지연 이중 삭제 등이 쓰인다. 완전한 일치는 비용이 커서 대부분 짧은 불일치 창을 허용하는 절충을 택한다.",
+      "tags": [
+        "캐싱",
+        "일관성",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "컨시스턴트 해싱(consistent hashing)이란?",
+      "back": "키와 노드를 같은 해시 링 위에 배치하고, 키를 시계 방향으로 가장 가까운 노드에 할당하는 분산 기법이다. 노드가 추가·제거될 때 전체 키가 아니라 평균적으로 K/N개의 키만 재배치되어, 캐시 클러스터나 샤딩에서 확장·장애 시 대규모 캐시 미스와 데이터 이동을 피할 수 있다. 노드 수가 적으면 부하가 고르지 않게 분포하는 단점이 있어 가상 노드로 보완한다.",
+      "tags": [
+        "캐싱",
+        "해싱",
+        "분산시스템"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "컨시스턴트 해싱의 가상 노드(virtual node)란?",
+      "back": "물리 노드 하나를 해시 링 위의 여러 지점(가상 노드)으로 나눠 배치하는 기법이다. 노드 수가 적을 때 생기는 부하 쏠림을 통계적으로 고르게 만들고, 성능이 좋은 노드에 가상 노드를 더 많이 줘 가중치도 표현할 수 있다. 노드 장애 시 그 부하가 여러 노드로 분산 흡수되는 이점도 있다. 대신 라우팅 테이블 크기와 관리 비용이 늘어난다.",
+      "tags": [
+        "캐싱",
+        "해싱",
+        "분산시스템"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "핫 키(hot key) 문제란? 완화책은?",
+      "back": "특정 키(유명인 프로필, 인기 상품 등)에 조회가 집중되어 그 키를 담당하는 캐시 노드 하나가 병목이 되는 문제다. 분산 캐시라도 키 단위 분산이므로 단일 키 부하는 나눠지지 않는다. 완화책으로 해당 키를 애플리케이션 로컬 캐시에 복제, 키에 무작위 접미사를 붙여 여러 사본으로 분산, 요청 병합(single-flight) 등이 쓰인다. 사본 방식은 갱신 시 모든 사본을 무효화해야 하는 복잡성이 따른다.",
+      "tags": [
+        "캐싱",
+        "장애패턴",
+        "완화기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "네거티브 캐싱(negative caching)이란?",
+      "back": "조회 결과가 '없음'이라는 사실 자체를 짧은 TTL로 캐싱하는 기법이다. 존재하지 않는 키를 반복 조회하는 트래픽이 매번 DB까지 뚫고 내려가는 것(캐시 관통)을 막는다. TTL을 길게 잡으면 데이터가 새로 생겼는데도 한동안 없다고 응답하는 문제가 있으므로 짧게 유지하고, 악의적 무작위 키 조회에는 블룸 필터 병용이 효과적이다.",
+      "tags": [
+        "캐싱",
+        "완화기법"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "캐시 관통(cache penetration)이란?",
+      "back": "존재하지 않는 데이터를 조회하는 요청이 캐시에 걸리지 않고 매번 DB까지 도달해 부하를 주는 현상이다. 정상 미스와 달리 결과가 캐시에 채워지지 않으므로 반복될수록 DB만 두드리게 되며, 악의적 공격 벡터가 되기도 한다. 대응으로 '없음' 결과의 네거티브 캐싱, 존재 여부를 빠르게 거르는 블룸 필터, 요청 유효성 검증이 쓰인다.",
+      "tags": [
+        "캐싱",
+        "장애패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "다단계 캐시(multi-level cache) 계층화란?",
+      "back": "브라우저·CDN·애플리케이션 로컬 캐시·분산 캐시·DB 버퍼처럼 여러 계층에 캐시를 겹쳐 두는 구조다. 상위 계층에서 걸러질수록 지연과 하위 부하가 줄어 대규모 트래픽을 감당할 수 있다. 계층이 늘수록 무효화가 어려워지고 각 계층의 TTL이 겹치며 데이터 신선도 추론이 복잡해지므로, 계층별 TTL을 위로 갈수록 짧게 두는 식의 일관된 정책이 필요하다.",
+      "tags": [
+        "캐싱",
+        "아키텍처"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "ETag와 조건부 요청을 이용한 HTTP 캐시 검증이란?",
+      "back": "서버가 응답에 리소스 버전 식별자(ETag)를 붙이고, 클라이언트가 다음 요청에 If-None-Match로 보내면 변경이 없을 때 서버가 본문 없이 304 Not Modified로 응답하는 메커니즘이다. 만료된 캐시를 무조건 다시 받는 대신 재검증만으로 대역폭을 절약한다. 왕복 요청 자체는 발생하므로 지연 절감 효과는 제한적이고, ETag 생성 비용과 로드 밸런싱 환경에서의 일관된 ETag 산출을 신경 써야 한다.",
+      "tags": [
+        "캐싱",
+        "HTTP"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "세션 저장소를 외부 캐시로 분리하는 이유는?",
+      "back": "세션을 각 서버 메모리에 두면 스티키 세션이 강제되고 서버 장애 시 로그인 상태가 유실된다. Redis 같은 외부 저장소에 세션을 모으면 어떤 서버든 요청을 처리할 수 있어 무상태 확장과 무중단 배포가 쉬워진다. 세션 조회를 위한 네트워크 왕복이 추가되고 세션 저장소 자체의 가용성이 중요해지므로, 저장소 이중화와 적절한 TTL 설계가 함께 필요하다.",
+      "tags": [
+        "캐싱",
+        "세션관리",
+        "확장성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "수직 확장(scale-up)과 수평 확장(scale-out)의 차이는?",
+      "back": "수직 확장은 서버 한 대의 CPU·메모리·디스크를 키우는 것이고, 수평 확장은 서버 대수를 늘려 부하를 나누는 것이다. 수직 확장은 애플리케이션 변경이 거의 없지만 하드웨어 한계와 비용 급증, 단일 장애점 문제가 있다. 수평 확장은 이론상 한계가 낮고 장애 내성이 좋지만 데이터 분산·일관성·운영 복잡도를 감수해야 한다.",
+      "tags": [
+        "DB확장",
+        "확장성",
+        "기본개념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스 레플리케이션(replication)이란?",
+      "back": "같은 데이터를 여러 노드에 복사해 유지하는 기법이다. 읽기 요청을 여러 복제본으로 분산해 처리량을 높이고, 한 노드가 죽어도 다른 복제본으로 서비스를 이어가 가용성을 확보하며, 지리적으로 가까운 복제본으로 지연을 줄일 수 있다. 대가로 복제 지연에 따른 일관성 문제와 저장 비용 증가를 감수해야 한다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "리더-팔로워(leader-follower) 복제란?",
+      "back": "쓰기는 리더 노드 하나만 받고, 리더가 변경 로그를 팔로워들에게 전파해 복제본을 갱신하는 가장 보편적인 복제 구조다. 쓰기 순서가 리더에서 한 줄로 정해져 충돌이 없고, 읽기는 팔로워로 분산해 확장할 수 있다. 쓰기 처리량은 리더 한 대에 묶이고, 리더 장애 시 팔로워 승격(failover) 절차가 필요하며, 비동기 복제라면 팔로워에서 오래된 데이터를 읽을 수 있다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "복제 지연(replication lag)이란? 어떤 문제를 일으키나?",
+      "back": "리더에 쓰인 변경이 팔로워에 반영되기까지 걸리는 시간 차다. 이 동안 팔로워에서 읽으면 방금 쓴 데이터가 안 보이거나(read-your-writes 위반), 시간이 거꾸로 가는 듯한 읽기(단조 읽기 위반)가 발생한다. 부하가 높거나 네트워크가 불안정하면 지연이 수 초 이상 커질 수 있다. 완화책으로 자신의 쓰기 직후에는 리더에서 읽기, 세션을 같은 복제본에 고정하기, 지연이 큰 복제본을 읽기 대상에서 제외하기 등이 쓰인다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "일관성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "동기 복제와 비동기 복제의 트레이드오프는?",
+      "back": "동기 복제는 팔로워가 변경을 받았다고 확인해야 쓰기를 완료 처리하므로 리더 장애 시에도 데이터 유실이 없지만, 쓰기 지연이 커지고 팔로워 하나가 느리거나 죽으면 쓰기 전체가 막힐 수 있다. 비동기 복제는 리더가 확인을 기다리지 않아 빠르고 장애에 덜 민감하지만, 리더가 복제 전에 죽으면 최근 쓰기가 유실될 수 있다. 내구성 요구와 지연 허용치에 따라 선택하며, 절충으로 반동기 복제를 쓴다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "반동기(semi-synchronous) 복제란?",
+      "back": "여러 팔로워 중 최소 한 대(또는 정족수)만 동기로 확인받고 나머지는 비동기로 두는 절충 방식이다. 최소 한 복제본에는 항상 최신 데이터가 있음을 확보해 리더 장애 시 유실 위험을 크게 줄이면서, 모든 팔로워를 기다리는 완전 동기보다 지연과 가용성 부담이 작다. 동기 대상 팔로워가 느려지면 여전히 쓰기 지연이 늘 수 있어 동기 대상을 자동 교체하는 운영이 필요하다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "멀티 리더(multi-leader) 복제의 장단점은?",
+      "back": "여러 노드가 동시에 쓰기를 받고 서로의 변경을 교환하는 복제 방식으로, 주로 여러 데이터센터에 각각 리더를 두는 구성에서 쓰인다. 지역별로 가까운 리더에 쓰므로 쓰기 지연이 줄고, 한 데이터센터 장애에도 다른 곳에서 쓰기를 이어갈 수 있다. 최대 난점은 같은 데이터를 두 리더가 동시에 수정하는 쓰기 충돌로, 최종 쓰기 승리(LWW)·병합·애플리케이션 해소 같은 충돌 처리 전략이 반드시 설계되어야 한다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "멀티리전"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "리더리스(leaderless) 복제란?",
+      "back": "리더 없이 클라이언트(또는 코디네이터)가 여러 복제본에 직접 읽기·쓰기를 보내고, 쿼럼(R+W>N)으로 일관성을 맞추는 복제 방식이다. Dynamo 계열 저장소가 대표적이다. 리더 승격 절차가 없어 노드 장애에 매끄럽게 대응하고 쓰기 가용성이 높다. 대신 동시 쓰기 충돌을 버전 벡터 등으로 감지·해소해야 하고, 읽기 복구(read repair)와 안티 엔트로피 같은 보조 메커니즘이 필요해 일관성 추론이 어렵다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "분산시스템"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "읽기 복제본(read replica) 활용과 주의점은?",
+      "back": "읽기 전용 복제본을 추가해 조회 트래픽을 리더에서 분산시키는 확장 기법이다. 읽기 비중이 압도적인 서비스에서 효과가 크고, 분석 쿼리를 복제본으로 격리해 운영 DB를 보호할 수도 있다. 주의점은 복제 지연으로 인한 오래된 읽기이며, 방금 쓴 데이터를 읽는 경로는 리더로 보내는 등의 라우팅 규칙이 필요하다. 복제본을 늘려도 쓰기 처리량은 늘지 않는다는 한계도 있다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "확장성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "샤딩(sharding)이란?",
+      "back": "데이터를 샤드 키 기준으로 여러 데이터베이스 노드에 나누어 저장하는 수평 분할 기법이다. 한 노드의 저장 용량과 쓰기 처리량 한계를 넘어서기 위해 사용하며, 각 샤드는 독립적으로 확장할 수 있다. 대신 여러 샤드에 걸친 조인·트랜잭션·집계가 어려워지고, 리샤딩과 샤드 관리라는 큰 운영 복잡도가 생기므로 단일 노드 확장과 캐싱으로 버틸 수 없을 때 도입하는 것이 보통이다.",
+      "tags": [
+        "DB확장",
+        "샤딩"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "샤딩과 파티셔닝의 차이는?",
+      "back": "파티셔닝은 큰 테이블을 논리적으로 나누는 일반 개념으로, 한 데이터베이스 서버 안에서 나누는 것도 포함한다. 샤딩은 그중에서도 데이터를 서로 다른 서버(노드)에 물리적으로 분산하는 수평 파티셔닝을 가리키는 경우가 일반적이다. 즉 단일 서버 내 파티셔닝은 관리·성능 최적화가 목적이고, 샤딩은 서버 한 대의 한계를 넘는 수평 확장이 목적이다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "파티셔닝"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "수평 파티셔닝과 수직 파티셔닝의 차이는?",
+      "back": "수평 파티셔닝은 행(row) 단위로 나눠 같은 스키마의 조각들을 만들고(예: 사용자 ID 구간별 분리), 수직 파티셔닝은 열(column) 단위로 나눠 자주 쓰는 컬럼과 크고 드물게 쓰는 컬럼을 분리한다. 수평 분할은 데이터량과 쓰기 확장에, 수직 분할은 I/O 효율과 접근 패턴 분리에 유리하다. 수직 분할 후 두 조각을 함께 읽으려면 조인이 필요해지는 비용이 있다.",
+      "tags": [
+        "DB확장",
+        "파티셔닝"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "범위 기반 샤딩(range-based sharding)의 장단점은?",
+      "back": "샤드 키의 값 범위(예: 날짜, ID 구간)로 데이터를 나누는 방식이다. 범위 조회가 한 샤드에서 끝나 효율적이고, 새 범위를 새 샤드로 붙이기 쉽다. 단점은 최신 데이터에 쓰기가 몰리는 시계열 키에서 마지막 샤드가 핫스팟이 되기 쉽다는 것이다. 접근이 특정 범위에 집중되는 워크로드에서는 부하 불균형을 감수하거나 키 설계를 바꿔야 한다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "해시 기반 샤딩(hash-based sharding)의 장단점은?",
+      "back": "샤드 키를 해싱한 값으로 샤드를 정하는 방식으로, 데이터와 부하가 통계적으로 고르게 분산된다. 핫스팟 위험이 범위 방식보다 훨씬 작다. 단점은 인접한 키가 서로 다른 샤드로 흩어져 범위 조회 시 모든 샤드를 뒤져야 한다는 것이다. 또 단순 모듈로 해싱은 샤드 수 변경 시 대부분의 키가 재배치되므로 컨시스턴트 해싱이나 사전 분할된 논리 샤드를 쓰는 것이 일반적이다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "디렉터리 기반 샤딩(directory-based sharding)이란?",
+      "back": "키와 샤드의 매핑을 별도의 조회 서비스(디렉터리)에 저장해 두고 참조하는 방식이다. 매핑을 자유롭게 바꿀 수 있어 특정 키만 골라 옮기거나 샤드를 유연하게 재배치할 수 있다. 대신 모든 요청 경로에 디렉터리 조회가 끼어들어 지연이 늘고, 디렉터리 자체가 단일 장애점이자 확장 병목이 될 수 있어 캐싱과 이중화가 필수다.",
+      "tags": [
+        "DB확장",
+        "샤딩"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "샤드 키(shard key) 선택이 중요한 이유는?",
+      "back": "샤드 키가 데이터 분포, 쿼리 라우팅, 확장 여력을 모두 결정하기 때문이다. 카디널리티가 낮거나 접근이 쏠리는 키는 핫스팟을 만들고, 주요 쿼리 조건에 없는 키는 매번 전 샤드 조회(scatter-gather)를 유발한다. 좋은 샤드 키는 부하를 고르게 나누면서 대부분의 쿼리를 단일 샤드로 보낼 수 있어야 한다. 한번 정하면 바꾸기 매우 어려워 초기 설계에서 워크로드 분석이 중요하다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "설계원칙"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "핫스팟(hotspot)과 데이터 스큐(data skew)란?",
+      "back": "데이터 스큐는 샤드 간 데이터량이나 트래픽이 고르지 않게 치우친 상태고, 그 결과 불균형한 부하가 집중된 노드가 핫스팟이다. 유명 사용자에게 이벤트가 몰리는 소셜 서비스처럼 키 인기 편차가 큰 워크로드에서 흔하다. 핫스팟 하나가 전체 성능의 상한이 되므로, 키에 접미사를 붙여 분산하거나 핫 키를 별도 처리하는 등의 재설계가 필요하다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "장애패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "리샤딩(resharding)이 어려운 이유는?",
+      "back": "샤드 수를 바꾸면 키-샤드 매핑이 달라져 대량의 데이터를 서비스 중단 없이 옮겨야 하기 때문이다. 이동 중 이중 쓰기나 변경 추적으로 정합성을 유지해야 하고, 라우팅 전환 시점의 원자성도 문제다. 컨시스턴트 해싱이나 미리 잘게 나눈 논리 샤드(가상 버킷)를 물리 노드에 재배치하는 방식으로 이동량을 줄이는 것이 일반적인 대응이다. 처음부터 리샤딩 계획 없이 샤딩을 도입하면 성장 후 큰 비용을 치른다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "운영"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "크로스 샤드 조인과 크로스 샤드 트랜잭션이 어려운 이유는?",
+      "back": "조인 대상이 다른 노드에 있으면 네트워크 너머로 데이터를 모아 합쳐야 해서 단일 노드 조인보다 훨씬 느리고, 트랜잭션은 여러 노드의 커밋을 2PC 같은 분산 프로토콜로 맞춰야 해 지연·차단·조정자 장애 위험이 생기기 때문이다. 그래서 샤딩 설계에서는 함께 조회되는 데이터를 같은 샤드에 배치(코로케이션)하고, 비정규화로 조인을 줄이며, 분산 트랜잭션 대신 사가 같은 최종 일관성 패턴을 쓰는 절충이 흔하다.",
+      "tags": [
+        "DB확장",
+        "샤딩",
+        "트랜잭션"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "데이터베이스 커넥션 풀(connection pool)이란?",
+      "back": "DB 연결을 미리 만들어 두고 재사용하는 기법이다. 연결 수립은 핸드셰이크·인증 비용이 커서 매 요청마다 새로 맺으면 지연과 DB 부하가 급증한다. 풀 크기는 트레이드오프로, 너무 작으면 연결 대기가 병목이 되고 너무 크면 DB 서버의 메모리·컨텍스트 스위칭 부담이 커진다. 서버 인스턴스가 늘어날 때 총 연결 수가 DB 한계를 넘지 않도록 프록시(예: 풀링 미들웨어)로 집중 관리하기도 한다.",
+      "tags": [
+        "DB확장",
+        "커넥션관리",
+        "운영"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "CQRS(명령·조회 책임 분리)란?",
+      "back": "데이터를 변경하는 명령(command) 모델과 조회(query) 모델을 분리하는 아키텍처 패턴이다. 조회 측을 읽기에 최적화된 별도 저장소(비정규화 뷰, 검색 엔진 등)로 구성해 읽기·쓰기를 독립적으로 확장하고 각각에 맞는 모델을 쓸 수 있다. 두 모델 간 동기화는 대개 이벤트로 이뤄져 최종 일관성을 감수해야 하고, 시스템 복잡도가 크게 늘어나므로 읽기·쓰기 패턴 차이가 클 때만 도입할 가치가 있다.",
+      "tags": [
+        "DB확장",
+        "아키텍처패턴",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "이벤트 소싱(event sourcing)이란?",
+      "back": "현재 상태를 덮어쓰는 대신, 상태를 바꾼 모든 이벤트를 순서대로 저장하고 현재 상태는 이벤트를 재생해 계산하는 패턴이다. 완전한 변경 이력과 감사 추적이 남고, 과거 시점 상태 복원이나 새로운 조회 모델 구축이 자유롭다. 대신 이벤트 스키마 진화가 어렵고, 상태 계산 비용 때문에 스냅숏이 필요하며, 조회는 CQRS와 결합해 별도 뷰를 만들어야 하는 등 복잡도가 높다.",
+      "tags": [
+        "DB확장",
+        "아키텍처패턴",
+        "이벤트"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "확장 관점에서 비정규화(denormalization)의 트레이드오프는?",
+      "back": "비정규화는 조인을 피하려고 데이터를 중복 저장하는 것이다. 읽기 시 조인·집계 비용이 사라져 조회 지연이 줄고, 샤딩 환경에서 크로스 샤드 조인을 피할 수 있다. 대가는 쓰기 시 중복 사본을 모두 갱신해야 하는 비용과 사본 간 불일치 위험, 저장 공간 증가다. 읽기가 쓰기보다 훨씬 많은 대규모 서비스에서 읽기 경로를 위해 의도적으로 선택하는 경우가 많다.",
+      "tags": [
+        "DB확장",
+        "데이터모델링",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "NoSQL 저장소가 수평 확장에 유리하다고 하는 이유는?",
+      "back": "많은 NoSQL 저장소는 처음부터 파티셔닝과 복제를 내장하고, 크로스 파티션 조인·다중 행 트랜잭션 같은 확장에 비싼 기능을 제한하는 대신 키 기반 접근을 중심으로 설계됐기 때문이다. 스키마 유연성도 대량 데이터의 점진적 변경에 유리하다. 대가로 강한 일관성·복잡한 쿼리·조인을 애플리케이션이 떠안는 경우가 많다. 관계형 DB도 샤딩이나 분산 SQL로 수평 확장이 가능하므로, 데이터 모델과 일관성 요구에 따라 선택할 문제다.",
+      "tags": [
+        "DB확장",
+        "NoSQL",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "폴리글랏 퍼시스턴스(polyglot persistence)란?",
+      "back": "하나의 시스템 안에서 워크로드 특성별로 서로 다른 저장소를 함께 쓰는 접근이다. 예를 들어 트랜잭션은 관계형 DB, 세션은 인메모리 캐시, 검색은 검색 엔진, 그래프 탐색은 그래프 DB에 맡긴다. 각 저장소의 강점을 살려 성능과 확장성을 얻지만, 저장소 간 데이터 동기화와 일관성 유지, 운영·백업·모니터링 대상 증가라는 비용이 따른다.",
+      "tags": [
+        "DB확장",
+        "아키텍처",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "기능별 DB 분리(federation, functional partitioning)란?",
+      "back": "데이터를 행이 아니라 기능(도메인) 단위로 나눠, 사용자 DB·주문 DB·상품 DB처럼 서로 다른 데이터베이스로 분리하는 방식이다. 각 DB의 부하와 장애가 격리되고 도메인별 독립 확장이 가능해 마이크로서비스의 데이터 소유 원칙과도 맞는다. 대신 기능 간 조인이 불가능해져 API 조합이나 데이터 복제로 풀어야 하고, 한 기능 안에서 데이터가 계속 커지면 결국 샤딩이 추가로 필요하다.",
+      "tags": [
+        "DB확장",
+        "파티셔닝",
+        "마이크로서비스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "낙관적 잠금과 비관적 잠금의 차이는?",
+      "back": "비관적 잠금은 충돌을 전제로 데이터를 읽을 때부터 잠가 다른 트랜잭션을 기다리게 하고, 낙관적 잠금은 잠그지 않고 진행한 뒤 커밋 시점에 버전 번호 비교로 충돌을 감지해 실패한 쪽이 재시도한다. 충돌이 잦으면 비관적 방식이 재시도 낭비를 줄이고, 충돌이 드물면 낙관적 방식이 잠금 대기와 교착 상태를 피해 처리량이 높다. 분산 환경에서는 잠금 유지 비용이 커서 낙관적 방식이 선호되는 경우가 많다.",
+      "tags": [
+        "DB확장",
+        "동시성제어",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "리더 장애 시 팔로워 승격(promotion) 과정과 위험은?",
+      "back": "장애를 감지하면 가장 최신 데이터를 가진 팔로워를 새 리더로 선출하고, 클라이언트와 다른 팔로워들이 새 리더를 바라보게 재구성한다. 위험은 세 가지다. 비동기 복제였다면 이전 리더에만 있던 쓰기가 유실될 수 있고, 죽은 줄 알았던 이전 리더가 복귀하면 두 리더가 공존하는 스플릿 브레인이 생길 수 있으며, 장애 판정 타임아웃이 너무 짧으면 일시적 지연에도 불필요한 failover가 반복된다. 그래서 펜싱과 신중한 타임아웃 설계가 필요하다.",
+      "tags": [
+        "DB확장",
+        "레플리케이션",
+        "장애대응"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "변경 데이터 캡처(CDC, Change Data Capture)란?",
+      "back": "데이터베이스의 변경 사항을 트랜잭션 로그 등에서 실시간으로 읽어 이벤트 스트림으로 내보내는 기법이다. 캐시 무효화, 검색 인덱스 갱신, 데이터 웨어하우스 동기화 등을 애플리케이션 코드의 이중 쓰기 없이 DB를 원천으로 일관되게 처리할 수 있다. 이중 쓰기의 부분 실패 문제를 피하는 것이 큰 장점이지만, 파이프라인 자체의 지연과 장애, 스키마 변경 대응이라는 운영 부담이 생긴다.",
+      "tags": [
+        "DB확장",
+        "데이터파이프라인",
+        "이벤트"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "구체화 뷰(materialized view)란?",
+      "back": "쿼리 결과를 미리 계산해 실제 데이터로 저장해 두는 뷰다. 매번 무거운 조인·집계를 실행하는 대신 저장된 결과를 바로 읽어 조회 지연을 크게 줄인다. 원본이 바뀔 때 뷰를 갱신해야 하므로 갱신 주기와 데이터 신선도 사이의 트레이드오프가 생기고, 갱신 비용 자체가 쓰기 부하가 된다. 대시보드·랭킹·집계 화면처럼 약간 오래된 데이터가 허용되는 읽기 경로에 적합하다.",
+      "tags": [
+        "DB확장",
+        "조회최적화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "메시지 큐(message queue)란?",
+      "back": "생산자가 보낸 메시지를 큐에 쌓아 두고 소비자가 자신의 속도로 꺼내 처리하게 하는 비동기 통신 컴포넌트다. 생산자와 소비자가 시간적으로 분리되어 서로의 가용성과 처리 속도에 직접 묶이지 않는다. 트래픽 급증을 큐가 흡수해 뒤단을 보호하는 완충 역할도 한다.",
+      "tags": [
+        "메시징",
+        "기본개념"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "메시지 큐를 도입하는 이유(디커플링·버퍼링)는?",
+      "back": "첫째, 결합도 완화다. 호출자가 수신자의 위치·가용성·응답을 기다리지 않아 서비스 간 의존이 느슨해진다. 둘째, 부하 평준화다. 순간 트래픽 폭증을 큐가 흡수해 소비자는 일정한 속도로 처리하면 된다. 셋째, 재처리와 신뢰성이다. 실패한 작업을 큐에 남겨 다시 시도할 수 있다. 대가로 시스템에 비동기 복잡성(순서, 중복, 지연 추적)이 더해지고 브로커 운영 부담이 생긴다.",
+      "tags": [
+        "메시징",
+        "아키텍처",
+        "트레이드오프"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "발행-구독(pub/sub) 모델이란?",
+      "back": "발행자가 토픽에 메시지를 발행하면 그 토픽을 구독한 모든 구독자가 각자 사본을 받는 통신 모델이다. 발행자는 구독자가 누구인지 몰라도 되므로 수신자를 추가해도 발행 측 변경이 없다. 이벤트 하나에 여러 후속 처리를 붙이는 이벤트 기반 아키텍처의 기본 구성 요소다. 구독자별 처리 실패·지연을 각자 관리해야 하고, 메시지 흐름이 암묵적이라 전체 흐름 추적이 어려워질 수 있다.",
+      "tags": [
+        "메시징",
+        "pubsub"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "점대점 큐와 pub/sub의 차이는?",
+      "back": "점대점 큐는 메시지 하나를 경쟁하는 소비자 중 한 명만 처리한다. 작업 분산에 알맞다. pub/sub은 메시지 하나를 관심 있는 모든 구독자가 받는다. 이벤트 통지·팬아웃에 알맞다. 즉 '이 작업을 누군가 한 명이 하라'는 큐, '이 일이 일어났음을 모두에게 알리라'는 pub/sub이다. 현대 브로커는 컨슈머 그룹으로 두 모델을 결합해, 그룹 간에는 브로드캐스트하고 그룹 안에서는 분담하게 한다.",
+      "tags": [
+        "메시징",
+        "pubsub",
+        "기본개념"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "메시지 브로커(message broker)란?",
+      "back": "생산자와 소비자 사이에서 메시지의 수신·저장·라우팅·전달을 담당하는 중간 서버다. 전달 보장, 재시도, 라우팅 규칙, 구독 관리 같은 메시징 공통 기능을 애플리케이션 대신 처리한다. 모든 메시지가 지나가는 핵심 인프라이므로 브로커 자체의 클러스터링·복제·모니터링이 중요하며, 브로커 장애가 전체 비동기 흐름을 멈출 수 있다는 점을 설계에 반영해야 한다.",
+      "tags": [
+        "메시징",
+        "기본개념"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "로그 기반 브로커(Kafka류)와 전통적 메시지 큐의 차이는?",
+      "back": "전통적 큐는 소비된 메시지를 삭제하고 브로커가 소비자별 전달 상태를 관리한다. 로그 기반 브로커는 메시지를 추가 전용 로그에 보존 기간 동안 남겨 두고, 소비자가 자신의 오프셋(읽은 위치)을 직접 관리하며 순서대로 읽는다. 로그 방식은 재소비·다중 구독·리플레이가 자유롭고 순차 I/O로 처리량이 매우 높지만, 파티션 단위 순서만 보장되고 개별 메시지 삭제·선택 소비가 어렵다. 작업 큐에는 전통 큐가, 이벤트 스트림에는 로그 방식이 잘 맞는다.",
+      "tags": [
+        "메시징",
+        "이벤트스트림",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "컨슈머 그룹(consumer group)이란?",
+      "back": "같은 그룹에 속한 소비자들이 토픽의 파티션을 나눠 맡아 메시지를 분담 처리하는 구조다. 그룹 내에서는 한 파티션을 한 소비자만 읽어 중복 없이 병렬 처리가 되고, 서로 다른 그룹은 각자 전체 메시지를 받아 독립적인 용도로 소비할 수 있다. 소비자 수가 파티션 수를 넘으면 초과분은 놀게 되므로 파티션 수가 병렬성의 상한이 된다. 소비자 증감 시 파티션 재할당(리밸런싱) 동안 일시적 처리 중단이 생길 수 있다.",
+      "tags": [
+        "메시징",
+        "이벤트스트림",
+        "확장성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "파티션과 메시지 순서 보장의 관계는?",
+      "back": "브로커는 처리량을 위해 토픽을 여러 파티션으로 나누는데, 순서는 보통 파티션 안에서만 보장되고 파티션 간에는 보장되지 않는다. 순서가 중요한 메시지(같은 주문, 같은 사용자)는 같은 파티션 키를 줘 한 파티션으로 보내야 한다. 파티션 키를 쓰면 순서는 얻지만 특정 키에 트래픽이 몰리면 파티션 핫스팟이 생기고, 파티션 수를 늘리면 키-파티션 매핑이 바뀌어 순서 전제가 깨질 수 있다는 트레이드오프가 있다.",
+      "tags": [
+        "메시징",
+        "순서보장",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "at-most-once, at-least-once, exactly-once 전달 보장이란?",
+      "back": "at-most-once는 재시도하지 않아 중복은 없지만 유실될 수 있고, at-least-once는 확인(ack)될 때까지 재시도해 유실은 없지만 중복이 생길 수 있다. exactly-once는 유실도 중복도 없는 이상적 보장인데, 일반적인 분산 환경에서 종단 간으로 달성하기는 매우 어렵고 비싸다. 실무 기본값은 at-least-once에 멱등한 처리(또는 중복 제거)를 결합해 사실상 exactly-once 효과를 내는 것이다.",
+      "tags": [
+        "메시징",
+        "전달보장",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "멱등 컨슈머(idempotent consumer)가 필요한 이유는?",
+      "back": "at-least-once 전달에서는 네트워크 오류나 ack 유실로 같은 메시지가 두 번 이상 도착할 수 있으므로, 소비자가 같은 메시지를 여러 번 처리해도 결과가 한 번 처리와 같아야 안전하다. 구현은 메시지 고유 ID를 처리 이력 테이블에 기록해 중복을 건너뛰거나, 연산 자체를 멱등하게(절대값 설정, upsert) 설계하는 방식이 있다. 중복 제거 이력의 저장 기간과 조회 비용이 추가 부담이지만, 이 장치 없이는 재시도가 곧 데이터 오염이 된다.",
+      "tags": [
+        "메시징",
+        "멱등성",
+        "전달보장"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "DLQ(Dead Letter Queue)란?",
+      "back": "정해진 횟수만큼 재시도해도 처리에 실패한 메시지를 격리해 두는 별도 큐다. 계속 실패하는 메시지(poison message)가 큐 앞을 막고 재시도를 반복하며 자원을 소모하는 것을 방지하고, 정상 메시지 처리가 이어지게 한다. DLQ에 쌓인 메시지는 알림으로 감지해 원인을 분석하고 수정 후 재투입하는 운영 절차가 함께 있어야 하며, DLQ를 방치하면 조용한 데이터 유실과 같아진다.",
+      "tags": [
+        "메시징",
+        "장애대응",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "백프레셔(backpressure)란?",
+      "back": "소비 측이 감당할 수 없는 속도로 데이터가 밀려올 때, 그 압력을 상류(생산자 방향)로 되돌려 유입 속도를 늦추게 하는 흐름 제어 개념이다. 백프레셔가 없으면 버퍼가 무한정 커져 메모리 고갈로 죽거나, 큐 지연이 폭증해 이미 의미 없어진 요청을 처리하게 된다. 시스템이 과부하를 뒤로 전파해 스스로를 보호하는 장치로, 리액티브 스트림·TCP 흐름 제어·유한 큐 등이 이를 구현한다.",
+      "tags": [
+        "메시징",
+        "흐름제어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "백프레셔 처리 전략에는 어떤 것들이 있나?",
+      "back": "크게 네 가지다. 첫째, 생산자 속도 제어. 풀 기반 소비나 쓰기 차단으로 유입 자체를 늦춘다. 둘째, 유한 버퍼링. 일시적 폭증만 흡수하고 가득 차면 다른 전략으로 전환한다. 셋째, 드롭·샘플링. 오래됐거나 덜 중요한 데이터를 버린다(로드 셰딩). 넷째, 스케일 아웃. 소비자를 늘려 처리 용량을 키운다. 유실 허용 여부와 지연 요구에 따라 선택하며, '무한 버퍼'는 전략이 아니라 장애를 미루는 것일 뿐이다.",
+      "tags": [
+        "메시징",
+        "흐름제어",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "푸시 기반 소비와 풀 기반 소비의 차이는?",
+      "back": "푸시는 브로커가 소비자에게 메시지를 밀어 넣는 방식으로 지연이 낮지만, 소비자 처리 용량을 넘게 밀어붙일 위험이 있어 별도 흐름 제어가 필요하다. 풀은 소비자가 자기 속도로 가져가는 방식으로 자연스러운 백프레셔가 생기고 배치 최적화가 쉽지만, 폴링 주기만큼 지연이 생기고 빈 폴링 낭비가 있을 수 있다. Kafka는 풀, 많은 전통 브로커는 프리페치 한도를 둔 푸시를 쓴다.",
+      "tags": [
+        "메시징",
+        "흐름제어",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "지연 큐(delay queue)와 예약 메시지란?",
+      "back": "메시지를 넣되 지정한 시간이 지나서야 소비 가능해지는 큐 기능이다. 주문 30분 후 미결제 취소, 재시도 간격 두기, 예약 알림 같은 시간 기반 로직을 폴링 배치 없이 구현할 수 있다. 브로커가 기본 지원하지 않으면 지연 단계별 큐, 우선순위 정렬 저장소, 스케줄러 조합으로 구현한다. 대량의 장기 지연 메시지는 브로커 저장 부담이 되고, 지연 정밀도는 구현 방식에 따라 제한된다.",
+      "tags": [
+        "메시징",
+        "스케줄링"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "작업 큐(task queue)와 워커 모델이란?",
+      "back": "시간이 걸리는 작업(이메일 발송, 썸네일 생성, 리포트 작성)을 요청 처리 경로에서 분리해 큐에 넣고, 별도의 워커 프로세스 풀이 꺼내 처리하는 구조다. 사용자 응답은 즉시 반환되고 무거운 작업은 뒤에서 진행되어 응답 지연과 웹 서버 자원 점유가 줄어든다. 워커 수로 처리량을 독립 조절할 수 있다. 작업 상태 조회, 실패 재시도, 결과 통지 같은 부가 설계가 함께 필요하다.",
+      "tags": [
+        "메시징",
+        "비동기처리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "poison message(포이즌 메시지)란?",
+      "back": "형식 오류나 처리 불가능한 내용 때문에 소비할 때마다 실패하는 메시지다. 방치하면 소비자가 같은 메시지를 무한 재시도하며 큐를 막고 CPU와 로그를 낭비하며, 순서 보장 큐에서는 뒤의 정상 메시지까지 전부 지연시킨다. 대응은 최대 재시도 횟수를 정하고 초과 시 DLQ로 격리하는 것이며, 재시도 사이에 백오프를 두어 실패 폭주를 완화한다.",
+      "tags": [
+        "메시징",
+        "장애패턴",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "트랜잭셔널 아웃박스(transactional outbox) 패턴이란?",
+      "back": "DB 갱신과 메시지 발행을 원자적으로 묶기 위해, 메시지를 브로커로 바로 보내는 대신 같은 DB 트랜잭션 안에서 outbox 테이블에 기록하고, 별도 릴레이가 그 테이블을 읽어 브로커로 발행하는 패턴이다. 'DB 커밋은 됐는데 발행은 실패'하는 이중 쓰기 문제를 없애 데이터와 이벤트의 정합성을 지킨다. 릴레이 재시도 때문에 중복 발행이 가능해 소비 측 멱등성이 필요하고, 발행 지연과 outbox 테이블 관리 비용이 따른다.",
+      "tags": [
+        "메시징",
+        "정합성",
+        "아키텍처패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "이벤트 기반 아키텍처(event-driven architecture)란?",
+      "back": "서비스들이 서로를 직접 호출하는 대신 '일어난 일'을 이벤트로 발행하고, 관심 있는 서비스가 구독해 반응하는 아키텍처 스타일이다. 서비스 간 결합이 느슨해져 독립 배포·확장이 쉬워지고, 새 소비자를 기존 발행자 수정 없이 추가할 수 있다. 대신 흐름이 비동기·간접적이라 전체 동작을 추적하기 어렵고, 최종 일관성과 중복·순서 문제를 다뤄야 하며, 이벤트 스키마 관리가 계약 관리만큼 중요해진다.",
+      "tags": [
+        "메시징",
+        "아키텍처",
+        "이벤트"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "코레오그래피(choreography)와 오케스트레이션(orchestration)의 차이는?",
+      "back": "여러 서비스에 걸친 프로세스를 조율하는 두 방식이다. 코레오그래피는 중앙 조정자 없이 각 서비스가 앞 단계의 이벤트에 반응해 자기 일을 하는 방식으로, 결합도가 낮지만 전체 흐름이 코드 어디에도 명시되지 않아 파악·변경·디버깅이 어렵다. 오케스트레이션은 조정자가 각 단계를 순서대로 호출·관리하는 방식으로, 흐름이 명시적이고 오류 처리가 한곳에 모이지만 조정자가 결합점이자 병목이 될 수 있다. 단계가 많고 보상 로직이 복잡할수록 오케스트레이션이 관리하기 쉽다는 평가가 많다.",
+      "tags": [
+        "메시징",
+        "아키텍처패턴",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "팬아웃(fan-out)이란?",
+      "back": "하나의 메시지나 이벤트를 여러 대상에게 복제해 전달하는 패턴이다. 예를 들어 게시물 작성 이벤트를 알림·피드·검색 인덱스 서비스가 각자 받아 처리한다. 소셜 피드에서는 쓰기 시 팔로워 피드에 미리 밀어 넣는 push(fan-out on write)와 읽을 때 모아 오는 pull(fan-out on read)로 나뉘며, 푸시는 읽기가 빠르지만 팔로워가 많은 계정에서 쓰기 폭증이 문제라 두 방식을 혼합하는 것이 일반적이다.",
+      "tags": [
+        "메시징",
+        "pubsub",
+        "아키텍처패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "스트림 처리(stream processing)와 배치 처리의 차이는?",
+      "back": "배치 처리는 쌓인 데이터를 주기적으로 한꺼번에 처리해 처리량 효율과 재실행 용이성이 좋지만 결과가 주기만큼 늦다. 스트림 처리는 데이터가 도착하는 대로 연속 처리해 초 단위 최신 결과를 내지만, 순서 뒤섞임·지각 데이터·상태 관리·정확성 보장 같은 난제를 다뤄야 한다. 실시간 지표·이상 탐지는 스트림, 정산·대규모 집계는 배치가 알맞으며 둘을 병행하는 구조도 흔하다.",
+      "tags": [
+        "메시징",
+        "이벤트스트림",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "컨슈머 랙(consumer lag)이란?",
+      "back": "생산 속도와 소비 속도의 차이로 인해 소비자가 아직 처리하지 못하고 밀려 있는 메시지 양(오프셋 차이)이다. 랙이 지속적으로 증가한다는 것은 소비 용량이 부족하다는 신호로, 데이터 신선도가 요구되는 파이프라인에서는 핵심 모니터링 지표다. 대응은 소비자 확장, 처리 로직 최적화, 파티션 증설이며, 일시적 스파이크 랙과 구조적 증가 추세를 구분해 대응해야 한다.",
+      "tags": [
+        "메시징",
+        "지표",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "큐 깊이(queue depth) 모니터링이 중요한 이유는?",
+      "back": "큐에 쌓인 미처리 메시지 수는 생산과 소비의 균형을 보여 주는 가장 직접적인 신호다. 깊이가 계속 늘면 소비 장애나 용량 부족을 뜻하고, 지연 시간이 곧 사용자 경험 악화나 SLA 위반으로 이어진다. 갑자기 0이 되는 것도 생산자 장애의 신호일 수 있다. 깊이와 함께 메시지 체류 시간, 소비 오류율을 같이 봐야 원인을 구분할 수 있다.",
+      "tags": [
+        "메시징",
+        "지표",
+        "운영"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "요청-응답 호출을 비동기 메시징으로 바꿀 때의 트레이드오프는?",
+      "back": "얻는 것은 시간적 디커플링과 부하 흡수, 장애 격리다. 호출 대상이 죽어 있어도 메시지는 큐에 안전하게 대기한다. 잃는 것은 즉시성과 단순함이다. 호출자는 결과를 바로 받지 못해 상태 폴링·콜백·이벤트로 완료를 알아야 하고, 사용자에게는 '처리 중' 상태를 보여줘야 한다. 중복·순서·최종 일관성 문제도 떠안는다. 응답이 즉시 필요한 조회에는 동기 호출이, 완료가 늦어도 되는 작업에는 비동기가 적합하다.",
+      "tags": [
+        "메시징",
+        "아키텍처",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "CAP 정리란?",
+      "back": "네트워크 분단(partition)이 발생한 상황에서 분산 시스템은 일관성(Consistency)과 가용성(Availability)을 동시에 온전히 제공할 수 없다는 정리다. 여기서 일관성은 모든 노드가 같은 최신 데이터를 보여 주는 것(선형화 가능성), 가용성은 모든 요청이 응답을 받는 것을 뜻한다. 분단은 현실에서 피할 수 없으므로, 분단 시 일관성을 지키며 일부 요청을 거부할지(CP), 오래된 데이터라도 응답할지(AP)를 선택하는 설계 지침으로 쓰인다.",
+      "tags": [
+        "분산이론",
+        "CAP",
+        "일관성"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "CAP에서 분할 내성(P)을 사실상 포기할 수 없는 이유는?",
+      "back": "분할 내성은 노드 간 통신이 끊겨도 시스템이 동작하는 성질인데, 네트워크 장애는 스위치 고장·케이블 절단·GC 멈춤 등으로 언제든 실제로 발생하기 때문이다. P를 포기한다는 것은 분단이 나면 시스템 전체가 멈춰도 된다는 뜻이라 분산 시스템에서는 선택지가 아니다. 따라서 CAP의 실제 의미는 셋 중 둘 고르기가 아니라, 분단이 일어났을 때 C와 A 중 무엇을 양보할지의 선택이다.",
+      "tags": [
+        "분산이론",
+        "CAP"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "CP 시스템과 AP 시스템의 예와 트레이드오프는?",
+      "back": "CP 시스템은 분단 시 일관성을 지키기 위해 소수파 쪽 요청을 거부한다. 합의 기반 코디네이터(ZooKeeper, etcd)나 은행 계좌 같은 정합성 필수 영역이 해당한다. AP 시스템은 분단 시에도 모든 노드가 응답하되 데이터가 잠시 갈릴 수 있고 나중에 수렴시킨다. 장바구니·좋아요 수·DNS 같이 잠깐의 불일치가 허용되는 영역이 해당한다. 무엇이 더 비싼 실패인가, 즉 잘못된 데이터인가 서비스 거부인가로 판단한다.",
+      "tags": [
+        "분산이론",
+        "CAP",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "PACELC 정리란?",
+      "back": "CAP을 확장한 정리로, 분단(P) 시에는 가용성(A)과 일관성(C) 중 선택하고, 분단이 없는(Else) 평상시에도 지연(Latency)과 일관성(C) 중 선택해야 한다는 것이다. 평상시에도 강한 일관성을 지키려면 복제본 간 동기 조율이 필요해 지연이 커지기 때문이다. 예를 들어 Dynamo 계열은 PA/EL(가용성·저지연 우선), 전통적 강일관성 분산 DB는 PC/EC로 분류된다. CAP이 장애 상황만 다루는 반면 PACELC는 평상시 운영 비용까지 포괄해 실무적 분류에 더 유용하다.",
+      "tags": [
+        "분산이론",
+        "PACELC",
+        "트레이드오프"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "강한 일관성(strong consistency)이란?",
+      "back": "쓰기가 완료된 후에는 어떤 노드에서 읽어도 항상 그 최신 값이 보이는 일관성 수준이다. 개발자가 단일 서버처럼 추론할 수 있어 애플리케이션 로직이 단순해진다. 이를 위해 복제본 간 동기 조율이나 합의가 필요해 지연이 커지고, 분단 시 가용성을 희생해야 한다. 잔액·재고·권한처럼 오래된 값을 읽으면 실질적 피해가 생기는 데이터에 요구된다.",
+      "tags": [
+        "분산이론",
+        "일관성모델"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "최종 일관성(eventual consistency)이란?",
+      "back": "새로운 쓰기가 멈추면 충분한 시간 후 모든 복제본이 결국 같은 값으로 수렴한다는 약한 일관성 보장이다. 수렴까지의 시간에는 상한이 없으며, 그 사이 읽기는 오래된 값을 반환할 수 있다. 동기 조율이 없어 낮은 지연과 높은 가용성, 뛰어난 확장성을 얻는 대신, 불일치 상태를 다루는 부담이 애플리케이션으로 넘어온다. 조회수·타임라인처럼 잠시 어긋나도 무해한 데이터에 적합하다.",
+      "tags": [
+        "분산이론",
+        "일관성모델",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "선형화 가능성(linearizability)이란?",
+      "back": "모든 연산이 호출과 응답 사이의 어느 한 시점에 원자적으로 일어난 것처럼, 전체 시스템이 단일 사본처럼 보이는 가장 강한 단일 객체 일관성 모델이다. 쓰기가 완료되면 그 이후 시작된 모든 읽기는 새 값을 봐야 한다. 리더 선출이나 고유성 보장 같은 조율 문제에 필요하지만, 합의나 쿼럼 동기화가 필요해 지연이 크고 분단 시 가용성을 잃는다. 직렬화 가능성(serializability)이 트랜잭션 격리 개념인 것과 달리, 선형화는 단일 객체 연산의 실시간 순서 개념이다.",
+      "tags": [
+        "분산이론",
+        "일관성모델"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "인과적 일관성(causal consistency)이란?",
+      "back": "인과 관계가 있는 연산들(질문과 그에 대한 답글처럼 한쪽이 다른 쪽을 보고 일어난 연산)은 모든 노드에서 같은 순서로 관찰되도록 보장하되, 인과 관계가 없는 동시 연산의 순서는 노드마다 달라도 허용하는 일관성 모델이다. 선형화보다 훨씬 저렴하면서도 '답글이 원글보다 먼저 보이는' 류의 부자연스러움을 막아 준다. 분단 중에도 제공 가능한 가장 강한 수준의 일관성 계열로 알려져 있어, 지연과 직관성의 균형점으로 주목받는다.",
+      "tags": [
+        "분산이론",
+        "일관성모델"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "read-your-writes(자기 쓰기 읽기) 일관성이란?",
+      "back": "사용자가 자신이 방금 쓴 데이터는 이후 읽기에서 항상 볼 수 있도록 보장하는 세션 수준 일관성이다. 프로필을 수정했는데 새로고침하니 이전 값이 보이는 경험을 막는다. 다른 사용자의 쓰기가 늦게 보이는 것은 허용하므로 전면적인 강한 일관성보다 훨씬 저렴하다. 구현은 자기 데이터 읽기는 리더로 보내기, 쓰기 직후 일정 시간 리더에서 읽기, 쓰기 시각 타임스탬프 이상으로 따라잡은 복제본에서만 읽기 등이 있다.",
+      "tags": [
+        "분산이론",
+        "일관성모델",
+        "레플리케이션"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "단조 읽기(monotonic reads) 일관성이란?",
+      "back": "한 사용자가 어떤 값을 한번 읽었다면, 이후의 읽기에서 그보다 오래된 값을 보지 않도록 보장하는 세션 수준 일관성이다. 복제 지연이 다른 복제본들을 오가며 읽을 때 데이터가 과거로 되돌아가 보이는 현상을 막는다. 새 댓글을 봤다가 새로고침하니 사라지는 경험이 그 예다. 같은 사용자의 읽기를 (예: 사용자 ID 해싱으로) 같은 복제본에 고정하는 방법이 대표적 구현이다.",
+      "tags": [
+        "분산이론",
+        "일관성모델",
+        "레플리케이션"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "쿼럼(quorum)이란? R+W>N 조건의 의미는?",
+      "back": "N개의 복제본 중 쓰기는 W개, 읽기는 R개의 응답을 받아야 성공으로 치는 정족수 기법이다. R+W>N이면 읽기 집합과 쓰기 집합이 항상 최소 한 노드에서 겹치므로, 읽기가 최신 쓰기를 포함한 응답을 받게 된다. W를 키우면 쓰기가 느리고 안전해지며, R을 키우면 읽기가 느리고 최신성이 좋아지는 식으로 워크로드에 맞게 조절한다. 다만 쿼럼이 겹쳐도 동시 쓰기 충돌이나 부분 실패 때문에 그 자체로 선형화 가능성이 보장되는 것은 아니다.",
+      "tags": [
+        "분산이론",
+        "쿼럼",
+        "레플리케이션"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "합의(consensus) 문제란?",
+      "back": "장애와 메시지 지연이 있는 분산 환경에서 여러 노드가 하나의 값에 안전하게 동의하는 문제다. 리더 선출, 원자적 커밋, 복제 로그의 순서 결정, 분산 잠금이 모두 합의로 환원된다. 어려운 이유는 노드가 죽은 것인지 느린 것인지 구분할 수 없고, 그 와중에도 서로 다른 값에 동의하는 일(안전성 위반)이 없어야 하기 때문이다. Paxos와 Raft가 대표적 해법이며, 과반수 노드가 살아 있어야 진행된다.",
+      "tags": [
+        "분산이론",
+        "합의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "Paxos란?",
+      "back": "비동기 네트워크에서 과반수 합의로 단일 값을 결정하는 고전적 합의 알고리즘이다. 제안자가 제안 번호로 과반수의 사전 동의(prepare)를 얻은 뒤 값을 수락(accept)시키는 2단계로 동작하며, 어떤 장애 시나리오에서도 서로 다른 값이 결정되는 일이 없음이 증명되어 있다. 정확성은 확고하지만 이해와 구현이 악명 높게 어렵고, 실용 시스템에 필요한 로그 복제(Multi-Paxos)로 확장하는 부분이 명확히 규정되어 있지 않아, 이해 가능성을 목표로 한 Raft가 대안으로 널리 퍼졌다.",
+      "tags": [
+        "분산이론",
+        "합의",
+        "알고리즘"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "Raft란? 핵심 동작은?",
+      "back": "이해 가능성을 명시적 목표로 설계된 합의 알고리즘으로, 복제 로그를 여러 노드에 동일하게 유지한다. 핵심은 세 가지다. 리더 선출(임기 번호와 무작위 타임아웃으로 과반수 득표), 로그 복제(모든 쓰기는 리더를 거쳐 과반수에 복제되면 커밋), 안전성(더 최신 로그를 가진 후보만 리더가 될 수 있어 커밋된 항목이 뒤집히지 않음). etcd 등 실무 코디네이터에 널리 구현되어 있으며, 과반수가 살아 있어야 쓰기가 가능하다는 합의 계열 공통의 제약을 가진다.",
+      "tags": [
+        "분산이론",
+        "합의",
+        "알고리즘"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "FLP 불가능성 정리란?",
+      "back": "완전한 비동기 시스템에서는 단 하나의 노드라도 죽을 수 있다면, 항상 유한 시간 안에 종료됨을 보장하는 결정적 합의 알고리즘이 존재하지 않는다는 정리다. 메시지 지연에 상한이 없으면 죽은 노드와 느린 노드를 구분할 수 없다는 데서 비롯한다. 실무 합의 알고리즘은 이 한계를 타임아웃 같은 부분 동기성 가정이나 무작위성으로 우회하며, 안전성(잘못된 합의 없음)은 항상 지키되 진행성(언젠가 끝남)은 네트워크가 안정될 때 보장하는 식으로 설계된다.",
+      "tags": [
+        "분산이론",
+        "합의",
+        "이론"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "리더 선출(leader election)이란?",
+      "back": "분산 노드들 중 조율 역할을 맡을 하나의 리더를 뽑고, 리더 장애 시 새 리더를 다시 뽑는 메커니즘이다. 쓰기 직렬화, 작업 분배, 중복 실행 방지처럼 '한 명만 해야 하는 일'에 필요하다. 구현은 합의 알고리즘의 선출 절차나 코디네이터의 임차(lease)·임시 노드를 이용한다. 어려운 점은 이전 리더가 죽지 않고 격리만 된 경우로, 리더가 둘이 되는 스플릿 브레인을 막기 위해 임기 번호와 펜싱이 함께 쓰인다.",
+      "tags": [
+        "분산이론",
+        "합의",
+        "조율"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "분산 잠금(distributed lock)의 용도와 주의점은?",
+      "back": "여러 노드 중 하나만 임계 작업(배치 중복 실행 방지, 공유 자원 갱신)을 수행하도록 조율하는 잠금이다. 주의점은 로컬 잠금과 달리 완벽하지 않다는 것이다. 잠금 보유자가 GC 멈춤이나 네트워크 지연에 빠지면 만료(lease timeout)로 잠금이 풀리고 다른 노드가 획득한 뒤, 원래 보유자가 깨어나 자신이 여전히 보유 중이라 믿고 작업할 수 있다. 따라서 잠금만 믿지 말고 펜싱 토큰으로 저장소 측에서 낡은 보유자를 거부하게 하는 이중 방어가 권장된다.",
+      "tags": [
+        "분산이론",
+        "조율",
+        "장애패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "펜싱 토큰(fencing token)이란?",
+      "back": "잠금이나 리더 임차를 발급할 때마다 단조 증가하는 번호를 함께 발급하고, 보호 대상 자원(저장소)이 더 낮은 번호의 요청을 거부하게 하는 안전장치다. 일시 정지됐다 깨어난 옛 잠금 보유자가 이미 만료된 권한으로 데이터를 덮어쓰는 사고를 자원 쪽에서 차단한다. 잠금 서비스의 보장만으로는 막을 수 없는 '낡은 클라이언트' 문제의 표준 해법이지만, 자원이 토큰 검사를 지원해야 한다는 전제가 필요하다.",
+      "tags": [
+        "분산이론",
+        "조율",
+        "안전장치"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "멱등성(idempotency)이란?",
+      "back": "같은 연산을 한 번 수행하든 여러 번 수행하든 결과가 같은 성질이다. 분산 시스템에서는 타임아웃 후 재시도가 기본 생존 전략인데, 응답 유실 시 요청이 실제로는 처리됐을 수 있어 재시도가 곧 중복 실행 위험이 된다. 연산이 멱등하면 안심하고 재시도할 수 있으므로, 멱등성은 신뢰할 수 없는 네트워크 위에서 정확성을 지키는 토대다. '잔액에 1만 원 더하기'는 멱등하지 않지만 '주문 123의 상태를 결제 완료로 설정'은 멱등하다.",
+      "tags": [
+        "분산이론",
+        "멱등성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "멱등성 키(idempotency key)를 이용한 API 설계란?",
+      "back": "클라이언트가 요청마다 고유 키를 생성해 보내고, 서버는 처리한 키와 그 응답을 저장해 두었다가 같은 키의 재요청에는 재실행 없이 저장된 응답을 돌려주는 패턴이다. 결제처럼 중복 실행이 치명적인 비멱등 연산을 네트워크 재시도에도 안전하게 만든다. 키-응답 저장소의 보관 기간과 용량, 첫 요청이 아직 처리 중일 때 도착한 재요청의 동시성 처리(잠금 또는 진행 중 응답)가 설계 포인트다.",
+      "tags": [
+        "분산이론",
+        "멱등성",
+        "API설계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "램포트 시계(Lamport clock)란?",
+      "back": "물리적 시계 없이 사건의 순서를 매기는 논리적 시계다. 각 노드가 카운터를 유지하며 사건마다 증가시키고, 메시지에 실어 보내 수신 측이 자신의 값과 최댓값을 취한 뒤 증가시킨다. 이렇게 하면 인과적으로 앞선 사건은 항상 더 작은 타임스탬프를 갖는다. 한계는 역이 성립하지 않는다는 것으로, 타임스탬프가 작다고 인과적으로 앞선 것은 아니며 동시성(어느 쪽도 원인이 아님)을 구분할 수 없다. 이를 보완한 것이 벡터 클록이다.",
+      "tags": [
+        "분산이론",
+        "논리시계",
+        "이론"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "벡터 클록(vector clock)이란?",
+      "back": "각 노드가 모든 노드의 카운터 벡터를 유지해 사건 간 인과 관계를 판별하는 논리적 시계다. 한 벡터가 다른 벡터의 모든 성분 이상이면 인과적으로 뒤이고, 서로 비교 불가능하면 동시(concurrent) 사건이다. 램포트 시계와 달리 동시성을 감지할 수 있어, 리더리스 저장소에서 어떤 쓰기가 다른 쓰기를 덮어도 되는지, 아니면 충돌로 보존해 병합해야 하는지 판단하는 데 쓰인다. 노드 수에 비례해 벡터가 커지는 오버헤드가 단점이다.",
+      "tags": [
+        "분산이론",
+        "논리시계",
+        "이론"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "분산 시스템에서 물리적 시계에 의존하면 위험한 이유는?",
+      "back": "각 서버의 시계는 수정 발진기 편차로 서로 어긋나고, NTP 동기화로도 수 밀리초에서 수백 밀리초의 오차가 남으며 동기화 순간 시간이 점프하거나 되돌아갈 수도 있다. 이런 시계로 이벤트 순서를 정하면(예: 최종 쓰기 승리) 나중 쓰기가 과거 타임스탬프를 달고 조용히 유실될 수 있다. 그래서 순서에는 논리적 시계를 쓰는 것이 안전하며, 물리 시계를 쓰려면 오차 구간을 명시적으로 다루는 특수 설계(신뢰 구간 대기 등)가 필요하다.",
+      "tags": [
+        "분산이론",
+        "시계동기화",
+        "장애패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "2단계 커밋(2PC)이란? 한계는?",
+      "back": "여러 노드에 걸친 트랜잭션을 원자적으로 커밋하기 위한 프로토콜로, 조정자가 모든 참여자에게 준비(prepare)를 물어 전원이 예라고 하면 커밋을, 하나라도 아니면 중단을 지시한다. 한계는 블로킹이다. 참여자들이 준비 완료 상태에서 조정자가 죽으면 참여자는 커밋도 롤백도 못 한 채 잠금을 쥐고 대기해야 한다. 또한 모든 참여자의 응답을 기다려 지연이 크고 가용성이 참여자 전원에 묶인다. 그래서 마이크로서비스 간에는 2PC 대신 사가 패턴이 선호되는 경우가 많다.",
+      "tags": [
+        "분산이론",
+        "분산트랜잭션",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "사가 패턴(saga pattern)이란?",
+      "back": "여러 서비스에 걸친 트랜잭션을 하나의 분산 트랜잭션 대신, 각 서비스의 로컬 트랜잭션 연쇄로 나누고 중간 실패 시 이미 완료된 단계들을 보상 트랜잭션으로 되돌리는 패턴이다. 장시간 잠금 없이 가용성과 확장성을 지키면서 종단 간 정합성을 최종적으로 맞춘다. 대가는 격리성 부족이다. 중간 상태가 외부에 관찰될 수 있고, 보상 로직을 모든 단계에 설계해야 하며, 보상 자체가 실패하는 경우의 처리(재시도, 수동 개입)까지 고려해야 한다.",
+      "tags": [
+        "분산이론",
+        "분산트랜잭션",
+        "아키텍처패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "보상 트랜잭션(compensating transaction)이란?",
+      "back": "이미 커밋된 로컬 트랜잭션의 효과를 의미적으로 되돌리는 반대 연산이다. 결제 완료를 환불로, 재고 차감을 재고 복원으로 상쇄하는 식이며, 사가 패턴에서 롤백을 대신한다. 기술적 롤백이 아니라 비즈니스 수준의 취소이므로 완전한 원상복구가 아닐 수 있고(이미 발송된 이메일), 보상은 원 연산 후 언제든 실행될 수 있어야 하므로 멱등하게, 그리고 실패에 대비해 재시도 가능하게 설계해야 한다.",
+      "tags": [
+        "분산이론",
+        "분산트랜잭션"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "BASE란? ACID와 어떻게 대비되나?",
+      "back": "BASE는 Basically Available(기본적 가용), Soft state(변화 허용 상태), Eventually consistent(최종 일관성)의 약자로, 대규모 분산 시스템이 ACID의 엄격한 일관성 대신 택하는 설계 철학이다. ACID가 트랜잭션의 원자성·일관성·격리성·지속성으로 정확성을 우선한다면, BASE는 일부 오래된 읽기를 허용하는 대신 가용성과 확장성을 우선한다. 이분법이라기보다 스펙트럼이어서, 실제 시스템은 데이터 종류별로 강한 일관성 영역과 최종 일관성 영역을 나눠 섞는 것이 일반적이다.",
+      "tags": [
+        "분산이론",
+        "일관성모델",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "스플릿 브레인(split-brain)이란?",
+      "back": "네트워크 분단으로 서로를 볼 수 없게 된 노드 그룹들이 각자 자신이 정당한 리더(또는 활성 계열)라고 믿고 동시에 쓰기를 받는 상태다. 양쪽에서 갈라진 데이터는 병합이 어렵거나 한쪽을 버려야 해 데이터 손상으로 이어진다. 예방책은 과반수(쿼럼)를 가진 쪽만 동작하게 하는 것과, 임기 번호·펜싱 토큰으로 낡은 리더의 쓰기를 저장소에서 거부하는 것이다. 노드를 홀수로 두는 관행도 과반수 판정을 위한 것이다.",
+      "tags": [
+        "분산이론",
+        "장애패턴",
+        "쿼럼"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "CRDT(충돌 없는 복제 데이터 타입)란?",
+      "back": "여러 복제본에서 동시에 갱신해도 수학적으로 결정된 병합 규칙(교환·결합·멱등 법칙을 만족하는 병합)에 따라 조율 없이 항상 같은 상태로 수렴하는 자료구조다. 증가 카운터, 집합, 협업 편집용 시퀀스 등이 있으며, 오프라인 편집이나 멀티 리더 환경에서 충돌 해소 로직 없이 최종 일관성을 얻는다. 대신 표현할 수 있는 연산이 제한적이고(전역 불변식 강제 불가), 삭제 표시(tombstone) 등으로 메타데이터가 커지는 비용이 있다.",
+      "tags": [
+        "분산이론",
+        "일관성모델",
+        "자료구조"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "안티 엔트로피(anti-entropy)와 read repair란?",
+      "back": "리더리스 복제에서 복제본 간 불일치를 수렴시키는 두 보조 메커니즘이다. read repair는 읽기 시 여러 복제본의 응답을 비교해 낡은 복제본을 그 자리에서 최신 값으로 갱신하는 것으로, 자주 읽히는 데이터를 빠르게 고친다. 안티 엔트로피는 백그라운드 프로세스가 주기적으로 복제본끼리 차이를 비교(머클 트리로 효율화)해 동기화하는 것으로, 읽히지 않는 데이터까지 결국 수렴시킨다. 전자는 읽기 지연을 약간 늘리고, 후자는 백그라운드 자원을 소모하는 비용이 있다.",
+      "tags": [
+        "분산이론",
+        "레플리케이션",
+        "일관성모델"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "고가용성(high availability)이란? 나인(9)으로 어떻게 표현하나?",
+      "back": "시스템이 장애 상황에서도 서비스를 계속 제공하는 능력으로, 연간 정상 가동 시간 비율로 표현한다. 99.9%(스리 나인)는 연간 약 8.8시간, 99.99%(포 나인)는 약 53분, 99.999%는 약 5분의 중단만 허용한다는 뜻이다. 9가 하나 늘 때마다 이중화·자동 failover·무중단 배포 등 비용이 급격히 커지므로, 서비스 특성에 맞는 목표 수준을 정하는 것이 먼저다.",
+      "tags": [
+        "가용성",
+        "기본개념",
+        "지표"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "SLA, SLO, SLI의 차이는?",
+      "back": "SLI는 실제로 측정하는 서비스 품질 지표(성공률, p99 지연 등)이고, SLO는 그 지표에 대해 내부적으로 정한 목표치(예: 30일 성공률 99.9% 이상)이며, SLA는 고객과의 계약으로 위반 시 보상 등 책임이 따르는 외부 약속이다. 보통 SLA는 SLO보다 느슨하게 잡아 여유를 둔다. SLO는 신뢰성 투자와 기능 개발 속도 사이의 균형을 정하는 기준점 역할을 한다.",
+      "tags": [
+        "가용성",
+        "지표",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "단일 장애점(SPOF, single point of failure)이란?",
+      "back": "그 구성 요소 하나가 죽으면 시스템 전체가 멈추는 지점이다. 유일한 로드 밸런서, 단일 DB, 하나뿐인 메시지 브로커, 심지어 단일 DNS 제공자나 자격 증명 서비스도 해당될 수 있다. 고가용성 설계의 출발점은 아키텍처를 훑으며 SPOF를 찾아 이중화하는 것이다. 다만 모든 지점의 이중화는 비용이 크므로, 장애 영향도와 발생 확률을 따져 우선순위를 정한다.",
+      "tags": [
+        "가용성",
+        "장애패턴",
+        "설계원칙"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "이중화에서 active-active와 active-passive의 차이는?",
+      "back": "active-active는 모든 노드가 동시에 트래픽을 처리하다 하나가 죽으면 나머지가 흡수하는 구성으로, 자원 활용도가 높고 전환이 빠르지만 상태 동기화가 복잡하고 평시에 여유 용량을 확보해 둬야 한다. active-passive는 대기 노드가 놀고 있다가 장애 시 승격되는 구성으로, 단순하고 충돌 위험이 적지만 대기 자원이 낭비되고 전환 시간과 전환 실패 위험이 있다. 상태 동기화 난이도와 전환 허용 시간에 따라 선택한다.",
+      "tags": [
+        "가용성",
+        "이중화",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "failover(장애 조치)란?",
+      "back": "활성 구성 요소에 장애가 나면 대기(또는 다른 활성) 구성 요소로 역할을 자동 전환해 서비스를 이어가는 메커니즘이다. 헬스 체크로 장애를 감지하고, 승격·트래픽 재라우팅을 수행한다. 핵심 난점은 장애 판정이다. 판정이 성급하면 일시 지연에도 불필요한 전환이 반복되고, 늦으면 중단이 길어진다. 전환 중 데이터 유실(비동기 복제)과 이전 활성 노드의 복귀로 인한 스플릿 브레인도 함께 설계해야 한다.",
+      "tags": [
+        "가용성",
+        "장애대응",
+        "이중화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "failback(원복)이란?",
+      "back": "failover로 대체 시스템이 서비스를 이어받은 뒤, 원래 시스템이 복구되면 역할을 다시 되돌리는 절차다. 대체 시스템이 용량이나 지리적 위치 면에서 임시 구성일 때 필요하다. 전환 기간 동안 대체 측에 쌓인 데이터 변경을 원 시스템에 역동기화해야 하므로 failover보다 신중히, 보통 트래픽이 적은 시간대에 계획적으로 수행한다. 원복을 서두르다 두 번째 장애를 내는 사례가 많아 자동보다 수동 통제가 선호되기도 한다.",
+      "tags": [
+        "가용성",
+        "장애대응",
+        "운영"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "서킷 브레이커(circuit breaker) 패턴이란?",
+      "back": "의존 서비스 호출의 실패율이 임계치를 넘으면 회로를 차단해 한동안 호출 자체를 즉시 실패시키는 패턴이다. 죽어가는 의존 서비스에 재시도가 몰려 상황을 악화시키는 것과, 타임아웃 대기 스레드가 쌓여 호출자까지 함께 죽는 연쇄 장애를 막는다. 의존 서비스는 회복할 여유를 얻고 호출자는 빠른 실패로 폴백을 실행할 수 있다. 임계치·차단 시간 튜닝이 필요하고, 잘못 설정하면 일시적 오류에도 과하게 차단해 가용성을 되레 깎을 수 있다.",
+      "tags": [
+        "가용성",
+        "장애대응",
+        "아키텍처패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "서킷 브레이커의 세 상태는?",
+      "back": "닫힘(Closed), 열림(Open), 반열림(Half-Open)이다. 닫힘 상태에서는 정상적으로 호출하며 실패율을 집계하고, 임계치를 넘으면 열림으로 전환해 일정 시간 모든 호출을 즉시 실패시킨다. 시간이 지나면 반열림으로 바뀌어 소수의 시험 호출만 통과시키고, 성공하면 닫힘으로 복귀, 실패하면 다시 열림으로 돌아간다. 반열림의 시험 호출 수를 제한하는 것이 회복 중인 서비스를 다시 무너뜨리지 않는 요령이다.",
+      "tags": [
+        "가용성",
+        "장애대응",
+        "아키텍처패턴"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "재시도(retry) 전략 설계 시 주의점은?",
+      "back": "재시도는 일시적 오류를 극복하는 기본 수단이지만 잘못 쓰면 장애를 증폭시킨다. 주의점은 네 가지다. 멱등한 연산에만 재시도할 것(또는 멱등성 키 사용), 재시도 횟수와 총 시간에 상한을 둘 것, 간격에 지수 백오프와 지터를 적용할 것, 그리고 호출 체인의 여러 계층이 각자 재시도해 시도 횟수가 곱으로 불어나는 재시도 증폭을 피할 것(가급적 한 계층에서만 재시도). 서킷 브레이커·타임아웃과 함께 묶어 설계해야 한다.",
+      "tags": [
+        "가용성",
+        "재시도",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "지수 백오프(exponential backoff)와 지터(jitter)란?",
+      "back": "지수 백오프는 재시도 간격을 1초, 2초, 4초처럼 지수적으로 늘려 실패가 지속될수록 부하를 줄이는 기법이다. 지터는 그 간격에 무작위성을 더하는 것으로, 동시에 실패한 수많은 클라이언트가 같은 시각에 일제히 재시도해 복구 중인 서버를 다시 쓰러뜨리는 동기화 폭주를 깨뜨린다. 순수 지수 백오프만으로는 재시도 파도가 주기적으로 몰리므로, 실무에서는 전체 구간 무작위(full jitter) 방식이 널리 권장된다.",
+      "tags": [
+        "가용성",
+        "재시도",
+        "완화기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "재시도 폭풍(retry storm)이란?",
+      "back": "서비스가 느려지거나 잠깐 죽었을 때 수많은 클라이언트와 중간 계층들이 동시에 재시도를 쏟아내, 원래 트래픽의 몇 배가 몰리며 복구를 불가능하게 만드는 자기 강화적 장애 패턴이다. 특히 계층마다 3회씩 재시도하는 3단 호출 체인은 최악의 경우 27배의 시도를 만든다. 예방은 지터 있는 백오프, 재시도 예산(전체 요청 대비 재시도 비율 상한), 서킷 브레이커, 그리고 재시도를 말단이 아닌 한 계층에 집중시키는 것이다.",
+      "tags": [
+        "가용성",
+        "장애패턴",
+        "재시도"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "타임아웃 설정이 중요한 이유는?",
+      "back": "타임아웃이 없거나 너무 길면 죽은 의존 서비스를 기다리는 스레드·커넥션이 쌓여 호출자 자원이 고갈되고 장애가 상류로 전파된다. 너무 짧으면 정상적인 느린 응답까지 실패로 만들고 불필요한 재시도를 유발한다. 적정값은 의존 서비스의 지연 분포(p99 등)에 근거해 정하고, 호출 체인에서는 하류로 갈수록 짧아지게(상류 타임아웃 안에 하류가 끝나게) 배치해야 하류 응답이 이미 포기된 요청을 계속 처리하는 낭비를 막을 수 있다.",
+      "tags": [
+        "가용성",
+        "설계원칙",
+        "장애대응"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "벌크헤드(bulkhead) 패턴이란?",
+      "back": "선박의 격벽처럼 자원(스레드 풀, 커넥션 풀, 인스턴스 그룹)을 용도별로 분리해, 한 의존 서비스나 한 종류의 요청이 자원을 전부 소진해도 다른 부분은 계속 동작하게 하는 격리 패턴이다. 예를 들어 결제 호출용과 추천 호출용 스레드 풀을 나누면 추천 서비스 지연이 결제까지 마비시키지 못한다. 자원을 나누면 각 풀의 최대 활용률은 낮아지므로, 격리 단위와 풀 크기를 중요도에 따라 조정하는 트레이드오프가 있다.",
+      "tags": [
+        "가용성",
+        "격리",
+        "아키텍처패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "폴백(fallback)과 우아한 성능 저하(graceful degradation)란?",
+      "back": "폴백은 호출 실패 시 대체 동작으로 응답하는 것이다. 캐시된 이전 값, 기본값, 축소된 기능을 반환한다. 우아한 성능 저하는 그 원칙의 확장으로, 일부 구성 요소가 죽어도 전체를 죽이는 대신 핵심 기능만이라도 유지하는 설계 철학이다. 추천 영역이 비어도 상품 구매는 되게 하는 식이다. 폴백 응답이 오래되거나 부정확할 수 있음을 사용자 경험 차원에서 감수할지, 어떤 기능이 핵심인지의 우선순위 결정이 선행되어야 한다.",
+      "tags": [
+        "가용성",
+        "장애대응",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "로드 셰딩(load shedding)이란?",
+      "back": "시스템이 감당할 수 없는 부하가 올 때 일부 요청을 의도적으로 거부(빠른 실패)해 나머지 요청의 정상 처리를 지키는 기법이다. 모든 요청을 받다가 전체가 느려져 사실상 전부 실패하는 것보다, 일부를 명시적으로 거절하는 편이 총 성공량이 크다는 판단에 기반한다. 우선순위 기반(헬스 체크와 핵심 트래픽은 보호, 크롤러·저순위부터 거절)으로 정교화할 수 있다. 거절 기준과 용량 추정이 어긋나면 여유가 있는데도 거절하는 낭비가 생길 수 있다.",
+      "tags": [
+        "가용성",
+        "과부하보호",
+        "완화기법"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "연쇄 장애(cascading failure)란?",
+      "back": "한 구성 요소의 장애가 의존 관계를 타고 번지며 시스템 전체를 무너뜨리는 패턴이다. 전형적 경로는 이렇다. 한 서비스가 느려지면 호출자들의 스레드가 대기로 묶이고, 재시도가 부하를 배가하며, 살아남은 인스턴스로 트래픽이 쏠려 그마저 과부하로 쓰러진다. 방어는 타임아웃·서킷 브레이커·벌크헤드·백프레셔·로드 셰딩의 조합이며, 핵심 원칙은 실패를 빨리, 국소적으로 만들고 과부하 시 수요를 줄이는 것이다.",
+      "tags": [
+        "가용성",
+        "장애패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "재해 복구(DR)에서 RTO와 RPO란?",
+      "back": "RTO(Recovery Time Objective)는 재해 후 서비스가 복구되기까지 허용하는 최대 시간이고, RPO(Recovery Point Objective)는 허용하는 최대 데이터 손실 범위(시간)다. 예를 들어 RPO 5분은 최근 5분 치 데이터까지는 잃을 수 있다는 뜻이다. 두 값을 줄일수록 비용이 급증한다. RPO를 0에 가깝게 하려면 동기 복제가, RTO를 분 단위로 하려면 상시 대기 인프라가 필요하다. 비즈니스 영향 분석으로 목표를 먼저 정하고 그에 맞는 DR 구성을 고르는 것이 순서다.",
+      "tags": [
+        "가용성",
+        "재해복구",
+        "지표"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "DR 구성에서 핫·웜·콜드 스탠바이의 차이는?",
+      "back": "콜드 스탠바이는 백업만 두고 재해 시 인프라를 새로 세우는 방식으로 비용이 가장 싸지만 복구가 시간 단위 이상 걸린다. 웜 스탠바이는 축소된 규모의 대체 환경을 상시 가동하며 데이터를 복제해 두다가 재해 시 확장하는 절충안이다. 핫 스탠바이(또는 멀티 사이트 active-active)는 대체 환경을 실규모로 상시 가동해 즉시 전환하는 방식으로 RTO·RPO가 가장 짧지만 비용이 두 배 가까이 든다. RTO·RPO 목표와 예산이 선택 기준이다.",
+      "tags": [
+        "가용성",
+        "재해복구",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "카오스 엔지니어링(chaos engineering)이란?",
+      "back": "운영 환경(또는 그에 준하는 환경)에 인스턴스 종료, 지연 주입, 의존 서비스 차단 같은 장애를 의도적으로 주입해, 시스템의 복원력 가설을 실험으로 검증하는 방법론이다. 장애 대응 장치는 실제 장애가 나기 전엔 검증되지 않는다는 문제의식에서 나왔다. 정상 상태 지표를 정의하고, 폭발 반경을 제한한 소규모 실험부터 시작하며, 발견된 약점을 보완하는 순환이 핵심이다. 통제 없는 주입은 실제 장애가 될 수 있어 중단 스위치와 관측 체계가 전제 조건이다.",
+      "tags": [
+        "가용성",
+        "복원력",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "자가 치유(self-healing)와 오토스케일링이란?",
+      "back": "자가 치유는 헬스 체크 실패나 크래시를 감지해 인스턴스를 자동 재시작·교체하는 것으로, 사람 개입 없이 개별 장애를 흡수한다. 오토스케일링은 부하 지표(CPU, 요청 수, 큐 깊이)에 따라 인스턴스 수를 자동 증감하는 것으로, 트래픽 변동에 용량을 맞춘다. 둘 다 무상태 설계가 전제될수록 잘 동작한다. 주의점은 스케일 아웃에 걸리는 시간(급증 대응 한계), 지표 진동에 따른 플래핑, 그리고 근본 원인(메모리 누수 등)을 재시작이 가려 버리는 문제다.",
+      "tags": [
+        "가용성",
+        "자동화",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "우아한 종료(graceful shutdown)란?",
+      "back": "프로세스를 끌 때 즉시 죽이지 않고, 새 요청 수신을 중단하고 처리 중인 요청을 마무리하며 커넥션·리소스를 정리한 뒤 종료하는 절차다. 배포·스케일 인·재시작 때마다 일어나는 일상적 종료가 요청 실패로 이어지지 않게 한다. 구현은 종료 신호(SIGTERM)를 받으면 로드 밸런서 대상에서 빠지고(readiness 실패 처리), 진행 중 작업을 유예 시간 내 완료하는 것이다. 유예 시간을 넘기는 작업은 결국 강제 종료되므로 장시간 작업은 중단 가능하게 설계해야 한다.",
+      "tags": [
+        "가용성",
+        "배포",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "블래스트 래디어스(blast radius)를 줄이는 설계란?",
+      "back": "블래스트 래디어스는 하나의 장애나 잘못된 변경이 영향을 미치는 범위다. 이를 줄이는 대표적 수단은 격리다. 가용 영역·리전 단위 분산, 사용자 집합을 독립된 인프라 단위로 나누는 셀 기반 아키텍처, 벌크헤드, 그리고 배포를 일부에만 먼저 적용하는 카나리·단계적 롤아웃이 있다. 격리 단위가 늘수록 운영 복잡도와 자원 중복이 커지므로, 전면 장애의 비용과 견주어 격리 수준을 정한다.",
+      "tags": [
+        "가용성",
+        "격리",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "헤지 요청(hedged request)이란?",
+      "back": "요청을 보낸 뒤 응답이 예상 지연(예: p95)보다 늦어지면 다른 복제본에 같은 요청을 추가로 보내고, 먼저 도착한 응답을 쓰는 꼬리 지연(tail latency) 완화 기법이다. 소수의 느린 서버·GC 멈춤·재전송이 만드는 p99 지연을 극적으로 줄일 수 있다. 대가는 추가 트래픽이며, 무분별하게 쓰면 과부하 상황에서 부하를 배가시키므로 헤지 비율에 상한을 두고 멱등한 읽기 요청에 한해 적용하는 것이 안전하다.",
+      "tags": [
+        "가용성",
+        "지연최적화",
+        "완화기법"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "직렬 구성과 병렬(이중화) 구성에서 전체 가용성은 어떻게 달라지나?",
+      "back": "직렬 의존 구성에서는 전체 가용성이 각 구성 요소 가용성의 곱이 되어, 99.9%짜리 다섯 개만 이어 붙여도 약 99.5%로 떨어진다. 병렬 이중화 구성에서는 모든 사본이 동시에 죽어야 장애이므로 불가용성의 곱만큼 작아져, 99%짜리 두 대의 병렬은 이론상 99.99%가 된다. 그래서 의존 체인은 짧게, 중요한 구성 요소는 병렬로 만드는 것이 원칙이다. 단 병렬 계산은 장애의 독립성을 가정하므로, 같은 랙·같은 배포·같은 버그를 공유하면 실제 효과는 그보다 낮다.",
+      "tags": [
+        "가용성",
+        "지표",
+        "설계원칙"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "장애 감지에서 하트비트(heartbeat)와 타임아웃 튜닝의 딜레마는?",
+      "back": "하트비트는 노드가 주기적으로 생존 신호를 보내고, 일정 시간 신호가 없으면 죽었다고 판정하는 감지 방식이다. 딜레마는 타임아웃 길이다. 짧게 잡으면 GC 멈춤·일시적 네트워크 지연 같은 거짓 양성으로 불필요한 failover가 반복되고, 길게 잡으면 실제 장애의 감지와 복구가 늦어진다. 네트워크 지연에 상한이 없는 환경에서는 완벽한 판정이 불가능하므로, 지연 분포 기반의 적응형 타임아웃이나 여러 관찰자의 합의로 오판을 줄이는 방식이 쓰인다.",
+      "tags": [
+        "가용성",
+        "장애감지",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "REST(Representational State Transfer)란?",
+      "back": "자원을 URI로 식별하고 HTTP 메서드(GET, POST, PUT, DELETE)로 자원에 대한 행위를 표현하는 API 설계 스타일이다. 무상태 요청, 표준 메서드와 상태 코드, 캐시 가능성 같은 제약을 따르면 HTTP 인프라(캐시, 프록시)와 자연스럽게 어울리고 인터페이스가 일관돼진다. 엄격한 원칙을 다 지키기보다 자원 중심 URL과 메서드 의미론을 따르는 실용적 REST가 실무의 주류다.",
+      "tags": [
+        "API",
+        "REST",
+        "기본개념"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "REST와 RPC 스타일 API의 차이는?",
+      "back": "REST는 자원(명사) 중심으로 URI를 설계하고 행위를 HTTP 메서드에 맡기는 반면, RPC는 원격 함수 호출(동사) 중심으로 액션을 직접 노출한다. REST는 HTTP 캐싱·표준 의미론과의 궁합, 폭넓은 호환성이 강점이고, RPC(특히 gRPC)는 명시적 계약과 코드 생성, 바이너리 직렬화로 성능과 타입 안정성이 강점이다. 외부 공개 API는 REST, 내부 서비스 간 고성능 호출은 RPC를 쓰는 절충이 흔하다.",
+      "tags": [
+        "API",
+        "REST",
+        "RPC",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "gRPC란? 언제 유리한가?",
+      "back": "HTTP/2 위에서 Protocol Buffers로 직렬화해 통신하는 오픈소스 RPC 프레임워크다. IDL로 계약을 정의하면 다국어 클라이언트·서버 코드가 생성되고, 바이너리 인코딩과 멀티플렉싱으로 REST+JSON보다 지연·대역폭 면에서 효율적이며 양방향 스트리밍도 지원한다. 내부 마이크로서비스 간 통신, 저지연·고처리량 호출, 폴리글랏 환경에서 유리하다. 반면 브라우저 직접 호출 제약, 사람이 읽기 어려운 페이로드, 프록시·디버깅 도구 호환성은 약점이다.",
+      "tags": [
+        "API",
+        "RPC",
+        "gRPC"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "GraphQL이란? REST 대비 트레이드오프는?",
+      "back": "클라이언트가 필요한 필드를 쿼리로 명시하면 서버가 그 모양대로 응답하는 쿼리 언어 기반 API다. 오버페칭(불필요한 필드 수신)과 언더페칭(여러 번 호출)을 줄여 다양한 클라이언트 요구를 단일 엔드포인트로 수용한다. 대가로 서버 측 쿼리 실행 복잡도(N+1 문제, 리졸버 최적화), 쿼리 깊이·비용 제한 같은 보호 장치, HTTP 캐싱 활용의 어려움이 생긴다. 화면 요구가 다양하고 자주 바뀌는 프런트엔드에 유리하고, 단순한 자원 CRUD에는 REST가 간단하다.",
+      "tags": [
+        "API",
+        "GraphQL",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "오프셋 기반 페이지네이션의 방식과 한계는?",
+      "back": "OFFSET 20 LIMIT 10처럼 건너뛸 개수와 가져올 개수로 페이지를 지정하는 방식이다. 구현이 쉽고 임의 페이지로 점프할 수 있지만 두 가지 한계가 있다. 첫째, 깊은 페이지일수록 DB가 앞의 행을 전부 세고 버려야 해 성능이 나빠진다. 둘째, 페이지를 넘기는 사이 데이터가 삽입·삭제되면 항목이 중복되거나 건너뛰어진다. 데이터가 자주 바뀌는 피드나 대규모 목록에는 부적합하고, 관리 화면처럼 페이지 점프가 필요한 곳에 알맞다.",
+      "tags": [
+        "API",
+        "페이지네이션",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "커서 기반 페이지네이션이란?",
+      "back": "마지막으로 받은 항목의 위치를 나타내는 커서(정렬 키 값의 인코딩)를 주고받으며 '이 지점 다음부터 N개'로 조회하는 방식이다. 인덱스 탐색으로 시작점을 바로 찾아 깊은 페이지에서도 성능이 일정하고, 삽입·삭제가 있어도 중복·누락이 적어 무한 스크롤 피드에 적합하다. 한계는 임의 페이지 점프와 전체 페이지 수 표시가 어렵고, 커서의 기준이 되는 안정적이고 고유한 정렬 키(예: 생성 시각+ID)가 필요하다는 점이다.",
+      "tags": [
+        "API",
+        "페이지네이션"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "rate limiting(요청 속도 제한)이란? 왜 필요한가?",
+      "back": "클라이언트별·API별로 단위 시간당 허용 요청 수를 제한하는 기법이다. 폭주나 악의적 트래픽, 버그 있는 클라이언트로부터 백엔드를 보호하고, 공유 자원을 사용자 간에 공정하게 배분하며, 유료 플랜별 사용량 차등의 기반이 된다. 초과 요청에는 보통 429 상태 코드와 재시도 안내를 반환한다. 한도는 정상 사용 패턴을 침해하지 않게 정해야 하고, 분산 환경에서는 카운터를 공유 저장소에 두는 비용을 감수해야 한다.",
+      "tags": [
+        "API",
+        "ratelimiting",
+        "과부하보호"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "토큰 버킷(token bucket) 알고리즘이란?",
+      "back": "일정 속도로 토큰이 채워지는 버킷을 두고, 요청마다 토큰을 소비하며 토큰이 없으면 거부하는 rate limiting 알고리즘이다. 버킷 용량만큼의 순간 버스트를 허용하면서 장기 평균 속도를 제한하는 것이 특징으로, 잠깐의 몰림은 자연스럽게 통과시키고 지속적 초과만 막는다. 구현이 가볍고(토큰 수와 마지막 갱신 시각만 저장) 널리 쓰이지만, 버스트 허용량 설정에 따라 순간 부하가 클 수 있어 뒤단 용량과 함께 조정해야 한다.",
+      "tags": [
+        "API",
+        "ratelimiting",
+        "알고리즘"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "고정 윈도우와 슬라이딩 윈도우 rate limiting의 차이는?",
+      "back": "고정 윈도우는 1분 같은 구간마다 카운터를 리셋하는 방식으로 구현이 가장 단순하지만, 구간 경계 양쪽에 요청이 몰리면 순간적으로 한도의 두 배까지 통과하는 경계 문제가 있다. 슬라이딩 윈도우는 현재 시점 기준 직전 구간을 연속적으로 계산해(로그 방식 또는 이전 구간 가중 근사) 경계 문제를 없애고 제한을 매끄럽게 만든다. 로그 방식은 요청 기록 저장 비용이 크므로, 실무에서는 가중 근사나 토큰 버킷이 흔히 선택된다.",
+      "tags": [
+        "API",
+        "ratelimiting",
+        "알고리즘"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "429 응답과 Retry-After 헤더는 어떻게 다뤄야 하나?",
+      "back": "429 Too Many Requests는 rate limit 초과를 알리는 상태 코드로, 서버는 언제 다시 시도해도 되는지를 Retry-After 헤더(초 또는 시각)로 안내하는 것이 좋다. 클라이언트는 이를 존중해 그 시간 전에는 재시도하지 말아야 하며, 무시하고 즉시 재시도하면 제한이 강화되거나 차단될 수 있다. 남은 한도를 알려 주는 보조 헤더(예: RateLimit 계열)를 제공하면 클라이언트가 스스로 속도를 조절할 수 있어 서로에게 이득이다.",
+      "tags": [
+        "API",
+        "ratelimiting",
+        "HTTP"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "웹소켓(WebSocket)이란?",
+      "back": "HTTP 핸드셰이크로 시작해 하나의 TCP 연결을 지속적인 양방향 통신 채널로 승격시키는 프로토콜이다. 서버가 클라이언트에 즉시 데이터를 밀어 넣을 수 있어 채팅, 실시간 협업, 게임, 시세 스트리밍에 쓰인다. 요청-응답 오버헤드가 없어 지연이 낮지만, 서버가 수많은 연결 상태를 유지해야 하므로 확장 시 연결 관리(스티키 라우팅 또는 pub/sub 백플레인), 끊김 감지와 재접속, 로드 밸런서의 유휴 타임아웃 설정이 과제가 된다.",
+      "tags": [
+        "API",
+        "실시간통신",
+        "웹소켓"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "폴링, 롱 폴링, SSE, 웹소켓의 차이는?",
+      "back": "폴링은 클라이언트가 주기적으로 새 데이터를 물어보는 방식으로 단순하지만 지연과 빈 요청 낭비가 있다. 롱 폴링은 서버가 새 데이터가 생길 때까지 응답을 보류해 지연을 줄이지만 여전히 요청을 반복한다. SSE(Server-Sent Events)는 하나의 HTTP 연결로 서버에서 클라이언트로의 단방향 스트림을 제공하며 자동 재접속이 내장되어 알림·피드 갱신에 알맞다. 웹소켓은 완전한 양방향 채널로 상호작용이 잦은 실시간 기능에 알맞다. 단방향이면 SSE, 양방향이면 웹소켓, 호환성·단순함이 우선이면 폴링 계열을 고르는 것이 요령이다.",
+      "tags": [
+        "API",
+        "실시간통신",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "API 버저닝(versioning) 전략에는 어떤 것들이 있나?",
+      "back": "URL 경로에 버전을 넣는 방식(/v1/users)이 가장 명시적이고 널리 쓰이며, 그 외에 요청 헤더나 미디어 타입으로 버전을 협상하는 방식, 쿼리 파라미터 방식이 있다. 어떤 방식이든 핵심 원칙은 같다. 호환 가능한 변경(필드 추가)은 버전을 올리지 않고, 호환을 깨는 변경(필드 삭제·의미 변경)만 새 버전으로 내며, 구버전은 지원 종료 일정을 공지하고 점진적으로 폐기한다. 버전 수가 늘수록 유지 비용이 커지므로 깨는 변경 자체를 최소화하는 설계가 우선이다.",
+      "tags": [
+        "API",
+        "버저닝",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "웹훅(webhook)이란?",
+      "back": "이벤트가 발생했을 때 제공자가 소비자가 등록해 둔 URL로 HTTP 요청을 보내 알려 주는 역방향 호출 패턴이다. 소비자가 폴링으로 변화를 감시할 필요가 없어 효율적이며, 결제 완료·저장소 푸시 알림 등에 널리 쓰인다. 설계 포인트는 전달 신뢰성이다. 수신 실패에 대비한 재시도와 그로 인한 중복 전달(수신 측 멱등 처리 필요), 위조 방지를 위한 서명 검증, 수신 서버 다운 시의 이벤트 유실 대비(보관·재발송 또는 폴링 보조 수단)를 갖춰야 한다.",
+      "tags": [
+        "API",
+        "이벤트",
+        "통합"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "JSON과 Protocol Buffers 직렬화의 트레이드오프는?",
+      "back": "JSON은 텍스트 기반이라 사람이 읽고 디버깅하기 쉽고 스키마 없이도 쓸 수 있으며 브라우저·언어 호환성이 완벽에 가깝다. Protocol Buffers는 스키마(IDL) 기반 바이너리 인코딩으로 페이로드가 작고 직렬화가 빠르며, 필드 번호 규칙을 지키면 스키마 진화(하위 호환)가 체계적이다. 외부 공개 API와 설정·로그처럼 가독성이 중요한 곳은 JSON, 내부 고빈도 통신과 대용량 스트림은 protobuf가 일반적 선택이다.",
+      "tags": [
+        "API",
+        "직렬화",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "채티한 API와 N+1 요청 문제란?",
+      "back": "목록을 받은 뒤 각 항목의 상세를 항목 수만큼 개별 호출하는 식으로, 한 화면을 그리는 데 잦은 왕복이 필요한 API 설계를 말한다. 왕복마다 지연이 누적되어 특히 모바일 환경에서 체감 성능이 크게 나빠지고 서버 부하도 커진다. 해결책은 연관 데이터를 함께 내려주는 응답 설계, 여러 조회를 묶는 배치 엔드포인트, 클라이언트가 필요한 형태를 지정하는 GraphQL·BFF 도입이다. 다만 응답을 뭉칠수록 재사용성과 캐시 효율이 떨어질 수 있어 화면 단위 요구와 균형을 맞춘다.",
+      "tags": [
+        "API",
+        "성능",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "HATEOAS란?",
+      "back": "Hypermedia As The Engine Of Application State의 약자로, 응답에 관련 리소스와 가능한 다음 행동의 링크를 포함시켜 클라이언트가 URL 구조를 하드코딩하지 않고 링크를 따라 API를 탐색하게 하는 REST의 성숙 단계 제약이다. 서버가 URL 구조와 상태 전이 규칙을 바꿔도 클라이언트가 덜 깨지는 진화 용이성이 목표다. 실무에서는 클라이언트 구현 복잡도와 응답 크기 증가 대비 이점이 뚜렷하지 않아 페이지네이션 링크 등 부분적으로만 채택되는 경우가 많다.",
+      "tags": [
+        "API",
+        "REST",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "API 하위 호환성(backward compatibility)을 지키는 변경 규칙은?",
+      "back": "기존 클라이언트를 깨뜨리지 않는 변경만 기존 버전에 적용한다는 원칙이다. 안전한 변경은 선택적 필드·새 엔드포인트·새 열거 값(관대한 클라이언트 전제) 추가이고, 위험한 변경은 필드 삭제·이름 변경·타입 변경·필수 파라미터 추가·오류 형식 변경이다. 서버는 모르는 필드를 무시하고 클라이언트는 모르는 필드에 관대해야 한다는 견고성 원칙이 바탕이 된다. 깨는 변경이 불가피하면 새 버전을 내고 폐기 일정(deprecation)을 공지하는 절차를 지킨다.",
+      "tags": [
+        "API",
+        "버저닝",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "원격 호출의 부분 실패(partial failure)가 로컬 호출과 다른 점은?",
+      "back": "로컬 함수 호출은 성공 또는 실패가 명확하지만, 원격 호출은 요청 유실·서버 처리 중 다운·응답 유실이 구분되지 않아 '실패처럼 보이지만 실제로는 처리됐을 수' 있다. 타임아웃은 결과를 알 수 없다는 뜻이지 실패했다는 뜻이 아니다. 그래서 원격 호출을 로컬처럼 투명하게 다루려는 추상화는 위험하며, 재시도는 멱등성과 짝지어 설계하고, 결과 불명 상태를 조회·대사(reconciliation)로 확정하는 경로를 마련해야 한다.",
+      "tags": [
+        "API",
+        "RPC",
+        "장애패턴"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "OpenAPI 같은 API 명세(계약)를 두는 이점은?",
+      "back": "API의 엔드포인트·파라미터·응답·오류를 기계가 읽을 수 있는 형식으로 명세화하면, 문서·클라이언트 SDK·서버 스텁·유효성 검사·모의 서버를 자동 생성할 수 있고 팀 간 계약이 명확해진다. 계약 우선(contract-first) 개발은 프런트엔드와 백엔드의 병행 작업을 가능하게 하고, 계약 테스트로 배포 전에 호환성 파손을 잡을 수 있다. 유지 비용은 명세와 구현의 불일치 방지로, 코드에서 명세를 생성하거나 CI에서 일치를 검증하는 장치가 필요하다.",
+      "tags": [
+        "API",
+        "계약",
+        "협업"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "관측성(observability)이란? 모니터링과의 차이는?",
+      "back": "시스템 외부로 드러나는 출력(메트릭·로그·트레이스 등)만으로 내부 상태를 추론하고, 사전에 예상하지 못한 문제까지 탐구할 수 있는 능력이다. 모니터링이 미리 정의한 지표와 임계치로 알려진 장애 패턴을 감시하는 것이라면, 관측성은 '왜 이런 일이 생겼지'라는 새로운 질문에 데이터를 잘라 보며 답할 수 있게 하는 더 넓은 개념이다. 분산 시스템에서는 장애 양상이 예측 불가능해 관측성 투자가 필수로 여겨진다.",
+      "tags": [
+        "관측성",
+        "기본개념"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "관측성의 세 기둥(three pillars)이란?",
+      "back": "메트릭, 로그, 트레이스를 말한다. 메트릭은 수치의 시계열로 추세와 알림에, 로그는 개별 사건의 상세 기록으로 원인 규명에, 트레이스는 하나의 요청이 여러 서비스를 거친 경로와 구간별 소요 시간 파악에 쓰인다. 셋은 대체재가 아니라 보완재로, 메트릭으로 이상을 감지하고 트레이스로 문제 지점을 좁힌 뒤 로그로 원인을 확인하는 흐름이 전형적이다. 상관관계 ID로 셋을 서로 연결해야 이 흐름이 매끄러워진다.",
+      "tags": [
+        "관측성",
+        "기본개념"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "메트릭의 기본 타입(카운터·게이지·히스토그램)은?",
+      "back": "카운터는 누적 증가만 하는 값(총 요청 수, 총 오류 수)으로 구간 증가율을 계산해 쓴다. 게이지는 오르내리는 순간값(메모리 사용량, 활성 커넥션 수)이다. 히스토그램은 관측값을 구간별 버킷에 집계해 분포(지연 시간의 백분위수 등)를 근사한다. 타입을 잘못 고르면 재시작 시 값 리셋 처리나 백분위수 계산이 왜곡되므로, 집계 방식과 질문(얼마나 많이, 지금 얼마, 어떻게 분포)에 맞춰 선택해야 한다.",
+      "tags": [
+        "관측성",
+        "메트릭"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "구조화 로깅(structured logging)이란?",
+      "back": "로그를 자유 형식 문장이 아니라 키-값 필드를 가진 기계 판독 가능한 형식(주로 JSON)으로 남기는 방식이다. 요청 ID·사용자 ID·지연 시간 같은 필드로 검색·필터·집계가 정확해지고, 로그 파이프라인에서 파싱 규칙이 필요 없어진다. 사람이 터미널에서 바로 읽기엔 불편하고 로그 크기가 커지는 단점이 있지만, 여러 서비스의 로그를 중앙에서 분석해야 하는 분산 환경에서는 사실상 표준이다.",
+      "tags": [
+        "관측성",
+        "로깅"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "분산 트레이싱(distributed tracing)이란?",
+      "back": "하나의 요청이 여러 서비스를 거쳐 처리될 때, 그 전체 경로와 각 구간(스팬)의 소요 시간을 하나의 트레이스로 이어 기록하는 기법이다. 마이크로서비스에서 '어느 서비스가 느린가'를 개별 로그로는 알기 어렵기 때문에 필요하다. 트레이스 컨텍스트(트레이스 ID 등)를 서비스 간 호출 헤더로 전파하는 계측이 전제이며, 전체 요청을 다 기록하면 비용이 커서 샘플링과 함께 운영한다.",
+      "tags": [
+        "관측성",
+        "트레이싱",
+        "마이크로서비스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "트레이스, 스팬, 상관관계 ID란?",
+      "back": "트레이스는 한 요청의 종단 간 처리 전체를 나타내고, 스팬은 그 안의 개별 작업 단위(한 서비스의 처리, 한 DB 쿼리)로 시작·종료 시각과 부모 스팬 참조를 가진다. 스팬들이 부모-자식 관계로 연결되어 호출 트리를 이룬다. 상관관계 ID는 같은 요청에서 나온 로그·이벤트를 묶기 위해 전 구간에 전파하는 식별자로, 트레이스 ID를 로그에 남기면 트레이스와 로그를 오가며 조사할 수 있다. 전파가 한 구간이라도 끊기면 그 지점부터 추적이 단절되므로 일관된 계측이 중요하다.",
+      "tags": [
+        "관측성",
+        "트레이싱"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "지연 시간을 평균 대신 p95, p99 백분위수로 보는 이유는?",
+      "back": "지연 분포는 꼬리가 긴 비대칭 분포라 평균은 소수의 매우 느린 요청을 가려 버리고, 다수가 빠르면 실제 사용자 일부가 겪는 심각한 지연이 지표에 드러나지 않기 때문이다. p99는 요청 100건 중 느린 1건의 기준값으로 꼬리 지연을 직접 보여 준다. 특히 한 화면이 수십 개의 내부 호출로 조립되는 구조에서는 어느 한 호출이 p99에 걸릴 확률이 커져, 꼬리 지연이 사실상 다수 사용자의 체감 성능이 된다. 백분위수는 평균처럼 단순 합산으로 집계할 수 없어 히스토그램 기반 수집이 필요하다.",
+      "tags": [
+        "관측성",
+        "메트릭",
+        "지연최적화"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "알림 피로(alert fatigue)란? 좋은 알림의 조건은?",
+      "back": "중요하지 않거나 조치가 불필요한 알림이 쏟아져 담당자가 알림을 무시하게 되고, 정작 중요한 알림을 놓치게 되는 상태다. 좋은 알림의 조건은 실제 사용자 영향(증상) 기반일 것, 받은 사람이 취할 행동이 있을 것, 긴급도에 따라 채널이 구분될 것(즉시 호출 대 다음 날 확인), 그리고 원인 파악을 돕는 맥락(대시보드·런북 링크)이 담길 것이다. 원인 지표(CPU 높음)보다 증상 지표(오류율·지연 SLO 위반)에 알림을 거는 것이 소음을 줄이는 핵심 요령이다.",
+      "tags": [
+        "관측성",
+        "알림",
+        "운영"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "에러 버짓(error budget)이란?",
+      "back": "SLO가 허용하는 실패의 양, 즉 100%에서 SLO 목표를 뺀 여유분이다. 예를 들어 성공률 SLO가 99.9%면 한 달에 0.1%만큼의 실패는 예산 안이다. 이 예산을 신뢰성과 개발 속도의 균형 장치로 쓴다. 예산이 남아 있으면 배포와 실험을 공격적으로 진행하고, 예산을 소진하면 신규 기능 배포를 늦추고 신뢰성 작업에 집중하는 식이다. 완벽한 무장애를 목표로 하는 대신, 허용 가능한 실패 수준을 명시해 팀 간 갈등을 데이터로 조정하는 것이 핵심 아이디어다.",
+      "tags": [
+        "관측성",
+        "SRE",
+        "지표"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "트레이스 샘플링(sampling)이 필요한 이유와 방식은?",
+      "back": "모든 요청의 트레이스를 저장하면 수집·저장 비용이 트래픽에 비례해 폭증하므로 일부만 기록하는 샘플링이 필요하다. 헤드 샘플링은 요청 시작 시점에 확률로 결정해 오버헤드가 가장 작지만 흥미로운 요청(오류, 느린 요청)을 놓칠 수 있다. 테일 샘플링은 요청이 끝난 뒤 오류·고지연 트레이스를 골라 보존해 가치 있는 데이터를 남기지만, 결정 전까지 전체를 버퍼링해야 해 수집 인프라 비용이 크다. 정상 트래픽은 낮은 확률로, 오류는 높은 비율로 남기는 절충이 일반적이다.",
+      "tags": [
+        "관측성",
+        "트레이싱",
+        "트레이드오프"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "RED 메서드와 USE 메서드란?",
+      "back": "무엇을 모니터링할지 정하는 두 가지 점검 틀이다. RED는 서비스(요청 처리) 관점에서 Rate(처리율), Errors(오류율), Duration(지연 분포)을 본다. 마이크로서비스 대시보드의 표준 구성이다. USE는 자원(CPU, 메모리, 디스크, 네트워크) 관점에서 Utilization(사용률), Saturation(포화도, 대기열 길이), Errors(오류)를 본다. 서비스 증상은 RED로 감지하고 자원 병목은 USE로 좁히는 식으로 상호 보완적으로 쓴다.",
+      "tags": [
+        "관측성",
+        "메트릭",
+        "운영"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "중앙 집중식 로그 집계(log aggregation)가 필요한 이유는?",
+      "back": "분산 환경에서는 로그가 수십, 수백 개의 인스턴스에 흩어져 있고 인스턴스는 수시로 교체되어 개별 서버에 들어가 로그를 보는 방식이 불가능하기 때문이다. 각 노드의 에이전트가 로그를 수집해 중앙 저장소로 보내고, 인덱싱해 검색·대시보드·알림에 쓴다. 전체 서비스를 가로질러 요청 ID로 검색할 수 있게 되는 것이 핵심 가치다. 로그량이 비용으로 직결되므로 로그 레벨 관리, 보존 기간 정책, 샘플링 같은 비용 통제가 함께 필요하다.",
+      "tags": [
+        "관측성",
+        "로깅",
+        "운영"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "블루그린 배포(blue-green deployment)란?",
+      "back": "운영 환경(블루)과 동일한 규모의 새 버전 환경(그린)을 나란히 준비하고, 검증이 끝나면 라우터에서 트래픽을 한 번에 그린으로 전환하는 배포 전략이다. 전환이 순간적이라 배포 중 혼재 상태가 짧고, 문제 발생 시 블루로 되돌리는 롤백이 즉각적이다. 대가는 인프라를 두 벌 유지하는 비용과, 전환 순간 모든 트래픽이 새 버전을 받으므로 문제가 있으면 전 사용자가 영향을 받는다는 점이다. DB 스키마는 두 버전과 모두 호환되게 유지해야 한다.",
+      "tags": [
+        "배포",
+        "배포전략"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "카나리 배포(canary deployment)란?",
+      "back": "새 버전을 일부 인스턴스나 소수 사용자(예: 1%)에게만 먼저 내보내고, 오류율·지연 등 지표를 비교하며 점진적으로 비율을 늘려가는 배포 전략이다. 문제가 있어도 영향 범위가 소수로 제한되고, 실제 운영 트래픽으로 검증할 수 있다는 것이 강점이다. 대가는 배포 완료까지 시간이 걸리고, 두 버전이 공존하므로 데이터·API 호환성이 필요하며, 카나리 판정을 자동화하려면 지표 비교 체계가 갖춰져야 한다는 점이다.",
+      "tags": [
+        "배포",
+        "배포전략"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "롤링 배포(rolling deployment)란?",
+      "back": "인스턴스를 몇 대씩 순차적으로 새 버전으로 교체해 나가는 배포 전략이다. 추가 인프라가 거의 필요 없고 배포 중에도 서비스 용량이 유지되어 가장 보편적으로 쓰인다. 단점은 배포 동안 구버전과 신버전이 공존해 호환성이 요구되고, 문제를 늦게 발견하면 이미 상당수가 교체되어 롤백에도 같은 시간이 걸린다는 점이다. 교체 단위(배치 크기)와 각 단계 사이의 헬스 체크 대기가 안전성의 관건이다.",
+      "tags": [
+        "배포",
+        "배포전략"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "기능 플래그(feature flag)란?",
+      "back": "코드에 조건 분기를 심어 기능의 활성화 여부를 배포와 무관하게 런타임 설정으로 켜고 끌 수 있게 하는 기법이다. 배포(코드 반영)와 릴리스(기능 공개)를 분리해, 미완성 기능을 꺼진 채로 자주 병합·배포하고, 특정 사용자 집단에만 열어 실험(A/B 테스트)하며, 문제 시 재배포 없이 즉시 끄는 킬 스위치로 쓴다. 플래그가 쌓이면 조합 폭발과 죽은 코드로 복잡도가 커지므로, 수명을 정해 제거하는 관리 규율이 필요하다.",
+      "tags": [
+        "배포",
+        "릴리스관리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "블루그린과 카나리 배포는 어떻게 선택하나?",
+      "back": "블루그린은 전환·롤백이 순간적이고 운영이 단순하지만 인프라 두 벌 비용이 들고 문제 시 전체 사용자가 한꺼번에 노출된다. 카나리는 위험을 소수에게 국한하고 실제 트래픽으로 점진 검증하지만 배포가 길어지고 지표 비교·자동 판정 체계가 필요하다. 따라서 위험 허용도가 낮고 검증 지표가 잘 갖춰진 대규모 서비스는 카나리를, 트래픽 규모가 작거나 즉시 전환·롤백의 단순함이 중요한 경우는 블루그린을 택하는 경향이 있다. 둘을 결합해 그린 환경에 소량 트래픽부터 흘리는 방식도 흔하다.",
+      "tags": [
+        "배포",
+        "배포전략",
+        "트레이드오프"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "무중단 배포를 위한 DB 마이그레이션(expand-contract)이란?",
+      "back": "배포 중 구버전과 신버전 코드가 공존하므로, 스키마 변경을 한 번에 하지 않고 확장-전환-수축 단계로 나누는 기법이다. 먼저 새 컬럼·테이블을 추가만 하고(확장, 두 버전 모두 동작), 코드가 새 구조를 쓰도록 배포하며 필요하면 이중 쓰기와 백필로 데이터를 옮기고, 구버전이 완전히 사라진 뒤에야 옛 컬럼을 제거한다(수축). 컬럼 삭제·이름 변경을 코드 배포와 동시에 하면 배포 중 오류가 나므로, 파괴적 변경을 항상 마지막 단계로 미루는 것이 핵심이다.",
+      "tags": [
+        "배포",
+        "마이그레이션",
+        "운영"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "섀도 트래픽(shadow traffic) 테스트란?",
+      "back": "운영 트래픽을 복제해 새 버전에도 병렬로 흘리되, 새 버전의 응답은 사용자에게 반환하지 않고 버리며 동작·성능만 관찰하는 검증 기법이다. 실제 트래픽 패턴으로 새 버전을 사용자 위험 없이 시험할 수 있어, 대규모 리팩터링이나 저장소 교체 검증에 유용하다. 주의점은 쓰기 요청이다. 복제된 쓰기가 실제 데이터를 바꾸거나 외부 시스템(결제, 이메일)을 호출하지 않도록 부수 효과를 격리해야 하며, 트래픽 복제 인프라와 결과 비교 체계 구축 비용이 든다.",
+      "tags": [
+        "배포",
+        "테스트",
+        "릴리스관리"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    },
+    {
+      "front": "무중단 배포(zero-downtime deployment)의 핵심 요소는?",
+      "back": "배포 과정에서 요청 실패가 생기지 않게 하는 요소들의 조합이다. 구체적으로 로드 밸런서와 연동된 readiness 체크(준비된 인스턴스만 트래픽 수신), 우아한 종료(빠지는 인스턴스의 진행 중 요청 완료), 커넥션 드레이닝, 구버전·신버전 공존을 견디는 API·스키마 하위 호환성, 그리고 문제 시 즉시 되돌릴 롤백 수단이다. 어느 하나가 빠져도 배포 순간의 간헐적 오류로 나타나며, 이런 오류는 재현이 어려워 원인 추적에 큰 비용이 든다.",
+      "tags": [
+        "배포",
+        "운영",
+        "설계원칙"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-system-design-terms-v1",
+        "claude-authoring-system-design-terms-v1"
+      ]
+    }
+  ]
+}
