@@ -5,15 +5,15 @@ import { readJson } from "../src/io.mjs";
 import { BACKLOG_PATH, CARD_SCHEMA_PATH, CATALOG_PATH, CATALOG_SCHEMA_PATH } from "../src/paths.mjs";
 import { assertBacklog, assertCatalog, assertSchemas } from "../src/validation.mjs";
 
-test("v1 manifest는 14덱, Free 6/Pro 8, P1 7/P2 5/P3 2를 강제한다", async () => {
+test("v2 manifest는 23덱, Free 8/Pro 15, P1 8/P2 12/P3 3을 강제한다", async () => {
   const catalog = await readJson(CATALOG_PATH);
   assert.doesNotThrow(() => assertCatalog(catalog));
-  assert.equal(catalog.decks.length, 14);
-  assert.equal(catalog.decks.filter((deck) => deck.tier === "free").length, 6);
-  assert.equal(catalog.decks.filter((deck) => deck.tier === "pro").length, 8);
+  assert.equal(catalog.decks.length, 23);
+  assert.equal(catalog.decks.filter((deck) => deck.tier === "free").length, 8);
+  assert.equal(catalog.decks.filter((deck) => deck.tier === "pro").length, 15);
   assert.deepEqual(
     Object.fromEntries(["P1", "P2", "P3"].map((priority) => [priority, catalog.decks.filter((deck) => deck.priority === priority).length])),
-    { P1: 7, P2: 5, P3: 2 },
+    { P1: 8, P2: 12, P3: 3 },
   );
   assert.ok(catalog.decks.every((deck) => deck.chunkSize === 200));
   assert.ok(catalog.decks.every((deck) => deck.status !== "published" && deck.reviewer.status === "pending"));
@@ -54,7 +54,7 @@ test("사람 승인 정보가 없는 published manifest를 거부한다", async 
   assert.throws(() => assertCatalog(broken), /사람 승인/);
 });
 
-test("JSON Schema 산출물은 Card sourceRefs와 200장/14덱 불변식을 선언한다", async () => {
+test("JSON Schema 산출물은 Card sourceRefs와 200장/23덱 불변식을 선언한다", async () => {
   const [cardSchema, catalogSchema] = await Promise.all([readJson(CARD_SCHEMA_PATH), readJson(CATALOG_SCHEMA_PATH)]);
   assert.doesNotThrow(() => assertSchemas(cardSchema, catalogSchema));
 });

@@ -18,7 +18,9 @@ export const JLPT_SOURCE_FILES = [WORD_LIST_FILE, ENRICHMENT_FILE];
  */
 export const JLPT_DECK_LEVELS = Object.freeze({
   "japanese-jlpt-n5-preview": Object.freeze(["jlpt-n5"]),
+  "japanese-jlpt-n4": Object.freeze(["jlpt-n4"]),
   "japanese-jlpt-n3-n2": Object.freeze(["jlpt-n3", "jlpt-n2"]),
+  "japanese-jlpt-n1": Object.freeze(["jlpt-n1"]),
 });
 
 const LEVEL_LABEL = Object.freeze({

@@ -54,7 +54,9 @@ function buildDataset() {
 
 test("덱별 레벨 매핑: N5 맛보기는 n5만, 심화는 n3 다음 n2 순서다", () => {
   assert.deepEqual([...JLPT_DECK_LEVELS["japanese-jlpt-n5-preview"]], ["jlpt-n5"]);
+  assert.deepEqual([...JLPT_DECK_LEVELS["japanese-jlpt-n4"]], ["jlpt-n4"]);
   assert.deepEqual([...JLPT_DECK_LEVELS["japanese-jlpt-n3-n2"]], ["jlpt-n3", "jlpt-n2"]);
+  assert.deepEqual([...JLPT_DECK_LEVELS["japanese-jlpt-n1"]], ["jlpt-n1"]);
 });
 
 test("보강이 있는 표제어만 카드가 되고 카운터·접사류 미보강 행은 건너뛴다", () => {

@@ -1,8 +1,8 @@
 export declare const PUBLIC_CATALOG: {
     readonly schemaVersion: 1;
     readonly catalogId: "daoewo-v1";
-    readonly version: 1;
-    readonly sourceDigest: "sha256:f0eb0beda7bfbd151637b248c01a6cd9ac7bf22e10e0907fe9c8b9402dade49e";
+    readonly version: 2;
+    readonly sourceDigest: "sha256:ffa178120fe51b5c9eeb70246cafc9a4d9543e8c13db6c621e6d461b1a6ef4a9";
     readonly decks: readonly [{
         readonly id: "english-essential-intro";
         readonly displayOrder: 0;
@@ -158,8 +158,30 @@ export declare const PUBLIC_CATALOG: {
         };
         readonly publishedAt: null;
     }, {
-        readonly id: "business-english-expressions";
+        readonly id: "sql-interview-core";
         readonly displayOrder: 7;
+        readonly title: "SQL 면접 핵심";
+        readonly description: "데이터 직군과 개발자 면접을 위한 SQL 핵심 질문·개념 덱";
+        readonly category: "career";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ko";
+        readonly tier: "pro";
+        readonly priority: "P1";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["SQL", "면접", "데이터"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "공개 SQL 표준과 일반 개념을 자체 문장으로 설명하며 특정 면접서·강의·문제은행의 문항, 보기, 해설을 복제하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
+        readonly id: "business-english-expressions";
+        readonly displayOrder: 8;
         readonly title: "비즈니스 영어 표현";
         readonly description: "회의·메일·협업에서 바로 쓰는 비즈니스 영어 표현 덱";
         readonly category: "career";
@@ -180,8 +202,30 @@ export declare const PUBLIC_CATALOG: {
         };
         readonly publishedAt: null;
     }, {
+        readonly id: "csat-essential-english";
+        readonly displayOrder: 9;
+        readonly title: "수능 필수 영단어";
+        readonly description: "13세 이상 고등학생의 수능 대비 필수 영어 어휘 덱";
+        readonly category: "k12-secondary";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "en";
+        readonly tier: "pro";
+        readonly priority: "P2";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["수능", "고등학교", "영어", "13세이상"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "공개 교육과정의 범위만 참고하고 출판사 교과서·문제집의 단어 선정표와 예문, 평가원·EBS 문항을 복제하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
         readonly id: "driving-license-key-points";
-        readonly displayOrder: 8;
+        readonly displayOrder: 10;
         readonly title: "운전면허 필기 요점";
         readonly description: "운전면허 필기 학습을 위한 안전·법규 핵심 요점 덱";
         readonly category: "certification";
@@ -202,8 +246,96 @@ export declare const PUBLIC_CATALOG: {
         };
         readonly publishedAt: null;
     }, {
+        readonly id: "english-phrasal-verbs";
+        readonly displayOrder: 11;
+        readonly title: "영어 구동사·숙어";
+        readonly description: "실무와 시험에 자주 나오는 영어 구동사와 숙어 덱";
+        readonly category: "language";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "en";
+        readonly tier: "pro";
+        readonly priority: "P2";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["영어", "구동사", "숙어"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "예문은 자체 작성하며 회화 교재·강의 대본을 복제하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
+        readonly id: "japanese-jlpt-n1";
+        readonly displayOrder: 12;
+        readonly title: "일본어 JLPT N1 최상급";
+        readonly description: "고급 일본어 학습자를 위한 N1 수준 어휘 덱";
+        readonly category: "language";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ja";
+        readonly tier: "pro";
+        readonly priority: "P2";
+        readonly sourceType: "curated-import";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["일본어", "JLPT", "N1", "고급"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Self-Authored", "MIT"];
+            readonly attributions: readonly ["Seorilabs 자체 생성 한국어 뜻·예문·학습 팁", "elzup/jlpt-word-list"];
+            readonly distributionNotice: "MIT 고지와 원저작권 고지를 유지한다. 공식 JLPT 출제 목록 또는 공식 제휴로 표시하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
+        readonly id: "japanese-jlpt-n4";
+        readonly displayOrder: 13;
+        readonly title: "일본어 JLPT N4";
+        readonly description: "N5 다음 단계 학습자를 위한 N4 핵심 어휘 덱";
+        readonly category: "language";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ja";
+        readonly tier: "pro";
+        readonly priority: "P2";
+        readonly sourceType: "curated-import";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["일본어", "JLPT", "N4"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Self-Authored", "MIT"];
+            readonly attributions: readonly ["Seorilabs 자체 생성 한국어 뜻·예문·학습 팁", "elzup/jlpt-word-list"];
+            readonly distributionNotice: "MIT 고지와 원저작권 고지를 유지한다. 공식 JLPT 출제 목록 또는 공식 제휴로 표시하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
+        readonly id: "korean-four-character-idioms";
+        readonly displayOrder: 14;
+        readonly title: "사자성어·고사성어";
+        readonly description: "일상과 시험에 자주 쓰이는 사자성어·고사성어 덱";
+        readonly category: "language";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ko";
+        readonly tier: "free";
+        readonly priority: "P2";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["사자성어", "고사성어", "한자"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "성어의 뜻과 유래를 자체 문장으로 설명하며 특정 사전·교재의 표제 해설을 복제하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
         readonly id: "korean-vocabulary";
-        readonly displayOrder: 9;
+        readonly displayOrder: 15;
         readonly title: "한국어 어휘(국어)";
         readonly description: "국립국어원 한국어기초사전 텍스트를 바탕으로 한 한국어 어휘 덱";
         readonly category: "language";
@@ -225,7 +357,7 @@ export declare const PUBLIC_CATALOG: {
         readonly publishedAt: null;
     }, {
         readonly id: "middle-school-essential-english";
-        readonly displayOrder: 10;
+        readonly displayOrder: 16;
         readonly title: "중학 필수 영단어";
         readonly description: "13세 이상 중학생의 학교 영어 학습을 돕는 필수 어휘 덱";
         readonly category: "k12-secondary";
@@ -246,8 +378,52 @@ export declare const PUBLIC_CATALOG: {
         };
         readonly publishedAt: null;
     }, {
+        readonly id: "sqld-core-concepts";
+        readonly displayOrder: 17;
+        readonly title: "SQLD 핵심 개념";
+        readonly description: "SQL 개발자 자격 학습을 위한 데이터 모델링·SQL 핵심 개념 덱";
+        readonly category: "certification";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ko";
+        readonly tier: "pro";
+        readonly priority: "P2";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["SQLD", "자격증", "데이터베이스"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "공개 표준 개념을 자체 문장으로 설명하며 교재·기출문제의 문장, 보기, 해설을 복제하지 않는다. 공식 제휴로 오인시키지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
+        readonly id: "system-design-terms";
+        readonly displayOrder: 18;
+        readonly title: "시스템 디자인 용어";
+        readonly description: "백엔드 면접과 실무를 위한 시스템 설계 핵심 개념 덱";
+        readonly category: "career";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ko";
+        readonly tier: "pro";
+        readonly priority: "P2";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["시스템디자인", "백엔드", "면접"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "공개 기술 개념을 자체 문장으로 요약하고 특정 면접서·강의의 문답을 복제하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
         readonly id: "world-capitals-flags";
-        readonly displayOrder: 11;
+        readonly displayOrder: 19;
         readonly title: "세계 수도·국기";
         readonly description: "나라별 수도와 국기 특징을 익히는 실용 교양 덱";
         readonly category: "general-knowledge";
@@ -268,8 +444,30 @@ export declare const PUBLIC_CATALOG: {
         };
         readonly publishedAt: null;
     }, {
+        readonly id: "greek-roman-mythology";
+        readonly displayOrder: 20;
+        readonly title: "그리스·로마 신화";
+        readonly description: "신·영웅·상징을 익히는 그리스·로마 신화 교양 덱";
+        readonly category: "general-knowledge";
+        readonly locale: "ko-KR";
+        readonly contentLanguage: "ko";
+        readonly tier: "free";
+        readonly priority: "P3";
+        readonly sourceType: "ai-assisted-operator-batch";
+        readonly availability: "coming-soon";
+        readonly version: 1;
+        readonly cardCount: null;
+        readonly chunkSize: 200;
+        readonly tags: readonly ["신화", "교양", "인문"];
+        readonly license: {
+            readonly ids: readonly ["LicenseRef-Seorilabs-Proprietary-Content"];
+            readonly attributions: readonly ["Seorilabs 자체 기획·작성·AI 보조 후 사람 검수"];
+            readonly distributionNotice: "신화 내용을 자체 문장으로 요약하며 특정 번역서·해설서의 문장을 복제하지 않는다.";
+        };
+        readonly publishedAt: null;
+    }, {
         readonly id: "high-school-korean-history-timeline";
-        readonly displayOrder: 12;
+        readonly displayOrder: 21;
         readonly title: "고교 한국사 연표";
         readonly description: "13세 이상 고등학생을 위한 시대별 한국사 연표 덱";
         readonly category: "k12-secondary";
@@ -291,7 +489,7 @@ export declare const PUBLIC_CATALOG: {
         readonly publishedAt: null;
     }, {
         readonly id: "wine-basics";
-        readonly displayOrder: 13;
+        readonly displayOrder: 22;
         readonly title: "와인 기초 용어";
         readonly description: "품종·산지·테이스팅의 기본 용어를 익히는 교양 덱";
         readonly category: "general-knowledge";

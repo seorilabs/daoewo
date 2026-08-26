@@ -21,8 +21,8 @@
     },
     "decks": {
       "type": "array",
-      "minItems": 14,
-      "maxItems": 14,
+      "minItems": 23,
+      "maxItems": 23,
       "items": {
         "$ref": "#/$defs/deck"
       }

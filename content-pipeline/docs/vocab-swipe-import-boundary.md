@@ -73,7 +73,7 @@
 
 ## 구현된 JLPT importer
 
-`src/providers/vocab-swipe-jlpt.mjs`가 JLPT 두 덱의 매핑을 실행한다.
+`src/providers/vocab-swipe-jlpt.mjs`가 JLPT 네 덱의 매핑을 실행한다.
 
 - 카드가 되는 것은 `BUNDLED_JLPT_WORDS_BY_LEVEL`(elzup/jlpt-word-list, MIT)의 표제어·읽기와
   `JLPT_KOREAN_ENRICHMENT`(자체 생성 뜻·예문·번역·학습 팁)의 **교집합**뿐이다. 보강이
@@ -93,7 +93,9 @@
 | 덱 | tier | 레벨 | 카드 수 | 난이도 |
 | --- | --- | --- | --- | --- |
 | `japanese-jlpt-n5-preview` | free | N5 | 525 | 1 |
+| `japanese-jlpt-n4` | pro | N4 | 494 | 2 |
 | `japanese-jlpt-n3-n2` | pro | N3, N2 | 2,688 | N3=3, N2=4 |
+| `japanese-jlpt-n1` | pro | N1 | 2,234 | 5 |
 
 JLPT generated 파일은 값 위치의 타입 import 때문에 Node 타입 스트리핑만으로 로드할 수
 없어, importer가 그 import 한 줄을 로컬 타입 별칭으로 치환한 사본을 임시 경로에서

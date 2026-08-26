@@ -4,7 +4,7 @@
 
 ## 현재 산출물
 
-- `manifests/v1.json`: 승인 기획서의 14덱. Free 6 / Pro 8, P1 7 / P2 5 / P3 2.
+- `manifests/v1.json`: 승인 기획서의 v2 23덱. Free 8 / Pro 15, P1 8 / P2 12 / P3 3.
 - `schemas/card.schema.json`: 어휘·자격증·역사·직무를 공통으로 담는 generic Card JSON Schema.
 - `schemas/catalog.schema.json`: `source`, `license`, `provenance`, `reviewer`, `status`, `version`, `chunkSize=200`을 강제하는 카탈로그 Schema.
 - `backlog/priority-backlog.json`: 덱 요청·검색 미스·트렌드·운영 기획 집계 신호와 Pro 요청 가산 우선순위.
@@ -89,7 +89,9 @@ JLPT 덱은 같은 provider(`--provider vocab-swipe`)로 실행하며, MIT 표�
 | 덱 | tier | 레벨 | 카드 | 난이도 |
 | --- | --- | --- | --- | --- |
 | `japanese-jlpt-n5-preview` | free | N5 | 525 | 1 |
+| `japanese-jlpt-n4` | pro | N4 | 494 | 2 |
 | `japanese-jlpt-n3-n2` | pro | N3, N2 | 2,688 | N3=3, N2=4 |
+| `japanese-jlpt-n1` | pro | N1 | 2,234 | 5 |
 
 `sourceRefs`는 카드가 실제로 쓴 라이선스 성분만 가리킨다. 표제어는 CC BY-SA TSL, 한국어
 뜻과 예문 번역은 자체 작성이고, WordNet 예문을 자체 예문이 덮어쓰면 그 카드의 WordNet
@@ -171,4 +173,4 @@ pnpm --dir content-pipeline exec node src/cli.mjs image \
 - factual: 모든 `sourceRefs`가 revision 고정된 `sourceRegistry`에 존재하고 placeholder가 없는지 확인한다.
 - human: 자동 factual QA는 **진실을 증명하지 않는다**. 사람 검수자가 실제 출처와 카드 내용을 대조해야 한다.
 
-검증기와 테스트는 카드 스키마, 중복, 금칙표현, 원문복제 휴리스틱, 라이선스, 외부 source pin, 14덱 tier/priority 합계, 승인 없는 publish 거부, 200장 청크를 다룬다.
+검증기와 테스트는 카드 스키마, 중복, 금칙표현, 원문복제 휴리스틱, 라이선스, 외부 source pin, 23덱 tier/priority 합계, 승인 없는 publish 거부, 200장 청크를 다룬다.

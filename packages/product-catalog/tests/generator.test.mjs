@@ -86,12 +86,12 @@ test('source=free/publication=pro tier 불일치는 client-safe 검증 전에 �
   assert.throws(() => verifyPublication(fixture), /deck\.tier가 일치하지 않는다/);
 });
 
-test('미승인 source에서는 14 metadata만 생성하고 본문 export는 비어 있다', async () => {
+test('미승인 source에서는 23 metadata만 생성하고 본문 export는 비어 있다', async () => {
   const catalog = await readJson(CATALOG_PATH);
   const publications = new Map();
   const runtime = buildPublicCatalog(catalog, publications);
   const content = buildPublishedContent(publications);
-  assert.equal(runtime.decks.length, 14);
+  assert.equal(runtime.decks.length, 23);
   assert.ok(runtime.decks.every((deck) => deck.availability === 'coming-soon'));
   assert.deepEqual(content, {});
 });

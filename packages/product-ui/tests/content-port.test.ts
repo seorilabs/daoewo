@@ -14,8 +14,8 @@ describe('DaoewoContentPort demo 계약', () => {
     const catalog = await runtime.content.listCatalog();
 
     expect(catalog).toHaveLength(14);
-    expect(catalog.filter(deck => deck.tier === 'free')).toHaveLength(6);
-    expect(catalog.filter(deck => deck.tier === 'pro')).toHaveLength(8);
+    expect(catalog.filter(deck => deck.tier === 'free')).toHaveLength(8);
+    expect(catalog.filter(deck => deck.tier === 'pro')).toHaveLength(15);
     expect(catalog.every(deck => deck.availability === 'published')).toBe(true);
     expect(JSON.stringify(catalog)).not.toContain('勉強する');
     expect(catalog.every(deck => !('cards' in deck))).toBe(true);

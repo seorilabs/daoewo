@@ -242,8 +242,8 @@ export function buildPublicCatalog(sourceCatalog, publications) {
     };
   });
 
-  if (decks.length !== 14 || new Set(decks.map((deck) => deck.id)).size !== 14) {
-    throw new Error('public catalog는 중복 없는 14개 metadata여야 한다.');
+  if (decks.length !== 23 || new Set(decks.map((deck) => deck.id)).size !== 23) {
+    throw new Error('public catalog는 중복 없는 23개 metadata여야 한다.');
   }
   for (const deck of decks) {
     if (deck.availability === 'coming-soon' && (deck.cardCount !== null || deck.publishedAt !== null)) {
