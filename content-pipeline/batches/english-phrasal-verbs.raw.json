@@ -1,0 +1,3188 @@
+{
+  "schemaVersion": 1,
+  "deckId": "english-phrasal-verbs",
+  "sourceRegistry": [
+    {
+      "id": "brief-english-phrasal-verbs-v1",
+      "kind": "operator-topic-brief",
+      "uri": "urn:daoewo:brief:english-phrasal-verbs:v1",
+      "revision": "brief-v2@2026-08-26"
+    },
+    {
+      "id": "claude-authoring-english-phrasal-verbs-v1",
+      "kind": "ai-assisted-authoring",
+      "uri": "urn:daoewo:authoring:claude-operator-batch:english-phrasal-verbs:v1",
+      "revision": "claude-batch-v2@2026-08-26"
+    }
+  ],
+  "referenceTexts": [],
+  "cards": [
+    {
+      "front": "get up",
+      "back": "일어나다, 기상하다. 자동사라 목적어 없이 쓴다. wake up(잠에서 깨다)과 구분: get up은 실제로 몸을 일으켜 침대에서 나오는 동작이다.",
+      "example": "I usually get up at seven and make coffee before anything else.",
+      "exampleMeaning": "나는 보통 7시에 일어나서 무엇보다 먼저 커피를 내린다.",
+      "tags": [
+        "일상",
+        "아침",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "wake up",
+      "back": "잠에서 깨다; (남을) 깨우다. 타동사로 쓰면 분리 가능(wake him up). get up(몸을 일으키다)과 구분: wake up은 눈이 떠지는 순간이다.",
+      "example": "The noise from the street woke me up at five in the morning.",
+      "exampleMeaning": "길에서 나는 소음 때문에 새벽 5시에 잠이 깼다.",
+      "tags": [
+        "일상",
+        "아침",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get along with",
+      "back": "~와 사이좋게 지내다, 잘 어울리다. 전치사가 붙은 형태라 분리 불가. 캐주얼부터 중립까지 폭넓게 쓴다.",
+      "example": "My sister gets along with almost everyone she meets.",
+      "exampleMeaning": "우리 언니는 만나는 사람 거의 모두와 잘 지낸다.",
+      "tags": [
+        "일상",
+        "인간관계"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "run into",
+      "back": "~와 우연히 마주치다; (차가) ~에 부딪히다. 분리 불가. '우연히'라는 뉘앙스가 핵심이며 bump into와 거의 같은 뜻이다.",
+      "example": "I ran into my old teacher at the grocery store yesterday.",
+      "exampleMeaning": "어제 마트에서 옛 선생님과 우연히 마주쳤다.",
+      "tags": [
+        "일상",
+        "만남"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "put off",
+      "back": "미루다, 연기하다. 분리 가능(put it off). postpone의 일상적인 표현으로, 하기 싫어서 미룬다는 뉘앙스가 자주 실린다.",
+      "example": "Stop putting off the dentist appointment and just book it.",
+      "exampleMeaning": "치과 예약 그만 미루고 그냥 잡아.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "습관"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "give up",
+      "back": "포기하다; (습관을) 끊다. 분리 가능(give it up). 대상을 밝힐 때 give up on someone/something 형태도 자주 쓴다.",
+      "example": "She refused to give up even after failing twice.",
+      "exampleMeaning": "그녀는 두 번 실패한 뒤에도 포기하지 않았다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look after",
+      "back": "돌보다, 보살피다. 분리 불가. 영국 영어에서 특히 흔하고, 미국 영어에서는 take care of를 더 많이 쓴다.",
+      "example": "Can you look after my dog while I'm away this weekend?",
+      "exampleMeaning": "이번 주말에 나 없는 동안 우리 개 좀 돌봐 줄래?",
+      "tags": [
+        "일상",
+        "돌봄",
+        "영국식"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look for",
+      "back": "찾다, 구하다. 분리 불가. 찾는 '과정'을 뜻하며, 결과적으로 찾아낸 것은 find로 표현한다는 점을 구분한다.",
+      "example": "I've been looking for my keys all morning.",
+      "exampleMeaning": "아침 내내 열쇠를 찾고 있다.",
+      "tags": [
+        "일상",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look forward to",
+      "back": "~를 고대하다, 기대하다. to는 전치사라서 뒤에 동명사가 온다(look forward to seeing you). 이메일 맺음말 단골 표현.",
+      "example": "We're really looking forward to seeing you at the reunion.",
+      "exampleMeaning": "동창회에서 너를 만나기를 정말 고대하고 있어.",
+      "tags": [
+        "일상",
+        "이메일",
+        "동명사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pick up",
+      "back": "집어 들다; 차로 데리러 가다; (언어·기술을) 자연스럽게 익히다; (전화를) 받다. 분리 가능(pick her up). 문맥에 따라 뜻이 크게 달라지는 다의 구동사.",
+      "example": "I'll pick you up at the station around six.",
+      "exampleMeaning": "6시쯤 역으로 데리러 갈게.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "다의어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "drop off",
+      "back": "(사람·짐을) 내려 주다, 갖다 놓다; 깜빡 잠들다; 줄어들다. 분리 가능(drop him off). 데려다주는 의미로는 pick up의 반대말.",
+      "example": "She drops the kids off at school before work.",
+      "exampleMeaning": "그녀는 출근 전에 아이들을 학교에 내려 준다.",
+      "tags": [
+        "일상",
+        "분리가능"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hang out",
+      "back": "놀다, 어울려 시간을 보내다. 자동사이며 hang out with로 상대를 밝힌다. 매우 캐주얼한 표현이라 격식 있는 자리에는 맞지 않는다.",
+      "example": "We used to hang out at the park after class.",
+      "exampleMeaning": "우리는 방과 후에 공원에서 놀곤 했다.",
+      "tags": [
+        "일상",
+        "캐주얼",
+        "친구"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "work out",
+      "back": "운동하다(자동사); (일이) 잘 풀리다; (해법·계산을) 생각해 내다(이 뜻은 분리 가능: work it out). 헬스장 운동 의미가 구어에서 가장 흔하다.",
+      "example": "He works out at the gym three times a week.",
+      "exampleMeaning": "그는 일주일에 세 번 헬스장에서 운동한다.",
+      "tags": [
+        "일상",
+        "운동",
+        "다의어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn on",
+      "back": "(전원·불을) 켜다. 분리 가능(turn it on). switch on과 같은 뜻이며, 대명사 목적어는 반드시 가운데에 둔다.",
+      "example": "Could you turn on the light? It's getting dark.",
+      "exampleMeaning": "불 좀 켜 줄래? 점점 어두워지네.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn off",
+      "back": "(전원·불을) 끄다. 분리 가능(turn it off). turn on의 반대말로, 수도꼭지·기계에도 두루 쓴다.",
+      "example": "Don't forget to turn off the stove before you leave.",
+      "exampleMeaning": "나가기 전에 가스레인지 끄는 것 잊지 마.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn up",
+      "back": "(소리·온도를) 높이다(분리 가능: turn it up); (사람이) 예고 없이 나타나다(자동사). 나타나다 의미에서는 show up과 비슷하다.",
+      "example": "Can you turn up the heat? The room is freezing.",
+      "exampleMeaning": "난방 좀 올려 줄래? 방이 너무 춥다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "다의어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn down",
+      "back": "(소리·온도를) 낮추다; (제안·요청을) 거절하다. 두 뜻 모두 분리 가능(turn it down). 거절 의미는 reject보다 부드러운 일상 표현.",
+      "example": "She turned down the job offer because of the long commute.",
+      "exampleMeaning": "그녀는 통근 거리가 멀어서 그 일자리 제안을 거절했다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "거절"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "put on",
+      "back": "(옷·신발·안경을) 입다, 쓰다, 신다(입는 동작). 분리 가능(put it on). 입고 있는 '상태'를 뜻하는 wear와 구분한다.",
+      "example": "Put on your coat. It's cold outside.",
+      "exampleMeaning": "코트 입어. 밖이 추워.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "옷"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take off",
+      "back": "(옷을) 벗다(분리 가능: take it off). put on의 반대말. 그 밖에 비행기가 이륙하다, 사업이 급성장하다라는 자동사 뜻도 있다.",
+      "example": "He took off his shoes at the door.",
+      "exampleMeaning": "그는 현관에서 신발을 벗었다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "다의어"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "try on",
+      "back": "(옷·신발을) 입어 보다, 신어 보다. 분리 가능(try it on). 쇼핑할 때 꼭 나오는 표현으로, 탈의실은 fitting room.",
+      "example": "Can I try on this jacket in a smaller size?",
+      "exampleMeaning": "이 재킷 더 작은 사이즈로 입어 봐도 될까요?",
+      "tags": [
+        "일상",
+        "분리가능",
+        "쇼핑"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "throw away",
+      "back": "버리다. 분리 가능(throw it away). throw out과 같은 뜻이며, 기회를 '날려 버리다'라는 비유로도 쓴다.",
+      "example": "I threw away the old magazines piling up in the corner.",
+      "exampleMeaning": "구석에 쌓여 있던 오래된 잡지들을 버렸다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "정리"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "find out",
+      "back": "(사실을) 알아내다, 알게 되다. find out that절, find out about 형태가 흔하다. discover의 일상 표현으로, 물건을 찾는 find와 구분한다.",
+      "example": "I just found out that the concert was canceled.",
+      "exampleMeaning": "콘서트가 취소됐다는 걸 방금 알았다.",
+      "tags": [
+        "일상",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "figure out",
+      "back": "이해하다, (방법·답을) 알아내다. 분리 가능(figure it out). 미국 구어에서 매우 흔하며, 궁리 끝에 알아낸다는 뉘앙스.",
+      "example": "It took me an hour to figure out how the new printer works.",
+      "exampleMeaning": "새 프린터가 어떻게 작동하는지 알아내는 데 한 시간 걸렸다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "문제해결"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "come across",
+      "back": "우연히 발견하다·마주치다; ~한 인상을 주다(come across as). 분리 불가. 물건·정보를 우연히 접할 때 자주 쓴다.",
+      "example": "I came across an old photo album while cleaning the closet.",
+      "exampleMeaning": "옷장을 정리하다가 오래된 사진첩을 우연히 발견했다.",
+      "tags": [
+        "일상",
+        "다의어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get over",
+      "back": "(병·실연·충격을) 극복하다, 잊고 회복하다. 분리 불가. overcome의 일상 표현으로 get over a cold, get over a breakup처럼 쓴다.",
+      "example": "It took her months to get over the breakup.",
+      "exampleMeaning": "그녀가 이별을 극복하는 데 몇 달이 걸렸다.",
+      "tags": [
+        "일상",
+        "감정"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "run out of",
+      "back": "~이 다 떨어지다, 바닥나다. 분리 불가. run out만 쓰면 자동사(Time is running out).",
+      "example": "We've run out of milk, so I'll grab some on the way home.",
+      "exampleMeaning": "우유가 다 떨어져서 집에 오는 길에 좀 사 올게.",
+      "tags": [
+        "일상",
+        "기초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cut down on",
+      "back": "(소비·습관을) 줄이다. 분리 불가. reduce의 일상 표현으로 커피·군것질·지출 등을 줄일 때 쓴다.",
+      "example": "My doctor told me to cut down on salty food.",
+      "exampleMeaning": "의사가 짠 음식을 줄이라고 했다.",
+      "tags": [
+        "일상",
+        "건강",
+        "습관"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look up",
+      "back": "(사전·인터넷에서) 찾아보다, 검색하다. 분리 가능(look it up). '존경하다'인 look up to와 혼동하지 않도록 주의.",
+      "example": "If you don't know the word, look it up in the dictionary.",
+      "exampleMeaning": "그 단어를 모르면 사전에서 찾아봐.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "혼동주의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "show up",
+      "back": "나타나다, (약속 장소에) 오다. 자동사. turn up과 비슷하며 캐주얼한 표현. 약속에 나타나지 않는 사람은 no-show라고 한다.",
+      "example": "He didn't show up for the meeting and never explained why.",
+      "exampleMeaning": "그는 모임에 나타나지 않았고 이유도 설명하지 않았다.",
+      "tags": [
+        "일상",
+        "약속"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hold on",
+      "back": "잠깐 기다리다; 꽉 붙잡다. 자동사. 전화 통화에서 \"Hold on a second.\"로 매우 흔하며, hang on도 같은 뜻의 캐주얼한 표현.",
+      "example": "Hold on a second. I'll check if she's available.",
+      "exampleMeaning": "잠깐만요. 그녀가 시간이 되는지 확인해 볼게요.",
+      "tags": [
+        "일상",
+        "전화",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "call off",
+      "back": "(행사·계획을) 취소하다. 분리 가능(call it off). cancel의 일상 표현이며, 예정돼 있던 일을 무르는 뉘앙스.",
+      "example": "They called off the picnic because of the rain.",
+      "exampleMeaning": "비 때문에 소풍이 취소됐다.",
+      "tags": [
+        "일상",
+        "분리가능"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "put up with",
+      "back": "참다, 견디다. 세 단어가 한 덩어리라 분리 불가. tolerate의 일상 표현으로, 싫지만 감수한다는 뉘앙스.",
+      "example": "I don't know how she puts up with all that noise every night.",
+      "exampleMeaning": "그녀가 매일 밤 그 소음을 어떻게 참는지 모르겠다.",
+      "tags": [
+        "일상",
+        "분리불가",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get rid of",
+      "back": "없애다, 처분하다. 분리 불가. 쓸모없거나 성가신 것을 치워 버린다는 뉘앙스로 remove보다 구어적이다.",
+      "example": "It's time to get rid of these clothes I never wear.",
+      "exampleMeaning": "안 입는 이 옷들을 처분할 때가 됐다.",
+      "tags": [
+        "일상",
+        "분리불가",
+        "정리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "come up with",
+      "back": "(아이디어·해결책을) 생각해 내다, 내놓다. 분리 불가. think of보다 '만들어 낸' 결과물을 강조한다.",
+      "example": "She came up with a clever way to save space in the kitchen.",
+      "exampleMeaning": "그녀는 주방 공간을 절약하는 기발한 방법을 생각해 냈다.",
+      "tags": [
+        "일상",
+        "분리불가",
+        "아이디어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "end up",
+      "back": "결국 ~하게 되다, ~한 처지가 되다. 자동사이며 end up -ing 또는 end up + 장소·상태로 쓴다. 의도와 다른 결말이라는 뉘앙스가 강하다.",
+      "example": "We got lost and ended up eating at a tiny place by the river.",
+      "exampleMeaning": "우리는 길을 잃었다가 결국 강가의 작은 식당에서 밥을 먹게 됐다.",
+      "tags": [
+        "일상",
+        "동명사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "catch up with",
+      "back": "(밀린 것·앞선 사람을) 따라잡다; 오랜만에 만나 근황을 나누다. catch up on(밀린 일·잠을 몰아서 하다)과 전치사 차이를 구분한다.",
+      "example": "Let's grab coffee soon and catch up with each other.",
+      "exampleMeaning": "조만간 커피 마시면서 서로 근황 얘기하자.",
+      "tags": [
+        "일상",
+        "만남",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cheer up",
+      "back": "기운을 내다(자동사); 기운 나게 하다(분리 가능: cheer her up). 명령문 \"Cheer up!\"은 \"기운 내!\"라는 위로.",
+      "example": "I baked cookies to cheer up my roommate after her rough day.",
+      "exampleMeaning": "힘든 하루를 보낸 룸메이트를 위로하려고 쿠키를 구웠다.",
+      "tags": [
+        "일상",
+        "감정",
+        "분리가능"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "calm down",
+      "back": "진정하다(자동사); 진정시키다(분리 가능: calm him down). 흥분·화·불안을 가라앉힐 때 쓰는 기본 표현.",
+      "example": "Take a deep breath and calm down before you reply.",
+      "exampleMeaning": "답장하기 전에 심호흡하고 진정해.",
+      "tags": [
+        "일상",
+        "감정",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "dress up",
+      "back": "차려입다, 격식 있게 입다; (특정 인물처럼) 분장하다(dress up as). 주로 자동사로 쓰며, 평소보다 신경 써 입는다는 뉘앙스.",
+      "example": "You don't need to dress up. It's just a casual dinner.",
+      "exampleMeaning": "차려입을 필요 없어. 그냥 편한 저녁 자리야.",
+      "tags": [
+        "일상",
+        "옷"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "eat out",
+      "back": "외식하다. 자동사. 집에서 먹는 eat in 또는 cook at home과 대비해서 쓴다.",
+      "example": "We eat out every Friday to celebrate the end of the week.",
+      "exampleMeaning": "우리는 한 주가 끝난 걸 자축하며 금요일마다 외식한다.",
+      "tags": [
+        "일상",
+        "음식",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "fill up",
+      "back": "가득 채우다(분리 가능: fill it up); 가득 차다. 주유소에서 \"Fill it up, please.\"(가득 넣어 주세요)로 익혀 두면 좋다.",
+      "example": "I need to fill up the tank before we hit the highway.",
+      "exampleMeaning": "고속도로 타기 전에 기름을 가득 넣어야 해.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "운전"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "give back",
+      "back": "돌려주다, 반납하다. 분리 가능(give it back). return의 일상 표현이며, 사회에 환원하다라는 뜻으로도 쓴다.",
+      "example": "Can you give back the umbrella I lent you last week?",
+      "exampleMeaning": "지난주에 빌려준 우산 돌려줄 수 있어?",
+      "tags": [
+        "일상",
+        "분리가능",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pay back",
+      "back": "(빌린 돈을) 갚다; (당한 일을) 되갚다. 분리 가능(pay you back). 돈 갚는 뜻이 기본이고, 복수 뉘앙스로도 쓴다.",
+      "example": "I'll pay you back as soon as I get paid on Friday.",
+      "exampleMeaning": "금요일에 월급 받자마자 갚을게.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "돈"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "stay up",
+      "back": "안 자고 깨어 있다. 자동사. stay up late(늦게까지 안 자다), stay up all night(밤새다) 형태로 흔히 쓴다.",
+      "example": "I stayed up late watching the final episode of the series.",
+      "exampleMeaning": "그 시리즈 마지막 회를 보느라 늦게까지 안 잤다.",
+      "tags": [
+        "일상",
+        "밤",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "sleep in",
+      "back": "(일부러) 늦잠 자다. 자동사. 실수로 늦잠 자서 지각하는 oversleep과 구분: sleep in은 주말에 여유롭게 자는 것.",
+      "example": "On Sundays I like to sleep in and have a slow breakfast.",
+      "exampleMeaning": "일요일에는 늦잠 자고 느긋하게 아침 먹는 걸 좋아한다.",
+      "tags": [
+        "일상",
+        "아침",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "break down",
+      "back": "(차·기계가) 고장 나다(자동사); (감정이) 무너져 울다; 잘게 나누어 분석하다(이 뜻은 분리 가능: break it down). 자동사 '고장 나다'가 가장 빈출.",
+      "example": "Our car broke down on the way to the beach.",
+      "exampleMeaning": "해변에 가는 길에 차가 고장 났다.",
+      "tags": [
+        "일상",
+        "다의어",
+        "자동사"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "bring up",
+      "back": "(화제를) 꺼내다; (아이를) 기르다. 분리 가능(bring it up). 회의나 대화에서 민감한 주제를 꺼낼 때 자주 쓴다.",
+      "example": "I didn't want to bring up the rent issue at dinner.",
+      "exampleMeaning": "저녁 자리에서 집세 얘기를 꺼내고 싶지 않았다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "대화"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "grow up",
+      "back": "자라다, 성장하다. 자동사. 타동사인 bring up(기르다)과 짝으로 기억한다. \"Grow up!\"은 \"철 좀 들어!\"라는 핀잔.",
+      "example": "She grew up in a small town by the sea.",
+      "exampleMeaning": "그녀는 바닷가 작은 마을에서 자랐다.",
+      "tags": [
+        "일상",
+        "자동사",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hurry up",
+      "back": "서두르다. 자동사이며 주로 명령문으로 쓴다. \"Hurry up, or we'll miss the bus!\"처럼 재촉할 때 사용.",
+      "example": "Hurry up! The movie starts in ten minutes.",
+      "exampleMeaning": "서둘러! 영화 10분 뒤에 시작해.",
+      "tags": [
+        "일상",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "let down",
+      "back": "실망시키다, 기대를 저버리다. 분리 가능(let her down). disappoint의 일상 표현이며, 명사형 letdown은 '실망스러운 일'.",
+      "example": "I promised to help, and I don't want to let them down.",
+      "exampleMeaning": "돕겠다고 약속했으니 그들을 실망시키고 싶지 않다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "감정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "plug in",
+      "back": "플러그를 꽂다, 전원을 연결하다. 분리 가능(plug it in). 반대말은 unplug 한 단어를 주로 쓴다.",
+      "example": "My laptop is dying. Where can I plug it in?",
+      "exampleMeaning": "노트북 배터리가 다 됐어. 어디에 꽂을 수 있을까?",
+      "tags": [
+        "일상",
+        "분리가능",
+        "전자기기"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "put away",
+      "back": "치우다, 제자리에 넣다. 분리 가능(put them away). 어질러진 물건을 원래 자리에 정리한다는 뉘앙스.",
+      "example": "Please put away the dishes once they're dry.",
+      "exampleMeaning": "그릇이 마르면 제자리에 넣어 줘.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "정리"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take out",
+      "back": "꺼내다; (쓰레기를) 내다 버리다; (사람을) 데리고 나가 대접하다. 분리 가능(take it out). take out the trash가 대표 용례.",
+      "example": "It's your turn to take out the trash tonight.",
+      "exampleMeaning": "오늘 밤 쓰레기 내다 버리는 건 네 차례야.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "집안일"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "tidy up",
+      "back": "깔끔하게 정리하다, 치우다. 분리 가능(tidy it up). 영국 영어에서 특히 흔하며, clean up보다 '정돈'에 초점이 있다.",
+      "example": "Let's tidy up the living room before the guests arrive.",
+      "exampleMeaning": "손님들 오기 전에 거실을 정리하자.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "영국식"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "wear out",
+      "back": "닳다, 닳게 하다; 지치게 하다. 분리 가능(wear them out). 형용사 worn out은 '낡은' 또는 '녹초가 된'이라는 두 가지 뜻.",
+      "example": "These sneakers wore out after just six months.",
+      "exampleMeaning": "이 운동화는 겨우 6개월 만에 다 닳았다.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "다의어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "chill out",
+      "back": "느긋하게 쉬다; 흥분을 가라앉히다. 자동사. relax의 매우 캐주얼한 표현으로 친한 사이에서만 쓰는 것이 안전하다.",
+      "example": "We just chilled out at home and watched movies all weekend.",
+      "exampleMeaning": "우리는 주말 내내 집에서 느긋하게 쉬면서 영화를 봤다.",
+      "tags": [
+        "일상",
+        "캐주얼"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "doze off",
+      "back": "깜빡 졸다, 나도 모르게 잠들다. 자동사. nod off와 같은 뜻이며, 수업·회의 중에 조는 상황에 딱 맞는 표현.",
+      "example": "I dozed off during the lecture and missed the last part.",
+      "exampleMeaning": "강의 중에 깜빡 졸아서 마지막 부분을 놓쳤다.",
+      "tags": [
+        "일상",
+        "자동사",
+        "밤"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hang up",
+      "back": "전화를 끊다. 자동사로도, 분리 가능한 타동사로도 쓴다(hang up the phone). hang up on someone은 상대 말이 끝나기 전에 일방적으로 끊는 것.",
+      "example": "She said goodbye quickly and hung up.",
+      "exampleMeaning": "그녀는 급히 인사하고 전화를 끊었다.",
+      "tags": [
+        "일상",
+        "전화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pick out",
+      "back": "고르다, 골라내다. 분리 가능(pick one out). choose의 일상 표현으로, 여럿 중에서 눈으로 보고 고르는 뉘앙스.",
+      "example": "Help me pick out a gift for my dad's birthday.",
+      "exampleMeaning": "아빠 생신 선물 고르는 것 좀 도와줘.",
+      "tags": [
+        "일상",
+        "분리가능",
+        "쇼핑"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get together",
+      "back": "모이다, 만나다. 자동사이며 get together with로 상대를 밝힌다. 명사 get-together는 '가벼운 모임'.",
+      "example": "Let's get together for lunch sometime next week.",
+      "exampleMeaning": "다음 주 중에 만나서 점심 먹자.",
+      "tags": [
+        "일상",
+        "만남",
+        "기초"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "follow up",
+      "back": "후속 조치를 하다, 다시 연락해 확인하다. follow up on + 안건 형태가 흔하다. 명사·형용사는 하이픈을 붙여 follow-up(a follow-up email). 비즈니스 이메일 최빈출 표현.",
+      "example": "I'll follow up on the proposal with the client tomorrow.",
+      "exampleMeaning": "내일 고객에게 제안서 관련 후속 연락을 하겠습니다.",
+      "tags": [
+        "비즈니스",
+        "이메일",
+        "빈출"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "sign off on",
+      "back": "최종 승인하다, 결재하다. 분리 불가. approve의 구어적 표현. on이 없는 sign off는 방송 종료나 이메일 맺음 인사를 뜻하므로 구분한다.",
+      "example": "We can't start production until the director signs off on the budget.",
+      "exampleMeaning": "이사님이 예산을 최종 승인하기 전까지는 생산을 시작할 수 없다.",
+      "tags": [
+        "비즈니스",
+        "승인",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "roll out",
+      "back": "(제품·서비스·정책을) 출시하다, 단계적으로 전개하다. 분리 가능(roll it out). launch보다 '순차 배포'의 뉘앙스가 강하며 명사형은 rollout.",
+      "example": "The company will roll out the new app in three markets first.",
+      "exampleMeaning": "회사는 새 앱을 우선 세 개 시장에 출시할 예정이다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "출시"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "set up",
+      "back": "설립하다; (회의·약속을) 잡다; (장비·시스템을) 설치하다. 분리 가능(set it up). 명사형 setup은 '구성, 설정'.",
+      "example": "Could you set up a call with the vendor for Thursday?",
+      "exampleMeaning": "목요일에 업체와 통화 일정을 잡아 줄 수 있나요?",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "회의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "reach out to",
+      "back": "~에게 연락을 취하다. 분리 불가. contact보다 부드럽고 적극적인 뉘앙스의 비즈니스 표현으로, 먼저 손을 내민다는 어감이 있다.",
+      "example": "Feel free to reach out to me if you have any questions.",
+      "exampleMeaning": "질문이 있으시면 언제든지 저에게 연락 주세요.",
+      "tags": [
+        "비즈니스",
+        "이메일",
+        "빈출"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "touch base",
+      "back": "가볍게 연락해 상황을 공유하다. touch base with + 사람. 야구에서 온 관용 표현으로, 짧은 확인 연락이라는 뉘앙스. 중립적 비즈니스 구어.",
+      "example": "Let's touch base next week to see how the project is going.",
+      "exampleMeaning": "다음 주에 잠깐 연락해서 프로젝트 진행 상황을 확인합시다.",
+      "tags": [
+        "비즈니스",
+        "연락",
+        "관용표현"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "fill in for",
+      "back": "~를 임시로 대신하다, 대타를 뛰다. 분리 불가. fill in은 서식을 기입하다, fill someone in은 상황을 브리핑하다이므로 전치사에 따라 뜻이 갈린다.",
+      "example": "Can you fill in for me at the meeting while I'm on leave?",
+      "exampleMeaning": "내가 휴가인 동안 회의에 나 대신 들어가 줄 수 있어?",
+      "tags": [
+        "비즈니스",
+        "혼동주의",
+        "업무"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hand over",
+      "back": "인계하다, 넘겨주다. 분리 가능(hand it over). 업무·권한을 넘길 때 쓰며 명사형 handover는 '인수인계'.",
+      "example": "Before leaving, she handed over all her accounts to the new manager.",
+      "exampleMeaning": "떠나기 전에 그녀는 담당 거래처 전부를 새 매니저에게 인계했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "인수인계"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take on",
+      "back": "(일·책임을) 맡다; (직원을) 채용하다; (상대와) 맞붙다. 분리 가능(take it on). 인수 의미인 take over와 혼동 주의.",
+      "example": "I can't take on any more projects this quarter.",
+      "exampleMeaning": "이번 분기에는 프로젝트를 더 맡을 수 없다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take over",
+      "back": "(회사를) 인수하다; (업무·자리를) 넘겨받다. 분리 가능(take it over). 명사형 takeover는 '인수'. 새로 떠맡는 take on과 구분한다.",
+      "example": "A larger firm took over the startup last year.",
+      "exampleMeaning": "지난해 더 큰 회사가 그 스타트업을 인수했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "인수"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "step down",
+      "back": "사임하다, 물러나다. 자동사이며 step down as CEO처럼 직책을 밝힌다. resign의 완곡하고 격식 있는 표현.",
+      "example": "The chairman announced he would step down at the end of the year.",
+      "exampleMeaning": "회장은 연말에 물러나겠다고 발표했다.",
+      "tags": [
+        "비즈니스",
+        "자동사",
+        "격식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "step in",
+      "back": "개입하다, (문제 해결을 위해) 나서다. 자동사. intervene의 일상 표현으로, 상황이 꼬였을 때 대신 나선다는 뉘앙스.",
+      "example": "The manager had to step in to settle the dispute between teams.",
+      "exampleMeaning": "매니저가 팀 간 분쟁을 정리하기 위해 나서야 했다.",
+      "tags": [
+        "비즈니스",
+        "자동사"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "lay off",
+      "back": "(경영상 이유로) 정리해고하다. 분리 가능(lay them off). 잘못 때문에 해고하는 fire와 구분: lay off는 회사 사정에 의한 감원. 명사형 layoff.",
+      "example": "The factory laid off two hundred workers during the downturn.",
+      "exampleMeaning": "그 공장은 경기 침체기에 노동자 200명을 정리해고했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "bring in",
+      "back": "(외부 전문가를) 영입하다, 불러들이다; (수익을) 벌어들이다. 분리 가능(bring her in).",
+      "example": "They brought in a consultant to review the security system.",
+      "exampleMeaning": "그들은 보안 시스템을 점검하려고 컨설턴트를 영입했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "draw up",
+      "back": "(계약서·계획서를) 작성하다. 분리 가능(draw it up). 문서를 격식을 갖춰 만든다는 뉘앙스로 계약 관련 문맥에서 빈출.",
+      "example": "Our lawyer will draw up the contract by Friday.",
+      "exampleMeaning": "우리 변호사가 금요일까지 계약서를 작성할 것이다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "계약"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "wrap up",
+      "back": "마무리하다, 끝내다. 분리 가능(wrap it up). 회의를 끝낼 때 \"Let's wrap up.\"으로 자주 쓴다. finish의 부드러운 구어 표현.",
+      "example": "Let's wrap up the meeting. We're already over time.",
+      "exampleMeaning": "회의를 마무리합시다. 벌써 시간이 초과됐어요.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "회의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "kick off",
+      "back": "(회의·프로젝트를) 시작하다. 분리 가능(kick it off). 축구 킥오프에서 온 표현으로 명사형 kickoff는 '개시 (회의)'. 활기찬 뉘앙스.",
+      "example": "We'll kick off the project with a short workshop on Monday.",
+      "exampleMeaning": "월요일에 짧은 워크숍으로 프로젝트를 시작할 것이다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "회의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look into",
+      "back": "조사하다, 검토하다. 분리 불가. investigate보다 부드러운 표현으로, 고객 응대에서 \"I'll look into it.\"(확인해 보겠습니다)로 빈출.",
+      "example": "We're looking into the cause of the billing error.",
+      "exampleMeaning": "청구 오류의 원인을 조사하고 있습니다.",
+      "tags": [
+        "비즈니스",
+        "분리불가",
+        "고객응대"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "point out",
+      "back": "지적하다, 짚어 주다. 분리 가능(point it out). 비난보다는 '알려 준다'는 중립적 뉘앙스라 회의에서 안전하게 쓸 수 있다.",
+      "example": "She pointed out a mistake in the sales figures.",
+      "exampleMeaning": "그녀는 매출 수치의 오류를 짚어 냈다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "회의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "put forward",
+      "back": "(안건·의견·후보를) 제시하다, 내놓다. 분리 가능(put it forward). propose에 해당하는 격식 있는 구동사로 회의록·보고서에 잘 어울린다.",
+      "example": "The team put forward a plan to reduce delivery times.",
+      "exampleMeaning": "그 팀은 배송 시간을 줄이기 위한 계획을 제시했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "격식"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "back up",
+      "back": "(파일을) 백업하다; (주장을) 뒷받침하다; (사람을) 지원하다. 분리 가능(back it up). 명사형 backup은 '예비, 백업'.",
+      "example": "Back up your files before installing the update.",
+      "exampleMeaning": "업데이트를 설치하기 전에 파일을 백업하세요.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "다의어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "weigh in",
+      "back": "(논의에) 의견을 보태다. 자동사이며 weigh in on + 주제. 전문성 있는 의견을 더한다는 뉘앙스의 중립적 비즈니스 구어.",
+      "example": "Could you weigh in on the design options before we decide?",
+      "exampleMeaning": "결정하기 전에 디자인 시안들에 의견을 좀 보태 주시겠어요?",
+      "tags": [
+        "비즈니스",
+        "자동사",
+        "회의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "carry out",
+      "back": "수행하다, 실행하다. 분리 가능(carry it out). conduct/perform에 해당하는 표현으로 carry out a survey(설문을 실시하다)처럼 격식 문서에 빈출.",
+      "example": "The team carried out a customer survey last month.",
+      "exampleMeaning": "그 팀은 지난달 고객 설문 조사를 실시했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "격식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "scale up",
+      "back": "규모를 키우다, 확장하다. 분리 가능(scale it up). 스타트업·생산 문맥의 핵심 어휘로, 반대말은 scale down 또는 scale back.",
+      "example": "After the pilot succeeded, they scaled up production quickly.",
+      "exampleMeaning": "시범 운영이 성공한 뒤 그들은 생산 규모를 빠르게 키웠다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "성장"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "scale back",
+      "back": "(계획·지출을) 축소하다. 분리 가능(scale it back). cut back과 비슷하며, 전면 취소가 아니라 규모만 줄인다는 뉘앙스.",
+      "example": "We had to scale back the marketing budget this quarter.",
+      "exampleMeaning": "이번 분기에는 마케팅 예산을 축소해야 했다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "예산"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hand out",
+      "back": "나눠 주다, 배포하다. 분리 가능(hand them out). 명사형 handout은 '유인물'. distribute의 일상 표현.",
+      "example": "She handed out copies of the agenda before the meeting.",
+      "exampleMeaning": "그녀는 회의 전에 안건 사본을 나눠 주었다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "회의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "write up",
+      "back": "(메모·결과를 정식 문서로) 정리해 작성하다. 분리 가능(write it up). 그냥 write와 달리 '보고서 형태로 완성한다'는 뉘앙스. 명사형 write-up.",
+      "example": "I'll write up the meeting notes and share them by tomorrow.",
+      "exampleMeaning": "회의 내용을 정리해서 내일까지 공유하겠습니다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "문서"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "sort out",
+      "back": "(문제를) 해결하다, (뒤섞인 것을) 정리하다. 분리 가능(sort it out). 영국 영어에서 특히 흔하며 resolve의 구어 표현.",
+      "example": "IT is sorting out the login issue right now.",
+      "exampleMeaning": "IT 부서가 지금 로그인 문제를 해결하는 중이다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "영국식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "iron out",
+      "back": "(사소한 문제·이견을) 매끄럽게 해결하다. 분리 가능(iron them out). 다리미로 주름을 펴듯 세부 사항을 조율한다는 비유. 큰 틀은 합의된 상태가 전제.",
+      "example": "We still need to iron out a few details in the contract.",
+      "exampleMeaning": "계약서의 세부 사항 몇 가지를 아직 조율해야 한다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "협상"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "push back",
+      "back": "반발하다, 이의를 제기하다(자동사, push back on/against); (일정을) 뒤로 미루다(분리 가능: push the meeting back). 명사형 pushback은 '반발'.",
+      "example": "The engineers pushed back on the unrealistic deadline.",
+      "exampleMeaning": "엔지니어들은 비현실적인 마감 기한에 이의를 제기했다.",
+      "tags": [
+        "비즈니스",
+        "다의어",
+        "협상"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "sign up for",
+      "back": "~에 등록하다, 신청하다. 분리 불가. register for의 일상 표현이며, sign up만 쓰면 자동사(Sign up today!).",
+      "example": "More than fifty employees signed up for the training session.",
+      "exampleMeaning": "직원 50명 이상이 교육 과정에 신청했다.",
+      "tags": [
+        "비즈니스",
+        "분리불가",
+        "등록"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "opt out of",
+      "back": "~에서 빠지다, 참여를 철회하다. 분리 불가. 약관·마케팅 수신 동의 문맥에서 빈출하며 반대말은 opt in to.",
+      "example": "You can opt out of the newsletter at any time.",
+      "exampleMeaning": "뉴스레터 수신은 언제든지 해지할 수 있습니다.",
+      "tags": [
+        "비즈니스",
+        "분리불가",
+        "약관"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "run by",
+      "back": "(결정 전에) ~에게 먼저 말해 의견을 구하다. 항상 목적어를 가운데 두는 분리형으로 쓴다: run it by me. 상사 보고 문맥에서 매우 유용.",
+      "example": "Let me run this idea by my manager before we commit.",
+      "exampleMeaning": "확정하기 전에 이 아이디어를 매니저에게 먼저 말해 볼게요.",
+      "tags": [
+        "비즈니스",
+        "분리필수",
+        "보고"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "branch out",
+      "back": "(사업·활동 영역을) 새 분야로 확장하다, 다각화하다. 자동사이며 branch out into + 분야. 나뭇가지가 뻗는 이미지의 비유.",
+      "example": "The bakery branched out into catering last year.",
+      "exampleMeaning": "그 빵집은 지난해 케이터링 사업으로 영역을 넓혔다.",
+      "tags": [
+        "비즈니스",
+        "자동사",
+        "성장"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "wind down",
+      "back": "(사업·활동을) 단계적으로 정리하다, 축소해 마감하다; 긴장을 풀다. wind up(마무리 짓다, 결국 ~하게 되다)과 혼동 주의. 발음은 wined와 같은 /waɪnd/.",
+      "example": "The company is winding down its overseas operations.",
+      "exampleMeaning": "그 회사는 해외 사업을 단계적으로 정리하고 있다.",
+      "tags": [
+        "비즈니스",
+        "혼동주의",
+        "다의어"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "free up",
+      "back": "(시간·자원·예산을) 확보하다, 비워 내다. 분리 가능(free up time, free it up). 묶여 있던 것을 풀어 쓸 수 있게 한다는 뉘앙스.",
+      "example": "Automating reports freed up two hours of my day.",
+      "exampleMeaning": "보고서 자동화로 하루 두 시간이 확보됐다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "생산성"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "follow through on",
+      "back": "(약속·계획을) 끝까지 이행하다. 분리 불가. 시작만 하고 마는 것과 대비해 '완수'를 강조한다. follow up(후속 연락)과 혼동 주의.",
+      "example": "He always follows through on what he promises.",
+      "exampleMeaning": "그는 약속한 것은 항상 끝까지 해낸다.",
+      "tags": [
+        "비즈니스",
+        "분리불가",
+        "혼동주의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "zero in on",
+      "back": "~에 초점을 맞추다, 집중 공략하다. 분리 불가. 조준경으로 표적을 맞추는 이미지에서 온 표현으로, 핵심 원인·목표를 좁혀 들어갈 때 쓴다.",
+      "example": "The report zeroes in on why younger users are leaving the app.",
+      "exampleMeaning": "그 보고서는 젊은 사용자들이 앱을 떠나는 이유에 초점을 맞춘다.",
+      "tags": [
+        "비즈니스",
+        "분리불가",
+        "분석"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "team up with",
+      "back": "~와 협력하다, 손잡다. 자동사 + 전치사 구조라 분리 개념이 없다. partner with보다 캐주얼하고 활기찬 뉘앙스.",
+      "example": "Our startup teamed up with a local university for the research.",
+      "exampleMeaning": "우리 스타트업은 그 연구를 위해 지역 대학과 손잡았다.",
+      "tags": [
+        "비즈니스",
+        "협업"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "map out",
+      "back": "(계획·일정을) 상세히 세우다, 그려 내다. 분리 가능(map it out). 지도를 그리듯 단계별로 계획한다는 비유.",
+      "example": "We mapped out the product roadmap for the next two years.",
+      "exampleMeaning": "우리는 향후 2년간의 제품 로드맵을 상세히 세웠다.",
+      "tags": [
+        "비즈니스",
+        "분리가능",
+        "기획"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "set off",
+      "back": "출발하다, 길을 나서다(자동사); (알람·경보를) 울리다, (불꽃을) 터뜨리다(이 뜻은 분리 가능: set it off). 여행 문맥에서는 set off for + 목적지.",
+      "example": "We set off for the mountains before sunrise.",
+      "exampleMeaning": "우리는 해 뜨기 전에 산으로 출발했다.",
+      "tags": [
+        "이동변화",
+        "출발",
+        "다의어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "set out",
+      "back": "(여정을) 시작하다, 출발하다; ~하는 것을 목표로 착수하다(set out to do). 자동사. set off보다 '목적을 품고 나선다'는 뉘앙스가 강하다.",
+      "example": "She set out to walk the entire coastal trail in a month.",
+      "exampleMeaning": "그녀는 한 달 안에 해안 트레일 전 구간을 걷는 것을 목표로 나섰다.",
+      "tags": [
+        "이동변화",
+        "출발"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "head out",
+      "back": "나서다, 출발하다. 자동사이며 캐주얼한 미국식 구어. \"I'm heading out.\"은 \"이제 나가 볼게.\"라는 가벼운 인사.",
+      "example": "I'm heading out now. See you at the restaurant.",
+      "exampleMeaning": "지금 나서는 중이야. 식당에서 보자.",
+      "tags": [
+        "이동변화",
+        "출발",
+        "캐주얼"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "head back",
+      "back": "(왔던 곳으로) 돌아가다. 자동사. head back home, head back to the office처럼 방향을 붙인다.",
+      "example": "It's getting late. Let's head back to the hotel.",
+      "exampleMeaning": "늦어지고 있어. 호텔로 돌아가자.",
+      "tags": [
+        "이동변화",
+        "귀환",
+        "캐주얼"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pull over",
+      "back": "차를 길가에 세우다. 자동사로도, 분리 가능한 타동사로도 쓴다(pull the car over). 경찰이 차를 세울 때 \"Pull over.\"라고 말한다.",
+      "example": "The driver pulled over to check the tire.",
+      "exampleMeaning": "운전자는 타이어를 확인하려고 차를 길가에 세웠다.",
+      "tags": [
+        "이동변화",
+        "운전"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pull up",
+      "back": "(차가) 다가와 멈추다, 서다. 자동사. pull up in front of + 장소 형태가 흔하다. 화면·자료를 '띄우다'라는 구어 뜻도 있다.",
+      "example": "A taxi pulled up in front of the building.",
+      "exampleMeaning": "택시 한 대가 건물 앞에 와서 섰다.",
+      "tags": [
+        "이동변화",
+        "운전",
+        "다의어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pull out",
+      "back": "(차가 차선·주차 공간에서) 빠져나오다; (사업·협상에서) 철수하다(pull out of). 이동과 비즈니스 양쪽에서 쓰는 다의 구동사.",
+      "example": "The investor pulled out of the deal at the last minute.",
+      "exampleMeaning": "그 투자자는 막판에 거래에서 발을 뺐다.",
+      "tags": [
+        "이동변화",
+        "운전",
+        "다의어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get in",
+      "back": "(승용차·택시에) 타다; (기차·비행기가) 도착하다. 승용차처럼 몸을 숙여 들어가는 탈것에 쓰고, 버스·기차·비행기는 get on을 쓴다.",
+      "example": "Get in! I'll drive you to the station.",
+      "exampleMeaning": "타! 역까지 태워다 줄게.",
+      "tags": [
+        "이동변화",
+        "탑승",
+        "혼동주의"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get out of",
+      "back": "(승용차에서) 내리다; (하기 싫은 일·약속을) 모면하다. 승용차에서 내릴 때 쓰며, 버스·기차에서 내리는 get off와 구분한다.",
+      "example": "He got out of the car and waved at us.",
+      "exampleMeaning": "그는 차에서 내려 우리에게 손을 흔들었다.",
+      "tags": [
+        "이동변화",
+        "하차",
+        "혼동주의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get on",
+      "back": "(버스·기차·비행기·자전거에) 타다. 분리 불가. 서서 올라타는 탈것에 쓰며, 승용차·택시는 get in을 쓴다는 구분이 시험 단골.",
+      "example": "She got on the wrong bus and ended up across town.",
+      "exampleMeaning": "그녀는 버스를 잘못 타서 시내 반대편까지 가 버렸다.",
+      "tags": [
+        "이동변화",
+        "탑승",
+        "혼동주의"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get off",
+      "back": "(버스·기차·비행기에서) 내리다; 퇴근하다(get off work). 내릴 정류장을 물을 때 \"Where do I get off?\"라고 한다.",
+      "example": "Get off at the third stop and cross the street.",
+      "exampleMeaning": "세 번째 정류장에서 내려서 길을 건너세요.",
+      "tags": [
+        "이동변화",
+        "하차",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "move in",
+      "back": "이사해 들어오다. 자동사. move in with + 사람은 '~와 함께 살기 시작하다'. 반대말은 move out.",
+      "example": "Our new neighbors moved in last Saturday.",
+      "exampleMeaning": "새 이웃이 지난 토요일에 이사 왔다.",
+      "tags": [
+        "이동변화",
+        "이사",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "move out",
+      "back": "이사해 나가다, (살던 집에서) 나가다. 자동사이며 move out of + 집. 독립해서 부모 집을 나가는 문맥에서도 흔하다.",
+      "example": "He moved out of his parents' house at twenty-five.",
+      "exampleMeaning": "그는 스물다섯에 부모님 집에서 독립해 나왔다.",
+      "tags": [
+        "이동변화",
+        "이사",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "move on",
+      "back": "(다음 단계·주제로) 넘어가다; (아픈 일을) 딛고 나아가다. 자동사이며 move on to + 다음 항목. 회의 진행과 감정 회복 양쪽에서 빈출.",
+      "example": "Let's move on to the next item on the agenda.",
+      "exampleMeaning": "다음 안건으로 넘어갑시다.",
+      "tags": [
+        "이동변화",
+        "전환",
+        "회의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "check in",
+      "back": "(호텔·공항에서) 체크인하다, 수속하다. 자동사. check in on + 사람은 '잘 있는지 들여다보다'. 명사형 check-in.",
+      "example": "You can check in at the hotel from 3 p.m.",
+      "exampleMeaning": "호텔 체크인은 오후 3시부터 가능합니다.",
+      "tags": [
+        "이동변화",
+        "여행",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "check out",
+      "back": "(호텔에서) 체크아웃하다(자동사); 확인해 보다(분리 가능: check it out). \"Check it out!\"은 \"이것 좀 봐!\"라는 캐주얼한 감탄.",
+      "example": "We need to check out of the room by eleven.",
+      "exampleMeaning": "우리는 11시까지 방을 체크아웃해야 한다.",
+      "tags": [
+        "이동변화",
+        "여행",
+        "다의어"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "see off",
+      "back": "배웅하다. 분리 가능하며 보통 목적어를 가운데 둔다(see her off). 공항·역까지 나가 작별 인사를 하는 상황에 쓴다.",
+      "example": "The whole family came to the airport to see me off.",
+      "exampleMeaning": "온 가족이 나를 배웅하러 공항에 나왔다.",
+      "tags": [
+        "이동변화",
+        "분리가능",
+        "여행"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "stop by",
+      "back": "잠깐 들르다. 분리 불가. 목적지를 붙여 stop by the office처럼 쓰며, 머무는 시간이 짧다는 뉘앙스.",
+      "example": "I'll stop by the pharmacy on my way home.",
+      "exampleMeaning": "집에 가는 길에 약국에 잠깐 들를게.",
+      "tags": [
+        "이동변화",
+        "방문"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "drop by",
+      "back": "(예고 없이) 잠깐 들르다. 분리 불가. stop by·come by와 거의 같은 뜻의 캐주얼한 표현으로, 불쑥 찾아간다는 어감이 조금 더 강하다.",
+      "example": "Feel free to drop by whenever you're in the neighborhood.",
+      "exampleMeaning": "근처에 올 일 있으면 언제든 편하게 들러.",
+      "tags": [
+        "이동변화",
+        "방문",
+        "캐주얼"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "go away",
+      "back": "떠나다, 자리를 뜨다; (문제·통증이) 사라지다. 자동사. \"Go away!\"는 \"저리 가!\"라는 강한 표현이므로 어조에 주의.",
+      "example": "The headache finally went away after I took a nap.",
+      "exampleMeaning": "낮잠을 자고 나니 두통이 마침내 사라졌다.",
+      "tags": [
+        "이동변화",
+        "변화",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "come back",
+      "back": "돌아오다. 자동사. come back to/from으로 방향을 밝힌다. 명사형 comeback은 '재기, 복귀'라는 뜻으로 스포츠·연예 기사에 빈출.",
+      "example": "She's coming back from her trip next Monday.",
+      "exampleMeaning": "그녀는 다음 주 월요일에 여행에서 돌아온다.",
+      "tags": [
+        "이동변화",
+        "귀환",
+        "기초"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get away",
+      "back": "벗어나다, 휴가를 떠나다. 자동사. 명사형 getaway는 '짧은 휴가'. get away with(나쁜 짓을 하고도 벌을 안 받다)와 뜻이 전혀 다르니 주의.",
+      "example": "We're hoping to get away for a few days in October.",
+      "exampleMeaning": "우리는 10월에 며칠 훌쩍 떠났다 오려고 한다.",
+      "tags": [
+        "이동변화",
+        "여행",
+        "혼동주의"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn around",
+      "back": "돌아서다, 방향을 바꾸다; (실적·상황을) 반전시키다(분리 가능: turn it around). 명사형 turnaround는 '흑자 전환, 처리 소요 시간'.",
+      "example": "The new coach turned the losing team around in one season.",
+      "exampleMeaning": "새 감독은 한 시즌 만에 지고 있던 팀을 반전시켰다.",
+      "tags": [
+        "이동변화",
+        "분리가능",
+        "반전"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn into",
+      "back": "~로 변하다, ~가 되다. 분리 불가. become과 달리 '다른 것으로 바뀌는 과정'을 강조하며, A를 B로 바꾸다는 turn A into B.",
+      "example": "The small blog turned into a full-time business.",
+      "exampleMeaning": "그 작은 블로그는 전업 사업으로 변했다.",
+      "tags": [
+        "이동변화",
+        "변화"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cool down",
+      "back": "식다, 식히다; (운동 후) 정리 운동을 하다; (화가) 가라앉다. 자동사·타동사 겸용(분리 가능: cool it down).",
+      "example": "Let the soup cool down before you give it to the baby.",
+      "exampleMeaning": "아기에게 주기 전에 수프를 좀 식혀.",
+      "tags": [
+        "이동변화",
+        "변화",
+        "온도"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "warm up",
+      "back": "데우다, 따뜻해지다(분리 가능: warm it up); (운동 전) 몸을 풀다. 명사형 warm-up은 '준비 운동'. cool down과 짝으로 기억.",
+      "example": "Warm up properly before you start running.",
+      "exampleMeaning": "달리기 시작하기 전에 몸을 제대로 풀어라.",
+      "tags": [
+        "이동변화",
+        "분리가능",
+        "운동"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "die down",
+      "back": "(바람·불길·소란이) 잦아들다, 가라앉다. 자동사. 완전히 사라지기보다 '세기가 약해진다'는 뉘앙스이며, 논란이 사그라들 때도 쓴다.",
+      "example": "The wind died down by evening, and the sea grew calm.",
+      "exampleMeaning": "저녁이 되자 바람이 잦아들고 바다가 잔잔해졌다.",
+      "tags": [
+        "이동변화",
+        "자동사",
+        "변화"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "speed up",
+      "back": "속도를 높이다, 빨라지다. 분리 가능(speed it up). 반대말 slow down과 짝으로 외운다. 절차를 앞당길 때도 쓴다.",
+      "example": "We need to speed up the review process to meet the deadline.",
+      "exampleMeaning": "마감을 맞추려면 검토 절차 속도를 높여야 한다.",
+      "tags": [
+        "이동변화",
+        "분리가능",
+        "속도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "slow down",
+      "back": "속도를 늦추다, 천천히 하다. 분리 가능(slow it down). 운전뿐 아니라 \"Slow down!\"으로 말이 빠른 상대에게도 쓴다.",
+      "example": "Slow down a bit. The roads are icy tonight.",
+      "exampleMeaning": "속도 좀 줄여. 오늘 밤엔 길이 얼었어.",
+      "tags": [
+        "이동변화",
+        "분리가능",
+        "속도"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "break out",
+      "back": "(전쟁·화재·전염병이) 갑자기 발생하다(자동사); 탈출하다(break out of). 명사형 outbreak는 '(질병 등의) 발발'. 시험 독해에도 자주 나온다.",
+      "example": "A fire broke out in the warehouse late at night.",
+      "exampleMeaning": "밤늦게 창고에서 화재가 발생했다.",
+      "tags": [
+        "이동변화",
+        "자동사",
+        "발생"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hit the ground running",
+      "back": "처음부터 전력으로 시작하다, 적응 기간 없이 바로 성과를 내다. 신입·새 프로젝트 문맥에서 흔한 비즈니스 숙어. 긍정적 뉘앙스.",
+      "example": "She joined the team in May and hit the ground running.",
+      "exampleMeaning": "그녀는 5월에 팀에 합류해 처음부터 전력으로 일을 시작했다.",
+      "tags": [
+        "숙어",
+        "비즈니스",
+        "긍정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "on the same page",
+      "back": "같은 이해를 공유하는, 생각이 일치한. be/get on the same page 형태로 쓰며 회의에서 인식을 맞출 때 단골로 나온다.",
+      "example": "Before we start, let's make sure everyone is on the same page.",
+      "exampleMeaning": "시작하기 전에 모두가 같은 이해를 갖고 있는지 확인합시다.",
+      "tags": [
+        "숙어",
+        "회의",
+        "빈출"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "think outside the box",
+      "back": "고정관념을 벗어나 창의적으로 생각하다. 브레인스토밍 단골 표현이지만 너무 자주 쓰여 진부하다는 평도 있다.",
+      "example": "The client wants something bold, so let's think outside the box.",
+      "exampleMeaning": "고객이 과감한 것을 원하니 틀을 깨고 생각해 보자.",
+      "tags": [
+        "숙어",
+        "창의",
+        "비즈니스"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "the ball is in your court",
+      "back": "이제 결정권·차례는 당신에게 있다. 테니스에서 온 표현으로, 다음 행동을 상대가 해야 한다는 뜻. 협상·이메일에서 유용.",
+      "example": "We've sent our final offer, so the ball is in your court now.",
+      "exampleMeaning": "저희 최종 제안을 보냈으니 이제 결정은 그쪽 몫입니다.",
+      "tags": [
+        "숙어",
+        "협상"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cut corners",
+      "back": "(시간·비용을 아끼려고) 절차나 품질을 대충 처리하다. 부정적 뉘앙스가 강해 품질 저하·안전 문제를 비판할 때 쓴다.",
+      "example": "If we cut corners on testing, we'll pay for it later.",
+      "exampleMeaning": "테스트를 대충 넘기면 나중에 대가를 치르게 된다.",
+      "tags": [
+        "숙어",
+        "부정적",
+        "품질"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "back to the drawing board",
+      "back": "처음부터 다시 시작해야 하는 상황. 계획이 실패해 설계도부터 다시 그린다는 비유로 go back to the drawing board 형태가 흔하다.",
+      "example": "The prototype failed the test, so it's back to the drawing board.",
+      "exampleMeaning": "시제품이 테스트에서 떨어져서 처음부터 다시 해야 한다.",
+      "tags": [
+        "숙어",
+        "실패",
+        "재시작"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "bite the bullet",
+      "back": "하기 싫지만 피할 수 없는 일을 꾹 참고 해내다. 마취 없이 총알을 물고 수술을 견뎠다는 데서 유래했다고 전해지는 표현.",
+      "example": "I finally bit the bullet and told my landlord I was moving out.",
+      "exampleMeaning": "나는 결국 마음을 다잡고 집주인에게 이사 나가겠다고 말했다.",
+      "tags": [
+        "숙어",
+        "결단"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "break the ice",
+      "back": "어색한 분위기를 깨다, 처음 만난 사람들 사이의 긴장을 풀다. 첫 만남·모임 진행용 활동은 icebreaker라고 부른다.",
+      "example": "He told a funny story to break the ice at the workshop.",
+      "exampleMeaning": "그는 워크숍에서 분위기를 풀려고 재미있는 이야기를 했다.",
+      "tags": [
+        "숙어",
+        "만남",
+        "빈출"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "call it a day",
+      "back": "오늘은 여기까지 하다, 일을 마치다. 하루 일과를 끝낼 때 \"Let's call it a day.\"로 쓰는 중립적 구어. 밤이면 call it a night도 가능.",
+      "example": "We've been at this for ten hours. Let's call it a day.",
+      "exampleMeaning": "열 시간째 이러고 있네. 오늘은 여기까지 하자.",
+      "tags": [
+        "숙어",
+        "마무리",
+        "구어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get the ball rolling",
+      "back": "일을 시작시키다, 첫발을 떼게 하다. start의 관용적 표현으로 회의·프로젝트 개시 발언에 자주 쓴다.",
+      "example": "I'll send the first draft today just to get the ball rolling.",
+      "exampleMeaning": "일단 일이 굴러가게 오늘 초안부터 보낼게요.",
+      "tags": [
+        "숙어",
+        "시작",
+        "비즈니스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "in the loop",
+      "back": "정보 공유 대상에 포함된, 진행 상황을 계속 전달받는. keep someone in the loop(계속 공유해 주다)가 대표 용례. 반대는 out of the loop.",
+      "example": "Please keep me in the loop on any schedule changes.",
+      "exampleMeaning": "일정 변경이 있으면 저에게도 계속 공유해 주세요.",
+      "tags": [
+        "숙어",
+        "이메일",
+        "빈출"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "up in the air",
+      "back": "아직 미정인, 결정되지 않은. 공중에 떠 있어 어디로 떨어질지 모른다는 비유. still up in the air 형태가 흔하다.",
+      "example": "Our travel plans are still up in the air because of the strike.",
+      "exampleMeaning": "파업 때문에 우리 여행 계획은 아직 미정이다.",
+      "tags": [
+        "숙어",
+        "미정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "under the weather",
+      "back": "몸 상태가 좀 안 좋은. 심각한 병이 아니라 가벼운 컨디션 난조를 완곡하게 말할 때 쓴다. feel a bit under the weather 형태가 자연스럽다.",
+      "example": "I'm feeling a bit under the weather, so I'll work from home today.",
+      "exampleMeaning": "몸이 좀 안 좋아서 오늘은 재택근무할게요.",
+      "tags": [
+        "숙어",
+        "건강",
+        "완곡"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "once in a blue moon",
+      "back": "극히 드물게, 가뭄에 콩 나듯. rarely의 관용적 표현으로 빈도를 과장되게 낮춰 말할 때 쓴다.",
+      "example": "We live far apart, so we only meet once in a blue moon.",
+      "exampleMeaning": "우리는 멀리 떨어져 살아서 아주 가끔씩만 만난다.",
+      "tags": [
+        "숙어",
+        "빈도"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "piece of cake",
+      "back": "식은 죽 먹기, 아주 쉬운 일. very easy의 캐주얼한 표현. \"It was a piece of cake.\"처럼 명사로 쓴다.",
+      "example": "Don't worry about the quiz. It's a piece of cake.",
+      "exampleMeaning": "그 쪽지 시험 걱정하지 마. 식은 죽 먹기야.",
+      "tags": [
+        "숙어",
+        "쉬움",
+        "캐주얼"
+      ],
+      "difficulty": 1,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cost an arm and a leg",
+      "back": "엄청나게 비싸다. 팔과 다리를 내줄 만큼 값이 나간다는 과장 표현으로 캐주얼한 구어.",
+      "example": "Parking downtown costs an arm and a leg these days.",
+      "exampleMeaning": "요즘 시내 주차비가 어마어마하게 비싸다.",
+      "tags": [
+        "숙어",
+        "돈",
+        "과장"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "hit the nail on the head",
+      "back": "정곡을 찌르다, 정확히 맞는 말을 하다. 못의 머리를 정확히 때린다는 비유. \"You hit the nail on the head.\"는 강한 동의 표현.",
+      "example": "You hit the nail on the head. The real problem is communication.",
+      "exampleMeaning": "정곡을 찔렀네. 진짜 문제는 소통이야.",
+      "tags": [
+        "숙어",
+        "동의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "let the cat out of the bag",
+      "back": "비밀을 무심코 누설하다. 실수로 밝힌다는 뉘앙스가 강해, 의도적으로 털어놓는 spill the beans보다 '실수' 쪽에 무게가 있다.",
+      "example": "He let the cat out of the bag about the surprise party.",
+      "exampleMeaning": "그가 깜짝 파티 비밀을 무심코 흘려 버렸다.",
+      "tags": [
+        "숙어",
+        "비밀",
+        "혼동주의"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "spill the beans",
+      "back": "비밀을 털어놓다, 실토하다. 캐주얼한 구어로 \"Come on, spill the beans!\"(어서 말해 봐!)처럼 재촉할 때도 쓴다.",
+      "example": "Okay, spill the beans. What did he say about me?",
+      "exampleMeaning": "자, 털어놔 봐. 그가 나에 대해 뭐라고 했어?",
+      "tags": [
+        "숙어",
+        "비밀",
+        "구어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "pull someone's leg",
+      "back": "농담으로 놀리다, 장난치다. 악의 없는 장난이라는 뉘앙스. \"Are you pulling my leg?\"는 \"너 지금 나 놀리는 거지?\"",
+      "example": "Relax, I'm just pulling your leg. I didn't sell your bike.",
+      "exampleMeaning": "진정해, 그냥 장난친 거야. 네 자전거 안 팔았어.",
+      "tags": [
+        "숙어",
+        "농담",
+        "구어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "sit on the fence",
+      "back": "태도를 정하지 않고 관망하다, 중립인 척 미루다. 담장 위에 앉아 어느 쪽에도 내려서지 않는다는 비유로, 우유부단하다는 비판조로 자주 쓴다.",
+      "example": "You can't sit on the fence forever. We need your vote today.",
+      "exampleMeaning": "언제까지 애매한 태도만 취할 수는 없어. 오늘 네 표가 필요해.",
+      "tags": [
+        "숙어",
+        "중립",
+        "비판"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "the elephant in the room",
+      "back": "모두가 알지만 아무도 언급하지 않는 크고 불편한 문제. address the elephant in the room(그 문제를 정면으로 꺼내다) 형태로 자주 쓴다.",
+      "example": "Let's address the elephant in the room: our biggest client is leaving.",
+      "exampleMeaning": "다들 피하는 문제를 얘기합시다. 우리 최대 고객이 떠나려 합니다.",
+      "tags": [
+        "숙어",
+        "회의",
+        "문제"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "read between the lines",
+      "back": "행간을 읽다, 겉으로 드러나지 않은 속뜻을 파악하다. 직접 말하지 않은 의도를 추론할 때 쓰며 시험 독해 지문에도 등장한다.",
+      "example": "Reading between the lines, I think she's unhappy with the offer.",
+      "exampleMeaning": "행간을 읽어 보면 그녀는 그 제안이 마음에 안 드는 것 같다.",
+      "tags": [
+        "숙어",
+        "추론"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "throw in the towel",
+      "back": "패배를 인정하고 포기하다. 권투에서 세컨드가 수건을 던져 기권하는 데서 유래. give up보다 '오래 버티다 결국 포기'하는 뉘앙스.",
+      "example": "After three failed attempts, they threw in the towel on the project.",
+      "exampleMeaning": "세 번의 실패 끝에 그들은 그 프로젝트를 접었다.",
+      "tags": [
+        "숙어",
+        "포기",
+        "유래"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "burn the midnight oil",
+      "back": "밤늦게까지 일하다, 공부하다. 등잔 기름을 태우며 일하던 데서 온 표현. 마감·시험 전날 문맥에 잘 어울린다.",
+      "example": "We burned the midnight oil to finish the presentation slides.",
+      "exampleMeaning": "우리는 발표 슬라이드를 끝내느라 밤늦게까지 일했다.",
+      "tags": [
+        "숙어",
+        "밤샘",
+        "유래"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "get cold feet",
+      "back": "(결정적 순간에) 겁이 나서 주저하다, 마음이 흔들리다. 결혼식·계약 직전에 망설이는 상황이 대표적. have cold feet 형태도 쓴다.",
+      "example": "He got cold feet the night before signing the lease.",
+      "exampleMeaning": "그는 임대 계약 전날 밤 겁이 나서 망설였다.",
+      "tags": [
+        "숙어",
+        "망설임"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "off the top of my head",
+      "back": "즉석에서, 정확히 확인하지 않고 기억나는 대로. 숫자·정보를 대략 말할 때 앞에 붙이는 완충 표현으로 회의에서 유용하다.",
+      "example": "Off the top of my head, I'd say we get about 300 orders a week.",
+      "exampleMeaning": "정확하진 않지만 기억나는 대로 말하면 주당 300건 정도 주문이 들어와요.",
+      "tags": [
+        "숙어",
+        "회의",
+        "완충"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "play it by ear",
+      "back": "상황을 봐 가며 즉흥적으로 정하다. 악보 없이 귀로 연주한다는 데서 유래. 계획을 미리 확정하지 않겠다는 뜻의 캐주얼한 표현.",
+      "example": "We don't have a fixed schedule. Let's just play it by ear.",
+      "exampleMeaning": "정해진 일정은 없어. 그냥 상황 봐 가면서 하자.",
+      "tags": [
+        "숙어",
+        "즉흥",
+        "유래"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "go the extra mile",
+      "back": "기대 이상으로 노력하다, 한 걸음 더 나아가 애쓰다. 고객 서비스·자기소개서 단골 표현으로 긍정적 뉘앙스.",
+      "example": "Their support team always goes the extra mile for customers.",
+      "exampleMeaning": "그곳 지원팀은 항상 고객을 위해 기대 이상으로 애쓴다.",
+      "tags": [
+        "숙어",
+        "노력",
+        "긍정"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "raise the bar",
+      "back": "기준을 높이다, 수준을 끌어올리다. 높이뛰기 바를 올린다는 비유. 반대로 기준을 낮추면 lower the bar.",
+      "example": "The new flagship phone raises the bar for camera quality.",
+      "exampleMeaning": "그 새 플래그십 폰은 카메라 품질의 기준을 끌어올렸다.",
+      "tags": [
+        "숙어",
+        "기준",
+        "비즈니스"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "in hot water",
+      "back": "곤경에 처한, 문제가 생겨 난처한. be/get in hot water with + 사람 형태로 쓰며 in trouble의 관용적 표현.",
+      "example": "He's in hot water with his boss for missing the deadline.",
+      "exampleMeaning": "그는 마감을 놓쳐서 상사에게 밉보여 곤란한 처지다.",
+      "tags": [
+        "숙어",
+        "곤경",
+        "구어"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "behind the scenes",
+      "back": "무대 뒤에서, 보이지 않는 곳에서. 공연 무대 뒤에서 온 표현으로, 드러나지 않는 준비·작업을 가리킨다. 형용사로는 behind-the-scenes.",
+      "example": "A lot of work happens behind the scenes before a product launches.",
+      "exampleMeaning": "제품이 출시되기 전에 보이지 않는 곳에서 많은 일이 이뤄진다.",
+      "tags": [
+        "숙어",
+        "비유"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cut to the chase",
+      "back": "본론으로 바로 들어가다. 무성 영화에서 추격 장면으로 바로 넘어가던 데서 유래. \"Let's cut to the chase.\"는 서론을 줄이자는 뜻으로, 다소 직설적이라 어조에 주의.",
+      "example": "I know you're busy, so I'll cut to the chase: we need more time.",
+      "exampleMeaning": "바쁘실 테니 바로 본론을 말씀드리면, 저희는 시간이 더 필요합니다.",
+      "tags": [
+        "숙어",
+        "본론",
+        "직설"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "a blessing in disguise",
+      "back": "전화위복, 처음엔 불운처럼 보였지만 결과적으로 잘된 일. 나쁜 일 뒤에 숨어 있던 축복이라는 비유.",
+      "example": "Losing that job was a blessing in disguise. It pushed me to start my own shop.",
+      "exampleMeaning": "그 직장을 잃은 건 전화위복이었다. 덕분에 내 가게를 차리게 됐으니까.",
+      "tags": [
+        "숙어",
+        "긍정",
+        "반전"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "the last straw",
+      "back": "인내의 한계를 넘게 만든 마지막 사건. 낙타 등을 부러뜨린 마지막 지푸라기에서 유래. 그 자체는 사소해도 누적된 불만을 폭발시킨 계기를 가리킨다.",
+      "example": "The printer breaking again was the last straw. I ordered a new one.",
+      "exampleMeaning": "프린터가 또 고장 난 게 결정타였다. 나는 새 걸 주문했다.",
+      "tags": [
+        "숙어",
+        "한계",
+        "유래"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "jump on the bandwagon",
+      "back": "유행에 편승하다, 대세에 올라타다. 악대차를 따라가던 군중에서 유래했으며, 주관 없이 따라 한다는 가벼운 비판조가 실리기도 한다.",
+      "example": "Many brands jumped on the bandwagon and released their own short-form videos.",
+      "exampleMeaning": "많은 브랜드가 유행에 편승해 자체 숏폼 영상을 내놓았다.",
+      "tags": [
+        "숙어",
+        "유행",
+        "비판"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "keep an eye on",
+      "back": "~을 계속 지켜보다, 주시하다. keep an eye on the kids(아이들을 지켜보다)처럼 감독·경계 양쪽 뉘앙스로 쓴다. watch보다 '틈틈이 살핀다'는 어감.",
+      "example": "Could you keep an eye on my bag while I get coffee?",
+      "exampleMeaning": "커피 사 오는 동안 내 가방 좀 봐 줄래?",
+      "tags": [
+        "숙어",
+        "주시",
+        "구어"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "rule of thumb",
+      "back": "경험에서 나온 대략적인 법칙, 어림 기준. as a rule of thumb(경험칙상) 형태로 문장을 시작할 때 유용하다. 정밀한 규정이 아니라는 점이 핵심.",
+      "example": "As a rule of thumb, save at least three months of living expenses.",
+      "exampleMeaning": "경험칙상 최소 석 달치 생활비는 저축해 두는 게 좋다.",
+      "tags": [
+        "숙어",
+        "기준",
+        "명사구"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "silver lining",
+      "back": "불행 속의 한 줄기 희망, 위안거리. 먹구름 가장자리의 은빛 테두리에서 유래. 속담 Every cloud has a silver lining과 함께 기억한다.",
+      "example": "The delay had a silver lining: we caught two bugs before launch.",
+      "exampleMeaning": "그 지연에도 위안은 있었다. 출시 전에 버그 두 개를 잡았으니까.",
+      "tags": [
+        "숙어",
+        "긍정",
+        "유래"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "word of mouth",
+      "back": "입소문. by/through word of mouth(입소문으로) 형태로 쓰며, 마케팅에서 word-of-mouth marketing(입소문 마케팅)으로 빈출.",
+      "example": "The bakery grew popular purely through word of mouth.",
+      "exampleMeaning": "그 빵집은 순전히 입소문으로 유명해졌다.",
+      "tags": [
+        "숙어",
+        "마케팅",
+        "명사구"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "account for",
+      "back": "설명하다, ~의 원인이 되다; (비율을) 차지하다. 분리 불가. 독해에서 'X accounts for 40%'(X가 40%를 차지한다) 용법이 특히 빈출.",
+      "example": "Exports account for nearly half of the company's revenue.",
+      "exampleMeaning": "수출이 그 회사 매출의 거의 절반을 차지한다.",
+      "tags": [
+        "시험",
+        "독해",
+        "분리불가"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "result in",
+      "back": "(결과적으로) ~을 낳다, 초래하다. 분리 불가. 원인 result in 결과의 방향이며, 결과 result from 원인과 방향이 반대라는 점이 시험 포인트.",
+      "example": "The road repairs resulted in heavy traffic all week.",
+      "exampleMeaning": "도로 보수 공사로 일주일 내내 교통 정체가 빚어졌다.",
+      "tags": [
+        "시험",
+        "인과",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "result from",
+      "back": "~에서 비롯되다, ~이 원인이다. 분리 불가. 주어가 '결과'이고 from 뒤가 '원인'. result in과 방향을 반드시 구분해야 하는 빈출 쌍.",
+      "example": "Most of the errors resulted from a lack of double-checking.",
+      "exampleMeaning": "오류 대부분은 재확인 부족에서 비롯됐다.",
+      "tags": [
+        "시험",
+        "인과",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "bring about",
+      "back": "초래하다, 불러일으키다. 분리 가능(bring it about). cause에 해당하는 문어적 표현으로 사회 변화·개혁 문맥의 독해 지문에 빈출.",
+      "example": "The new law brought about major changes in the housing market.",
+      "exampleMeaning": "새 법은 주택 시장에 큰 변화를 불러왔다.",
+      "tags": [
+        "시험",
+        "문어",
+        "인과"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "carry on",
+      "back": "계속하다. carry on with + 일, carry on -ing 형태. continue의 구어 표현으로 영국식에서 특히 흔하다. '수행하다'인 carry out과 혼동 주의.",
+      "example": "She carried on working despite the noise outside.",
+      "exampleMeaning": "그녀는 바깥 소음에도 불구하고 계속 일했다.",
+      "tags": [
+        "시험",
+        "혼동주의",
+        "영국식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "come up",
+      "back": "(문제·화제가) 생기다, 언급되다; (행사가) 다가오다. 자동사. '아이디어를 생각해 내다'인 come up with와 구분: come up은 목적어를 못 가진다.",
+      "example": "Something urgent came up, so I have to cancel tonight.",
+      "exampleMeaning": "급한 일이 생겨서 오늘 밤 약속을 취소해야 해.",
+      "tags": [
+        "시험",
+        "자동사",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "deal with",
+      "back": "다루다, 처리하다, 상대하다. 분리 불가. handle과 유사하며 문제·사람·주제 모두 목적어로 온다. 시험·실무 공통 최빈출.",
+      "example": "Customer service deals with hundreds of inquiries a day.",
+      "exampleMeaning": "고객 서비스팀은 하루에 수백 건의 문의를 처리한다.",
+      "tags": [
+        "시험",
+        "분리불가",
+        "빈출"
+      ],
+      "difficulty": 2,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "do without",
+      "back": "~ 없이 지내다, 견디다. 분리 불가. can't do without(~ 없이는 안 된다) 형태로 자주 나오며, manage without과 유사.",
+      "example": "With prices this high, we'll have to do without a second car.",
+      "exampleMeaning": "물가가 이렇게 높으니 두 번째 차 없이 지내야겠다.",
+      "tags": [
+        "시험",
+        "분리불가"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "dispose of",
+      "back": "처분하다, 폐기하다. 분리 불가. throw away의 격식 표현으로 안내문·규정문에 빈출. dispose 단독이 아니라 반드시 of와 함께 쓴다.",
+      "example": "Please dispose of used batteries at the collection point.",
+      "exampleMeaning": "다 쓴 건전지는 수거함에 폐기해 주십시오.",
+      "tags": [
+        "시험",
+        "격식",
+        "안내문"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "give rise to",
+      "back": "~을 일으키다, 유발하다. 세 단어 한 덩어리로 분리 불가. cause의 문어적 표현으로 학술·논설 지문에 등장하는 고급 어휘.",
+      "example": "The discovery gave rise to a whole new field of research.",
+      "exampleMeaning": "그 발견은 완전히 새로운 연구 분야를 탄생시켰다.",
+      "tags": [
+        "시험",
+        "문어",
+        "고급"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look down on",
+      "back": "얕보다, 업신여기다. 분리 불가. '존경하다'인 look up to의 반대말로, 두 표현이 짝으로 출제되는 단골 쌍.",
+      "example": "You shouldn't look down on someone because of their job.",
+      "exampleMeaning": "직업을 이유로 남을 얕봐서는 안 된다.",
+      "tags": [
+        "시험",
+        "분리불가",
+        "반의어쌍"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "look up to",
+      "back": "존경하다, 우러러보다. 분리 불가. respect의 구동사 표현이며 look down on(얕보다)과 짝. '검색하다'인 look up과도 구분한다.",
+      "example": "Many young players look up to the veteran captain.",
+      "exampleMeaning": "많은 어린 선수들이 그 베테랑 주장을 존경한다.",
+      "tags": [
+        "시험",
+        "분리불가",
+        "반의어쌍"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "make up for",
+      "back": "만회하다, 벌충하다. 분리 불가. compensate for에 해당하며 make up for lost time(놓친 시간을 만회하다)이 대표 용례.",
+      "example": "He worked over the weekend to make up for the delay.",
+      "exampleMeaning": "그는 지연을 만회하려고 주말에도 일했다.",
+      "tags": [
+        "시험",
+        "분리불가",
+        "빈출"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "make up",
+      "back": "구성하다(be made up of); (이야기를) 지어내다; 화해하다(make up with); (밀린 것을) 보충하다. 다의어로 문맥 파악 문제 단골. '만회하다'는 make up for.",
+      "example": "Women make up 60 percent of the committee.",
+      "exampleMeaning": "위원회의 60퍼센트는 여성으로 구성돼 있다.",
+      "tags": [
+        "시험",
+        "다의어",
+        "혼동주의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take after",
+      "back": "(가족 중 누군가를) 닮다. 분리 불가. resemble과 달리 혈연 관계에 쓰는 것이 원칙이며, 외모뿐 아니라 성격까지 포함한다.",
+      "example": "Everyone says the baby takes after her grandfather.",
+      "exampleMeaning": "다들 아기가 할아버지를 닮았다고 한다.",
+      "tags": [
+        "시험",
+        "분리불가",
+        "가족"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take in",
+      "back": "속이다(주로 수동태 be taken in by); (정보를) 이해·흡수하다; (옷을) 줄이다; (사람을) 거두어 재우다. 분리 가능. 다의어 함정 문제로 출제된다.",
+      "example": "There was so much information that I couldn't take it all in.",
+      "exampleMeaning": "정보가 너무 많아서 다 소화할 수 없었다.",
+      "tags": [
+        "시험",
+        "다의어",
+        "분리가능"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn out",
+      "back": "~로 판명되다, 결국 ~임이 드러나다(turn out to be / It turns out that); (사람들이) 모여들다. 자동사. 독해에서 결과 반전을 알리는 신호어.",
+      "example": "The rumor turned out to be completely false.",
+      "exampleMeaning": "그 소문은 완전히 거짓으로 판명됐다.",
+      "tags": [
+        "시험",
+        "자동사",
+        "빈출"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "turn to",
+      "back": "~에 의지하다, 도움을 청하다; (페이지를) 펴다. 분리 불가. turn to A for B(B를 얻으려 A에 기대다) 구조가 시험 포인트.",
+      "example": "When things get hard, she turns to her sister for advice.",
+      "exampleMeaning": "힘들 때면 그녀는 언니에게 조언을 구한다.",
+      "tags": [
+        "시험",
+        "분리불가"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "give in",
+      "back": "굴복하다, (버티다가) 양보하다. 자동사이며 give in to + 압력·유혹. 스스로 그만두는 give up과 달리 '외부 압력에 결국 진다'는 뉘앙스.",
+      "example": "After an hour of begging, Dad finally gave in and bought the puppy.",
+      "exampleMeaning": "한 시간을 조르자 아빠는 결국 두 손 들고 강아지를 사 주셨다.",
+      "tags": [
+        "시험",
+        "자동사",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "give off",
+      "back": "(냄새·빛·열을) 발산하다, 내뿜다. 목적어를 뒤에 붙여 쓰는 것이 보통이며 분리형은 잘 쓰지 않는다. emit의 구동사 표현으로 과학 지문에 빈출.",
+      "example": "The candle gives off a soft vanilla scent.",
+      "exampleMeaning": "그 초는 은은한 바닐라 향을 낸다.",
+      "tags": [
+        "시험",
+        "과학지문"
+      ],
+      "difficulty": 5,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "set aside",
+      "back": "(돈·시간을) 따로 떼어 두다; (이견·감정을) 잠시 접어 두다. 분리 가능(set it aside). set aside differences(이견을 접다)가 독해 빈출.",
+      "example": "Try to set aside thirty minutes a day for reading.",
+      "exampleMeaning": "하루 30분은 독서 시간으로 따로 떼어 두도록 해 봐.",
+      "tags": [
+        "시험",
+        "분리가능",
+        "빈출"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "stand for",
+      "back": "(약자가) ~을 의미하다, 상징하다; (부정문에서) 용납하다(won't stand for). 분리 불가. 'What does A stand for?'가 대표 용례.",
+      "example": "What does the abbreviation FAQ stand for?",
+      "exampleMeaning": "FAQ라는 약자는 무엇을 의미하나요?",
+      "tags": [
+        "시험",
+        "분리불가",
+        "다의어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "stand out",
+      "back": "두드러지다, 눈에 띄다. 자동사이며 stand out from the crowd(무리 중에 돋보이다)가 흔한 형태. 형용사 outstanding(뛰어난)과 연결해 기억.",
+      "example": "Her resume stood out among hundreds of applications.",
+      "exampleMeaning": "그녀의 이력서는 수백 장의 지원서 중에서 눈에 띄었다.",
+      "tags": [
+        "시험",
+        "자동사",
+        "파생어"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "comply with",
+      "back": "(법·규정을) 준수하다, 따르다. 분리 불가. 격식 표현으로 규정·계약 지문에 빈출. 명사형 compliance(준수), in compliance with도 함께 출제된다.",
+      "example": "All vendors must comply with the new safety regulations.",
+      "exampleMeaning": "모든 납품 업체는 새 안전 규정을 준수해야 한다.",
+      "tags": [
+        "시험",
+        "격식",
+        "규정"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "cope with",
+      "back": "(어려움·스트레스에) 대처하다, 감당하다. 분리 불가. deal with보다 '힘든 상황을 견뎌 낸다'는 뉘앙스가 강하다.",
+      "example": "Exercise helps me cope with stress at work.",
+      "exampleMeaning": "운동은 내가 직장 스트레스에 대처하는 데 도움이 된다.",
+      "tags": [
+        "시험",
+        "분리불가",
+        "혼동주의"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "refrain from",
+      "back": "~을 삼가다, 자제하다. 분리 불가. refrain from -ing 형태로 쓰며 기내·공연장 안내문의 단골 표현. 'Please refrain from ~'으로 통째로 암기하면 좋다.",
+      "example": "Please refrain from using flash photography during the show.",
+      "exampleMeaning": "공연 중에는 플래시 촬영을 삼가 주시기 바랍니다.",
+      "tags": [
+        "시험",
+        "격식",
+        "안내문"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "rule out",
+      "back": "배제하다, 가능성을 제외하다. 분리 가능(rule it out). exclude의 구동사 표현으로 뉴스·수사 문맥에 빈출. rule out the possibility가 대표 연어.",
+      "example": "The police haven't ruled out the possibility of arson.",
+      "exampleMeaning": "경찰은 방화 가능성을 배제하지 않았다.",
+      "tags": [
+        "시험",
+        "분리가능",
+        "뉴스"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "take into account",
+      "back": "~을 고려하다, 감안하다. take A into account 또는 take into account A 두 어순 모두 가능. consider의 격식 표현으로 문법 어순 문제로도 출제된다.",
+      "example": "The plan fails to take local opinions into account.",
+      "exampleMeaning": "그 계획은 지역 주민들의 의견을 고려하지 않고 있다.",
+      "tags": [
+        "시험",
+        "격식",
+        "어순주의"
+      ],
+      "difficulty": 4,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "in terms of",
+      "back": "~의 측면에서, ~라는 기준으로 보면. 전치사구 숙어. 비교·평가 기준을 제시할 때 쓰며 에세이·보고서 단골 연결 표현.",
+      "example": "In terms of price, the smaller model is a much better deal.",
+      "exampleMeaning": "가격 측면에서 보면 작은 모델이 훨씬 이득이다.",
+      "tags": [
+        "시험",
+        "전치사구",
+        "에세이"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    },
+    {
+      "front": "on behalf of",
+      "back": "~을 대표하여, ~을 대신하여. 전치사구 숙어. 공식 인사말 'On behalf of our company, ...'로 빈출하며 격식도가 높다.",
+      "example": "On behalf of the whole team, I'd like to thank you for your support.",
+      "exampleMeaning": "팀 전체를 대표해 여러분의 성원에 감사드립니다.",
+      "tags": [
+        "시험",
+        "전치사구",
+        "격식"
+      ],
+      "difficulty": 3,
+      "sourceRefs": [
+        "brief-english-phrasal-verbs-v1",
+        "claude-authoring-english-phrasal-verbs-v1"
+      ]
+    }
+  ]
+}
