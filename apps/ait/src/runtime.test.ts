@@ -126,7 +126,7 @@ describe('AppsInToss runtime security boundaries', () => {
     const runtime = createAppsInTossRuntime();
     const catalog = await runtime.content.listCatalog();
 
-    expect(catalog).toHaveLength(14);
+    expect(catalog).toHaveLength(23);
     expect(catalog.every((deck) => deck.availability === 'coming-soon' && deck.cardCount === null)).toBe(true);
     await expect(
       runtime.content.createGoal({
