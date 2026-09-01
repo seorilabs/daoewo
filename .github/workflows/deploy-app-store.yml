@@ -53,7 +53,7 @@ permissions:
 
 jobs:
   app-store:
-    uses: seorilabs/.github/.github/workflows/rn-deploy-app-store.yml@main
+    uses: seorilabs/.github/.github/workflows/rn-deploy-app-store.yml@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5
     secrets: inherit
     with:
       release_tag: ${{ inputs.release_tag }}

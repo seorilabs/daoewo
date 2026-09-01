@@ -22,7 +22,7 @@
 
 1. **`deploy-app-store.yml`의 `ios_scheme`/`ios_workspace`/`ios_bundle_id`** 를 실제 값으로 교체.
 2. 표준 스크립트:
-   - `scripts/resolve-release-version.mjs --tag <tag> --github-output` → `version_name`, `android_version_code`, `apple_marketing_version`, `apple_build_number`, `release_name`
+   - 버전은 저장소가 계산하지 않는다. stable SemVer 태그(`vX.Y.Z`)가 유일한 authority이고 org 재사용 워크플로우가 `version_name`, `android_version_code`, `apple_marketing_version`, `apple_build_number`, `release_name`을 파생해 빌드에 주입한다.
    - `scripts/upload-google-play-internal.py` (Android Publisher API 업로드)
    - `scripts/restore-mobile-firebase-config.mjs --android|--ios --require`
    - Android: `apps/mobile/android/gradlew :app:bundleRelease -PversionNameOverride -PversionCodeOverride`
@@ -36,4 +36,6 @@ key와 root certificate 값은 checker process에 주입하지 않고 GitHub exp
 
 ## @ref 핀
 
-caller의 `uses: seorilabs/.github/.github/workflows/*.yml@main` — 안정화 후 태그/SHA 핀 권장.
+caller의 `uses: seorilabs/.github/.github/workflows/*.yml`는 immutable commit SHA로 고정한다.
+현재 핀은 `@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5`이다. `@main` 같은 floating ref는 release binding의 config revision을 고정할 수
+없어 org 계약(`release-version-authority-v1`)에서 즉시 결함으로 본다.

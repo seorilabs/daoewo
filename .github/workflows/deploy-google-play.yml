@@ -1,5 +1,6 @@
 # Google Play(서명 AAB + 업로드) — ubuntu(x64). org 재사용 워크플로우 호출.
-# contract: scripts/resolve-release-version.mjs, scripts/upload-google-play-internal.py,
+# 버전은 stable SemVer 태그가 유일한 authority다. 재사용 워크플로우가 태그에서 파생해 주입한다.
+# contract: scripts/upload-google-play-internal.py,
 #           apps/mobile/android/gradlew :app:bundleRelease, scripts/restore-mobile-firebase-config.mjs
 name: Deploy Google Play
 
@@ -44,7 +45,7 @@ permissions:
 
 jobs:
   google-play:
-    uses: seorilabs/.github/.github/workflows/rn-deploy-google-play.yml@main
+    uses: seorilabs/.github/.github/workflows/rn-deploy-google-play.yml@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5
     secrets: inherit
     with:
       release_tag: ${{ inputs.release_tag }}
