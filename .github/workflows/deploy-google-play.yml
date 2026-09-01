@@ -1,5 +1,6 @@
 # Google Play(서명 AAB + 업로드) — ubuntu(x64). org 재사용 워크플로우 호출.
-# contract: scripts/resolve-release-version.mjs, scripts/upload-google-play-internal.py,
+# 버전은 stable SemVer 태그가 유일한 authority다. 재사용 워크플로우가 태그에서 파생해 주입한다.
+# contract: scripts/upload-google-play-internal.py,
 #           apps/mobile/android/gradlew :app:bundleRelease, scripts/restore-mobile-firebase-config.mjs
 name: Deploy Google Play
 
@@ -8,8 +9,7 @@ on:
     inputs:
       release_tag:
         type: string
-        required: false
-        default: ""
+        required: true
       upload:
         description: "true면 Google Play track에 업로드(false면 AAB 아티팩트만)"
         type: boolean
@@ -26,8 +26,7 @@ on:
     inputs:
       release_tag:
         type: string
-        required: false
-        default: ""
+        required: true
       upload:
         type: boolean
         default: true
@@ -37,15 +36,29 @@ on:
       release_status:
         type: string
         default: completed
+    secrets:
+      FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64:
+        required: false
+      GOOGLE_PLAY_UPLOAD_KEYSTORE_BASE64:
+        required: false
+      GOOGLE_PLAY_UPLOAD_KEYSTORE_PASSWORD:
+        required: false
+      GOOGLE_PLAY_UPLOAD_KEY_PASSWORD:
+        required: false
 
 permissions:
   contents: read
   id-token: write
+  packages: read
 
 jobs:
   google-play:
-    uses: seorilabs/.github/.github/workflows/rn-deploy-google-play.yml@main
-    secrets: inherit
+    uses: seorilabs/.github/.github/workflows/rn-deploy-google-play.yml@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5
+    secrets:
+      FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64: ${{ secrets.FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64 }}
+      GOOGLE_PLAY_UPLOAD_KEYSTORE_BASE64: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEYSTORE_BASE64 }}
+      GOOGLE_PLAY_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEYSTORE_PASSWORD }}
+      GOOGLE_PLAY_UPLOAD_KEY_PASSWORD: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEY_PASSWORD }}
     with:
       release_tag: ${{ inputs.release_tag }}
       upload: ${{ inputs.upload }}

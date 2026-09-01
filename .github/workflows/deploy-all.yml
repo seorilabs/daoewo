@@ -54,6 +54,7 @@ on:
 permissions:
   contents: read
   id-token: write
+  packages: read
 
 concurrency:
   group: deploy-all-${{ inputs.release_tag || github.ref }}
@@ -67,7 +68,7 @@ jobs:
     outputs:
       tag: ${{ steps.t.outputs.tag }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           fetch-tags: true
@@ -87,7 +88,9 @@ jobs:
     needs: resolve
     if: ${{ inputs.deploy_ait }}
     uses: ./.github/workflows/deploy-apps-in-toss.yml
-    secrets: inherit
+    secrets:
+      APPS_IN_TOSS_API_KEY: ${{ secrets.APPS_IN_TOSS_API_KEY }}
+      VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
     with:
       release_tag: ${{ needs.resolve.outputs.tag }}
       memo: ${{ inputs.memo }}
@@ -97,7 +100,11 @@ jobs:
     needs: resolve
     if: ${{ inputs.deploy_google_play }}
     uses: ./.github/workflows/deploy-google-play.yml
-    secrets: inherit
+    secrets:
+      FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64: ${{ secrets.FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64 }}
+      GOOGLE_PLAY_UPLOAD_KEYSTORE_BASE64: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEYSTORE_BASE64 }}
+      GOOGLE_PLAY_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEYSTORE_PASSWORD }}
+      GOOGLE_PLAY_UPLOAD_KEY_PASSWORD: ${{ secrets.GOOGLE_PLAY_UPLOAD_KEY_PASSWORD }}
     with:
       release_tag: ${{ needs.resolve.outputs.tag }}
       upload: true
@@ -109,7 +116,6 @@ jobs:
     needs: resolve
     if: ${{ inputs.deploy_app_store }}
     uses: ./.github/workflows/deploy-app-store.yml
-    secrets: inherit
     with:
       release_tag: ${{ needs.resolve.outputs.tag }}
       upload: true

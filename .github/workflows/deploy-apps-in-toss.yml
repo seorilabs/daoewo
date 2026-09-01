@@ -25,14 +25,22 @@ on:
         type: string
         required: false
         default: ""
+    secrets:
+      APPS_IN_TOSS_API_KEY:
+        required: false
+      VITE_FIREBASE_API_KEY:
+        required: false
 
 permissions:
   contents: read
+  packages: read
 
 jobs:
   ait:
-    uses: seorilabs/.github/.github/workflows/rn-deploy-ait.yml@main
-    secrets: inherit
+    uses: seorilabs/.github/.github/workflows/rn-deploy-ait.yml@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5
+    secrets:
+      APPS_IN_TOSS_API_KEY: ${{ secrets.APPS_IN_TOSS_API_KEY }}
+      VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
     with:
       release_tag: ${{ inputs.release_tag }}
       memo: ${{ inputs.memo }}

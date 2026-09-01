@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: read
+  packages: read
 
 concurrency:
   group: static-checks-${{ github.ref }}
@@ -18,7 +19,7 @@ concurrency:
 
 jobs:
   checks:
-    uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@main
+    uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5
     with:
       runs_on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
       package_manager: pnpm
@@ -39,15 +40,15 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24.16.0
 
       - name: Setup Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
         with:
           distribution: temurin
           java-version: "21"
