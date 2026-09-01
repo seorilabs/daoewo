@@ -16,6 +16,10 @@ test('중앙 caller는 불변 SHA만 사용하고 secret 상속을 금지한다'
     for (const match of workflow.text.matchAll(/uses:\s*seorilabs\/\.github\/[^@\s]+@([^\s#]+)/g)) {
       assert.match(match[1], /^[0-9a-f]{40}$/, `${workflow.name}: ${match[0]}`);
     }
+    for (const match of workflow.text.matchAll(/uses:\s*([^\s#]+)/g)) {
+      if (match[1].startsWith('./')) continue;
+      assert.match(match[1], /^[^@\s]+@[0-9a-f]{40}$/, `${workflow.name}: ${match[0]}`);
+    }
   }
 });
 
