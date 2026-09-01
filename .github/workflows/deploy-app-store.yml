@@ -1,65 +1,74 @@
-# App Store(Xcode archive + 업로드) — macos-26. org 재사용 워크플로우 호출.
-# ios_scheme/workspace/bundle_id는 입력으로 받는다(템플릿에 가짜 기본값을 커밋하지 않음).
-# 앱 설정 후: 이 caller의 with:에 기본값을 채우거나 dispatch/deploy-all에서 입력.
+# App Store archive와 업로드는 Xcode Cloud만 사용한다.
+# Backoffice가 exact release tag를 App Store Connect ciBuildRuns API로 전달하며,
+# 이 caller는 provider binding이 아직 없을 때 GitHub macOS 빌드로 우회하지 않는 fail-closed gate다.
 name: Deploy App Store
 
 on:
   workflow_dispatch:
     inputs:
       release_tag:
+        description: "Xcode Cloud에서 빌드할 exact stable SemVer 태그"
+        type: string
+        required: true
+      upload:
+        description: "Backoffice Xcode Cloud 경로에서만 처리되는 호환 입력"
+        type: boolean
+        default: true
+      ios_scheme:
         type: string
         required: false
-        default: ""
-      upload:
-        description: "true면 App Store Connect 업로드(false면 xcarchive 아티팩트만)"
-        type: boolean
-        default: false
-      ios_scheme:
-        description: "Xcode scheme (필수)"
-        type: string
-        required: true
         default: "Daoewo"
       ios_workspace:
-        description: "Xcode workspace 경로(.xcworkspace) (필수)"
         type: string
-        required: true
+        required: false
         default: "apps/mobile/ios/Daoewo.xcworkspace"
       ios_bundle_id:
-        description: "iOS bundle id (필수)"
         type: string
-        required: true
+        required: false
         default: "com.seorilabs.daoewo"
   workflow_call:
     inputs:
       release_tag:
         type: string
-        required: false
-        default: ""
+        required: true
       upload:
         type: boolean
         default: true
       ios_scheme:
         type: string
-        required: true
+        required: false
+        default: "Daoewo"
       ios_workspace:
         type: string
-        required: true
+        required: false
+        default: "apps/mobile/ios/Daoewo.xcworkspace"
       ios_bundle_id:
         type: string
-        required: true
+        required: false
+        default: "com.seorilabs.daoewo"
 
 permissions:
   contents: read
 
+concurrency:
+  group: daoewo-app-store-${{ inputs.release_tag }}
+  cancel-in-progress: false
+
 jobs:
-  app-store:
-    uses: seorilabs/.github/.github/workflows/rn-deploy-app-store.yml@9afa357f9ba6c8d6a813c7cec7ad3d35c626bdd5
-    secrets: inherit
-    with:
-      release_tag: ${{ inputs.release_tag }}
-      upload: ${{ inputs.upload }}
-      ios_scheme: ${{ inputs.ios_scheme }}
-      ios_workspace: ${{ inputs.ios_workspace }}
-      ios_bundle_id: ${{ inputs.ios_bundle_id }}
-      ios_dir: apps/mobile
-      package_manager: pnpm
+  xcode-cloud-provider-gate:
+    name: Xcode Cloud provider gate
+    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    timeout-minutes: 5
+    steps:
+      - name: Require Backoffice Xcode Cloud binding
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || {
+            echo "App Store build는 exact stable vX.Y.Z 태그만 허용합니다." >&2
+            exit 1
+          }
+          echo "XCODE_CLOUD_PROVIDER_BINDING_REQUIRED: seorilabs/daoewo를 Backoffice Xcode Cloud allowlist와 App Store Connect workflow에 연결해야 합니다." >&2
+          exit 1

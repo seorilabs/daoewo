@@ -20,7 +20,9 @@
 
 ## 앱별로 채워야 하는 것 (contract)
 
-1. **`deploy-app-store.yml`의 `ios_scheme`/`ios_workspace`/`ios_bundle_id`** 를 실제 값으로 교체.
+1. App Store archive와 업로드는 GitHub macOS runner가 아니라 Xcode Cloud에서 수행한다. 저장소의
+   `apps/mobile/ios/ci_scripts/`가 exact 태그 버전을 주입하며, Backoffice allowlist와 App Store Connect
+   workflow가 연결되기 전에는 `deploy-app-store.yml`이 fail-closed한다.
 2. 표준 스크립트:
    - 버전은 저장소가 계산하지 않는다. stable SemVer 태그(`vX.Y.Z`)가 유일한 authority이고 org 재사용 워크플로우가 `version_name`, `android_version_code`, `apple_marketing_version`, `apple_build_number`, `release_name`을 파생해 빌드에 주입한다.
    - `scripts/upload-google-play-internal.py` (Android Publisher API 업로드)
