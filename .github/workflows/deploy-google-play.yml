@@ -9,8 +9,7 @@ on:
     inputs:
       release_tag:
         type: string
-        required: false
-        default: ""
+        required: true
       upload:
         description: "true면 Google Play track에 업로드(false면 AAB 아티팩트만)"
         type: boolean
@@ -27,8 +26,7 @@ on:
     inputs:
       release_tag:
         type: string
-        required: false
-        default: ""
+        required: true
       upload:
         type: boolean
         default: true

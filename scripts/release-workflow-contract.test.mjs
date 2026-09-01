@@ -46,6 +46,23 @@ test('로컬 버전 resolver를 제거하고 Xcode Cloud가 중앙 helper를 che
   assert.match(script, /apps\/mobile\/ios\/Daoewo\/Info\.plist/);
 });
 
+test('Xcode Cloud secret 복원은 GNU와 macOS base64를 모두 지원한다', () => {
+  const script = readFileSync(
+    new URL('../apps/mobile/ios/ci_scripts/ci_post_clone.sh', import.meta.url),
+    'utf8',
+  );
+  assert.match(script, /base64 --decode <\/dev\/null/);
+  assert.match(script, /base64 -D/);
+  assert.match(script, /decode_base64_to "\$FIREBASE_PLIST"/);
+});
+
+test('Google Play 수동·재사용 실행은 exact release tag를 필수로 받는다', () => {
+  const play = workflows.find(({ name }) => name === 'deploy-google-play.yml')?.text ?? '';
+  const requiredTags = play.match(/release_tag:\n\s+type: string\n\s+required: true/g) ?? [];
+  assert.equal(requiredTags.length, 2);
+  assert.doesNotMatch(play, /release_tag:\n(?: {8}.+\n){0,3} {8}default:/);
+});
+
 test('마켓 config JSON은 버전 원장이 아니다', () => {
   for (const path of [
     '../play-store/google-play.config.json',

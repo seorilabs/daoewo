@@ -10,7 +10,7 @@
 | `release-tag.yml` | dispatch | 명시적 SemVer 태그 | ARC |
 | `deploy-apps-in-toss.yml` | dispatch, call | .ait build + AppsInToss | ARC |
 | `deploy-google-play.yml` | dispatch, call | 서명 AAB + Google Play | ubuntu |
-| `deploy-app-store.yml` | dispatch, call | Xcode archive + App Store | macos-26 |
+| `deploy-app-store.yml` | dispatch, call | Xcode Cloud provider binding 검증 | ARC |
 | `deploy-all.yml` | dispatch | 태그 1개로 3마켓 한 번에 | — |
 | `cleanup-actions-storage.yml` | dispatch | 아티팩트/캐시 정리 | ARC |
 | `release-inventory.yml` | dispatch | 릴리즈 준비 점검 | — |
@@ -28,7 +28,7 @@
    - `scripts/upload-google-play-internal.py` (Android Publisher API 업로드)
    - `scripts/restore-mobile-firebase-config.mjs --android|--ios --require`
    - Android: `apps/mobile/android/gradlew :app:bundleRelease -PversionNameOverride -PversionCodeOverride`
-3. **secrets/variables**: org 공통(`APPS_IN_TOSS_API_KEY`, `APPLE_*`, `APP_STORE_CONNECT_*`, `GOOGLE_PLAY_UPLOAD_*`, var `APPLE_TEAM_ID`/`GOOGLE_PLAY_UPLOAD_KEY_ALIAS`/`GOOGLE_WORKLOAD_IDENTITY_PROVIDER`)는 상속. **repo secrets**: `APPLE_PROVISIONING_PROFILE_BASE64`, `FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64`, `FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64`, `APP_STORE_IAP_PRIVATE_KEY_BASE64`, `APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON`. **repo variables**: `FIREBASE_PROJECT_ID`, `FUNCTIONS_REGION`, `GOOGLE_PLAY_PRODUCT_IDS`, `GOOGLE_PLAY_RTDN_TOPIC`, `APP_STORE_APP_APPLE_ID`, `APP_STORE_PRODUCT_IDS`, `APP_STORE_IAP_ISSUER_ID`, `APP_STORE_IAP_KEY_ID`, `TOSS_FIREBASE_APP_ID`, `GOOGLE_PLAY_SERVICE_ACCOUNT_EMAIL`.
+3. **secrets/variables**: org 공통(`APPS_IN_TOSS_API_KEY`, `APPLE_*`, `APP_STORE_CONNECT_*`, `GOOGLE_PLAY_UPLOAD_*`, var `APPLE_TEAM_ID`/`GOOGLE_PLAY_UPLOAD_KEY_ALIAS`/`GOOGLE_WORKLOAD_IDENTITY_PROVIDER`)과 repo secret은 각 workflow가 선언한 이름만 1:1로 전달한다. `secrets: inherit`는 사용하지 않는다. **repo secrets**: `APPLE_PROVISIONING_PROFILE_BASE64`, `FIREBASE_ANDROID_GOOGLE_SERVICES_JSON_BASE64`, `FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64`, `APP_STORE_IAP_PRIVATE_KEY_BASE64`, `APP_STORE_ROOT_CA_CERTIFICATES_BASE64_JSON`. **repo variables**: `FIREBASE_PROJECT_ID`, `FUNCTIONS_REGION`, `GOOGLE_PLAY_PRODUCT_IDS`, `GOOGLE_PLAY_RTDN_TOPIC`, `APP_STORE_APP_APPLE_ID`, `APP_STORE_PRODUCT_IDS`, `APP_STORE_IAP_ISSUER_ID`, `APP_STORE_IAP_KEY_ID`, `TOSS_FIREBASE_APP_ID`, `GOOGLE_PLAY_SERVICE_ACCOUNT_EMAIL`.
 4. **GitHub Environments**: `apps-in-toss`, `google-play`, `app-store` 생성(보호 규칙 권장).
 
 `Release Inventory`는 Firebase 공개 native config만 임시 파일로 복원한다. App Store IAP private

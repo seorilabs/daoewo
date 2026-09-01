@@ -20,11 +20,20 @@ run_step() {
   "$@"
 }
 
+decode_base64_to() {
+  target="$1"
+  if base64 --decode </dev/null >/dev/null 2>&1; then
+    base64 --decode >"$target"
+  else
+    base64 -D >"$target"
+  fi
+}
+
 run_step brew install node cocoapods
 run_step npm install -g pnpm@11.3.0
 
 if [ -n "${FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64:-}" ]; then
-  printf '%s' "$FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64" | base64 --decode > "$FIREBASE_PLIST"
+  printf '%s' "$FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64" | decode_base64_to "$FIREBASE_PLIST"
   run_step plutil -lint "$FIREBASE_PLIST"
 elif [ ! -f "$FIREBASE_PLIST" ]; then
   echo "FIREBASE_IOS_GOOGLE_SERVICE_INFO_PLIST_BASE64가 없고 커밋된 GoogleService-Info.plist도 없습니다." >&2
