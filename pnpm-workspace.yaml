@@ -11,3 +11,6 @@ allowBuilds:
   esbuild: true
   protobufjs: true
   re2: true
+
+minimumReleaseAgeExclude:
+  - '@seorilabs/platform-sdk@0.5.0'
