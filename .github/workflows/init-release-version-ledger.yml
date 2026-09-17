@@ -30,7 +30,7 @@ permissions:
 
 jobs:
   initialize:
-    uses: seorilabs/.github/.github/workflows/init-release-version-ledger.yml@53c0819ec0976a48c7e8302234bcfc408f0a1e0b
+    uses: seorilabs/.github/.github/workflows/init-release-version-ledger.yml@main
     with:
       dry_run: ${{ inputs.dry_run }}
       play_readback_base64: ${{ inputs.play_readback_base64 }}
