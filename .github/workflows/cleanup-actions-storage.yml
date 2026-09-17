@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   cleanup:
-    uses: seorilabs/.github/.github/workflows/cleanup-actions-storage.yml@565fba53aa5053785c63c9b732b93a3fbd7be847
+    uses: seorilabs/.github/.github/workflows/cleanup-actions-storage.yml@main
     with:
       delete_artifacts: ${{ inputs.delete_artifacts }}
       delete_caches: ${{ inputs.delete_caches }}
