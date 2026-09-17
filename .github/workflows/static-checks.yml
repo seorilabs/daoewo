@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   checks:
-    uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@565fba53aa5053785c63c9b732b93a3fbd7be847
+    uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@main
     with:
       runs_on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
       package_manager: pnpm
