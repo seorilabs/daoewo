@@ -37,7 +37,7 @@ permissions:
 
 jobs:
   ait:
-    uses: seorilabs/.github/.github/workflows/rn-deploy-ait.yml@53c0819ec0976a48c7e8302234bcfc408f0a1e0b
+    uses: seorilabs/.github/.github/workflows/rn-deploy-ait.yml@main
     secrets:
       APPS_IN_TOSS_API_KEY: ${{ secrets.APPS_IN_TOSS_API_KEY }}
       VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
