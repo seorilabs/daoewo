@@ -21,7 +21,7 @@ jobs:
   checks:
     uses: seorilabs/.github/.github/workflows/rn-static-checks.yml@main
     with:
-      runs_on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+      runs_on: ${{ github.event.repository.private && 'seorilabs-x64' || 'ubuntu-latest' }}
       package_manager: pnpm
       install_command: |
         if ! command -v rg >/dev/null 2>&1; then

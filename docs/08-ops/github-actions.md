@@ -15,7 +15,7 @@
 ## Runner Routing
 
 - 템플릿 workflow는 public/private 양쪽에서 안전하게 동작하도록 `github.event.repository.private` 조건을 둔다.
-- private repo의 JS/TS/docs/AIT candidate는 `seorilabs-rpi-arm64`를 우선 사용한다.
+- private repo의 JS/TS/docs/AIT candidate는 `seorilabs-x64`를 우선 사용한다.
 - public repo 또는 public PR path에서는 `ubuntu-latest` fallback을 사용한다.
 - Android release build는 RPI ARC로 보내지 않고 `ubuntu-latest` x64 Linux runner를 사용한다.
 - App Store/Xcode build는 RPI ARC로 보내지 않고 `macos-26` runner를 사용한다.
@@ -30,7 +30,8 @@ cat /Users/syous/Workspace/kubectl/github-actions-runners/global-versions.yaml
 
 2026-07-12 중앙 파일 확인값(운영 중 변경 가능):
 
-- `seorilabs-rpi-arm64`: `minRunners: 2`, `maxRunners: 4`
+- `seorilabs-x64`: `minRunners: 1`, `maxRunners: 2`
+- `seorilabs-rpi-arm64`: `minRunners: 1`, `maxRunners: 2` (레거시, 신규 CI 금지)
 - `seorilabs-rpi-arm64-dind`: `minRunners: 0`, `maxRunners: 1`
 - Node: `24.16.0`
 

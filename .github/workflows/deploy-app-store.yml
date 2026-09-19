@@ -57,7 +57,7 @@ concurrency:
 jobs:
   xcode-cloud-provider-gate:
     name: Xcode Cloud provider gate
-    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.repository.private && 'seorilabs-x64' || 'ubuntu-latest' }}
     timeout-minutes: 5
     steps:
       - name: Require Backoffice Xcode Cloud binding
