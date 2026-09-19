@@ -9,15 +9,20 @@ const workflows = readdirSync(new URL('../.github/workflows/', import.meta.url))
     text: readFileSync(new URL(`../.github/workflows/${name}`, import.meta.url), 'utf8'),
   }));
 
-test('중앙 caller는 불변 SHA만 사용하고 secret 상속을 금지한다', () => {
+test('중앙 caller는 중앙 정본 main을 보고 서드파티 action만 SHA로 고정하며 secret 상속을 금지한다', () => {
   for (const workflow of workflows) {
     assert.doesNotMatch(workflow.text, /secrets:\s*inherit/, workflow.name);
     assert.doesNotMatch(workflow.text, /\bversion_(?:name|code|script)\s*:/, workflow.name);
+    // 중앙 재사용 workflow는 @main이 정본이다. seorilabs/.github의
+    // .github/workflows/README.md "@ref 정책"을 따른다. SHA로 고정하면 중앙 변경
+    // 한 번마다 저장소 수만큼 PR이 따라붙고 어느 저장소가 무슨 버전으로 도는지 알 수 없다.
     for (const match of workflow.text.matchAll(/uses:\s*seorilabs\/\.github\/[^@\s]+@([^\s#]+)/g)) {
-      assert.match(match[1], /^[0-9a-f]{40}$/, `${workflow.name}: ${match[0]}`);
+      assert.match(match[1], /^main$/, `${workflow.name}: ${match[0]}`);
     }
+    // 서드파티 action은 그대로 full SHA로 고정한다.
     for (const match of workflow.text.matchAll(/uses:\s*([^\s#]+)/g)) {
       if (match[1].startsWith('./')) continue;
+      if (match[1].startsWith('seorilabs/.github/')) continue;
       assert.match(match[1], /^[^@\s]+@[0-9a-f]{40}$/, `${workflow.name}: ${match[0]}`);
     }
   }
