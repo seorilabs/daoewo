@@ -39,6 +39,16 @@ pnpm check:ait
 pnpm check:release       # 외부 콘솔/사람 QA blocker가 있으면 의도적으로 실패
 ```
 
+플랫폼별 상세 실행 방법은 각 target README에 기록한다. Android/iOS와 미승인 콘텐츠
+Debug Preview는 [`apps/mobile/README.md`](apps/mobile/README.md), AppsInToss는
+[`apps/ait/README.md`](apps/ait/README.md)를 따른다. 콘텐츠 초안은 서버에 올리지 않고
+다음 두 터미널로 로컬 앱에서 확인한다.
+
+```bash
+pnpm run dev:mobile:preview
+pnpm run ios:mobile:preview      # 또는 android:mobile:preview
+```
+
 ## 배포 게이트
 
 기획 승인은 2026-07-12 완료됐다. 개발·에이전트 QA·release-candidate 준비는 진행할 수 있지만 Google Play/App Store/AppsInToss 제출과 프로덕션 공개는 별도 deployment approval 전까지 금지한다. 상세 원장은 `docs/`다.

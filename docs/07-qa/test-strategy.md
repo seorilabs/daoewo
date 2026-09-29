@@ -22,6 +22,7 @@
 | Remote Config/Crash | template/default parity·TTL 범위·kill-switch·고정 진단 allowlist | Scripts/Mobile tests |
 | Deck update push | 계정별 opt-in 권한·token 회전/해제·ready revision/lease·operator claim·신규 publication multicast·foreground allowlist·민감정보 비노출 | Product UI/Mobile/Functions/Rules/Scripts tests |
 | Content pipeline | Gemini/offline 생성·QA·사람 승인 경계 | `pnpm --filter @daoewo/content-pipeline check` |
+| Content DEV Preview | 실제 source·자동 QA·미승인 상태만 허용, production entry 격리, 외부 capability 차단 | `pnpm run test:scripts`, `pnpm run test:mobile` |
 
 ## Device QA
 
@@ -67,6 +68,8 @@ Simulator로 확인했다. Firebase/APNs·알림 권한·StoreKit·실기기 경
     검증한다.
 17. published deck create/최초 전환만 현재 opt-in installation에 고정 신규 덱 문구를 multicast하고,
     재게시·임의 foreground kind·opt-out/탈퇴 계정 token은 알림 경로에 들어오지 않는지 확인한다.
+18. 콘텐츠 Preview artifact는 `awaiting-human-approval` 실제 source record만 포함하고, Debug 전용
+    entry에서만 열리며 Analytics·동기화·구매·공유·알림·덱 요청을 외부로 보내지 않는지 확인한다.
 
 ## Release Inventory Assertions
 

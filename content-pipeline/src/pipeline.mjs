@@ -79,6 +79,9 @@ export async function runToHumanApproval({ deck, generator, outputFile, clock = 
 }
 
 export function approveRecord(record, review) {
+  if (Array.isArray(record?.dedupe?.conflicts) && record.dedupe.conflicts.length > 0) {
+    throw new Error(`동일 front에 다른 back이 있는 충돌 카드 ${record.dedupe.conflicts.length}건을 해소해야 승인할 수 있다.`);
+  }
   const approved = approveByHuman(record, review);
   assertCards(approved.cards);
   assertDeck(approved.deck);

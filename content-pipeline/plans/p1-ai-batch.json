@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 1,
+  "planId": "daoewo-p1-ai-batch-v1",
+  "slotSize": 20,
+  "decks": [
+    {
+      "deckId": "korean-history-cert-core",
+      "targetCardCount": 500,
+      "sources": [
+        {
+          "id": "nikh-our-history",
+          "kind": "official-history-portal",
+          "authority": "국사편찬위원회 우리역사넷",
+          "uri": "https://contents.history.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "선사부터 현대까지 시대별 한국사 사실과 용어"
+        },
+        {
+          "id": "nikh-korean-history-db",
+          "kind": "official-primary-source-database",
+          "authority": "국사편찬위원회 한국사데이터베이스",
+          "uri": "https://db.history.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "한국사 사료와 편년 자료의 사실 대조"
+        },
+        {
+          "id": "national-museum-korea",
+          "kind": "official-museum",
+          "authority": "국립중앙박물관",
+          "uri": "https://www.museum.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "시대별 유물, 문화사, 고고 자료"
+        },
+        {
+          "id": "korea-heritage-service",
+          "kind": "official-heritage-portal",
+          "authority": "국가유산청 국가유산포털",
+          "uri": "https://www.heritage.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "국가유산 명칭, 시대, 소재지, 문화사"
+        },
+        {
+          "id": "national-archives-korea",
+          "kind": "official-archive",
+          "authority": "국가기록원",
+          "uri": "https://www.archives.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "근현대 국가기록과 정책·민주화 연표"
+        },
+        {
+          "id": "history-exam-official",
+          "kind": "official-exam-guide",
+          "authority": "국사편찬위원회 한국사능력검정시험",
+          "uri": "https://www.historyexam.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "시험 범위와 평가 체계만 사용하며 기출 문장을 복제하지 않음"
+        }
+      ],
+      "coverage": [
+        {
+          "id": "prehistory-early-states",
+          "slots": 2,
+          "instruction": "선사 시대, 고조선, 여러 나라의 정치·사회·문화 핵심을 중복 없이 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-museum-korea"]
+        },
+        {
+          "id": "three-kingdoms-gaya",
+          "slots": 4,
+          "instruction": "고구려·백제·신라·가야의 성장, 대외 관계, 제도, 문화유산을 균형 있게 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-museum-korea", "korea-heritage-service"]
+        },
+        {
+          "id": "unified-silla-balhae",
+          "slots": 2,
+          "instruction": "통일 신라와 발해의 통치, 사회, 대외 관계, 문화유산을 비교해 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-museum-korea", "korea-heritage-service"]
+        },
+        {
+          "id": "goryeo",
+          "slots": 4,
+          "instruction": "고려의 건국, 통치 체제, 대외 항쟁, 사회 변화, 사상과 문화를 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-museum-korea", "korea-heritage-service"]
+        },
+        {
+          "id": "early-joseon",
+          "slots": 4,
+          "instruction": "조선 전기의 통치 체제, 경제·사회, 사림 성장, 과학·문화 발전을 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-museum-korea", "korea-heritage-service"]
+        },
+        {
+          "id": "late-joseon",
+          "slots": 3,
+          "instruction": "조선 후기의 정치 변화, 경제·사회 변동, 실학, 서민 문화를 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-museum-korea", "korea-heritage-service"]
+        },
+        {
+          "id": "opening-korean-empire",
+          "slots": 2,
+          "instruction": "개항, 근대 개혁, 국권 피탈 과정과 대한제국의 핵심 사실을 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-archives-korea"]
+        },
+        {
+          "id": "colonial-independence",
+          "slots": 2,
+          "instruction": "일제 강점기 통치, 국내외 독립운동, 대한민국 임시정부를 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-archives-korea"]
+        },
+        {
+          "id": "liberation-contemporary",
+          "slots": 1,
+          "instruction": "광복 이후 정부 수립, 전쟁, 산업화, 민주화의 주요 전환점을 다룬다.",
+          "sourceIds": ["nikh-our-history", "nikh-korean-history-db", "national-archives-korea"]
+        },
+        {
+          "id": "cross-era-culture-sources",
+          "slots": 1,
+          "instruction": "시대 판별형 문화유산과 사료를 다루되 시험 기출 문장을 재현하지 않는다.",
+          "sourceIds": ["history-exam-official", "nikh-our-history", "national-museum-korea", "korea-heritage-service"]
+        }
+      ]
+    },
+    {
+      "deckId": "information-processing-engineer",
+      "targetCardCount": 320,
+      "sources": [
+        {
+          "id": "qnet-information-processing",
+          "kind": "official-exam-guide",
+          "authority": "한국산업인력공단 Q-Net",
+          "uri": "https://www.q-net.or.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "정보처리기사 시험 종목, 출제 범위, 운영 정보만 사용하며 기출 문장을 복제하지 않음"
+        },
+        {
+          "id": "ncs-portal",
+          "kind": "official-competency-standard",
+          "authority": "국가직무능력표준 NCS",
+          "uri": "https://www.ncs.go.kr/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "정보기술 직무 능력 단위와 용어 체계"
+        },
+        {
+          "id": "rfc-editor-http-semantics",
+          "kind": "internet-standard",
+          "authority": "RFC Editor",
+          "uri": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "revision": "RFC9110",
+          "scope": "HTTP 의미론과 메서드·상태 코드"
+        },
+        {
+          "id": "rfc-editor-tcp",
+          "kind": "internet-standard",
+          "authority": "RFC Editor",
+          "uri": "https://www.rfc-editor.org/rfc/rfc9293.html",
+          "revision": "RFC9293",
+          "scope": "TCP 동작과 용어"
+        },
+        {
+          "id": "postgresql-18-docs",
+          "kind": "official-product-documentation",
+          "authority": "PostgreSQL Global Development Group",
+          "uri": "https://www.postgresql.org/docs/18/",
+          "revision": "PostgreSQL-18",
+          "scope": "SQL, 데이터 모델링, 트랜잭션, 인덱스"
+        },
+        {
+          "id": "ecma-262-2025",
+          "kind": "language-standard",
+          "authority": "Ecma International",
+          "uri": "https://262.ecma-international.org/16.0/",
+          "revision": "ECMA-262-16th-edition-2025",
+          "scope": "프로그래밍 언어 실행 모델과 기본 개념"
+        },
+        {
+          "id": "nist-secure-software-framework",
+          "kind": "government-standard",
+          "authority": "NIST",
+          "uri": "https://csrc.nist.gov/pubs/sp/800/218/final",
+          "revision": "NIST-SP-800-218-v1.1",
+          "scope": "보안 소프트웨어 개발 생명주기"
+        },
+        {
+          "id": "owasp-top-ten-2025",
+          "kind": "industry-security-standard",
+          "authority": "OWASP Foundation",
+          "uri": "https://owasp.org/Top10/2025/",
+          "revision": "OWASP-Top-10-2025",
+          "scope": "웹 애플리케이션 보안 위험"
+        },
+        {
+          "id": "iso-25010-2023",
+          "kind": "international-standard-catalog",
+          "authority": "ISO",
+          "uri": "https://www.iso.org/standard/78176.html",
+          "revision": "ISO-IEC-25010-2023",
+          "scope": "제품 품질 모델과 품질 특성"
+        },
+        {
+          "id": "agile-manifesto",
+          "kind": "authoritative-manifesto",
+          "authority": "Manifesto for Agile Software Development",
+          "uri": "https://agilemanifesto.org/",
+          "revision": "2001",
+          "scope": "애자일 가치와 원칙"
+        }
+      ],
+      "coverage": [
+        {
+          "id": "software-analysis-design",
+          "slots": 3,
+          "instruction": "요구사항, UML, 아키텍처, 객체지향 설계와 디자인 원칙을 다룬다.",
+          "sourceIds": ["qnet-information-processing", "ncs-portal", "nist-secure-software-framework"]
+        },
+        {
+          "id": "database-data-modeling",
+          "slots": 3,
+          "instruction": "데이터 모델링, 관계형 이론, SQL, 트랜잭션, 인덱스와 데이터 품질을 다룬다.",
+          "sourceIds": ["qnet-information-processing", "ncs-portal", "postgresql-18-docs"]
+        },
+        {
+          "id": "programming-language-runtime",
+          "slots": 2,
+          "instruction": "프로그래밍 언어 구조, 자료형, 제어 구조, 객체지향, 실행 모델을 다룬다.",
+          "sourceIds": ["qnet-information-processing", "ncs-portal", "ecma-262-2025"]
+        },
+        {
+          "id": "information-system-integration",
+          "slots": 2,
+          "instruction": "인터페이스, 데이터 교환, 시스템 연계, 운영과 유지보수 개념을 다룬다.",
+          "sourceIds": ["qnet-information-processing", "ncs-portal", "rfc-editor-http-semantics"]
+        },
+        {
+          "id": "network-security",
+          "slots": 3,
+          "instruction": "네트워크 계층, TCP·HTTP, 인증·인가, 보안 취약점과 안전한 개발을 다룬다.",
+          "sourceIds": ["qnet-information-processing", "rfc-editor-http-semantics", "rfc-editor-tcp", "nist-secure-software-framework", "owasp-top-ten-2025"]
+        },
+        {
+          "id": "testing-quality-project",
+          "slots": 2,
+          "instruction": "테스트 기법, 품질 특성, 형상·변경 관리, 프로젝트 방법론을 다룬다.",
+          "sourceIds": ["qnet-information-processing", "ncs-portal", "iso-25010-2023", "agile-manifesto"]
+        },
+        {
+          "id": "exam-scope-integration",
+          "slots": 1,
+          "instruction": "공식 시험 범위의 영역 간 연결 개념을 자체 문장으로 복습하되 기출 문항·보기를 재현하지 않는다.",
+          "sourceIds": ["qnet-information-processing", "ncs-portal"]
+        }
+      ]
+    },
+    {
+      "deckId": "it-cs-interview-terms",
+      "targetCardCount": 420,
+      "sources": [
+        {
+          "id": "mit-algorithms-6-006",
+          "kind": "university-course",
+          "authority": "MIT OpenCourseWare",
+          "uri": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/",
+          "revision": "MIT-6.006-Fall-2011",
+          "scope": "자료구조, 알고리즘, 복잡도"
+        },
+        {
+          "id": "mit-distributed-systems-6-824",
+          "kind": "university-course",
+          "authority": "MIT Distributed Systems",
+          "uri": "https://pdos.csail.mit.edu/6.824/",
+          "revision": "retrieved-2026-07-14",
+          "scope": "분산 시스템, 복제, 합의, 장애 허용"
+        },
+        {
+          "id": "posix-2024",
+          "kind": "operating-system-standard",
+          "authority": "The Open Group",
+          "uri": "https://pubs.opengroup.org/onlinepubs/9799919799/",
+          "revision": "POSIX.1-2024",
+          "scope": "프로세스, 스레드, 파일, 동시성 인터페이스"
+        },
+        {
+          "id": "rfc-editor-tcp",
+          "kind": "internet-standard",
+          "authority": "RFC Editor",
+          "uri": "https://www.rfc-editor.org/rfc/rfc9293.html",
+          "revision": "RFC9293",
+          "scope": "TCP 동작과 용어"
+        },
+        {
+          "id": "rfc-editor-ipv6",
+          "kind": "internet-standard",
+          "authority": "RFC Editor",
+          "uri": "https://www.rfc-editor.org/rfc/rfc8200.html",
+          "revision": "RFC8200",
+          "scope": "IPv6 프로토콜"
+        },
+        {
+          "id": "rfc-editor-http-semantics",
+          "kind": "internet-standard",
+          "authority": "RFC Editor",
+          "uri": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "revision": "RFC9110",
+          "scope": "HTTP 의미론"
+        },
+        {
+          "id": "postgresql-18-docs",
+          "kind": "official-product-documentation",
+          "authority": "PostgreSQL Global Development Group",
+          "uri": "https://www.postgresql.org/docs/18/",
+          "revision": "PostgreSQL-18",
+          "scope": "관계형 데이터베이스, 트랜잭션, 인덱스, 동시성"
+        },
+        {
+          "id": "ecma-262-2025",
+          "kind": "language-standard",
+          "authority": "Ecma International",
+          "uri": "https://262.ecma-international.org/16.0/",
+          "revision": "ECMA-262-16th-edition-2025",
+          "scope": "프로그래밍 언어 실행 모델"
+        },
+        {
+          "id": "nist-secure-software-framework",
+          "kind": "government-standard",
+          "authority": "NIST",
+          "uri": "https://csrc.nist.gov/pubs/sp/800/218/final",
+          "revision": "NIST-SP-800-218-v1.1",
+          "scope": "보안 개발 생명주기와 공급망"
+        },
+        {
+          "id": "owasp-top-ten-2025",
+          "kind": "industry-security-standard",
+          "authority": "OWASP Foundation",
+          "uri": "https://owasp.org/Top10/2025/",
+          "revision": "OWASP-Top-10-2025",
+          "scope": "웹 애플리케이션 보안 위험"
+        },
+        {
+          "id": "git-reference-2-51-0",
+          "kind": "official-product-documentation",
+          "authority": "Git SCM",
+          "uri": "https://git-scm.com/docs/git/2.51.0",
+          "revision": "Git-2.51.0",
+          "scope": "버전 관리 객체, 브랜치, 병합, 분산 workflow"
+        },
+        {
+          "id": "prometheus-docs-3-5",
+          "kind": "official-product-documentation",
+          "authority": "Prometheus Authors",
+          "uri": "https://prometheus.io/docs/prometheus/3.5/",
+          "revision": "Prometheus-3.5",
+          "scope": "메트릭, 시계열, 모니터링 기본 개념"
+        }
+      ],
+      "coverage": [
+        {
+          "id": "operating-systems-concurrency",
+          "slots": 3,
+          "instruction": "프로세스·스레드, 스케줄링, 메모리, 파일 시스템, 동기화와 교착상태를 다룬다.",
+          "sourceIds": ["posix-2024"]
+        },
+        {
+          "id": "networking",
+          "slots": 3,
+          "instruction": "네트워크 계층, IP, TCP, HTTP, 연결과 신뢰성 개념을 다룬다.",
+          "sourceIds": ["rfc-editor-tcp", "rfc-editor-ipv6", "rfc-editor-http-semantics"]
+        },
+        {
+          "id": "database",
+          "slots": 3,
+          "instruction": "관계형 모델, SQL, 정규화, 트랜잭션, 격리, 인덱스와 실행 계획을 다룬다.",
+          "sourceIds": ["postgresql-18-docs"]
+        },
+        {
+          "id": "data-structures-algorithms",
+          "slots": 3,
+          "instruction": "기본 자료구조, 탐색·정렬, 그래프, 복잡도와 알고리즘 선택을 다룬다.",
+          "sourceIds": ["mit-algorithms-6-006"]
+        },
+        {
+          "id": "language-oop-runtime",
+          "slots": 2,
+          "instruction": "언어 실행 모델, 타입, 객체지향, 함수, 메모리와 예외 처리 개념을 다룬다.",
+          "sourceIds": ["ecma-262-2025", "posix-2024"]
+        },
+        {
+          "id": "software-design-testing",
+          "slots": 2,
+          "instruction": "모듈성, 결합도·응집도, API 설계, 테스트, 리팩터링과 변경 관리를 다룬다.",
+          "sourceIds": ["nist-secure-software-framework", "git-reference-2-51-0"]
+        },
+        {
+          "id": "web-distributed-systems",
+          "slots": 3,
+          "instruction": "웹 요청 흐름, 캐시, 분산 시스템의 복제·합의·일관성·장애 대응을 다룬다.",
+          "sourceIds": ["rfc-editor-http-semantics", "mit-distributed-systems-6-824", "prometheus-docs-3-5"]
+        },
+        {
+          "id": "application-security",
+          "slots": 1,
+          "instruction": "인증·인가, 입력 검증, 주요 웹 취약점과 안전한 개발 원칙을 다룬다.",
+          "sourceIds": ["nist-secure-software-framework", "owasp-top-ten-2025"]
+        },
+        {
+          "id": "git-devops-observability",
+          "slots": 1,
+          "instruction": "Git 협업, 배포 흐름, 메트릭·로그·알림과 운영 신뢰성의 기본 개념을 다룬다.",
+          "sourceIds": ["git-reference-2-51-0", "prometheus-docs-3-5"]
+        }
+      ]
+    }
+  ]
+}

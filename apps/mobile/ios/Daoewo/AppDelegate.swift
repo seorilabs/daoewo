@@ -47,10 +47,44 @@ class ReactNativeDelegate: RCTDefaultReactNativeFactoryDelegate {
   }
 
   override func bundleURL() -> URL? {
-#if DEBUG
+#if DEBUG && DAOEWO_CONTENT_PREVIEW
+    contentPreviewBundleURL()
+#elseif DEBUG
     RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
 #else
     Bundle.main.url(forResource: "main", withExtension: "jsbundle")
 #endif
   }
+
+#if DEBUG && DAOEWO_CONTENT_PREVIEW
+  private func contentPreviewBundleURL() -> URL? {
+    let host: String
+    if let ipPath = Bundle.main.path(forResource: "ip", ofType: "txt"),
+       let ipContents = try? String(contentsOfFile: ipPath, encoding: .utf8) {
+      let trimmed = ipContents.trimmingCharacters(in: .whitespacesAndNewlines)
+      host = trimmed.isEmpty ? "localhost" : trimmed
+    } else {
+      host = "localhost"
+    }
+
+    let previewMetroHost = "\(host):8082"
+    if RCTBundleURLProvider.isPackagerRunning(previewMetroHost) {
+      var components = URLComponents()
+      components.scheme = "http"
+      components.host = host
+      components.port = 8082
+      components.path = "/index.preview.bundle"
+      components.queryItems = [
+        URLQueryItem(name: "platform", value: "ios"),
+        URLQueryItem(name: "dev", value: "true"),
+        URLQueryItem(name: "minify", value: "false"),
+        URLQueryItem(name: "modulesOnly", value: "false"),
+        URLQueryItem(name: "runModule", value: "true"),
+      ]
+      return components.url
+    }
+
+    return Bundle.main.url(forResource: "preview", withExtension: "jsbundle")
+  }
+#endif
 }

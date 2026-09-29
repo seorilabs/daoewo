@@ -1,0 +1,5 @@
+// Debug content preview only. Passed explicitly by the ios:preview command.
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) DAOEWO_CONTENT_PREVIEW
+ENTRY_FILE = index.preview.js
+BUNDLE_NAME = preview
+FORCE_BUNDLING = YES

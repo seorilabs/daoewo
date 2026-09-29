@@ -39,6 +39,41 @@ pnpm --filter @daoewo/mobile android
 pnpm --filter @daoewo/mobile ios
 ```
 
+### 미승인 콘텐츠 DEV Preview
+
+`content-pipeline/.work/*.json` 중 실제 source로 생성되고 자동 QA를 통과했지만 아직 사람
+승인 전인 레코드만 Debug 앱에서 확인할 수 있다. 생성물은
+`apps/mobile/.work/content-preview.generated.json`에 만들어지며 gitignore 대상이다.
+
+터미널 두 개에서 다음을 실행한다.
+
+```bash
+# 1. 검증·생성 후 Preview 전용 Metro(8082)
+pnpm run dev:mobile:preview
+
+# 2. Preview Metro를 명시적으로 사용하는 Debug target
+pnpm run ios:mobile:preview
+# 또는
+pnpm run android:mobile:preview
+```
+
+연결한 iPhone을 지정하려면 두 번째 터미널에서 root shortcut 대신 다음 명령을 쓴다.
+
+```bash
+pnpm --filter @daoewo/mobile exec react-native run-ios \
+  --device "<iPhone 이름>" --scheme Daoewo --mode Debug \
+  --xcconfig Preview.xcconfig --port 8082 --no-packager
+```
+
+Preview는 `index.preview.js`와 `metro.preview.config.js`를 통해서만 진입한다. 상단에
+`DEV · 미승인 콘텐츠`가 항상 표시되고 Analytics, cloud sync, purchase, share,
+notification, deck request는 외부 전송 불가 상태다. production `index.js`와 기본 Metro는
+Preview 코드나 `.work` artifact를 import하지 않는다. iOS의 `Preview.xcconfig`는 Debug Preview
+빌드에서만 `index.preview.bundle`과 8082를 고정해, 다른 프로젝트의 8081 Metro에 연결되는 것을
+막는다. 8082에 연결할 수 없으면 앱에 포함된 `preview.jsbundle`로 기동하므로 실기기에서도
+콘텐츠를 확인할 수 있다. 이때 새 콘텐츠 반영에는 Preview 앱 재빌드가 필요하다. 일반 Debug와
+Release 빌드에는 이 compile condition과 내장 Preview 번들이 없다.
+
 iOS native dependency가 바뀌면 다음을 먼저 실행한다.
 
 ```bash

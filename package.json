@@ -10,6 +10,10 @@
   },
   "scripts": {
     "dev:mobile": "pnpm --filter @daoewo/mobile start",
+    "dev:mobile:preview": "pnpm --filter @daoewo/mobile start:preview",
+    "generate:mobile:preview": "pnpm --filter @daoewo/mobile preview:generate",
+    "ios:mobile:preview": "pnpm --filter @daoewo/mobile ios:preview",
+    "android:mobile:preview": "pnpm --filter @daoewo/mobile android:preview",
     "dev:ait": "pnpm --filter @daoewo/ait dev",
     "lint": "pnpm -r --if-present lint",
     "typecheck": "pnpm -r --if-present typecheck",

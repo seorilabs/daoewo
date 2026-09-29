@@ -88,7 +88,7 @@ export const DEMO_DECKS: readonly DaoewoDeckView[] = [
     tier: 'pro',
     source: 'official',
     availability: 'published',
-    cardCount: 1462,
+    cardCount: 2688,
     tags: ['일본어', 'N3', 'N2'],
   },
   {

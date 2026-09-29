@@ -79,6 +79,13 @@ test("P1 offline fixture 2개는 QA 후 사람 승인 대기에서 멈추고 pub
 
 test("사람 확인 토큰·검수자·근거 없이는 approve와 chunk/publish를 할 수 없다", async () => {
   const record = await fixtureRecord("it-cs-interview-terms");
+  assert.throws(
+    () => approveRecord(
+      { ...record, dedupe: { ...record.dedupe, conflicts: [{ leftId: "left", rightId: "right" }] } },
+      { reviewer: "검수자", evidence: "review://ticket/1", confirmation: HUMAN_REVIEW_CONFIRMATION },
+    ),
+    /충돌 카드 1건/,
+  );
   assert.throws(() => approveRecord(record, { reviewer: "검수자", evidence: "review://ticket/1", confirmation: "AUTO" }), /확인 토큰/);
   assert.throws(() => chunkApprovedRecord(record), /사람 승인/);
   const output = await mkdtemp(path.join(tmpdir(), "daoewo-publish-refusal-"));

@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:preview": "pnpm run preview:generate && react-native run-android --mode debug --port 8082 --no-packager",
     "ios": "react-native run-ios",
+    "ios:preview": "pnpm run preview:generate && react-native run-ios --mode Debug --xcconfig Preview.xcconfig --port 8082 --no-packager",
     "lint": "eslint .",
+    "preview:generate": "node ../../scripts/generate_mobile_content_preview.mjs",
     "typecheck": "tsc --noEmit",
     "start": "react-native start",
+    "start:preview": "pnpm run preview:generate && react-native start --config metro.preview.config.js --port 8082",
     "test": "jest"
   },
   "codegenConfig": {
