@@ -9,7 +9,7 @@ permissions:
 jobs:
   inventory:
     name: Release Inventory
-    runs-on: ${{ github.event.repository.private && 'seorilabs-rpi-arm64' || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.repository.private && 'seorilabs-x64' || 'ubuntu-latest' }}
     timeout-minutes: 10
     env:
       FIREBASE_PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID }}
